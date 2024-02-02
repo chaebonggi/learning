@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen-readonly.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/printThis.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <style>
+        .qr_wrap {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 50px 50px 30px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .qr_img {
+            width: 280px;
+            height: 280px;
+            margin: 0 auto 20px;
+            padding: 18px;
+            border: 2px solid #cccccc;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+        .qr_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .qr_wrap .txt_box {
+            margin-top: 30px;
+            padding: 10px;
+            background: #e7e7e7;
+            border-radius: 10px;
+        }
+        .qr_wrap .txt_box p {
+            color: #000000;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+    </style>
+   <div style="padding: 20px">
+    <div class="qr_wrap">
+        <ul>
+            <li><strong>과정명</strong><p>오프라인 과정 테스트</p></li>
+            <li><strong>차시명</strong><p>1차시 오프라인 강의</p></li>
+            <li><strong>강의시간</strong><p>2024-01-27 13:00 ~ 14:30</p></li>
+            <li><strong>유효시간</strong><p>2024-01-27 12:00 ~ 15:30</p></li>
+        </ul>
+        <div class="qr_img">
+            <img src="../html/images/learning/qr_img.png" alt="qr코드 이미지">
+        </div>  
+        <p class="qr_txt">
+            &#8251; 대리 출석이 확인될 경우 수강 취소 됩니다.
+        </p>
+        <div class="txt_box">
+            <p>출석 가능 시간은 수업시작 1시간 전 ~ 1시간 후 까지<br>출석체크 가능합니다.</p>
+        </div>
+    </div>
+    <div class="btn_wrap tct">
+        <a href="#" class="btn_style03 btn_white close_pop">닫기</a>
+    </div>
+    </div>
+</body>
+
+</html>
