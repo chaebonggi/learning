@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>한미글로벌</title>
+    <link rel="stylesheet" href="css/hanmi/reset.css">
+    <link rel="stylesheet" href="css/hanmi/common.css">
+    <link rel="stylesheet" href="css/hanmi/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <!-- <script src="js/learnig/jquery-sortable-lists.js"></script>
+    <script src="js/learnig/chosen-readonly.js"></script>
+    <script src="js/learnig/chosen.jquery.min.js"></script>
+    <script src="js/learnig/printThis.js"></script>
+    <script src="js/learnig/run.js"></script> -->
+</head>
+
+<body>
+    <style>
+        #header .top {display: flex; padding-top: 30px; justify-content: space-between; align-items: center; box-sizing: border-box;}
+        #header .top .right_box {display: flex; align-items: center;}
+        #header .top .seach_area {position: relative; width: 158px;}
+        #header .top .seach_area .input_wrap {display: flex; width: 100%; padding: 10px 10px; border: 1px solid #373737; border-radius: 30px; justify-content: space-between; overflow: hidden;}
+        #header .top .seach_area .input_wrap input { width: calc(100% - 30px); border: 0; font-size: 1.3rem;}
+        #header .top .seach_area .input_wrap input:focus {outline: none;}
+        #header .top .seach_area .input_wrap input::placeholder {color: #bcbcbc;}
+        #header .top .seach_area .input_wrap button {width: 20px; background: url(../html/images/hanmi/seach_ico.png) no-repeat center; border: 0; text-indent: -99999px;}
+        #header .member_box {display: flex; margin-left: 40px;}
+        #header .member_box li {position: relative;}
+        #header .member_box li + li::before {
+            content: '';
+            width: 1px;
+            height: 14px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-40%);
+            background: #636363;
+        }
+        #header .member_box li + li {margin-left: 8px; padding-left: 8px;}
+        #header .member_box li a {color: #636363; font-size: 1.3rem;}
+        #header .member_box li.login a {
+            color: #064a84;
+            font-weight: 500;
+        }
+        #header .header_gnb {
+            display: flex;
+            height: 9rem;
+        }
+        #header .header_gnb::before {
+            content: '';
+            height: 0;
+            background-color: #f9f9f9;
+            position: absolute;
+            top: 12rem;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            transition: 0.4s ease;
+            box-shadow: 0 0.8rem 1rem 0 rgba(80, 80, 80, 0.1);
+        } 
+        #header .header_gnb.on::before {
+            height: 38rem;
+            border-top: 1px solid #dadada;
+        }
+        #header .header_gnb .gnb_wrap {
+            height: 100%;
+            position: relative;
+        }
+        #header .header_gnb .gnb_wrap + .gnb_wrap {
+            margin-left: 6rem;
+        }
+        #header .header_gnb .gnb_item {
+            display: flex;
+            height: 100%;
+            position: relative;
+            color: #373737;
+            font-size: 1.8rem;
+            font-weight: 500;
+            align-items: center; 
+        }
+        #header .header_gnb .gnb_wrap:hover .gnb_item:after {
+            width: 100%;
+        }
+        #header .header_gnb .gnb_item:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 5px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #064a84;
+            transition: 0.6s;
+        }    
+        #header .header_gnb .drop_wrap {
+            max-height: 0;
+            width: 12rem;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 6;
+            overflow: hidden;
+        }
+        #header .header_gnb.on .drop_wrap {
+            max-height: 40rem;
+            padding-top: 32px;
+        }
+        #header .header_gnb.on .drop_wrap li + li {
+            margin-top: 2rem;
+        }
+        #header .header_gnb .drop_item {
+            display: block;
+            color: #666666;
+            font-size: 1.5rem;
+        }
+        #header .header_gnb .drop_item:hover {
+            color: #373737;
+            font-weight: bold;
+        }
+        #header .header_gnb .gnb_banner {
+            max-height: 0;
+            width: 225px;
+            height: 180px;
+            position: absolute;            
+            top: 15rem;
+            left: 50%;
+            transform: translateX(-600px);            
+            border-radius: 10px;
+            z-index: 6;
+            overflow: hidden;
+        }
+        #header .header_gnb .gnb_banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #header .header_gnb.on .gnb_banner {
+            max-height: 100%;
+        }
+
+        /* 메인 */
+        .main_banner{height: 380px; position: relative;}
+        .main_banner .swiper-button-prev,
+        .main_banner .swiper-button-next{width: 25px;height: 33px;top: auto;margin-top: 0; top: 50%; transform: translateY(-50%); z-index: 1;}
+        .main_banner img{display: block;width: 100%}
+        .main_banner .swiper-button-prev{background: url(./images/hanmi/mb_prev.png) no-repeat center;left: 26px;}
+        .main_banner .swiper-button-next{background: url(./images/hanmi/mb_next.png) no-repeat;left: initial; right: 26px;}
+        .main_banner .swiper-pagination {position: absolute; z-index: 1;}
+        .main_banner .swiper-pagination .swiper-pagination-bullet-active {background: #373737;}
+        .main_banner .swiper-pagination span {width: 14px; height: 14px;}
+        /* .main_banner .swiper-pagination .swiper-pagination-current{font-weight: 500;color: #1b1d1f}
+        .main_banner .swiper-pagination span + span{margin-left: 10px;padding-left: 10px;position: relative;}
+        .main_banner .swiper-button-play{background: url(../images/mb_start.png) no-repeat center;display: block;width: 8px;height: 10px;text-indent: -9999px;position: absolute;bottom: 40px;left: 164px;z-index: 5;display: none}
+        .main_banner .swiper-button-pause{background: url(../images/mb_stop.png) no-repeat;display: block;text-indent: -9999px;position: absolute;bottom: 40px;left: 164px;z-index: 55;width: 6px;height: 10px;}
+        .main_banner .swiper-slide-prev,
+        .main_banner .swiper-slide-next{position: relative;} */
+    </style>
+   <!--header-->
+   <header id="header">
+    <div class="inner">
+        <div class="top">
+            <h1 class="logo">
+                <a href="#"><img src="images/hanmi/logo.png" alt="한미글로벌"></a>
+            </h1>
+            <nav class="header_gnb">
+                <div class="gnb_banner">
+                    <img src="./images/hanmi/test_img.png" alt="">
+                </div>
+                <div class="gnb_wrap">
+                    <a href="" class="gnb_item">홈</a>
+                </div>
+                <div class="gnb_wrap">
+                    <a href="" class="gnb_item">카테고리</a>
+                    <ul class="drop_wrap">
+                        <li><a href="" class="drop_item">F-PM</a></li>
+                        <li><a href="" class="drop_item">Global</a></li>
+                        <li><a href="" class="drop_item">PRE-CON</a></li>
+                        <li><a href="" class="drop_item">ESG</a></li>
+                        <li><a href="" class="drop_item">Leadership</a></li>
+                        <li><a href="" class="drop_item">Smart</a></li>
+                        <li><a href="" class="drop_item">HanmiTube</a></li>
+                        <li><a href="" class="drop_item">CPD</a></li>
+                    </ul>
+                </div>
+                <div class="gnb_wrap">
+                    <a href="" class="gnb_item">GPMU소개</a>
+                    <ul class="drop_wrap">
+                        <li><a href="" class="drop_item">소개</a></li>
+                    </ul>
+                </div>
+                <div class="gnb_wrap">
+                    <a href="" class="gnb_item">열린마당</a>
+                    <ul class="drop_wrap">
+                        <li><a href="" class="drop_item">공지사항</a></li>
+                        <li><a href="" class="drop_item">1:1 게시판</a></li>
+                        <li><a href="" class="drop_item">지식샘</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="gnb_wrap">
+                    <a href="" class="gnb_item">강사</a>
+                    <ul class="drop_wrap">
+                        <li><a href="" class="drop_item">강사</a></li>
+                    </ul>
+                </div>
+                <div class="gnb_wrap">
+                    <a href="" class="gnb_item">고객전용관</a>
+                    <ul class="drop_wrap">
+                        <li><a href="" class="drop_item">고객전용관</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="right_box">
+                <div class="seach_area">
+                    <div class="input_wrap">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <button type="submit">검색</button>
+                    </div>
+                    <!-- <div class="search_history">
+                        <ul>
+                            <li>
+                                <a href="#" class="txt">최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1</a><a href="#" class="del">삭제</a>
+                            </li>
+                            <li>
+                                <a href="#" class="txt">최근검색어2</a><a href="#" class="del">삭제</a>
+                            </li>
+                            <li>
+                                <a href="#" class="txt">최근검색어3</a><a href="#" class="del">삭제</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="all_del">전체 삭제</a>
+                    </div> -->
+                </div>
+                <ul class="member_box">
+                    <li class="login"><a href="#">로그인</a></li>
+                    <li class="join"><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+
+        </div>        
+        <!-- 모바일 메뉴 -->
+        <!-- 
+        <div class="m_menu">
+            <div class="m_search">
+                <a href="#" class="search_btn">검색</a>
+                <div>
+                   <div>
+                    <input type="text" placeholder="교육과정을 검색하세요.">
+                    <button type="submit">검색</button>
+                    </div>
+                </div>
+            </div>
+            <div class="m_menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div> 
+        -->
+        <!-- //모바일 메뉴 -->
+    </div>
+    <div class="inner">
+        <!-- 메인 배너 -->
+        <div class="swiper main_banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                   <img src="./images/hanmi/main_img_01.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/hanmi/main_img_02.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/hanmi/main_img_03.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+            <a href="#" class="swiper-button-play">play</a>
+            <a href="#" class="swiper-button-pause">stop</a>
+        </div>
+        <!-- //메인 배너 -->
+    </div>
+
+</header>
+<script>
+$(document).ready(function() {
+    let linkDepth1 = $(".header_gnb .gnb_item");
+    let gnbList = $(".header_gnb");
+
+    linkDepth1.on("mouseenter", function() {
+        gnbList.addClass("on");
+    });
+
+    gnbList.on("mouseleave", function() {
+        setTimeout(function() {
+            gnbList.removeClass("on");
+        }, 100);
+    });
+
+    var swiper = new Swiper(".main_banner", {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+
+    });
+});
+
+</script>
+</body>
+
+</html>
