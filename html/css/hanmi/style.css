@@ -1,0 +1,122 @@
+/* 메인 */
+.main_slide { overflow: hidden; } 
+.main_banner { height: 380px; position: relative; } 
+.main_banner .swiper-button-prev,
+.main_banner .swiper-button-next { width: 25px; height: 33px; top: auto; margin-top: 0; top: 50%; transform: translateY(-50%); z-index: 1; } 
+.main_banner img { display: block; width: 100% } 
+.main_banner .swiper-button-prev { background: url(../../images/hanmi/mb_prev.png) no-repeat center; left: 26px; } 
+.main_banner .swiper-button-next { background: url(../../images/hanmi/mb_next.png) no-repeat; left: initial; right: 26px; } 
+.main_banner .swiper-pagination { position: static; z-index: 1; } 
+.main_banner .swiper-pagination .swiper-pagination-bullet-active { background: #373737; } 
+.main_banner .swiper-pagination span { width: 14px; height: 14px; margin-right: 10px; } 
+.main_banner .swiper-button-play { background: url(../../images/hanmi/mb_start.png) no-repeat center; display: block; width: 12px; height: 14px; text-indent: -99999px; position: absolute; z-index: 2; display: none } 
+.main_banner .swiper-button-pause { background: url(../../images/hanmi/mb_stop.png) no-repeat; display: block; text-indent: -99999px; position: absolute; z-index: 2; width: 12px; height: 14px; } 
+.main_banner .control { display: flex; width: 100%; position: absolute; bottom: 30px; align-items: center; justify-content: center; z-index: 2; } 
+.main_banner .control .swiper-btns { width: 12px; height: 14px; } 
+
+.gpmu_menu { padding: 100px 0 60px; } 
+.gpmu_menu .menu_list { display: flex; margin: 0 60px; justify-content: space-between; } 
+.gpmu_menu .menu_list li a { display: block; width: 100%; height: 100%; color: #373737; font-size: 1.6rem; font-weight: 500; text-align: center; } 
+.gpmu_menu .menu_list li a::before { content: ''; display: block; width: 125px; height: 125px; margin: 0 auto 20px; background-color: #f7f7f7; background-position: center; background-repeat: no-repeat; border-radius: 50%; transition: all 0.35s; } 
+.gpmu_menu .menu_list li a.icon01::before { background-image: url(../../images/hanmi/menu_icon01.png); } 
+.gpmu_menu .menu_list li a.icon02::before { background-image: url(../../images/hanmi/menu_icon02.png); } 
+.gpmu_menu .menu_list li a.icon03::before { background-image: url(../../images/hanmi/menu_icon03.png); } 
+.gpmu_menu .menu_list li a.icon04::before { background-image: url(../../images/hanmi/menu_icon04.png); } 
+.gpmu_menu .menu_list li a.icon05::before { background-image: url(../../images/hanmi/menu_icon05.png); } 
+.gpmu_menu .menu_list li a.icon06::before { background-image: url(../../images/hanmi/menu_icon06.png); } 
+.gpmu_menu .menu_list li a.icon01:hover::before { background-image: url(../../images/hanmi/menu_icon01_on.png); } 
+.gpmu_menu .menu_list li a.icon02:hover::before { background-image: url(../../images/hanmi/menu_icon02_on.png); } 
+.gpmu_menu .menu_list li a.icon03:hover::before { background-image: url(../../images/hanmi/menu_icon03_on.png); } 
+.gpmu_menu .menu_list li a.icon04:hover::before { background-image: url(../../images/hanmi/menu_icon04_on.png); } 
+.gpmu_menu .menu_list li a.icon05:hover::before { background-image: url(../../images/hanmi/menu_icon05_on.png); } 
+.gpmu_menu .menu_list li a.icon06:hover::before { background-image: url(../../images/hanmi/menu_icon06_on.png); } 
+.gpmu_menu .menu_list li a:hover { color: #064a84; font-weight: bold; } 
+.gpmu_menu .menu_list li a:hover::before { box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35); } 
+
+.box_item { background: #fff; } 
+.box_item.bg_gray { background: #f7f7f7; } 
+.box_item.bg_blue { background: #064a84; } 
+.box_item.pd_style01 { padding: 60px 0 80px; } 
+.cont_slide .item { border: 1px solid #dadada; border-radius: 10px; box-sizing: border-box; overflow: hidden; } 
+.cont_slide .item .img_wrap { height: 235px; } 
+.cont_slide .item .img_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; } 
+.cont_slide .item .txt { padding: 12px 16px 10px; } 
+.cont_slide .item .t_state .state { display: inline-block; padding: 4px 10px; font-size: 1.2rem; color: #666666; border: 1px solid #666666; border-radius: 20px; } 
+.cont_slide .item .t_state .state + .state { margin-left: 2px; } 
+.cont_slide .item .t_state .state.blue { color: #4d88f4; border-color: #4d88f4; } 
+.cont_slide .item .t_state .state.pink { color: #ff3e67; border-color: #ff3e67; } 
+.cont_slide .item .txt .t_tit { display: -webkit-box; height: 46px; margin: 12px 0 8px; color: #212121; font-size: 1.6rem; font-weight: bold; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; line-height: 23px; word-break: keep-all; overflow: hidden; } 
+.cont_slide .item .txt .t_rate { display: flex; align-items: center; } 
+.cont_slide .item .txt .t_rate .star_bg { width: 66px; height: 10px; position: relative; background: url(../../images/hanmi/star_bg.png) no-repeat; z-index: 1; } 
+.cont_slide .item .txt .t_rate .star_bg span { width: auto; height: 10px; position: absolute; left: 0; top: 0; background: url(../../images/hanmi/star_on.png) no-repeat; z-index: 2; } 
+.cont_slide .item .txt .t_rate .star_txt { margin-left: 4px; color: #666666; font-size: 1.3rem; } 
+
+.cont_slide .item .btn_wrap { padding: 14px 0; background: #064a84; text-align: center; } 
+.cont_slide .item .btn_wrap p { color: #fff; font-size: 1.7rem; font-weight: bold; } 
+.cont_slide .item a { display: block; position: relative; } 
+.cont_slide .item a:hover::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(22, 22, 22, 0.92); z-index: 5; } 
+.cont_slide .item .h_wrap { display: none; width: 100%; height: 100%; padding: 50px 18px 16px; position: absolute; top: 0; bottom: 0; color: #fff; box-sizing: border-box; z-index: 8; } 
+.cont_slide .item .h_wrap .h_tit { display: -webkit-box; height: 46px; margin-bottom: 30px; font-size: 1.8rem; font-weight: bold; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; line-height: 23px; word-break: keep-all; overflow: hidden; } 
+.cont_slide .item .h_wrap li { padding-left: 16px; position: relative; font-size: 1.3rem; } 
+.cont_slide .item .h_wrap li::before { content: ''; width: 12px; height: 12px; position: absolute; left: 0; top: 2px; background: url(../../images/hanmi/h_list_icon.png) no-repeat; } 
+.cont_slide .item .h_wrap li + li { margin-top: 10px; } 
+.cont_slide .item .h_wrap .h_btn { margin-top: auto; padding: 10px 0; background: #ffffff; color: #373737; font-size: 1.7rem; font-weight: bold; text-align: center; border-radius: 10px; } 
+.cont_slide .item a:hover .h_wrap { display: flex; flex-direction: column; } 
+.cont_slide .slide_wrap { margin-top: 36px; position: relative; } 
+.cont_slide .con_list { overflow: hidden; } 
+.cont_slide .swiper-button-prev, .cont_slide .swiper-button-next { width: 60px; height: 63px; margin-top: 0; top: 50%; transform: translateY(-50%); } 
+.cont_slide .swiper-button-prev { left: -100px; background: url(../../images/hanmi/btn_prev.png) no-repeat; } 
+.cont_slide .swiper-button-next { right: -100px; background: url(../../images/hanmi/btn_next.png) no-repeat; } 
+.page_tit { color: #373737; font-size: 3.7rem; font-family: 'NanumSquareRound', 'Noto Sans KR',sans-serif; font-weight: 800; } 
+.page_tit span { color: #064a84; font-family: 'NanumSquareRound', 'Noto Sans KR',sans-serif; font-weight: 800; } 
+.gpmu_pick .flex_box { display: flex; align-items: center; } 
+.gpmu_pick .tabs { display: flex; margin-left: auto; } 
+.gpmu_pick .tabs li + li { margin-left: 10px; } 
+.gpmu_pick .tabs li.active a { background: #373737; color: #fff; } 
+.gpmu_pick .tabs li a { display: flex; width: 100%; height: 100%; padding: 8px 22px; background: #fff; color: #666666; font-size: 1.5rem; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; border: 1px solid #373737; border-radius: 30px; } 
+
+.gpmu_banner { padding: 70px 0 10px; } 
+.gpmu_banner .banner { background-image: url(../../images/hanmi/banner_img.png); background-color: #1382ff; background-position: right -46px bottom -84px; background-repeat: no-repeat; border-radius: 20px; } 
+.gpmu_banner .banner a { display: block; padding: 70px 40px; color: #fff; font-size: 2.8rem; } 
+
+.gpmu_new .con_list { margin-top: 36px; } 
+.gpmu_new .item a { display: block; width: 100%; height: 100%; } 
+.gpmu_new .item a:hover .img_wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(../../images/hanmi/play_btn.png); background-color: rgba(22, 22, 22, 0.92); background-position: center; background-repeat: no-repeat; z-index: 5; } 
+.gpmu_new .item .img_wrap { position: relative; border-radius: 10px; overflow: hidden; } 
+.gpmu_new .item .img_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; } 
+.gpmu_new .item .txt { padding: 20px 30px 0; text-align: center; } 
+.gpmu_new .item .txt span { color: #212121; font-size: 1.4rem; } 
+.gpmu_new .item .txt p { display: -webkit-box; height: 46px; margin: 12px 0 0; color: #212121; font-size: 1.8rem; font-weight: 500; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; line-height: 23px; word-break: keep-all; overflow: hidden; } 
+
+.gpmu_notice { padding: 50px 0 60px; } 
+.gpmu_notice .con_list { margin-top: 36px; } 
+.gpmu_notice .con_list .item:hover a { border-color: #064a84; box-shadow: 0px 0px 16px 0px rgba(88, 88, 88, 0.3); } 
+.gpmu_notice .con_list .item:hover a .tit { color: #064a84; } 
+.gpmu_notice .con_list .item a { display: block; width: 100%; height: 100%; padding: 16px 18px; background: #fff; border: 1px solid #e8e8e8; border-radius: 15px; box-sizing: border-box; text-align: center; } 
+.gpmu_notice .con_list .item a .tit { display: -webkit-box; color: #373737; font-size: 1.8rem; font-weight: 500; -webkit-line-clamp: 1; -webkit-box-orient: vertical; text-overflow: ellipsis; word-break: keep-all; overflow: hidden; } 
+.gpmu_notice .con_list .item a .date { display: block; margin-top: 13px; padding-top: 13px; color: #666666; font-size: 1.3rem; border-top: 1px solid #e8e8e8; } 
+
+.gpmu_letter .con_list { margin-top: 36px; } 
+.gpmu_letter .item a { display: block; width: 100%; height: 100%; } 
+.gpmu_letter .item a:hover .img_wrap img { transform: scale(1.1); } 
+.gpmu_letter .item .img_wrap { border: 1px solid #e8e8e8; overflow: hidden; } 
+.gpmu_letter .item .img_wrap { max-height: 260px; height: 100%; } 
+.gpmu_letter .item .img_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; transition: all 0.35s; } 
+.gpmu_letter .item .txt { margin-top: 25px; } 
+.gpmu_letter .item .txt p { display: -webkit-box; height: 46px; margin: 12px 0 0; color: #212121; font-size: 1.8rem; font-weight: 500; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; line-height: 23px; word-break: keep-all; overflow: hidden; } 
+
+.gpmu_introduction { padding: 80px 0 90px; } 
+.gpmu_introduction .con_list { display: flex; align-items: center; } 
+.gpmu_introduction .txt_wrap { margin-right: 68px; } 
+.gpmu_introduction .txt_wrap .tit { margin-bottom: 34px; color: #fff; font-size: 3.2rem; font-weight: bold; } 
+.gpmu_introduction .txt_wrap .txt { margin-bottom: 36px; color: #fff; font-size: 1.8rem; line-height: 1.5; word-break: keep-all; } 
+.gpmu_introduction .txt_wrap a { display: inline-block; padding: 14px 20px; position: absolute; color: #064a84; font-size: 1.8rem; font-weight: 500; border-radius: 30px; transition: all .3s; box-sizing: border-box; overflow: hidden; z-index: 1; } 
+.gpmu_introduction .txt_wrap a::after { content: ''; width: 100%; height: 100%; position: absolute; bottom: 0; left: 0; background-color: #fff; border-radius: 30px; transition: all .3s; z-index: -2; } 
+.gpmu_introduction .txt_wrap a::before { content: ''; width: 0%; height: 100%; position: absolute; bottom: 0; left: 0; background-color: rgb(6, 74, 132, 0.8); border-radius: 30px; transition: all .3s; z-index: -1; } 
+.gpmu_introduction .txt_wrap a:hover::before { width: 100%; } 
+.gpmu_introduction .txt_wrap a:hover { color: #fff; } 
+.gpmu_introduction .txt_wrap a:hover span::after { background: url(../../images/hanmi/arrow_btn_on.png) no-repeat; } 
+.gpmu_introduction .txt_wrap a span { display: flex; align-items: center; } 
+.gpmu_introduction .txt_wrap a span::after { content: ''; display: inline-block; width: 35px; height: 18px; margin-left: 16px; background: url(../../images/hanmi/arrow_btn.png) no-repeat; } 
+.gpmu_introduction .img_wrap { max-width: 600px; width: 100%; max-height: 340px; overflow: hidden; } 
+.gpmu_introduction .img_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; } 
