@@ -971,12 +971,13 @@ $(document).ready(function() {
     });
 
     let mainSwiper = new Swiper(".main_banner", {
-        slidesPerView: 1,
-        spaceBetween: 0,
+        slidesPerView: 'auto',
+        spaceBetween: 30,
         loop: true,
         breakpoints: {
             640: {
-                spaceBetween: 30,
+                slidesPerView: 1,
+                spaceBetween: 0,
             },
         },
         autoplay: {
