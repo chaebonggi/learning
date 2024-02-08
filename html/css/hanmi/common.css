@@ -92,6 +92,7 @@ td.txtCut1 { display: table-cell }
 /* header */
 #header .top { display: flex; padding-top: 30px; justify-content: space-between; align-items: center; box-sizing: border-box; } 
 #header .top .right_box { display: flex; align-items: center; } 
+#header .top .logo a {display: block;}
 #header .top .seach_area { position: relative; width: 158px; } 
 #header .top .seach_area .input_wrap { display: flex; width: 100%; padding: 10px 10px; border: 1px solid #373737; border-radius: 30px; justify-content: space-between; overflow: hidden; } 
 #header .top .seach_area .input_wrap input { width: calc(100% - 30px); border: 0; font-size: 1.3rem; } 
@@ -121,11 +122,53 @@ td.txtCut1 { display: table-cell }
 #header .header_gnb .gnb_banner img { width: 100%; height: 100%; object-fit: cover; } 
 #header .header_gnb.on .gnb_banner { max-height: 100%; } 
 
+#header .m_gnb {display: none;}
+#header .m_gnb ul { display: flex; height: 8rem; margin-top: 2rem; justify-content: center; border-top: 1px solid #dadada; }
+#header .m_gnb ul li { height: 100%; } 
+#header .m_gnb ul li a { display: flex; width: 100%; height: 100%; padding: 0 30px; color: #373737; font-size: 1.8rem; font-weight: 500; align-items: center; box-sizing: border-box; } 
+
 /* footer */
-.footer .f_top { padding: 26px 0; background: #f7f7f7; } 
+.footer .f_top { background: #f7f7f7; } 
 .footer .f_top ul { display: flex; } 
 .footer .f_top ul li + li { margin-left: 32px; } 
-.footer .f_top ul li a { display: block; color: #373737; font-size: 1.5rem; font-weight: 500; } 
+.footer .f_top ul li a { display: block; padding: 2.6rem 0; color: #373737; font-size: 1.5rem; font-weight: 500; } 
 .footer .f_bottom { padding: 32px 0; background: #ffffff; } 
 .footer .f_bottom address p { margin-top: 12px; color: #666666; font-size: 1.3rem; } 
 .footer .f_bottom address p.copy { color: #a3a3a3; } 
+
+
+@media all and (max-width:1024px){
+    #header .header_gnb {display: none;}
+    #header .m_gnb {display: block;}
+}
+@media all and (max-width:768px){
+    html {font-size: 8px;}
+    .inner {
+        width: calc(100% - 20px);
+    }
+    .footer .f_top ul {
+        justify-content: center;
+    }
+}
+@media all and (max-width:640px){
+    #header .top .logo a img {
+        width: 70px;
+    }
+    
+    #header .top .seach_area {
+        width: 100px;
+    }
+    #header .top .seach_area .input_wrap {
+        padding: 2px 4px;
+    }
+    #header .top .seach_area .input_wrap input {
+        width: calc(100% - 20px);
+    }
+    #header .top .seach_area .input_wrap button {
+        background-size: 12px;
+    }
+    #header .member_box {
+        margin-left: 14px;
+    }
+    
+}

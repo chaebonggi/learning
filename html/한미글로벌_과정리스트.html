@@ -353,12 +353,15 @@ $(document).ready(function() {
 
   
 
+    function tab() {
     function initializeSwiper(tabId) {
-        return new Swiper(`.gpmu_pick ${tabId} .con_list`, {
+        swiper = new Swiper(`.gpmu_pick ${tabId} .con_list`, {
             spaceBetween: 26,
             slidesPerView: 4,
             autoplay: false,
             loop: false,
+            observer: true,
+            observeParents: true,
             navigation: {
                 nextEl: `.gpmu_pick ${tabId} .swiper-button-next`,
                 prevEl: `.gpmu_pick ${tabId} .swiper-button-prev`,
@@ -373,24 +376,26 @@ $(document).ready(function() {
             },
         });
     }
-    let swiperTab01 = initializeSwiper("#tab01");
-    let swiperTab02 = initializeSwiper("#tab02");
-    let swiperTab03 = initializeSwiper("#tab03");
-    let swiperTab04 = initializeSwiper("#tab04");
-
+    initializeSwiper('#tab01');
+    
     // // tab contents
     $(".gpmu_pick .tab_container > .tab_content").hide();
 
     $(".gpmu_pick .tab_container").each(function () {
         $(this).children(".tab_content").first().show();
     });
-    $(".gpmu_pick .tabs li a").click(function () {
+    $(".gpmu_pick .tabs li a").click(function (e) {
+        e.preventDefault();
         $(this).parent().siblings("li").removeClass("active");
         $(this).parent().addClass("active");
         $(this).parents('.tab_container').find(".tab_content").hide();
-        var activeTab = $(this).attr("rel");
-        $("#" + activeTab).fadeIn();
+        // var activeTab = $(this).attr("rel");
+        let tabId = $(this).attr("href");
+        initializeSwiper(tabId, true);
+        $(tabId).fadeIn();        
     });
+}
+tab();
 
     var swiper = new Swiper(".gpmu_best .con_list", {
         spaceBetween: 20,

@@ -63,12 +63,6 @@
                             
                         </ul>
                     </div>
-                    <!-- <div class="gnb_wrap">
-                        <a href="" class="gnb_item">강사</a>
-                        <ul class="drop_wrap">
-                            <li><a href="" class="drop_item">강사</a></li>
-                        </ul>
-                    </div> -->
                     <div class="gnb_wrap">
                         <a href="" class="gnb_item">고객전용관</a>
                         <ul class="drop_wrap">
@@ -90,7 +84,19 @@
                 </div>
             </div>      
         </div>
+        <style>
+           
+        </style>
+        <div class="m_gnb">
+            <ul>
+                <li><a href="#">카테고리</a></li>
+                <li><a href="#">GPMU소개</a></li>
+                <li><a href="#">열린마당</a></li>
+                <li><a href="#">고객전용관</a></li>
+            </ul>
+        </div>
     </header>
+    
     <article class="main_slide">
         <div class="inner">
             <div class="swiper main_banner">
@@ -123,6 +129,11 @@
             </div>
         </div>
     </article>
+    <style>
+       .box_item {
+        display: none;
+       }
+    </style>
     <article class="box_item">
         <div class="gpmu_menu">
             <div class="inner">
@@ -149,7 +160,6 @@
             </div>
         </div>
     </article>
-
     <article class="box_item pd_style01">
         <div class="gpmu_pick cont_slide">
             <div class="inner">
@@ -157,14 +167,14 @@
                     <div class="flex_box">
                         <h3 class="page_tit"><span>GPMU</span> PICK</h3>
                         <ul class="tabs">
-                            <li class="active"><a href="javascript:void(0);" rel="tab01">#F-PM</a></li>
-                            <li><a href="javascript:void(0);" rel="tab02">#Global</a></li>
-                            <li><a href="javascript:void(0);" rel="tab03">#PRE-CON</a></li>
-                            <li><a href="javascript:void(0);" rel="tab04">#ESG</a></li>
-                            <li><a href="javascript:void(0);" rel="tab05">#Leadership</a></li>
-                            <li><a href="javascript:void(0);" rel="tab06">#Smart</a></li>
-                            <li><a href="javascript:void(0);" rel="tab07">#HanmiTube</a></li>
-                            <li><a href="javascript:void(0);" rel="tab08">#CPD</a></li>
+                            <li class="active"><a href="#tab01">#F-PM</a></li>
+                            <li><a href="#tab02">#Global</a></li>
+                            <li><a href="#tab03">#PRE-CON</a></li>
+                            <li><a href="#tab04">#ESG</a></li>
+                            <li><a href="#tab05">#Leadership</a></li>
+                            <li><a href="#tab06">#Smart</a></li>
+                            <li><a href="#tab07">#HanmiTube</a></li>
+                            <li><a href="#tab08">#CPD</a></li>
                         </ul>
                     </div>
                     <div class="tab_content" id="tab01">
@@ -540,7 +550,6 @@
     
                 </div>
             </div>
-            <!--//분야별 교육과정-->
         </div>
     </article>
     <article class="box_item pd_style01 bg_gray">
@@ -801,8 +810,7 @@
                 </div>
             </div>
         </div>
-    </article>
-    
+    </article>    
     <article class="box_item bg_gray">
         <div class="gpmu_notice">
             <div class="inner">
@@ -877,7 +885,6 @@
             </div>
         </div>
     </article>
-
     <article class="box_item bg_blue">
         <div class="gpmu_introduction">
             <div class="inner">
@@ -900,7 +907,7 @@
             </div>
         </div>
     </article>   
-
+    <!--  -->
     <footer class="footer">
         <div class="f_top">
             <div class="inner">
@@ -977,48 +984,49 @@ $(document).ready(function() {
         $('.main_banner .control .swiper-button-pause').show();
     });
 
-  
+    // // tab contents
+    function tabSlide() {
+        function initializeSwiper(tabId) {
+            swiper = new Swiper(`.gpmu_pick ${tabId} .con_list`, {
+                spaceBetween: 26,
+                slidesPerView: 4,
+                autoplay: false,
+                loop: false,
+                observer: true,
+                observeParents: true,
+                navigation: {
+                    nextEl: `.gpmu_pick ${tabId} .swiper-button-next`,
+                    prevEl: `.gpmu_pick ${tabId} .swiper-button-prev`,
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                    640: {
+                        slidesPerView: "auto",
+                    },
+                },
+            });
+        }
+        initializeSwiper('#tab01');   
+        
+        $(".gpmu_pick .tab_container > .tab_content").hide();
 
-    function initializeSwiper(tabId) {
-        return new Swiper(`.gpmu_pick ${tabId} .con_list`, {
-            spaceBetween: 26,
-            slidesPerView: 4,
-            autoplay: false,
-            loop: false,
-            observer: true,
-            observeParents: true,
-            navigation: {
-                nextEl: `.gpmu_pick ${tabId} .swiper-button-next`,
-                prevEl: `.gpmu_pick ${tabId} .swiper-button-prev`,
-            },
-            breakpoints: {
-                1024: {
-                    slidesPerView: 3,
-                },
-                640: {
-                    slidesPerView: "auto",
-                },
-            },
+        $(".gpmu_pick .tab_container").each(function () {
+            $(this).children(".tab_content").first().show();
+        });
+        $(".gpmu_pick .tabs li a").click(function (e) {
+            e.preventDefault();
+            $(this).parent().siblings("li").removeClass("active");
+            $(this).parent().addClass("active");
+            $(this).parents('.tab_container').find(".tab_content").hide();
+            // var activeTab = $(this).attr("rel");
+            let tabId = $(this).attr("href");
+            initializeSwiper(tabId, true);
+            $(tabId).fadeIn();        
         });
     }
-    let swiperTab01 = initializeSwiper("#tab01");
-    let swiperTab02 = initializeSwiper("#tab02");
-    let swiperTab03 = initializeSwiper("#tab03");
-    let swiperTab04 = initializeSwiper("#tab04");
-
-    // // tab contents
-    $(".gpmu_pick .tab_container > .tab_content").hide();
-
-    $(".gpmu_pick .tab_container").each(function () {
-        $(this).children(".tab_content").first().show();
-    });
-    $(".gpmu_pick .tabs li a").click(function () {
-        $(this).parent().siblings("li").removeClass("active");
-        $(this).parent().addClass("active");
-        $(this).parents('.tab_container').find(".tab_content").hide();
-        var activeTab = $(this).attr("rel");
-        $("#" + activeTab).fadeIn();
-    });
+    tabSlide();       
 
     var swiper = new Swiper(".gpmu_best .con_list", {
         spaceBetween: 20,
