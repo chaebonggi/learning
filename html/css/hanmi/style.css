@@ -126,3 +126,9 @@
         height: auto;
     }
 }
+
+@media all and (max-width:640px){
+    .main_slide .inner {
+        width: 100%;
+    }
+}

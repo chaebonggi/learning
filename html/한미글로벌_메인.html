@@ -82,11 +82,23 @@
                         <li class="join"><a href="#">회원가입</a></li>
                     </ul>
                 </div>
+                <!-- 모바일 메뉴 -->
+                <div class="m_menu">
+                    <div class="m_search">
+                        <a href="#" class="search_btn ir_pm">검색</a>
+                        <div class="seach_area">
+                            <div class="input_wrap">
+                                <input type="text" placeholder="검색어를 입력하세요.">
+                                <button type="submit">검색</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m_login">
+                        <a href="#" class="login_btn ir_pm">로그인</a>
+                    </div>
+                </div>
             </div>      
         </div>
-        <style>
-           
-        </style>
         <div class="m_gnb">
             <ul>
                 <li><a href="#">카테고리</a></li>
@@ -953,10 +965,20 @@ $(document).ready(function() {
         }, 100);
     });
 
+    $('#header .m_menu .search_btn').click(function () {
+        $(this).toggleClass('active');
+        $(this).next().toggle();
+    });
+
     let mainSwiper = new Swiper(".main_banner", {
-        slidesPerView: 'auto',
-        spaceBetween: 30,
+        slidesPerView: 1,
+        spaceBetween: 0,
         loop: true,
+        breakpoints: {
+            640: {
+                spaceBetween: 30,
+            },
+        },
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
