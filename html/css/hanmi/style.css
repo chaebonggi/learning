@@ -197,7 +197,7 @@
         display: none;
     }
     .gpmu_menu {
-        padding: 30px 0;
+        padding: 30px 0 0;
     }
     .gpmu_menu .menu_list {
         margin: 0;
@@ -207,6 +207,7 @@
         width: 90px;
         height: 90px;
         margin: 0 auto 10px;
+        background-size: 30px;
     }
 
 
