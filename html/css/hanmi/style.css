@@ -6,13 +6,13 @@
 .main_banner img { display: block; width: 100% } 
 .main_banner .swiper-button-prev { background: url(../../images/hanmi/mb_prev.png) no-repeat center; left: 26px; } 
 .main_banner .swiper-button-next { background: url(../../images/hanmi/mb_next.png) no-repeat; left: initial; right: 26px; } 
-.main_banner .swiper-pagination { position: static; z-index: 1; } 
+.main_banner .swiper-pagination { position: static; font-size: 0; z-index: 1; } 
 .main_banner .swiper-pagination .swiper-pagination-bullet-active { background: #373737; } 
 .main_banner .swiper-pagination span { width: 14px; height: 14px; margin-right: 10px; } 
-.main_banner .swiper-button-play { background: url(../../images/hanmi/mb_start.png) no-repeat center; display: block; width: 12px; height: 14px; text-indent: -99999px; position: absolute; z-index: 2; display: none } 
-.main_banner .swiper-button-pause { background: url(../../images/hanmi/mb_stop.png) no-repeat; display: block; text-indent: -99999px; position: absolute; z-index: 2; width: 12px; height: 14px; } 
+.main_banner .swiper-button-play {width: 12px; height: 14px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../../images/hanmi/mb_start.png) center / contain no-repeat; text-indent: -99999px; z-index: 2; display: none } 
+.main_banner .swiper-button-pause { width: 12px; height: 14px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../../images/hanmi/mb_stop.png) center / contain no-repeat; text-indent: -99999px; z-index: 2;  } 
 .main_banner .control { display: flex; width: 100%; position: absolute; bottom: 30px; align-items: center; justify-content: center; z-index: 2; } 
-.main_banner .control .swiper-btns { width: 12px; height: 14px; } 
+.main_banner .control .swiper-btns { width: 12px; height: 14px; position: relative;} 
 
 .gpmu_menu { padding: 100px 0 60px; } 
 .gpmu_menu .menu_list { display: flex; margin: 0 60px; justify-content: space-between; } 
@@ -121,9 +121,27 @@
 .gpmu_introduction .img_wrap { max-width: 600px; width: 100%; max-height: 340px; overflow: hidden; } 
 .gpmu_introduction .img_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; } 
 
+@media all and (max-width:1400px){
+    .cont_slide .swiper-button-next,
+    .cont_slide .swiper-button-prev {
+        display: none;
+    }
+}
 @media all and (max-width:1200px){
     .main_banner {
         height: auto;
+    }
+    .main_banner .control {
+        bottom: 15px;
+    }
+
+    .gpmu_pick .flex_box {
+        display: block;
+    }
+    .gpmu_pick .tabs {
+        margin: 2rem 0 0 0;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
 
@@ -131,4 +149,25 @@
     .main_slide .inner {
         width: 100%;
     }
+    .main_banner .control {
+        bottom: 10px;
+    }
+    .main_banner .swiper-pagination span {
+        width: 8px;
+        height: 8px;
+        margin-right: 6px;
+    }
+    .main_banner .swiper-button-play,
+    .main_banner .swiper-button-pause {
+        width: 8px;
+        height: 10px;
+    }
+    .main_banner .swiper-button-prev,
+    .main_banner .swiper-button-next {
+        display: none;
+    }
+    .cont_slide .item .img_wrap {
+        height: auto;
+    }
+
 }

@@ -99,7 +99,7 @@ td.txtCut1 { display: table-cell }
 #header .top .seach_area .input_wrap input { width: calc(100% - 30px); border: 0; font-size: 1.3rem; } 
 #header .top .seach_area .input_wrap input:focus { outline: none; } 
 #header .top .seach_area .input_wrap input::placeholder { color: #bcbcbc; } 
-#header .top .seach_area .input_wrap button { width: 20px; background: url(../../images/hanmi/seach_ico.png) no-repeat center; border: 0; text-indent: -99999px; } 
+#header .top .seach_area .input_wrap button { width: 20px; background: url(../../images/hanmi/seach_ico.png) center / contain no-repeat; border: 0; text-indent: -99999px; } 
 #header .member_box { display: flex; margin-left: 40px; } 
 #header .member_box li { position: relative; } 
 #header .member_box li + li::before { content: ''; width: 1px; height: 14px; position: absolute; left: 0; top: 50%; transform: translateY(-40%); background: #636363; } 
