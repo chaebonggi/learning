@@ -31,12 +31,13 @@
 .gpmu_menu .menu_list li a.icon05:hover::before { background-image: url(../../images/hanmi/menu_icon05_on.png); } 
 .gpmu_menu .menu_list li a.icon06:hover::before { background-image: url(../../images/hanmi/menu_icon06_on.png); } 
 .gpmu_menu .menu_list li a:hover { color: #064a84; font-weight: bold; } 
-.gpmu_menu .menu_list li a:hover::before { box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35); } 
+.gpmu_menu .menu_list li a:hover::before { box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35); }
 
 .box_item { background: #fff; } 
 .box_item.bg_gray { background: #f7f7f7; } 
 .box_item.bg_blue { background: #064a84; } 
 .box_item.pd_style01 { padding: 60px 0 80px; } 
+.cont_slide .swiper-pagination {display: none;}
 .cont_slide .item { border: 1px solid #dadada; border-radius: 10px; box-sizing: border-box; overflow: hidden; } 
 .cont_slide .item .img_wrap { height: 235px; } 
 .cont_slide .item .img_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; } 
@@ -135,6 +136,14 @@
         bottom: 15px;
     }
 
+    .gpmu_menu .menu_list {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .gpmu_menu .menu_list li {
+        width: calc(100% / 3 - 20px);
+    }
+
     .gpmu_pick .flex_box {
         display: block;
     }
@@ -143,6 +152,27 @@
         overflow-x: auto;
         white-space: nowrap;
     }
+
+    .cont_slide .swiper-pagination {
+        display: block;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .cont_slide .swiper-pagination span {
+        width: 14px;
+        height: 14px;
+    }
+    .cont_slide .swiper-pagination span + span {
+        margin-left: 6px;
+    }
+    .cont_slide .swiper-pagination-bullet-active {
+        background-color: #064a84;
+    }
+}
+
+@media all and (max-width:1024px){
+
 }
 
 @media all and (max-width:640px){
@@ -166,8 +196,41 @@
     .main_banner .swiper-button-next {
         display: none;
     }
-    .cont_slide .item .img_wrap {
-        height: auto;
+    .gpmu_menu {
+        padding: 30px 0;
     }
+    .gpmu_menu .menu_list {
+        margin: 0;
+        gap: 10px;
+    }
+    .gpmu_menu .menu_list li a::before {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 10px;
+    }
+
+
+    .box_item.pd_style01 {
+        padding: 30px 0 40px;
+    }
+    .cont_slide .item a:hover .h_wrap {
+        display: none;
+    }
+    .cont_slide .item a:hover::before {
+        content: none;
+    }
+
+    .cont_slide .swiper-pagination {
+        bottom: -25px;
+    }
+    .cont_slide .swiper-pagination span {
+        width: 8px;
+        height: 8px;
+    }
+    .cont_slide .swiper-pagination span + span {
+        margin-left: 4px;
+    }
+    
+    
 
 }
