@@ -753,19 +753,19 @@
             </div>
         </div>
     </article>
-    <article class="box_item" style="display: none;">
+    <article class="box_item">
         <div class="gpmu_banner">
             <div class="inner">
                 <h3 class="ir_pm">gpmu banner</h3>
                 <div class="banner">
                     <a href="#">
-                        <p>프리콘 역량진단을 통해 과정을 추천해 드립니다.</p>
+                        <p>프리콘 역량진단을 통해 과정을<br class="for_mobile"> 추천해 드립니다.</p>
                     </a>                   
                 </div>
             </div>
         </div>
     </article>
-    <article class="box_item pd_style01" style="display: none;">
+    <article class="box_item pd_style01">
         <div class="gpmu_new">
             <div class="inner">
                 <h3 class="page_tit"><span>GPMU</span> NEW!</h3>
@@ -822,7 +822,7 @@
             </div>
         </div>
     </article>    
-    <article class="box_item bg_gray" style="display: none;">
+    <article class="box_item bg_gray">
         <div class="gpmu_notice">
             <div class="inner">
                 <h3 class="page_tit">NOTICE</h3>
@@ -853,7 +853,7 @@
             </div>
         </div>
     </article>
-    <article class="box_item pd_style01" style="display: none;">
+    <article class="box_item pd_style01">
         <div class="gpmu_letter">
             <div class="inner">
                 <h3 class="page_tit"><span>NEWS</span> LETTER</h3>
@@ -1070,10 +1070,10 @@ $(document).ready(function() {
             prevEl: ".gpmu_best .swiper-button-prev",
         },
         pagination: {
-                    clickable : true,
-                    el: '.gpmu_best .swiper-pagination',
-                    type: 'bullets',
-                },
+            clickable : true,
+            el: '.gpmu_best .swiper-pagination',
+            type: 'bullets',
+        },
         breakpoints: {
             1024: {
                 slidesPerView: 3
@@ -1093,13 +1093,19 @@ $(document).ready(function() {
         slidesPerView: 4,
         autoplay: false,
         loop: false,
+        pagination: {
+            clickable : true,
+            el: '.gpmu_best .swiper-pagination',
+            type: 'bullets',
+        },
         breakpoints: {
             1024: {
                 slidesPerView: 3
             },
-            640: {
-                slidesPerView: "auto",
-            }
+            860: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
         }
     });
 

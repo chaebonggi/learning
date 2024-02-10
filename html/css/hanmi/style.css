@@ -1,4 +1,5 @@
 /* 메인 */
+.for_mobile {display: none;}
 .main_slide { overflow: hidden; } 
 .main_banner { height: 380px; position: relative; } 
 .main_banner .swiper-button-prev,
@@ -172,7 +173,7 @@
 }
 
 @media all and (max-width:1024px){
-
+    .for_mobile {display: block;}
 }
 
 @media all and (max-width:640px){
@@ -230,6 +231,10 @@
     }
     .cont_slide .swiper-pagination span + span {
         margin-left: 4px;
+    }
+
+    .gpmu_new .item a:hover .img_wrap::before {
+        content: none;
     }
     
     
