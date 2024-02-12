@@ -140,8 +140,8 @@ td.txtCut1 { display: table-cell }
 .footer .f_top ul li + li { margin-left: 32px; } 
 .footer .f_top ul li a { display: block; padding: 2.6rem 0; color: #373737; font-size: 1.5rem; font-weight: 500; } 
 .footer .f_bottom { padding: 32px 0; background: #ffffff; } 
-.footer .f_bottom address p { margin-top: 12px; color: #666666; font-size: 1.3rem; } 
-.footer .f_bottom address p.copy { color: #a3a3a3; } 
+.footer .f_bottom .txt p { margin-top: 12px; color: #666666; font-size: 1.3rem; } 
+.footer .f_bottom .txt p.copy { color: #a3a3a3; } 
 
 
 @media all and (max-width:1024px){
