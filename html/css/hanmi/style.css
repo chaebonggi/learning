@@ -82,7 +82,7 @@
 .gpmu_banner .banner a { display: block; padding: 70px 40px; color: #fff; font-size: 2.8rem; } 
 
 .gpmu_new .slide_wrap {position: relative;}
-.gpmu_new .con_list { margin-top: 36px; overflow: hidden;} 
+.gpmu_new .con_list { margin-top: 3.6rem; overflow: hidden;} 
 .gpmu_new .item a { display: block; width: 100%; height: 100%; } 
 .gpmu_new .item a:hover .img_wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(../../images/hanmi/play_btn.png); background-color: rgba(22, 22, 22, 0.92); background-position: center; background-repeat: no-repeat; z-index: 5; } 
 .gpmu_new .item .img_wrap { position: relative; border-radius: 10px; overflow: hidden; } 
@@ -93,7 +93,7 @@
 
 .gpmu_notice { padding: 50px 0 60px;} 
 .gpmu_notice .slide_wrap {position: relative;}
-.gpmu_notice .con_list { margin-top: 36px; overflow: hidden;} 
+.gpmu_notice .con_list { margin-top: 3.6rem; overflow: hidden;} 
 .gpmu_notice .con_list .item:hover a { border-color: #064a84; box-shadow: 0px 0px 16px 0px rgba(88, 88, 88, 0.3); } 
 .gpmu_notice .con_list .item:hover a .tit { color: #064a84; } 
 .gpmu_notice .con_list .item a { display: block; width: 100%; height: 100%; padding: 16px 18px; background: #fff; border: 1px solid #e8e8e8; border-radius: 15px; box-sizing: border-box; text-align: center; } 
@@ -116,7 +116,7 @@
     transform: translateY(-50%);
 }
 .gpmu_letter  .slide_wrap {position: relative;}
-.gpmu_letter .con_list { margin-top: 36px; overflow: hidden;} 
+.gpmu_letter .con_list { margin-top: 3.6rem; overflow: hidden;} 
 .gpmu_letter .item a { display: block; width: 100%; height: 100%; } 
 .gpmu_letter .item a:hover .img_wrap img { transform: scale(1.1); } 
 .gpmu_letter .item .img_wrap { border: 1px solid #e8e8e8; overflow: hidden; } 
@@ -196,8 +196,26 @@
 
 @media all and (max-width:1024px){
     .for_mobile {display: block;}
+    .gpmu_banner .banner {
+        background-position: right 0 bottom -50px;
+        background-size: 400px;
+    }
     .gpmu_notice .control_btn {display: block;}
     .gpmu_notice .slide_wrap {padding: 0 40px;}
+}
+
+@media all and (max-width:860px){
+    .gpmu_introduction .con_list {
+        flex-wrap: wrap;
+    }
+    .gpmu_introduction .txt_wrap {
+        margin-right: 0;
+        order: 2;
+    }
+    .gpmu_introduction .img_wrap {
+        margin-bottom: 2rem;
+        order: 1;
+    }
 }
 
 @media all and (max-width:640px){
@@ -259,11 +277,47 @@
     .cont_item .swiper-pagination span + span {
         margin-left: 4px;
     }
-
+    .gpmu_banner {        
+        padding: 0 0 10px;
+    }
+    .gpmu_banner .inner {
+        width: 100%;
+    }
+    .gpmu_banner .banner {
+        background-position: right -10px bottom -20px;
+        background-size: 150px;
+        border-radius: 0;
+    }
+    .gpmu_banner .banner a {
+        padding: 30px 20px;
+        font-size: 2rem;
+    }
     .gpmu_new .item a:hover .img_wrap::before {
         content: none;
     }
-    
+    .gpmu_new .item .txt {
+        padding: 10px 10px 0;
+    }
+    .gpmu_new .item .txt p {
+        margin: 4px 0 0;
+    }
+    .gpmu_introduction {
+        padding: 30px 0;
+    }
+    .gpmu_introduction .txt_wrap a:hover {
+        color: #064a84;
+    }
+    .gpmu_introduction .txt_wrap a:hover span::after {
+        background: url(../../images/hanmi/arrow_btn.png) no-repeat;
+    }
+    .gpmu_introduction .txt_wrap a:hover::before {
+        content: none;
+    }
+    .gpmu_introduction .txt_wrap a {
+        position: static;
+        background: #fff;
+        
+    }
     
 
 }
