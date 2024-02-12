@@ -766,7 +766,7 @@
         </div>
     </article>
     <article class="box_item pd_style01">
-        <div class="gpmu_new">
+        <div class="gpmu_new cont_item">
             <div class="inner">
                 <h3 class="page_tit"><span>GPMU</span> NEW!</h3>
                 <div class="slide_wrap">
@@ -818,6 +818,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -847,14 +848,18 @@
                                     <span class="date">2023-04-17</span>
                                 </a>
                             </div>
-                        </div>
+                        </div>                        
+                    </div>
+                    <div class="control_btn">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </div>
         </div>
     </article>
     <article class="box_item pd_style01">
-        <div class="gpmu_letter">
+        <div class="gpmu_letter cont_item">
             <div class="inner">
                 <h3 class="page_tit"><span>NEWS</span> LETTER</h3>
                 <div class="slide_wrap">
@@ -892,6 +897,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -1095,7 +1101,7 @@ $(document).ready(function() {
         loop: false,
         pagination: {
             clickable : true,
-            el: '.gpmu_best .swiper-pagination',
+            el: '.gpmu_new .swiper-pagination',
             type: 'bullets',
         },
         breakpoints: {
@@ -1104,6 +1110,9 @@ $(document).ready(function() {
             },
             860: {
                 slidesPerView: 2,
+            },
+            640: {
+                slidesPerView: 1.3,
                 spaceBetween: 10,
             },
         }
@@ -1114,12 +1123,16 @@ $(document).ready(function() {
         slidesPerView: 3,
         autoplay: false,
         loop: false,
+        navigation: {
+            nextEl: ".gpmu_notice .swiper-button-next",
+            prevEl: ".gpmu_notice .swiper-button-prev"
+        },
         breakpoints: {
             1024: {
                 slidesPerView: 2
             },
             640: {
-                slidesPerView: "auto",
+                slidesPerView: 1,
             }
         }
     });
@@ -1129,13 +1142,15 @@ $(document).ready(function() {
         slidesPerView: 3,
         autoplay: false,
         loop: false,
+        pagination: {
+            clickable : true,
+            el: '.gpmu_letter .swiper-pagination',
+            type: 'bullets',
+        },
         breakpoints: {
             1024: {
                 slidesPerView: 2
             },
-            640: {
-                slidesPerView: "auto",
-            }
         }
     });
     
