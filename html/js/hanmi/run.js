@@ -197,22 +197,27 @@ $(document).ready(function() {
         }
     }); 
     
-    // var swiper = new Swiper(".gpmu_list .con_list", {
-    //     spaceBetween: 20,
-    //     slidesPerView: 4,
-    //     autoplay: false,
-    //     loop: false,
-    //     breakpoints: {
-    //         1024: {
-    //             slidesPerView: 3
-    //         },
-    //         860: {
-    //             slidesPerView: 2,
-    //         },
-    //         640: {
-    //             slidesPerView: 1.3,
-    //             spaceBetween: 10,
-    //         },
-    //     }
-    // });
+    var swiper = new Swiper(".gpmu_etc .con_list", {
+        spaceBetween: 20,
+        slidesPerView: 4,
+        autoplay: false,
+        loop: false,
+        pagination: {
+            clickable : true,
+            el: '.gpmu_etc .swiper-pagination',
+            type: 'bullets',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3
+            },
+            860: {
+                slidesPerView: 2,
+            },
+            640: {
+                slidesPerView: 1.3,
+                spaceBetween: 10,
+            },
+        }
+    });
 });
