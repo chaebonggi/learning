@@ -405,6 +405,9 @@
     .login_wrap > div {
         padding: 0 20px;
     }
+    .login_tit {
+        margin-bottom: 30px;
+    }
     .login_wrap .find_box {
         margin: 20px 0;
     }
