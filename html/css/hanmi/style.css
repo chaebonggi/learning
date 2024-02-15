@@ -400,6 +400,7 @@
     }
 
     .login_wrap {
+        padding: 30px 10px;
         flex-direction: column;
     }
     .login_wrap > div {
