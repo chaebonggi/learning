@@ -105,124 +105,6 @@
         </div>
     </header>
     
-    <style>
-        .list_detail .list_tit {
-            display: flex;
-            padding-bottom: 26px;
-            border-bottom: 1px solid #373737;
-            justify-content: space-between;
-        }
-        .list_detail .list_tit .tit {
-            color: #373737;
-            font-size: 2.4rem;
-        }
-        .list_detail .etc_btn a {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            border: 1px solid #dadada;
-            border-radius: 100%;
-        }
-        .list_detail .etc_btn a.like_btn {
-            background: url(./images/hanmi/icon_like.png) center no-repeat;
-        }
-        .list_detail .etc_btn a.like_btn.active {
-            background: url(./images/hanmi/icon_like_on.png) center no-repeat;
-        }
-        .list_detail .etc_btn a.share_btn {
-            background: url(./images/hanmi/icon_share.png) center no-repeat;
-        }
-        .list_detail .course_view .img_wrap {
-            height: 235px;
-        }
-        .list_detail .course_view .img_wrap img {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-        .list_detail .course_view {
-            position: relative;            
-        }
-        .list_detail .course_view .view_cont {
-            width: calc(100% - 320px);
-            margin-left: auto;
-            padding: 20px 30px;
-            border: 1px solid #dadada;
-            border-radius: 20px;
-            box-sizing: border-box;
-        }
-        .list_detail .course_view .img_wrap {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        .list_detail .course_view .tit {
-            margin-bottom: 26px;
-            color: #212121;
-            font-size: 2.2rem;
-            font-weight: 500;
-        }
-        .list_detail .course_view .course_list {
-            max-width: 460px;
-            width: 100%;
-        }
-        .list_detail .course_view .course_list li {
-            display: flex;
-        }
-        .list_detail .course_view .course_list li + li {
-            margin-top: 14px;
-        }
-        .list_detail .course_view .course_list li strong {
-            width: 130px;
-            color: #373737;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        .list_detail .course_view .course_list li .txt {
-            width: 100%;
-            color: #666666;
-            font-size: 1.5rem;
-            font-weight: 300;
-            letter-spacing: -0.5px;
-        }
-        .list_detail .course_view .course_btn {
-            width: 260px;
-            position: absolute;
-            right: 34px;
-            bottom: 34px;
-        }
-        .list_detail .course_view .course_btn a {
-            display: block;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-        .list_detail .course_view .course_btn a + a {
-            margin-top: 8px;
-        }        
-        .select_style {
-            width: 100%;
-            padding-bottom: 4px;
-            background: url(./images/hanmi/select_arrow.png) center right 10px no-repeat;  
-            color: #666666;
-            font-size: 1.5rem;
-            font-weight: 300;
-            font-family: 'Noto Sans KR';                      
-            border-radius: 0px;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            outline: none;
-            appearance: none;
-            border: 0;
-            border-bottom: 1px solid #dfdfdf;
-            box-sizing: border-box;           
-        }
-        .list_detail  .cont_slide .swiper-pagination {
-            display: block;
-        }
-    </style>
     <article class="list_detail pd_style02 bb_dark bt_gray">
         <div class="list_box">
             <div class="inner">
@@ -261,8 +143,8 @@
         </div>
 
         <div class="list_box">
-            <div class="inner">
-                <div class="gpmu_list_tab">
+            <div class="gpmu_list_tab pd_style04">
+                <div class="inner">
                     <ul class="tabs">
                         <li class="active"><a href="#">#경단여</a></li>
                         <li><a href="#">#재취업</a></li>
@@ -274,63 +156,138 @@
             </div>
         </div>
 
-        <div class="list_box">
+        <div class="list_box pd_style04">
             <div class="inner">
                 <div class="ld_tit">
                     <h3 class="tit">과정요약</h3>
                 </div>
+                <ul class="course_info">
+                    <li><strong>학습시간</strong><p class="txt">09:00 ~ 18:00(1시간)</p></li>
+                    <li><strong>교육비 지원</strong><p class="txt">고용보험 미환급 09:00 ~ 18:00(1시간)</p></li>
+                    <li><strong>수료기준</strong><p class="txt">총점 80점 이상시 수료</p></li>                    
+                    <li><strong>학습유형</strong><p class="txt">온라인</p></li>
+                    <li><strong>평가항목</strong><p class="txt">진도 100%</p></li>
+                    <li><strong>학습정원</strong><p class="txt">30명, 제한없음, 마감</p></li>
+                    <li><strong>교재정보</strong><p class="txt">[PDF] IT 지식 완전정복-IT비전공자를 위한 파이썬 업무효율화</p></li>
+                </ul>
             </div>
         </div>
-        <div class="list_box">
+        <div class="list_box pd_style04">
             <div class="inner">
                 <div class="ld_tit">
                     <h3 class="tit">과정소개</h3>
                 </div>
             </div>
         </div>
-        <div class="list_box">
+        <div class="list_box pd_style04">
             <div class="inner">
                 <div class="ld_tit">
                     <h3 class="tit">학습목표</h3>
                 </div>
             </div>
         </div>
-        <div class="list_box">
+        <div class="list_box pd_style04">
             <div class="inner">
                 <div class="ld_tit">
                     <h3 class="tit">학습대상</h3>
                 </div>
             </div>
         </div>
-        <div class="list_box">
+        <div class="list_box pd_style04">
             <div class="inner">
                 <div class="ld_tit">
                     <h3 class="tit">강사소개</h3>
                 </div>
             </div>
         </div>
-        <div class="list_box">
+        <div class="list_box pd_style04">
             <div class="inner">
                 <div class="ld_tit">
                     <h3 class="tit">커리큘럼</h3>
                 </div>
-            </div>
+                <div class="table_list t_style01">
+                    <table>
+                        <caption>커리큘럼</caption>
+                        <colgroup>
+                            <col style="width: 10%" class="t_mw15">
+                            <col>
+                            <col style="width: 15%" class="t_mw20">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="tct">1차시</th>
+                                <td class="tlt t_pd_style01">업무자동화의 필요성 & 개발환경 설정</td>
+                                <td class="tct">10분 22초</td>
+                            </tr>
+                            <tr>
+                                <th class="tct">1차시</th>
+                                <td class="tlt t_pd_style01">업무자동화의 필요성 & 개발환경 설정 업무자동화의 필요성 & 개발환경 설정 업무자동화의 필요성 & 개발환경 설정 업무자동화의 필요성 & 개발환경 설정 업무자동화의 필요성 & 개발환경 설정 업무자동화의 필요성 & 개발환경 설정</td>
+                                <td class="tct">10분 22초</td>
+                            </tr>   
+                        </tbody>
+                    </table>
+                </div>
+            </div>            
         </div>
-        <div class="list_box">
+        <div class="list_box pd_style04">
             <div class="inner">
                 <div class="ld_tit">
                     <h3 class="tit">수강후기<span>(1,235건)</span></h3>
-                </div>
-                <div class="rate_area">
-                    <p>평균평점</p>
-                    <div class="rate02">
-                        <span style="width: 92%"></span>
+                    <div class="rate_area">
+                        <p class="txt">평균평점</p>
+                        <div class="rate">
+                            <span style="width:90%"></span>
+                        </div>
+                        <p class="score">4.6</p>
                     </div>
-                    <p>4.6</p>
                 </div>
+                <div class="review">
+                    <div class="item">
+                        <div class="rv_score">
+                            <div class="rate_area">
+                                <p class="score">5</p>
+                                <div class="rate">
+                                    <span style="width:100%"></span>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="rv_info">
+                            <ul>
+                                <li><p class="rv_user">홍*동</p></li>
+                                <li><p class="rv_date">2022.04.27</p></li>
+                            </ul>
+                            <p class="desc">
+                                저에게는 참 도움이 되는 과정입니다.<br>
+                                강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="rv_score">
+                            <div class="rate_area">
+                                <p class="score">4.5</p>
+                                <div class="rate">
+                                    <span style="width:90%"></span>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="rv_info">
+                            <ul>
+                                <li><p class="rv_user">홍*동</p></li>
+                                <li><p class="rv_date">2022.04.27</p></li>
+                            </ul>
+                            <p class="desc">
+                                저에게는 참 도움이 되는 과정입니다.<br>
+                                강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다. 강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다.
+                                강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다. 강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다.
+                                강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다. 강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>                
             </div>
         </div>
-        <div class="list_box">
+        <div class="list_box pd_style04">
             <div class="inner">
                 <div class="ld_tit">
                     <h3 class="tit">이 과정과 유사한 추천 과정</h3>
