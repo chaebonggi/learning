@@ -1,20 +1,20 @@
 /* 메인 */
-.for_mobile { display: none; }
+.for_mobile { display: none; } 
 .bg_gray { background: #f7f7f7; } 
 .bg_blue { background: #064a84; } 
 .pd_style01 { padding: 60px 0 80px; } 
-.pd_style02 { padding: 150px 0 200px; }
-.pd_style03 { padding: 50px 0; }
-.pd_style04 { padding: 30px 0; }
-.mg_style01 {margin: 50px 0;}
-.bb_dark { border-bottom: 1px solid #666666; }
-.bt_gray { border-top: 1px solid #dadada; }
+.pd_style02 { padding: 150px 0 200px; } 
+.pd_style03 { padding: 50px 0; } 
+.pd_style04 { padding: 30px 0; } 
+.mg_style01 { margin: 50px 0; } 
+.bb_dark { border-bottom: 1px solid #666666; } 
+.bt_gray { border-top: 1px solid #dadada; } 
 .btn_style02 { background: #064b85; color: #fff; border: 1px solid #064b85; border-radius: 30px; } 
-.btn_style01 { background: #fff; color: #064b85; border: 1px solid #064b85; border-radius: 30px}
+.btn_style01 { background: #fff; color: #064b85; border: 1px solid #064b85; border-radius: 30px } 
 .trt { text-align: right !important; } 
 .tlt { text-align: left !important; } 
 .tct { text-align: center !important; } 
-.t_pd_style01 { padding-left: 60px !important; padding-right: 10px; }
+.t_pd_style01 { padding-left: 60px !important; padding-right: 10px; } 
 
 .main_slide { overflow: hidden; } 
 .main_banner { height: 380px; position: relative; } 
@@ -90,7 +90,7 @@
 .cont_slide .swiper-button-prev { left: -100px; background: url(../../images/hanmi/btn_prev.png) no-repeat; } 
 .cont_slide .swiper-button-next { right: -100px; background: url(../../images/hanmi/btn_next.png) no-repeat; } 
 .page_tit { color: #373737; font-size: 3.7rem; font-family: 'NanumSquareRound', 'Noto Sans KR',sans-serif; font-weight: 800; } 
-.page_tit02 {color: #373737; font-size: 4rem; font-weight: bold; text-align: center;}
+.page_tit02 { color: #373737; font-size: 4rem; font-weight: bold; text-align: center; } 
 .page_tit span { color: #064a84; font-family: 'NanumSquareRound', 'Noto Sans KR',sans-serif; font-weight: 800; } 
 .gpmu_pick .flex_box { display: flex; align-items: center; } 
 .gpmu_pick .tabs { display: flex; margin-left: auto; } 
@@ -208,11 +208,11 @@
 .m_paging .prev_arrow { background: url(../../images/hanmi/prev_arrow.png) no-repeat center; background-size: 5px; } 
 .m_paging .next_arrow { background: url(../../images/hanmi/next_arrow.png) no-repeat center; background-size: 5px; } 
 .m_paging p { margin: 0 10px; font-size: 1.4rem; } 
-.m_paging p .cut { color: #064a84; font-weight: bold; }
+.m_paging p .cut { color: #064a84; font-weight: bold; } 
 
 .list_detail .list_tit { display: flex; padding-bottom: 2.6rem; border-bottom: 1px solid #373737; justify-content: space-between; } 
 .list_detail .list_tit .tit { color: #373737; font-size: 2.4rem; } 
-.list_detail .list_tit .etc_btn {display: inline-flex;}
+.list_detail .list_tit .etc_btn { display: inline-flex; } 
 .list_detail .etc_btn a { display: inline-block; width: 30px; height: 30px; margin-right: 10px; border: 1px solid #dadada; border-radius: 100%; } 
 .list_detail .etc_btn a.like_btn { background: url(../../images/hanmi/icon_like.png) center no-repeat; } 
 .list_detail .etc_btn a.like_btn.active { background: url(../../images/hanmi/icon_like_on.png) center no-repeat; } 
@@ -223,7 +223,7 @@
 .list_detail .course_view .view_cont { width: calc(100% - 320px); margin-left: auto; padding: 20px 30px; border: 1px solid #dadada; border-radius: 20px; box-sizing: border-box; } 
 .list_detail .course_view .img_wrap { position: absolute; top: 0; left: 0; } 
 .list_detail .course_view .tit { margin-bottom: 26px; color: #212121; font-size: 2.2rem; font-weight: 500; } 
-.list_detail .course_view .course_list { max-width: 460px; width: 100%; box-sizing: border-box;} 
+.list_detail .course_view .course_list { max-width: 460px; width: 100%; box-sizing: border-box; } 
 .list_detail .course_view .course_list li { display: flex; } 
 .list_detail .course_view .course_list li + li { margin-top: 14px; } 
 .list_detail .course_view .course_list li strong { width: 130px; color: #373737; font-size: 1.5rem; flex-shrink: 0; } 
@@ -237,7 +237,7 @@
 .list_detail .ld_tit { display: flex; padding-bottom: 16px; border-bottom: 1px solid #373737; justify-content: space-between; } 
 .list_detail .ld_tit .tit { color: #373737; font-size: 2rem; font-weight: 500; } 
 .list_detail .course_info { display: flex; flex-wrap: wrap; } 
-.list_detail .course_info li { display: flex; width: 50%; padding: 1.8rem 3rem; border-bottom: 1px solid #dadada; box-sizing: border-box;} 
+.list_detail .course_info li { display: flex; width: 50%; padding: 1.8rem 3rem; border-bottom: 1px solid #dadada; box-sizing: border-box; } 
 .list_detail .course_info li:last-child { width: 100%; border-bottom-color: #373737; } 
 .list_detail .course_info li strong { width: 170px; color: #373737; font-size: 1.5rem; flex-shrink: 0; } 
 .list_detail .course_info li .txt { color: #666666; font-size: 1.5rem; font-weight: 300; } 
@@ -249,7 +249,7 @@
 .rate_area .rate { width: 86px; height: 14px; position: relative; background: url(../../images/hanmi/list_star.png) no-repeat; z-index: 1; } 
 .rate_area .rate span { width: auto; height: 14px; position: absolute; background: url(../../images/hanmi/list_star_on.png) no-repeat; z-index: 2; } 
 .list_detail .review .item { display: flex; padding: 3.6rem 3rem; border-bottom: 1px solid #f7f8f9; } 
-.list_detail .review .rv_score {max-width: 86px; margin-right: 5rem; } 
+.list_detail .review .rv_score { max-width: 86px; margin-right: 5rem; } 
 .list_detail .review .rv_score .score { margin-bottom: 10px; color: #000; font-size: 4rem; font-weight: 900; text-align: center; } 
 .list_detail .review .rv_info { width: 100%; } 
 .list_detail .review .rv_info ul { display: flex; margin-bottom: 2rem; align-items: flex-end; } 
@@ -260,115 +260,129 @@
 .table_list table tbody > tr { border-bottom: 1px solid #dadada; } 
 .table_list > table th, .table_list > table td { padding: 2rem 0; } 
 
+/* 회사소개 */
+.int_company .img_wrap { margin: 0 auto; } 
+.int_company .img_wrap img { display: block; width: 100%; } 
+.int_company .int_box .video_wrap { max-width: 600px; margin: 0 auto; } 
+.int_company .int_box .video_wrap .video { position: relative; width: 100%; padding-top: 56%; height: 0; } 
+.int_company .int_box .video_wrap .video iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; } 
+.int_company .int_box .img_wrap { max-width: 600px; margin-top: 50px; } 
+.int_company .int_box .img_wrap .tit { margin-bottom: 20px; color: #000; font-size: 1.8rem; text-align: center; } 
+.int_company .int_box .int_list { max-width: 600px; margin: 30px auto 0; } 
+.int_company .int_box .int_list li { position: relative; padding-left: 10px; font-size: 1.6rem; } 
+.int_company .int_box .int_list li + li { margin-top: 4px; } 
+.int_company .int_box .int_list li::before { content: ''; width: 4px; height: 4px; position: absolute; top: 8px; left: 0; background: #000; border-radius: 100%; } 
+
 
 @media all and (max-width:1400px){
-    .cont_slide .swiper-button-next,
-    .cont_slide .swiper-button-prev { display: none; } 
-    }
-   @media all and (max-width:1200px) {.main_banner { height: auto; } 
-   .main_banner .control { bottom: 15px; } 
-   
-   .gpmu_menu .menu_list { flex-wrap: wrap; gap: 20px; } 
-   .gpmu_menu .menu_list li { width: calc(100% / 3 - 20px); } 
-   
-   .gpmu_pick .flex_box { display: block; } 
-   .gpmu_pick .tabs { margin: 2rem 0 0 0; overflow-x: auto; white-space: nowrap; } 
-   .cont_slide .swiper-pagination,
-   .cont_item .swiper-pagination { display: block; } 
-   
-   .list_detail .course_view .course_btn { width: 130px; } 
-   }
-   
-   @media all and (max-width:1024px) {.for_mobile { display: block; } 
-   .gpmu_banner .banner { background-position: right 0 bottom -50px; background-size: 400px; } 
-   .gpmu_notice .control_btn { display: block; } 
-   .gpmu_notice .slide_wrap { padding: 0 40px; } 
-   
-   .gpmu_list_tab .tabs { justify-content: flex-start; white-space: nowrap; overflow-x: auto; } 
-   .gpmu_list .con_list .item { width: calc(100% / 3 - 14px); } 
-   
-   .list_detail .course_view .course_btn { width: 100%; margin-top: 20px; position: static; } 
-   .list_detail .course_info li { width: 100%; } 
-   
-   }
-   
-   @media all and (max-width:860px){
-    .t_pd_style01 { padding-left: 10px !important; } 
-   .gpmu_introduction .con_list { flex-wrap: wrap; } 
-   .gpmu_introduction .txt_wrap { margin-right: 0; order: 2; } 
-   .gpmu_introduction .img_wrap { margin-bottom: 2rem; order: 1; } 
-   
-   .list_detail .course_view .view_cont { width: 100%; } 
-   .list_detail .course_view .img_wrap { margin-bottom: 20px; position: static; } 
-   .gpmu_list_tab { background: #f7f7f7; } 
-   
-   .list_detail .review .item { flex-direction: column; } 
-   .list_detail .review .rv_score { margin: 0 0 20px 0; } 
-   }
-   @media all and (max-width:768px) {.gpmu_list .con_list .item { width: calc(100% / 2 - 10px); } 
-    }
-   
-   @media all and (max-width:640px){
-    .mg_style01 { margin: 20px 0; } 
-    .pd_style01 { padding: 30px 0 50px; } 
-   .pd_style02 { padding: 50px 0; } 
-   .t_mw15 { width: 15% !important; } 
-   .t_mw20 { width: 20% !important; } 
-   
-   .main_slide .inner { width: 100%; } 
-   .main_banner .control { bottom: 10px; } 
-   .main_banner .swiper-pagination span { width: 8px; height: 8px; margin-right: 6px; } 
-   .main_banner .swiper-button-play,
-   .main_banner .swiper-button-pause { width: 8px; height: 10px; } 
-   .main_banner .swiper-button-prev,
-   .main_banner .swiper-button-next { display: none; } 
-   .gpmu_menu { padding: 30px 0 0; } 
-   .gpmu_menu .menu_list { margin: 0; gap: 10px; } 
-   .gpmu_menu .menu_list li a::before { width: 90px; height: 90px; margin: 0 auto 10px; background-size: 35%; } 
-   
-   .cont_slide .item a:hover .h_wrap { display: none; } 
-   .cont_slide .item a:hover::before { content: none; } 
-   
-   .cont_slide .swiper-pagination,
-   .cont_item .swiper-pagination { bottom: -25px; } 
-   .cont_slide .swiper-pagination span,
-   .cont_item .swiper-pagination span { width: 8px; height: 8px; } 
-   .cont_slide .swiper-pagination span + span,
-   .cont_item .swiper-pagination span + span { margin-left: 4px; } 
-   .gpmu_banner { padding: 0 0 10px; } 
-   .gpmu_banner .inner { width: 100%; } 
-   .gpmu_banner .banner { background-position: right -10px bottom -20px; background-size: 150px; border-radius: 0; } 
-   .gpmu_banner .banner a { padding: 30px 20px; font-size: 2rem; } 
-   .gpmu_new .item a:hover .img_wrap::before { content: none; } 
-   .gpmu_new .item .txt { padding: 10px 10px 0; } 
-   .gpmu_new .item .txt p { margin: 4px 0 0; } 
-   .gpmu_introduction { padding: 30px 0; } 
-   .gpmu_introduction .txt_wrap a:hover { color: #064a84; } 
-   .gpmu_introduction .txt_wrap a:hover span::after { background: url(../../images/hanmi/arrow_btn.png) no-repeat; } 
-   .gpmu_introduction .txt_wrap a:hover::before { content: none; } 
-   .gpmu_introduction .txt_wrap a { position: static; background: #fff; } 
-   .gpmu_list .con_list { gap: 6px; } 
-   .gpmu_list .con_list .item { width: calc(100% / 2 - 3px); } 
-   .cont_slide .item .img_wrap { height: auto; } 
-   .paging { display: none; } 
-   .m_paging { display: flex; } 
-   
-   .login_wrap { padding: 30px 10px; flex-direction: column; } 
-   .login_wrap > div { padding: 0 20px; } 
-   .login_tit { margin-bottom: 30px; } 
-   .login_wrap .find_box { margin: 20px 0; } 
-   .login_wrap h4,
-   .login_wrap .sign_box .txt { display: none; } 
-   .login_wrap .flex_item { min-height: auto; margin-top: 10px; } 
-   
-   .list_detail .course_view .view_cont { border: 0; padding: 0; } 
-   .list_detail .course_view .course_list { max-width: 100%; padding: 0 20px; } 
-   .list_detail .course_view .course_list li strong { width: 90px; } 
-   .list_detail .course_view .course_btn { display: flex; justify-content: space-between; } 
-   .list_detail .course_view .course_btn a { width: calc(50% - 4px); } 
-   .list_detail .course_view .course_btn a + a { margin-top: 0; } 
-   .list_detail .course_info li { padding: 1.4rem 1.5rem; } 
-   .list_detail .course_info li strong { width: 80px; } 
-   .list_detail .review .item { padding: 2rem 1rem; } 
-   
-   }
+ .cont_slide .swiper-button-next,
+ .cont_slide .swiper-button-prev { display: none; } 
+ }
+ @media all and (max-width:1200px){
+ .main_banner { height: auto; } 
+ .main_banner .control { bottom: 15px; } 
+ 
+ .gpmu_menu .menu_list { flex-wrap: wrap; gap: 20px; } 
+ .gpmu_menu .menu_list li { width: calc(100% / 3 - 20px); } 
+ 
+ .gpmu_pick .flex_box { display: block; } 
+ .gpmu_pick .tabs { margin: 2rem 0 0 0; overflow-x: auto; white-space: nowrap; } 
+ .cont_slide .swiper-pagination,
+ .cont_item .swiper-pagination { display: block; } 
+ 
+ .list_detail .course_view .course_btn { width: 130px; } 
+ }
+ 
+ @media all and (max-width:1024px){
+ .for_mobile { display: block; } 
+ .gpmu_banner .banner { background-position: right 0 bottom -50px; background-size: 400px; } 
+ .gpmu_notice .control_btn { display: block; } 
+ .gpmu_notice .slide_wrap { padding: 0 40px; } 
+ 
+ .gpmu_list_tab .tabs { justify-content: flex-start; white-space: nowrap; overflow-x: auto; } 
+ .gpmu_list .con_list .item { width: calc(100% / 3 - 14px); } 
+ 
+ .list_detail .course_view .course_btn { width: 100%; margin-top: 20px; position: static; } 
+ .list_detail .course_info li { width: 100%; } 
+ }
+ 
+ @media all and (max-width:860px){
+ .t_pd_style01 { padding-left: 10px !important; } 
+ .gpmu_introduction .con_list { flex-wrap: wrap; } 
+ .gpmu_introduction .txt_wrap { margin-right: 0; order: 2; } 
+ .gpmu_introduction .img_wrap { margin-bottom: 2rem; order: 1; } 
+ 
+ .list_detail .course_view .view_cont { width: 100%; } 
+ .list_detail .course_view .img_wrap { margin-bottom: 20px; position: static; } 
+ .gpmu_list_tab { background: #f7f7f7; } 
+ 
+ .list_detail .review .item { flex-direction: column; } 
+ .list_detail .review .rv_score { margin: 0 0 20px 0; } 
+ }
+ @media all and (max-width:768px){
+ .gpmu_list .con_list .item { width: calc(100% / 2 - 10px); } 
+ }
+ 
+ @media all and (max-width:640px){
+ .mg_style01 { margin: 20px 0; } 
+ .pd_style01 { padding: 30px 0 50px; } 
+ .pd_style02 { padding: 50px 0; } 
+ .t_mw15 { width: 15% !important; } 
+ .t_mw20 { width: 20% !important; } 
+ 
+ .main_slide .inner { width: 100%; } 
+ .main_banner .control { bottom: 10px; } 
+ .main_banner .swiper-pagination span { width: 8px; height: 8px; margin-right: 6px; } 
+ .main_banner .swiper-button-play,
+ .main_banner .swiper-button-pause { width: 8px; height: 10px; } 
+ .main_banner .swiper-button-prev,
+ .main_banner .swiper-button-next { display: none; } 
+ .gpmu_menu { padding: 30px 0 0; } 
+ .gpmu_menu .menu_list { margin: 0; gap: 10px; } 
+ .gpmu_menu .menu_list li a::before { width: 90px; height: 90px; margin: 0 auto 10px; background-size: 35%; } 
+ 
+ .cont_slide .item a:hover .h_wrap { display: none; } 
+ .cont_slide .item a:hover::before { content: none; } 
+ 
+ .cont_slide .swiper-pagination,
+ .cont_item .swiper-pagination { bottom: -25px; } 
+ .cont_slide .swiper-pagination span,
+ .cont_item .swiper-pagination span { width: 8px; height: 8px; } 
+ .cont_slide .swiper-pagination span + span,
+ .cont_item .swiper-pagination span + span { margin-left: 4px; } 
+ .gpmu_banner { padding: 0 0 10px; } 
+ .gpmu_banner .inner { width: 100%; } 
+ .gpmu_banner .banner { background-position: right -10px bottom -20px; background-size: 150px; border-radius: 0; } 
+ .gpmu_banner .banner a { padding: 30px 20px; font-size: 2rem; } 
+ .gpmu_new .item a:hover .img_wrap::before { content: none; } 
+ .gpmu_new .item .txt { padding: 10px 10px 0; } 
+ .gpmu_new .item .txt p { margin: 4px 0 0; } 
+ .gpmu_introduction { padding: 30px 0; } 
+ .gpmu_introduction .txt_wrap a:hover { color: #064a84; } 
+ .gpmu_introduction .txt_wrap a:hover span::after { background: url(../../images/hanmi/arrow_btn.png) no-repeat; } 
+ .gpmu_introduction .txt_wrap a:hover::before { content: none; } 
+ .gpmu_introduction .txt_wrap a { position: static; background: #fff; } 
+ .gpmu_list .con_list { gap: 6px; } 
+ .gpmu_list .con_list .item { width: calc(100% / 2 - 3px); } 
+ .cont_slide .item .img_wrap { height: auto; } 
+ .paging { display: none; } 
+ .m_paging { display: flex; } 
+ 
+ .login_wrap { padding: 30px 10px; flex-direction: column; } 
+ .login_wrap > div { padding: 0 20px; } 
+ .login_tit { margin-bottom: 30px; } 
+ .login_wrap .find_box { margin: 20px 0; } 
+ .login_wrap h4,
+ .login_wrap .sign_box .txt { display: none; } 
+ .login_wrap .flex_item { min-height: auto; margin-top: 10px; } 
+ 
+ .list_detail .course_view .view_cont { border: 0; padding: 0; } 
+ .list_detail .course_view .course_list { max-width: 100%; padding: 0 20px; } 
+ .list_detail .course_view .course_list li strong { width: 90px; } 
+ .list_detail .course_view .course_btn { display: flex; justify-content: space-between; } 
+ .list_detail .course_view .course_btn a { width: calc(50% - 4px); } 
+ .list_detail .course_view .course_btn a + a { margin-top: 0; } 
+ .list_detail .course_info li { padding: 1.4rem 1.5rem; } 
+ .list_detail .course_info li strong { width: 80px; } 
+ .list_detail .review .item { padding: 2rem 1rem; } 
+ }
