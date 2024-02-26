@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100; 300; 400; 500; 700; 900&display=swap');
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
-body,html { font-family: 'Noto Sans KR',sans-serif; color: #1b1d1f; } 
-html { font-size: 10px } 
-body { font-size: 1.6rem }
+body,html { font-family: 'Noto Sans KR',sans-serif; color: #1b1d1f; line-height: 1.2 !important; box-sizing: border-box;} 
+html { font-size: 10px !important; } 
+body { font-size: 1.6rem !important; font-weight: 400;}
+article {width: 100%;}
+input[type='text'], input[type='password'], input[type='submit'], input[type='search'] {
+	line-height: 1;
+}
+input[type='text']::placeholder {col}
 .txtUnder { text-decoration: underline } 
-.inner { max-width: 1200px; width: calc(100% - 40px); margin: auto; } 
+.innerSection { max-width: 1200px; width: calc(100% - 40px); margin: 0 auto; } 
 .border_none { border: none !important } 
 .bold { font-weight: bold; } 
 .bold02 { font-weight: 500; } 
@@ -90,16 +95,17 @@ td.txtCut1 { display: table-cell }
 .ir_pm { display:block; overflow:hidden; font-size:0; line-height:0; text-indent:-9999px; } 
 
 /* header */
-#header {position: relative;}
+#header {position: relative; width: 100% !important}
 #header .top { display: flex; padding-top: 3rem; justify-content: space-between; align-items: center; box-sizing: border-box; } 
+#header .top .logo img {display: block;}
 #header .top .right_box { display: flex; align-items: center; } 
 #header .top .logo a {display: block;}
 #header .top .seach_area { position: relative; width: 158px; } 
 #header .top .seach_area .input_wrap { display: flex; width: 100%; padding: 10px 10px; border: 1px solid #373737; border-radius: 30px; justify-content: space-between; overflow: hidden; } 
 #header .top .seach_area .input_wrap input { width: calc(100% - 30px); border: 0; font-size: 1.3rem; } 
 #header .top .seach_area .input_wrap input:focus { outline: none; } 
-#header .top .seach_area .input_wrap input::placeholder { color: #bcbcbc; } 
-#header .top .seach_area .input_wrap button { width: 20px; background: url(../../images/hanmi/seach_ico.png) center / contain no-repeat; border: 0; text-indent: -99999px; } 
+#header .top .seach_area .input_wrap input::placeholder { color: #bcbcbc; opacity: initial;} 
+#header .top .seach_area .input_wrap button { width: 20px; height: 19px; background: url(../../images/hanmi/seach_ico.png) center / contain no-repeat; border: 0; text-indent: -99999px; } 
 #header .member_box { display: flex; margin-left: 40px; } 
 #header .member_box li { position: relative; } 
 #header .member_box li + li::before { content: ''; width: 1px; height: 14px; position: absolute; left: 0; top: 50%; transform: translateY(-40%); background: #636363; } 
@@ -130,11 +136,12 @@ td.txtCut1 { display: table-cell }
 #header .m_menu {display: none;}
 #header .m_menu .search_btn { display: block; width: 20px; height: 20px; background: url(../../images/hanmi/seach_ico.png) center / 16px 16px no-repeat; } 
 #header .m_menu .search_btn.active { background: url(../../images/hanmi/close_btn.png) center no-repeat; } 
-#header .m_menu .seach_area { display: none; width: 100%; padding: 2rem; position: absolute; left: 0; top: 70px; background: #f5f5f5; box-sizing: border-box; z-index: 10; } 
+#header .m_menu .seach_area { display: none; width: 100%; padding: 2rem; position: absolute; left: 0; top: 68px; background: #f5f5f5; box-sizing: border-box; z-index: 10; } 
 #header .m_menu .seach_area .input_wrap { width: 100%; background: #fff; box-sizing: border-box; } 
 #header .m_menu .login_btn { display: block; width: 20px; height: 20px; margin-left: 1rem; background: url(../../images/hanmi/login_icon.png) center / contain no-repeat; } 
 
 /* footer */
+.footer { padding: initial !important; text-align: initial !important; font-size: initial !important; display: initial !important; color: initial !important; border-top: 0 !important; position: initial !important; } 
 .footer .f_top { background: #f7f7f7; } 
 .footer .f_top ul { display: flex; } 
 .footer .f_top ul li + li { margin-left: 32px; } 
@@ -149,9 +156,10 @@ td.txtCut1 { display: table-cell }
     #header .m_gnb {display: block;}
 }
 @media all and (max-width:768px){
-    html {font-size: 8px;}
-    .inner {
+    html {font-size: 8px !important;}
+    .innerSection {
         width: calc(100% - 20px);
+        padding: 0;
     }
     .footer .f_top ul {
         justify-content: center;

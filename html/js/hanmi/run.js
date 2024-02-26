@@ -18,7 +18,7 @@ $(document).ready(function() {
         $(this).next().toggle();
     });
 
-    let mainSwiper = new Swiper(".main_banner", {
+    let mainSwiper = new Swiper(".main_wrap", {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
@@ -33,80 +33,28 @@ $(document).ready(function() {
             disableOnInteraction: false,
         },
         navigation: {
-            nextEl: ".main_banner .swiper-button-next",
-            prevEl: ".main_banner .swiper-button-prev"
+            nextEl: ".main_wrap .swiper-button-next",
+            prevEl: ".main_wrap .swiper-button-prev"
         },
 
         pagination: {
             clickable : true,
-            el: '.main_banner .control .swiper-pagination',
+            el: '.main_wrap .control .swiper-pagination',
             type: 'bullets',
         },
     });
-    $('.main_banner .control .swiper-button-pause').click(function () {
+    $('.main_wrap .control .swiper-button-pause').click(function () {
         $(this).hide();
         mainSwiper.autoplay.stop();
-        $('.main_banner .control .swiper-button-play').show()
+        $('.main_wrap .control .swiper-button-play').show()
 
     });
 
-    $('.main_banner .control .swiper-button-play').click(function () {
+    $('.main_wrap .control .swiper-button-play').click(function () {
         $(this).hide();
         mainSwiper.autoplay.start();
-        $('.main_banner .control .swiper-button-pause').show();
+        $('.main_wrap .control .swiper-button-pause').show();
     });
-
-    // // tab contents
-    function tabSlide() {
-        function initializeSwiper(tabId) {
-            swiper = new Swiper(`.gpmu_pick ${tabId} .con_list`, {
-                spaceBetween: 26,
-                slidesPerView: 4,
-                autoplay: false,
-                loop: false,
-                observer: true,
-                observeParents: true,
-                navigation: {
-                    nextEl: `.gpmu_pick ${tabId} .swiper-button-next`,
-                    prevEl: `.gpmu_pick ${tabId} .swiper-button-prev`,
-                },
-                pagination: {
-                    clickable : true,
-                    el: `.gpmu_pick ${tabId} .swiper-pagination`,
-                    type: 'bullets',
-                },
-                breakpoints: {
-                    1024: {
-                        slidesPerView: 3,
-                    },
-                    860: {
-                        slidesPerView: 2,
-                    },
-                    640: {
-                        slidesPerView: 1.3,
-                        spaceBetween: 10,
-                    },
-                },
-            });
-        }
-        initializeSwiper('#tab01');   
-        
-        $(".gpmu_pick .tab_container > .tab_content").hide();
-
-        $(".gpmu_pick .tab_container").each(function () {
-            $(this).children(".tab_content").first().show();
-        });
-        $(".gpmu_pick .tabs li a").click(function (e) {
-            e.preventDefault();
-            $(this).parent().siblings("li").removeClass("active");
-            $(this).parent().addClass("active");
-            $(this).parents('.tab_container').find(".tab_content").hide();
-            let tabId = $(this).attr("href");
-            initializeSwiper(tabId, true);
-            $(tabId).fadeIn();        
-        });
-    }
-    tabSlide();       
 
     var swiper = new Swiper(".gpmu_best .con_list", {
         spaceBetween: 20,
@@ -220,4 +168,10 @@ $(document).ready(function() {
             },
         }
     });
+
+    $('.privacyWrap .topBtn, .privacyWrap .privacyList a').click(function(e){
+        $("html, body").animate({ scrollTop: $(this.hash).offset().top }, 500);
+        e.preventDefault();
+    });
+
 });
