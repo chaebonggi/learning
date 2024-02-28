@@ -1,0 +1,446 @@
+/* 메인 */
+.for_mobile { display: none; } 
+.bg_gray { background: #f7f7f7 !important;} 
+.bg_blue { background: #064a84 !important;} 
+.pd_style01 { padding: 60px 0 80px; } 
+.pd_style02 { padding: 150px 0 200px; } 
+.pd_style03 { padding: 50px 0; } 
+.pd_style04 { padding: 30px 0; } 
+.mg_style01 { margin: 50px 0; } 
+.bb_dark { border-bottom: 1px solid #666666; }
+.bb_gray { border-bottom: 1px solid #dadada; } 
+.bt_gray { border-top: 1px solid #dadada; } 
+.btn_style02 { background: #064b85; color: #fff; border: 1px solid #064b85; border-radius: 30px; } 
+.btn_style01 { background: #fff; color: #064b85; border: 1px solid #064b85; border-radius: 30px } 
+.trt { text-align: right !important; } 
+.tlt { text-align: left !important; } 
+.tct { text-align: center !important; } 
+.t_pd_style01 { padding-left: 60px !important; padding-right: 10px; } 
+
+.swiper-button-prev::after, .swiper-button-next::after {content: none;}
+.main_slide { overflow: hidden; } 
+.main_wrap { height: 380px; position: relative; overflow: initial;}
+.main_slide .swiper-wrapper a {display: block; border-radius: 20px; overflow: hidden;}
+.main_wrap .swiper-button-prev,
+.main_wrap .swiper-button-next { width: 25px; height: 33px; top: auto; margin-top: 0; top: 50%; transform: translateY(-50%); z-index: 1; } 
+.main_wrap img { display: block; width: 100% } 
+.main_wrap .swiper-button-prev { background: url(/images/hanmi/mb_prev.png) no-repeat center; left: 26px; } 
+.main_wrap .swiper-button-next { background: url(/images/hanmi/mb_next.png) no-repeat; left: initial; right: 26px; } 
+.main_wrap .swiper-pagination { position: static; font-size: 0; z-index: 1; } 
+.main_wrap .swiper-pagination .swiper-pagination-bullet-active { background: #373737; } 
+.main_wrap .swiper-pagination span { width: 14px; height: 14px; margin-right: 10px; } 
+.main_wrap .swiper-button-play { width: 12px; height: 14px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(/images/hanmi/mb_start.png) center / contain no-repeat; text-indent: -99999px; z-index: 2; display: none } 
+.main_wrap .swiper-button-pause { width: 12px; height: 14px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(/images/hanmi/mb_stop.png) center / contain no-repeat; text-indent: -99999px; z-index: 2; } 
+.main_wrap .control { display: flex; width: 100%; position: absolute; bottom: 30px; align-items: center; justify-content: center; z-index: 2; } 
+.main_wrap .control .swiper-btns { width: 12px; height: 14px; position: relative; } 
+
+.gpmu_menu { padding: 100px 0 60px; } 
+.gpmu_menu .menu_list { display: flex; margin: 0 60px; justify-content: space-between; } 
+.gpmu_menu .menu_list li a { display: block; width: 100%; height: 100%; color: #373737; font-size: 1.6rem; font-weight: 500; text-align: center; } 
+.gpmu_menu .menu_list li a::before { content: ''; display: block; width: 125px; height: 125px; margin: 0 auto 20px; background-color: #f7f7f7; background-position: center; background-repeat: no-repeat; border-radius: 50%; transition: all 0.35s; } 
+.gpmu_menu .menu_list li a.icon01::before { background-image: url(/images/hanmi/menu_icon01.png); } 
+.gpmu_menu .menu_list li a.icon02::before { background-image: url(/images/hanmi/menu_icon02.png); } 
+.gpmu_menu .menu_list li a.icon03::before { background-image: url(/images/hanmi/menu_icon03.png); } 
+.gpmu_menu .menu_list li a.icon04::before { background-image: url(/images/hanmi/menu_icon04.png); } 
+.gpmu_menu .menu_list li a.icon05::before { background-image: url(/images/hanmi/menu_icon05.png); } 
+.gpmu_menu .menu_list li a.icon06::before { background-image: url(/images/hanmi/menu_icon06.png); } 
+.gpmu_menu .menu_list li a.icon01:hover::before { background-image: url(/images/hanmi/menu_icon01_on.png); } 
+.gpmu_menu .menu_list li a.icon02:hover::before { background-image: url(/images/hanmi/menu_icon02_on.png); } 
+.gpmu_menu .menu_list li a.icon03:hover::before { background-image: url(/images/hanmi/menu_icon03_on.png); } 
+.gpmu_menu .menu_list li a.icon04:hover::before { background-image: url(/images/hanmi/menu_icon04_on.png); } 
+.gpmu_menu .menu_list li a.icon05:hover::before { background-image: url(/images/hanmi/menu_icon05_on.png); } 
+.gpmu_menu .menu_list li a.icon06:hover::before { background-image: url(/images/hanmi/menu_icon06_on.png); } 
+.gpmu_menu .menu_list li a:hover { color: #064a84; font-weight: bold; } 
+.gpmu_menu .menu_list li a:hover::before { box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35); } 
+
+.box_item { background: #fff; } 
+.cont_slide .swiper-pagination,
+ .cont_item .swiper-pagination { display: none; bottom: -40px; left: 50%; transform: translateX(-50%); } 
+ .cont_slide .swiper-pagination span,
+ .cont_item .swiper-pagination span { width: 14px; height: 14px; } 
+ .cont_slide .swiper-pagination span + span,
+ .cont_item .swiper-pagination span + span { margin-left: 6px; } 
+ .cont_slide .swiper-pagination-bullet-active,
+ .cont_item .swiper-pagination-bullet-active { background-color: #064a84; } 
+.cont_slide .item { border: 1px solid #dadada; border-radius: 10px; box-sizing: border-box; overflow: hidden; } 
+.cont_slide .item .img_wrap { height: 235px; } 
+.cont_slide .item .img_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; } 
+.cont_slide .item .txt { padding: 12px 16px 10px; } 
+.cont_slide .item .t_state .t_tag { display: inline-block; padding: 4px 10px; font-size: 1.2rem; color: #666666; border: 1px solid #666666; border-radius: 20px; } 
+.cont_slide .item .t_state .t_tag + .t_tag { margin-left: 2px; } 
+.cont_slide .item .t_state .t_tag.blue { color: #4d88f4; border-color: #4d88f4; } 
+.cont_slide .item .t_state .t_tag.pink { color: #ff3e67; border-color: #ff3e67; } 
+.cont_slide .item .txt .t_tit { display: -webkit-box; height: 46px; margin: 12px 0 8px; color: #212121; font-size: 1.6rem; font-weight: bold; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; line-height: 23px; word-break: keep-all; overflow: hidden; } 
+.cont_slide .item .txt .t_rate { display: flex; align-items: center; } 
+.cont_slide .item .txt .t_rate .star_bg { width: 66px; height: 10px; position: relative; background: url(/images/hanmi/star_bg.png) no-repeat; z-index: 1; } 
+.cont_slide .item .txt .t_rate .star_bg span { width: auto; height: 10px; position: absolute; left: 0; top: 0; background: url(/images/hanmi/star_on.png) no-repeat; z-index: 2; } 
+.cont_slide .item .txt .t_rate .star_txt { margin-left: 4px; color: #666666; font-size: 1.3rem; } 
+
+.cont_slide .item .btn_wrap { padding: 14px 0; background: #064a84; text-align: center; } 
+.cont_slide .item .btn_wrap p { color: #fff; font-size: 1.7rem; font-weight: bold; } 
+.cont_slide .item a { display: block; position: relative; } 
+.cont_slide .item a:hover::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(22, 22, 22, 0.92); z-index: 5; } 
+.cont_slide .item .h_wrap { display: none; width: 100%; height: 100%; padding: 50px 18px 16px; position: absolute; top: 0; bottom: 0; color: #fff; box-sizing: border-box; z-index: 8; } 
+.cont_slide .item .h_wrap .h_tit { display: -webkit-box; height: 46px; margin-bottom: 30px; font-size: 1.8rem; font-weight: bold; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; line-height: 23px; word-break: keep-all; overflow: hidden; } 
+.cont_slide .item .h_wrap li { padding-left: 16px; position: relative; font-size: 1.3rem; } 
+.cont_slide .item .h_wrap li::before { content: ''; width: 12px; height: 12px; position: absolute; left: 0; top: 2px; background: url(/images/hanmi/h_list_icon.png) no-repeat; } 
+.cont_slide .item .h_wrap li + li { margin-top: 10px; } 
+.cont_slide .item .h_wrap .h_btn { margin-top: auto; padding: 10px 0; background: #ffffff; color: #373737; font-size: 1.7rem; font-weight: bold; text-align: center; border-radius: 10px; } 
+.cont_slide .item a:hover .h_wrap { display: flex; flex-direction: column; } 
+.cont_slide .slide_wrap { margin-top: 36px; position: relative; } 
+.cont_slide .con_list { overflow: hidden; } 
+.cont_slide .swiper-button-prev, .cont_slide .swiper-button-next { width: 60px; height: 63px; margin-top: 0; top: 50%; transform: translateY(-50%); } 
+.cont_slide .swiper-button-prev { left: -100px; background: url(/images/hanmi/btn_prev.png) no-repeat; } 
+.cont_slide .swiper-button-next { right: -100px; background: url(/images/hanmi/btn_next.png) no-repeat; } 
+.page_tit { color: #373737; font-size: 3.7rem; font-family: 'NanumSquareRound', 'Noto Sans KR',sans-serif; font-weight: 800; } 
+.page_tit02 { color: #373737; font-size: 4rem; font-weight: bold; text-align: center; } 
+.page_tit span { color: #064a84; font-family: 'NanumSquareRound', 'Noto Sans KR',sans-serif; font-weight: 800; } 
+.gpmu_pick .flex_box { display: flex; align-items: center; } 
+.gpmu_pick .cont_tabs { display: flex; margin-left: auto; } 
+.gpmu_pick .cont_tabs li + li { margin-left: 10px; } 
+.gpmu_pick .cont_tabs li.active a { background: #373737; color: #fff; } 
+.gpmu_pick .cont_tabs li a { display: flex; width: 100%; height: 100%; padding: 8px 22px; background: #fff; color: #666666; font-size: 1.5rem; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; border: 1px solid #373737; border-radius: 30px; } 
+
+.gpmu_banner { padding: 70px 0 10px; } 
+.gpmu_banner .banner { background-image: url(/images/hanmi/banner_img.png); background-color: #1382ff; background-position: right -46px bottom -84px; background-repeat: no-repeat; border-radius: 20px; } 
+.gpmu_banner .banner a { display: block; padding: 70px 40px; color: #fff; font-size: 2.8rem; } 
+
+.gpmu_new .slide_wrap { position: relative; } 
+.gpmu_new .con_list { margin-top: 3.6rem; overflow: hidden; } 
+.gpmu_new .item a { display: block; width: 100%; height: 100%; } 
+.gpmu_new .item a:hover .img_wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url(/images/hanmi/play_btn.png); background-color: rgba(22, 22, 22, 0.92); background-position: center; background-repeat: no-repeat; z-index: 5; } 
+.gpmu_new .item .img_wrap { position: relative; border-radius: 10px; overflow: hidden; } 
+.gpmu_new .item .img_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; } 
+.gpmu_new .item .txt { padding: 20px 30px 0; text-align: center; } 
+.gpmu_new .item .txt span { color: #212121; font-size: 1.4rem; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; text-overflow: ellipsis; word-break: keep-all; overflow: hidden;} 
+.gpmu_new .item .txt p { display: -webkit-box; height: 46px; margin: 12px 0 0; color: #212121; font-size: 1.8rem; font-weight: 500; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; line-height: 23px; word-break: keep-all; overflow: hidden; } 
+
+.gpmu_notice { padding: 50px 0 60px; } 
+.gpmu_notice .slide_wrap { position: relative; } 
+.gpmu_notice .con_list { margin-top: 3.6rem; overflow: hidden; } 
+.gpmu_notice .con_list .item:hover a { border-color: #064a84; box-shadow: 0px 0px 16px 0px rgba(88, 88, 88, 0.3); } 
+.gpmu_notice .con_list .item:hover a .tit { color: #064a84; } 
+.gpmu_notice .con_list .item a { display: block; width: 100%; height: 100%; padding: 16px 18px; background: #fff; border: 1px solid #e8e8e8; border-radius: 15px; box-sizing: border-box; text-align: center; } 
+.gpmu_notice .con_list .item a .tit { display: -webkit-box; color: #373737; font-size: 1.8rem; font-weight: 500; -webkit-line-clamp: 1; -webkit-box-orient: vertical; text-overflow: ellipsis; word-break: keep-all; overflow: hidden; } 
+.gpmu_notice .con_list .item a .date { display: block; margin-top: 13px; padding-top: 13px; color: #666666; font-size: 1.3rem; border-top: 1px solid #e8e8e8; } 
+.gpmu_notice .control_btn { display: none; } 
+.gpmu_notice .swiper-button-next { right: 0; background: url(/images/hanmi/slide_btn_next.png) no-repeat; } 
+.gpmu_notice .swiper-button-prev { left: 0; background: url(/images/hanmi/slide_btn_prev.png) no-repeat; } 
+.gpmu_notice .swiper-button-prev, .gpmu_notice .swiper-button-next { width: 20px; height: 34px; margin-top: 0; top: 50%; transform: translateY(-50%); } 
+.gpmu_letter .slide_wrap { position: relative; } 
+.gpmu_letter .con_list { margin-top: 3.6rem; overflow: hidden; } 
+.gpmu_letter .item a { display: block; width: 100%; height: 100%; } 
+.gpmu_letter .item a:hover .img_wrap img { transform: scale(1.1); } 
+.gpmu_letter .item .img_wrap { border: 1px solid #e8e8e8; overflow: hidden; } 
+.gpmu_letter .item .img_wrap { max-height: 260px; height: 100%; } 
+.gpmu_letter .item .img_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; transition: all 0.35s; } 
+.gpmu_letter .item .txt { margin-top: 25px; } 
+.gpmu_letter .item .txt p { display: -webkit-box; height: 46px; margin: 12px 0 0; color: #212121; font-size: 1.8rem; font-weight: 500; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; line-height: 23px; word-break: keep-all; overflow: hidden; } 
+
+.gpmu_introduction { padding: 80px 0 90px; } 
+.gpmu_introduction .con_list { display: flex; align-items: center; } 
+.gpmu_introduction .txt_wrap { margin-right: 68px; } 
+.gpmu_introduction .txt_wrap .tit { margin-bottom: 34px; color: #fff; font-size: 3.2rem; font-weight: bold; } 
+.gpmu_introduction .txt_wrap .txt { margin-bottom: 36px; color: #fff; font-size: 1.8rem; line-height: 1.5; word-break: keep-all; } 
+.gpmu_introduction .txt_wrap a { display: inline-block; padding: 14px 20px; position: absolute; color: #064a84; font-size: 1.8rem; font-weight: 500; border-radius: 30px; transition: all .3s; box-sizing: border-box; overflow: hidden; z-index: 1; } 
+.gpmu_introduction .txt_wrap a::after { content: ''; width: 100%; height: 100%; position: absolute; bottom: 0; left: 0; background-color: #fff; border-radius: 30px; transition: all .3s; z-index: -2; } 
+.gpmu_introduction .txt_wrap a::before { content: ''; width: 0%; height: 100%; position: absolute; bottom: 0; left: 0; background-color: rgb(6, 74, 132, 0.8); border-radius: 30px; transition: all .3s; z-index: -1; } 
+.gpmu_introduction .txt_wrap a:hover::before { width: 100%; } 
+.gpmu_introduction .txt_wrap a:hover { color: #fff; } 
+.gpmu_introduction .txt_wrap a:hover span::after { background: url(/images/hanmi/arrow_btn_on.png) no-repeat; } 
+.gpmu_introduction .txt_wrap a span { display: flex; align-items: center; } 
+.gpmu_introduction .txt_wrap a span::after { content: ''; display: inline-block; width: 35px; height: 18px; margin-left: 16px; background: url(/images/hanmi/arrow_btn.png) no-repeat; } 
+.gpmu_introduction .img_wrap { max-width: 600px; width: 100%; max-height: 340px; overflow: hidden; } 
+.gpmu_introduction .img_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; } 
+
+/* login */
+.login_tit { margin-bottom: 70px; color: #373737; font-size: 4rem; font-weight: bold; text-align: center; } 
+.login_cont { display: flex; max-width: 930px; padding: 60px 10px; margin: 0 auto; background: #fff; border: 1px solid #000; border-radius: 30px; justify-content: center; } 
+.login_cont > div { flex: 1; padding: 0 40px; } 
+.login_cont .flex_item { display: flex; min-height: 300px; flex-direction: column; } 
+.login_cont .big_btn { width: 100%; display: block; margin-top: auto; padding: 10px; border-radius: 30px; font-size: 1.5rem; font-weight: bold; text-align: center; border: 0; box-sizing: border-box; } 
+.big_btn.btn_style01 { background: #064a84; color: #fff; border: 1px solid #064a84; } 
+.big_btn.btn_style02 { background: #fff; color: #064a84; border: 1px solid #064a84; } 
+.login_cont h4 { margin-bottom: 30px; color: #373737; font-size: 2.6rem; font-weight: bold; } 
+.login_cont .login_item > div + div { margin-top: 1rem; } 
+.login_cont .login_item input { width: 100%; background: #f7f8fa; padding: 1.2rem 3rem; font-size: 1.4rem; border: 0; border-radius: 10px; box-sizing: border-box; } 
+.login_cont .login_item input::placeholder { color: #c5c6c7 } 
+.login_cont .check_style { margin-top: 2rem; text-align: left;} 
+.login_cont .check_style input[type="checkbox"] { display: none; } 
+.login_cont .check_style label { color: #666666; font-size: 1.3rem; cursor: pointer; } 
+.login_cont input[type="checkbox"] + label:before { content: ''; display: inline-block; width: 13px; height: 13px; margin: 0 8px 0 0; vertical-align: middle; border: 1px solid #c9cdd2; border-radius: 100%; cursor: pointer; } 
+
+.login_cont input[type="checkbox"]:checked + label:before { content: ''; background: #064a84; border-color: #064a84; box-shadow: inset 0 0 1px 2px white; } 
+.login_cont .find_box { display: flex; margin: 70px 0 40px; justify-content: center; } 
+.login_cont .find_box a { position: relative; color: #666666; font-size: 1.3rem; } 
+.login_cont .find_box a + a { margin-left: 10px; padding-left: 10px; } 
+.login_cont .find_box a + a::after { content: ''; display: block; width: 1px; height: 10px; background: #ddd; position: absolute; left: 0; top: 50%; transform: translateY(-50%); } 
+
+.login_cont .sign_box .txt { color: #666666; font-size: 1.4rem; line-height: 1.4; letter-spacing: -1.5px; } 
+.login_cont .sign_box .txt::after { content: ''; display: block; width: 212px; height: 140px; margin: 40px auto; background: url(/images/hanmi/sign_icon01.png) no-repeat; } 
+
+/* process_list */
+.board_seach_area { max-width: 420px; width: 100%; margin: 60px auto; position: relative; } 
+.board_seach_area .input_wrap { display: flex; width: 100%; padding: 10px 10px; border-radius: 30px; justify-content: space-between; box-shadow: rgba(17, 17, 26, 0.2) 0px 0px 16px; box-sizing: border-box; overflow: hidden; } 
+.board_seach_area .input_wrap input { width: calc(100% - 30px); border: 0; font-size: 1.3rem; } 
+.board_seach_area .input_wrap input::placeholder { color: #bcbcbc; } 
+.board_seach_area .input_wrap button { width: 20px; background: url(/images/hanmi/seach_ico.png) center / contain no-repeat; border: 0; text-indent: -99999px; } 
+.gpmu_list_tab .cont_tabs { display: flex; justify-content: center; } 
+.gpmu_list_tab .cont_tabs li + li { margin-left: 10px; } 
+.gpmu_list_tab .cont_tabs li.active a { background: #373737; color: #fff; } 
+.gpmu_list_tab .cont_tabs li a { display: flex; width: 100%; height: 100%; padding: 8px 22px; background: #fff; color: #666666; font-size: 1.5rem; align-items: center; justify-content: center; text-align: center; box-sizing: border-box; border: 1px solid #373737; border-radius: 30px; } 
+.notice_wrap { margin: 50px 0; padding-bottom: 20px; border-bottom: 1px solid #000; } 
+.notice_wrap > p { color: #373737; font-size: 1.8rem; } 
+.notice_wrap > p span { color: #064a84; font-weight: bold; } 
+.notice_wrap .sort_list { margin-top: 20px; } 
+.notice_wrap .sort_list .radio_btn { display: inline-block; border: 1px solid #064a84; border-radius: 30px; overflow: hidden; } 
+.notice_wrap .sort_list .radio_btn input[type=radio] { display: none; } 
+.notice_wrap .sort_list .radio_btn label { display: block; padding: 6px 18px; color: #064a84; font-size: 1.4rem; cursor: pointer; } 
+.notice_wrap .sort_list .radio_btn input[type=radio]:checked + label { background: #064a84; color: #fff; } 
+.gpmu_list .con_list { display: flex; flex-wrap: wrap; gap: 20px; } 
+.gpmu_list .con_list .item { width: calc(25% - 15px); } 
+
+.paging { display: flex; justify-content: center; margin-top: 60px; align-items: center; } 
+.paging li a { display: flex; width: 26px; height: 26px; margin-right: 5px; color: #666666; font-size: 1.6rem; justify-content: center; align-items: center; border-radius: 100%; } 
+.paging li.active a { background: #064a84; color: #fff; } 
+.paging li.prev_arrow a { background: url(/images/hanmi/prev_arrow.png) no-repeat center; } 
+.paging li.next_arrow a { background: url(/images/hanmi/next_arrow.png) no-repeat center; } 
+
+.m_paging { display: none; justify-content: center; margin-top: 30px; align-items: center; } 
+.m_paging a { width: 25px; height: 25px; display: flex; justify-content: center; align-items: center; } 
+.m_paging .prev_arrow { background: url(/images/hanmi/prev_arrow.png) no-repeat center; background-size: 5px; } 
+.m_paging .next_arrow { background: url(/images/hanmi/next_arrow.png) no-repeat center; background-size: 5px; } 
+.m_paging p { margin: 0 10px; font-size: 1.4rem; } 
+.m_paging p .cut { color: #064a84; font-weight: bold; } 
+
+.list_detail .list_tit { display: flex; padding-bottom: 2.6rem; border-bottom: 1px solid #373737; justify-content: space-between; } 
+.list_detail .list_tit .tit { color: #373737; font-size: 2.4rem; } 
+.list_detail .list_tit .etc_btn { display: inline-flex; } 
+.list_detail .etc_btn a { display: inline-block; width: 30px; height: 30px; margin-right: 10px; border: 1px solid #dadada; border-radius: 100%; } 
+.list_detail .etc_btn a.like_btn { background: url(/images/hanmi/icon_like.png) center no-repeat; } 
+.list_detail .etc_btn a.like_btn.active { background: url(/images/hanmi/icon_like_on.png) center no-repeat; } 
+.list_detail .etc_btn a.share_btn { background: url(/images/hanmi/icon_share.png) center no-repeat; } 
+.list_detail .course_view .img_wrap img { display: block; width: 100%; height: 100%; } 
+.list_detail .course_view { position: relative; } 
+.list_detail .course_view .view_cont { width: calc(100% - 320px); margin-left: auto; padding: 20px 30px; border: 1px solid #dadada; border-radius: 20px; box-sizing: border-box; } 
+.list_detail .course_view .img_wrap { width: 280px; height: 235px; position: absolute; top: 0; left: 0; } 
+.list_detail .course_view .tit { margin-bottom: 26px; color: #212121; font-size: 2.2rem; font-weight: 500; } 
+.list_detail .course_view .course_list { max-width: 460px; width: 100%; box-sizing: border-box; } 
+.list_detail .course_view .course_list li { display: flex; } 
+.list_detail .course_view .course_list li + li { margin-top: 14px; } 
+.list_detail .course_view .course_list li strong { width: 130px; color: #373737; font-size: 1.5rem; flex-shrink: 0; } 
+.list_detail .course_view .course_list li .txt { width: 100%; color: #666666; font-size: 1.5rem; font-weight: 300; letter-spacing: -0.5px; } 
+.list_detail .course_view .course_btn { width: 260px; position: absolute; right: 34px; bottom: 34px; } 
+.list_detail .course_view .course_btn a { display: block; padding: 10px 0; text-align: center; font-size: 1.8rem; font-weight: bold; } 
+.list_detail .course_view .course_btn a + a { margin-top: 8px; } 
+.select_style01 { width: 100%; padding-bottom: 4px; background: url(/images/hanmi/select_arrow.png) center right 10px no-repeat; color: #666666; font-size: 1.5rem; font-weight: 300; font-family: 'Noto Sans KR'; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none; outline: none; appearance: none; border: 0; border-bottom: 1px solid #dfdfdf; box-sizing: border-box; } 
+.list_detail .cont_slide .swiper-pagination { display: block; } 
+
+.list_detail .ld_tit { display: flex; padding-bottom: 16px; border-bottom: 1px solid #373737; justify-content: space-between; } 
+.list_detail .ld_tit .tit { color: #373737; font-size: 2rem; font-weight: 500; } 
+.list_detail .course_info { display: flex; flex-wrap: wrap; } 
+.list_detail .course_info li { display: flex; width: 50%; padding: 1.8rem 3rem; border-bottom: 1px solid #dadada; box-sizing: border-box; }
+.list_detail .course_info li#fileTr {width: 100%;}
+.list_detail .course_info li:last-child { width: 100%; border-bottom-color: #373737; } 
+.list_detail .course_info li strong { width: 170px; color: #373737; font-size: 1.5rem; flex-shrink: 0; } 
+.list_detail .course_info li .txt { color: #666666; font-size: 1.5rem; font-weight: 500; }
+.list_detail .txt_box { display: block; padding: 3.6rem 3rem; border-bottom: 1px solid #dadada; }
+
+.list_detail .ld_tit .tit span { margin-left: 10px; color: #666666; font-size: 1.5rem; } 
+.list_detail .ld_tit .rate_area { display: flex; align-items: center; } 
+.list_detail .ld_tit .rate_area .txt { margin-right: 1.6rem; color: #666666; font-size: 1.5rem; } 
+.list_detail .ld_tit .rate_area .score { margin-left: 1rem; color: #666666; font-size: 1.5rem; } 
+.rate_area .rate { width: 86px; height: 14px; position: relative; background: url(/images/hanmi/list_star.png) no-repeat; z-index: 1; } 
+.rate_area .rate span { width: auto; height: 14px; position: absolute; background: url(/images/hanmi/list_star_on.png) no-repeat; z-index: 2; } 
+.list_detail .review .item { display: flex; padding: 3.6rem 3rem; border-bottom: 1px solid #dadada; } 
+.list_detail .review .rv_score { max-width: 86px; margin-right: 5rem; } 
+.list_detail .review .rv_score .score { margin-bottom: 10px; color: #000; font-size: 4rem; font-weight: 900; text-align: center; } 
+.list_detail .review .rv_info { width: 100%; } 
+.list_detail .review .rv_info ul { display: flex; margin-bottom: 2rem; align-items: flex-end; } 
+.list_detail .review .rv_info li .rv_user { margin-right: 16px; color: #373737; font-size: 1.5rem; font-weight: 500; } 
+.list_detail .review .rv_info li .rv_date { color: #72787f; font-size: 1.3rem; } 
+.list_detail .review .rv_info .desc { color: #666666; font-size: 1.4rem; font-weight: 300; line-height: 1.5; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; } 
+
+.table_list table tbody > tr { border-bottom: 1px solid #dadada; } 
+.table_list > table th, .table_list > table td { padding: 2rem 0; } 
+
+/* 회사소개 */
+.int_company .img_wrap { margin: 0 auto; } 
+.int_company .img_wrap img { display: block; width: 100%; } 
+.int_company .int_box .vod_wrap { max-width: 600px; margin: 0 auto; } 
+.int_company .int_box .vod_wrap .vod_play { position: relative; width: 100%; padding-top: 56%; height: 0; } 
+.int_company .int_box .vod_wrap .vod_play iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; } 
+.int_company .int_box .img_wrap { max-width: 600px; margin-top: 50px; } 
+.int_company .int_box .img_wrap .tit { margin-bottom: 20px; color: #000; font-size: 1.8rem; text-align: center; } 
+.int_company .int_box .int_list { max-width: 600px; margin: 30px auto 0; } 
+.int_company .int_box .int_list li { position: relative; padding-left: 10px; font-size: 1.6rem; } 
+.int_company .int_box .int_list li + li { margin-top: 4px; } 
+.int_company .int_box .int_list li::before { content: ''; width: 4px; height: 4px; position: absolute; top: 8px; left: 0; background: #000; border-radius: 100%; } 
+
+/* 이용약관, 개인정보취급방침 */
+.privacyWrap { position: relative; } 
+.privacyWrap .topBtn { display: flex; width: 60px; height: 60px; position: fixed; right: 200px; bottom: 300px; background: #efefef; color: #000; font-size: 1.6rem; border-radius: 50%; align-items: center; justify-content: center; flex-direction: column; z-index: 100; opacity: 0.8; } 
+.privacyWrap .topBtn::before { content: ''; width: 16px; height: 10px; background: url(../../images/hanmi/top_btn.png) no-repeat; } 
+.privacyWrap .privacyTit { padding-bottom: 3rem; margin-bottom: 3rem; border-bottom: 2px solid #000; text-align: center; } 
+.privacyWrap .privacyTit h3 { color: #000; font-size: 3rem; font-weight: bold; } 
+.privacyWrap .privacyTit p { margin-top: 1rem; color: #666; font-size: 1.6rem; } 
+.privacyWrap .privacyCont h4 { margin-bottom: 3rem; color: #000; font-size: 2.4rem; font-weight: 500; } 
+.privacyWrap .privacyItem { margin-bottom: 3rem; } 
+.privacyWrap .privacyItem .tit { margin-bottom: 1rem; color: #000; font-size: 2rem; font-weight: 500; } 
+.privacyWrap .privacyItem .s_txt {font-size: 1.6rem;}
+.privacyWrap .privacyItem .p_list01 > li { position: relative; padding-left: 10px; color: #000; font-size: 1.6rem; line-height: 1.5; } 
+.privacyWrap .privacyItem .p_list01 li.dot::before { content: ''; width: 3px; height: 3px; position: absolute; top: 10px; left: 0; background: #000; border-radius: 50%; } 
+.privacyWrap .privacyItem .p_list02 > li { padding-left: 20px; } 
+.privacyWrap .privacyItem .p_list03 > li { padding-left: 10px; } 
+.privacyWrap .privacyItem .p_list04 > li { padding-left: 10px; } 
+
+.privacyWrap .privacyList { margin-bottom: 2rem; } 
+.privacyWrap .privacyList p { font-size: 1.4rem; } 
+.privacyWrap .privacyList ul { padding: 2rem; margin: 2rem 0; border: 1px solid #ddd; } 
+.privacyWrap .privacyList ul li { font-size: 1.6rem; } 
+.privacyWrap .privacyList ul li+li { margin-top: 4px; } 
+.privacyWrap .t_list { margin: 2rem 0; } 
+.privacyWrap .t_list table { border-top: 1px solid #888888; } 
+.privacyWrap .t_list table th,
+.privacyWrap .t_list table td { padding: 1rem; font-size: 1.4rem; border-right: 1px solid #ddd; vertical-align: middle; word-break: break-all; } 
+.privacyWrap .t_list table th:last-child,
+.privacyWrap .t_list table td:last-child { border-right: 0; } 
+.privacyWrap .t_list table th { background: #f5f5f5; font-weight: 500; } 
+.privacyWrap .t_list table td { text-align: center; border-bottom: 1px solid #ddd; } 
+
+
+@media all and (max-width:1400px){
+ .cont_slide .swiper-button-next,
+ .cont_slide .swiper-button-prev { display: none; } 
+ .privacyWrap .topBtn {right: 20px;}
+ }
+ @media all and (max-width:1200px){
+ .main_wrap { height: auto; } 
+ .main_wrap .control { bottom: 15px; } 
+ 
+ .gpmu_menu .menu_list { flex-wrap: wrap; gap: 20px; } 
+ .gpmu_menu .menu_list li { width: calc(100% / 3 - 20px); } 
+ 
+ .gpmu_pick .flex_box { display: block; } 
+ .gpmu_pick .cont_tabs { margin: 2rem 0 0 0; overflow-x: auto; white-space: nowrap; } 
+ .cont_slide .swiper-pagination,
+ .cont_item .swiper-pagination { display: block; } 
+ 
+ .list_detail .course_view .course_btn { width: 130px; } 
+ }
+ 
+ @media all and (max-width:1024px){
+ .for_mobile { display: block; } 
+ .gpmu_banner .banner { background-position: right 0 bottom -50px; background-size: 400px; } 
+ .gpmu_notice .control_btn { display: block; } 
+ .gpmu_notice .slide_wrap { padding: 0 40px; } 
+ 
+ .gpmu_list_tab .cont_tabs { justify-content: flex-start; white-space: nowrap; overflow-x: auto; } 
+ .gpmu_list .con_list .item { width: calc(100% / 3 - 14px); } 
+ 
+ .list_detail .course_view .course_btn { width: 100%; margin-top: 20px; position: static; } 
+ .list_detail .course_info li { width: 100%; } 
+ }
+ 
+ @media all and (max-width:860px){
+ .t_pd_style01 { padding-left: 10px !important; } 
+ .gpmu_introduction .con_list { flex-wrap: wrap; } 
+ .gpmu_introduction .txt_wrap { margin-right: 0; order: 2; } 
+ .gpmu_introduction .img_wrap { margin-bottom: 2rem; order: 1; } 
+ 
+ .list_detail .course_view .view_cont { width: 100%; } 
+ .list_detail .course_view .img_wrap { width: 100%; height: auto; margin-bottom: 20px; position: static; } 
+ .gpmu_list_tab { background: #f7f7f7; } 
+ 
+ .list_detail .review .item { flex-direction: column; } 
+ .list_detail .review .rv_score { margin: 0 0 20px 0; } 
+ }
+ @media all and (max-width:768px){
+ .gpmu_list .con_list .item { width: calc(100% / 2 - 10px); } 
+
+ .privacyWrap .t_list { width: 100%; overflow-y: auto; } 
+ .privacyWrap .t_list table { width: 640px; } 
+
+
+ }
+ 
+ @media all and (max-width:640px){
+ .mg_style01 { margin: 20px 0; } 
+ .pd_style01 { padding: 30px 0 50px; } 
+ .pd_style02 { padding: 50px 0; } 
+ .t_mw15 { width: 15% !important; } 
+ .t_mw20 { width: 20% !important; } 
+ 
+ .main_slide .innerSection { width: 100%; padding: 0; } 
+ .main_wrap .control { bottom: 10px; } 
+ .main_wrap .swiper-pagination span { width: 8px; height: 8px; margin-right: 6px; } 
+ .main_wrap .swiper-button-play,
+ .main_wrap .swiper-button-pause { width: 8px; height: 10px; } 
+ .main_wrap .swiper-button-prev,
+ .main_wrap .swiper-button-next { display: none; } 
+ .gpmu_menu { padding: 30px 0 0; } 
+ .gpmu_menu .menu_list { margin: 0; gap: 10px 5px; } 
+ .gpmu_menu .menu_list li { width: calc(100% / 3 - 5px); }
+ .gpmu_menu .menu_list li a::before { width: 90px; height: 90px; margin: 0 auto 10px; background-size: 35%; } 
+ 
+ .cont_slide .item a:hover .h_wrap { display: none; } 
+ .cont_slide .item a:hover::before { content: none; } 
+ 
+ .cont_slide .swiper-pagination,
+ .cont_item .swiper-pagination { bottom: -25px; } 
+ .cont_slide .swiper-pagination span,
+ .cont_item .swiper-pagination span { width: 8px; height: 8px; } 
+ .cont_slide .swiper-pagination span + span,
+ .cont_item .swiper-pagination span + span { margin-left: 4px; } 
+ .gpmu_banner { padding: 0 0 10px; } 
+ .gpmu_banner .innerSection { width: 100%; } 
+ .gpmu_banner .banner { background-position: right -10px bottom -20px; background-size: 150px; border-radius: 0; } 
+ .gpmu_banner .banner a { padding: 30px 20px; font-size: 2rem; } 
+ .gpmu_new .item a:hover .img_wrap::before { content: none; } 
+ .gpmu_new .item .txt { padding: 10px 10px 0; } 
+ .gpmu_new .item .txt p { margin: 4px 0 0; } 
+ .gpmu_introduction { padding: 30px 0; } 
+ .gpmu_introduction .txt_wrap a:hover { color: #064a84; } 
+ .gpmu_introduction .txt_wrap a:hover span::after { background: url(/images/hanmi/arrow_btn.png) no-repeat; } 
+ .gpmu_introduction .txt_wrap a:hover::before { content: none; } 
+ .gpmu_introduction .txt_wrap a { position: static; background: #fff; } 
+ .gpmu_list .con_list { gap: 6px; } 
+ .gpmu_list .con_list .item { width: calc(100% / 2 - 3px); } 
+ .cont_slide .item .img_wrap { height: auto; }
+ .gpmu_best.cont_slide .item .img_wrap { height: 170px; } 
+ .paging { display: none; } 
+ .m_paging { display: flex; } 
+ 
+ .login_cont { padding: 30px 10px; flex-direction: column; } 
+ .login_cont > div { padding: 0 20px; } 
+ .login_tit { margin-bottom: 30px; } 
+ .login_cont .find_box { margin: 20px 0; } 
+ .login_cont h4,
+ .login_cont .sign_box .txt { display: none; } 
+ .login_cont .flex_item { min-height: auto; margin-top: 10px; } 
+ 
+ .list_detail .course_view .view_cont { border: 0; padding: 0; } 
+ .list_detail .course_view .course_list { max-width: 100%; padding: 0 20px; } 
+ .list_detail .course_view .course_list li strong { width: 90px; } 
+ .list_detail .course_view .course_btn { display: flex; justify-content: center; } 
+ .list_detail .course_view .course_btn a { width: calc(50% - 4px); } 
+ .list_detail .course_view .course_btn a + a { margin-top: 0; margin-left: 5px;} 
+ .list_detail .course_info li { padding: 1.4rem 1.5rem; } 
+ .list_detail .course_info li strong { width: 80px; } 
+ .list_detail .review .item { padding: 2rem 1rem; } 
+
+ .privacyWrap .topBtn { width: 40px; height: 40px; font-size: 1.2rem; } 
+ .privacyWrap .topBtn::before { width: 8px; height: 5px; background-size: contain; }
+ .privacyWrap .privacyItem .p_list01 > li { padding-left: 4px;} 
+ .privacyWrap .privacyItem .p_list02 > li { padding-left: 8px; } 
+ .privacyWrap .privacyItem .p_list03 > li { padding-left: 4px; } 
+ .privacyWrap .privacyItem .p_list04 > li { padding-left: 4px; } 
+
+ }
+ 
+ 
+ /* etc css */
+ .table_style01 table td.number img {
+ 	width: 40px;
+ }
+ 
