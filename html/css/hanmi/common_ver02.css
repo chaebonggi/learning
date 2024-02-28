@@ -119,7 +119,7 @@ td.txtCut1 { display: table-cell }
 #header .header_gnb .gnb_wrap + .gnb_wrap { margin-left: 6rem; } 
 #header .header_gnb .gnb_wrap .balloon { display: none; padding: 4px 8px; position: absolute; top: 0; left: 0; background: #eef2f5; border-radius: 20px; } 
 #header .header_gnb .gnb_wrap .balloon::after { content: ''; position:absolute; bottom: -6px; left: 10px; border-top: 6px solid #eef2f5; border-left: 6px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; } 
-#header .header_gnb .gnb_wrap .balloon span { display: block; color: #346c9b; font-size: 12px; } 
+#header .header_gnb .gnb_wrap .balloon span { display: block; color: #346c9b; font-size: 12px; font-weight: 500; } 
 #header .header_gnb .gnb_wrap:hover .balloon {display: block;}
 #header .header_gnb .gnb_item { display: flex; height: 100%; position: relative; color: #373737; font-size: 1.8rem; font-weight: 500; align-items: center; } 
 #header .header_gnb .gnb_wrap:hover .gnb_item:after { width: 100%; } 
