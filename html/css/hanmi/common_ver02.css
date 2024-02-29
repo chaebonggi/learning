@@ -129,8 +129,9 @@ td.txtCut1 { display: table-cell }
 #header .header_gnb.on .drop_wrap li + li { margin-top: 2rem; } 
 #header .header_gnb .drop_item { display: block; color: #666666; font-size: 1.5rem; text-align: left;} 
 #header .header_gnb .drop_item:hover { color: #373737; font-weight: bold; } 
-#header .header_gnb .gnb_banner { max-height: 0; width: 220px; height: 125px; position: absolute; top: 15rem; left: 50%; transform: translateX(-600px); border-radius: 10px; z-index: 6; overflow: hidden; } 
+#header .header_gnb .gnb_banner { max-height: 0; width: 220px; position: absolute; top: 15rem; left: 50%; transform: translateX(-600px); border-radius: 10px; z-index: 6; overflow: hidden; } 
 #header .header_gnb .gnb_banner img { width: 100%; height: 100%;} 
+#header .header_gnb .gnb_banner a {display: block; }
 #header .header_gnb.on .gnb_banner { max-height: 100%; } 
 
 #header .m_gnb {display: none;}
@@ -153,7 +154,6 @@ td.txtCut1 { display: table-cell }
 .footer .f_bottom { padding: 32px 0; background: #ffffff; } 
 .footer .f_bottom .txt p { margin-top: 12px; color: #666666; font-size: 1.3rem; } 
 .footer .f_bottom .txt p.copy { color: #a3a3a3; } 
-
 
 @media all and (max-width:1024px){
     #header .header_gnb {display: none;}

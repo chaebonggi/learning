@@ -443,4 +443,7 @@
  .table_style01 table td.number img {
  	width: 40px;
  }
- 
+ /* 팝업 */
+.popup.organizeModal .pop_cont {padding: 20px; overflow-y: initial; }
+.popup.organizeModal .pop_img {max-height: 500px; overflow-y: auto;}
+.popup.organizeModal .pop_img img {width: 100%; height: 100%;}

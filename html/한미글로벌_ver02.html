@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>한미글로벌</title>
+    <link rel="stylesheet" href="https://hglobal.learning-hub.co.kr/css/style.css">
     <link rel="stylesheet" href="css/hanmi/reset.css">
     <link rel="stylesheet" href="css/hanmi/common_ver02.css">
     <link rel="stylesheet" href="css/hanmi/style_ver02.css">
@@ -18,6 +19,7 @@
     <script src="js/learnig/chosen.jquery.min.js"></script>
     <script src="js/learnig/printThis.js"></script>
      -->
+     <script src="https://hglobal.learning-hub.co.kr/js/run.js"></script>
      <script src="js/hanmi/run_ver02.js"></script>
 </head>
 
@@ -31,7 +33,9 @@
                 </h1>
                 <nav class="header_gnb">
                     <div class="gnb_banner">
-                        <img src="./images/hanmi/test_img.png" alt="">
+                        <a href="#none" onClick="openModal('organizeModal')">
+                            <img src="./images/hanmi/gnb_banner.png" alt="">
+                        </a>
                     </div>
                     <div class="gnb_wrap">
                         <a href="" class="gnb_item">홈</a>
@@ -123,6 +127,11 @@
                     </div>
                     <div class="swiper-slide">
                         <a href="#">
+                            <img src="./images/hanmi/test_banner.png" alt="">
+                        </a>
+                    </div>
+                    <!-- <div class="swiper-slide">
+                        <a href="#">
                             <img src="./images/hanmi/main_img_02.png" alt="">
                         </a>
                     </div>
@@ -130,7 +139,7 @@
                         <a href="#">
                             <img src="./images/hanmi/main_img_03.png" alt="">
                         </a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -959,6 +968,22 @@
             </div>
         </div>
     </footer>
+
+
+    <!--팝업-->
+    <div class="shadow"></div>
+    <div class="popup organizeModal w760">
+        <div class="pop_head">
+            <h3>기술직무 교육 (GPMU/ENG)</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="pop_cont">
+            <div class="pop_img">
+                <img src="./images/hanmi/organization.jpg" alt="조직도">
+            </div>
+        </div>        
+    </div>
+    <!--//팝업-->
 
 </body>
 
