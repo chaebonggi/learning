@@ -629,6 +629,23 @@ $(document).ready(function () {
     var empowerSwiper = new Swiper('.empower_slide', {
         slidesPerView: 3,
         spaceBetween: 20,
+        pagination: {
+            clickable : true,
+            el: '.empower_slide .swiper-pagination',
+            type: 'bullets',
+        },
+        breakpoints: {
+            1024:{
+                slidesPerView: 2,
+            },
+            768:{
+                slidesPerView: 1,
+            },
+        }
+    });
+    var empowerSwiper = new Swiper('.notice_slide', {
+        slidesPerView: 3,
+        spaceBetween: 20,
         breakpoints: {
             1024:{
                 slidesPerView: 2,

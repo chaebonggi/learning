@@ -1101,11 +1101,17 @@ button.cancel{font-size:14px;background:#ddd;border:0;padding:2px 5px;border-rad
 .notice_tit .more:hover,
 .notice_tit .more:active,
 .notice_tit .more:focus{transform: rotate(30deg)}
-.notice{display: flex;}
+/* .notice{display: flex;}
 .notice .item{border: 1px solid #dddddd;border-radius: 10px;width: calc(33.333% - 13.333px);margin-right: 20px;}
 .notice .item a{display: block;padding: 20px;}
 .notice .item:last-child{margin-right: 0}
 .notice .item .tit{font-weight: 500;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;line-height:25px; max-height:50px;overflow: hidden;margin-bottom: 15px;}
+.notice .item .date{font-size: 14px;color: #888888}
+ */
+
+.notice .item{border: 1px solid #dddddd;border-radius: 10px;}
+.notice .item a {display: block;padding: 20px;}
+.notice .item .tit{font-weight: 500; text-overflow: ellipsis; display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;line-height:25px; max-height:50px;overflow: hidden;margin-bottom: 15px;}
 .notice .item .date{font-size: 14px;color: #888888}
 .notice .item:hover .tit,
 .notice .item:active .tit,
@@ -1995,14 +2001,14 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
 .empower .empower_wrap .mView,
 .empower .empower_wrap .apply p{display: none} */
 .empower{background: #ececec;padding: 80px 0}
-.empower .empower_wrap .boxItem {padding: 30px 0; background: #fff; border-radius: 10px; box-sizing: border-box; text-align: center;}
+.empower .empower_wrap .boxItem {display: flex; padding: 50px 0 30px; background: #fff; border-radius: 10px; box-sizing: border-box; text-align: center; flex-direction: column;}
 .empower .empower_wrap .tit{font-size: 24px;font-weight: 500;margin-bottom: 20px}
 .empower .empower_wrap .desc{font-size: 16px;color: #000;margin-bottom: 15px}
-.empower .empower_wrap .gray{color: #888;margin-bottom: 15px}
-.empower .empower_wrap .etc {display: block;margin: 0 20px; padding: 2px 0; background: #f2f2f2; border-radius: 30px; color: #0093d5; font-size: 14px;word-break: keep-all; font-weight: 500;}
+.empower .empower_wrap .gray{color: #888;margin-bottom: 30px}
+.empower .empower_wrap .etc {display: block;margin: auto 20px 0; padding: 2px 0; background: #f2f2f2; border-radius: 30px; color: #0093d5; font-size: 14px;word-break: keep-all; font-weight: 500;}
 .empower .empower_wrap .apply { margin-top: 30px;}
 .empower .empower_wrap .apply a{display: block; width: calc(100% - 120px); margin: 0 auto; background: #0093d5; text-align: center;border-radius: 50px;color: #fff;font-size: 16px;padding: 20px 10px}
-
+.empower .swiper-pagination {display: none;}
 
 
 
@@ -2434,6 +2440,14 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .content .lecture_list02 > .item:nth-child(3n){margin-right: 20px}
     .content .lecture_list02 > .item:nth-child(2n){margin-right: 0 !important}
      */
+     .empower .empower_slide {padding-bottom: 40px;}
+     .empower .empower_wrap .boxItem {border-radius: 10px 10px 0 0;}
+     .empower .empower_wrap .apply {margin-top: 0;}
+     .empower .empower_wrap .apply a {width: 100%; padding: 10px 0; border-radius: 0 0 10px 10px;}
+     .empower .swiper-pagination {display: block;}
+     .empower .swiper-pagination.swiper-pagination-bullets {bottom: 0; left: 50%; transform: translateX(-50%);}
+     .empower .swiper-pagination.swiper-pagination-bullets span {width: 12px; height: 12px;}
+     .empower .swiper-pagination span.swiper-pagination-bullet-active {width: 20px; border-radius: 10px;}
 
     .qna_wrap .qna_write .item > label{padding-left: 0;width: 150px;}
     .qna_wrap .qna_write .item .con{width: calc(100% - 150px)}
@@ -2853,6 +2867,29 @@ background: url(../images/user/select_arrow.png) no-repeat right 10px center;; b
     .main_tit02{font-size: 18px;margin-bottom: 20px}
     
     .empower{padding: 40px 0}
+    .empower .empower_wrap .boxItem {
+        padding: 20px 0 20px;
+    }
+    .empower .empower_wrap .tit {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .empower .empower_wrap .desc {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .empower .empower_wrap .gray {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .empower .empower_wrap .etc {
+        font-size: 12px;
+    }
+    .empower .swiper-pagination.swiper-pagination-bullets span {
+        width: 8px;
+        height: 8px;
+    }
+
     .hot_lecture:not(.small_item){margin: 80px  0 80px 0}
     .hot_lecture .slick-arrow{display: none !important}
     
