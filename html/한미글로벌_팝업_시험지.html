@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한미글로벌</title>
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/slick.css">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/index.css">
+    <link href="https://www.gpmu.co.kr/css/hanmi/common.css" rel="stylesheet" type="text/css">
+    <link href="https://www.gpmu.co.kr/css/hanmi/style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://www.gpmu.co.kr/js/yepnope/1.5.4/yepnope.min.js" type="text/javascript"></script>
+    <script src="https://www.gpmu.co.kr/js/jquery/1.12.4/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="https://www.gpmu.co.kr/js/swiper-bundle.min.js"></script>
+    <script src="https://www.gpmu.co.kr/js/slick.js"></script>
+    <script src="https://www.gpmu.co.kr/js/run.js"></script>
+    <script src="https://www.gpmu.co.kr/js/hracademy/scripts/index.js"></script>
+    <script src="https://www.gpmu.co.kr/js/hracademy/scripts/jquery.flexslider.js"></script>
+    <script src="https://www.gpmu.co.kr/js/hracademy/scripts/swiper.min.js"></script>
+    <script src="https://www.gpmu.co.kr/js/kendo/2015.3.930/kendo.all.min.js"></script>
+    <script src="https://www.gpmu.co.kr/js/kendo.extension/kendo.ko_KR.js"></script>
+    <script src="https://www.gpmu.co.kr/js/podo.ui/podo.ui.core.js"></script>
+    
+    
+    <script src="https://www.gpmu.co.kr/js/hanmi/run.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <style>
+        .pop_tag.blue {
+            background: #064b85;
+        }
+        .bg_style01 {
+            background: #373737;
+            color: #fff;
+            border: 1px solid #373737;
+        }
+        .bg_style02 {
+            background: #fff;
+            color: #373737;
+            border: 1px solid #373737;
+        }
+        .hanmiPopup {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            padding: 46px 40px;
+            background: #f7f7f7;
+        }
+        .hanmiPopup .pop_head {
+            margin-bottom: 46px;
+            color: #373737;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .hanmiPopup .pop_cont {            
+            max-height: 100%;
+            padding: 40px 36px;
+            background: #fff;
+            border-radius: 20px;
+            overflow-y: visible;
+        }
+        .hanmiPopup .pop_cont .pop_tit {
+            display: flex;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .hanmiPopup .pop_cont .pop_tit p {
+            color: #373737;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .hanmiPopup .pop_cont .pop_tit .pop_tag {
+            display: inline-flex;
+            padding: 0 20px;
+            margin-left: 10px;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .hanmiPopup .pop_cont .edu_info {
+            display: flex;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            border-top: 1px solid #dadada;;
+        }
+        .hanmiPopup .pop_cont .edu_info li {
+            display: flex;
+            width: 50%;            
+            border-bottom: 1px solid #dadada;
+        }
+        .hanmiPopup .pop_cont .edu_info li strong {
+            display: inline-flex;
+            width: 130px;
+            padding: 12px 0;
+            background: #f7f7f7;
+            color: #373737;
+            font-size: 15px;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+        }
+        .hanmiPopup .pop_cont .edu_info li p {
+            display: flex;
+            padding: 12px 10px;
+            font-size: 15px;
+            align-items: center;
+        }
+        .hanmiPopup .pop_cont .question_wrap .item {
+            padding: 0 40px 40px;
+            margin-top: 40px;
+            position: relative;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .hanmiPopup .pop_cont .question_wrap .item:last-child {
+            border-bottom: 0;
+        }
+        .hanmiPopup .pop_cont .question_wrap .q_num {
+            position: absolute;
+            top: -2px;
+            left: 0;
+            color: #373737;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .hanmiPopup .pop_cont .question_wrap .q_tit {
+            margin-bottom: 20px;
+            color: #373737;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .hanmiPopup .pop_cont .question_wrap .q_list li + li {
+            margin-top: 4px;
+        }
+        .hanmiPopup .radio input[type="radio"]:checked + label:after {
+            width: 9px;
+            height: 9px;
+            background: #064b85;
+            border: 0;
+            box-sizing: border-box;
+        }
+        .hanmiPopup .radio input[type="radio"] + label {
+            font-size: 14px;                    
+        }
+        .hanmiPopup .radio input[type="radio"] + label:before {
+            width: 15px;
+            height: 15px;
+            box-sizing: border-box;
+        }
+        @media all and (max-width:860px){
+            .hanmiPopup .pop_cont .edu_info {
+                flex-direction: column;
+            }
+            .hanmiPopup .pop_cont .edu_info li {
+                width: 100%;
+            }
+        }
+        @media all and (max-width:640px){
+            .hanmiPopup {
+                padding: 20px 5px;
+            }
+            .hanmiPopup .pop_head {
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+            .hanmiPopup .pop_cont {
+                padding: 20px 14px;
+            }
+            .hanmiPopup .pop_cont .pop_tit {
+                margin-bottom: 20px;
+            }
+            .hanmiPopup .pop_cont .pop_tit p {
+                font-size: 16px;
+            }
+            .hanmiPopup .pop_cont .pop_tit .pop_tag {
+                padding: 0 14px;
+                margin-left: 6px;
+                font-size: 12px;
+            }
+            .hanmiPopup .pop_cont .edu_info li {
+                flex-direction: column;
+            }
+            .hanmiPopup .pop_cont .edu_info li strong {
+                width: 100%;
+                padding: 6px 0;
+                font-size: 12px;
+            }
+            .hanmiPopup .pop_cont .edu_info li p {
+                padding: 6px 0;
+                font-size: 12px;
+                justify-content: center;
+            }
+            .hanmiPopup .pop_cont .question_wrap .q_num {
+                top: 2px;
+                font-size: 12px;
+            }
+            .hanmiPopup .pop_cont .question_wrap .item {
+                padding: 0 10px 20px 26px;
+                margin-top: 25px;
+            }
+        }
+        
+    </style>
+    <!--팝업-->
+    <div class="hanmiPopup">
+        <div class="pop_head">
+            <p>시험문제</p>
+        </div>
+        <div class="pop_cont">
+            <div class="pop_tit">
+                <p>PM일반과정</p>
+                <span class="pop_tag blue">온라인</span>                
+            </div>
+            <ul class="edu_info">
+                <li>
+                    <strong>교육차수</strong>
+                    <p>2024-01차</p>
+                </li>
+                <li>
+                    <strong>교육기간</strong>
+                    <p>2024-01-01 ~ 2024-01-01</p>
+                </li>
+                <li>
+                    <strong>응시여부</strong>
+                    <p>미응시</p>
+                </li>
+                <li>
+                    <strong>시험시간</strong>
+                    <p>1시간</p>
+                </li>
+            </ul>
+            <style>
+                
+            </style>
+            <div class="question_wrap">
+                <div class="item">
+                    <span class="q_num">Q1.</span>
+                    <p class="q_tit">
+                        A Project Manager realizes that sponsor expectations are NOT being met, specifically regarding project deliverables. To address this issue,<br>
+                        which action should the Project Manager take?<br>
+                        프로젝트 관리자는 특히 프로젝트 결과물과 관련하여 스폰서의 기대가 충족되지 않고 있음을 알고 있습니다.<br>
+                        이 문제를 해결하기 위해 프로젝트 관리자는 어떤 조치를 취해야 합니까? [배점 100점]
+                    </p>
+                    <ul class="q_list">
+                        <li>
+                            <div class="radio">
+                                <input type="radio" id="check01" name="check01">
+                                <label for="check01">①  Update the risk register. 리스크 관리대장을 업데이트 합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="radio">
+                                <input type="radio" id="check02" name="check01">
+                                <label for="check02">②  Update the risk register. 리스크 관리대장을 업데이트 합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="radio">
+                                <input type="radio" id="check03" name="check01">
+                                <label for="check03">③  Update the risk register. 리스크 관리대장을 업데이트 합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="radio">
+                                <input type="radio" id="check04" name="check01">
+                                <label for="check04">④  Update the risk register. 리스크 관리대장을 업데이트 합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="radio">
+                                <input type="radio" id="check05" name="check01">
+                                <label for="check05">⑤  Update the risk register. 리스크 관리대장을 업데이트 합니다.</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div> 
+                <div class="item">
+                    <span class="q_num">Q2.</span>
+                    <p class="q_tit">
+                        A Project Manager realizes that sponsor expectations are NOT being met, specifically regarding project deliverables. To address this issue,<br>
+                        which action should the Project Manager take?<br>
+                        프로젝트 관리자는 특히 프로젝트 결과물과 관련하여 스폰서의 기대가 충족되지 않고 있음을 알고 있습니다.<br>
+                        이 문제를 해결하기 위해 프로젝트 관리자는 어떤 조치를 취해야 합니까? [배점 100점]
+                    </p>
+                    <ul class="q_list">
+                        <li>
+                            <div class="radio">
+                                <input type="radio" id="check06" name="check02">
+                                <label for="check06">①  Update the risk register. 리스크 관리대장을 업데이트 합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="radio">
+                                <input type="radio" id="check07" name="check02">
+                                <label for="check07">②  Update the risk register. 리스크 관리대장을 업데이트 합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="radio">
+                                <input type="radio" id="check08" name="check02">
+                                <label for="check08">③  Update the risk register. 리스크 관리대장을 업데이트 합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="radio">
+                                <input type="radio" id="check09" name="check02">
+                                <label for="check09">④  Update the risk register. 리스크 관리대장을 업데이트 합니다.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="radio">
+                                <input type="radio" id="check10" name="check02">
+                                <label for="check10">⑤  Update the risk register. 리스크 관리대장을 업데이트 합니다.</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="btn_style06 bg_style01">제출</a>
+            <a href="#" class="btn_style06 bg_style02" onclick="closeWindow()">취소</a>
+        </div>
+    </div>
+    <!--//팝업-->
+
+</body>
+
+</html>

@@ -511,7 +511,7 @@ table.k-editor { height: auto !important; }
 .certi_wrap .txt_wrap .certi_course { margin: 10px 0; font-size: 26px; font-weight: bold; text-transform: uppercase; } 
 @media print { 
     @page { 
-        size: A4; 
+        size: A4 landscape; 
         margin: 0 1.3cm; } 
     body { margin-top: 2cm; } 
  }
