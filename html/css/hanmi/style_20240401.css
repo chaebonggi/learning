@@ -334,30 +334,6 @@
 .login_contain .login_wrap ul.find_tab li a.on::before { content: '\2713'; background: #036dc7; color: #fff; font-size: 12px; text-align: center; } 
 .login_contain .login_wrap ul.find_tab li a.on { background: none; } 
 
-/* popup */
-.pop_tag.blue { background: #064b85; } 
-.bg_style01 { background: #373737; color: #fff; border: 1px solid #373737; } 
-.bg_style02 { background: #fff; color: #373737; border: 1px solid #373737; } 
-.hanmiPopup { display: block; width: 100%; max-width: 100%; padding: 46px 40px; background: #f7f7f7; } 
-.hanmiPopup .pop_head { margin-bottom: 46px; color: #373737; font-size: 30px; font-weight: bold; } 
-.hanmiPopup .pop_cont { max-height: 100%; padding: 40px 36px; background: #fff; border-radius: 20px; overflow-y: visible; } 
-.hanmiPopup .pop_cont .pop_tit { display: flex; text-align: left; margin-bottom: 30px; } 
-.hanmiPopup .pop_cont .pop_tit p { color: #373737; font-size: 24px; font-weight: 500; } 
-.hanmiPopup .pop_cont .pop_tit .pop_tag { display: inline-flex; padding: 0 20px; margin-left: 10px; color: #fff; font-size: 14px; border-radius: 20px; align-items: center; justify-content: center; } 
-.hanmiPopup .pop_cont .edu_info { display: flex; margin-bottom: 50px; flex-wrap: wrap; border-top: 1px solid #dadada;; } 
-.hanmiPopup .pop_cont .edu_info li { display: flex; width: 50%; border-bottom: 1px solid #dadada; } 
-.hanmiPopup .pop_cont .edu_info li strong { display: inline-flex; width: 130px; padding: 12px 0; background: #f7f7f7; color: #373737; font-size: 15px; flex-shrink: 0; align-items: center; justify-content: center; } 
-.hanmiPopup .pop_cont .edu_info li p { display: flex; padding: 12px 10px; font-size: 15px; align-items: center; } 
-.hanmiPopup .pop_cont .question_wrap .item { padding-bottom: 40px; margin-top: 40px; position: relative; border-bottom: 1px solid #f5f5f5; } 
-.hanmiPopup .pop_cont .question_wrap .item:last-child { border-bottom: 0; } 
-.hanmiPopup .pop_cont .question_wrap .q_tit { padding-left: 40px; margin-bottom: 20px; color: #373737; font-size: 14px; line-height: 1.5; } 
-.hanmiPopup .pop_cont .question_wrap .q_num { position: absolute; top: -2px; left: 0; color: #373737; font-size: 16px; font-weight: bold; } 
-.hanmiPopup .pop_cont .question_wrap .q_list { padding-left: 40px; } 
-.hanmiPopup .pop_cont .question_wrap .q_list li + li { margin-top: 4px; } 
-.hanmiPopup .radio input[type="radio"]:checked + label:after { width: 9px; height: 9px; background: #064b85; border: 0; box-sizing: border-box; } 
-.hanmiPopup .radio input[type="radio"] + label { font-size: 14px; } 
-.hanmiPopup .radio input[type="radio"] + label:before { width: 15px; height: 15px; box-sizing: border-box; } 
-
 @media all and (max-width:1400px){
  .cont_slide .swiper-button-next,
  .cont_slide .swiper-button-prev { display: none; } 
@@ -405,11 +381,6 @@
  
  .list_detail .review .item { flex-direction: column; } 
  .list_detail .review .rv_score { margin: 0 0 20px 0; } 
-
- /* popup */
-.hanmiPopup .pop_cont .edu_info { flex-direction: column; } 
-.hanmiPopup .pop_cont .edu_info li { width: 100%; } 
-
  }
  @media all and (max-width:768px){
  .gpmu_list .con_list .item { width: calc(100% / 2 - 10px); } 
@@ -507,22 +478,6 @@ table.k-editor { height: auto !important; }
  .cont_slide .item .t_state .t_tag {padding: 2px 6px; font-size: 1rem;}
  
  .searchWrap .courseSearch table col.w80 {width: 80px !important;}
-/* popup */
-.hanmiPopup .pop_cont .edu_info { flex-direction: column; } 
-.hanmiPopup .pop_cont .edu_info li { width: 100%; } .hanmiPopup { padding: 20px 5px; } 
-.hanmiPopup .pop_head { margin-bottom: 20px; font-size: 20px; } 
-.hanmiPopup .pop_cont { padding: 20px 14px; } 
-.hanmiPopup .pop_cont .pop_tit { margin-bottom: 20px; } 
-.hanmiPopup .pop_cont .pop_tit p { font-size: 16px; } 
-.hanmiPopup .pop_cont .pop_tit .pop_tag { padding: 0 14px; margin-left: 6px; font-size: 12px; } 
-.hanmiPopup .pop_cont .edu_info li { flex-direction: column; } 
-.hanmiPopup .pop_cont .edu_info li strong { width: 100%; padding: 6px 0; font-size: 12px; } 
-.hanmiPopup .pop_cont .edu_info li p { padding: 6px 0; font-size: 12px; justify-content: center; } 
-.hanmiPopup .pop_cont .question_wrap .q_tit { padding-left: 26px; } 
-.hanmiPopup .pop_cont .question_wrap .q_num { top: 2px; font-size: 12px; } 
-.hanmiPopup .pop_cont .question_wrap .q_list { padding-left: 20px; } 
-.hanmiPopup .pop_cont .question_wrap .item { padding-bottom: 20px; margin-top: 25px; } 
-
  }
  
  
@@ -546,7 +501,7 @@ table.k-editor { height: auto !important; }
 .popup.organizeModal .pop_img img {width: 100%; height: 100%;}
 
 /* 수료증 */
-.certi_wrap { width: 960px; margin: auto; padding: 170px 0 120px 150px; position: relative; background: url(../../images/hanmi/certi_bg.png) no-repeat; font-family: 'Tw Cen MT', sans-serif; box-sizing: border-box; } 
+.certi_wrap { width: 960px; margin: auto; padding: 170px 0 114px 150px; position: relative; background: url(../../images/hanmi/certi_bg.png) no-repeat; font-family: 'Tw Cen MT', sans-serif; box-sizing: border-box; } 
 .certi_wrap::before { content: ''; width: 265px; height: 410px; position: absolute; top: 1px; right: 55px; background: url(../../images/hanmi/certificate.png) no-repeat; } 
 .certi_wrap::after { content: ''; width: 281px; height: 35px; position: absolute; right: 55px; bottom: 55px; background: url(../../images/hanmi/certi_txt.png) no-repeat; } 
 .certi_wrap .txt_wrap { margin-bottom: 150px; } 
