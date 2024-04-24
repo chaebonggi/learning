@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브 사용자</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/reset.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/common.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/theme/00001/00001.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/kendo/2015.3.930/kendo.common.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/kendo/2015.3.930/kendo.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/kendo/2015.3.930/kendo.dataviz.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/chosen.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/Swiper/4.5.1/css/swiper.min.css">
+	
+	<script src="http://bpo.job-cloud.kr/js/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/front/jquery.mCustomScrollbar.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="http://bpo.job-cloud.kr/js/front/imgLiquid/0.9.944/imgLiquid-min.js" integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="http://bpo.job-cloud.kr/js/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/front/excel-bootstrap-table-filter-bundle.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/excel-bootstrap-table-filter-style.css">
+	<script src="http://bpo.job-cloud.kr/js/front/Swiper/4.5.1/swiper.min.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/chosen.jquery.min.js"></script>
+	<!-- <script src="http://bpo.job-cloud.kr/js/front/run.js"></script> -->
+	<script src="http://bpo.job-cloud.kr/js/file/forms.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/solution/solution_ui.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/solution/custome.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <style>
+        body, html {
+            overflow-x: initial;
+        }
+        body {
+            overflow-x: hidden !important;
+        }
+        .ir-text {
+            display: block;
+            overflow: hidden;
+            font-size: 1px;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+        .innerSection {
+            max-width: 1200px;
+            width: calc(100% - 40px);
+            margin: auto;
+        }
+        .bg_gray {
+            background: #f2f2f2 !important;
+        }
+        .header_gnb .gnb_util {
+            padding: 1.6rem 0;
+            background: #f2f2f2;
+        }
+        .header_gnb .gnb_util .util_menu {
+            display: flex;          
+        }
+        .header_gnb .gnb_util .util_menu ul {
+            display: flex;
+            margin-left: auto;
+        }
+        .header_gnb .gnb_util .util_menu li:not(:first-child) {
+            margin-left: 1.6rem;
+        }
+        .header_gnb .gnb_util .util_menu li a {
+            display: block;
+            color: #666666;
+            font-size: 13px;
+        }
+    </style>
+    <header class="header header_gnb">
+		<div class="gnb_util">
+            <div class="innerSection">
+                <div class="util_menu">
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">강사지원</a></li>
+                        <li><a href="#">HRDHREX</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        <style>
+            .header_gnb .header_top {
+                display: flex;
+                position: relative;
+                margin: 25px 0 20px;
+            }
+            .header_gnb .header_top .seach_area {
+                max-width: 400px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .header_gnb .header_top .seach_area .input_wrap {
+                display: flex;
+                width: 100%;
+                padding: 10px 10px;
+                margin-left: 0;
+                border: 1px solid #373737;
+                border-radius: 30px;
+                justify-content: space-between;               
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+            .header_gnb .header_top .seach_area .input_wrap input:focus {
+                border: none;
+                outline: none;
+            }
+            .header_gnb .header_top .seach_area .input_wrap input {
+                width: calc(100% - 30px);
+                border: 0;
+                font-size: 1.4rem;
+            }
+            .header_gnb .header_top .seach_area .input_wrap button {
+                width: 20px;
+                height: 19px;
+                background: url(./images/hanmi/seach_ico.png) center / contain no-repeat;
+                border: 0;
+                text-indent: -99999px;
+            }
+              .header_gnb .gnb {
+                display: flex;
+                height: 70px;                
+                position: relative;
+                align-items: center;
+              }
+              .header_gnb .gnb .gnb_menu {
+                display: flex;
+                width: calc(100% - 50px);
+                margin-left: auto;
+                justify-content: space-between;
+              }
+              .header_gnb .gnb .gnb_menu > li {
+                display: flex;
+                height: 70px;
+                align-items: center;
+                justify-content: center;
+                width: calc(100% / 7);
+                text-align: center;
+              }
+              .header_gnb .gnb .gnb_menu > li > a {
+                color: #373737;
+                font-size: 18px;
+                font-weight: 500;
+              }
+              .header_gnb .gnb .gnb_menu > li > a:hover {
+                color: #fa5345;
+              }
+            
+            .header_gnb.open .gnb .lnb {
+                display: block;
+            }
+            .header_gnb .gnb .lnb {            
+                display: none;
+                width: calc(100% - 50px);
+                padding-left: 50px;
+                position: absolute;
+                left: 0;
+                top: 70px;
+                z-index: 100;
+            }
+            .header_gnb .gnb .lnb::before {
+                content: '';
+                width: 100vw;
+                height: 100%;                
+                left: calc(50%);
+                position: absolute;
+                transform: translateX(-50%);
+                background: #f9f9f9;
+                z-index: -1;                
+            }
+            .header_gnb .gnb .lnb .lnb_menu {
+                display: grid;                
+                grid-template-columns: repeat(7, 1fr);
+            }
+            .header_gnb .gnb .lnb .lnb_item {
+                padding: 22px 10px 22px 26px;               
+            }
+            .header_gnb .gnb .lnb .lnb_item:not(:first-child) {
+                border-left: 1px solid #efefef;
+            }
+            .header_gnb .gnb .lnb .lnb_item a {
+                color: #636363;
+                font-size: 14px;
+            }
+            .header_gnb .gnb .lnb .lnb_item a:hover {
+                color: #000;
+                font-weight: 700;
+            }
+            .header_gnb .gnb .lnb .lnb_item li + li {
+                margin-top: 4px;
+            }
+            .header_gnb .gnb .gnb_btn {
+                font-size: 0;
+            }
+            .header_gnb .gnb .gnb_btn .all_gnb_menu { 
+                width: 22px;
+                height: 20px;
+                padding: 0;
+                position: relative;              
+                background: transparent;
+                border: none;
+            }
+            .header_gnb .gnb .gnb_btn .all_gnb_menu:focus {
+                border: 0;
+            }
+            .header_gnb .gnb .gnb_btn .all_gnb_menu span,
+            .header_gnb .gnb .gnb_btn .all_gnb_menu span::before,
+            .header_gnb .gnb .gnb_btn .all_gnb_menu span::after {
+                display: block;
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                left: 0;
+                background: #f36f20;
+            }
+            .header_gnb .gnb .gnb_btn .all_gnb_menu span {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .header_gnb .gnb .gnb_btn .all_gnb_menu span::before,
+            .header_gnb .gnb .gnb_btn .all_gnb_menu span::after {
+                content: '';
+            }
+            .header_gnb .gnb .gnb_btn .all_gnb_menu span::before {
+                top: -8px;
+            }
+            .header_gnb .gnb .gnb_btn .all_gnb_menu span::after {
+                top: 8px;
+            }
+            .header_gnb.open .gnb .gnb_btn {
+                padding: 13px;
+                margin-top: auto;
+                background: #f9f9f9;
+            }
+            .header_gnb.open .gnb .gnb_btn::before {
+                content: '';
+                width: 50px;
+                height: 100%;
+                width: 50px;
+            }
+            .header_gnb.open .gnb .gnb_btn .all_gnb_menu span {
+                background: transparent;
+            }
+            .header_gnb.open .gnb .gnb_btn .all_gnb_menu span::before {
+                top:0;
+                transform:rotate(45deg);
+                background: #656a7e;
+            }
+            .header_gnb.open .gnb .gnb_btn .all_gnb_menu span::after {
+                top:0;
+                transform:rotate(-45deg);
+                background: #656a7e;
+            }              
+        </style>
+        <div class="innerSection">
+            <div class="header_top">
+                <h1 class="logo"><a href=""><img src="./images/learninghub/logo.png" alt="러닝허브 로고"></a></h1>
+                <div class="seach_area">
+                    <div class="input_wrap h_search">
+                        <input type="text" placeholder="검색어를 입력하세요." id="searchTextPc" name="searchTextPc">
+                        <button type="button">검색</button>
+                    </div>
+                </div>
+            </div>
+            <nav class="gnb">
+                <div class="gnb_btn">
+                    <button type="button" class="all_gnb_menu">
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="gnb_menu">
+                    <li><a href="#">AI맞춤학습</a></li>
+                    <li><a href="#">전체과정</a></li>
+                    <li><a href="#">마이크로러닝</a></li>
+                    <li><a href="#">지식센터</a></li>
+                    <li><a href="#">역량진단</a></li>
+                    <li><a href="#">나의강의실</a></li>
+                    <li><a href="#">학습지원센터</a></li>
+                </ul>
+                <div class="lnb">
+                    <div class="lnb_menu">
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">큐레이션 추천과정</a></li>
+                                <li><a href="#">역량기반 맞춤과정</a></li>
+                                <li><a href="#">역량진단 기반과정</a></li>                                
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">공통역량</a></li>
+                                <li><a href="#">직무역량</a></li>
+                                <li><a href="#">리더십역량</a></li>
+                                <li><a href="#">외국어</a></li>
+                                <li><a href="#">자격</a></li>
+                                <li><a href="#">인문교양</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">공통과정</a></li>
+                                <li><a href="#">공통역량</a></li>
+                                <li><a href="#">직무역량</a></li>
+                                <li><a href="#">리더십역량</a></li>
+                                <li><a href="#">외국어</a></li>
+                                <li><a href="#">자격</a></li>
+                                <li><a href="#">인문교양</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">지식센터</a></li>
+                                <li><a href="#">러닝캐스트</a></li>
+                                <li><a href="#">지식캐스트</a></li>
+                                <li><a href="#">직립보행/나취취</a></li>
+                                <li><a href="#">지식창고</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">자가진단</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">나의 강의실</a></li>
+                                <li><a href="#">수강신청현황</a></li>
+                                <li><a href="#">학습이력현황</a></li>
+                                <li><a href="#">마일리지 조회</a></li>
+                                <li><a href="#">개인정보수정</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">학습지원센터</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주하는질문</a></li>
+                                <li><a href="#">묻고답하기</a></li>
+                                <li><a href="#">원격지원</a></li>
+                                <li><a href="#">학습방법안내</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>        
+	</header>
+    <main class="main_wrap">
+        <style>
+            .main_wrap .box_item .innerSection {
+                padding: 80px 0 60px;
+            }
+            .main_wrap .main_visual .swiper-slide {
+                text-align: center;
+                font-size: 0;
+            }
+            .main_wrap .main_visual .swiper-slide img {
+                max-width: 1200px;
+                width: 100%;
+                height: 100%;
+            }
+            .swiper, swiper-container {
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                overflow: hidden;
+                list-style: none;
+                padding: 0;
+                z-index: 1;
+                display: block;
+            }
+            .main_wrap .main_visual .swiper-control {
+                display: flex;
+                width: 130px;
+                height: 36px;
+                position: absolute;                
+                left: calc(50% - 600px);
+                bottom: 30px; 
+                background: rgba(49, 49, 49, 0.7);
+                border-radius: 50px;
+                z-index: 2;
+            }
+            .main_wrap .main_visual .swiper-pagination {
+                width: auto;
+                top: 50%;
+                left: 42px;
+                right: initial;
+                bottom: initial;
+                transform: translateY(-50%);
+                font-weight: 500;
+                font-size: 13px;
+                color: #fff;
+            }
+            .main_wrap .main_visual .swiper-pagination .swiper-pagination-current {
+                /* color: #f36f20; */
+            }
+            .main_wrap .main_visual .swiper-button-next, .main_wrap .main_visual .swiper-button-prev {
+                width: 6px;
+                height: 12px;
+                margin-top: 0;
+                transform: translateY(-50%);
+                background-color: transparent;
+                background-size: contain;
+                z-index: 10;
+                border: 0;
+                cursor: pointer;
+            }
+            .main_wrap .main_visual .swiper-button-next {
+                background-image: url(./images/learninghub/ico_next_btn.png);
+                left: 80px;
+            }
+            .main_wrap .main_visual .swiper-button-prev {
+                background-image: url(./images/learninghub/ico_prev_btn.png);
+                left: 15px;
+            }
+            .main_wrap .main_visual .swiper-button-pause, 
+            .main_wrap .main_visual .swiper-button-resume {
+                display: block;
+                width: 10px;
+                height: 12px;
+                position: absolute;
+                top: 50%;
+                right: 18px;
+                transform: translateY(-50%);
+                background-color: transparent;
+                background-size: contain;
+                background-repeat: no-repeat;
+                border: 0;
+            }
+            .main_wrap .main_visual .swiper-button-pause {
+                background-image: url(./images/learninghub/ico_stop.png);
+            }
+            .main_wrap .main_visual .swiper-button-resume {
+                background-image: url(./images/learninghub/ico_start.png);
+            }
+            .main_wrap .main_visual .swiper:not(.swiper-paused) .swiper-button-resume, .main_wrap .main_visual .swiper-paused .swiper-button-pause {
+                display: none;
+            }
+        </style>
+        <article class="main_visual">
+            <div class="main_visual_swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-color:#fa5345;">
+                        <a href="#" title="랜선  클래스 수강신청 바로가기"><img src="./images/learninghub/main_img01.png"/></a>
+                    </div>
+                    <div class="swiper-slide" style="background-color:#5245fa;">
+                        <a href="#" title="랜선  클래스 수강신청 바로가기"><img src="./images/learninghub/main_img02.png"/></a>
+                    </div>
+                    <div class="swiper-slide" style="background-color:#fab845;">
+                        <a href="#" title="랜선  클래스 수강신청 바로가기"><img src="./images/learninghub/main_img03.png"/></a>
+                    </div>                
+                </div>
+                <div class="swiper-control">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-navigation">
+                        <button class="swiper-button-prev"><span class="ir-text">left slide 이동</span></button>
+                        <button class="swiper-button-next"><span class="ir-text">right slide 이동</span></button>
+                        <button class="swiper-button-pause"><span class="ir-text">정지</span></button>
+                        <button class="swiper-button-resume"><span class="ir-text">플레이</span></button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <style>
+                 .main_wrap .clist_slide .slide_wrap {
+                    display: flex;
+                    justify-content: space-between;
+                 }
+                 .main_wrap .clist_slide .cont_wrap {
+                    width: 170px;
+                    flex-shrink: 0;
+                 }
+                 .main_wrap .clist_slide .cont_wrap .c_tit {
+                    color: #373737;
+                    font-size: 20px;
+                 }
+                 .main_wrap .clist_slide .cont_wrap .c_tit span {
+                    font-size: 28px;
+                    font-weight: bold;
+                 }
+                 .main_wrap .clist_slide .cont_wrap .c_txt {
+                    margin-top: 16px;
+                    color: #666666;
+                    font-size: 13px;
+                 }
+                 .main_wrap .clist_slide .cont_wrap button {
+                    width: 100%;
+                    max-width: 170px;
+                    margin-top: 16px;
+                    padding: 4px 0;
+                    background: #fff;
+                    color: #373737;
+                    font-weight: 500;
+                    font-size: 15px;
+                    border: 1px solid #373737;
+                    border-radius: 30px;
+                 }
+                 .main_wrap .clist_slide .cont_wrap .slide_btn {
+                    margin-top: 70px;
+                    position: relative;                    
+                 }
+                 .main_wrap .curation_cont.clist_slide .cont_wrap .slide_btn {
+                    margin-top: 100px;                   
+                 }
+                 .main_wrap .clist_slide .cont_wrap .swiper-button-prev,
+                 .main_wrap .clist_slide .cont_wrap .swiper-button-next {
+                    width: 50px;
+                    height: 50px;
+                    margin-top: 0;
+                    background-size: contain;
+                }
+                .main_wrap .clist_slide .cont_wrap .swiper-button-prev {
+                    background-image: url(./images/learninghub/ico_prev_btn_01.png);
+                    left: 0;
+                }
+                .main_wrap .clist_slide .cont_wrap .swiper-button-next {
+                    background-image: url(./images/learninghub/ico_next_btn_01.png);
+                    left: 70px;
+                }
+                .main_wrap .curation_cont.clist_slide .cont_wrap .swiper-button-prev {
+                    background-image: url(./images/learninghub/ico_prev_btn_02.png);
+                }
+                .main_wrap .curation_cont.clist_slide .cont_wrap .swiper-button-next {
+                    background-image: url(./images/learninghub/ico_next_btn_02.png);
+                }
+                .main_wrap .clist_slide .con_list {
+                    width: calc(100% - 300px);
+                    overflow: hidden;
+                }
+                .main_wrap .clist_slide .item a:hover::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(22, 22, 22, 0.92);
+                    border-radius: 10px;
+                    z-index: 5;
+                }
+                .main_wrap .clist_slide .item a {
+                    display: block;
+                    position: relative;
+                }
+                .main_wrap .clist_slide .item .img_wrap {
+                    border: 1px solid #dadada;
+                    border-radius: 10px;
+                    font-size: 0;
+                    overflow: hidden;
+                }
+                .main_wrap .clist_slide .item .img_wrap img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .main_wrap .clist_slide .item .txt .t_date {
+                    margin-top: 15px;
+                    color: #666666;
+                    font-size: 13px;
+                }
+                .main_wrap .clist_slide .txt .t_tit {
+                    display: -webkit-box;
+                    height: 46px;
+                    margin: 8px 0 12px;
+                    color: #212121;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    line-height: 23px;
+                    word-break: keep-all;
+                    overflow: hidden;
+                }
+                .main_wrap .clist_slide .item .t_state .t_tag {
+                    display: inline-block;
+                    padding: 4px 10px;
+                    background: #f2f2f2;
+                    font-size: 1.2rem;
+                    color: #666666;
+                    border-radius: 5px;
+                }
+                .main_wrap .curation_cont.clist_slide .item .t_state .t_tag {
+                    background: #e5e5e5;
+                    color: #898989;
+                }
+                .main_wrap .clist_slide .item .h_wrap {
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    padding: 50px 18px 16px;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    color: #fff;
+                    box-sizing: border-box;
+                    z-index: 8;
+                }
+                .main_wrap .clist_slide .item a:hover .h_wrap {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .main_wrap .clist_slide .item .h_wrap .h_tit {
+                    display: -webkit-box;
+                    height: 46px;
+                    margin-bottom: 30px;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    line-height: 23px;
+                    word-break: keep-all;
+                    overflow: hidden;
+                }
+                .main_wrap .clist_slide .item .h_wrap li {
+                    padding-left: 16px;
+                    position: relative;
+                    font-size: 1.3rem;
+                }
+                .main_wrap .clist_slide .item .h_wrap li::before {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    left: 0;
+                    top: 2px;
+                    background: url(./images/learninghub/h_list_icon.png) no-repeat;
+                }
+                .main_wrap .clist_slide .item .h_wrap .h_btn {
+                    margin-top: auto;
+                    padding: 10px 0;
+                    background: #ff7000;
+                    color: #fff;
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    text-align: center;
+                    border-radius: 10px;
+                }
+            </style>
+            <div class="recommend_cont clist_slide">
+                <div class="innerSection">
+                    <div class="slide_wrap">
+                        <div class="cont_wrap">
+                            <p class="c_tit">AI 맞춤학습<br> <span>추천 과정</span></p>
+                            <button type="button">관심설정</button>
+                            <p class="c_txt">이용자의 학습이력을 기반으로<br>
+                                맞춤형학습과정을<br>
+                                추천해 드립니다.</p>
+                            <div class="slide_btn">                                
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <div class="con_list">
+                            <div class="swiper-wrapper">                                
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">                                                
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>                                            
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">                                                
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>                                            
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">                                                
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>                                            
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">                                                
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>                                            
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item bg_gray">
+            <div class="curation_cont clist_slide">
+                <div class="innerSection">
+                    <div class="slide_wrap">
+                        <div class="cont_wrap">
+                            <p class="c_tit">직무별<br> <span>큐레이션 과정</span></p>
+                            <p class="c_txt">직무별 업무 SKILL을<br> 
+                                고려하여 큐레이션된<br>
+                                과정을 추천</p>
+                            <div class="slide_btn">                                
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <div class="con_list">
+                            <div class="swiper-wrapper">                                
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">                                                
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>                                            
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">                                                
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>                                            
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">                                                
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>                                            
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">                                                
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>                                            
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <style>
+            .hot_trend .cont_tabs {
+                display: flex;
+                justify-content: center;
+            }
+            .hot_trend .cont_tabs li.active a {
+                background: #373737;
+                color: #fff;
+            }
+            .hot_trend .cont_tabs li + li {
+                margin-left: 10px;
+            }
+            .hot_trend .cont_tabs li a {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                padding: 8px 22px;
+                background: #fff;
+                color: #666666;
+                font-size: 1.5rem;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                box-sizing: border-box;
+                border: 1px solid #373737;
+                border-radius: 30px;
+            }
+            .hot_trend .tit_wrap {
+                margin-bottom: 5rem;
+                text-align: center;
+            }
+            .hot_trend .tit_wrap .p_tit {
+                margin-bottom: 2rem;
+                color: #373737;
+                font-size: 2.8rem;
+                font-weight: bold;
+            }
+            .hot_trend .tit_wrap p {
+                color: #373737;
+                font-size: 1.6rem;
+            }
+            .hot_trend .tab_content {
+                display: none;
+            }
+            .hot_trend .tab_content.active {
+                display: block;
+            }
+        </style>
+        <article class="box_item pd_style01">
+            <div class="hot_trend cont_slide">
+                <div class="innerSection">
+                    <div class="tit_wrap">
+                        <h3 class="p_tit">오늘의 HOT 트렌드 과정</h3>
+                        <p>지금 학습자들에게 가장 많은 관심을 받고 있는 과정을 추천해 드립니다.</p>
+                    </div>
+                    
+                    <div class="tab_container">
+                        <ul class="cont_tabs">                                
+                            <li class="active" id="alwStdType_001">
+                                <a href="javascript:;" onclick="chgAlwStdTypeTab('001');">#경영</a>
+                            </li>                        
+                            <li id="alwStdType_002">
+                                <a href="javascript:;" onclick="chgAlwStdTypeTab('002');">#마케팅/홍보</a>
+                            </li>                        
+                            <li id="alwStdType_003">
+                                <a href="javascript:;" onclick="chgAlwStdTypeTab('003');">#생산/품질관리</a>
+                            </li>                        
+                            <li id="alwStdType_004">
+                                <a href="javascript:;" onclick="chgAlwStdTypeTab('004');">#영업판매</a>
+                            </li>                        
+                            <li id="alwStdType_005">
+                                <a href="javascript:;" onclick="chgAlwStdTypeTab('005');">#인공지능</a>
+                            </li>
+                            <li id="alwStdType_006">
+                                <a href="javascript:;" onclick="chgAlwStdTypeTab('006');">#일반사무</a>
+                            </li>
+                            <li id="alwStdType_007">
+                                <a href="javascript:;" onclick="chgAlwStdTypeTab('007');">#회계</a>
+                            </li>        
+                        </ul>
+                        <div class="tab_content active" id="tabCont_001">
+                            <div class="slide_wrap">
+                                <div class="con_list">
+                                    <div class="swiper-wrapper">
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_content" id="tabCont_002">
+                            <div class="slide_wrap">
+                                tab_con02
+                            </div>
+                        </div>
+                        <div class="tab_content" id="tabCont_003">
+                            <div class="slide_wrap">
+                                tab_con03
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        $(document).ready(function() {
+            $(".header_gnb .all_gnb_menu").click(function(event) {
+                event.stopPropagation();
+                $('.header_gnb').toggleClass("open");
+            });
+            var swiper = new Swiper(".recommend_cont .con_list", {
+                spaceBetween: 20,
+                slidesPerView: 3,
+                autoplay: false,
+                loop: false,
+                navigation: {
+                    nextEl: ".recommend_cont .swiper-button-next",
+                    prevEl: ".recommend_cont .swiper-button-prev",
+                },
+                // pagination: {
+                //     clickable : true,
+                //     el: '.recommend_cont .swiper-pagination',
+                //     type: 'bullets',
+                // },
+                // breakpoints: { 
+                //     1024: {
+                //         slidesPerView: 'auto',
+                //         spaceBetween: 10,
+                //     },
+                // }
+            });
+            var swiper = new Swiper(".curation_cont .con_list", {
+                spaceBetween: 20,
+                slidesPerView: 3,
+                autoplay: false,
+                loop: false,
+                navigation: {
+                    nextEl: ".curation_cont .swiper-button-next",
+                    prevEl: ".curation_cont .swiper-button-prev",
+                },
+                // pagination: {
+                //     clickable : true,
+                //     el: '.curation_cont .swiper-pagination',
+                //     type: 'bullets',
+                // },
+                // breakpoints: { 
+                //     1024: {
+                //         slidesPerView: 'auto',
+                //         spaceBetween: 10,
+                //     },
+                // }
+            });
+            const swiperEl = document.querySelector('.main_visual_swiper')
+            const mainSwiper = new Swiper(swiperEl,{
+                speed: 700,
+                loop: true,
+                effect: 'creative',
+                centeredSlides: true,
+                autoplay: {
+                    delay: 5000,
+                },
+                pagination: {
+                    el: '.main_visual_swiper .swiper-pagination',
+                    type: 'fraction',
+                },
+                navigation: {
+                    nextEl: '.main_visual_swiper .swiper-button-next',
+                    prevEl: '.main_visual_swiper .swiper-button-prev',
+                },
+            })
+
+            const pauseEl = swiperEl.querySelector('.swiper-button-pause')
+            , resumeEl = swiperEl.querySelector('.swiper-button-resume')
+
+            const pauseFunc = ()=>{
+                mainSwiper.autoplay.stop()
+                swiperEl.classList.add('swiper-paused');
+            }
+            const resumeFunc = ()=>{
+                mainSwiper.autoplay.start();
+                swiperEl.classList.remove('swiper-paused');
+            }
+            pauseEl.addEventListener('click', pauseFunc);
+            resumeEl.addEventListener('click', resumeFunc);
+
+            var swiper = new Swiper('.hot_trend .con_list', {
+                initialSlide: 0,
+                spaceBetween: 24,
+                slidesPerView: 4,
+                autoplay: false,
+                loop: false,
+                observer: true,
+                observeParents: true,
+                navigation: {
+                    nextEl: '.hot_trend .swiper-button-next',
+                    prevEl: '.hot_trend .swiper-button-prev',
+                },
+            //  pagination: {
+            //      clickable : true,
+            //      el: '.hot_trend .swiper-pagination',
+            //      type: 'bullets',
+            //  },
+            //  breakpoints: {
+            //      1024: {
+            //          slidesPerView: 'auto',
+            //          spaceBetween: 10,
+            //      },
+            //  },
+            });
+        }); 
+        function chgAlwStdTypeTab(alwstdCode){
+            console.log(alwstdCode)
+            $(".cont_tabs > li").removeClass("active");
+            $("#alwStdType_"+alwstdCode).addClass("active");
+            $(".tab_content").hide();
+            $("#tabCont_" + alwstdCode).show();
+        }
+    </script>
+</body>
+
+</html>
