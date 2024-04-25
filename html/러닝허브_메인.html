@@ -366,8 +366,11 @@
 	</header>
     <main class="main_wrap">
         <style>
-            .main_wrap .box_item .innerSection {
-                padding: 80px 0 60px;
+            .main_wrap .pd_style01 {
+                padding: 80px 0 120px;
+            }
+            .main_wrap .pd_style02 {
+                padding: 80px 0 80px;
             }
             .main_wrap .main_visual .swiper-slide {
                 text-align: center;
@@ -480,14 +483,14 @@
                 </div>
             </div>
         </article>
-        <article class="box_item">
+        <article class="box_item pd_style02">
             <style>
                  .main_wrap .clist_slide .slide_wrap {
                     display: flex;
                     justify-content: space-between;
                  }
                  .main_wrap .clist_slide .cont_wrap {
-                    width: 170px;
+                    width: 180px;
                     flex-shrink: 0;
                  }
                  .main_wrap .clist_slide .cont_wrap .c_tit {
@@ -789,7 +792,7 @@
                 </div>
             </div>
         </article>
-        <article class="box_item bg_gray">
+        <article class="box_item bg_gray pd_style02">
             <div class="curation_cont clist_slide">
                 <div class="innerSection">
                     <div class="slide_wrap">
@@ -923,6 +926,7 @@
         <style>
             .hot_trend .cont_tabs {
                 display: flex;
+                margin-bottom: 60px;
                 justify-content: center;
             }
             .hot_trend .cont_tabs li.active a {
@@ -967,9 +971,35 @@
             .hot_trend .tab_content.active {
                 display: block;
             }
+            .main_wrap .hot_trend .slide_wrap {
+                position: relative;
+            }
+            .main_wrap .hot_trend.clist_slide .con_list {
+                width: 100%;
+            }
+
+            .main_wrap .hot_trend.clist_slide .swiper-button-prev,
+            .main_wrap .hot_trend.clist_slide .swiper-button-next {
+                width: 82px;
+                height: 82px;
+                margin-top: 0;
+                transform: translateY(-50%);
+                background-size: contain;
+            }
+            .main_wrap .hot_trend.clist_slide .swiper-button-next {
+                right: -90px;
+                background-image: url(./images/learninghub/ico_next_btn_03.png);
+            }
+            .main_wrap .hot_trend.clist_slide .swiper-button-prev {
+                left: -90px;
+                background-image: url(./images/learninghub/ico_prev_btn_03.png);
+            }
+            .main_wrap .hot_trend.clist_slide .item a:hover::before {
+                content: none;
+            }
         </style>
         <article class="box_item pd_style01">
-            <div class="hot_trend cont_slide">
+            <div class="hot_trend clist_slide">
                 <div class="innerSection">
                     <div class="tit_wrap">
                         <h3 class="p_tit">오늘의 HOT 트렌드 과정</h3>
@@ -979,25 +1009,25 @@
                     <div class="tab_container">
                         <ul class="cont_tabs">                                
                             <li class="active" id="alwStdType_001">
-                                <a href="javascript:;" onclick="chgAlwStdTypeTab('001');">#경영</a>
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('001');">#경영</a>
                             </li>                        
                             <li id="alwStdType_002">
-                                <a href="javascript:;" onclick="chgAlwStdTypeTab('002');">#마케팅/홍보</a>
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('002');">#마케팅/홍보</a>
                             </li>                        
                             <li id="alwStdType_003">
-                                <a href="javascript:;" onclick="chgAlwStdTypeTab('003');">#생산/품질관리</a>
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('003');">#생산/품질관리</a>
                             </li>                        
                             <li id="alwStdType_004">
-                                <a href="javascript:;" onclick="chgAlwStdTypeTab('004');">#영업판매</a>
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('004');">#영업판매</a>
                             </li>                        
                             <li id="alwStdType_005">
-                                <a href="javascript:;" onclick="chgAlwStdTypeTab('005');">#인공지능</a>
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('005');">#인공지능</a>
                             </li>
                             <li id="alwStdType_006">
-                                <a href="javascript:;" onclick="chgAlwStdTypeTab('006');">#일반사무</a>
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('006');">#일반사무</a>
                             </li>
                             <li id="alwStdType_007">
-                                <a href="javascript:;" onclick="chgAlwStdTypeTab('007');">#회계</a>
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('007');">#회계</a>
                             </li>        
                         </ul>
                         <div class="tab_content active" id="tabCont_001">
@@ -1041,11 +1071,53 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
                         <div class="tab_content" id="tabCont_002">
                             <div class="slide_wrap">
-                                tab_con02
+                                <div class="con_list">
+                                    <div class="swiper-wrapper">
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img02.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img02.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img02.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img02.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img02.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
                         <div class="tab_content" id="tabCont_003">
@@ -1057,13 +1129,769 @@
                 </div>
             </div>
         </article>
+        <style>
+            .main_wrap .popular_cont {
+                background: url(./images/learninghub/popular_cont_bg.png) top center no-repeat;
+            }
+            .main_wrap .popular_cont .tit_wrap {
+                margin-bottom: 5rem;
+                text-align: center;
+            }
+            .main_wrap .popular_cont .tit_wrap .p_tit {
+                margin-bottom: 2rem;
+                color: #373737;
+                font-size: 2.8rem;
+                font-weight: bold;
+            }
+            .main_wrap .popular_cont .tit_wrap .p_tit span {
+                color: #ff7000;
+            }
+            .main_wrap .popular_cont .tit_wrap p {
+                color: #373737;
+                font-size: 1.6rem;
+            }
+            .main_wrap .popular_cont.clist_slide .item a:hover::before {
+                content: none;
+            }
+            .main_wrap .popular_cont .swiper-slide {
+                width: 170px;
+                /* transform: scale(0.5); */
+            }
+            .main_wrap .popular_cont .swiper-slide.swiper-slide-active {
+                /* transform: scale(1); */
+                width: 300px;
+                border: 1px solid red;
+            }
+            .main_wrap .popular_cont.clist_slide .con_list {
+                width: 100%;
+                overflow: hidden;
+                border: 1px solid red;
+            }
+            .main_wrap .popular_cont.clist_slide .con_list .item {
+                font-size: 0;
+            }
+            .main_wrap .popular_cont.clist_slide .con_list .item img {
+                width: 100%;
+            }
+        </style>
+        <article class="box_item">
+            <div class="popular_cont clist_slide pd_style02">
+                <div class="innerSection">
+                    <div class="tit_wrap">
+                        <h3 class="p_tit"><span>인기과정</span> 미리보기</h3>
+                        <p>어제 가장 인기 있었던 과정을 추천해 드립니다.</p>
+                    </div>
+                    <div class="slide_wrap">
+                        <div class="con_list">
+                            <div class="swiper-wrapper">
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/popular_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/popular_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/popular_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/popular_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/popular_img01.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <style>
+            .main_wrap .micro_cont.clist_slide .item a:hover::before {
+                content: none;
+            }
+            .main_wrap .micro_cont.clist_slide .item a {
+                display: block;
+                border-radius: 10px;
+                font-size: 0;
+                overflow: hidden;
+            }
+            .main_wrap .micro_cont.clist_slide .item {
+                margin-top: 0 !important;
+                margin-bottom: 16px !important;
+            }
+        </style>
+        <article class="box_item pd_style02">
+            <div class="micro_cont clist_slide">
+                <div class="innerSection">
+                    <div class="slide_wrap">
+                        <div class="cont_wrap">
+                            <p class="c_tit"><span>마이크로러닝</span></p>
+                            <p class="c_txt">짧지만 핵심을 담아 배우는<br>
+                                마이크로러닝을 추천해 드립니다.</p>
+                            <div class="slide_btn">                                
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <div class="con_list">
+                            <div class="swiper-wrapper">                                
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img02.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img03.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img04.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img05.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img02.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <style>
+            .main_wrap .banner_wrap .con_list {
+                position: relative;
+                overflow: hidden;
+            }
+            .main_wrap .banner_wrap .item a {
+                display: block;
+                font-size: 0;
+                border-radius: 30px;
+                overflow: hidden;
+            }
+            .main_wrap .banner_wrap .swiper-button-prev,
+            .main_wrap .banner_wrap .swiper-button-next {
+                width: 9px;
+                height: 16px;
+                margin-top: 0;
+                transform: translateY(-50%);
+            }
+            .main_wrap .banner_wrap .swiper-button-prev {
+                left: 30px;
+                background: url(./images/learninghub/ico_prev_btn.png) no-repeat;
+            }
+            .main_wrap .banner_wrap .swiper-button-next {
+                right: 30px;
+                background: url(./images/learninghub/ico_next_btn.png) no-repeat;
+            }
+        </style>
+        <article class="box_item">
+            <div class="banner_wrap">
+                <div class="innerSection">
+                    <div class="con_list">
+                        <div class="swiper-wrapper">
+                            <div class="item swiper-slide">
+                                <a href="#"><img src="./images/learninghub/main_banner01.png" alt=""></a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#"><img src="./images/learninghub/main_banner02.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <style>
+            .main_wrap .qmenu_area {
+                padding: 4.6rem 0;
+                background: #f9f9f9;
+                border-radius: 20px;
+            }
+            .main_wrap .qmenu_area h3 {
+                margin-bottom: 3rem;
+                color: #373737;
+                font-size: 3rem;
+                font-weight: bold;
+                text-align: center;
+            }
+            .main_wrap .qmenu_area ul {
+                display: flex;
+                max-width: 1100px;                
+                margin: 0 auto;
+                justify-content: space-between;
+            }
+            .main_wrap .qmenu_area ul li:hover {
+                background: #fff;
+                box-shadow: 0px 0px 35px 0px rgba(88, 88, 88, 0.14);
+            }
+            .main_wrap .qmenu_area ul li {
+                display: flex;
+                width: 180px;
+                height: 180px;               
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+            }
+            .main_wrap .qmenu_area ul li a::before {
+                content: '';
+                display: block;
+                width: 80px;
+                height: 72px;
+                margin: 0 auto 0.5rem;                
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .main_wrap .qmenu_area ul li:nth-child(1) a::before {
+                background-image: url(./images/learninghub/icon_qmenu01.png);
+            }
+            .main_wrap .qmenu_area ul li:nth-child(2) a::before {
+                background-image: url(./images/learninghub/icon_qmenu02.png);
+            }
+            .main_wrap .qmenu_area ul li:nth-child(3) a::before {
+                background-image: url(./images/learninghub/icon_qmenu03.png);
+            }
+            .main_wrap .qmenu_area ul li:nth-child(4) a::before {
+                background-image: url(./images/learninghub/icon_qmenu04.png);
+            }
+            .main_wrap .qmenu_area ul li:nth-child(5) a::before {
+                background-image: url(./images/learninghub/icon_qmenu05.png);
+            }
+            .main_wrap .qmenu_area ul li a {
+                display: block;
+                width: 100%;
+                height: 100%;    
+                padding-top: 3rem;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+            .main_wrap .qmenu_area ul li a p {
+                display: flex;                
+                min-height: 56px;
+                color: #373737;
+                font-size: 1.8rem;
+                font-weight: 500;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                line-height: 1.2;
+            }
+        </style>
+        <article class="box_item pd_style02">
+            <div class="qmenu_wrap">
+                <div class="innerSection">
+                    <div class="qmenu_area">
+                        <h3>Quick menu</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <p>개설리스트</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>학습방법안내</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>자주하는질문<br> FAQ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>러닝허브<br> 소개자료</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>공지사항</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <style>
+                .main_wrap .service_wrap {
+                    padding: 3.6rem 0;
+                    background: url(./images/learninghub/service_cont_bg.png) center no-repeat;
+                    background-size: cover;
+                }
+                .main_wrap .service_wrap .service_area {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .main_wrap .service_wrap .service_right {
+                    width: 600px;
+                    padding: 50px 0 70px;
+                    position: relative;
+                    background: #fff;
+                }
+                .main_wrap .service_wrap .service_right .tit {
+                    display: inline-block;
+                    padding: 0.5rem 2.5rem;
+                    position: absolute;
+                    top: 20px;
+                    left: -20px;
+                    background: #373737;
+                    color: #fff;
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                }
+                .main_wrap .service_wrap .graph_area {
+                    display: flex;
+                    max-width: 380px;
+                    width: 100%;
+                    height: 200px;
+                    margin: 0 auto;
+                    box-sizing: border-box;
+                }
+                .main_wrap .service_wrap .graph_area li {
+                    flex: 1;
+                    position: relative;
+                } 
+                .main_wrap .service_wrap .graph_area li .graph {
+                    display: flex;
+                    width: 40px;
+                    height: 100%;
+                    margin: 0 auto;
+                    flex-direction: column-reverse;
+                    background: transparent;                    
+                    border-radius: 20px;
+                }
+                .main_wrap .service_wrap .graph_area li .graph .bar {
+                    position: relative;
+                    border-radius: 20px;
+                }
+                .main_wrap .service_wrap .graph_area li .graph .bar .g_txt {
+                    position: absolute;
+                    top: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    color: #fff;
+                    font-size: 1.6rem;
+                    font-weight: bold;                    
+                }
+                .main_wrap .service_wrap .graph_area li .graph .bar.data1 {
+                    background: #6dbae1;                    
+                }
+                .main_wrap .service_wrap .graph_area li .graph .bar.data2 {
+                    background: #3b3f57;                    
+                }
+                .main_wrap .service_wrap .graph_area li .graph .bar.data3 {
+                    background: #8adac4;                    
+                }
+                .main_wrap .service_wrap .graph_area li .graph .bar.data4 {
+                    background: #969cb0;                    
+                }
+                .main_wrap .service_wrap .graph_area li .txt {
+                    position: absolute;
+                    bottom: -50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-align: center;
+                    white-space: nowrap;
+                }
+                .main_wrap .service_wrap .graph_area li .txt p {
+                    color: #373737;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+                .main_wrap .service_wrap .graph_area li .txt span {
+                    display: block;
+                    color: #878787;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+                .main_wrap .service_wrap .service_left h3 {
+                    margin: 6.4rem 0 2.5rem;
+                    color: #fff;
+                    font-size: 3.4rem;
+                    font-weight: bold;
+                }
+                .main_wrap .service_wrap .service_left p {
+                    color: #fff;
+                    font-size: 1.6rem;
+                    line-height: 2;
+                }
+            </style>
+            <div class="service_wrap">
+                <div class="innerSection">
+                    <div class="service_area">
+                        <div class="service_left">
+                            <h3>Total Learning Service</h3>
+                            <p>러닝허브는 고객사 임직원의 역량 개발에 필요한 e-러닝, 독서 통신,<br>
+                                전화 영어, 집합 교육 등의 형식 학습과 온라인 강의 및 지식 정보 등<br> 
+                                무형식 학습 콘텐츠를 통합하여 제공합니다.</p>
+                        </div>
+                        <div class="service_right">
+                            <span class="tit">러닝허브 보유 콘텐츠</span>
+                            <ul class="graph_area">
+                                <li>
+                                    <div class="graph">
+                                        <span class="bar data1" style="height:60%;"><span class="g_txt">24%</span></span>
+                                    </div>
+                                    <div class="txt">
+                                        <p>외국어/기타</p>
+                                        <span>총 3,400개</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="graph">
+                                        <span class="bar data2" style="height:100%;"><span class="g_txt">34%</span></span>
+                                    </div>
+                                    <div class="txt">
+                                        <p>직무역량</p>
+                                        <span>총 4,400개</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="graph">
+                                        <span class="bar data3" style="height:40%;"><span class="g_txt">12%</span></span>
+                                    </div>
+                                    <div class="txt">
+                                        <p>IT 역량</p>
+                                        <span>총 1,200개</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="graph">
+                                        <span class="bar data4" style="height:80%;"><span class="g_txt">30%</span></span>
+                                    </div>
+                                    <div class="txt">
+                                        <p>공통역량</p>
+                                        <span>총 4,000개</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </article>        
+        <article class="box_item pd_style02">
+            <style>
+                .main_wrap .notice_wrap .notice_area {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .main_wrap .notice_wrap .notice_tit {
+                    display: flex;
+                    padding: 0 1rem 2rem 0;
+                    border-bottom: 1px solid #373737;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                }
+                .main_wrap .notice_wrap .notice_tit h3 {                   
+                   color: #212121;
+                   font-size: 2.5rem;
+                   font-weight: 500;
+               }
+               .main_wrap .notice_wrap .notice_tit .more_btn::before {
+                    content: '\002B';
+                    display: inline-block;
+                    margin-right: 4px;
+                    color: #000;
+               }
+                .main_wrap .notice_wrap .notice {
+                    width: calc(100% - 310px);
+                    position: relative;
+                }                
+                .main_wrap .notice_wrap .notice .notice_list li {
+                    display: flex;
+                    padding: 1.8rem 1rem;
+                    align-items: center;
+                    border-bottom: 1px solid #ededed;
+                }
+                .main_wrap .notice_wrap .notice .notice_list li a {
+                    max-width: calc(100% - 80px);
+                    padding-left: 1rem;                  
+                    position: relative;
+                    color: #666666;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    white-space: nowrap;                    
+                    overflow: hidden;
+                    text-overflow: ellipsis;                
+                }
+                .main_wrap .notice_wrap .notice .notice_list li a::before {
+                    content: '';
+                    width: 2px;
+                    height: 2px;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    background: #000;
+                    border-radius: 50%;
+                }
+                .main_wrap .notice_wrap .notice .notice_list li .state_area {
+                    display: inline-block;
+                }
+                .main_wrap .notice_wrap .notice .notice_list li .state_area span {
+                    margin-left: 1rem;
+                }
+                .main_wrap .notice_wrap .notice .notice_list li.alarm .alarm_tag {
+                    display: inline-block;
+                }
+                .main_wrap .notice_wrap .notice .notice_list li.file .file_tag {
+                    display: inline-block;
+                }
+                .main_wrap .notice_wrap .notice .notice_list li .alarm_tag {
+                    display: none;
+                    padding: 0.2rem 2rem;
+                    background: #ff8200;
+                    color: #fff;
+                    border-radius: 20px;
+                    vertical-align: middle;
+                }
+                .main_wrap .notice_wrap .notice .notice_list li .file_tag {
+                    display: none;
+                    width: 18px;
+                    height: 20px;
+                    background: url(./images/learninghub/ico_file.png) no-repeat;
+                    vertical-align: middle;
+                }
+                .main_wrap .notice_wrap .notice .notice_list li .date {
+                    margin-left: auto;
+                    color: #666666;
+                    font-size: 1.4rem;                   
+                    font-weight: 300;
+                    white-space: nowrap;
+                }
+                .main_wrap .notice_wrap .notice_banner {
+                    max-width: 280px;
+                    width: 100%;
+                    padding: 3rem 2.8rem;
+                    background: #f2f2f2;
+                    border-radius: 30px;
+                    box-sizing: border-box;
+                }
+            </style>
+            <div class="notice_wrap">
+                <div class="innerSection">
+                    <div class="notice_area">
+                        <div class="notice">
+                            <div class="notice_tit">
+                                <h3>공지사항</h3>
+                                <a href="#" class="more_btn">더보기</a>
+                            </div>                        
+                            <ul class="notice_list">                            
+                                <li class="alarm">
+                                    <a href="javascript:void(0);">
+                                        [공지] 학습에 원활한 브라우저(Edge, 크롬) 설정 안내 
+                                        <div class="state_area">
+                                            <span class="alarm_tag">중요</span>
+                                            <span class="file_tag"></span>
+                                        </div>                                  
+                                    </a>
+                                    <p class="date">2023. 07. 26</p>
+                                </li>
+                            
+                                <li class="file alarm">
+                                    <a href="javascript:void(0);">
+                                        [공지] 러닝허브 학습장애 시 자가조치 매뉴얼을 제공
+                                        <div class="state_area">
+                                            <span class="alarm_tag">중요</span>
+                                            <span class="file_tag"></span>
+                                        </div>
+                                    </a>
+                                    <p class="date">2023. 07. 07</p>
+                                </li>
+                            
+                                <li class="file">
+                                    <a href="javascript:void(0);">
+                                        [공지] 학습에 원활한 브라우저(Edge, 크롬) 설정 안내
+                                        <div class="state_area">
+                                            <span class="alarm_tag">중요</span>
+                                            <span class="file_tag"></span>
+                                        </div>
+                                    </a>
+                                    <p class="date">2023. 01. 26</p>
+                                </li>                           
+                            </ul>                        
+                        </div>
+                        <style>
+                            .main_wrap .notice_wrap .notice_banner .b_tit {
+                                color: #373737;
+                                font-size: 2rem;
+                                font-weight: bold;
+                            }
+                            .main_wrap .notice_wrap .notice_banner .b_tel {
+                                color: #373737;
+                                font-size: 3.2rem;
+                                font-weight: 900;
+                            }
+                            .main_wrap .notice_wrap .notice_banner .txt_area {
+                                margin-top: 2rem;
+                                position: relative;
+                                text-align: right;
+                            }
+                            .main_wrap .notice_wrap .notice_banner .txt_area::before {
+                                content: '';
+                                width: 72px;
+                                height: 71px;
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                background: url(./images/learninghub/ico_notice_tel.png) no-repeat;
+                            }
+                            .main_wrap .notice_wrap .notice_banner .txt_area p {
+                                color: #666666;
+                                font-size: 1.5rem;
+                                font-weight: 400;
+                            }
+                            .main_wrap .notice_wrap .notice_banner .txt_area p + p {
+                                margin-top: 4px;
+                            }
+                        </style>
+                        <div class="notice_banner">
+                            <p class="b_tit">학습지원센터</p>
+                            <p class="b_tel">02-2081-1000</p>
+                            <div class="txt_area">
+                                <p>평일 09:00 ~ 18:00</p>
+                                <p>점심 12:00 ~ 13:00</p>
+                                <p>토/일 공휴일 : 휴무</p>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>        
     </main>
-
+    <style>
+        .sel_style01 {
+            width: 238px;
+            padding: 0.5rem 40px 0.5rem 1rem;
+            background: url(./images/learninghub/ico_arrow_up.png) no-repeat right 1rem center #373737;
+            color: #666666;
+            font-family: inherit;
+            font-size: 1.4rem;           
+            border-radius: 0;
+            border: 1px solid #c9cdd2;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;            
+        }
+        .footer {
+            padding: 40px 0 36px;
+            background: #373737;
+        }
+        .footer .footer_wrap {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .footer .footer_wrap .f_util ul {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .footer .footer_wrap .f_util ul li:not(:last-child) {
+            position: relative;
+            padding-right: 1rem;
+            margin-right: 1rem;
+        }
+        .footer .footer_wrap .f_util ul li:after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 18px;
+            background: #fff;
+            position: absolute;
+            right: 0;
+            top: 52%;
+            transform: translateY(-50%);
+        }
+        .footer .footer_wrap .f_util ul li a {
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+        .footer .footer_wrap .f_util .f_txt {
+            color: #878787;
+            font-size: 1.4rem;
+            letter-spacing: -0.5px;
+        }
+    </style>
+    <footer class="footer">
+        <div class="innerSection">
+            <div class="footer_wrap">
+                <h1 class="logo"><img src="./images/learninghub/footer_logo.png" alt="러닝허브 로고"></h1>
+                <div class="f_util">
+                    <ul>
+                        <li><a href="#" title="회사소개 바로가기">회사소개</a></li>
+                        <li><a href="#" title="회사소개 바로가기">이용약관</a></li>
+                        <li><a href="#" title="회사소개 바로가기">개인정보취급방침</a></li>
+                        <li><a href="#" title="회사소개 바로가기">찾아오시는 길</a></li>
+                        <li><a href="#" title="회사소개 바로가기">환불규정</a></li>
+                    </ul>
+                    <div class="f_txt">
+                        <p>(08390)서울특별시 구로구 디지털로 30길 31, 코오롱빌란트2차 703호 ~ 704호</p>
+                        <p>㈜인키움 대표이사 : 박지현 TEL : 02-555-1945 / FAX : 02-2081-1090  사업자등록번호 : 220-81-71637</p>
+                    </div>                    
+                </div>
+                <div class="family_site">
+                    <select class="sel_style01">
+                        <option>관련사이트</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script>
         $(document).ready(function() {
             $(".header_gnb .all_gnb_menu").click(function(event) {
                 event.stopPropagation();
                 $('.header_gnb').toggleClass("open");
+            });
+            var swiper = new Swiper(".popular_cont .con_list", {
+                // spaceBetween: 10,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                roundLengths: true,
+                loop: true,
+                // loopAdditionalSlides: 30,
+                navigation: {
+                    nextEl: ".popular_cont .swiper-button-next",
+                    prevEl: ".popular_cont .swiper-button-prev",
+                },
+                // pagination: {
+                //     clickable : true,
+                //     el: '.recommend_cont .swiper-pagination',
+                //     type: 'bullets',
+                // },
+                // breakpoints: { 
+                //     1024: {
+                //         slidesPerView: 'auto',
+                //         spaceBetween: 10,
+                //     },
+                // }
             });
             var swiper = new Swiper(".recommend_cont .con_list", {
                 spaceBetween: 20,
@@ -1077,6 +1905,43 @@
                 // pagination: {
                 //     clickable : true,
                 //     el: '.recommend_cont .swiper-pagination',
+                //     type: 'bullets',
+                // },
+                // breakpoints: { 
+                //     1024: {
+                //         slidesPerView: 'auto',
+                //         spaceBetween: 10,
+                //     },
+                // }
+            });
+            var swiper = new Swiper(".banner_wrap .con_list", {
+                spaceBetween: 20,
+                slidesPerView: 1,
+                autoplay: false,
+                loop: true,
+                navigation: {
+                    nextEl: ".banner_wrap .swiper-button-next",
+                    prevEl: ".banner_wrap .swiper-button-prev",
+                },
+            });
+            var swiper = new Swiper(".micro_cont .con_list", {
+                slidesPerView: 5,
+                spaceBetween: 16,
+                slidesPerColumn: 2,
+                slidesPerGroup: 10,
+                slidesPerColumnFill: "row",
+                // direction:'vertical',
+                loop: false,
+                // observer: true,
+                // watchOverflow: true,
+                // observeParents: true,
+                navigation: {
+                    nextEl: ".micro_cont .swiper-button-next",
+                    prevEl: ".micro_cont .swiper-button-prev",
+                },
+                // pagination: {
+                //     clickable : true,
+                //     el: '.curation_cont .swiper-pagination',
                 //     type: 'bullets',
                 // },
                 // breakpoints: { 
