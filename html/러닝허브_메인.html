@@ -1150,29 +1150,73 @@
                 color: #373737;
                 font-size: 1.6rem;
             }
+            
             .main_wrap .popular_cont.clist_slide .item a:hover::before {
                 content: none;
             }
-            .main_wrap .popular_cont .swiper-slide {
-                width: 170px;
-                /* transform: scale(0.5); */
-            }
-            .main_wrap .popular_cont .swiper-slide.swiper-slide-active {
-                /* transform: scale(1); */
-                width: 300px;
-                border: 1px solid red;
-            }
             .main_wrap .popular_cont.clist_slide .con_list {
                 width: 100%;
-                overflow: hidden;
-                border: 1px solid red;
+                position: relative;
             }
             .main_wrap .popular_cont.clist_slide .con_list .item {
+                width: 280px;
+                transform: scale(0.5); 
+                transition: all 0.3s; 
+                opacity: 0.5;
                 font-size: 0;
             }
-            .main_wrap .popular_cont.clist_slide .con_list .item img {
-                width: 100%;
+            .main_wrap .popular_cont.clist_slide .con_list .item a {
+                display: block;
             }
+            .main_wrap .popular_cont.clist_slide .con_list .item .img_wrap {                  
+                display: block; 
+                padding-bottom: 248px; 
+                position: relative;                 
+                border-radius: 10px; 
+                overflow: hidden;
+            } 
+            .main_wrap .popular_cont.clist_slide .con_list .item img {
+                width: 100%; 
+                height: 100%;
+                position: absolute; 
+                top: 0; 
+                left: 0;  
+                object-fit: cover;
+            }
+            .main_wrap .popular_cont.clist_slide .item.swiper-slide-active,
+            .main_wrap .popular_cont.clist_slidet .item.swiper-slide-duplicate-active { 
+                transform: scale(1); 
+                opacity: 1; 
+            } 
+            .main_wrap .popular_cont.clist_slide .item.swiper-slide-prev { 
+                margin-right: 2%; 
+                margin-left: -2%; 
+            } 
+            .main_wrap .popular_cont.clist_slide .item.swiper-slide-next { 
+                margin-right: -2%; 
+                margin-left: 2%; 
+            } 
+            .main_wrap .popular_cont.clist_slide .item.first { margin-right: -4%; margin-left: 4%; } 
+            .main_wrap .popular_cont.clist_slide .item.last { margin-right: 4%; margin-left:-4%; } 
+            .main_wrap .popular_cont.clist_slide .swiper-button-prev,
+            .main_wrap .popular_cont.clist_slide .swiper-button-next {
+                width: 82px;
+                height: 82px;
+                margin-top: 0;
+                transform: translateY(-50%);
+                background-size: contain;
+                z-index: 10; 
+            }
+            .main_wrap .popular_cont.clist_slide .swiper-button-prev {
+                left: 50%;
+                margin-left: 10px;
+                background-image: url(./images/learninghub/ico_prev_btn_03.png);
+            }
+            .main_wrap .popular_cont.clist_slide .swiper-button-next {
+                left: 50%;
+                background-image: url(./images/learninghub/ico_next_btn_03.png);
+            }
+
         </style>
         <article class="box_item">
             <div class="popular_cont clist_slide pd_style02">
@@ -1185,22 +1229,37 @@
                         <div class="con_list">
                             <div class="swiper-wrapper">
                                 <div class="item swiper-slide">
-                                    <a href=""><img src="./images/learninghub/popular_img01.png" alt=""></a>
+                                    <a href="">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/popular_img01.png" alt="">
+                                        </div>                                        
+                                    </a>
                                 </div>
                                 <div class="item swiper-slide">
-                                    <a href=""><img src="./images/learninghub/popular_img01.png" alt=""></a>
+                                    <a href="">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/popular_img01.png" alt="">
+                                        </div>                                        
+                                    </a>
                                 </div>
                                 <div class="item swiper-slide">
-                                    <a href=""><img src="./images/learninghub/popular_img01.png" alt=""></a>
+                                    <a href="">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/popular_img01.png" alt="">
+                                        </div>                                        
+                                    </a>
                                 </div>
                                 <div class="item swiper-slide">
-                                    <a href=""><img src="./images/learninghub/popular_img01.png" alt=""></a>
+                                    <a href="">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/popular_img01.png" alt="">
+                                        </div>                                        
+                                    </a>
                                 </div>
-                                <div class="item swiper-slide">
-                                    <a href=""><img src="./images/learninghub/popular_img01.png" alt=""></a>
-                                </div>
-                            </div>
+                               
                         </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </div>
@@ -1870,29 +1929,18 @@
                 event.stopPropagation();
                 $('.header_gnb').toggleClass("open");
             });
-            var swiper = new Swiper(".popular_cont .con_list", {
-                // spaceBetween: 10,
-                slidesPerView: 'auto',
-                centeredSlides: true,
-                roundLengths: true,
-                loop: true,
-                // loopAdditionalSlides: 30,
-                navigation: {
-                    nextEl: ".popular_cont .swiper-button-next",
-                    prevEl: ".popular_cont .swiper-button-prev",
-                },
-                // pagination: {
-                //     clickable : true,
-                //     el: '.recommend_cont .swiper-pagination',
-                //     type: 'bullets',
-                // },
-                // breakpoints: { 
-                //     1024: {
-                //         slidesPerView: 'auto',
-                //         spaceBetween: 10,
-                //     },
-                // }
-            });
+            // var swiper = new Swiper(".popular_cont .con_list", {
+            //     // spaceBetween: 10,
+            //     slidesPerView: 'auto',
+            //     centeredSlides: true,
+            //     roundLengths: true,
+            //     loop: true,
+            //     // loopAdditionalSlides: 30,
+            //     navigation: {
+            //         nextEl: ".popular_cont .swiper-button-next",
+            //         prevEl: ".popular_cont .swiper-button-prev",
+            //     },
+            // });
             var swiper = new Swiper(".recommend_cont .con_list", {
                 spaceBetween: 20,
                 slidesPerView: 3,
@@ -2029,6 +2077,71 @@
             //      },
             //  },
             });
+            
+            const $slider = $('.popular_cont');
+            let popSwiper = undefined;
+            let slideNum = $slider.find('.swiper-slide').length; // 슬라이드 총 개수
+            let slideInx = 0; // 현재 슬라이드 인덱스
+
+            // 디바이스 크기에 따라 화면 유형 설정 ('pc' 또는 'mo')
+            let oldWChk = window.innerWidth > 767 ? 'pc' : 'mo';
+            sliderAct(); // 슬라이더 활성화
+
+            let resizeTimer;
+            // 창 크기 변경 시 디바이스 크기 체크 및 슬라이더 재설정
+            $(window).on('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    let newWChk = window.innerWidth > 767 ? 'pc' : 'mo';
+                    if (newWChk != oldWChk) {
+                        oldWChk = newWChk;
+                        sliderAct();
+                    }
+                }, 300);
+            });
+
+            // 슬라이더 실행 및 설정 함수
+            function sliderAct() {
+                // 슬라이더 초기화 (이미 존재하는 경우)
+                if (popSwiper != undefined) {
+                    popSwiper.destroy();
+                    popSwiper = undefined;
+                }
+
+                // 슬라이드 보기 옵션 설정 (디바이스에 따라 변경)
+                let viewNum = oldWChk == 'pc' ? 2 : 1;
+
+                // 슬라이드 수에 따라 무한반복 옵션 설정
+                let loopChk = slideNum > viewNum;
+
+                // 슬라이더 구성 및 옵션 설정
+                popSwiper = new Swiper($slider.find('.con_list'), {
+                    slidesPerView: "auto",
+                    initialSlide: slideInx,
+                    loop: loopChk,
+                    centeredSlides: true,
+                    navigation: {
+                        prevEl: $slider.find('.btn_prev')[0],
+                        nextEl: $slider.find('.btn_next')[0],
+                    },
+                    on: {
+                        slideChangeTransitionStart: function() {
+                            slideInx = this.realIndex; // 현재 슬라이드 인덱스 갱신
+                            updateClass();
+                        },
+                        init: function() {
+                            updateClass();
+                        },
+                    },
+                });
+
+                // 슬라이더 클래스 업데이트 함수
+                function updateClass() {
+                    // 화면상 첫 번째 및 마지막 슬라이드에 클래스 추가 및 제거
+                    $slider.find('.swiper-slide-prev').prev().addClass('first').siblings().removeClass('first');
+                    $slider.find('.swiper-slide-next').next().addClass('last').siblings().removeClass('last');
+                }
+            }
         }); 
         function chgAlwStdTypeTab(alwstdCode){
             console.log(alwstdCode)
@@ -2037,6 +2150,9 @@
             $(".tab_content").hide();
             $("#tabCont_" + alwstdCode).show();
         }
+        
+
+
     </script>
 </body>
 
