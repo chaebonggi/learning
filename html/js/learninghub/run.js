@@ -3,18 +3,6 @@ $(document).ready(function() {
         event.stopPropagation();
         $('.header_gnb').toggleClass("open");
     });
-    // var swiper = new Swiper(".popular_cont .con_list", {
-    //     // spaceBetween: 10,
-    //     slidesPerView: 'auto',
-    //     centeredSlides: true,
-    //     roundLengths: true,
-    //     loop: true,
-    //     // loopAdditionalSlides: 30,
-    //     navigation: {
-    //         nextEl: ".popular_cont .swiper-button-next",
-    //         prevEl: ".popular_cont .swiper-button-prev",
-    //     },
-    // });
     var swiper = new Swiper(".recommend_cont .con_list", {
         spaceBetween: 20,
         slidesPerView: 3,
