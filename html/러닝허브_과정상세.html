@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브 사용자 과정상세</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/reset.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/common.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/theme/00001/00001.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/kendo/2015.3.930/kendo.common.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/kendo/2015.3.930/kendo.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/kendo/2015.3.930/kendo.dataviz.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/chosen.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/Swiper/4.5.1/css/swiper.min.css">
+	
+	<script src="http://bpo.job-cloud.kr/js/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/front/jquery.mCustomScrollbar.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="http://bpo.job-cloud.kr/js/front/imgLiquid/0.9.944/imgLiquid-min.js" integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="http://bpo.job-cloud.kr/js/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/front/excel-bootstrap-table-filter-bundle.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://bpo.job-cloud.kr/css/front/excel-bootstrap-table-filter-style.css">
+	<script src="http://bpo.job-cloud.kr/js/front/Swiper/4.5.1/swiper.min.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/chosen.jquery.min.js"></script>
+	<!-- <script src="http://bpo.job-cloud.kr/js/front/run.js"></script> -->
+    <script src="./js/learninghub/run.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/file/forms.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/solution/solution_ui.js"></script>
+	<script src="http://bpo.job-cloud.kr/js/solution/custome.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <header class="header header_gnb">
+		<div class="gnb_util">
+            <div class="innerSection">
+                <div class="util_menu">
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">강사지원</a></li>
+                        <li><a href="#">HRDHREX</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>     
+        <div class="innerSection">
+            <div class="header_top">
+                <h1 class="logo"><a href=""><img src="./images/learninghub/logo.png" alt="러닝허브 로고"></a></h1>
+                <div class="seach_area">
+                    <div class="input_wrap h_search">
+                        <input type="text" placeholder="검색어를 입력하세요." id="searchTextPc" name="searchTextPc">
+                        <button type="button">검색</button>
+                    </div>
+                </div>
+            </div>
+            <nav class="gnb">
+                <div class="gnb_btn">
+                    <button type="button" class="all_gnb_menu">
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="gnb_menu">
+                    <li><a href="#">AI맞춤학습</a></li>
+                    <li><a href="#">전체과정</a></li>
+                    <li><a href="#">마이크로러닝</a></li>
+                    <li><a href="#">지식센터</a></li>
+                    <li><a href="#">역량진단</a></li>
+                    <li><a href="#">나의강의실</a></li>
+                    <li><a href="#">학습지원센터</a></li>
+                </ul>
+                <div class="lnb">
+                    <div class="lnb_menu">
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">큐레이션 추천과정</a></li>
+                                <li><a href="#">역량기반 맞춤과정</a></li>
+                                <li><a href="#">역량진단 기반과정</a></li>                                
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">공통역량</a></li>
+                                <li><a href="#">직무역량</a></li>
+                                <li><a href="#">리더십역량</a></li>
+                                <li><a href="#">외국어</a></li>
+                                <li><a href="#">자격</a></li>
+                                <li><a href="#">인문교양</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">공통과정</a></li>
+                                <li><a href="#">공통역량</a></li>
+                                <li><a href="#">직무역량</a></li>
+                                <li><a href="#">리더십역량</a></li>
+                                <li><a href="#">외국어</a></li>
+                                <li><a href="#">자격</a></li>
+                                <li><a href="#">인문교양</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">지식센터</a></li>
+                                <li><a href="#">러닝캐스트</a></li>
+                                <li><a href="#">지식캐스트</a></li>
+                                <li><a href="#">직립보행/나취취</a></li>
+                                <li><a href="#">지식창고</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">자가진단</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">나의 강의실</a></li>
+                                <li><a href="#">수강신청현황</a></li>
+                                <li><a href="#">학습이력현황</a></li>
+                                <li><a href="#">마일리지 조회</a></li>
+                                <li><a href="#">개인정보수정</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">학습지원센터</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주하는질문</a></li>
+                                <li><a href="#">묻고답하기</a></li>
+                                <li><a href="#">원격지원</a></li>
+                                <li><a href="#">학습방법안내</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>        
+	</header>
+    <main class="content_detail">
+        <style>
+            .content_detail h2.list_tit {
+                margin-bottom: 3rem;
+                color: #373737;
+                font-size: 3rem;
+                font-weight: bold;
+                text-align: center;
+            }
+            .content_detail .list_detail .course_view {
+                display: flex;
+                padding: 4rem 0;
+                border-bottom: 1px solid #dadada;
+                justify-content: space-between;
+            }
+            .content_detail .list_detail .course_view .img_wrap {
+                height: 225px;
+                flex-shrink: 0;
+            }
+            .content_detail .list_detail .course_view .img_wrap img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .content_detail .list_detail .course_view .rate_area {
+                display: flex;
+                margin-top: 1rem;
+                align-items: center;
+            }
+            .content_detail .list_detail .course_view .rate_area p {
+                margin-left: 1rem;
+                position: relative;
+                color: #666666;
+                font-size: 1.4rem;
+            }
+            .content_detail .list_detail .course_view .rate_area .view_count {
+                padding-left: 1rem;
+            }
+            .content_detail .list_detail .course_view .rate_area .view_count::before {
+                content: '';
+                width: 1px;
+                height: 12px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                background: #666666;
+            }
+            .content_detail .list_detail .course_view .info_cont {
+                width: calc(100% - 350px);
+            }
+            .content_detail .list_detail .course_view .info_cont .tit {
+                margin-bottom: 1.5rem;
+                color: #373737;
+                font-size: 2.4rem;
+                font-weight: bold;
+                line-height: 1.5;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .content_detail .list_detail .course_view .info_cont .bread_crumb {
+                justify-content: initial;
+            }
+            .content_detail .list_detail .course_view .info_cont .bread_crumb ul {
+                display: flex;
+                margin-right: 1rem;
+                align-items: center;
+            }
+            .content_detail .list_detail .course_view .info_cont .course_list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .content_detail .list_detail .course_view .info_cont .course_list li {
+                display: flex;
+                width: 50%;
+                margin-bottom: 1rem;
+            }
+            .content_detail .list_detail .course_view .info_cont .course_list li strong {
+                max-width: 100px;
+                width: 100%;
+                margin-right: 2rem;
+                color: #373737;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            .content_detail .list_detail .course_view .info_cont .course_list li .txt {
+                color: #666666;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+            .content_detail .list_detail .course_view .info_cont .course_list li:last-child {
+                margin-bottom: 0;
+            }
+            .sel_style02 { width: 200px; padding: 0.5rem 40px 0.5rem 1rem; background: url(./images/learninghub/ico_arrow02_bottom.png) no-repeat right 1rem center #fff; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 0; border: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
+
+        </style>
+        <article class="box_item pd_style03">
+	        <div class="list_detail">
+	            <div class="innerSection">
+                    <h2 class="list_tit">경제경영</h2>
+                    <div class="ld_tit">
+	                    <h3 class="tit">과정상세</h3>
+                        <div>
+                            <select class="sel_style02">
+                                <option>최근 검색한 조건 <span>1</span>건</option>
+                            </select>
+                        </div>
+	                </div>
+	                <div class="course_view">
+                        <div class="view_cont">
+                            <div class="img_wrap">
+                                <img src="./images/learninghub/detail_img01.png" alt="코딩 제대로 배우기 python(파이썬)">
+                            </div>
+                            <div class="rate_area">
+                                <div class="rv_rate">
+                                    <span style="width:10%"></span>
+                                </div>
+                                <p class="rv_score">4.8</p>
+                                <p class="view_count">조회수 <span>1,560</span></p>
+                            </div>
+                        </div>
+	                    <div class="info_cont">
+                            <div class="bread_crumb">
+                                <ul>
+                                    <li>과정분류</li>
+                                    <li>과정분류</li>
+                                </ul>
+                                <div class="t_state">                                                
+                                    <span class="t_tag gray">공통</span>
+                                    <span class="t_tag gray">직무</span>
+                                    <span class="t_tag gray">리더십</span>
+                                </div>
+                            </div>
+	                        <p class="tit">파이썬을 활용한 데이터 분석 및 시각화</p>	                        
+	                        <ul class="course_list">
+	                            <li>
+                                    <strong>과정유형</strong>	                            	
+	                            	<p class="txt">이러닝(PC+모바일)</p>
+	                            </li>
+	                            <li>
+                                    <strong>고용보험여부</strong>
+	                            	<p class="txt">비고용보험</p>
+	                            </li>
+	                            <li>
+                                    <strong>신청기간</strong>
+	                            	<p class="txt">2024.03.01 ~ 2024.03. 31</p>
+	                            </li>
+	                            <li>
+                                    <strong>교육비 정가</strong>
+	                            	<p class="txt">234,080원</p>
+	                            </li>
+                                <li>
+                                    <strong>교육기간</strong>
+	                            	<p class="txt">2024.03.01 ~ 2024.03. 31</p>
+	                            </li>
+                                <li>
+                                    <strong class="orange">실 결제 금액</strong>
+	                            	<p class="txt orange">234,080원</p>
+	                            </li>
+                                <li>
+                                    <strong>학습시간</strong>
+	                            	<p class="txt">4주(38시간)</p>
+	                            </li>
+	                        </ul>
+	                    </div>	                    
+	                </div>
+                    <div class="tct mt40">
+                        <a href="javascript:void(0);" class="btn_gray03 btn_style08">미리보기</a>
+                        <a href="javascript:void(0);" class="btn_black01 btn_style08 ml10">찜하기</a>
+                        <a href="javascript:void(0);" class="btn_black02 btn_style08 ml10">수강신청</a>
+                        
+                    </div>
+	            </div>
+	        </div>
+	
+            <style>
+                .content_detail .list_detail .ld_tit {
+                    display: flex;
+                    padding-bottom: 16px;
+                    border-bottom: 1px solid #373737;
+                    justify-content: space-between;
+                }
+                .content_detail .list_detail .ld_tit .tit {
+                    color: #373737;
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+                .content_detail .list_detail .ld_tit .tit span {
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                }
+                .content_detail .list_detail .course_info {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .content_detail .list_detail .course_info li {
+                    display: flex;
+                    width: 50%;
+                    padding: 1.8rem 3rem;
+                    border-bottom: 1px solid #dadada;
+                    box-sizing: border-box;
+                }
+                .content_detail .list_detail .course_info li strong {
+                    width: 170px;
+                    color: #373737;
+                    font-size: 1.5rem;
+                    flex-shrink: 0;
+                }
+                .content_detail .list_detail .course_info li .txt {
+                    color: #666666;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+                .content_detail .list_detail .txt_box {
+                    padding: 2rem 2.5rem;
+                    word-break: keep-all;
+                }
+                .content_detail .list_detail .txt_box .txt {
+                    margin-bottom: 2rem;
+                    color: #373737;
+                    font-size: 1.5rem;
+                }
+                .content_detail .list_detail .txt_box ul li strong {
+                    color: #373737;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+                .content_detail .list_detail .txt_box ul li p {
+                    color: #666666;
+                    font-size: 1.4rem;
+                }
+            </style>
+	        <div class="list_detail pd_style03">
+	            <div class="innerSection">
+	                <div class="ld_tit">
+	                    <h3 class="tit">과정요약</h3>
+	                </div>
+	                <ul class="course_info">
+	                    <li><strong>학습시간</strong>
+	                    	<p class="txt">09:00 ~ 18:00(1시간)</p>
+	                    </li>
+                        <li><strong>평가항목</strong>
+	                    	<p class="txt">출석률 100%</p>
+	                    </li>
+	                    <li><strong>교육비 지원</strong>
+	                    	<p class="txt">고용보험 미환급</p>
+	                    </li>
+	                    <li><strong>수료기준</strong>
+	                    	<p class="txt">총점 80점 이상시 수료</p>
+	                    </li>
+                        <li><strong>정원</strong>
+	                    	<p class="txt">24명</p>
+	                    </li>
+	                    <li><strong>교재정보</strong>
+	                    	<p class="txt orange">파이썬을 활용한 데이터 분석 및 시각화</p>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+
+	        <div class="list_detail pd_style03">
+	            <div class="innerSection">
+	                <div class="ld_tit">
+	                    <h3 class="tit">과정소개</h3>                        
+	                </div>
+					<div class="txt_box">
+                        <p class="txt">본 강의는 프로젝트 관리의 이해를 바탕으로 프로젝트 착수부터 종료단계까지,PM 업무 수행 시 필요한 역량을 학습하는 강의입니다. 
+                            본 강의는 PMI 협회에 정식 승인된 강좌로서 수강 시 PDU 인증서가 발급됩니다.</p>
+                        <ul class="list_style02">
+                            <li>
+                                <strong>학습대상</strong>
+                                <p>본 강의는 프로젝트 관리의 이해를 바탕으로 프로젝트 착수부터 종료단계까지, PM 업무 수행 시 필요한 역량을 학습하는 강의입니다. 
+                                    본 강의는 PMI 협회에 정식 승인된 강좌로서 수강 시 PDU 인증서가 발급됩니다.</p>
+                            </li>
+                            <li>
+                                <strong>학습목표</strong>
+                                <p>본 강의는 프로젝트 관리의 이해를 바탕으로 프로젝트 착수부터 종료단계까지, PM 업무 수행 시 필요한 역량을 학습하는 강의입니다. 
+                                    본 강의는 PMI 협회에 정식 승인된 강좌로서 수강 시 PDU 인증서가 발급됩니다.</p>
+                            </li>
+                            <li>
+                                <strong>과정학습</strong>
+                                <p>본 강의는 프로젝트 관리의 이해를 바탕으로 프로젝트 착수부터 종료단계까지, PM 업무 수행 시 필요한 역량을 학습하는 강의입니다. 
+                                    본 강의는 PMI 협회에 정식 승인된 강좌로서 수강 시 PDU 인증서가 발급됩니다.</p>
+                            </li>
+                            <li>
+                                <strong>과정기타</strong>
+                                <p>본 강의는 프로젝트 관리의 이해를 바탕으로 프로젝트 착수부터 종료단계까지, PM 업무 수행 시 필요한 역량을 학습하는 강의입니다. 
+                                    본 강의는 PMI 협회에 정식 승인된 강좌로서 수강 시 PDU 인증서가 발급됩니다.</p>
+                            </li>
+                        </ul>
+                    </div>
+	            </div>
+	        </div>
+            <style>
+                .t_bg_gray {
+                    background: #f1f1f1;
+                }
+                .table_list.t_style02 table {
+                    border: 1px solid #dadada;
+                }
+                .table_list.t_style02 > table th, .table_list.t_style02 > table td {
+                    padding: 1rem 0;
+                    border: 1px solid #dadada;
+                    border-top: 0;
+                }
+                .table_list.t_style02 > table th {
+                    color: #373737;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+                .table_list.t_style02 > table td {
+                    color: #666666;
+                    font-size: 1.4rem;
+                }
+            </style>
+            <div class="list_detail pd_style03">
+	            <div class="innerSection">
+	                <div class="ld_tit">
+	                    <h3 class="tit">평가안내</h3>
+	                </div>
+	                <div class="table_list t_style02 mt40">
+	                    <table>
+	                        <caption>평가안내</caption>
+	                        <colgroup>
+	                            <col>
+	                            <col>
+	                            <col>
+	                        </colgroup>
+                            <thead>
+                                <tr class="t_bg_gray">
+                                    <th>평가항목</th>
+                                    <th>평가항목 반영률(%)</th>
+                                    <th>평가과락 점수(점)</th>
+                                </tr>
+                            </thead>
+	                        <tbody>	                        	
+                                <tr>
+                                    <td class="tct">학습진도</td>
+                                    <td class="tct">30</td>
+                                    <td class="tct">0</td>
+                                </tr>	
+                                <tr>
+                                    <td class="tct">중간시험</td>
+                                    <td class="tct">30</td>
+                                    <td class="tct">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="tct">최종시험</td>
+                                    <td class="tct">30</td>
+                                    <td class="tct">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="tct">과제</td>
+                                    <td class="tct">30</td>
+                                    <td class="tct">0</td>
+                                </tr>
+                                <tr class="t_bg_gray">
+                                    <td class="tct">합계</td>
+                                    <td colspan="2" class="tct">100%</td>
+                                </tr>
+                                <tr class="t_bg_gray">
+                                    <td class="tct">수료기준 점수</td>
+                                    <td colspan="2" class="tct">0.00(점)</td>
+                                </tr>
+                                <tr class="t_bg_gray">
+                                    <td class="tct">수료기준 진도율</td>
+                                    <td colspan="2" class="tct">0.0(%)</td>
+                                </tr>
+	                        </tbody>
+	                    </table>
+	                </div>
+	            </div>            
+	        </div>
+
+	       <style>
+            .table_list table tbody > tr {
+                border-bottom: 1px solid #dadada;
+            }
+            .table_list > table th, .table_list > table td {
+                padding: 2rem 0;
+            }
+            .table_list.t_style01 table tbody > tr:last-child {
+                border-bottom: 1px solid #373737;
+            }
+           </style>
+	        <div class="list_detail pd_style03">
+	            <div class="innerSection">
+	                <div class="ld_tit">
+	                    <h3 class="tit">학습목차</h3>
+	                </div>
+	                <div class="table_list t_style01">
+	                    <table>
+	                        <caption>학습목차</caption>
+	                        <colgroup>
+	                            <col style="width: 20%">
+	                            <col>
+	                            <col style="width: 20%">
+	                        </colgroup>
+	                        <tbody>	                        	
+                                <tr>
+                                    <th class="tct">1차시</th>
+                                    <td class="tlt">과정소개</td>
+                                    <td class="tct">45분</td>
+                                </tr>
+                                <tr>
+                                    <th class="tct">1차시</th>
+                                    <td class="tlt">과정소개</td>
+                                    <td class="tct">45분</td>
+                                </tr>	
+                                <tr>
+                                    <th class="tct">1차시</th>
+                                    <td class="tlt">과정소개</td>
+                                    <td class="tct">45분</td>
+                                </tr>	
+	                        </tbody>
+	                    </table>
+	                </div>
+	            </div>            
+	        </div>
+            <style>
+                .list_detail .ld_tit .rate_area {
+                    display: flex;
+                    align-items: center;
+                }
+                .list_detail .ld_tit .rate_area .txt {
+                    margin-right: 1.6rem;
+                    color: #666666;
+                    font-size: 1.4rem;
+                }
+                .rate_area .rv_rate {
+                    width: 86px;
+                    height: 14px;
+                    position: relative;
+                    background: url(./images/learninghub/ico_star_bg.png) no-repeat;
+                    z-index: 1;
+                }
+                .list_detail .ld_tit .rate_area .rv_score {
+                    margin-left: 1rem;
+                    color: #666666;
+                    font-size: 1.4rem;
+                }
+                .rate_area .rv_rate span {
+                    width: auto;
+                    height: 14px;
+                    position: absolute;
+                    background: url(./images/learninghub/ico_star_on.png) no-repeat;
+                    z-index: 2;
+                }
+                .list_detail .review .item {
+                    display: none;
+                    padding: 3.6rem 3rem;
+                    border-bottom: 1px solid #dadada;
+                }
+                .list_detail .review .score_wrap {
+                    max-width: 86px;
+                    margin-right: 5rem;
+                }
+                .list_detail .review .rv_score {
+                    margin-bottom: 10px;
+                    color: #000;
+                    font-size: 4rem;
+                    font-weight: 900;
+                    text-align: center;
+                }                
+                .list_detail .review .rv_info {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                   
+                }
+                .list_detail .review .rv_info .desc {
+                    min-height: 62px;
+                    color: #666666;
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    line-height: 1.5;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+                .list_detail .review .rv_info ul {
+                    display: flex;
+                    margin-left: auto;
+                }
+                .list_detail .review .rv_info li .rv_user {
+                    margin-right: 16px;
+                    color: #666666;
+                    font-size: 1.4rem;
+                }
+                .list_detail .review .rv_info li .rv_date {
+                    color: #666666;
+                    font-size: 1.4rem;
+                }
+            </style>
+	        <div class="list_detail pd_style03">
+	            <div class="innerSection">
+	                <div class="ld_tit">
+	                    <h3 class="tit">수강후기</h3>
+	                    <div class="rate_area">
+	                        <p class="txt">평균평점</p>
+	                        <div class="rv_rate">
+	                            <span style="width:88.0%"></span>
+	                        </div>
+	                        <p class="rv_score">4.8</p>
+	                    </div>
+	                </div>
+	                <div class="review">
+                        <div class="item">
+                            <div class="score_wrap">
+                                <div class="rate_area">
+                                    <p class="rv_score">3</p>
+                                    <div class="rv_rate">
+                                        <span style="width:40%"></span>
+                                    </div>                                
+                                </div>
+                            </div>
+                            <div class="rv_info">
+                                <p class="desc">저에게는 참 도움이 되는 과정입니다.<br>
+                                    강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다.</p>
+                                <ul>
+                                    <li><p class="rv_user">김**</p></li>
+                                    <li><p class="rv_date">2024-04-28</p></li>
+                                </ul>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="score_wrap">
+                                <div class="rate_area">
+                                    <p class="rv_score">4</p>
+                                    <div class="rv_rate">
+                                        <span style="width:90%"></span>
+                                    </div>                                
+                                </div>
+                            </div>
+                            <div class="rv_info">
+                                <p class="desc">저에게는 참 도움이 되는 과정입니다.</p>
+                                <ul>
+                                    <li><p class="rv_user">김**</p></li>
+                                    <li><p class="rv_date">2024-04-28</p></li>
+                                </ul>                                
+                            </div>
+                        </div> 
+                        <div class="item">
+                            <div class="score_wrap">
+                                <div class="rate_area">
+                                    <p class="rv_score">3</p>
+                                    <div class="rv_rate">
+                                        <span style="width:40%"></span>
+                                    </div>                                
+                                </div>
+                            </div>
+                            <div class="rv_info">
+                                <p class="desc">저에게는 참 도움이 되는 과정입니다.<br>
+                                    강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다.</p>
+                                <ul>
+                                    <li><p class="rv_user">김**</p></li>
+                                    <li><p class="rv_date">2024-04-28</p></li>
+                                </ul>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="score_wrap">
+                                <div class="rate_area">
+                                    <p class="rv_score">3</p>
+                                    <div class="rv_rate">
+                                        <span style="width:40%"></span>
+                                    </div>                                
+                                </div>
+                            </div>
+                            <div class="rv_info">
+                                <p class="desc">저에게는 참 도움이 되는 과정입니다.<br>
+                                    강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다.</p>
+                                <ul>
+                                    <li><p class="rv_user">김**</p></li>
+                                    <li><p class="rv_date">2024-04-28</p></li>
+                                </ul>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="score_wrap">
+                                <div class="rate_area">
+                                    <p class="rv_score">3</p>
+                                    <div class="rv_rate">
+                                        <span style="width:40%"></span>
+                                    </div>                                
+                                </div>
+                            </div>
+                            <div class="rv_info">
+                                <p class="desc">저에게는 참 도움이 되는 과정입니다.<br>
+                                    강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다.</p>
+                                <ul>
+                                    <li><p class="rv_user">김**</p></li>
+                                    <li><p class="rv_date">2024-04-28</p></li>
+                                </ul>                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="score_wrap">
+                                <div class="rate_area">
+                                    <p class="rv_score">3</p>
+                                    <div class="rv_rate">
+                                        <span style="width:40%"></span>
+                                    </div>                                
+                                </div>
+                            </div>
+                            <div class="rv_info">
+                                <p class="desc">저에게는 참 도움이 되는 과정입니다.<br>
+                                    강의도 재밌고 시험이 좀 어려웠지만 보는 내내 집중할 수 있어서 참 좋았습니다.</p>
+                                <ul>
+                                    <li><p class="rv_user">김**</p></li>
+                                    <li><p class="rv_date">2024-04-28</p></li>
+                                </ul>                                
+                            </div>
+                        </div>
+	                </div>
+                    <div class="btn_wrap tct">
+                        <button type="button" class="btn_style10 moreBtn">더보기</button>
+                    </div>      
+	            </div>
+	        </div>
+            <style>
+                .etc_cont .slide_wrap {
+                    position: relative;
+                }
+                .etc_cont .con_list {
+                    width: 100%;
+                    overflow: hidden;
+                }
+                .etc_cont.clist_slide .swiper-pagination {
+                    bottom: -40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .etc_cont.clist_slide .swiper-pagination span {
+                    width: 14px;
+                    height: 14px;
+                }
+                .etc_cont.clist_slide .swiper-pagination span + span {
+                    margin-left: 6px;
+                }
+                .etc_cont.clist_slide .swiper-pagination-bullet-active {
+                    background-color: #f36f20;
+                }
+            </style>
+	        <div class="list_detail pd_style03">
+	            <div class="innerSection">
+	                <div class="ld_tit">
+	                    <h3 class="tit">연관 추천과정 <span>(5건)</span></h3>
+	                </div>
+                    <div class="etc_cont clist_slide mt20">
+                        <div class="slide_wrap">
+                            <div class="con_list">
+                                <div class="swiper-wrapper">                                
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                            </div>
+                                            <div class="txt">
+                                                <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                                <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                                <div class="t_state">                                                
+                                                    <span class="t_tag gray">공통</span>
+                                                    <span class="t_tag gray">직무</span>
+                                                    <span class="t_tag gray">리더십</span>
+                                                </div>                                            
+                                            </div>
+                                            <!-- hover txt -->
+                                            <div class="h_wrap">
+                                                <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                                <ul>
+                                                    <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                    <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                    <li><span>학습시간 :</span> 4시간</li>
+                                                    <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                                </ul>
+                                                <p class="h_btn">수강신청</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                            </div>
+                                            <div class="txt">
+                                                <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                                <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                                <div class="t_state">                                                
+                                                    <span class="t_tag gray">공통</span>
+                                                    <span class="t_tag gray">직무</span>
+                                                    <span class="t_tag gray">리더십</span>
+                                                </div>                                            
+                                            </div>
+                                            <!-- hover txt -->
+                                            <div class="h_wrap">
+                                                <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                                <ul>
+                                                    <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                    <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                    <li><span>학습시간 :</span> 4시간</li>
+                                                    <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                                </ul>
+                                                <p class="h_btn">수강신청</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                            </div>
+                                            <div class="txt">
+                                                <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                                <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                                <div class="t_state">                                                
+                                                    <span class="t_tag gray">공통</span>
+                                                    <span class="t_tag gray">직무</span>
+                                                    <span class="t_tag gray">리더십</span>
+                                                </div>                                            
+                                            </div>
+                                            <!-- hover txt -->
+                                            <div class="h_wrap">
+                                                <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                                <ul>
+                                                    <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                    <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                    <li><span>학습시간 :</span> 4시간</li>
+                                                    <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                                </ul>
+                                                <p class="h_btn">수강신청</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                            </div>
+                                            <div class="txt">
+                                                <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                                <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                                <div class="t_state">                                                
+                                                    <span class="t_tag gray">공통</span>
+                                                    <span class="t_tag gray">직무</span>
+                                                    <span class="t_tag gray">리더십</span>
+                                                </div>                                            
+                                            </div>
+                                            <!-- hover txt -->
+                                            <div class="h_wrap">
+                                                <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                                <ul>
+                                                    <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                    <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                    <li><span>학습시간 :</span> 4시간</li>
+                                                    <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                                </ul>
+                                                <p class="h_btn">수강신청</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                            </div>
+                                            <div class="txt">
+                                                <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                                <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                                <div class="t_state">                                                
+                                                    <span class="t_tag gray">공통</span>
+                                                    <span class="t_tag gray">직무</span>
+                                                    <span class="t_tag gray">리더십</span>
+                                                </div>                                            
+                                            </div>
+                                            <!-- hover txt -->
+                                            <div class="h_wrap">
+                                                <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                                <ul>
+                                                    <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                                    <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                                    <li><span>학습시간 :</span> 4시간</li>
+                                                    <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                                </ul>
+                                                <p class="h_btn">수강신청</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+	            </div>
+                
+            </div>
+
+
+
+
+
+	        </div>
+	    </article>
+               
+    </main>
+
+    <footer class="footer">
+        <div class="innerSection">
+            <div class="footer_wrap">
+                <h1 class="logo"><img src="./images/learninghub/footer_logo.png" alt="러닝허브 로고"></h1>
+                <div class="f_util">
+                    <ul>
+                        <li><a href="#" title="회사소개 바로가기">회사소개</a></li>
+                        <li><a href="#" title="회사소개 바로가기">이용약관</a></li>
+                        <li><a href="#" title="회사소개 바로가기">개인정보취급방침</a></li>
+                        <li><a href="#" title="회사소개 바로가기">찾아오시는 길</a></li>
+                        <li><a href="#" title="회사소개 바로가기">환불규정</a></li>
+                    </ul>
+                    <div class="f_txt">
+                        <p>(08390)서울특별시 구로구 디지털로 30길 31, 코오롱빌란트2차 703호 ~ 704호</p>
+                        <p>㈜인키움 대표이사 : 박지현 TEL : 02-555-1945 / FAX : 02-2081-1090  사업자등록번호 : 220-81-71637</p>
+                    </div>                    
+                </div>
+                <div class="family_site">
+                    <select class="sel_style01">
+                        <option>관련사이트</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 관심설정 팝업 -->
+    <div class="shadow"></div>
+    <div class="popUp setUp">
+        <div class="popTop">
+            <h3 class="ir-text">관심설정</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="pc_pd">
+                <div class="ckItem">
+                    <h4 class="tit">공통역량</h4>
+                    <div class="ckArea">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb1"> <label for="cb1">개인역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb2"> <label for="cb2">관계역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb3"> <label for="cb3">OA역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb4"> <label for="cb4">인문</label></li>
+                            <li class="check03"><input type="checkbox" id="cb5"> <label for="cb5">외국어</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ckItem">
+                    <h4 class="tit">직무역량</h4>
+                    <div class="ckArea">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb6"> <label for="cb6">경영</label></li>
+                            <li class="check03"><input type="checkbox" id="cb7"> <label for="cb7">경제</label></li>
+                            <li class="check03"><input type="checkbox" id="cb8"> <label for="cb8">디지털역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb9"> <label for="cb9">경영지원</label></li>
+                            <li class="check03"><input type="checkbox" id="cb10"> <label for="cb10">마케팅</label></li>
+                            <li class="check03"><input type="checkbox" id="cb11"> <label for="cb11">영업/고객서비스</label></li>
+                            <li class="check03"><input type="checkbox" id="cb12"> <label for="cb12">IT</label></li>
+                            <li class="check03"><input type="checkbox" id="cb13"> <label for="cb13">업종</label></li>
+                            <li class="check03"><input type="checkbox" id="cb14"> <label for="cb14">자격증</label></li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="ckItem">
+                    <h4 class="tit">공통역량</h4>
+                    <div class="ckArea">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb15"> <label for="cb15">계층별</label></li>
+                            <li class="check03"><input type="checkbox" id="cb16"> <label for="cb16">역량별</label></li>
+                            <li class="check03"><input type="checkbox" id="cb17"> <label for="cb17">리더십 사례</label></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+            <div class="btn_wrap tct">
+                <a href="javascript:void(0);" class="btn_style01 btn_orange">
+                    관심분야 저장
+                </a>
+            </div>
+        </div>
+        <div class="popBottom">
+            <p class="txt">자가 역량진단을 통해 <span>맞춤 추천 과정</span>을 확인해 보세요</p>
+            <a href="#">
+                역량진단 바로가기
+            </a>
+        </div>
+    </div>
+    <!-- //관심설정 팝업 -->
+    
+</body>
+
+</html>

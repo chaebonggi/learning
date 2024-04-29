@@ -32,6 +32,7 @@
 	<script src="http://bpo.job-cloud.kr/js/front/Swiper/4.5.1/swiper.min.js"></script>
 	<script src="http://bpo.job-cloud.kr/js/chosen.jquery.min.js"></script>
 	<!-- <script src="http://bpo.job-cloud.kr/js/front/run.js"></script> -->
+    <script src="./js/learninghub/run.js"></script>
 	<script src="http://bpo.job-cloud.kr/js/file/forms.js"></script>
 	<script src="http://bpo.job-cloud.kr/js/solution/solution_ui.js"></script>
 	<script src="http://bpo.job-cloud.kr/js/solution/custome.js"></script>
@@ -39,48 +40,6 @@
 </head>
 
 <body>
-    <style>
-        body, html {
-            overflow-x: initial;
-        }
-        body {
-            overflow-x: hidden !important;
-        }
-        .ir-text {
-            display: block;
-            overflow: hidden;
-            font-size: 1px;
-            line-height: 0;
-            text-indent: -9999px;
-        }
-        .innerSection {
-            max-width: 1200px;
-            width: calc(100% - 40px);
-            margin: auto;
-        }
-        .bg_gray {
-            background: #f2f2f2 !important;
-        }
-        .header_gnb .gnb_util {
-            padding: 1.6rem 0;
-            background: #f2f2f2;
-        }
-        .header_gnb .gnb_util .util_menu {
-            display: flex;          
-        }
-        .header_gnb .gnb_util .util_menu ul {
-            display: flex;
-            margin-left: auto;
-        }
-        .header_gnb .gnb_util .util_menu li:not(:first-child) {
-            margin-left: 1.6rem;
-        }
-        .header_gnb .gnb_util .util_menu li a {
-            display: block;
-            color: #666666;
-            font-size: 13px;
-        }
-    </style>
     <header class="header header_gnb">
 		<div class="gnb_util">
             <div class="innerSection">
@@ -94,183 +53,7 @@
                     </ul>
                 </div>
             </div>
-        </div>        
-        <style>
-            .header_gnb .header_top {
-                display: flex;
-                position: relative;
-                margin: 25px 0 20px;
-            }
-            .header_gnb .header_top .seach_area {
-                max-width: 400px;
-                width: 100%;
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            .header_gnb .header_top .seach_area .input_wrap {
-                display: flex;
-                width: 100%;
-                padding: 10px 10px;
-                margin-left: 0;
-                border: 1px solid #373737;
-                border-radius: 30px;
-                justify-content: space-between;               
-                box-sizing: border-box;
-                overflow: hidden;
-            }
-            .header_gnb .header_top .seach_area .input_wrap input:focus {
-                border: none;
-                outline: none;
-            }
-            .header_gnb .header_top .seach_area .input_wrap input {
-                width: calc(100% - 30px);
-                border: 0;
-                font-size: 1.4rem;
-            }
-            .header_gnb .header_top .seach_area .input_wrap button {
-                width: 20px;
-                height: 19px;
-                background: url(./images/hanmi/seach_ico.png) center / contain no-repeat;
-                border: 0;
-                text-indent: -99999px;
-            }
-              .header_gnb .gnb {
-                display: flex;
-                height: 70px;                
-                position: relative;
-                align-items: center;
-              }
-              .header_gnb .gnb .gnb_menu {
-                display: flex;
-                width: calc(100% - 50px);
-                margin-left: auto;
-                justify-content: space-between;
-              }
-              .header_gnb .gnb .gnb_menu > li {
-                display: flex;
-                height: 70px;
-                align-items: center;
-                justify-content: center;
-                width: calc(100% / 7);
-                text-align: center;
-              }
-              .header_gnb .gnb .gnb_menu > li > a {
-                color: #373737;
-                font-size: 18px;
-                font-weight: 500;
-              }
-              .header_gnb .gnb .gnb_menu > li > a:hover {
-                color: #fa5345;
-              }
-            
-            .header_gnb.open .gnb .lnb {
-                display: block;
-            }
-            .header_gnb .gnb .lnb {            
-                display: none;
-                width: calc(100% - 50px);
-                padding-left: 50px;
-                position: absolute;
-                left: 0;
-                top: 70px;
-                z-index: 100;
-            }
-            .header_gnb .gnb .lnb::before {
-                content: '';
-                width: 100vw;
-                height: 100%;                
-                left: calc(50%);
-                position: absolute;
-                transform: translateX(-50%);
-                background: #f9f9f9;
-                z-index: -1;                
-            }
-            .header_gnb .gnb .lnb .lnb_menu {
-                display: grid;                
-                grid-template-columns: repeat(7, 1fr);
-            }
-            .header_gnb .gnb .lnb .lnb_item {
-                padding: 22px 10px 22px 26px;               
-            }
-            .header_gnb .gnb .lnb .lnb_item:not(:first-child) {
-                border-left: 1px solid #efefef;
-            }
-            .header_gnb .gnb .lnb .lnb_item a {
-                color: #636363;
-                font-size: 14px;
-            }
-            .header_gnb .gnb .lnb .lnb_item a:hover {
-                color: #000;
-                font-weight: 700;
-            }
-            .header_gnb .gnb .lnb .lnb_item li + li {
-                margin-top: 4px;
-            }
-            .header_gnb .gnb .gnb_btn {
-                font-size: 0;
-            }
-            .header_gnb .gnb .gnb_btn .all_gnb_menu { 
-                width: 22px;
-                height: 20px;
-                padding: 0;
-                position: relative;              
-                background: transparent;
-                border: none;
-            }
-            .header_gnb .gnb .gnb_btn .all_gnb_menu:focus {
-                border: 0;
-            }
-            .header_gnb .gnb .gnb_btn .all_gnb_menu span,
-            .header_gnb .gnb .gnb_btn .all_gnb_menu span::before,
-            .header_gnb .gnb .gnb_btn .all_gnb_menu span::after {
-                display: block;
-                width: 100%;
-                height: 2px;
-                position: absolute;
-                left: 0;
-                background: #f36f20;
-            }
-            .header_gnb .gnb .gnb_btn .all_gnb_menu span {
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            .header_gnb .gnb .gnb_btn .all_gnb_menu span::before,
-            .header_gnb .gnb .gnb_btn .all_gnb_menu span::after {
-                content: '';
-            }
-            .header_gnb .gnb .gnb_btn .all_gnb_menu span::before {
-                top: -8px;
-            }
-            .header_gnb .gnb .gnb_btn .all_gnb_menu span::after {
-                top: 8px;
-            }
-            .header_gnb.open .gnb .gnb_btn {
-                padding: 13px;
-                margin-top: auto;
-                background: #f9f9f9;
-            }
-            .header_gnb.open .gnb .gnb_btn::before {
-                content: '';
-                width: 50px;
-                height: 100%;
-                width: 50px;
-            }
-            .header_gnb.open .gnb .gnb_btn .all_gnb_menu span {
-                background: transparent;
-            }
-            .header_gnb.open .gnb .gnb_btn .all_gnb_menu span::before {
-                top:0;
-                transform:rotate(45deg);
-                background: #656a7e;
-            }
-            .header_gnb.open .gnb .gnb_btn .all_gnb_menu span::after {
-                top:0;
-                transform:rotate(-45deg);
-                background: #656a7e;
-            }              
-        </style>
+        </div>     
         <div class="innerSection">
             <div class="header_top">
                 <h1 class="logo"><a href=""><img src="./images/learninghub/logo.png" alt="러닝허브 로고"></a></h1>
@@ -365,100 +148,6 @@
         </div>        
 	</header>
     <main class="main_wrap">
-        <style>
-            .main_wrap .pd_style01 {
-                padding: 80px 0 120px;
-            }
-            .main_wrap .pd_style02 {
-                padding: 80px 0 80px;
-            }
-            .main_wrap .main_visual .swiper-slide {
-                text-align: center;
-                font-size: 0;
-            }
-            .main_wrap .main_visual .swiper-slide img {
-                max-width: 1200px;
-                width: 100%;
-                height: 100%;
-            }
-            .swiper, swiper-container {
-                margin-left: auto;
-                margin-right: auto;
-                position: relative;
-                overflow: hidden;
-                list-style: none;
-                padding: 0;
-                z-index: 1;
-                display: block;
-            }
-            .main_wrap .main_visual .swiper-control {
-                display: flex;
-                width: 130px;
-                height: 36px;
-                position: absolute;                
-                left: calc(50% - 600px);
-                bottom: 30px; 
-                background: rgba(49, 49, 49, 0.7);
-                border-radius: 50px;
-                z-index: 2;
-            }
-            .main_wrap .main_visual .swiper-pagination {
-                width: auto;
-                top: 50%;
-                left: 42px;
-                right: initial;
-                bottom: initial;
-                transform: translateY(-50%);
-                font-weight: 500;
-                font-size: 13px;
-                color: #fff;
-            }
-            .main_wrap .main_visual .swiper-pagination .swiper-pagination-current {
-                /* color: #f36f20; */
-            }
-            .main_wrap .main_visual .swiper-button-next, .main_wrap .main_visual .swiper-button-prev {
-                width: 6px;
-                height: 12px;
-                margin-top: 0;
-                transform: translateY(-50%);
-                background-color: transparent;
-                background-size: contain;
-                z-index: 10;
-                border: 0;
-                cursor: pointer;
-            }
-            .main_wrap .main_visual .swiper-button-next {
-                background-image: url(./images/learninghub/ico_next_btn.png);
-                left: 80px;
-            }
-            .main_wrap .main_visual .swiper-button-prev {
-                background-image: url(./images/learninghub/ico_prev_btn.png);
-                left: 15px;
-            }
-            .main_wrap .main_visual .swiper-button-pause, 
-            .main_wrap .main_visual .swiper-button-resume {
-                display: block;
-                width: 10px;
-                height: 12px;
-                position: absolute;
-                top: 50%;
-                right: 18px;
-                transform: translateY(-50%);
-                background-color: transparent;
-                background-size: contain;
-                background-repeat: no-repeat;
-                border: 0;
-            }
-            .main_wrap .main_visual .swiper-button-pause {
-                background-image: url(./images/learninghub/ico_stop.png);
-            }
-            .main_wrap .main_visual .swiper-button-resume {
-                background-image: url(./images/learninghub/ico_start.png);
-            }
-            .main_wrap .main_visual .swiper:not(.swiper-paused) .swiper-button-resume, .main_wrap .main_visual .swiper-paused .swiper-button-pause {
-                display: none;
-            }
-        </style>
         <article class="main_visual">
             <div class="main_visual_swiper swiper">
                 <div class="swiper-wrapper">
@@ -484,189 +173,12 @@
             </div>
         </article>
         <article class="box_item pd_style02">
-            <style>
-                 .main_wrap .clist_slide .slide_wrap {
-                    display: flex;
-                    justify-content: space-between;
-                 }
-                 .main_wrap .clist_slide .cont_wrap {
-                    width: 180px;
-                    flex-shrink: 0;
-                 }
-                 .main_wrap .clist_slide .cont_wrap .c_tit {
-                    color: #373737;
-                    font-size: 20px;
-                 }
-                 .main_wrap .clist_slide .cont_wrap .c_tit span {
-                    font-size: 28px;
-                    font-weight: bold;
-                 }
-                 .main_wrap .clist_slide .cont_wrap .c_txt {
-                    margin-top: 16px;
-                    color: #666666;
-                    font-size: 13px;
-                 }
-                 .main_wrap .clist_slide .cont_wrap button {
-                    width: 100%;
-                    max-width: 170px;
-                    margin-top: 16px;
-                    padding: 4px 0;
-                    background: #fff;
-                    color: #373737;
-                    font-weight: 500;
-                    font-size: 15px;
-                    border: 1px solid #373737;
-                    border-radius: 30px;
-                 }
-                 .main_wrap .clist_slide .cont_wrap .slide_btn {
-                    margin-top: 70px;
-                    position: relative;                    
-                 }
-                 .main_wrap .curation_cont.clist_slide .cont_wrap .slide_btn {
-                    margin-top: 100px;                   
-                 }
-                 .main_wrap .clist_slide .cont_wrap .swiper-button-prev,
-                 .main_wrap .clist_slide .cont_wrap .swiper-button-next {
-                    width: 50px;
-                    height: 50px;
-                    margin-top: 0;
-                    background-size: contain;
-                }
-                .main_wrap .clist_slide .cont_wrap .swiper-button-prev {
-                    background-image: url(./images/learninghub/ico_prev_btn_01.png);
-                    left: 0;
-                }
-                .main_wrap .clist_slide .cont_wrap .swiper-button-next {
-                    background-image: url(./images/learninghub/ico_next_btn_01.png);
-                    left: 70px;
-                }
-                .main_wrap .curation_cont.clist_slide .cont_wrap .swiper-button-prev {
-                    background-image: url(./images/learninghub/ico_prev_btn_02.png);
-                }
-                .main_wrap .curation_cont.clist_slide .cont_wrap .swiper-button-next {
-                    background-image: url(./images/learninghub/ico_next_btn_02.png);
-                }
-                .main_wrap .clist_slide .con_list {
-                    width: calc(100% - 300px);
-                    overflow: hidden;
-                }
-                .main_wrap .clist_slide .item a:hover::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: rgba(22, 22, 22, 0.92);
-                    border-radius: 10px;
-                    z-index: 5;
-                }
-                .main_wrap .clist_slide .item a {
-                    display: block;
-                    position: relative;
-                }
-                .main_wrap .clist_slide .item .img_wrap {
-                    border: 1px solid #dadada;
-                    border-radius: 10px;
-                    font-size: 0;
-                    overflow: hidden;
-                }
-                .main_wrap .clist_slide .item .img_wrap img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-                .main_wrap .clist_slide .item .txt .t_date {
-                    margin-top: 15px;
-                    color: #666666;
-                    font-size: 13px;
-                }
-                .main_wrap .clist_slide .txt .t_tit {
-                    display: -webkit-box;
-                    height: 46px;
-                    margin: 8px 0 12px;
-                    color: #212121;
-                    font-size: 1.8rem;
-                    font-weight: bold;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                    text-overflow: ellipsis;
-                    line-height: 23px;
-                    word-break: keep-all;
-                    overflow: hidden;
-                }
-                .main_wrap .clist_slide .item .t_state .t_tag {
-                    display: inline-block;
-                    padding: 4px 10px;
-                    background: #f2f2f2;
-                    font-size: 1.2rem;
-                    color: #666666;
-                    border-radius: 5px;
-                }
-                .main_wrap .curation_cont.clist_slide .item .t_state .t_tag {
-                    background: #e5e5e5;
-                    color: #898989;
-                }
-                .main_wrap .clist_slide .item .h_wrap {
-                    display: none;
-                    width: 100%;
-                    height: 100%;
-                    padding: 50px 18px 16px;
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    color: #fff;
-                    box-sizing: border-box;
-                    z-index: 8;
-                }
-                .main_wrap .clist_slide .item a:hover .h_wrap {
-                    display: flex;
-                    flex-direction: column;
-                }
-                .main_wrap .clist_slide .item .h_wrap .h_tit {
-                    display: -webkit-box;
-                    height: 46px;
-                    margin-bottom: 30px;
-                    font-size: 1.8rem;
-                    font-weight: bold;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                    text-overflow: ellipsis;
-                    line-height: 23px;
-                    word-break: keep-all;
-                    overflow: hidden;
-                }
-                .main_wrap .clist_slide .item .h_wrap li {
-                    padding-left: 16px;
-                    position: relative;
-                    font-size: 1.3rem;
-                }
-                .main_wrap .clist_slide .item .h_wrap li::before {
-                    content: '';
-                    width: 12px;
-                    height: 12px;
-                    position: absolute;
-                    left: 0;
-                    top: 2px;
-                    background: url(./images/learninghub/h_list_icon.png) no-repeat;
-                }
-                .main_wrap .clist_slide .item .h_wrap .h_btn {
-                    margin-top: auto;
-                    padding: 10px 0;
-                    background: #ff7000;
-                    color: #fff;
-                    font-size: 1.7rem;
-                    font-weight: bold;
-                    text-align: center;
-                    border-radius: 10px;
-                }
-            </style>
             <div class="recommend_cont clist_slide">
                 <div class="innerSection">
                     <div class="slide_wrap">
                         <div class="cont_wrap">
                             <p class="c_tit">AI 맞춤학습<br> <span>추천 과정</span></p>
-                            <button type="button">관심설정</button>
+                            <button type="button" onclick="openModal('setUp')">관심설정</button>
                             <p class="c_txt">이용자의 학습이력을 기반으로<br>
                                 맞춤형학습과정을<br>
                                 추천해 드립니다.</p>
@@ -923,81 +435,7 @@
                 </div>
             </div>
         </article>
-        <style>
-            .hot_trend .cont_tabs {
-                display: flex;
-                margin-bottom: 60px;
-                justify-content: center;
-            }
-            .hot_trend .cont_tabs li.active a {
-                background: #373737;
-                color: #fff;
-            }
-            .hot_trend .cont_tabs li + li {
-                margin-left: 10px;
-            }
-            .hot_trend .cont_tabs li a {
-                display: flex;
-                width: 100%;
-                height: 100%;
-                padding: 8px 22px;
-                background: #fff;
-                color: #666666;
-                font-size: 1.5rem;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                box-sizing: border-box;
-                border: 1px solid #373737;
-                border-radius: 30px;
-            }
-            .hot_trend .tit_wrap {
-                margin-bottom: 5rem;
-                text-align: center;
-            }
-            .hot_trend .tit_wrap .p_tit {
-                margin-bottom: 2rem;
-                color: #373737;
-                font-size: 2.8rem;
-                font-weight: bold;
-            }
-            .hot_trend .tit_wrap p {
-                color: #373737;
-                font-size: 1.6rem;
-            }
-            .hot_trend .tab_content {
-                display: none;
-            }
-            .hot_trend .tab_content.active {
-                display: block;
-            }
-            .main_wrap .hot_trend .slide_wrap {
-                position: relative;
-            }
-            .main_wrap .hot_trend.clist_slide .con_list {
-                width: 100%;
-            }
 
-            .main_wrap .hot_trend.clist_slide .swiper-button-prev,
-            .main_wrap .hot_trend.clist_slide .swiper-button-next {
-                width: 82px;
-                height: 82px;
-                margin-top: 0;
-                transform: translateY(-50%);
-                background-size: contain;
-            }
-            .main_wrap .hot_trend.clist_slide .swiper-button-next {
-                right: -90px;
-                background-image: url(./images/learninghub/ico_next_btn_03.png);
-            }
-            .main_wrap .hot_trend.clist_slide .swiper-button-prev {
-                left: -90px;
-                background-image: url(./images/learninghub/ico_prev_btn_03.png);
-            }
-            .main_wrap .hot_trend.clist_slide .item a:hover::before {
-                content: none;
-            }
-        </style>
         <article class="box_item pd_style01">
             <div class="hot_trend clist_slide">
                 <div class="innerSection">
@@ -1129,95 +567,6 @@
                 </div>
             </div>
         </article>
-        <style>
-            .main_wrap .popular_cont {
-                background: url(./images/learninghub/popular_cont_bg.png) top center no-repeat;
-            }
-            .main_wrap .popular_cont .tit_wrap {
-                margin-bottom: 5rem;
-                text-align: center;
-            }
-            .main_wrap .popular_cont .tit_wrap .p_tit {
-                margin-bottom: 2rem;
-                color: #373737;
-                font-size: 2.8rem;
-                font-weight: bold;
-            }
-            .main_wrap .popular_cont .tit_wrap .p_tit span {
-                color: #ff7000;
-            }
-            .main_wrap .popular_cont .tit_wrap p {
-                color: #373737;
-                font-size: 1.6rem;
-            }
-            
-            .main_wrap .popular_cont.clist_slide .item a:hover::before {
-                content: none;
-            }
-            .main_wrap .popular_cont.clist_slide .con_list {
-                width: 100%;
-                position: relative;
-            }
-            .main_wrap .popular_cont.clist_slide .con_list .item {
-                width: 280px;
-                transform: scale(0.5); 
-                transition: all 0.3s; 
-                opacity: 0.5;
-                font-size: 0;
-            }
-            .main_wrap .popular_cont.clist_slide .con_list .item a {
-                display: block;
-            }
-            .main_wrap .popular_cont.clist_slide .con_list .item .img_wrap {                  
-                display: block; 
-                padding-bottom: 248px; 
-                position: relative;                 
-                border-radius: 10px; 
-                overflow: hidden;
-            } 
-            .main_wrap .popular_cont.clist_slide .con_list .item img {
-                width: 100%; 
-                height: 100%;
-                position: absolute; 
-                top: 0; 
-                left: 0;  
-                object-fit: cover;
-            }
-            .main_wrap .popular_cont.clist_slide .item.swiper-slide-active,
-            .main_wrap .popular_cont.clist_slidet .item.swiper-slide-duplicate-active { 
-                transform: scale(1); 
-                opacity: 1; 
-            } 
-            .main_wrap .popular_cont.clist_slide .item.swiper-slide-prev { 
-                margin-right: 2%; 
-                margin-left: -2%; 
-            } 
-            .main_wrap .popular_cont.clist_slide .item.swiper-slide-next { 
-                margin-right: -2%; 
-                margin-left: 2%; 
-            } 
-            .main_wrap .popular_cont.clist_slide .item.first { margin-right: -4%; margin-left: 4%; } 
-            .main_wrap .popular_cont.clist_slide .item.last { margin-right: 4%; margin-left:-4%; } 
-            .main_wrap .popular_cont.clist_slide .swiper-button-prev,
-            .main_wrap .popular_cont.clist_slide .swiper-button-next {
-                width: 82px;
-                height: 82px;
-                margin-top: 0;
-                transform: translateY(-50%);
-                background-size: contain;
-                z-index: 10; 
-            }
-            .main_wrap .popular_cont.clist_slide .swiper-button-prev {
-                left: 50%;
-                margin-left: 10px;
-                background-image: url(./images/learninghub/ico_prev_btn_03.png);
-            }
-            .main_wrap .popular_cont.clist_slide .swiper-button-next {
-                left: 50%;
-                background-image: url(./images/learninghub/ico_next_btn_03.png);
-            }
-
-        </style>
         <article class="box_item">
             <div class="popular_cont clist_slide pd_style02">
                 <div class="innerSection">
@@ -1264,21 +613,6 @@
                 </div>
             </div>
         </article>
-        <style>
-            .main_wrap .micro_cont.clist_slide .item a:hover::before {
-                content: none;
-            }
-            .main_wrap .micro_cont.clist_slide .item a {
-                display: block;
-                border-radius: 10px;
-                font-size: 0;
-                overflow: hidden;
-            }
-            .main_wrap .micro_cont.clist_slide .item {
-                margin-top: 0 !important;
-                margin-bottom: 16px !important;
-            }
-        </style>
         <article class="box_item pd_style02">
             <div class="micro_cont clist_slide">
                 <div class="innerSection">
@@ -1334,33 +668,7 @@
                 </div>
             </div>
         </article>
-        <style>
-            .main_wrap .banner_wrap .con_list {
-                position: relative;
-                overflow: hidden;
-            }
-            .main_wrap .banner_wrap .item a {
-                display: block;
-                font-size: 0;
-                border-radius: 30px;
-                overflow: hidden;
-            }
-            .main_wrap .banner_wrap .swiper-button-prev,
-            .main_wrap .banner_wrap .swiper-button-next {
-                width: 9px;
-                height: 16px;
-                margin-top: 0;
-                transform: translateY(-50%);
-            }
-            .main_wrap .banner_wrap .swiper-button-prev {
-                left: 30px;
-                background: url(./images/learninghub/ico_prev_btn.png) no-repeat;
-            }
-            .main_wrap .banner_wrap .swiper-button-next {
-                right: 30px;
-                background: url(./images/learninghub/ico_next_btn.png) no-repeat;
-            }
-        </style>
+   
         <article class="box_item">
             <div class="banner_wrap">
                 <div class="innerSection">
@@ -1379,83 +687,7 @@
                 </div>
             </div>
         </article>
-        <style>
-            .main_wrap .qmenu_area {
-                padding: 4.6rem 0;
-                background: #f9f9f9;
-                border-radius: 20px;
-            }
-            .main_wrap .qmenu_area h3 {
-                margin-bottom: 3rem;
-                color: #373737;
-                font-size: 3rem;
-                font-weight: bold;
-                text-align: center;
-            }
-            .main_wrap .qmenu_area ul {
-                display: flex;
-                max-width: 1100px;                
-                margin: 0 auto;
-                justify-content: space-between;
-            }
-            .main_wrap .qmenu_area ul li:hover {
-                background: #fff;
-                box-shadow: 0px 0px 35px 0px rgba(88, 88, 88, 0.14);
-            }
-            .main_wrap .qmenu_area ul li {
-                display: flex;
-                width: 180px;
-                height: 180px;               
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-            }
-            .main_wrap .qmenu_area ul li a::before {
-                content: '';
-                display: block;
-                width: 80px;
-                height: 72px;
-                margin: 0 auto 0.5rem;                
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-            .main_wrap .qmenu_area ul li:nth-child(1) a::before {
-                background-image: url(./images/learninghub/icon_qmenu01.png);
-            }
-            .main_wrap .qmenu_area ul li:nth-child(2) a::before {
-                background-image: url(./images/learninghub/icon_qmenu02.png);
-            }
-            .main_wrap .qmenu_area ul li:nth-child(3) a::before {
-                background-image: url(./images/learninghub/icon_qmenu03.png);
-            }
-            .main_wrap .qmenu_area ul li:nth-child(4) a::before {
-                background-image: url(./images/learninghub/icon_qmenu04.png);
-            }
-            .main_wrap .qmenu_area ul li:nth-child(5) a::before {
-                background-image: url(./images/learninghub/icon_qmenu05.png);
-            }
-            .main_wrap .qmenu_area ul li a {
-                display: block;
-                width: 100%;
-                height: 100%;    
-                padding-top: 3rem;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-                box-sizing: border-box;
-            }
-            .main_wrap .qmenu_area ul li a p {
-                display: flex;                
-                min-height: 56px;
-                color: #373737;
-                font-size: 1.8rem;
-                font-weight: 500;
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-                line-height: 1.2;
-            }
-        </style>
+    
         <article class="box_item pd_style02">
             <div class="qmenu_wrap">
                 <div class="innerSection">
@@ -1493,110 +725,6 @@
             </div>
         </article>
         <article class="box_item">
-            <style>
-                .main_wrap .service_wrap {
-                    padding: 3.6rem 0;
-                    background: url(./images/learninghub/service_cont_bg.png) center no-repeat;
-                    background-size: cover;
-                }
-                .main_wrap .service_wrap .service_area {
-                    display: flex;
-                    justify-content: space-between;
-                }
-                .main_wrap .service_wrap .service_right {
-                    width: 600px;
-                    padding: 50px 0 70px;
-                    position: relative;
-                    background: #fff;
-                }
-                .main_wrap .service_wrap .service_right .tit {
-                    display: inline-block;
-                    padding: 0.5rem 2.5rem;
-                    position: absolute;
-                    top: 20px;
-                    left: -20px;
-                    background: #373737;
-                    color: #fff;
-                    font-size: 1.8rem;
-                    font-weight: 500;
-                }
-                .main_wrap .service_wrap .graph_area {
-                    display: flex;
-                    max-width: 380px;
-                    width: 100%;
-                    height: 200px;
-                    margin: 0 auto;
-                    box-sizing: border-box;
-                }
-                .main_wrap .service_wrap .graph_area li {
-                    flex: 1;
-                    position: relative;
-                } 
-                .main_wrap .service_wrap .graph_area li .graph {
-                    display: flex;
-                    width: 40px;
-                    height: 100%;
-                    margin: 0 auto;
-                    flex-direction: column-reverse;
-                    background: transparent;                    
-                    border-radius: 20px;
-                }
-                .main_wrap .service_wrap .graph_area li .graph .bar {
-                    position: relative;
-                    border-radius: 20px;
-                }
-                .main_wrap .service_wrap .graph_area li .graph .bar .g_txt {
-                    position: absolute;
-                    top: 20px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    color: #fff;
-                    font-size: 1.6rem;
-                    font-weight: bold;                    
-                }
-                .main_wrap .service_wrap .graph_area li .graph .bar.data1 {
-                    background: #6dbae1;                    
-                }
-                .main_wrap .service_wrap .graph_area li .graph .bar.data2 {
-                    background: #3b3f57;                    
-                }
-                .main_wrap .service_wrap .graph_area li .graph .bar.data3 {
-                    background: #8adac4;                    
-                }
-                .main_wrap .service_wrap .graph_area li .graph .bar.data4 {
-                    background: #969cb0;                    
-                }
-                .main_wrap .service_wrap .graph_area li .txt {
-                    position: absolute;
-                    bottom: -50px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    text-align: center;
-                    white-space: nowrap;
-                }
-                .main_wrap .service_wrap .graph_area li .txt p {
-                    color: #373737;
-                    font-size: 1.4rem;
-                    font-weight: 500;
-                }
-                .main_wrap .service_wrap .graph_area li .txt span {
-                    display: block;
-                    color: #878787;
-                    font-size: 1.2rem;
-                    font-weight: 400;
-                }
-                .main_wrap .service_wrap .service_left h3 {
-                    margin: 6.4rem 0 2.5rem;
-                    color: #fff;
-                    font-size: 3.4rem;
-                    font-weight: bold;
-                }
-                .main_wrap .service_wrap .service_left p {
-                    color: #fff;
-                    font-size: 1.6rem;
-                    line-height: 2;
-                }
-            </style>
             <div class="service_wrap">
                 <div class="innerSection">
                     <div class="service_area">
@@ -1653,104 +781,6 @@
             </div>
         </article>        
         <article class="box_item pd_style02">
-            <style>
-                .main_wrap .notice_wrap .notice_area {
-                    display: flex;
-                    justify-content: space-between;
-                }
-                .main_wrap .notice_wrap .notice_tit {
-                    display: flex;
-                    padding: 0 1rem 2rem 0;
-                    border-bottom: 1px solid #373737;
-                    justify-content: space-between;
-                    align-items: flex-end;
-                }
-                .main_wrap .notice_wrap .notice_tit h3 {                   
-                   color: #212121;
-                   font-size: 2.5rem;
-                   font-weight: 500;
-               }
-               .main_wrap .notice_wrap .notice_tit .more_btn::before {
-                    content: '\002B';
-                    display: inline-block;
-                    margin-right: 4px;
-                    color: #000;
-               }
-                .main_wrap .notice_wrap .notice {
-                    width: calc(100% - 310px);
-                    position: relative;
-                }                
-                .main_wrap .notice_wrap .notice .notice_list li {
-                    display: flex;
-                    padding: 1.8rem 1rem;
-                    align-items: center;
-                    border-bottom: 1px solid #ededed;
-                }
-                .main_wrap .notice_wrap .notice .notice_list li a {
-                    max-width: calc(100% - 80px);
-                    padding-left: 1rem;                  
-                    position: relative;
-                    color: #666666;
-                    font-size: 1.4rem;
-                    font-weight: 400;
-                    white-space: nowrap;                    
-                    overflow: hidden;
-                    text-overflow: ellipsis;                
-                }
-                .main_wrap .notice_wrap .notice .notice_list li a::before {
-                    content: '';
-                    width: 2px;
-                    height: 2px;
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    transform: translateY(-50%);
-                    background: #000;
-                    border-radius: 50%;
-                }
-                .main_wrap .notice_wrap .notice .notice_list li .state_area {
-                    display: inline-block;
-                }
-                .main_wrap .notice_wrap .notice .notice_list li .state_area span {
-                    margin-left: 1rem;
-                }
-                .main_wrap .notice_wrap .notice .notice_list li.alarm .alarm_tag {
-                    display: inline-block;
-                }
-                .main_wrap .notice_wrap .notice .notice_list li.file .file_tag {
-                    display: inline-block;
-                }
-                .main_wrap .notice_wrap .notice .notice_list li .alarm_tag {
-                    display: none;
-                    padding: 0.2rem 2rem;
-                    background: #ff8200;
-                    color: #fff;
-                    border-radius: 20px;
-                    vertical-align: middle;
-                }
-                .main_wrap .notice_wrap .notice .notice_list li .file_tag {
-                    display: none;
-                    width: 18px;
-                    height: 20px;
-                    background: url(./images/learninghub/ico_file.png) no-repeat;
-                    vertical-align: middle;
-                }
-                .main_wrap .notice_wrap .notice .notice_list li .date {
-                    margin-left: auto;
-                    color: #666666;
-                    font-size: 1.4rem;                   
-                    font-weight: 300;
-                    white-space: nowrap;
-                }
-                .main_wrap .notice_wrap .notice_banner {
-                    max-width: 280px;
-                    width: 100%;
-                    padding: 3rem 2.8rem;
-                    background: #f2f2f2;
-                    border-radius: 30px;
-                    box-sizing: border-box;
-                }
-            </style>
             <div class="notice_wrap">
                 <div class="innerSection">
                     <div class="notice_area">
@@ -1795,39 +825,7 @@
                             </ul>                        
                         </div>
                         <style>
-                            .main_wrap .notice_wrap .notice_banner .b_tit {
-                                color: #373737;
-                                font-size: 2rem;
-                                font-weight: bold;
-                            }
-                            .main_wrap .notice_wrap .notice_banner .b_tel {
-                                color: #373737;
-                                font-size: 3.2rem;
-                                font-weight: 900;
-                            }
-                            .main_wrap .notice_wrap .notice_banner .txt_area {
-                                margin-top: 2rem;
-                                position: relative;
-                                text-align: right;
-                            }
-                            .main_wrap .notice_wrap .notice_banner .txt_area::before {
-                                content: '';
-                                width: 72px;
-                                height: 71px;
-                                position: absolute;
-                                left: 0;
-                                top: 50%;
-                                transform: translateY(-50%);
-                                background: url(./images/learninghub/ico_notice_tel.png) no-repeat;
-                            }
-                            .main_wrap .notice_wrap .notice_banner .txt_area p {
-                                color: #666666;
-                                font-size: 1.5rem;
-                                font-weight: 400;
-                            }
-                            .main_wrap .notice_wrap .notice_banner .txt_area p + p {
-                                margin-top: 4px;
-                            }
+                            
                         </style>
                         <div class="notice_banner">
                             <p class="b_tit">학습지원센터</p>
@@ -1843,61 +841,7 @@
             </div>
         </article>        
     </main>
-    <style>
-        .sel_style01 {
-            width: 238px;
-            padding: 0.5rem 40px 0.5rem 1rem;
-            background: url(./images/learninghub/ico_arrow_up.png) no-repeat right 1rem center #373737;
-            color: #666666;
-            font-family: inherit;
-            font-size: 1.4rem;           
-            border-radius: 0;
-            border: 1px solid #c9cdd2;
-            box-sizing: border-box;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;            
-        }
-        .footer {
-            padding: 40px 0 36px;
-            background: #373737;
-        }
-        .footer .footer_wrap {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-        }
-        .footer .footer_wrap .f_util ul {
-            display: flex;
-            margin-bottom: 20px;
-        }
-        .footer .footer_wrap .f_util ul li:not(:last-child) {
-            position: relative;
-            padding-right: 1rem;
-            margin-right: 1rem;
-        }
-        .footer .footer_wrap .f_util ul li:after {
-            content: '';
-            display: block;
-            width: 1px;
-            height: 18px;
-            background: #fff;
-            position: absolute;
-            right: 0;
-            top: 52%;
-            transform: translateY(-50%);
-        }
-        .footer .footer_wrap .f_util ul li a {
-            color: #fff;
-            font-weight: 500;
-            font-size: 1.6rem;
-        }
-        .footer .footer_wrap .f_util .f_txt {
-            color: #878787;
-            font-size: 1.4rem;
-            letter-spacing: -0.5px;
-        }
-    </style>
+
     <footer class="footer">
         <div class="innerSection">
             <div class="footer_wrap">
@@ -1923,237 +867,69 @@
             </div>
         </div>
     </footer>
-    <script>
-        $(document).ready(function() {
-            $(".header_gnb .all_gnb_menu").click(function(event) {
-                event.stopPropagation();
-                $('.header_gnb').toggleClass("open");
-            });
-            // var swiper = new Swiper(".popular_cont .con_list", {
-            //     // spaceBetween: 10,
-            //     slidesPerView: 'auto',
-            //     centeredSlides: true,
-            //     roundLengths: true,
-            //     loop: true,
-            //     // loopAdditionalSlides: 30,
-            //     navigation: {
-            //         nextEl: ".popular_cont .swiper-button-next",
-            //         prevEl: ".popular_cont .swiper-button-prev",
-            //     },
-            // });
-            var swiper = new Swiper(".recommend_cont .con_list", {
-                spaceBetween: 20,
-                slidesPerView: 3,
-                autoplay: false,
-                loop: false,
-                navigation: {
-                    nextEl: ".recommend_cont .swiper-button-next",
-                    prevEl: ".recommend_cont .swiper-button-prev",
-                },
-                // pagination: {
-                //     clickable : true,
-                //     el: '.recommend_cont .swiper-pagination',
-                //     type: 'bullets',
-                // },
-                // breakpoints: { 
-                //     1024: {
-                //         slidesPerView: 'auto',
-                //         spaceBetween: 10,
-                //     },
-                // }
-            });
-            var swiper = new Swiper(".banner_wrap .con_list", {
-                spaceBetween: 20,
-                slidesPerView: 1,
-                autoplay: false,
-                loop: true,
-                navigation: {
-                    nextEl: ".banner_wrap .swiper-button-next",
-                    prevEl: ".banner_wrap .swiper-button-prev",
-                },
-            });
-            var swiper = new Swiper(".micro_cont .con_list", {
-                slidesPerView: 5,
-                spaceBetween: 16,
-                slidesPerColumn: 2,
-                slidesPerGroup: 10,
-                slidesPerColumnFill: "row",
-                // direction:'vertical',
-                loop: false,
-                // observer: true,
-                // watchOverflow: true,
-                // observeParents: true,
-                navigation: {
-                    nextEl: ".micro_cont .swiper-button-next",
-                    prevEl: ".micro_cont .swiper-button-prev",
-                },
-                // pagination: {
-                //     clickable : true,
-                //     el: '.curation_cont .swiper-pagination',
-                //     type: 'bullets',
-                // },
-                // breakpoints: { 
-                //     1024: {
-                //         slidesPerView: 'auto',
-                //         spaceBetween: 10,
-                //     },
-                // }
-            });
-            var swiper = new Swiper(".curation_cont .con_list", {
-                spaceBetween: 20,
-                slidesPerView: 3,
-                autoplay: false,
-                loop: false,
-                navigation: {
-                    nextEl: ".curation_cont .swiper-button-next",
-                    prevEl: ".curation_cont .swiper-button-prev",
-                },
-                // pagination: {
-                //     clickable : true,
-                //     el: '.curation_cont .swiper-pagination',
-                //     type: 'bullets',
-                // },
-                // breakpoints: { 
-                //     1024: {
-                //         slidesPerView: 'auto',
-                //         spaceBetween: 10,
-                //     },
-                // }
-            });
-            const swiperEl = document.querySelector('.main_visual_swiper')
-            const mainSwiper = new Swiper(swiperEl,{
-                speed: 700,
-                loop: true,
-                effect: 'creative',
-                centeredSlides: true,
-                autoplay: {
-                    delay: 5000,
-                },
-                pagination: {
-                    el: '.main_visual_swiper .swiper-pagination',
-                    type: 'fraction',
-                },
-                navigation: {
-                    nextEl: '.main_visual_swiper .swiper-button-next',
-                    prevEl: '.main_visual_swiper .swiper-button-prev',
-                },
-            })
-
-            const pauseEl = swiperEl.querySelector('.swiper-button-pause')
-            , resumeEl = swiperEl.querySelector('.swiper-button-resume')
-
-            const pauseFunc = ()=>{
-                mainSwiper.autoplay.stop()
-                swiperEl.classList.add('swiper-paused');
-            }
-            const resumeFunc = ()=>{
-                mainSwiper.autoplay.start();
-                swiperEl.classList.remove('swiper-paused');
-            }
-            pauseEl.addEventListener('click', pauseFunc);
-            resumeEl.addEventListener('click', resumeFunc);
-
-            var swiper = new Swiper('.hot_trend .con_list', {
-                initialSlide: 0,
-                spaceBetween: 24,
-                slidesPerView: 4,
-                autoplay: false,
-                loop: false,
-                observer: true,
-                observeParents: true,
-                navigation: {
-                    nextEl: '.hot_trend .swiper-button-next',
-                    prevEl: '.hot_trend .swiper-button-prev',
-                },
-            //  pagination: {
-            //      clickable : true,
-            //      el: '.hot_trend .swiper-pagination',
-            //      type: 'bullets',
-            //  },
-            //  breakpoints: {
-            //      1024: {
-            //          slidesPerView: 'auto',
-            //          spaceBetween: 10,
-            //      },
-            //  },
-            });
-            
-            const $slider = $('.popular_cont');
-            let popSwiper = undefined;
-            let slideNum = $slider.find('.swiper-slide').length; // 슬라이드 총 개수
-            let slideInx = 0; // 현재 슬라이드 인덱스
-
-            // 디바이스 크기에 따라 화면 유형 설정 ('pc' 또는 'mo')
-            let oldWChk = window.innerWidth > 767 ? 'pc' : 'mo';
-            sliderAct(); // 슬라이더 활성화
-
-            let resizeTimer;
-            // 창 크기 변경 시 디바이스 크기 체크 및 슬라이더 재설정
-            $(window).on('resize', function() {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function() {
-                    let newWChk = window.innerWidth > 767 ? 'pc' : 'mo';
-                    if (newWChk != oldWChk) {
-                        oldWChk = newWChk;
-                        sliderAct();
-                    }
-                }, 300);
-            });
-
-            // 슬라이더 실행 및 설정 함수
-            function sliderAct() {
-                // 슬라이더 초기화 (이미 존재하는 경우)
-                if (popSwiper != undefined) {
-                    popSwiper.destroy();
-                    popSwiper = undefined;
-                }
-
-                // 슬라이드 보기 옵션 설정 (디바이스에 따라 변경)
-                let viewNum = oldWChk == 'pc' ? 2 : 1;
-
-                // 슬라이드 수에 따라 무한반복 옵션 설정
-                let loopChk = slideNum > viewNum;
-
-                // 슬라이더 구성 및 옵션 설정
-                popSwiper = new Swiper($slider.find('.con_list'), {
-                    slidesPerView: "auto",
-                    initialSlide: slideInx,
-                    loop: loopChk,
-                    centeredSlides: true,
-                    navigation: {
-                        prevEl: $slider.find('.btn_prev')[0],
-                        nextEl: $slider.find('.btn_next')[0],
-                    },
-                    on: {
-                        slideChangeTransitionStart: function() {
-                            slideInx = this.realIndex; // 현재 슬라이드 인덱스 갱신
-                            updateClass();
-                        },
-                        init: function() {
-                            updateClass();
-                        },
-                    },
-                });
-
-                // 슬라이더 클래스 업데이트 함수
-                function updateClass() {
-                    // 화면상 첫 번째 및 마지막 슬라이드에 클래스 추가 및 제거
-                    $slider.find('.swiper-slide-prev').prev().addClass('first').siblings().removeClass('first');
-                    $slider.find('.swiper-slide-next').next().addClass('last').siblings().removeClass('last');
-                }
-            }
-        }); 
-        function chgAlwStdTypeTab(alwstdCode){
-            console.log(alwstdCode)
-            $(".cont_tabs > li").removeClass("active");
-            $("#alwStdType_"+alwstdCode).addClass("active");
-            $(".tab_content").hide();
-            $("#tabCont_" + alwstdCode).show();
-        }
-        
-
-
-    </script>
+    <!-- 관심설정 팝업 -->
+    <div class="shadow"></div>
+    <div class="popUp setUp">
+        <div class="popTop">
+            <h3 class="ir-text">관심설정</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="pc_pd">
+                <div class="ckItem">
+                    <h4 class="tit">공통역량</h4>
+                    <div class="ckArea">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb1"> <label for="cb1">개인역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb2"> <label for="cb2">관계역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb3"> <label for="cb3">OA역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb4"> <label for="cb4">인문</label></li>
+                            <li class="check03"><input type="checkbox" id="cb5"> <label for="cb5">외국어</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ckItem">
+                    <h4 class="tit">직무역량</h4>
+                    <div class="ckArea">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb6"> <label for="cb6">경영</label></li>
+                            <li class="check03"><input type="checkbox" id="cb7"> <label for="cb7">경제</label></li>
+                            <li class="check03"><input type="checkbox" id="cb8"> <label for="cb8">디지털역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb9"> <label for="cb9">경영지원</label></li>
+                            <li class="check03"><input type="checkbox" id="cb10"> <label for="cb10">마케팅</label></li>
+                            <li class="check03"><input type="checkbox" id="cb11"> <label for="cb11">영업/고객서비스</label></li>
+                            <li class="check03"><input type="checkbox" id="cb12"> <label for="cb12">IT</label></li>
+                            <li class="check03"><input type="checkbox" id="cb13"> <label for="cb13">업종</label></li>
+                            <li class="check03"><input type="checkbox" id="cb14"> <label for="cb14">자격증</label></li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="ckItem">
+                    <h4 class="tit">공통역량</h4>
+                    <div class="ckArea">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb15"> <label for="cb15">계층별</label></li>
+                            <li class="check03"><input type="checkbox" id="cb16"> <label for="cb16">역량별</label></li>
+                            <li class="check03"><input type="checkbox" id="cb17"> <label for="cb17">리더십 사례</label></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+            <div class="btn_wrap tct">
+                <a href="javascript:void(0);" class="btn_style01 btn_orange">
+                    관심분야 저장
+                </a>
+            </div>
+        </div>
+        <div class="popBottom">
+            <p class="txt">자가 역량진단을 통해 <span>맞춤 추천 과정</span>을 확인해 보세요</p>
+            <a href="#">
+                역량진단 바로가기
+            </a>
+        </div>
+    </div>
+    <!-- //관심설정 팝업 -->
+    
 </body>
 
 </html>
