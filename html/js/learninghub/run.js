@@ -174,7 +174,7 @@ $(document).ready(function() {
     //  },
     });
 
-    // 더보기 버튼
+    // 과정상세 리뷰 더보기 버튼
     $(".list_detail .review .item").slice(0, 3).css("display", "flex");
     $(".list_detail .moreBtn").click(function (e) {
         $(".list_detail .review .item:hidden").slice(0, 3).fadeIn(200).css('display', 'flex');
@@ -182,6 +182,14 @@ $(document).ready(function() {
             $('.list_detail .moreBtn').fadeOut(100);
         }
     });
+     // 상세 view list 더보기 버튼
+     $(".view_list_wrap .view_list .item").slice(0, 8).css("display", "block");
+     $(".view_list_wrap .moreBtn").click(function (e) {
+         $(".view_list_wrap .view_list .item:hidden").slice(0, 8).fadeIn(200).css('display', 'block');
+         if ($(".view_list_wrap .view_list .item:hidden").length == 0) {
+             $('.view_list_wrap .moreBtn').fadeOut(100);
+         }
+     });
     
     
     const $slider = $('.popular_cont');
@@ -232,7 +240,37 @@ $(document).ready(function() {
         }
     }
     sliderAct();
-}); 
+
+    // keyword 선택조건 검색
+    $('input:checkbox[name="ckArea"]').change(function() {
+        fn_chkSrchArea($(this));
+    });
+});
+
+function fn_chkSrchArea(obj) {            
+    fn_AddOrDelCdArray(obj.attr('id'), obj.prop('checked'), obj.next().text());
+}
+function fn_AddOrDelCdArray(id, checked, idTxt) {
+    if (checked) {
+        fn_AddCdArray(id, idTxt);
+    } else {
+        fn_DelCdArray(id);
+    }
+}
+function fn_AddCdArray(id, idTxt) {
+    $('#' + id).prop("checked", true);
+    let appendHtml = "<span class=\"selected_keyword\" id=\"txt_" + id + "\">";
+    appendHtml += idTxt;
+    appendHtml += "<button type=\"button\" class=\"btn_del\" onclick=\"fn_DelCdArray('" + id + "');\">";
+    appendHtml += "<span class=\"txt\">X</span>";
+    appendHtml += "</button>";
+    appendHtml += "</span>";
+    $(".keywords_wrap .keywords").append(appendHtml);
+}
+function fn_DelCdArray(id) {
+    $('#' + id).prop("checked", false);
+    $('#txt_' + id).remove();
+}
 
 function chgAlwStdTypeTab(alwstdCode){
     $(".cont_tabs > li").removeClass("active");
@@ -240,6 +278,12 @@ function chgAlwStdTypeTab(alwstdCode){
     $(".tab_content").hide();
     $("#tabCont_" + alwstdCode).show();
 }
+function fn_srchInit() {
+    $('.keywords_wrap .keywords').children().remove();
+    $("input:checkbox[name^='ckArea']").prop("checked", false);
+}
+
+
 function openModal(modalname) {
     $("." + modalname).show();
     $('body').addClass('not_scroll');

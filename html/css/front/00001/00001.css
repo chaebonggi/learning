@@ -161,7 +161,7 @@ div.k-window{position:fixed !important;z-index:999 !important;top:50% !important
 .popUp{z-index: 5;background: #fff;position: fixed;max-width: 500px;width: 100%;left: 50%;top: 50%;transform: translate(-50%,-50%);display: none}
 .popTop{padding: 2rem 3rem;border-bottom: 1px solid #1b1d1f;display: flex;justify-content: space-between;align-items: center;}
 .popTop h3{font-weight: 500;font-size: 2.6rem}
-.popTop .close{background: url(/images/front/close_btn.png) no-repeat;width: 20px;height: 20px;text-indent: -9999px;}
+.popTop .close{background: url(../../../images/learninghub/ico_close.png) no-repeat;width: 20px;height: 20px;text-indent: -9999px;}
 .popCont{padding: 3rem 0;max-height: calc(100vh - 150px);}
 .popCont > .scr.mh_scr {max-height: calc(100vh - 220px);overflow-y:auto}
 .popCont .pc_pd{padding: 0 3rem}

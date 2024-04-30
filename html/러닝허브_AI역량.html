@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브 사용자 AI역량 추천과정</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/00001/00001.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/chosen.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/excel-bootstrap-table-filter-style.css">
+
+	
+	<script src="./js/front/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="./js/front/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="./js/front/front/jquery.mCustomScrollbar.js"></script>
+	<script src="./js/front/front/imgLiquid/0.9.944/imgLiquid-min.js" integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./js/front/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
+	<script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
+	<script src="./js/front/chosen.jquery.min.js"></script>
+	<!-- <script src="./js/front/front/run.js"></script> -->
+    <script src="./js/learninghub/run.js"></script>
+	<script src="./js/front/file/forms.js"></script>
+	<script src="./js/front/solution/solution_ui.js"></script>
+	<script src="./js/front/solution/custome.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <header class="header header_gnb">
+		<div class="gnb_util">
+            <div class="innerSection">
+                <div class="util_menu">
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">강사지원</a></li>
+                        <li><a href="#">HRDHREX</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>     
+        <div class="innerSection">
+            <div class="header_top">
+                <h1 class="logo"><a href=""><img src="./images/learninghub/logo.png" alt="러닝허브 로고"></a></h1>
+                <div class="seach_area">
+                    <div class="input_wrap h_search">
+                        <input type="text" placeholder="검색어를 입력하세요." id="searchTextPc" name="searchTextPc">
+                        <button type="button">검색</button>
+                    </div>
+                </div>
+            </div>
+            <nav class="gnb">
+                <div class="gnb_btn">
+                    <button type="button" class="all_gnb_menu">
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="gnb_menu">
+                    <li><a href="#">AI맞춤학습</a></li>
+                    <li><a href="#">전체과정</a></li>
+                    <li><a href="#">마이크로러닝</a></li>
+                    <li><a href="#">지식센터</a></li>
+                    <li><a href="#">역량진단</a></li>
+                    <li><a href="#">나의강의실</a></li>
+                    <li><a href="#">학습지원센터</a></li>
+                </ul>
+                <div class="lnb">
+                    <div class="lnb_menu">
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">큐레이션 추천과정</a></li>
+                                <li><a href="#">역량기반 맞춤과정</a></li>
+                                <li><a href="#">역량진단 기반과정</a></li>                                
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">공통역량</a></li>
+                                <li><a href="#">직무역량</a></li>
+                                <li><a href="#">리더십역량</a></li>
+                                <li><a href="#">외국어</a></li>
+                                <li><a href="#">자격</a></li>
+                                <li><a href="#">인문교양</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">공통과정</a></li>
+                                <li><a href="#">공통역량</a></li>
+                                <li><a href="#">직무역량</a></li>
+                                <li><a href="#">리더십역량</a></li>
+                                <li><a href="#">외국어</a></li>
+                                <li><a href="#">자격</a></li>
+                                <li><a href="#">인문교양</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">지식센터</a></li>
+                                <li><a href="#">러닝캐스트</a></li>
+                                <li><a href="#">지식캐스트</a></li>
+                                <li><a href="#">직립보행/나취취</a></li>
+                                <li><a href="#">지식창고</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">자가진단</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">나의 강의실</a></li>
+                                <li><a href="#">수강신청현황</a></li>
+                                <li><a href="#">학습이력현황</a></li>
+                                <li><a href="#">마일리지 조회</a></li>
+                                <li><a href="#">개인정보수정</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">학습지원센터</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주하는질문</a></li>
+                                <li><a href="#">묻고답하기</a></li>
+                                <li><a href="#">원격지원</a></li>
+                                <li><a href="#">학습방법안내</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>        
+	</header>
+    <main class="content_wrap">
+        <article class="course_wrap">
+            <div class="course_list pd_style03">
+	            <div class="innerSection">                    
+                    <div class="ld_tit">
+	                    <h3 class="tit">회원님(<span>홍길동</span>님)에게 꼭 맞는 AI추천 과정</h3>
+	                </div>
+                    <div class="course_cont">
+                        <div class="course_list">
+                            <div class="item">
+                                <a href="#">
+                                    <div class="h_box">
+                                        <p class="txt01">내게 맞춤화된 과정을 찾고 있다면?</p>
+                                        <p class="txt02">지금 로그인 후 관심분야를 등록하시면<br>
+                                            <span>가장 정확한 과정</span>을 추천해 드려요</p>
+                                        <p class="txt03">로그인하기</p>                                        
+                                    </div>
+                                    <div class="img_wrap">
+                                        <span class="img_tag">AI매칭 정확도 90%</span>
+                                        <img src="./images/learninghub/course_img01.jpg" alt="실무 엑셀 배우기">
+                                    </div>
+                                    <div class="txt">
+                                        <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                        <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>                                           
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="h_box">
+                                        <p class="txt01">내게 맞춤화된 과정을 찾고 있다면?</p>
+                                        <p class="txt02">지금 로그인 후 관심분야를 등록하시면<br>
+                                            <span>가장 정확한 과정</span>을 추천해 드려요</p>
+                                        <p class="txt03">로그인하기</p>                                        
+                                    </div>
+                                    <div class="img_wrap">
+                                        <span class="img_tag">AI매칭 정확도 90%</span>
+                                        <img src="./images/learninghub/course_img02.jpg" alt="HR도 ChatGPT로 하는 시대">
+                                    </div>
+                                    <div class="txt">
+                                        <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                        <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>                                           
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="h_box">
+                                        <p class="txt01">내게 맞춤화된 과정을 찾고 있다면?</p>
+                                        <p class="txt02">지금 로그인 후 관심분야를 등록하시면<br>
+                                            <span>가장 정확한 과정</span>을 추천해 드려요</p>
+                                        <p class="txt03">로그인하기</p>                                        
+                                    </div>
+                                    <div class="img_wrap">
+                                        <span class="img_tag">AI매칭 정확도 90%</span>
+                                        <img src="./images/learninghub/course_img01.jpg" alt="실무 엑셀 배우기">
+                                    </div>
+                                    <div class="txt">
+                                        <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                        <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>                                           
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <div class="h_box">
+                                        <p class="txt01">내게 맞춤화된 과정을 찾고 있다면?</p>
+                                        <p class="txt02">지금 로그인 후 관심분야를 등록하시면<br>
+                                            <span>가장 정확한 과정</span>을 추천해 드려요</p>
+                                        <p class="txt03">로그인하기</p>                                        
+                                    </div>
+                                    <div class="img_wrap">
+                                        <span class="img_tag">AI매칭 정확도 90%</span>
+                                        <img src="./images/learninghub/course_img01.jpg" alt="실무 엑셀 배우기">
+                                    </div>
+                                    <div class="txt">
+                                        <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                        <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>                                           
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+	            </div>
+	        </div>
+            <div class="view_list_wrap pd_style03">
+                <div class="innerSection">
+                    <div class="ld_tit">
+	                    <h3 class="tit">전체 <span>246</span></h3>
+                        <div>
+                            <select class="sel_style03">
+                                <option>전체</option>
+                                <option>최신순</option>
+                                <option>제목순</option>
+                                <option>평점순</option>
+                            </select>
+                        </div>
+	                </div>
+                    <div class="view_list">
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img_wrap">
+                                    <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                </div>
+                                <div class="txt">
+                                    <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                    <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <div class="t_state">                                                
+                                        <span class="t_tag gray">공통</span>
+                                        <span class="t_tag gray">직무</span>
+                                        <span class="t_tag gray">리더십</span>
+                                    </div>                                            
+                                </div>
+                                <!-- hover txt -->
+                                <div class="h_wrap">
+                                    <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                    <ul>
+                                        <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>                                                    
+                                        <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>    
+                                        <li><span>학습시간 :</span> 4시간</li>
+                                        <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
+                                    </ul>
+                                    <p class="h_btn">수강신청</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="btn_wrap tct">
+                        <button type="button" class="btn_style10 moreBtn">더보기</button>
+                    </div>
+                </div>
+            </div>
+	    </article>
+               
+    </main>
+
+    <footer class="footer">
+        <div class="innerSection">
+            <div class="footer_wrap">
+                <h1 class="logo"><img src="./images/learninghub/footer_logo.png" alt="러닝허브 로고"></h1>
+                <div class="f_util">
+                    <ul>
+                        <li><a href="#" title="회사소개 바로가기">회사소개</a></li>
+                        <li><a href="#" title="회사소개 바로가기">이용약관</a></li>
+                        <li><a href="#" title="회사소개 바로가기">개인정보취급방침</a></li>
+                        <li><a href="#" title="회사소개 바로가기">찾아오시는 길</a></li>
+                        <li><a href="#" title="회사소개 바로가기">환불규정</a></li>
+                    </ul>
+                    <div class="f_txt">
+                        <p>(08390)서울특별시 구로구 디지털로 30길 31, 코오롱빌란트2차 703호 ~ 704호</p>
+                        <p>㈜인키움 대표이사 : 박지현 TEL : 02-555-1945 / FAX : 02-2081-1090  사업자등록번호 : 220-81-71637</p>
+                    </div>                    
+                </div>
+                <div class="family_site">
+                    <select class="sel_style01">
+                        <option>관련사이트</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
