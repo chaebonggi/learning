@@ -271,8 +271,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .content_wrap .all_search_wrap .check_result { display: flex; margin-top: 4rem; padding: 2.5rem 2rem 2.5rem 4rem; background: #f2f2f2; justify-content: space-between; align-items: center; } 
 .content_wrap .all_search_wrap .check_result .search_btn { padding: 2.5rem 2.5rem; color: #fff; font-size: 1.6rem; font-weight: bold; background: #ff7000; border-radius: 15px; } 
 .content_wrap .all_search_wrap .keywords_wrap { width: calc(100% - 240px); } 
-.content_wrap .all_search_wrap .keywords_wrap .keywords { word-break: keep-all; } 
-.content_wrap .all_search_wrap .keywords_wrap .selected_keyword { margin-right: 1rem; color: #666666; font-size: 1.3rem; } 
+.content_wrap .all_search_wrap .keywords_wrap .selected_keyword {display: inline-block; margin-right: 1rem; color: #666666; font-size: 1.3rem; } 
 .content_wrap .all_search_wrap .keywords_wrap .selected_keyword:last-child { margin-right: 0; } 
 .content_wrap .all_search_wrap .keywords_wrap .selected_keyword .btn_del { margin-left: 0.5rem; color: #666666; font-size: 1.3rem; border: 0; } 
 .content_wrap .all_search_wrap .btn_area { display: flex; margin-top: 2rem; align-items: flex-end; } 
