@@ -233,6 +233,159 @@
                     </div>
 	            </div>
 	        </div>
+            <div class="course_item">
+                <style>
+                    .content_wrap .course_wrap .tab_course_menu {
+                        display: flex;
+                        border: 1px solid #dadada;
+                        border-radius: 10px;
+                        overflow: hidden;
+                    }
+                    .content_wrap .course_wrap .tab_course_menu li {
+                        flex: 1;
+                    }                    
+                    .content_wrap .course_wrap .tab_course_menu li:not(:first-child) a {
+                        border-left: 1px solid #dadada;
+                    }
+                    .content_wrap .course_wrap .tab_course_menu li.active a {
+                        background: #373737;
+                        color: #fff;
+                        font-weight: bold;
+                    }
+                    .content_wrap .course_wrap .tab_course_menu li a {
+                        display: block;
+                        padding: 1rem 0;
+                        color: #373737;
+                        font-size: 1.8rem;
+                        text-align: center;                        
+                        border-left: 0;
+                    }
+                    .content_wrap .course_wrap .tab_course_cont.active {
+                        display: block;
+                    }
+                    .content_wrap .course_wrap .tab_course_cont {
+                        display: none;
+                    }
+                    .content_wrap .course_wrap .tab_course_cont .tab_cont_area {
+                        display: flex;
+                        margin: 3rem 0;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 20px 0;
+                    }
+                    .content_wrap .course_wrap .tab_course_cont .txt {
+                        color: #373737;
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                    }
+                </style>
+                <div class="innerSection">
+                    <ul class="tab_course_menu">
+                        <li class="active" id="courseMenu_001"><a href="javascript:vode(0);" onclick="chgCourseTab('001');">큐레이션 추천과정</a></li>
+                        <li id="courseMenu_002"><a href="javascript:vode(0);" onclick="chgCourseTab('002');">역량 중심 맞춤과정</a></li>
+                        <li id="courseMenu_003"><a href="javascript:vode(0);" onclick="chgCourseTab('003');">역량 진단기반 과정</a></li>
+                    </ul>
+                    <div class="tab_course_cont active" id="tabCourse_001">
+                        <div class="tab_cont_area">
+                            <p class="txt">관심분야, 학습이력기반의 큐레이션 과정을 추천해 드립니다.</p>
+                            <a href="javascript:vode(0);" class="btn_style11" onclick="openModal('modal1')">관심분야 설정하기</a>
+                        </div>
+                    </div>
+                    <div class="tab_course_cont" id="tabCourse_002">
+                        <div class="tab_cont_area">
+                            <p class="txt">역량 중심 큐레이션 과정을 추천해 드립니다</p>
+                            <a href="javascript:vode(0);" class="btn_style11">직무역량 선택하기</a>
+                        </div>
+                    </div>
+                    <div class="tab_course_cont" id="tabCourse_003">
+                        <div class="tab_cont_area">
+                            <p class="txt">역량진단 기반의 큐레이션 과정을 추천해 드립니다.</p>
+                            <a href="#" class="btn_style11">역량진단 검사하기</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <style>
+                .content_wrap .course_wrap .select_area {
+                    display: flex;
+                    gap: 0 20px;
+                } 
+                .content_wrap .course_wrap .select_area li {
+                    width: 100%;
+                }
+                .content_wrap .course_wrap .select_area li .sel_style03 {
+                    width: 100%;
+                    padding: 1rem 30px 1rem 1rem;
+                    text-align: center;
+                }
+                .content_wrap .course_wrap .seach_area {
+                    width: 100%;
+                    margin-top: 3rem;
+                }
+                .content_wrap .course_wrap .seach_area .input_wrap {
+                    display: flex;
+                    width: 100%;
+                    padding: 10px 10px;
+                    margin-left: 0;
+                    border: 1px solid #373737;
+                    border-radius: 30px;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                }
+                .content_wrap .course_wrap .seach_area .input_wrap input {
+                    width: calc(100% - 30px);
+                    border: 0;
+                    font-size: 1.4rem;
+                    text-align: center;
+                }
+                .content_wrap .course_wrap .seach_area .input_wrap button {
+                    width: 20px;
+                    height: 19px;
+                    background: url(./images/learninghub/ico_seach.png) center / contain no-repeat;
+                    border: 0;
+                    text-indent: -99999px;
+                }
+                .content_wrap .course_wrap .seach_area .input_wrap input:focus {
+                    border: none;
+                    outline: none;
+                }
+            </style>
+            <div class="course_item">
+                <div class="innerSection">
+                    <ul class="select_area">
+                        <li>
+                            <select class="sel_style03">
+                                <option>과정분류</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select class="sel_style03">
+                                <option>대분류</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select class="sel_style03">
+                                <option>중분류</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select class="sel_style03">
+                                <option>소분류</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <div class="seach_area">
+                        <div class="input_wrap h_search">
+                            <input type="text" placeholder="검색어를 입력하세요." id="searchTextPc" name="searchTextPc">
+                            <button type="button">검색</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
             <div class="view_list_wrap pd_style03">
                 <div class="innerSection">
                     <div class="ld_tit">
@@ -550,8 +703,7 @@
                     </div>
                 </div>
             </div>
-	    </article>
-               
+	    </article>               
     </main>
 
     <footer class="footer">
@@ -579,7 +731,144 @@
             </div>
         </div>
     </footer>
-    
+    <style>
+        .popUp.courseList .popTop {
+            padding: 2rem 3rem 0;
+            background: #f9f9f9;
+            border-bottom: 0;
+        }
+        .popUp.courseList .popCont {
+            background: #f9f9f9;
+        }
+        .popUp.courseList .popTop h3 {
+            font-size: 1.8rem;
+            text-align: center
+        }
+        .popUp .p_check_list {
+            display: flex;
+            padding: 2rem;
+            background: #fff;
+            border: 1px solid #dadada;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 10px;
+        }
+        .popUp .p_check_list li {
+            max-width: 85px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .popUp .p_check_list li .checklabel {
+            width: 100%;
+            color: #adadad;
+        }
+        .popUp .p_check_list li .checkbox:checked + label {
+            background: #fff;
+            color: #666666;
+            border-color: #373737;
+        }
+        .popUp.courseList .btn_wrap {
+            margin-top: 3rem;
+        }
+    </style>
+    <!-- 큐레이션 팝업 -->
+    <div class="shadow"></div>
+    <div class="popUp modal1 courseList">
+        <div class="popTop">
+            <h3>관심분야를 설정해 보세요!</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="pc_pd">
+                <ul class="p_check_list">
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check1">
+                            <label class="checklabel" for="check1">#인문</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check2">
+                            <label class="checklabel" for="check2">#공학</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check3">
+                            <label class="checklabel" for="check3">#예체능</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check4">
+                            <label class="checklabel" for="check4">#전시</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check5">
+                            <label class="checklabel" for="check5">#사회</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check6">
+                            <label class="checklabel" for="check6">#자연</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check7">
+                            <label class="checklabel" for="check7">#융복합</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check8">
+                            <label class="checklabel" for="check8">#공연</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check9">
+                            <label class="checklabel" for="check9">#교육</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check10">
+                            <label class="checklabel" for="check10">#의약</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check11">
+                            <label class="checklabel" for="check11">#문화체험</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <input class="checkbox" type="checkbox" name="checkList" id="check12">
+                            <label class="checklabel" for="check12">#기타</label>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn_wrap tct">
+                    <a href="#" class="btn_style01 btn_black02">
+                        관심분야 저장
+                    </a>
+                    <a href="#" class="btn_style01 btn_gray03" onclick="close_pop()">
+                        닫기
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--//팝업-->
 </body>
 
 </html>

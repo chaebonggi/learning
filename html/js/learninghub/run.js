@@ -278,6 +278,12 @@ function chgAlwStdTypeTab(alwstdCode){
     $(".tab_content").hide();
     $("#tabCont_" + alwstdCode).show();
 }
+function chgCourseTab(courseTabCode){
+    $(".content_wrap .course_wrap .tab_course_menu > li").removeClass("active");
+    $(".content_wrap .course_wrap #courseMenu_"+courseTabCode).addClass("active");
+    $(".content_wrap .course_wrap .tab_course_cont").hide();
+    $(".content_wrap .course_wrap #tabCourse_" + courseTabCode).show();
+}
 function fn_srchInit() {
     $('.keywords_wrap .keywords').children().remove();
     $("input:checkbox[name^='ckArea']").prop("checked", false);

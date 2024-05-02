@@ -14,7 +14,7 @@ body { overflow-x: hidden !important; }
 .header_gnb .header_top .seach_area .input_wrap { display: flex; width: 100%; padding: 10px 10px; margin-left: 0; border: 1px solid #373737; border-radius: 30px; justify-content: space-between; box-sizing: border-box; overflow: hidden; } 
 .header_gnb .header_top .seach_area .input_wrap input:focus { border: none; outline: none; } 
 .header_gnb .header_top .seach_area .input_wrap input { width: calc(100% - 30px); border: 0; font-size: 1.4rem; } 
-.header_gnb .header_top .seach_area .input_wrap button { width: 20px; height: 19px; background: url(../../images/hanmi/seach_ico.png) center / contain no-repeat; border: 0; text-indent: -99999px; } 
+.header_gnb .header_top .seach_area .input_wrap button { width: 20px; height: 19px; background: url(../../images/learninghub/ico_seach.png) center / contain no-repeat; border: 0; text-indent: -99999px; } 
  .header_gnb .gnb { display: flex; height: 70px; position: relative; align-items: center; } 
  .header_gnb .gnb .gnb_menu { display: flex; width: calc(100% - 50px); margin-left: auto; justify-content: space-between; } 
  .header_gnb .gnb .gnb_menu > li { display: flex; height: 70px; align-items: center; justify-content: center; width: calc(100% / 7); text-align: center; } 

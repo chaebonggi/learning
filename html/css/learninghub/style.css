@@ -2,6 +2,7 @@
 .pd_style02 { padding: 80px 0 80px; } 
 .pd_style03 { padding: 40px 0 40px; } 
 .btn_style10 { display: inline-block; padding: 0.5rem 5em; background: url(../../images/learninghub/ico_arrow_bottom.png) center right 2rem #373737 no-repeat; color: #fff; font-size: 1.6rem; border-radius: 20px; } 
+.btn_style11 {display: inline-block; padding: 1rem 3em;background: #ff7000; color: #fff; font-size: 1.6rem; font-weight: bold; border-radius: 30px;}
 .btn_black03 { background: #1b1d1f; color: #fff; border: 1px solid #1b1d1f; } 
 .ml10 { margin-left: 10px; } 
 .sel_style01 { width: 238px; padding: 0.5rem 30px 0.5rem 1rem; background: url(../../images/learninghub/ico_arrow_up.png) no-repeat right 1rem center #373737; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 0; border: 1px solid #c9cdd2; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
@@ -206,6 +207,20 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .content_wrap .detail_wrap .etc_cont.clist_slide .swiper-pagination span { width: 14px; height: 14px; } 
 .content_wrap .detail_wrap .etc_cont.clist_slide .swiper-pagination span + span { margin-left: 6px; } 
 .content_wrap .detail_wrap .etc_cont.clist_slide .swiper-pagination-bullet-active { background-color: #f36f20; } 
+.content_wrap .detail_wrap .graph_wrap { display: flex; margin-top: 3rem; justify-content: space-between; } 
+.content_wrap .detail_wrap .graph_wrap .left_box { padding: 30px 0; max-width: 580px; width: 100%; background: #f1f1f1; border-radius: 20px; } 
+.content_wrap .detail_wrap .graph_wrap .right_box { width: 580px; } 
+
+.content_wrap .detail_wrap .graph_wrap .graph_list li { padding: 1rem 1rem 1rem 7rem; color: #666666; font-size: 1.4rem; } 
+.content_wrap .detail_wrap .graph_wrap .graph_list li:nth-child(1) { background: #f1f1f1; color: #373737; font-size: 2rem; font-weight: bold; border-radius: 30px; } 
+.content_wrap .detail_wrap .graph_wrap .graph_list li:nth-child(2) { color: #373737; font-size: 1.8rem; font-weight: 500; } 
+.content_wrap .detail_wrap .graph_wrap .graph_list li:nth-child(3) { color: #373737; font-size: 1.5rem; font-weight: 500; } 
+.content_wrap .detail_wrap .graph_wrap .graph_area { display: flex; width: 100%; height: 180px; margin: 0 auto; box-sizing: border-box; justify-content: center; } 
+.content_wrap .detail_wrap .graph_wrap .graph_area li { flex: 1; position: relative; max-width: 60px; } 
+.content_wrap .detail_wrap .graph_wrap .graph_area li .graph { display: flex; width: 20px; height: 100%; margin: 0 auto; flex-direction: column-reverse; background: transparent; border-radius: 20px; }
+.content_wrap .detail_wrap .graph_wrap .graph_area li .graph .bar { position: relative; background: #f36f20; border-radius: 20px; } 
+.content_wrap .detail_wrap .graph_wrap .graph_area li .graph .bar .g_txt { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); color: #666666; font-size: 1.2rem; } 
+.content_wrap .detail_wrap .graph_wrap .graph_area li .txt { position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); color: #666666; font-size: 1.2rem; text-align: center; white-space: nowrap; } 
 
 .table_list.t_style02 table { border: 1px solid #dadada; } 
 .table_list.t_style02 > table th, .table_list.t_style02 > table td { padding: 1rem 0; border: 1px solid #dadada; border-top: 0; } 
@@ -271,7 +286,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .content_wrap .all_search_wrap .check_result { display: flex; margin-top: 4rem; padding: 2.5rem 2rem 2.5rem 4rem; background: #f2f2f2; justify-content: space-between; align-items: center; } 
 .content_wrap .all_search_wrap .check_result .search_btn { padding: 2.5rem 2.5rem; color: #fff; font-size: 1.6rem; font-weight: bold; background: #ff7000; border-radius: 15px; } 
 .content_wrap .all_search_wrap .keywords_wrap { width: calc(100% - 240px); } 
-.content_wrap .all_search_wrap .keywords_wrap .selected_keyword {display: inline-block; margin-right: 1rem; color: #666666; font-size: 1.3rem; } 
+.content_wrap .all_search_wrap .keywords_wrap .selected_keyword { display: inline-block; margin-right: 1rem; color: #666666; font-size: 1.3rem; } 
 .content_wrap .all_search_wrap .keywords_wrap .selected_keyword:last-child { margin-right: 0; } 
 .content_wrap .all_search_wrap .keywords_wrap .selected_keyword .btn_del { margin-left: 0.5rem; color: #666666; font-size: 1.3rem; border: 0; } 
 .content_wrap .all_search_wrap .btn_area { display: flex; margin-top: 2rem; align-items: flex-end; } 
