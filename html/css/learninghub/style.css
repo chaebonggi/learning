@@ -370,15 +370,38 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
  .main_wrap .service_wrap { display: none; } 
  .main_wrap .notice_wrap .notice_area { display: block; } 
  .main_wrap .notice_wrap .notice { width: 100%; } 
+ .clist_slide .item a:hover::before { content: none; } 
+ .clist_slide .item a:hover .h_wrap { display: none; } 
  
  .main_wrap .notice_wrap .notice_banner { max-width: 100%; margin-top: 2rem; text-align: center; } 
  .main_wrap .notice_wrap .notice_banner .txt_area { display: inline-block; padding-left: 100px; } 
+
+ /* 팝업 */
+ .popUp.setUp .pc_pd {
+    display: block;
+ }
+ .popUp.setUp .com_area {
+    height: auto;
+    flex-direction: initial;
+ }
+ .popUp.setUp .com_area li {
+    width: 50%;    
+ }
+ .popUp.setUp .popCont {
+    min-height: calc(100vh - 200px);
+ }
+ .popUp.setUp .popBottom a {
+    margin: 2rem auto 0;
+    position: static;
+    transform: none;
+}
+
  }
 
 @media all and (max-width:640px){
  .pd_style01 { padding: 30px 0 30px; } 
  .pd_style02 { padding: 30px 0 30px; } 
- .main_wrap .main_visual .swiper-control { height: 24px; } 
+ .main_wrap .main_visual .swiper-control { display: none; } 
  .hot_trend .cont_tabs { margin-bottom: 2rem; justify-content: initial; flex-wrap: initial; white-space: nowrap; overflow-x: auto; } 
  .main_wrap .clist_slide .slide_wrap { display: block; } 
  .main_wrap .clist_slide .cont_wrap { width: 100%; margin-bottom: 2rem; text-align: center; word-break: keep-all; } 
