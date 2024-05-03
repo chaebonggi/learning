@@ -234,52 +234,7 @@
 	            </div>
 	        </div>
             <div class="course_item">
-                <style>
-                    .content_wrap .course_wrap .tab_course_menu {
-                        display: flex;
-                        border: 1px solid #dadada;
-                        border-radius: 10px;
-                        overflow: hidden;
-                    }
-                    .content_wrap .course_wrap .tab_course_menu li {
-                        flex: 1;
-                    }                    
-                    .content_wrap .course_wrap .tab_course_menu li:not(:first-child) a {
-                        border-left: 1px solid #dadada;
-                    }
-                    .content_wrap .course_wrap .tab_course_menu li.active a {
-                        background: #373737;
-                        color: #fff;
-                        font-weight: bold;
-                    }
-                    .content_wrap .course_wrap .tab_course_menu li a {
-                        display: block;
-                        padding: 1rem 0;
-                        color: #373737;
-                        font-size: 1.8rem;
-                        text-align: center;                        
-                        border-left: 0;
-                    }
-                    .content_wrap .course_wrap .tab_course_cont.active {
-                        display: block;
-                    }
-                    .content_wrap .course_wrap .tab_course_cont {
-                        display: none;
-                    }
-                    .content_wrap .course_wrap .tab_course_cont .tab_cont_area {
-                        display: flex;
-                        margin: 3rem 0;
-                        justify-content: space-between;
-                        align-items: center;
-                        flex-wrap: wrap;
-                        gap: 20px 0;
-                    }
-                    .content_wrap .course_wrap .tab_course_cont .txt {
-                        color: #373737;
-                        font-size: 1.8rem;
-                        font-weight: 500;
-                    }
-                </style>
+
                 <div class="innerSection">
                     <ul class="tab_course_menu">
                         <li class="active" id="courseMenu_001"><a href="javascript:vode(0);" onclick="chgCourseTab('001');">큐레이션 추천과정</a></li>
@@ -295,7 +250,7 @@
                     <div class="tab_course_cont" id="tabCourse_002">
                         <div class="tab_cont_area">
                             <p class="txt">역량 중심 큐레이션 과정을 추천해 드립니다</p>
-                            <a href="javascript:vode(0);" class="btn_style11">직무역량 선택하기</a>
+                            <a href="javascript:vode(0);" class="btn_style11" onclick="openModal('modal2')">역량항목 선택하기</a>
                         </div>
                     </div>
                     <div class="tab_course_cont" id="tabCourse_003">
@@ -307,52 +262,7 @@
                 </div>
                 
             </div>
-            <style>
-                .content_wrap .course_wrap .select_area {
-                    display: flex;
-                    gap: 0 20px;
-                } 
-                .content_wrap .course_wrap .select_area li {
-                    width: 100%;
-                }
-                .content_wrap .course_wrap .select_area li .sel_style03 {
-                    width: 100%;
-                    padding: 1rem 30px 1rem 1rem;
-                    text-align: center;
-                }
-                .content_wrap .course_wrap .seach_area {
-                    width: 100%;
-                    margin-top: 3rem;
-                }
-                .content_wrap .course_wrap .seach_area .input_wrap {
-                    display: flex;
-                    width: 100%;
-                    padding: 10px 10px;
-                    margin-left: 0;
-                    border: 1px solid #373737;
-                    border-radius: 30px;
-                    justify-content: space-between;
-                    box-sizing: border-box;
-                    overflow: hidden;
-                }
-                .content_wrap .course_wrap .seach_area .input_wrap input {
-                    width: calc(100% - 30px);
-                    border: 0;
-                    font-size: 1.4rem;
-                    text-align: center;
-                }
-                .content_wrap .course_wrap .seach_area .input_wrap button {
-                    width: 20px;
-                    height: 19px;
-                    background: url(./images/learninghub/ico_seach.png) center / contain no-repeat;
-                    border: 0;
-                    text-indent: -99999px;
-                }
-                .content_wrap .course_wrap .seach_area .input_wrap input:focus {
-                    border: none;
-                    outline: none;
-                }
-            </style>
+
             <div class="course_item">
                 <div class="innerSection">
                     <ul class="select_area">
@@ -731,47 +641,7 @@
             </div>
         </div>
     </footer>
-    <style>
-        .popUp.courseList .popTop {
-            padding: 2rem 3rem 0;
-            background: #f9f9f9;
-            border-bottom: 0;
-        }
-        .popUp.courseList .popCont {
-            background: #f9f9f9;
-        }
-        .popUp.courseList .popTop h3 {
-            font-size: 1.8rem;
-            text-align: center
-        }
-        .popUp .p_check_list {
-            display: flex;
-            padding: 2rem;
-            background: #fff;
-            border: 1px solid #dadada;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            border-radius: 10px;
-        }
-        .popUp .p_check_list li {
-            max-width: 85px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .popUp .p_check_list li .checklabel {
-            width: 100%;
-            color: #adadad;
-        }
-        .popUp .p_check_list li .checkbox:checked + label {
-            background: #fff;
-            color: #666666;
-            border-color: #373737;
-        }
-        .popUp.courseList .btn_wrap {
-            margin-top: 3rem;
-        }
-    </style>
+
     <!-- 큐레이션 팝업 -->
     <div class="shadow"></div>
     <div class="popUp modal1 courseList">
@@ -780,7 +650,7 @@
             <a href="#" class="close" onclick="close_pop()">닫기</a>
         </div>
         <div class="popCont">
-            <div class="pc_pd">
+            <div class="p_check_wrap">
                 <ul class="p_check_list">
                     <li>
                         <div class="item">
@@ -854,21 +724,185 @@
                             <label class="checklabel" for="check12">#기타</label>
                         </div>
                     </li>
-                </ul>
-                <div class="btn_wrap tct">
-                    <a href="#" class="btn_style01 btn_black02">
-                        관심분야 저장
-                    </a>
-                    <a href="#" class="btn_style01 btn_gray03" onclick="close_pop()">
-                        닫기
-                    </a>
-                    
-                </div>
+                </ul>                
+            </div>
+            <div class="btn_wrap tct">
+                <a href="#" class="btn_style01 btn_black02">
+                    관심분야 저장
+                </a>
+                <a href="#" class="btn_style01 btn_gray03" onclick="close_pop()">
+                    닫기
+                </a>
+                
             </div>
         </div>
 
     </div>
-    <!--//팝업-->
+    <!--//큐레이션 팝업-->
+     <!-- 역량항목 팝업 -->
+     <div class="popUp modal2 courseList">
+         <div class="popTop">
+             <h3>역량 항목을 설정해 보세요!</h3>
+             <a href="#" class="close" onclick="close_pop()">닫기</a>
+         </div>
+         <div class="popCont">
+            <div class="p_check_wrap">
+                <dl>
+                    <dt>공통역량</dt>
+                    <dd>
+                        <ul class="p_check_list">
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB1">
+                                    <label class="checklabel" for="checkB1">#개인역량</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB2">
+                                    <label class="checklabel" for="checkB2">#그룹역량</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB3">
+                                    <label class="checklabel" for="checkB3">#OA역량</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB4">
+                                    <label class="checklabel" for="checkB4">#인문</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB5">
+                                    <label class="checklabel" for="checkB5">#외국어</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="flex_two">
+                    <dt>직무역량</dt>
+                    <dd>
+                        <ul class="p_check_list flex_box">
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB6">
+                                    <label class="checklabel" for="checkB6">#경영</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB7">
+                                    <label class="checklabel" for="checkB7">#영업</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB8">
+                                    <label class="checklabel" for="checkB8">#경제</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB9">
+                                    <label class="checklabel" for="checkB9">#서비스</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB10">
+                                    <label class="checklabel" for="checkB10">#디지털</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB11">
+                                    <label class="checklabel" for="checkB11">#IT</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB12">
+                                    <label class="checklabel" for="checkB12">#경영지원</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB13">
+                                    <label class="checklabel" for="checkB13">#업직종</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB14">
+                                    <label class="checklabel" for="checkB14">#마케팅</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB15">
+                                    <label class="checklabel" for="checkB15">#자격증</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>리더십</dt>
+                    <dd>
+                        <ul class="p_check_list">
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB16">
+                                    <label class="checklabel" for="checkB16">#계층별</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB17">
+                                    <label class="checklabel" for="checkB17">#역량별</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB18">
+                                    <label class="checklabel" for="checkB18">#리더십</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB19">
+                                    <label class="checklabel" for="checkB19">#사례</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <input class="checkbox" type="checkbox" name="checkListB" id="checkB20">
+                                    <label class="checklabel" for="checkB20">#기타</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+                
+                 
+            <div class="btn_wrap tct">
+                <a href="#" class="btn_style01 btn_black02">
+                    역량항목 저장
+                </a>
+                <a href="#" class="btn_style01 btn_gray03" onclick="close_pop()">
+                    닫기
+                </a>                     
+            </div>
+         </div>
+ 
+     </div>
+     <!--//역량항목 팝업-->
 </body>
 
 </html>

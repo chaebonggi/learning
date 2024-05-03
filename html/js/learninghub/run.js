@@ -3,6 +3,20 @@ $(document).ready(function() {
         event.stopPropagation();
         $('.header_gnb').toggleClass("open");
     });
+    $('.header .m_all_btn .m_menu_btn').click(function () {
+        $('.header .m_menu_wrap').addClass('show');
+        $('body').addClass('not_scroll');
+    });
+    $('.header .m_menu_wrap .m_menu_bottom .m_menu_list > li > a').click(function () {
+        $(this).parent().toggleClass('active');
+    });
+    
+    $('.header .m_menu_wrap .m_close_btn').click(function () {
+        $('.header .m_menu_wrap').removeClass('show');
+        $('body').removeClass('not_scroll');
+    });
+
+
     var swiper = new Swiper(".recommend_cont .con_list", {
         spaceBetween: 20,
         slidesPerView: 3,
@@ -17,12 +31,15 @@ $(document).ready(function() {
         //     el: '.recommend_cont .swiper-pagination',
         //     type: 'bullets',
         // },
-        // breakpoints: { 
-        //     1024: {
-        //         slidesPerView: 'auto',
-        //         spaceBetween: 10,
-        //     },
-        // }
+        breakpoints: { 
+            1024: {
+                slidesPerView: 2,
+            },
+            480: {
+                slidesPerView: 1.5,
+                spaceBetween: 10,
+            },
+        }
     });
     var swiper = new Swiper(".banner_wrap .con_list", {
         spaceBetween: 20,
@@ -54,12 +71,20 @@ $(document).ready(function() {
         //     el: '.curation_cont .swiper-pagination',
         //     type: 'bullets',
         // },
-        // breakpoints: { 
-        //     1024: {
-        //         slidesPerView: 'auto',
-        //         spaceBetween: 10,
-        //     },
-        // }
+        breakpoints: { 
+            1024: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            },
+            860: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+            640: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+        }
     });
     var swiper = new Swiper(".curation_cont .con_list", {
         spaceBetween: 20,
@@ -75,12 +100,15 @@ $(document).ready(function() {
         //     el: '.curation_cont .swiper-pagination',
         //     type: 'bullets',
         // },
-        // breakpoints: { 
-        //     1024: {
-        //         slidesPerView: 'auto',
-        //         spaceBetween: 10,
-        //     },
-        // }
+        breakpoints: { 
+            1024: {
+                slidesPerView: 2,
+            },
+            480: {
+                slidesPerView: 1.5,
+                spaceBetween: 10,
+            },
+        }
     });
     var swiper = new Swiper(".etc_cont .con_list", {
         spaceBetween: 20,
@@ -138,16 +166,6 @@ $(document).ready(function() {
             console.error("Pause or resume button element not found!");
         }
     });
-    // const pauseFunc = ()=>{
-    //     mainSwiper.autoplay.stop()
-    //     swiperEl.classList.add('swiper-paused');
-    // }
-    // const resumeFunc = ()=>{
-    //     mainSwiper.autoplay.start();
-    //     swiperEl.classList.remove('swiper-paused');
-    // }
-    // pauseEl.addEventListener('click', pauseFunc);
-    // resumeEl.addEventListener('click', resumeFunc);
 
     var swiper = new Swiper('.hot_trend .con_list', {
         initialSlide: 0,
@@ -166,12 +184,16 @@ $(document).ready(function() {
     //      el: '.hot_trend .swiper-pagination',
     //      type: 'bullets',
     //  },
-    //  breakpoints: {
-    //      1024: {
-    //          slidesPerView: 'auto',
-    //          spaceBetween: 10,
-    //      },
-    //  },
+     breakpoints: {
+         1024: {
+             slidesPerView: 3,
+             spaceBetween: 10,
+         },
+         480: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+        },
+     },
     });
 
     // 과정상세 리뷰 더보기 버튼
