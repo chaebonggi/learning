@@ -412,7 +412,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp.setUp .pc_pd { display: block; } 
 .popUp.setUp .com_area { height: auto; flex-direction: initial; } 
 .popUp.setUp .com_area li { width: 50%; } 
-.popUp.setUp .popCont { min-height: calc(100vh - 200px); } 
+/* .popUp.setUp .popCont { min-height: calc(100vh - 200px); }  */
 .popUp.setUp .btn_wrap a { width: 120px; max-width: 120px; } 
 .popUp.setUp .popBottom a { margin: 2rem auto 0; position: static; transform: none; } 
 .popUp.setUp .popBottom .txt { font-size: 1.6rem; word-break: keep-all; } 
