@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브_나의강의실_학습목록(학습 완료)</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/00001/00001.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/chosen.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/excel-bootstrap-table-filter-style.css">
+
+	
+	<script src="./js/front/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="./js/front/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="./js/front/front/jquery.mCustomScrollbar.js"></script>
+	<script src="./js/front/front/imgLiquid/0.9.944/imgLiquid-min.js" integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./js/front/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
+	<script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
+	<script src="./js/front/chosen.jquery.min.js"></script>
+	<!-- <script src="./js/front/front/run.js"></script> -->
+    <script src="./js/learninghub/run.js"></script>
+	<script src="./js/front/file/forms.js"></script>
+	<script src="./js/front/solution/solution_ui.js"></script>
+	<script src="./js/front/solution/custome.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <header class="header header_gnb">
+		<div class="gnb_util">
+            <div class="innerSection">
+                <div class="util_menu">
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">강사지원</a></li>
+                        <li><a href="#">HRDHREX</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>     
+        <div class="innerSection">
+            <div class="header_top">
+                <h1 class="logo"><a href=""><img src="./images/learninghub/logo.png" alt="러닝허브 로고"></a></h1>
+                <div class="m_all_btn">
+                    <button type="button" class="m_menu_btn">
+                        <span></span>
+                    </button>
+                </div>
+                <div class="seach_area">
+                    <div class="input_wrap h_search">
+                        <input type="text" placeholder="검색어를 입력하세요." id="searchTextPc" name="searchTextPc">
+                        <button type="button">검색</button>
+                    </div>
+                </div>
+            </div>
+            <nav class="gnb">
+                <div class="gnb_btn">
+                    <button type="button" class="all_gnb_menu">
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="gnb_menu">
+                    <li><a href="#">AI맞춤학습</a></li>
+                    <li><a href="#">전체과정</a></li>
+                    <li><a href="#">마이크로러닝</a></li>
+                    <li><a href="#">지식센터</a></li>
+                    <li><a href="#">역량진단</a></li>
+                    <li><a href="#">나의강의실</a></li>
+                    <li><a href="#">학습지원센터</a></li>
+                </ul>
+                <div class="lnb">
+                    <div class="lnb_menu">
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">큐레이션 추천과정</a></li>
+                                <li><a href="#">역량기반 맞춤과정</a></li>
+                                <li><a href="#">역량진단 기반과정</a></li>                                
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">공통역량</a></li>
+                                <li><a href="#">직무역량</a></li>
+                                <li><a href="#">리더십역량</a></li>
+                                <li><a href="#">외국어</a></li>
+                                <li><a href="#">자격</a></li>
+                                <li><a href="#">인문교양</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">공통과정</a></li>
+                                <li><a href="#">공통역량</a></li>
+                                <li><a href="#">직무역량</a></li>
+                                <li><a href="#">리더십역량</a></li>
+                                <li><a href="#">외국어</a></li>
+                                <li><a href="#">자격</a></li>
+                                <li><a href="#">인문교양</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">지식센터</a></li>
+                                <li><a href="#">러닝캐스트</a></li>
+                                <li><a href="#">지식캐스트</a></li>
+                                <li><a href="#">직립보행/나취취</a></li>
+                                <li><a href="#">지식창고</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">자가진단</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">나의 강의실</a></li>
+                                <li><a href="#">수강신청현황</a></li>
+                                <li><a href="#">학습이력현황</a></li>
+                                <li><a href="#">마일리지 조회</a></li>
+                                <li><a href="#">개인정보수정</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">학습지원센터</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주하는질문</a></li>
+                                <li><a href="#">묻고답하기</a></li>
+                                <li><a href="#">원격지원</a></li>
+                                <li><a href="#">학습방법안내</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="m_menu_wrap">
+            <div class="m_menu_top">
+                <h1 class="logo">
+					<img src="./images/learninghub/logo.png" alt="러닝허브">
+				</h1>
+                <a href="#" class="m_close_btn"><span class="ir-text">닫기</span></a>
+            </div>
+            <div class="m_menu_member">
+                <ul>					
+                    <li class="m_login">
+                        <a href="#" class="btn_black01 btn_style04">로그인</a>
+                    </li>
+                    <li class="m_join">
+                        <a href="#" class="btn_black02 btn_style04 ml10">회원가입</a>
+                    </li>                
+                </ul>
+            </div>
+            <div class="m_menu_bottom">
+                <ul class="m_menu_list">
+                    <li>
+                        <a href="javascript:void(0);">AI맞춤학습</a>
+                        <ul>
+                            <li><a href="#">큐레이션 추천과정</a></li>
+                            <li><a href="#">역량기반 맞춤과정</a></li>
+                            <li><a href="#">역량진단 기반과정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">전체과정</a>
+                        <ul>
+                            <li><a href="#">공통역량</a></li>
+                            <li><a href="#">직무역량</a></li>
+                            <li><a href="#">리더십역량</a></li>
+                            <li><a href="#">외국어</a></li>
+                            <li><a href="#">자격</a></li>
+                            <li><a href="#">인문교약</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">마이크로러닝</a>
+                        <ul>
+                            <li><a href="#">공통과정</a></li>
+                            <li><a href="#">공통역량</a></li>
+                            <li><a href="#">직무역량</a></li>
+                            <li><a href="#">리더십역량</a></li>
+                            <li><a href="#">외국어</a></li>
+                            <li><a href="#">자격</a></li>
+                            <li><a href="#">인문교양</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">지식센터</a>
+                        <ul>
+                            <li><a href="#">지식센터</a></li>
+                            <li><a href="#">러닝캐스트</a></li>
+                            <li><a href="#">지식캐스트</a></li>
+                            <li><a href="#">직립보행/나취취</a></li>
+                            <li><a href="#">지식창고</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">역량진단</a>
+                        <ul>
+                            <li><a href="#">자가진단</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">나의강의실</a>
+                        <ul>
+                            <li><a href="#">나의 강의실</a></li>
+                            <li><a href="#">수강신청현황</a></li>
+                            <li><a href="#">학습이력현황</a></li>
+                            <li><a href="#">마일리지 조회</a></li>
+                            <li><a href="#">개인정보수정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">학습지원센터</a>
+                        <ul>
+                            <li><a href="#">학습지원센터</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주하는질문</a></li>
+                            <li><a href="#">묻고답하기</a></li>
+                            <li><a href="#">원격지원</a></li>
+                            <li><a href="#">학습방법안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</header>
+    <style>
+        
+    </style>
+    <main class="content_wrap bg_gray">
+        <article class="myclass_wrap">
+            <div class="innerSection pd_style03">                    
+                <div class="content_area">
+                    <div class="sub_menu">
+                        <h3 class="sub_tit">나의 강의실</h3>
+                        <div class="member_info">
+                            <p>김성근 부장</p>
+                            <p>㈜인키움 bpo사업팀</p>
+                            <a href="#" class="sub_btn">개인정보 수정</a>
+                        </div>
+                        <ul class="myclass_list">
+                            <li>
+                                <a href="#"><span class="icon icon01">Dashboard</span></a>
+                            </li>
+                            <li class="active">
+                                <a href="#"><span class="icon icon02">학습목록</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon icon03">학습후기</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon icon04">설문함</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon icon05">쪽지함</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon icon06">수강신청현황</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon icon07">학습이력현황</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon icon08">개인정보수정</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contain">
+                        <h3 class="con_tit">학습목록</h3>
+                        <ul class="tab_menu_list">
+                            <li>
+                                <a href="./러닝허브_나의강의실_학습목록(신청대기과정).html">신청대기 과정</a>
+                            </li>
+                            <li>
+                                <a href="./러닝허브_나의강의실_학습목록(학습중인과정).html">학습중인 과정</a>
+                            </li>
+                            <li class="active">
+                                <a href="./러닝허브_나의강의실_학습목록(학습완료).html">학습 완료</a>
+                            </li>
+                            <li>
+                                <a href="./러닝허브_나의강의실_학습목록(학습취소).html">학습 취소</a>
+                            </li>
+                        </ul>
+                        <div class="search_wrap">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button type="button" class="search_btn">검색</button>
+                        </div>
+                        <div class="tab_list_wrap">
+                            <div class="tab_content">
+                                <div class="cont_top">
+                                    <p>전체 <span>3건</span></p>
+                                </div>
+                                <ul class="cont_list">
+                                    <li class="item">
+                                        <p class="list_tit">이러닝</p>
+                                        <div class="progress_cont">
+                                            <p class="p_tit">업무에 바로 활용하는 물리 보안 실무</p>
+                                            <div class="prgs_area">
+                                                <p>진도율</p>
+                                                <div class="prgs_bar">
+                                                    <span style="width: 10%"></span>
+                                                </div>
+                                                <p>30%</p>
+                                            </div>
+                                        </div>
+                                        <div class="list_info">
+                                            <dl>
+                                                <dt>학습시간</dt>
+                                                <dd>1118.0주(0시간)</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>교육시간</dt>
+                                                <dd>2024.04.01 ~ 2024.12.31</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>교육분류</dt>
+                                                <dd>공통/기술능력/기술이해</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>수강종료일</dt>
+                                                <dd>2024.04.03</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="list_btn">
+                                            <p class="txt bg_orange">정상 수료</p>
+                                            <button type="button" class="btn_type02 btn_green02">복습</button>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <p class="list_tit">이러닝</p>
+                                        <div class="progress_cont">
+                                            <p class="p_tit">업무에 바로 활용하는 물리 보안 실무</p>
+                                            <div class="prgs_area">
+                                                <p>진도율</p>
+                                                <div class="prgs_bar">
+                                                    <span style="width: 10%"></span>
+                                                </div>
+                                                <p>30%</p>
+                                            </div>
+                                        </div>
+                                        <div class="list_info">
+                                            <dl>
+                                                <dt>학습시간</dt>
+                                                <dd>1118.0주(0시간)</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>교육시간</dt>
+                                                <dd>2024.04.01 ~ 2024.12.31</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>교육분류</dt>
+                                                <dd>공통/기술능력/기술이해</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>수강종료일</dt>
+                                                <dd>2024.04.03</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="list_btn">
+                                            <p class="txt">미수료</p>
+                                            <button type="button" class="btn_type02 btn_green02">복습</button>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <p class="list_tit">이러닝</p>
+                                        <div class="progress_cont">
+                                            <p class="p_tit">업무에 바로 활용하는 물리 보안 실무</p>
+                                            <div class="prgs_area">
+                                                <p>진도율</p>
+                                                <div class="prgs_bar">
+                                                    <span style="width: 10%"></span>
+                                                </div>
+                                                <p>30%</p>
+                                            </div>
+                                        </div>
+                                        <div class="list_info">
+                                            <dl>
+                                                <dt>학습시간</dt>
+                                                <dd>1118.0주(0시간)</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>교육시간</dt>
+                                                <dd>2024.04.01 ~ 2024.12.31</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>교육분류</dt>
+                                                <dd>공통/기술능력/기술이해</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>수강종료일</dt>
+                                                <dd>2024.04.03</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="list_btn">
+                                            <p class="txt">미수료</p>
+                                            <button type="button" class="btn_type02 btn_green02">복습</button>
+                                        </div>
+                                    </li>
+             
+                                </ul>
+                                <!-- 페이징 -->
+                                <div>
+                                    <ul class="paging_wrap">
+                                        <li class="first arrow"><a href="#">처음페이지로</a></li>
+                                        <li class="prev arrow"><a href="#">이전페이지로</a></li>
+                                        <li class="active">
+                                            <a href="#">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">5</a>
+                                        </li>
+                                        <li class="next arrow">
+                                            <a href="#">다음페이지로</a>
+                                        </li>
+                                        <li class="last arrow">
+                                            <a href="#">마지막페이지로</a>
+                                        </li>
+                                    </ul>
+        
+                                    <!--모바일 페이징-->
+                                    <div class="mo_paging">
+                                        <a href="#" class="prev">이전페이지로</a>
+                                        <p>
+                                            <span class="cut">1</span>/
+                                            <span>10</span>
+                                        </p>
+                                        <a href="#" class="next">다음페이지로</a>
+                                    </div>
+                                    <!--//모바일 페이징-->
+
+                                </div>
+                                <!-- //페이징 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+	    </article>               
+    </main>
+
+    <footer class="footer">
+        <div class="innerSection">
+            <div class="footer_wrap">
+                <h1 class="logo"><img src="./images/learninghub/footer_logo.png" alt="러닝허브 로고"></h1>
+                <div class="f_util">
+                    <ul>
+                        <li><a href="#" title="회사소개 바로가기">회사소개</a></li>
+                        <li><a href="#" title="회사소개 바로가기">이용약관</a></li>
+                        <li><a href="#" title="회사소개 바로가기">개인정보취급방침</a></li>
+                        <li><a href="#" title="회사소개 바로가기">찾아오시는 길</a></li>
+                        <li><a href="#" title="회사소개 바로가기">환불규정</a></li>
+                    </ul>
+                    <div class="f_txt">
+                        <p>(08390)서울특별시 구로구 디지털로 30길 31, 코오롱빌란트2차 703호 ~ 704호</p>
+                        <p>㈜인키움 대표이사 : 박지현 TEL : 02-555-1945 / FAX : 02-2081-1090  사업자등록번호 : 220-81-71637</p>
+                    </div>                    
+                </div>
+                <div class="family_site">
+                    <select class="sel_style01">
+                        <option>관련사이트</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
