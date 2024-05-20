@@ -345,7 +345,7 @@
 .popUp.messagePop { border-radius: 20px; overflow: hidden; } 
 .popUp.messagePop .popTop { padding: 1.5rem 2.5rem; background: #f36f20; border-bottom: 0; } 
 .popUp.messagePop .popTop h3 { font-size: 1.8rem; color: #fff; font-weight: bold; } 
-.popUp.messagePop .popTop .close { background: url(../../images/learninghub/ico_close02.png) no-repeat; background-size: contain;} 
+.popUp.messagePop .popTop .close { background: url(../../images/learninghub/ico_close02.png) no-repeat; background-size: contain; } 
 .popUp.messagePop .popCont { padding: 2rem 3rem; } 
 .popUp.messagePop .popCont .contTop { display: flex; align-items: center; } 
 .popUp.messagePop .popCont .contTop .txt { color: #666666; font-size: 1.4rem; flex-shrink: 0; } 
@@ -353,7 +353,10 @@
 .popUp.messagePop .popCont .contTop .search_wrap input { width: 100%; font-family: inherit; padding: 0.5rem 1.5rem; background: #f9f9f9; font-size: 1.4rem; border-radius: 5px; box-sizing: border-box; } 
 .popUp.messagePop .popCont .contTop button { margin-left: auto; } 
 .popUp.messagePop .popCont textarea { width: 100%; height: 110px; margin-top: 2rem; padding: 1.5rem; font-size: 1.4rem; border: 1px solid #f5f5f5; box-sizing: border-box; resize: none; } 
+.popUp .popCont input::placeholder { color: #b6b6b6; font-size: 1.4rem; } 
+.popUp .popCont textarea::placeholder { color: #b6b6b6; font-size: 1.4rem; } 
 .popUp.messagePop .popCont .btn_wrap { margin-top: 2rem; } 
+
 
 /* 나의 강의실 */
 .content_area { display: flex; align-items: flex-start; justify-content: space-between; } 
@@ -634,6 +637,5 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .content_area .write_list .item .cont { width: 100%; } 
 .content_area .write_list .item textarea { height: 100px; } 
 .btn_wrap { margin-top: 3rem; } 
-
 
 }
