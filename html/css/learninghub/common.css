@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100; 300; 400; 500; 700; 900&display=swap');@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');body,html { font-family: 'Noto Sans KR',sans-serif; color: #1b1d1f; overflow-x: initial } 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100; 300; 400; 500; 700; 900&display=swap'); @import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css'); body,html { font-family: 'Noto Sans KR',sans-serif; color: #1b1d1f; overflow-x: initial } 
 html { font-size: 10px; overflow-x: hidden; } 
 body { font-size: 1.6rem } 
 .txtUnder { text-decoration: underline } 
@@ -92,11 +92,15 @@ td.txtCut1 { display: table-cell }
 .pd_style03 { padding: 40px 0 40px; } 
 .ml10 { margin-left: 10px; } 
 .bg_gray { background-color: #f5f5f5; } 
+.bg_white { background-color: #fff !important; } 
 .sel_style01 { width: 238px; padding: 0.5rem 30px 0.5rem 1rem; background: url(../../images/learninghub/ico_arrow_up.png) no-repeat right 1rem center #373737; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 0; border: 1px solid #c9cdd2; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
 .sel_style02 { width: 200px; padding: 0.5rem 30px 0.5rem 1rem; background: url(../../images/learninghub/ico_arrow02_bottom.png) no-repeat right 1rem center #fff; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 0; border: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
 .sel_style03 { width: 120px; padding: 0.5rem 30px 0.5rem 2rem; background: url(../../images/learninghub/ico_arrow02_bottom.png) no-repeat right 1rem center #f9f9f9; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 5px; border: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
+.sel_style04 { width: 140px; padding: 1rem 30px 1rem 2rem; background: url(../../images/learninghub/ico_arrow02_bottom.png) no-repeat right 1rem center #f9f9f9; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 5px; border: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
+.sel_style05 { width: 100%; margin-left: 1rem; padding: 1rem 30px 1rem 2rem; background: url(../../images/learninghub/ico_arrow02_bottom.png) no-repeat right 1rem center #f9f9f9; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 5px; border: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
 
 /* btn_style */
+.table_type01 .btn_style03[disabled] { cursor: initial; } 
 .btn_wrap a { display: inline-block; } 
 .btn_wrap a + a { margin-left: 5px } 
 .btn_style01 { padding: 1rem 1rem; width: 120px; border-radius: 10px; box-sizing: border-box; font-size: 1.6rem; text-align: center; box-sizing: border-box } 
@@ -108,6 +112,7 @@ td.txtCut1 { display: table-cell }
 .btn_style07 { padding: 0.3rem 2rem; border-radius: 10px } 
 .btn_style08 { display: inline-block; min-width:120px; text-align: center; padding: 1rem; border-radius: 10px; box-sizing: border-box } 
 .btn_style09 { padding: 0.3rem 1rem; border-radius: 5px; display: inline-block; font-size: 1.4rem } 
+.btn_style12 { display: inline-block; min-width: 70px; font-size: 1.2rem; padding: 0.4rem 0; border-radius: 5px; box-sizing: border-box; text-align: center; } 
 .btn_gray01 { color: #9ea4aa; border: 1px solid #9ea4aa; background: #fff } 
 .btn_gray01.hover:hover,
 .btn_gray01.hover:active,
@@ -115,15 +120,17 @@ td.txtCut1 { display: table-cell }
 .btn_gray02 { color: #72787f; border: 1px solid #72787f; } 
 .btn_gray03 { background: #9ea4aa; color: #fff } 
 .btn_gray04 { background: #454c53; color: #fff } 
-.btn_gray05 { background: #72787f; color: #fff } 
+.btn_gray05 { background: #cfcfcf; color: #fff } 
 .btn_gray06 { background: #e8ebed; color: #454c53 } 
 .btn_gray07 { background: #c9cdd2; color: #454c53 } 
 .btn_gray08 { border: 1px solid #c9cdd2; color: #9ea4aa; background: #fff } 
 .btn_gray09 { background: #c9cdd2; color: #fff; } 
+.btn_gray10 { border: 1px solid #f2f2f2; color: #666666; background: #f2f2f2 } 
 .btn_orange { background: #f36f20; color: #fff } 
 .btn_white { border: 1px solid #ddd; color: #333; background: #fff } 
 .btn_blue { color: #36ace3; border: 1px solid #36ace3 } 
 .btn_blue02 { background: #3a86cd; color: #fff } 
+.btn_line_orange { background-color: #fff; color: #f36f20; border: 1px solid #f36f20; } 
 .btn_blue.hover:hover,
 .btn_blue.hover:active,
 .btn_blue.hover:focus { background: #36ace3; color: #fff } 
@@ -134,11 +141,11 @@ td.txtCut1 { display: table-cell }
 .btn_style11 { display: inline-block; padding: 1rem 3em; background: #ff7000; color: #fff; font-size: 1.6rem; font-weight: bold; border-radius: 30px; } 
 .btn_black03 { background: #1b1d1f; color: #fff; border: 1px solid #1b1d1f; } 
 button { background: inherit; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer; } 
-button:focus, input, select { border: none; outline: none; } 
+input, select { border: none; outline: none; } 
 button, select { cursor: pointer; } 
 .btn_type01 { width: 100%; padding: 2rem 0; background-color: #d7d7d7; color: #fff; font-size: 1.6rem; font-weight: 500; border-radius: 10px; } 
 .btn_type02 { width: 100%; padding: 1.3rem 0; font-size: 1.6rem; font-weight: 500; border-radius: 10px; } 
-.btn_type03 { width: 65px; height: 65px; background-color: #d7d7d7;background-image: url(../../images/learninghub/icon_play.png); background-position: 18px 10px; background-repeat: no-repeat; border-radius: 50%; } 
+.btn_type03 { width: 65px; height: 65px; background-color: #d7d7d7; background-image: url(../../images/learninghub/icon_play.png); background-position: 18px 10px; background-repeat: no-repeat; border-radius: 50%; } 
 .bg_orange { background-color: #f09e4b !important; } 
 .btn_green { background-color: #61a946; color: #ffffff; } 
 .btn_green02 { background-color: #a0c44c; color: #ffffff; } 
@@ -156,6 +163,9 @@ button, select { cursor: pointer; }
 .checklabel { display:inline-block; border:1px solid #c9cdd2; background:#fff; border-radius:2px; text-align:center; padding:0.5rem 1em; font-size:1.3rem; border-radius: 20px; box-sizing: border-box } 
 .checkbox { position:absolute; right:10px; top:15px; width: 2.2em; height: 2.2em; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; border:none; padding:0; border-radius:0; outline:0; } 
 .checkbox:checked + label { background:#36ace3; color: #fff; border:1px solid #36ace3 } 
+
+.check_type01 input[type="checkbox"] { position: relative; width: 14px; height: 14px; margin-top: 0; background: #fff; border: 1px solid #9ea4aa; border-radius: 3px; vertical-align: middle; cursor: pointer; outline: none !important; -webkit-appearance: none; -webkit-box-sizing: border-box; } 
+.check_type01 input[type="checkbox"]:checked { background: url(../../images/learninghub/ico_check02.png) center #f36f20 no-repeat; border-color: #f36f20; } 
 
 
 /* bread_crumb */
@@ -440,18 +450,13 @@ button, select { cursor: pointer; }
  .footer .footer_wrap .family_site { display: none; } 
  }
 
- @media all and (max-width:768px) { 
-
+ @media all and (max-width:768px) {
 html { font-size: 9px } 
  .mb40 { margin-bottom: 3rem } 
  .mt70 { margin-top: 4rem } 
- .mgw50 { margin: 5rem 0 }
- .btn_type01 {
-   padding: 0.5rem 0;
-}
- .btn_type02 {
-   padding: 1rem 0;
-}
+ .mgw50 { margin: 5rem 0 } 
+ .btn_type01 { padding: 0.5rem 0; } 
+ .btn_type02 { padding: 1rem 0; } 
  
  /* popup */
  .popUp { height: 100vh; max-width: 100% } 
@@ -468,22 +473,11 @@ html { font-size: 9px }
  #footer .bt { width: 100%; text-align: center; justify-content: center } 
  #footer .bt span { display: block; text-align: center; } 
  }
- @media all and (max-width:640px) { 
-    .btn_type01 {
-      padding: 0.8rem 0;
-      font-size: 1.4rem;
-   }
-    .btn_type02 {
-      padding: 0.8rem 0;
-      font-size: 1.4rem;
-   }
-   .btn_type03 {
-      width: 45px;
-      height: 45px;
-      background-position: 15px 10px;
-      background-size: 22px;
-  }
-}
+ @media all and (max-width:640px){
+ .btn_type01 { padding: 0.8rem 0; font-size: 1.4rem; } 
+ .btn_type02 { padding: 0.8rem 0; font-size: 1.4rem; } 
+ .btn_type03 { width: 45px; height: 45px; background-position: 15px 10px; background-size: 22px; } 
+ }
 
 @media (max-width: 480px){
  .footer .footer_wrap .f_util ul { white-space: nowrap; overflow-x: auto; } 

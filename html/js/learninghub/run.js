@@ -274,7 +274,27 @@ $(document).ready(function() {
     $('input:checkbox[name="ckArea"]').change(function() {
         fn_chkSrchArea($(this));
     });
+
+    // select custom menu
+    $(".select-menu .select-btn").click(function(){
+        $(this).parents().toggleClass("active");
+    });
+    $(".select-menu .options li").click(function(){
+        var defaultOption = $(this).html();
+        $(".select-menu .select-btn li").html(defaultOption);
+        $(this).parents(".select-menu").removeClass("active");
+    });
+
 });
+
+// 쪽지함 checkbox all 
+function checkSelectAll(checkAll)  {
+    const checkboxes = document.getElementsByName('checkList');
+    
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = checkAll.checked;
+    });
+}
 
 function fn_chkSrchArea(obj) {            
     fn_AddOrDelCdArray(obj.attr('id'), obj.prop('checked'), obj.next().text());

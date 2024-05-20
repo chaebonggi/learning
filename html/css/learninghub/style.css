@@ -342,6 +342,19 @@
 .popUp .p_check_wrap dl.flex_two { flex: 2; } 
 .popUp .item .checkbox { display: none; } 
 
+.popUp.messagePop { border-radius: 20px; overflow: hidden; } 
+.popUp.messagePop .popTop { padding: 1.5rem 2.5rem; background: #f36f20; border-bottom: 0; } 
+.popUp.messagePop .popTop h3 { font-size: 1.8rem; color: #fff; font-weight: bold; } 
+.popUp.messagePop .popTop .close { background: url(../../images/learninghub/ico_close02.png) no-repeat; background-size: contain;} 
+.popUp.messagePop .popCont { padding: 2rem 3rem; } 
+.popUp.messagePop .popCont .contTop { display: flex; align-items: center; } 
+.popUp.messagePop .popCont .contTop .txt { color: #666666; font-size: 1.4rem; flex-shrink: 0; } 
+.popUp.messagePop .popCont .contTop .search_wrap { width: 100%; margin: 0 1rem; } 
+.popUp.messagePop .popCont .contTop .search_wrap input { width: 100%; font-family: inherit; padding: 0.5rem 1.5rem; background: #f9f9f9; font-size: 1.4rem; border-radius: 5px; box-sizing: border-box; } 
+.popUp.messagePop .popCont .contTop button { margin-left: auto; } 
+.popUp.messagePop .popCont textarea { width: 100%; height: 110px; margin-top: 2rem; padding: 1.5rem; font-size: 1.4rem; border: 1px solid #f5f5f5; box-sizing: border-box; resize: none; } 
+.popUp.messagePop .popCont .btn_wrap { margin-top: 2rem; } 
+
 /* 나의 강의실 */
 .content_area { display: flex; align-items: flex-start; justify-content: space-between; } 
 .content_area .sub_menu { width: 260px; padding: 26px 0 80px; background: #fff; border-radius: 20px; } 
@@ -383,6 +396,8 @@
 .content_area .sub_menu .myclass_list li:hover .icon08 { background-image: url(../../images/learninghub/myclass_icon_on08.png); } 
 .content_area .contain { width: calc(100% - 300px); padding: 26px 0; } 
 .content_area .con_tit { margin-bottom: 2rem; color: #373737; font-size: 2.2rem; font-weight: bold; } 
+.content_area .cont_top { display: flex; margin-bottom: 2rem; align-items: center; justify-content: space-between; } 
+.content_area .cont_top p { color: #666666; font-size: 1.6rem; } 
 .content_area .tab_menu_list { display: flex; margin-bottom: 3.4rem; position: relative; overflow-y: auto; } 
 .content_area .tab_menu_list::after { content: ''; width: 100%; height: 1px; position: absolute; left: 0; bottom: 0; background: #e0e0e0; z-index: 1; } 
 .content_area .tab_menu_list li { white-space: nowrap; } 
@@ -397,11 +412,11 @@
 .content_area .tab_content .cont_top p { color: #666666; font-size: 1.6rem; font-weight: 300; } 
 .content_area .tab_content .cont_list .item { display: flex; margin-top: 2rem; padding: 3rem 3.6rem; background: #fff; border: 1px solid #e0e0e0; border-radius: 20px; align-items: center; justify-content: space-between; } 
 .content_area .tab_content .cont_list .list_tit { width: 90px; margin-right: 1rem; color: #373737; font-size: 1.8rem; font-weight: bold; } 
-.content_area .tab_content .cont_list .progress_cont { width: 320px; margin-right: 1rem;} 
+.content_area .tab_content .cont_list .progress_cont { width: 320px; margin-right: 1rem; } 
 .content_area .tab_content .cont_list .progress_cont .p_tit { margin-bottom: 1.5rem; color: #373737; font-size: 1.8rem; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; text-overflow: ellipsis; word-break: keep-all; text-decoration: underline; text-underline-offset: 4px; overflow: hidden; } 
-.content_area .tab_content .cont_list .progress_cont .p_txt {padding: 0.5rem 1rem; background: #e3f2c0; color: #666666; font-size: 1.3rem; font-weight: 300;}
+.content_area .tab_content .cont_list .progress_cont .p_txt { padding: 0.5rem 1rem; background: #e3f2c0; color: #666666; font-size: 1.3rem; font-weight: 300; } 
 .content_area .tab_content .cont_list .progress_cont .prgs_area { display: flex; align-items: center; } 
-.content_area .tab_content .cont_list .progress_cont .prgs_area p { color: #666666; font-size: 1.3rem; font-weight: 300; flex-shrink: 0;} 
+.content_area .tab_content .cont_list .progress_cont .prgs_area p { color: #666666; font-size: 1.3rem; font-weight: 300; flex-shrink: 0; } 
 .content_area .tab_content .cont_list .progress_cont .prgs_bar { max-width: 210px; width: 100%; height: 10px; margin: 0 1.6rem 0 2rem; background: #d7d7d7; border-radius: 10px; overflow: hidden; } 
 .content_area .tab_content .cont_list .progress_cont .prgs_bar span { display: block; background: #61a946; height: 100%; border-radius: 10px; } 
 .content_area .tab_content .cont_list .list_info { width: 240px; } 
@@ -409,9 +424,42 @@
 .content_area .tab_content .cont_list .list_info dl + dl { margin-top: 0.5rem; } 
 .content_area .tab_content .cont_list .list_info dt { margin-right: 1.2rem; color: #373737; font-size: 1.3rem; font-weight: 500; flex-shrink: 0; } 
 .content_area .tab_content .cont_list .list_info dd { color: #666666; font-size: 1.3rem; font-weight: 400; } 
-.content_area .tab_content .cont_list .list_btn { width: 85px; margin-left: 1rem; flex-shrink: 0; text-align: center;} 
+.content_area .tab_content .cont_list .list_btn { width: 85px; margin-left: 1rem; flex-shrink: 0; text-align: center; } 
 .content_area .tab_content .cont_list .list_btn .t_cancel { color: #666666; font-size: 1.8rem; font-weight: 500; } 
 .content_area .tab_content .cont_list .list_btn .txt { padding: 0.5rem 0; margin-bottom: 0.5rem; background: #d7d7d7; color: #fff; font-size: 1.4rem; font-weight: 500; text-align: center; border-radius: 10px; } 
+
+.content_area .cont_box { padding: 3.4rem 3.6rem; background: #fff; border-radius: 20px; box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.05); } 
+/* 테이블 */
+td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; } 
+.table_type01 table { width: 100%; } 
+.table_type01 table thead th { position: relative; } 
+.table_type01 table thead tr th:not(:first-child)::before { content: ''; width: 1px; height: 20px; position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: #fff; } 
+.table_type01 table tbody tr { position: relative; border-bottom: 1px solid #f5f5f5; } 
+.table_type01 table th,
+.table_type01 table td { padding: 10px; } 
+.table_type01 table th { background: #f8f8f8; color: #373737; font-size: 1.4rem; font-weight: 600; } 
+.table_type01 table td { background: #fff; color: #666666; font-size: 1.4rem; font-weight: 400; text-align: center; vertical-align: middle; } 
+
+.content_area .cont_box .rate_area { display: flex; align-items: center; } 
+.content_area .cont_box .rate_area .rv_rate { width: 86px; height: 14px; position: relative; background: url(../../images/learninghub/ico_star_bg.png) no-repeat; z-index: 1; } 
+.content_area .cont_box .rate_area .rv_rate span { display: block; width: auto; height: 14px; position: absolute; background: url(../../images/learninghub/ico_star_on.png) no-repeat; z-index: 2; } 
+.content_area .cont_box .rate_area p { margin-left: 1rem; position: relative; color: #666666; font-size: 1.4rem; } 
+
+/* 학습후기 */
+.content_area .write_list .item { display: flex; justify-content: space-between; } 
+.content_area .write_list .item + .item { margin-top: 3rem; } 
+.content_area .write_list .item .tit { padding: 0.5rem 0; color: #373737; font-size: 1.6rem; font-weight: 600; } 
+.content_area .write_list .item .cont { width: calc(100% - 90px); } 
+.content_area .write_list .item .cont.in_flex { display: flex; } 
+.content_area .write_list .item .select-menu { position: relative; } 
+.content_area .write_list .item .select-btn { width: 100%; padding: 1rem 30px 1rem 2rem; position: relative; background: #f9f9f9; color: #666666; border-radius: 5px; border: 0; box-sizing: border-box; cursor: pointer; } 
+.content_area .write_list .item .select-btn::before { content: ''; width: 16px; height: 9px; position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); background: url(../../images/learninghub/ico_arrow02_bottom.png) no-repeat; } 
+.content_area .write_list .item .select-menu.active .select-btn::before { transform: translateY(-50%) rotate(180deg); } 
+.content_area .write_list .item .select-menu.active .options { display: block; } 
+.content_area .write_list .item .select-menu .options { display: none; padding: 1rem 30px 1rem 2rem; position: absolute; top: 40px; left: 0; right: 0; background: #fff; border: 1px solid #000; } 
+.content_area .write_list .item .select-menu .options li { padding: 0.5rem 0; cursor: pointer; } 
+.content_area .write_list .item textarea { width: 100%; height: 180px; padding: 1.5rem; background: #f7f8fa; font-size: 1.4rem; resize: none; border: 0; border-radius: 5px; box-sizing: border-box; } 
+
 
 /* 페이징 */
 .paging_wrap { display: flex; justify-content: center; margin-top: 30px; align-items: center; } 
@@ -451,13 +499,8 @@
  .content_wrap .detail_wrap .course_view .info_cont .course_list li { width: 100%; } 
 
  /* 나의 강의실 */
- .content_area .sub_menu {
-    display: none;
- }
- .content_area .contain {
-    width: 100%;
- }
-
+ .content_area .sub_menu { display: none; } 
+ .content_area .contain { width: 100%; } 
  }
 
 @media all and (max-width:860px){
@@ -504,19 +547,23 @@
 .popUp.courseList .btn_style01 { width: 120px; } 
 
 /* 나의 강의실 */
-.content_area .tab_content .cont_list .list_tit {
-    display: none;
-}
-
+.content_area .tab_content .cont_list .list_tit { display: none; } 
  }
 
  @media all and (max-width:768px){
-    .paging_wrap {
-        display: none;
-    }
-    .mo_paging {
-        display: flex;
-    }
+ .m_hide { display: none !important; } 
+ .paging_wrap { display: none; } 
+ .mo_paging { display: flex; } 
+
+ /* 나의 강의실 */
+ .table_type01 table,
+ .table_type01 table tbody,
+ .table_type01 table tbody tr,
+ .table_type01 table tbody td { display: block; } 
+ .table_type01 table thead { display: none; } 
+ .table_type01 table tbody td { padding: 6px; text-align: left; } 
+ .table_type01 table tbody td .btn_style03 { width: 100%; } 
+ .table_type01 table tbody td.t_btn_wrap { padding: 0; position: absolute; top: 4px; left: 32px; } 
  }
 
 
@@ -569,49 +616,24 @@
 .popUp .p_check_wrap dl:not(:first-child) dd { border-left: 0; } 
 
 /* 나의 강의실 */
-.content_area .tab_content .cont_list .item {
-    display: block;
-    padding: 2rem 2rem;
-}
-.content_area .tab_content .cont_list .progress_cont {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 1rem;
-}
-.content_area .tab_content .cont_list .progress_cont .prgs_bar {
-    max-width: 100%;
-}
-.content_area .tab_content .cont_list .list_info {
-    width: 100%;
-    margin-bottom: 1rem;
-}
-.content_area .tab_content .cont_list .list_btn {
-    max-width: 150px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-.content_area .search_wrap {
-    display: block;
-    padding: 2rem 2rem;
-    margin-bottom: 2rem;
-}
-.content_area .search_wrap .sel_style03 {
-    width: 100%;
-    height: 30px;
-    margin-bottom: 0.5rem;
-    padding-left: 2rem;
-    margin-right: 0;
-}
-.content_area .search_wrap input {
-    width: calc(100% - 80px);
-    height: 30px;
-}
-.content_area .search_wrap .search_btn {
-    width: 72px;
-    height: 30px;
-    margin-left: 0.5rem;
-    font-size: 1.4rem;
-}
+.content_area .tab_content .cont_list .item { display: block; padding: 2rem 2rem; } 
+.content_area .tab_content .cont_list .progress_cont { width: 100%; margin-right: 0; margin-bottom: 1rem; } 
+.content_area .tab_content .cont_list .progress_cont .prgs_bar { max-width: 100%; } 
+.content_area .tab_content .cont_list .list_info { width: 100%; margin-bottom: 1rem; } 
+.content_area .tab_content .cont_list .list_btn { max-width: 150px; width: 100%; margin: 0 auto; text-align: center; } 
+.content_area .search_wrap { display: block; padding: 2rem 2rem; margin-bottom: 2rem; } 
+.content_area .search_wrap .sel_style03 { width: 100%; height: 30px; margin-bottom: 0.5rem; padding-left: 2rem; margin-right: 0; } 
+.content_area .search_wrap input { width: calc(100% - 80px); height: 30px; } 
+.content_area .search_wrap .search_btn { width: 72px; height: 30px; margin-left: 0.5rem; font-size: 1.4rem; } 
 
- }
+.content_area .cont_box { padding: 2rem 2rem; } 
+.content_area .contain { padding: 0; } 
+
+/* 학습후기 */
+.content_area .write_list .item { display: block; } 
+.content_area .write_list .item .cont { width: 100%; } 
+.content_area .write_list .item textarea { height: 100px; } 
+.btn_wrap { margin-top: 3rem; } 
+
+
+}
