@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브_학습방_메인</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/00001/00001.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/chosen.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/excel-bootstrap-table-filter-style.css">
+
+	
+	<script src="./js/front/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="./js/front/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="./js/front/front/jquery.mCustomScrollbar.js"></script>
+	<script src="./js/front/front/imgLiquid/0.9.944/imgLiquid-min.js" integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./js/front/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
+	<script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
+	<script src="./js/front/chosen.jquery.min.js"></script>
+	<!-- <script src="./js/front/front/run.js"></script> -->
+    <script src="./js/learninghub/run.js"></script>
+	<script src="./js/front/file/forms.js"></script>
+	<script src="./js/front/solution/solution_ui.js"></script>
+	<script src="./js/front/solution/custome.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <style>
+    .popUp.studyPop {
+        border: 1px solid red;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: static;
+        transform: none;
+        overflow-y: auto;
+    }
+    .popUp.studyPop .popCont {
+        display: flex;
+        padding: 0;        
+    }
+    .popUp.studyPop .popLeft {
+        width: 200px;        
+        padding-top: 120px;
+        background: #373737;
+    }
+    .popUp.studyPop .popLeft .study_list li {
+        height: 65px;
+        position: relative;
+    }
+    .popUp.studyPop .popLeft .study_list li.active, .popUp.studyPop .popLeft .study_list li:hover {
+        background: #3f3f3f;
+    }
+    .popUp.studyPop .popLeft .study_list li.active::after, .popUp.studyPop .popLeft .study_list li:hover::after {
+        content: '';
+        width: 4px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #f36f20;
+    }
+    .popUp.studyPop .popLeft .study_list li.active a, .popUp.studyPop .popLeft .study_list li:hover a {
+        color: #f36f20;
+        font-weight: bold;
+    }
+    .popUp.studyPop .popLeft .study_list li a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding-left: 30px;
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 400;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .popUp.studyPop .popLeft .study_list .icon {
+        padding-left: 30px;
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+    .popUp.studyPop .popLeft .study_list .icon01 {
+        background-image: url(./images/learninghub/study_icon_01.png);
+    }
+    .popUp.studyPop .popLeft .study_list .icon02 {
+        background-image: url(./images/learninghub/study_icon_02.png);
+    }
+    .popUp.studyPop .popLeft .study_list .icon03 {
+        background-image: url(./images/learninghub/study_icon_03.png);
+    }
+    .popUp.studyPop .popLeft .study_list .icon04 {
+        background-image: url(./images/learninghub/study_icon_04.png);
+    }
+    .popUp.studyPop .popLeft .study_list .icon05 {
+        background-image: url(./images/learninghub/study_icon_05.png);
+    }
+    .popUp.studyPop .popLeft .study_list .icon06 {
+        background-image: url(./images/learninghub/study_icon_06.png);
+    }
+    .popUp.studyPop .popLeft .study_list li.active .icon01,  .popUp.studyPop .popLeft .study_list li:hover .icon01 {
+        background-image: url(./images/learninghub/study_icon_on_01.png);
+    }
+    .popUp.studyPop .popLeft .study_list li.active .icon02,  .popUp.studyPop .popLeft .study_list li:hover .icon02 {
+        background-image: url(./images/learninghub/study_icon_on_02.png);
+    }
+    .popUp.studyPop .popLeft .study_list li.active .icon03,  .popUp.studyPop .popLeft .study_list li:hover .icon03 {
+        background-image: url(./images/learninghub/study_icon_on_03.png);
+    }
+    .popUp.studyPop .popLeft .study_list li.active .icon04,  .popUp.studyPop .popLeft .study_list li:hover .icon04 {
+        background-image: url(./images/learninghub/study_icon_on_04.png);
+    }
+    .popUp.studyPop .popLeft .study_list li.active .icon05,  .popUp.studyPop .popLeft .study_list li:hover .icon05 {
+        background-image: url(./images/learninghub/study_icon_on_05.png);
+    }
+    .popUp.studyPop .popLeft .study_list li.active .icon06,  .popUp.studyPop .popLeft .study_list li:hover .icon06 {
+        background-image: url(./images/learninghub/study_icon_on_06.png);
+    }
+    </style>
+    <div class="popUp studyPop" style="display: block;">
+        <div class="popTop">
+            <h3>학습방</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="popLeft">
+                <ul class="study_list">
+                    <li class="active">
+                        <a href="#"><span class="icon icon01">메인</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon icon02">공지사항</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon icon03">자료실</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon icon04">과정질문</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon icon05">학습후기</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon icon06">의견나누기</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="popContents">
+                <div class="cTit">
+                    <p>학습방<span>(Study-ROOM)</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

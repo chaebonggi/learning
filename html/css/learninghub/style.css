@@ -331,7 +331,8 @@
 .popUp .p_check_list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; } 
 .popUp .p_check_list li { max-width: 85px; width: 100%; } 
 .popUp .p_check_list li .checklabel { width: 100%; color: #adadad; } 
-.popUp .p_check_list li .checkbox:checked + label { background: #fff; color: #666666; border-color: #373737; } 
+.popUp .p_check_list li .checkbox:checked + label { background: #fff; color: #666666; border-color: #373737; }
+.popUp .p_check_list li input[type="checkbox"]:checked + label { background: #fff; color: #666666; border-color: #373737; } 
 .popUp.courseList .btn_wrap { margin-top: 3rem; } 
 
 .popUp .p_check_wrap { display: flex; margin: 0 3rem; padding: 2rem; background: #fff; border: 1px solid #dadada; flex-wrap: wrap; justify-content: center; border-radius: 10px; box-sizing: border-box; } 
@@ -637,5 +638,4 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .content_area .write_list .item .cont { width: 100%; } 
 .content_area .write_list .item textarea { height: 100px; } 
 .btn_wrap { margin-top: 3rem; } 
-
 }
