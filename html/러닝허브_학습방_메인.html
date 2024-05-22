@@ -41,133 +41,196 @@
 </head>
 
 <body>
-    <style>
-    .popUp.studyPop {
-        border: 1px solid red;
-        max-width: 1200px;
-        margin: 0 auto;
-        position: static;
-        transform: none;
-        overflow-y: auto;
-    }
-    .popUp.studyPop .popCont {
-        display: flex;
-        padding: 0;        
-    }
-    .popUp.studyPop .popLeft {
-        width: 200px;        
-        padding-top: 120px;
-        background: #373737;
-    }
-    .popUp.studyPop .popLeft .study_list li {
-        height: 65px;
-        position: relative;
-    }
-    .popUp.studyPop .popLeft .study_list li.active, .popUp.studyPop .popLeft .study_list li:hover {
-        background: #3f3f3f;
-    }
-    .popUp.studyPop .popLeft .study_list li.active::after, .popUp.studyPop .popLeft .study_list li:hover::after {
-        content: '';
-        width: 4px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: #f36f20;
-    }
-    .popUp.studyPop .popLeft .study_list li.active a, .popUp.studyPop .popLeft .study_list li:hover a {
-        color: #f36f20;
-        font-weight: bold;
-    }
-    .popUp.studyPop .popLeft .study_list li a {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        padding-left: 30px;
-        color: #fff;
-        font-size: 1.6rem;
-        font-weight: 400;
-        align-items: center;
-        box-sizing: border-box;
-    }
-    .popUp.studyPop .popLeft .study_list .icon {
-        padding-left: 30px;
-        background-position: left center;
-        background-repeat: no-repeat;
-    }
-    .popUp.studyPop .popLeft .study_list .icon01 {
-        background-image: url(./images/learninghub/study_icon_01.png);
-    }
-    .popUp.studyPop .popLeft .study_list .icon02 {
-        background-image: url(./images/learninghub/study_icon_02.png);
-    }
-    .popUp.studyPop .popLeft .study_list .icon03 {
-        background-image: url(./images/learninghub/study_icon_03.png);
-    }
-    .popUp.studyPop .popLeft .study_list .icon04 {
-        background-image: url(./images/learninghub/study_icon_04.png);
-    }
-    .popUp.studyPop .popLeft .study_list .icon05 {
-        background-image: url(./images/learninghub/study_icon_05.png);
-    }
-    .popUp.studyPop .popLeft .study_list .icon06 {
-        background-image: url(./images/learninghub/study_icon_06.png);
-    }
-    .popUp.studyPop .popLeft .study_list li.active .icon01,  .popUp.studyPop .popLeft .study_list li:hover .icon01 {
-        background-image: url(./images/learninghub/study_icon_on_01.png);
-    }
-    .popUp.studyPop .popLeft .study_list li.active .icon02,  .popUp.studyPop .popLeft .study_list li:hover .icon02 {
-        background-image: url(./images/learninghub/study_icon_on_02.png);
-    }
-    .popUp.studyPop .popLeft .study_list li.active .icon03,  .popUp.studyPop .popLeft .study_list li:hover .icon03 {
-        background-image: url(./images/learninghub/study_icon_on_03.png);
-    }
-    .popUp.studyPop .popLeft .study_list li.active .icon04,  .popUp.studyPop .popLeft .study_list li:hover .icon04 {
-        background-image: url(./images/learninghub/study_icon_on_04.png);
-    }
-    .popUp.studyPop .popLeft .study_list li.active .icon05,  .popUp.studyPop .popLeft .study_list li:hover .icon05 {
-        background-image: url(./images/learninghub/study_icon_on_05.png);
-    }
-    .popUp.studyPop .popLeft .study_list li.active .icon06,  .popUp.studyPop .popLeft .study_list li:hover .icon06 {
-        background-image: url(./images/learninghub/study_icon_on_06.png);
-    }
-    </style>
     <div class="popUp studyPop" style="display: block;">
         <div class="popTop">
             <h3>학습방</h3>
             <a href="#" class="close" onclick="close_pop()">닫기</a>
         </div>
         <div class="popCont">
-            <div class="popLeft">
-                <ul class="study_list">
-                    <li class="active">
-                        <a href="#"><span class="icon icon01">메인</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="icon icon02">공지사항</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="icon icon03">자료실</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="icon icon04">과정질문</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="icon icon05">학습후기</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="icon icon06">의견나누기</span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="popContents">
-                <div class="cTit">
-                    <p>학습방<span>(Study-ROOM)</span></p>
+            <div class="popArea">
+                <div class="popLeft">
+                    <ul class="studyList">
+                        <li class="active">
+                            <a href="#"><span class="icon icon01">메인</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon02">공지사항</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon03">자료실</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon04">과정질문</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon05">학습후기</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon06">의견나누기</span></a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+                <div class="popContents">
+                    <div class="popTit">
+                        <p>학습방 <span>(Study-ROOM)</span></p>
+                    </div>
+                    <div class="studyInfo">
+                        <div class="infoTit">
+                            <span class="pTag">이러닝</span>
+                            <p>2024 업무에 바로 쓰는 SQL 튜닝</p>
+                        </div>
+                        <div class="infoBox">
+                            <div class="infoList">
+                                <ul>
+                                    <li>
+                                        <strong>교육차수</strong>
+                                        <p>2024-1차수</p>
+                                    </li>
+                                    <li>
+                                        <strong>학습기간</strong>
+                                        <p>2024-04-04 ~ 2024-05-05</p>
+                                    </li>
+                                    <li>
+                                        <strong>남은기간</strong>
+                                        <p>271일</p>
+                                    </li>
+                                    <li>
+                                        <strong>수료상태</strong>
+                                        <p>수강중 (18%완료)</p>
+                                    </li>
+                                    <li>
+                                        <strong>재학습기간</strong>
+                                        <p>2024-05-06 ~ 2024-07-07</p>
+                                    </li>
+                                </ul>
+                                <div class="btnWrap">
+                                    <button type="button" class="btn_style12 btn_gray04">수료증</button>
+                                    <button type="button" class="btn_style12 btn_gray04">수강확인증</button>
+                                </div>
+                            </div>
+                            <div class="prgsWrap">
+                                <div class="btnWrap">
+                                    <button type="button" class="btn_style02 btn_white">자세히보기</button>
+                                </div>
+                                <div class="prgsArea">
+                                    <p class="prgsTit">진도율</p>
+                                    <div class="prgsBar">
+                                        <span style="width: 30%"></span>
+                                    </div>
+                                    <p class="txt">30%</p>
+                                </div>
+                                <div class="prgsArea">
+                                    <p class="prgsTit">총점</p>
+                                    <div class="prgsBar">
+                                        <span style="width: 30%"></span>
+                                    </div>
+                                    <p class="txt">300점</p>
+                                </div>
+                            </div>
+                            <div class="infoBtn">
+                                <button type="button"><span>학습하기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circleWrap">
+                        <div class="circleArea">
+                            <div class="circleBar">
+                                <span data-progress="18">18%</span>
+                            </div>
+                            <p class="txt">진도율</p>
+                        </div>
+                        <div class="circleArea">
+                            <div class="circleBar">
+                                <span data-progress="20"><em>1</em>/5</span>
+                            </div>
+                            <p class="txt">학습차시</p>
+                        </div>
+                        <div class="circleArea">
+                            <div class="circleBar">
+                                <span data-progress="30">00:17:52</span>
+                            </div>
+                            <p class="txt">총 학습시간</p>
+                        </div>                    
+                    </div>
+                    <div class="testInfo">
+                        <ul class="testList">
+                            <li>
+                                <a href="">
+                                    <div class="imgWrap">
+                                        <p class="tit">중간시험</p>
+                                    </div>
+                                    <div class="btnLink">
+                                        <p>응시하기</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="imgWrap">
+                                        <p class="tit">최종시험</p>
+                                    </div>
+                                    <div class="btnLink">
+                                        <p>응시하기</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="imgWrap">
+                                        <p class="tit">과제</p>
+                                    </div>
+                                    <div class="btnLink">
+                                        <p>응시하기</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="imgWrap">
+                                        <p class="tit">설문</p>
+                                    </div>
+                                    <div class="btnLink">
+                                        <p>응시하기</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const circles = document.querySelectorAll('.circleArea .circleBar span');
+        const svgNamespace = "http://www.w3.org/2000/svg";
+        const pathD = "M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831";
 
+        circles.forEach(span => {
+            const progress = span.getAttribute('data-progress');
+            const svg = document.createElementNS(svgNamespace, "svg");
+            svg.setAttribute("viewBox", "0 0 36 36");
+
+            const createCircle = (className, dasharray, dashoffset) => {
+                const circle = document.createElementNS(svgNamespace, "path");
+                circle.setAttribute("class", className);
+                circle.setAttribute("d", pathD);
+                if (dasharray) circle.setAttribute("stroke-dasharray", dasharray);
+                if (dashoffset !== undefined) circle.setAttribute("stroke-dashoffset", dashoffset);
+                return circle;
+            };
+
+            const circumference = 2 * Math.PI * 15.9155;
+            const offset = circumference - (progress / 100) * circumference;
+
+            svg.appendChild(createCircle("circleBg"));
+            svg.appendChild(createCircle("circle", `${circumference}`, offset));
+            
+            span.parentElement.insertBefore(svg, span);
+        });
+    });
+
+</script>
 </html>
