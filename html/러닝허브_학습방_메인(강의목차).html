@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브_학습방_메인(강의목차)</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/00001/00001.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/chosen.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/excel-bootstrap-table-filter-style.css">
+
+	
+	<script src="./js/front/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="./js/front/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="./js/front/front/jquery.mCustomScrollbar.js"></script>
+	<script src="./js/front/front/imgLiquid/0.9.944/imgLiquid-min.js" integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./js/front/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
+	<script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
+	<script src="./js/front/chosen.jquery.min.js"></script>
+	<!-- <script src="./js/front/front/run.js"></script> -->
+    <script src="./js/learninghub/run.js"></script>
+	<script src="./js/front/file/forms.js"></script>
+	<script src="./js/front/solution/solution_ui.js"></script>
+	<script src="./js/front/solution/custome.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <div class="popUp studyPop" style="display: block;">
+        <div class="popTop">
+            <h3>학습방</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="popArea">                
+                <div class="popLeft">
+                    <ul class="studyList">
+                        <li class="active">
+                            <a href="#"><span class="icon icon01">메인</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon02">공지사항</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon03">자료실</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon04">과정질문</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon05">학습후기</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon06">의견나누기</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <style>
+                .popUp.studyPop .popTabList {
+                    display: flex;
+                    margin-bottom: 3.4rem;
+                    position: relative;
+                    overflow-y: auto;
+                    border-bottom: 1px solid #e0e0e0;
+                }
+                .popUp.studyPop .popTabList::after {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background: #e0e0e0;
+                    z-index: 1;
+                }
+                .popUp.studyPop .popTabList li {
+                    white-space: nowrap;
+                }
+                .popUp.studyPop .popTabList li.active {
+                    border-bottom: 2px solid #f36f20;
+                    z-index: 2;
+                }                
+                .popUp.studyPop .popTabList a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 1.6rem 4rem;
+                    color: #666666;
+                    font-size: 1.7rem;
+                    font-weight: 400;
+                    box-sizing: border-box;
+                }
+                .popUp.studyPop .popTabList li.active a {
+                    color: #373737;
+                    font-weight: bold;
+                }
+                .popUp.studyPop .contBox {
+                    padding: 3.4rem 3.6rem;
+                    background: #fff;
+                    border-radius: 20px;
+                    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.05);
+                }
+                .popUp.studyPop .table_type01 table .t_tit {
+                    display: none;
+                }
+                </style>
+                <div class="popContents">
+                    <ul class="popTabList">
+                        <li class="active">
+                            <a href="#">강의목차</a>
+                        </li>
+                        <li>
+                            <a href="#">시험</a>
+                        </li>
+                        <li>
+                            <a href="#">과제</a>
+                        </li>
+                        <li>
+                            <a href="#">토론</a>
+                        </li>
+                        <li>
+                            <a href="#">설문</a>
+                        </li>
+                    </ul>
+                    <div class="contBox">
+                        <div class="table_type01">
+                            <table>
+                                <caption>설문함</caption>
+                                <colgroup>
+                                    <col style="width: 15%">
+                                    <col>
+                                    <col style="width: 10%">                                    
+                                    <col style="width: 20%">
+                                    <col style="width: 150px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">차시</th>
+                                        <th scope="col">차시명</th>
+                                        <th scope="col">진도율</th>
+                                        <th scope="col">강의시간</th>
+                                        <th scope="col">학습</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>1차시</td>
+                                        <td class="tlt txtCut"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_style03 btn_orange">학습하기</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>2차시</td>
+                                        <td class="tlt txtCut"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_style03 btn_gray05" disabled>학습완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>3차시</td>
+                                        <td class="tlt txtCut"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_style03 btn_gray05" disabled>학습완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>4차시</td>
+                                        <td class="tlt txtCut"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_style03 btn_gray05" disabled>학습완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>5차시</td>
+                                        <td class="tlt txtCut"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_style03 btn_gray05" disabled>학습완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>6차시</td>
+                                        <td class="tlt txtCut"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_style03 btn_gray05" disabled>학습완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>7차시</td>
+                                        <td class="tlt txtCut"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_style03 btn_orange">학습하기</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>8차시</td>
+                                        <td class="tlt txtCut"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_style03 btn_orange">학습하기</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>9차시</td>
+                                        <td class="tlt txtCut"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_style03 btn_orange">학습하기</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>10차시</td>
+                                        <td class="tlt txtCut"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_style03 btn_orange">학습하기</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                            
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+</body>
+</html>

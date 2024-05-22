@@ -381,7 +381,7 @@
 .popUp.studyPop .popLeft .studyList li.active .icon04, .popUp.studyPop .popLeft .studyList li:hover .icon04 { background-image: url(../../images/learninghub/study_icon_on_04.png); } 
 .popUp.studyPop .popLeft .studyList li.active .icon05, .popUp.studyPop .popLeft .studyList li:hover .icon05 { background-image: url(../../images/learninghub/study_icon_on_05.png); } 
 .popUp.studyPop .popLeft .studyList li.active .icon06, .popUp.studyPop .popLeft .studyList li:hover .icon06 { background-image: url(../../images/learninghub/study_icon_on_06.png); } 
-.popUp.studyPop .popContents { width: calc(100% - 200px); padding: 4rem; background: #f5f5f5; } 
+.popUp.studyPop .popContents { width: calc(100% - 200px); padding: 4rem; background: #f5f5f5; box-sizing: border-box;} 
 .popUp.studyPop .popContents .popTit { margin-bottom: 3rem; } 
 .popUp.studyPop .popContents .popTit p { color: #373737; font-size: 3rem; font-weight: bold; } 
 .popUp.studyPop .popContents .popTit p span { font-size: 2rem; font-weight: 400; } 
@@ -405,7 +405,7 @@
 .popUp.studyPop .studyInfo .prgsArea .prgsBar span { display: block; background: #f36f20; height: 100%; border-radius: 10px; } 
 .popUp.studyPop .studyInfo .infoBtn button span::before { content: ''; display: block; width: 39px; height: 49px; margin: 0 10px 0 auto; background: url(../../images/learninghub/icon_play.png) center no-repeat; } 
 .popUp.studyPop .studyInfo .infoBtn button { display: inline-flex; width: 130px; height: 130px; background: #f36f20; color: #ffffff; font-size: 1.8rem; font-weight: bold; align-items: center; justify-content: center; border-radius: 15px; } 
-.popUp.studyPop .circleWrap { display: flex; max-width: 580px; margin: 0 auto 7rem; justify-content: space-between; gap: 2rem;} 
+.popUp.studyPop .circleWrap { display: flex; max-width: 580px; margin: 0 auto 7rem; justify-content: space-between; gap: 2rem; } 
 .popUp.studyPop .circleArea .txt { margin-top: 1rem; color: #373737; font-size: 1.6rem; font-weight: 500; text-align: center; } 
  .popUp.studyPop .circleBar { position: relative; width: 140px; height: 140px; } 
 
@@ -471,7 +471,7 @@
 .content_area .con_tit { margin-bottom: 2rem; color: #373737; font-size: 2.2rem; font-weight: bold; } 
 .content_area .cont_top { display: flex; margin-bottom: 2rem; align-items: center; justify-content: space-between; } 
 .content_area .cont_top p { color: #666666; font-size: 1.6rem; } 
-.content_area .tab_menu_list { display: flex; margin-bottom: 3.4rem; position: relative; overflow-y: auto; } 
+.content_area .tab_menu_list { display: flex; margin-bottom: 3.4rem; position: relative; overflow-y: auto; border-bottom: 1px solid #e0e0e0;} 
 .content_area .tab_menu_list::after { content: ''; width: 100%; height: 1px; position: absolute; left: 0; bottom: 0; background: #e0e0e0; z-index: 1; } 
 .content_area .tab_menu_list li { white-space: nowrap; } 
 .content_area .tab_menu_list li.active { border-bottom: 2px solid #f36f20; z-index: 2; } 
@@ -510,7 +510,7 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .table_type01 table tbody tr { position: relative; border-bottom: 1px solid #f5f5f5; } 
 .table_type01 table th,
 .table_type01 table td { padding: 10px; } 
-.table_type01 table th { background: #f8f8f8; color: #373737; font-size: 1.4rem; font-weight: 600; } 
+.table_type01 table thead th { background: #f8f8f8; color: #373737; font-size: 1.4rem; font-weight: 600; } 
 .table_type01 table td { background: #fff; color: #666666; font-size: 1.4rem; font-weight: 400; text-align: center; vertical-align: middle; } 
 
 .content_area .cont_box .rate_area { display: flex; align-items: center; } 
@@ -576,14 +576,9 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
  .content_area .contain { width: 100%; } 
 
  /* 학습방 팝업 */
- .popUp.studyPop .popLeft {
-    display: none;
- }
- .popUp.studyPop .popContents {
-    width: 100%;
- }
-
- }
+ .popUp.studyPop .popLeft { display: none; } 
+ .popUp.studyPop .popContents { width: 100%; } 
+}
 
 @media all and (max-width:860px){
  .main_wrap .banner_wrap,
@@ -647,24 +642,12 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
  .table_type01 table tbody td .btn_style03 { width: 100%; } 
  .table_type01 table tbody td.t_btn_wrap { padding: 0; position: absolute; top: 4px; left: 32px; } 
 
-  /* 학습방 팝업 */
-  .popUp.studyPop .popContents {
-    padding: 2rem;;
-}
-  .popUp.studyPop .studyInfo .infoBox {
-    display: block;
-  }
-  .popUp.studyPop .studyInfo .prgsWrap {
-    max-width: 100%;
-    margin: 2rem 0;
-  }
-  .popUp.studyPop .studyInfo .prgsArea .prgsBar {
-    max-width: 100%;
-  }
-  .popUp.studyPop .studyInfo .infoBtn {
-    text-align: center;
-  }
- 
+ /* 학습방 팝업 */
+ .popUp.studyPop .popContents { padding: 2rem;; } 
+ .popUp.studyPop .studyInfo .infoBox { display: block; } 
+ .popUp.studyPop .studyInfo .prgsWrap { max-width: 100%; margin: 2rem 0; } 
+ .popUp.studyPop .studyInfo .prgsArea .prgsBar { max-width: 100%; } 
+ .popUp.studyPop .studyInfo .infoBtn { text-align: center; } 
  }
 
 
@@ -736,26 +719,14 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .content_area .write_list .item textarea { height: 100px; } 
 .btn_wrap { margin-top: 3rem; } 
 
-  /* 학습방 팝업 */
-  .popUp.studyPop .studyInfo {
-    margin-bottom: 4rem;
-    padding: 2.4rem 2rem;
-}
-  .popUp.studyPop .circleWrap {
-    margin-bottom: 4rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .popUp.studyPop .circleBar {
-    width: 120px;
-    height: 120px;
-}
-.popUp.studyPop .testInfo .testList {
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.popUp.studyPop .testInfo .testList li {
-    width: calc(100% / 2 - 10px);
+ /* 학습방 팝업 */
+.popUp.studyPop .studyInfo { margin-bottom: 4rem; padding: 2.4rem 2rem; } 
+.popUp.studyPop .circleWrap { margin-bottom: 4rem; flex-wrap: wrap; justify-content: center; } 
+.popUp.studyPop .circleBar { width: 120px; height: 120px; } 
+.popUp.studyPop .testInfo .testList { flex-wrap: wrap; gap: 10px; } 
+.popUp.studyPop .testInfo .testList li { width: calc(100% / 2 - 10px); } 
+.popUp.studyPop .studyInfo .infoList .btnWrap {
+    text-align: center;
 }
 
- }
+}

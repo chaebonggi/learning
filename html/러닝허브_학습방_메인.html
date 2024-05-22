@@ -199,38 +199,7 @@
                 </div>
             </div>            
         </div>
-    </div>
+    </div>    
 
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const circles = document.querySelectorAll('.circleArea .circleBar span');
-        const svgNamespace = "http://www.w3.org/2000/svg";
-        const pathD = "M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831";
-
-        circles.forEach(span => {
-            const progress = span.getAttribute('data-progress');
-            const svg = document.createElementNS(svgNamespace, "svg");
-            svg.setAttribute("viewBox", "0 0 36 36");
-
-            const createCircle = (className, dasharray, dashoffset) => {
-                const circle = document.createElementNS(svgNamespace, "path");
-                circle.setAttribute("class", className);
-                circle.setAttribute("d", pathD);
-                if (dasharray) circle.setAttribute("stroke-dasharray", dasharray);
-                if (dashoffset !== undefined) circle.setAttribute("stroke-dashoffset", dashoffset);
-                return circle;
-            };
-
-            const circumference = 2 * Math.PI * 15.9155;
-            const offset = circumference - (progress / 100) * circumference;
-
-            svg.appendChild(createCircle("circleBg"));
-            svg.appendChild(createCircle("circle", `${circumference}`, offset));
-            
-            span.parentElement.insertBefore(svg, span);
-        });
-    });
-
-</script>
 </html>
