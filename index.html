@@ -211,6 +211,13 @@
 				<a href="#none" onclick="windPop02()">러닝허브_학습방_메인</a>
 	        </td>
 	    </tr>
+		<tr>
+	        <td></td>
+	        <td>페이지</td>
+	        <td>
+				<a href="#none" onclick="windPop03()">러닝허브_학습방_메인</a>
+	        </td>
+	    </tr>
 	</tbody>
 	</table>
 	<script>
@@ -240,6 +247,19 @@
 			var yPos = (screen.availHeight / 2) - (nHeight / 2);
 
 			window.open("./html/러닝허브_학습방_메인.html", "popOpen", "width=" + nWidth + ",height=" + nHeight + ", left=" + xPos + ", top=" + yPos + ", toolbars=no, resizable=no, scrollbars=no");
+		}
+		function windPop03(){
+			var nWidth = "1200";
+
+			var nHeight = "1000";
+
+			var xPos = (document.body.clientWidth / 2) - (nWidth / 2);
+
+			xPos += window.screenLeft;
+
+			var yPos = (screen.availHeight / 2) - (nHeight / 2);
+
+			window.open("./html/러닝허브_학습방_메인(강의목차).html", "popOpen", "width=" + nWidth + ",height=" + nHeight + ", left=" + xPos + ", top=" + yPos + ", toolbars=no, resizable=no, scrollbars=no");
 		}
 	</script>
 </div>
