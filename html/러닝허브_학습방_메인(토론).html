@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브_학습방_메인(토론)</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/00001/00001.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/chosen.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/excel-bootstrap-table-filter-style.css">
+
+	
+	<script src="./js/front/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="./js/front/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="./js/front/front/jquery.mCustomScrollbar.js"></script>
+	<script src="./js/front/front/imgLiquid/0.9.944/imgLiquid-min.js" integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./js/front/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
+	<script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
+	<script src="./js/front/chosen.jquery.min.js"></script>
+	<!-- <script src="./js/front/front/run.js"></script> -->
+    <script src="./js/learninghub/run.js"></script>
+	<script src="./js/front/file/forms.js"></script>
+	<script src="./js/front/solution/solution_ui.js"></script>
+	<script src="./js/front/solution/custome.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <div class="popUp studyPop" style="display: block;">
+        <div class="popTop">
+            <h3>학습방</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="popArea">                
+                <div class="popLeft">
+                    <ul class="studyList">
+                        <li>
+                            <a href="./러닝허브_학습방_메인(강의목차).html">강의목차</a>
+                        </li>
+                        <li>
+                            <a href="./러닝허브_학습방_메인(시험).html">시험</a>
+                        </li>
+                        <li>
+                            <a href="./러닝허브_학습방_메인(과제).html">과제</a>
+                        </li>
+                        <li class="active">
+                            <a href="./러닝허브_학습방_메인(토론).html">토론</a>
+                        </li>
+                        <li>
+                            <a href="./러닝허브_학습방_메인(설문).html">설문</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popContents">
+                    <ul class="popTabList">
+                        <li>
+                            <a href="#">강의목차</a>
+                        </li>
+                        <li>
+                            <a href="#">시험</a>
+                        </li>
+                        <li>
+                            <a href="#">과제</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">토론</a>
+                        </li>
+                        <li>
+                            <a href="#">설문</a>
+                        </li>
+                    </ul>
+                    <div class="contBox">
+                        <div class="table_type01">
+                            <table>
+                                <caption>설문함</caption>
+                                <colgroup>
+                                    <col style="width: 10%">
+                                    <col>
+                                    <col style="width: 20%">                                    
+                                    <col style="width: 15%">
+                                    <col style="width: 10%">
+                                    <col style="width: 150px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">토론명</th>
+                                        <th scope="col">토론기간</th>
+                                        <th scope="col">최초참여일</th>
+                                        <th scope="col">성적</th>
+                                        <th scope="col">상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="m_hide">10</td>
+                                        <td class="tlt txtCut"><span class="t_tit">토론명 : </span>2024년 1월 1주차 주간시험</td>
+                                        <td><span class="t_tit">토론기간 : </span>2024.04.04 ~ 2024.04.05</td>                                        
+                                        <td><span class="t_tit">최초참여일 : </span>2024.04.04</td>
+                                        <td><span class="t_tit">성적 : </span>90점</td>
+                                        <td>
+                                            <button type="button" class="btn_type04 btn_orange">참여전</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="m_hide">9</td>
+                                        <td class="tlt txtCut"><span class="t_tit">토론명 : </span>2024년 1월 1주차 주간시험</td>
+                                        <td><span class="t_tit">토론기간 : </span>2024.04.04 ~ 2024.04.05</td>                                        
+                                        <td><span class="t_tit">최초참여일 : </span>2024.04.04</td>
+                                        <td><span class="t_tit">성적 : </span>90점</td>
+                                        <td>
+                                            <button type="button" class="btn_type04  btn_gray05" disabled>참여완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="m_hide">8</td>
+                                        <td class="tlt txtCut"><span class="t_tit">토론명 : </span>2024년 1월 1주차 주간시험</td>
+                                        <td><span class="t_tit">토론기간 : </span>2024.04.04 ~ 2024.04.05</td>                                        
+                                        <td><span class="t_tit">최초참여일 : </span>2024.04.04</td>
+                                        <td><span class="t_tit">성적 : </span>90점</td>
+                                        <td>
+                                            <button type="button" class="btn_type04  btn_gray05" disabled>참여완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="m_hide">7</td>
+                                        <td class="tlt txtCut"><span class="t_tit">토론명 : </span>2024년 1월 1주차 주간시험</td>
+                                        <td><span class="t_tit">토론기간 : </span>2024.04.04 ~ 2024.04.05</td>                                        
+                                        <td><span class="t_tit">최초참여일 : </span>2024.04.04</td>
+                                        <td><span class="t_tit">성적 : </span>90점</td>
+                                        <td>
+                                            <button type="button" class="btn_type04  btn_gray05" disabled>참여완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="m_hide">6</td>
+                                        <td class="tlt txtCut"><span class="t_tit">토론명 : </span>2024년 1월 1주차 주간시험</td>
+                                        <td><span class="t_tit">토론기간 : </span>2024.04.04 ~ 2024.04.05</td>                                        
+                                        <td><span class="t_tit">최초참여일 : </span>2024.04.04</td>
+                                        <td><span class="t_tit">성적 : </span>90점</td>
+                                        <td>
+                                            <button type="button" class="btn_type04  btn_gray05" disabled>참여완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="m_hide">5</td>
+                                        <td class="tlt txtCut"><span class="t_tit">토론명 : </span>2024년 1월 1주차 주간시험</td>
+                                        <td><span class="t_tit">토론기간 : </span>2024.04.04 ~ 2024.04.05</td>                                        
+                                        <td><span class="t_tit">최초참여일 : </span>2024.04.04</td>
+                                        <td><span class="t_tit">성적 : </span>90점</td>
+                                        <td>
+                                            <button type="button" class="btn_type04  btn_gray05" disabled>참여완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="m_hide">4</td>
+                                        <td class="tlt txtCut"><span class="t_tit">토론명 : </span>2024년 1월 1주차 주간시험</td>
+                                        <td><span class="t_tit">토론기간 : </span>2024.04.04 ~ 2024.04.05</td>                                        
+                                        <td><span class="t_tit">최초참여일 : </span>2024.04.04</td>
+                                        <td><span class="t_tit">성적 : </span>90점</td>
+                                        <td>
+                                            <button type="button" class="btn_type04  btn_gray05" disabled>참여완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="m_hide">3</td>
+                                        <td class="tlt txtCut"><span class="t_tit">토론명 : </span>2024년 1월 1주차 주간시험</td>
+                                        <td><span class="t_tit">토론기간 : </span>2024.04.04 ~ 2024.04.05</td>                                        
+                                        <td><span class="t_tit">최초참여일 : </span>2024.04.04</td>
+                                        <td><span class="t_tit">성적 : </span>90점</td>
+                                        <td>
+                                            <button type="button" class="btn_type04  btn_gray05" disabled>참여완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="m_hide">2</td>
+                                        <td class="tlt txtCut"><span class="t_tit">토론명 : </span>2024년 1월 1주차 주간시험</td>
+                                        <td><span class="t_tit">토론기간 : </span>2024.04.04 ~ 2024.04.05</td>                                        
+                                        <td><span class="t_tit">최초참여일 : </span>2024.04.04</td>
+                                        <td><span class="t_tit">성적 : </span>90점</td>
+                                        <td>
+                                            <button type="button" class="btn_type04  btn_gray05" disabled>참여완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="m_hide">1</td>
+                                        <td class="tlt txtCut"><span class="t_tit">토론명 : </span>2024년 1월 1주차 주간시험</td>
+                                        <td><span class="t_tit">토론기간 : </span>2024.04.04 ~ 2024.04.05</td>                                        
+                                        <td><span class="t_tit">최초참여일 : </span>2024.04.04</td>
+                                        <td><span class="t_tit">성적 : </span>90점</td>
+                                        <td>
+                                            <button type="button" class="btn_type04  btn_gray05" disabled>참여완료</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                            
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+</body>
+</html>

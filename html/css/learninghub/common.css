@@ -146,6 +146,8 @@ button, select { cursor: pointer; }
 .btn_type01 { width: 100%; padding: 2rem 0; background-color: #d7d7d7; color: #fff; font-size: 1.6rem; font-weight: 500; border-radius: 10px; } 
 .btn_type02 { width: 100%; padding: 1.3rem 0; font-size: 1.6rem; font-weight: 500; border-radius: 10px; } 
 .btn_type03 { width: 65px; height: 65px; background-color: #d7d7d7; background-image: url(../../images/learninghub/icon_play.png); background-position: 18px 10px; background-repeat: no-repeat; border-radius: 50%; } 
+.btn_type04 { min-width: 80px; font-size: 1.4rem; font-weight: 500; padding: 5px 1rem; border-radius: 5px; display: inline-block; box-sizing: border-box; text-align: center } 
+
 .bg_orange { background-color: #f09e4b !important; } 
 .btn_green { background-color: #61a946; color: #ffffff; } 
 .btn_green02 { background-color: #a0c44c; color: #ffffff; } 

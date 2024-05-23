@@ -360,9 +360,9 @@
 
 /* 학습방 팝업 */
 .popUp.studyPop { max-width: 100%; margin: 0 auto; position: static; transform: none; } 
-.popUp.studyPop .popCont { padding: 0; } 
+.popUp.studyPop .popCont {max-height: initial; padding: 0; background: #f5f5f5;} 
 .popUp.studyPop .popArea { display: flex; } 
-.popUp.studyPop .popLeft { width: 200px; padding-top: 120px; background: #373737; } 
+.popUp.studyPop .popLeft { width: 200px; height: 100vh; padding-top: 120px; background: #373737; } 
 .popUp.studyPop .popLeft .studyList li { height: 65px; position: relative; } 
 .popUp.studyPop .popLeft .studyList li.active, .popUp.studyPop .popLeft .studyList li:hover { background: #3f3f3f; } 
 .popUp.studyPop .popLeft .studyList li.active::after, .popUp.studyPop .popLeft .studyList li:hover::after { content: ''; width: 4px; height: 100%; position: absolute; top: 0; right: 0; background: #f36f20; } 
@@ -381,7 +381,7 @@
 .popUp.studyPop .popLeft .studyList li.active .icon04, .popUp.studyPop .popLeft .studyList li:hover .icon04 { background-image: url(../../images/learninghub/study_icon_on_04.png); } 
 .popUp.studyPop .popLeft .studyList li.active .icon05, .popUp.studyPop .popLeft .studyList li:hover .icon05 { background-image: url(../../images/learninghub/study_icon_on_05.png); } 
 .popUp.studyPop .popLeft .studyList li.active .icon06, .popUp.studyPop .popLeft .studyList li:hover .icon06 { background-image: url(../../images/learninghub/study_icon_on_06.png); } 
-.popUp.studyPop .popContents { width: calc(100% - 200px); padding: 4rem; background: #f5f5f5; box-sizing: border-box;} 
+.popUp.studyPop .popContents { width: calc(100% - 200px); padding: 4rem; background: #f5f5f5; box-sizing: border-box; } 
 .popUp.studyPop .popContents .popTit { margin-bottom: 3rem; } 
 .popUp.studyPop .popContents .popTit p { color: #373737; font-size: 3rem; font-weight: bold; } 
 .popUp.studyPop .popContents .popTit p span { font-size: 2rem; font-weight: 400; } 
@@ -423,9 +423,17 @@
 .popUp.studyPop .testInfo .testList li:nth-child(3) .imgWrap::after { width: 58px; height: 68px; position: absolute; left: calc(50% - -12px); background: url(../../images/learninghub/study_item03.png) no-repeat; } 
 .popUp.studyPop .testInfo .testList li:nth-child(4) .imgWrap::after { width: 62px; height: 77px; position: absolute; left: calc(50% - -4px); background: url(../../images/learninghub/study_item04.png) no-repeat; } 
 .popUp.studyPop .testInfo .testList li .tit { color: #373737; font-size: 1.6rem; font-weight: 500; text-align: center; } 
-
 .popUp.studyPop .testInfo .testList li .btnLink { margin-top: auto; background: #373737; text-align: center; } 
 .popUp.studyPop .testInfo .testList li .btnLink p { padding: 1rem 0; color: #fff; font-size: 1.6rem; font-weight: bold; } 
+
+.popUp.studyPop .popTabList { display: flex; margin-bottom: 3.4rem; position: relative; overflow-y: auto; border-bottom: 1px solid #e0e0e0; } 
+.popUp.studyPop .popTabList li { white-space: nowrap; } 
+.popUp.studyPop .popTabList li.active { border-bottom: 2px solid #f36f20; z-index: 2; } 
+.popUp.studyPop .popTabList a { display: block; width: 100%; height: 100%; padding: 1.6rem 4rem; color: #666666; font-size: 1.7rem; font-weight: 400; box-sizing: border-box; } 
+.popUp.studyPop .popTabList li.active a { color: #373737; font-weight: bold; } 
+.popUp.studyPop .contBox { padding: 3.4rem 3.6rem; background: #fff; border-radius: 20px; box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.05); } 
+.popUp.studyPop .table_type01 table .t_tit { display: none; } 
+
 
 
 /* 나의 강의실 */
@@ -471,7 +479,7 @@
 .content_area .con_tit { margin-bottom: 2rem; color: #373737; font-size: 2.2rem; font-weight: bold; } 
 .content_area .cont_top { display: flex; margin-bottom: 2rem; align-items: center; justify-content: space-between; } 
 .content_area .cont_top p { color: #666666; font-size: 1.6rem; } 
-.content_area .tab_menu_list { display: flex; margin-bottom: 3.4rem; position: relative; overflow-y: auto; border-bottom: 1px solid #e0e0e0;} 
+.content_area .tab_menu_list { display: flex; margin-bottom: 3.4rem; position: relative; overflow-y: auto; border-bottom: 1px solid #e0e0e0; } 
 .content_area .tab_menu_list::after { content: ''; width: 100%; height: 1px; position: absolute; left: 0; bottom: 0; background: #e0e0e0; z-index: 1; } 
 .content_area .tab_menu_list li { white-space: nowrap; } 
 .content_area .tab_menu_list li.active { border-bottom: 2px solid #f36f20; z-index: 2; } 
@@ -576,9 +584,10 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
  .content_area .contain { width: 100%; } 
 
  /* 학습방 팝업 */
+ .popUp.studyPop .popCont {height: 100vh;}
  .popUp.studyPop .popLeft { display: none; } 
  .popUp.studyPop .popContents { width: 100%; } 
-}
+ }
 
 @media all and (max-width:860px){
  .main_wrap .banner_wrap,
@@ -640,6 +649,7 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
  .table_type01 table thead { display: none; } 
  .table_type01 table tbody td { padding: 6px; text-align: left; } 
  .table_type01 table tbody td .btn_style03 { width: 100%; } 
+ .table_type01 table tbody td .btn_type04 { width: 100%; } 
  .table_type01 table tbody td.t_btn_wrap { padding: 0; position: absolute; top: 4px; left: 32px; } 
 
  /* 학습방 팝업 */
@@ -648,7 +658,8 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
  .popUp.studyPop .studyInfo .prgsWrap { max-width: 100%; margin: 2rem 0; } 
  .popUp.studyPop .studyInfo .prgsArea .prgsBar { max-width: 100%; } 
  .popUp.studyPop .studyInfo .infoBtn { text-align: center; } 
- }
+ .popUp.studyPop .table_type01 table .t_tit { display: inline-block; margin-right: 1rem;} 
+}
 
 
 @media all and (max-width:640px){
@@ -720,13 +731,14 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .btn_wrap { margin-top: 3rem; } 
 
  /* 학습방 팝업 */
+
+.popUp.studyPop .contBox {padding: 2rem 2rem;}
 .popUp.studyPop .studyInfo { margin-bottom: 4rem; padding: 2.4rem 2rem; } 
 .popUp.studyPop .circleWrap { margin-bottom: 4rem; flex-wrap: wrap; justify-content: center; } 
 .popUp.studyPop .circleBar { width: 120px; height: 120px; } 
 .popUp.studyPop .testInfo .testList { flex-wrap: wrap; gap: 10px; } 
 .popUp.studyPop .testInfo .testList li { width: calc(100% / 2 - 10px); } 
-.popUp.studyPop .studyInfo .infoList .btnWrap {
-    text-align: center;
-}
-
-}
+.popUp.studyPop .studyInfo .infoList .btnWrap { text-align: center; } 
+.popUp.studyPop .studyInfo .infoBtn button span::before { width: 25px; height: 31px; margin: 0 8px 0 auto; background-size: contain; } 
+.popUp.studyPop .studyInfo .infoBtn button { width: 130px; height: 70px; font-size: 1.4rem; } 
+ }
