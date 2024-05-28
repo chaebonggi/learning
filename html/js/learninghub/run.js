@@ -152,27 +152,22 @@ $(document).ready(function() {
             prevEl: '.main_visual_swiper .swiper-button-prev',
         },
     });
-    document.addEventListener("DOMContentLoaded", function() {
-        const pauseEl = document.querySelector('.swiper-button-pause');
-        const resumeEl = document.querySelector('.swiper-button-resume');
-    
-        if (pauseEl && resumeEl) {
-            const pauseFunc = () => {
-                mainSwiper.autoplay.stop();
-                swiperEl.classList.add('swiper-paused');
-            };
-    
-            const resumeFunc = () => {
-                mainSwiper.autoplay.start();
-                swiperEl.classList.remove('swiper-paused');
-            };
-    
-            pauseEl.addEventListener('click', pauseFunc);
-            resumeEl.addEventListener('click', resumeFunc);
-        } else {
-            console.error("Pause or resume button element not found!");
-        }
-    });
+    const pauseEl = document.querySelector('.swiper-button-pause');
+    const resumeEl = document.querySelector('.swiper-button-resume');
+    if (pauseEl && resumeEl) {
+        const pauseFunc = () => {
+            mainSwiper.autoplay.stop();
+            swiperEl.classList.add('swiper-paused');
+        };
+
+        const resumeFunc = () => {
+            mainSwiper.autoplay.start();
+            swiperEl.classList.remove('swiper-paused');
+        };
+
+        pauseEl.addEventListener('click', pauseFunc);
+        resumeEl.addEventListener('click', resumeFunc);
+    }
 
     var swiper = new Swiper('.hot_trend .con_list', {
         initialSlide: 0,

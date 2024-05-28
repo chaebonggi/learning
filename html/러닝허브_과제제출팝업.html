@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브</title>
+    <link rel="stylesheet" href="https://mark1.job-cloud.kr/html/css/reset.css">
+    <link rel="stylesheet" href="https://mark1.job-cloud.kr/html/css/common.css">
+    <link rel="stylesheet" href="https://mark1.job-cloud.kr/html/css/style.css">
+    <link rel="stylesheet" href="https://mark1.job-cloud.kr/html/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imgLiquid/0.9.944/js/imgLiquid-min.js" integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/excel-bootstrap-table-filter-bundle.js"></script>
+    <link rel="stylesheet" href="https://mark1.job-cloud.kr/html/css/excel-bootstrap-table-filter-style.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://mark1.job-cloud.kr/html/js/run.js"></script>
+</head>
+
+<body>
+    <!--header-->
+    <header id="header">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <a href="#"><img src="images/logo.png" alt="러닝허브"></a>
+                </h1>
+                <div class="seach_area">
+                    <div class="input_wrap">
+                        <input type="text" placeholder="교육과정을 검색하세요.">
+                        <button type="submit">검색</button>
+                    </div>
+                    <div class="search_history">
+                        <ul>
+                            <li>
+                                <a href="#" class="txt">최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1최근검색어1</a><a href="#" class="del">삭제</a>
+                            </li>
+                            <li>
+                                <a href="#" class="txt">최근검색어2</a><a href="#" class="del">삭제</a>
+                            </li>
+                            <li>
+                                <a href="#" class="txt">최근검색어3</a><a href="#" class="del">삭제</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="all_del">전체 삭제</a>
+                    </div>
+                </div>
+                <ul class="memberbx">
+                    <li class="login"><a href="#">로그인</a></li>
+                    <li class="join"><a href="#">회원가입</a></li>
+                </ul>
+
+            </div>
+            <div class="gnb_wrap">
+                <a href="#" class="all_menu">전체메뉴
+                </a>
+                <nav id="gnb">
+                    <ul>
+                        <li><a href="#">수강신청</a></li>
+                        <li><a href="#">마이크로러닝</a></li>
+                        <li><a href="#">역량진단</a></li>
+                        <li><a href="#">경력개발계획</a></li>
+                        <li><a href="#">나의 강의실</a></li>
+                        <li><a href="#">학습지원센터</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--//header-->
+    <!--content-page-->
+    <div class="content-page">
+        <!--quick_menu-->
+
+        <div class="quick_menu">
+            <ul>
+                <li class="quick"><a href="#"><span></span>
+                        <p> QUICK</p>
+                    </a>
+                    <ul>
+                        <li><a href="#">수강신청</a></li>
+                        <li><a href="#">자주하는 질문</a></li>
+                        <li><a href="#">묻고 답하기</a></li>
+                    </ul>
+                </li>
+                <li class="recent"><a href="#"><span></span>
+                        <p>최근 본 과정</p>
+                    </a>
+                    <ul>
+                        <li><a href="#">테슬라가 말한다! 4...</a></li>
+                        <li><a href="#">테슬라가 말한다! 4...</a></li>
+                        <li><a href="#">테슬라가 말한다! 4...</a></li>
+                    </ul>
+                    <ul class="recent_more">
+                        <div class="item">
+                            <a href="#">
+                                <div class="img imgFill">
+                                    <img src="images/list_sp01.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="division">[이러닝]</p>
+                                    <p class="tit">테슬라가 말한다! 4차...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img imgFill">
+                                    <img src="images/list_sp01.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="division">[이러닝]</p>
+                                    <p class="tit">테슬라가 말한다! 4차...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <div class="img imgFill">
+                                    <img src="images/list_sp01.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p class="division">[이러닝]</p>
+                                    <p class="tit">테슬라가 말한다! 4차...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </ul>
+                </li>
+                <li class="top"><a href="#"><span></span>
+                        <p>TOP</p>
+                    </a></li>
+            </ul>
+        </div>
+        <!--//quick_menu-->
+        <div class="inner">
+            <ul class="bread_crumb">
+                <li>HOME</li>
+                <li>나의 강의실</li>
+                <li>나의 강의실</li>
+                <li>수강중인과정</li>
+            </ul>
+            <div class="clear">
+                <div id="side">
+                    <h3 class="tit">나의 강의실</h3>
+                    <ul class="snb">
+                        <li><a href="#">수강신청 현황</a></li>
+                        <li class="active"><a href="#">나의 강의실</a>
+                            <ul>
+                                <li class="active"><a href="#">수강중인과정</a></li>
+                                <li><a href="#">학습후기</a></li>
+                                <li><a href="#">설문함</a></li>
+                                <li><a href="#">쪽지함</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">학습 이력 현황</a></li>
+                        <li><a href="#">나의 경력 활동</a>
+                            <ul>
+                                <li><a href="#">교육계획현황</a></li>
+                                <li><a href="#">자격취득현황</a></li>
+                                <li><a href="#">어학취득현황</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">사외 교육</a></li>
+                        <li><a href="#">학습 레벨</a></li>
+                        <li><a href="#">마일리지 이용/적립</a></li>
+                        <li><a href="#">개인정보 수정</a></li>
+                    </ul>
+                </div>
+                <div id="contents">
+                    <h3 class="page_tit">수강중인 과정</h3>
+                    <div class="home_top">
+                        <h3>B2B마케팅을 위한 솔루션 영업전략</h3>
+                        <div class="btn_area three_btn">
+                            <a href="javascript:openModal('modal1')" class="btn_style08 btn_gray02">과정소개</a>
+                            <a href="javascript:openModal('modal2')" class="btn_style08 btn_gray02">학습가이드</a>
+                            <a href="javascript:openModal('modal3')" class="btn_style08 btn_black02">학습하기</a>
+                        </div>
+                    </div>
+                    <div class="term_list">
+                        <div class="item">
+                            <p class="tit">학습 기간</p>
+                            <p class="desc">2022.03.01 ~ 2023.02.01</p>
+                        </div>
+                        <div class="item">
+                            <p class="tit">남은 기간</p>
+                            <p class="desc">267일</p>
+                        </div>
+                        <div class="item">
+                            <p class="tit">재학습 기간</p>
+                            <p class="desc">2023.03.01 ~ 2023.03.30</p>
+                        </div>
+                    </div>
+
+                    <div class="tab_wrap tab_select mb40">
+                        <a href="#" class="tabs_dropdown">학습홈</a>
+                        <ul class="tab_style01">
+                            <li class="w120"><a href="#">학습홈</a></li>
+                            <li class="w120"><a href="#">시험</a></li>
+                            <li class="active w120"><a href="#">과제</a></li>
+                            <li class="w120"><a href="#">토론</a></li>
+                            <li class="w120"><a href="#">설문</a></li>
+                            <li class="w120"><a href="#">진도/성적</a></li>
+                        </ul>
+                    </div>
+
+                    <p class="tit02">유의사항</p>
+                    <div class="gray_bg mb40">
+                        <ul class="list_style03 navy">
+                            <li class="mb5 btn_li"><p>과제 모사답안 처리규정 안내</p>
+                                <a href="javascript:openModal('modal4')" class="btn_style09 btn_gray01 ml15">모사답안 처리규정</a>
+                            </li>
+                            <li class="mb5">제출된 과제는 모사답안 방지 프로그램을 통해 표절도를 검사합니다.</li>
+                            <li class="mb5">모사 과제 제출 시, 과제 원본 제출자와 모사자 모두 0점/미수료 처리 됩니다.</li>
+                            <li class="mb5">포털 사이트 블로그 및 과제 구매 사이트 자료로 확인될 경우 0점/미수료 처리됩니다.</li>
+                            <li class="mb5">과제 작성란에 복사(Ctrl+C) 붙여넣기(Ctrl+V) 불가합니다.</li>
+                            <li class="mb5">과제 최종 제출 후 수정 및 재제출이 불가합니다.(종료일 3일 전 제출 권장)</li>
+                            <li class="mb5">보안 파일은 반드시 해제 후 제출하시기 바랍니다. 보안파일로 최종 제출된 경우 0점 처리됩니다.<br>
+                                <span class="red">
+                                    단, 학습 기간 내 과제 재제출 사유서와 보안 해제한 파일</span>을 1:1 문의를 통해 재제출하는 경우는 반영 가능합니다.<br>
+                                <div class="red btn_li"><p>※ 반드시 보안 해제된 파일과 재제출 사유서를 함께 제출해야 합니다.</p><a href="#" class="btn_style09 btn_gray01 ml15">과제 재제출 사유서 다운로드</a></div>
+                            </li>
+                            <li class="mb5">과제 재제출 사유서 다운로드</li>
+                            <li class="mb5">제출된 과제는 순차적으로 담당 튜터가 채점합니다.(학습 종료 후 최대 7일 소요)</li>
+                            <li class="mb5">채점 완료 후 과제 메뉴에서 점수 확인 가능합니다.</li>
+                            <li class="mb5 btn_li red">
+                                <p>학습 종료일에 장애가 발생하는 경우 1:1 문의를 통해 질의를 남겨주시기 바랍니다.</p><a href="javascript:openModal('modal5')" class="btn_style09 btn_gray01 ml15">과제 / 시험 문의사항</a>
+                            </li>
+                            <li>학습 종료일에 장애 발생시 1:1 문의로 과제 제출이 가능합니다.(단, 종료일 23시 59분까지 제출분에 한함)</li>
+                        </ul>
+                    </div>
+                    <div class="div_table04 test_table">
+                        <div class="item">
+                            <p class="th">과제명</p>
+                            <div class="td">
+                                2차 과제
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="th">제출 기간</p>
+                            <div class="td">
+                                2021.05.01 14:00 ~ 2021.05.31 22:00
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="th">점수</p>
+                            <div class="td">
+                                10점
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="th">제출일자</p>
+                            <div class="td">
+                                2021.05.20 14:00
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="th">제출여부</p>
+                            <div class="td blue">
+                                제출완료
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="div_table04 test_table">
+                        <div class="item">
+                            <p class="th">과제명</p>
+                            <div class="td">
+                                1차 과제
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="th">제출 기간</p>
+                            <div class="td">
+                                2021.05.01 14:00 ~ 2021.05.31 22:00
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="th">점수</p>
+                            <div class="td">
+                                10점
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="th">제출일자</p>
+                            <div class="td">
+                                2021.05.20 14:00
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="th">제출여부</p>
+                            <div class="td blue">
+                                 <a href="javascript:openModal('modal6')" class="btn_style04 btn_gray01">제출하기</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--팝업-->
+        <div class="shadow"></div>
+    
+        <style>
+            .board_etc {
+                padding: 1rem;
+                margin-bottom: 2rem;
+                background: #fdf8f5;
+                border-radius: 10px;
+                font-size: 1.4rem;
+            }
+            .cont_input {
+                background: #f7f8fa;
+                border: 0;
+                padding: 1.5rem;
+                font-size: 1.4rem;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }            
+        </style>
+        <!--과제 제출팝업-->
+        <div class="popUp modal6 w760">
+        <div class="popTop">
+            <h3>과제 제출</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="pc_pd scr mh_scr">
+                <h4 class="homework_tit mb20">교육과정명 과제 제출</h4>
+                <div class="board_etc">
+                    <ul class="list_style01">
+                        <li>만기일 이후에는 제출 불가</li>
+                        <li>60점 미만 취득시 과락으로 미수료 처리됨</li>
+                        <li>모사리포트 제출시(타인의 리포트를 받아 제출하는 행위)에는 리포트 제출자 및 제공자 모두 과락 적용</li>
+                    </ul>
+                </div>
+                <div class="board_write board_write02 mb40">
+                    <div class="item pd0">
+                        <div class="tit">
+                            <p>과제명</p>
+                        </div>
+                        <div class="cont">
+                            <p class="cont_input">[필수]과제1</p>
+                        </div>
+                    </div>
+                    <div class="item pd0">
+                        <div class="tit">
+                            <p>과제내용</p>
+                        </div>
+                        <div class="cont">
+                            <p class="cont_input">
+                                기업은 위기 관리 차원에서<br>
+                                [작성시 유의사항]<br>
+                                1. 위험<br>
+                                2. 기업<br>
+                                3. 위험을 관리
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item file_item pd10_02 ">
+                        <div class="tit">
+                            첨부파일
+                        </div>
+                        <div class="cont">
+                                <div class="file_wrap">
+                                <div id="upload_prev"></div>
+                                <input type="file" id="uploadFile" name="FileUpload" multiple="multiple" />
+                                <label for="uploadFile">파일 업로드</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="board_write board_write02 mb40">
+                    <div class="item pd0">
+                        <div class="tit">
+                            <p>제출자</p>
+                        </div>
+                        <div class="cont">
+                            <p class="cont_input">사용자001</p>
+                        </div>
+                    </div>
+                    <div class="item pd0">
+                        <div class="tit">
+                            <p>과제제목</p>
+                        </div>
+                        <div class="cont">
+                            <input type="text" id="tit" class="w100">
+                        </div>
+                    </div>
+                    <div class="item pd0">
+                        <div class="tit">
+                            <p>제출내용</p>
+                        </div>
+                        <div class="cont">
+                            <textarea class="w100" id="cont"></textarea>
+                        </div>
+                    </div>
+                    <div class="item file_item pd10_02 ">
+                        <div class="tit">
+                            첨부파일
+                        </div>
+                        <div class="cont">
+                                <div class="file_wrap">
+                                <div id="upload_prev"></div>
+                                <input type="file" id="uploadFile" name="FileUpload" multiple="multiple" />
+                                <label for="uploadFile">파일 업로드</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrap tct three_btn">
+                    <a href="#" class="btn_style01 btn_gray04">
+                        제출
+                    </a>
+                    <a href="#" class="btn_style01 btn_gray03">
+                        취소
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- //과제 제출팝업-->
+
+        
+     </div>
+    <!--//content-page-->
+
+    <!--footer-->
+    <footer id="footer">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="images/foot_logo.png" alt="러닝허브">
+                    </a>
+                </h1>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li class="bold"><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">찾아오시는길</a></li>
+                    <li><a href="#">환불규정</a></li>
+                </ul>
+                <div class="family_site">
+                    <select class="select_style01">
+                        <option>관련사이트</option>
+                    </select>
+                    <a href="#">이동</a>
+                </div>
+            </div>
+            <div class="bt">
+                <div class="txt">
+                    <p>(08390)서울특별시 구로구 디지털로 30길 31, 코오롱빌란트2차 703호</p>
+                    <p><span>㈜인키움 대표이사 : 박지현</span><span>TEL : 02-555-1945 </span><span>FAX : 02-2081-1090</span><span>사업자등록번호 : 220-81-71637</span></p>
+                    <p><span class="bold">학습지원센터 : 02-2081-1000</span><span>이용시간 : 평일 09:00 ~ 18:00 (점심 12:00 ~ 13:00)</span></p>
+                    <p class="f14">Copyright ⓒ 2020. (주) 인키움. All rights reserved.</p>
+                </div>
+                <img src="images/foot_mark.png" alt="우수훈련기관">
+            </div>
+        </div>
+    </footer>
+    <!--//footer-->
+</body>
+
+</html>
