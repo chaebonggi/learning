@@ -328,7 +328,20 @@
                 font-size: 1.4rem;
                 border-radius: 5px;
                 box-sizing: border-box;
-            }            
+            }
+            .pop_agree .check {
+                padding-left: 20px;
+                position: relative;
+            } 
+            .pop_agree .check input[type="checkbox"] {
+                margin: 0;
+                position: absolute;
+                top: 4px;
+                left: 0;
+            }
+            .pop_agree .check label {
+                font-size: 1.4rem;
+            }
         </style>
         <!--과제 제출팝업-->
         <div class="popUp modal6 w760">
@@ -404,7 +417,12 @@
                             <p>제출내용</p>
                         </div>
                         <div class="cont">
-                            <textarea class="w100" id="cont"></textarea>
+                            <p class="red f12 mb10">&#8251;이 구역은 복사 및 붙여넣기가 되지 않습니다. 글자수 2000자 이상 작성시 제출이 되지 않으니 첨부파일로 작성하여 업로드 바랍니다.</p>
+                            <textarea maxlength="2000" class="w100" id="textarea_cont"></textarea>
+                            <div class="area_wrap">
+                                <span class="text_count f12">0</span>
+                                <span class="f12">/ 2000</span>
+                            </div>
                         </div>
                     </div>
                     <div class="item file_item pd10_02 ">
@@ -420,6 +438,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="pop_agree">
+                    <div class="check">
+                        <input type="checkbox" id="agree01">
+                        <label for="agree01">모사답안으로 확인 될 경우, 미수료 처리되는 것에 동의 합니다.</label>
+                    </div>
+                    <div class="check mt5">
+                        <input type="checkbox" id="agree02">
+                        <label for="agree02">과제 유의사항을 모두 확인하였으며, 이에 동의합니다.</label>
+                    </div>
+                </div>
                 <div class="btn_wrap tct three_btn">
                     <a href="#" class="btn_style01 btn_gray04">
                         제출
@@ -432,6 +460,17 @@
             </div>
         </div>
         <!-- //과제 제출팝업-->
+        <script>
+            $('#textarea_cont').keyup(function(e) {
+                let content = $(this).val();                
+                // 글자수 세기
+                if (content.length == 0 || content == '') {
+                    $('.text_count').text('0');
+                } else {
+                    $('.text_count').text(content.length);
+                }
+            });
+        </script>
 
         
      </div>
