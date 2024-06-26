@@ -801,6 +801,9 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .content_area .complete_wrap .item.right_box { flex-direction: column; gap: 10px; } 
 .content_area .complete_wrap .item.right_box > div { padding: 15px 10px; } 
 .content_area .complete_wrap .item.right_box .txt01 { margin: 10px 0; } 
+.content_area .item_wrap {
+    gap: 10px;
+}
 .content_area .item_wrap .cnt_top .data,
 .content_area .item_wrap .cnt_top .time,
 .content_area .cnt_bottom .txt_wrap p {text-align: center;}
