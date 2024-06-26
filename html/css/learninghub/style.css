@@ -541,7 +541,7 @@
 .content_area .cnt_bottom .txt_wrap { max-width: 200px; margin-right: 10px; } 
 .content_area .cnt_bottom .txt_wrap::after { content: ''; display: block; width: 70px; height: 70px; margin: 10px auto 0; background-color: #f5f5f5; background-image: url(../../images/learninghub/icon_play02.png); background-position: 20px 12px; background-repeat: no-repeat; border-radius: 50%; } 
 .content_area .cnt_bottom .txt_wrap p { color: #666666; font-size: 14px; font-weight: 300; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden; } 
-.content_area .cnt_bottom .img_wrap { width: 145px; height: 100px; border-radius: 10px; overflow: hidden; } 
+.content_area .cnt_bottom .img_wrap { width: 145px; height: 100px; border-radius: 10px; overflow: hidden; font-size: 0;} 
 .content_area .cnt_bottom .img_wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top left; } 
 .content_area .complete_wrap { display: flex; padding: 30px 26px; background: #fff; border: 1px solid #a0c44c; border-radius: 20px; flex-wrap: wrap; justify-content: space-between; } 
 .content_area .complete_wrap .con_tit { width: 100%; font-size: 1.8rem; } 
@@ -791,7 +791,7 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 /* 대쉬보드 */
 .content_area .cnt_bottom a { flex-direction: column; } 
 .content_area .cnt_bottom .txt_wrap { width: 100%; max-width: 100%; order: 2; } 
-.content_area .cnt_bottom .img_wrap { margin: 0 auto 10px; order: 1; } 
+.content_area .cnt_bottom .img_wrap { width: 100%; height: 100%; margin: 0 auto 10px; order: 1;} 
 .content_area .info_wrap .item .tit { margin-bottom: 10px; } 
 .content_area .info_wrap .item { width: 100%; } 
 .content_area .complete_wrap { padding: 15px 15px; } 
@@ -801,6 +801,9 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .content_area .complete_wrap .item.right_box { flex-direction: column; gap: 10px; } 
 .content_area .complete_wrap .item.right_box > div { padding: 15px 10px; } 
 .content_area .complete_wrap .item.right_box .txt01 { margin: 10px 0; } 
+.content_area .item_wrap .cnt_top .data,
+.content_area .item_wrap .cnt_top .time,
+.content_area .cnt_bottom .txt_wrap p {text-align: center;}
 
 .content_area .cont_box { padding: 2rem 2rem; } 
 .content_area .contain { padding: 0; } 
