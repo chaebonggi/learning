@@ -129,7 +129,7 @@
                     </div>
                     <div class="popTit">
                         <p>1. 나도 만들 수 있다.</p>
-                        <button type="button">과정질문</button>
+                        <button type="button" onclick="openModal('modal01')">과정질문</button>
                     </div>
                     <div class="playerWrap">
                         <div class="videoArea">
@@ -139,6 +139,29 @@
                 </div>
             </div>            
         </div>
+    </div>
+
+    <!-- 과정질문하기 팝업 -->
+    <div class="shadow"></div>
+    <div class="popUp modal01 messagePop">
+        <div class="popTop">
+            <h3>과정질문하기</h3>
+            <a href="#" class="close" onclick="close_pop02(this)">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="contTop">
+                <div class="txt_wrap">
+                    <input type="text" placeholder="제목을 입력해 주세요.">
+                </div>
+            </div>
+            <textarea placeholder="내용을 입력해 주세요."></textarea>
+            <div class="btn_wrap tct">
+                <a href="#" class="btn_style06 btn_gray04">등록</a>
+                <a href="#" class="btn_style06 btn_gray05" onclick="close_pop02(this)">취소</a>
+                
+            </div>
+        </div>
+
     </div>
     <script>
         $(document).ready(function() {
@@ -151,6 +174,12 @@
                 leftMenu.removeClass('on');
             });
         });
+        function close_pop02(element) {
+            var $childPopup = $(element).closest(".popUp");
+            $childPopup.hide();
+            $(".shadow").hide();
+            $('body').removeClass('not_scroll');
+        };
     </script>
 
 </body>
