@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브_학습방_메인</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/00001/00001.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/chosen.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/excel-bootstrap-table-filter-style.css">
+
+	
+	<script src="./js/front/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="./js/front/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="./js/front/front/jquery.mCustomScrollbar.js"></script>
+	<script src="./js/front/front/imgLiquid/0.9.944/imgLiquid-min.js" integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./js/front/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
+	<script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
+	<script src="./js/front/chosen.jquery.min.js"></script>
+	<!-- <script src="./js/front/front/run.js"></script> -->
+    <script src="./js/learninghub/run.js"></script>
+	<script src="./js/front/file/forms.js"></script>
+	<script src="./js/front/solution/solution_ui.js"></script>
+	<script src="./js/front/solution/custome.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <div class="popUp learnPop" style="display: block;">
+        <div class="popTop">
+            <h3>학습창</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="popArea">
+                <div class="popLeft">
+                    <div class="infoTit">
+                        <div class="infoTop">
+                            <p>목차</p>
+                            <button type="button" class="infoClose">목차닫기 X</button>
+                        </div>
+                        <div class="prgsArea">
+                            <p class="prgsTit">SNS마케팅 마스터하기</p>
+                            <div class="prgs_bar">
+                                <span style="width: 50%"></span>
+                                <p>50%</p>
+                            </div>
+                            <p class="prgsTxt">3강 / 5강(30%)</p>
+                        </div>                        
+                    </div>
+                    <div class="infoList">
+                        <div class="item">
+                            <p class="listTit">1차시. 나도 만들 수 있다.</p>
+                            <ul>
+                                <li>
+                                    <p class="tagTit">1절 동영상강의</p>
+                                    <div class="tagWrap">
+                                        <span class="time">00:00:00</span>
+                                        <span class="tag bcOrange">완료</span>
+                                    </div>                                   
+                                </li>
+                                <li>
+                                    <p class="tagTit">2절 SNS 파헤치기</p>
+                                    <div class="tagWrap">
+                                        <span class="time">00:00:00</span>
+                                        <span class="tag bcOrange">완료</span>
+                                    </div>                                   
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <p class="listTit">2차시. 나도 만들 수 있다.</p>
+                            <ul>
+                                <li>
+                                    <p class="tagTit">1절 동영상강의</p>
+                                    <div class="tagWrap">
+                                        <span class="time">00:00:00</span>
+                                        <span class="tag bcGray">대기</span>
+                                    </div>                                   
+                                </li>
+                                <li class="active">
+                                    <p class="tagTit">2절 동영상강의</p>
+                                    <div class="tagWrap">
+                                        <span class="time">00:00:00</span>
+                                        <span class="tag bcGray">대기</span>
+                                    </div>                                   
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <p class="listTit">3차시. 나도 만들 수 있다.</p>
+                            <ul>
+                                <li>
+                                    <p class="tagTit">1절 동영상강의</p>
+                                    <div class="tagWrap">
+                                        <span class="time">00:00:00</span>
+                                        <span class="tag bcGray">대기</span>
+                                    </div>                                   
+                                </li>
+                                <li>
+                                    <p class="tagTit">2절 동영상강의</p>
+                                    <div class="tagWrap">
+                                        <span class="time">00:00:00</span>
+                                        <span class="tag bcGray">대기</span>
+                                    </div>                                   
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="popContents">
+                    <div class="btnTop">
+                        <button type="button" class="infoOpen">목차</button>
+                    </div>
+                    <div class="popTit">
+                        <p>1. 나도 만들 수 있다.</p>
+                        <button type="button">과정질문</button>
+                    </div>
+                    <div class="playerWrap">
+                        <div class="videoArea">
+                            <video controls src="http://content.learning-hub.co.kr/contents/Course/m_1093442/docs/01/F001.mp4" class="player"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(".popUp.learnPop .infoClose").click(function() {
+                var leftMenu = $('.popUp.learnPop .popLeft');
+                leftMenu.addClass('on');
+            });
+            $(".popUp.learnPop .infoOpen").click(function() {
+                var leftMenu = $('.popUp.learnPop .popLeft');
+                leftMenu.removeClass('on');
+            });
+        });
+    </script>
+
+</body>
+</html>
