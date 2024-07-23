@@ -318,8 +318,8 @@
 /* .popUp.setUp .com_area { display: flex; height: 170px; padding: 2rem; background: #fff; flex-direction: column; flex-wrap: wrap; align-items: flex-start; box-sizing: border-box; }  */
 .popUp.setUp .com_area { max-height: 132px; margin-right: 8px; box-sizing: border-box;}
 .popUp.setUp .com_area li {margin-bottom: 4px;}
-.popUp.setUp .pc_pd { display: flex; max-width: 1060px; margin: 0 auto; gap: 0 40px; box-sizing: border-box;} 
-.popUp.setUp .pc_pd .ckItem {height: 200px; padding: 20px 0 15px; background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; flex: 1; box-sizing: border-box;} 
+.popUp.setUp .pc_pd { display: flex; max-height: 200px; max-width: 1060px; margin: 0 auto; gap: 10px; flex-wrap: wrap; box-sizing: border-box;} 
+.popUp.setUp .pc_pd .ckItem {height: 200px; padding: 10px 18px 0 26px; background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; flex: 1; box-sizing: border-box;} 
 .popUp.setUp .popCont { padding: 0; } 
 .popUp.setUp .popCont .btn_wrap { margin: 2rem 0 !important; } 
 .popUp.setUp .popBottom { padding: 2rem 0; position: relative; background: #373737; } 
@@ -340,14 +340,8 @@
     line-height: 28px;
     text-align: center;
 }
-.popUp.setUp.setUpCrsCl .pc_pd {
-    max-height: 200px;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 .popUp.setUp.setUpCrsCl .pc_pd .ckItem {
-    width: calc(100% / 4 - 8px);
-    padding: 10px 18px 0 26px;
+    width: calc(100% / 4 - 8px);    
     flex: none;
 }
 .popUp.setUp .ckItem .scrollbar-outer > .scroll-content.scroll-scrolly_visible {
@@ -373,6 +367,18 @@
     width: 3px;
     left: 0px;
     top: 0px;
+}
+.popUp.setUp.setUpJob .pc_pd {display: block;}
+.popUp.setUp.setUpJob .com_area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 36px;
+}
+.popUp.setUp.setUpJob .pc_pd .ckItem {
+    margin-bottom: 10px;
+}
+.popUp.setUp.setUpJob .com_area li {
+    width: calc(100% / 4 - 27px);
 }
 
 /*  */
@@ -843,6 +849,9 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
     max-height: calc(100vh - 120px);
 }
  .popUp.setUp.setUpCrsCl .pc_pd .ckItem {
+    width: 100%;
+ }
+ .popUp.setUp.setUpJob .com_area li {
     width: 100%;
  }
 
