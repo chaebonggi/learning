@@ -374,8 +374,8 @@
     flex-wrap: wrap;
     gap: 0 36px;
 }
-.popUp.setUp.setUpJob .pc_pd .ckItem {
-    margin-bottom: 10px;
+.popUp.setUp.setUpJob .pc_pd .ckItem + .ckItem {
+    margin-top: 10px;
 }
 .popUp.setUp.setUpJob .com_area li {
     width: calc(100% / 4 - 27px);
@@ -845,6 +845,10 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
  .popUp.setUp .popTop {
     padding: 1rem 1.5rem;
  }
+ .popUp.setUp .pc_pd .ckItem {
+    height: auto;
+    padding: 10px 14px 10px 18px;
+}
  .popUp.setUp.setUpCrsCl .pc_pd {
     max-height: calc(100vh - 120px);
 }
