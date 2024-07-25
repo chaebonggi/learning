@@ -284,6 +284,26 @@ $(document).ready(function() {
         $(this).parents(".select-menu").removeClass("active");
     });
 });
+$(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 500) {
+        $('.header_gnb .quickMenu').fadeIn();
+        } else {
+        $('.header_gnb .quickMenu').fadeOut();
+        }
+    });
+
+    $(".header_gnb .quickMenu .quickTop").click(function() {
+        $('html, body').animate({
+        scrollTop : 0
+        }, 400);
+        return false;
+    });
+    $(".header_gnb .quickMenu .quickClose").click(function() {
+        $('.header_gnb .quickMenu').toggleClass('active');
+        return false;
+    });
+});
 
 // circle progress
 document.addEventListener('DOMContentLoaded', function () {

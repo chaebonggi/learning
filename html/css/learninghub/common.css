@@ -387,10 +387,35 @@ button, select { cursor: pointer; }
 .footer .footer_wrap .f_util ul li a { color: #fff; font-weight: 500; font-size: 1.6rem; } 
 .footer .footer_wrap .f_util .f_txt { color: #878787; font-size: 1.4rem; letter-spacing: -0.5px; } 
 
+/* 퀵메뉴 */
+.header_gnb .quickMenu {display: none; position: fixed; top: 100px; right: calc(50% - 800px); z-index: 100; transform: translateX(-50%); overflow: hidden; } 
+.header_gnb .quickMenu.active .quickList { max-height: 0; padding: 0; margin-bottom: 0; position: relative; transform: translateY(-2px); overflow: hidden; } 
+.header_gnb .quickMenu .quickList { width: 110px; max-height: 400px; margin-bottom: 30px; padding: 26px 0; background: #fff; border: 1px solid #c1c1c1; border-radius: 30px; transition: all 0.5s; overflow: hidden; } 
+.header_gnb .quickMenu .quickList li + li { margin-top: 28px; } 
+.header_gnb .quickMenu .quickList li a { display: block; height: 100%; color: #666666; font-size: 13px; font-weight: 300; text-align: center; } 
+.header_gnb .quickMenu .quickList li a::before { content: ''; display: block; margin: 0 auto 6px; background-repeat: no-repeat; background-position: center; } 
+.header_gnb .quickMenu .quickList li:nth-child(1) a::before { width: 32px; height: 34px; background-image: url(../../images/learninghub/quick_icon01.png); } 
+.header_gnb .quickMenu .quickList li:nth-child(2) a::before { width: 36px; height: 36px; background-image: url(../../images/learninghub/quick_icon02.png); } 
+.header_gnb .quickMenu .quickList li:nth-child(3) a::before { width: 32px; height: 37px; background-image: url(../../images/learninghub/quick_icon03.png); } 
+.header_gnb .quickMenu .quickList li:nth-child(4) a::before { width: 34px; height: 28px; background-image: url(../../images/learninghub/quick_icon04.png); } 
+.header_gnb .quickMenu .quickList li:nth-child(1) a:hover::before { background-image: url(../../images/learninghub/quick_icon01_on.png); } 
+.header_gnb .quickMenu .quickList li:nth-child(2) a:hover::before { background-image: url(../../images/learninghub/quick_icon02_on.png); } 
+.header_gnb .quickMenu .quickList li:nth-child(3) a:hover::before { background-image: url(../../images/learninghub/quick_icon03_on.png); } 
+.header_gnb .quickMenu .quickList li:nth-child(4) a:hover::before { background-image: url(../../images/learninghub/quick_icon04_on.png); } 
+.header_gnb .quickMenu .quickList li a:hover { font-weight: 500; } 
+.header_gnb .quickMenu .quickBtn button { display: block; width: 60px; height: 60px; margin: 0 auto; border-radius: 50%; } 
+.header_gnb .quickMenu.active .quickBtn .quickClose { transform: rotate(-90deg); } 
+.header_gnb .quickMenu .quickBtn .quickClose { transform: rotate(45deg); transition: all 1s; background: url(../../images/learninghub/quick_icon05.png) center #333333 no-repeat; } 
+.header_gnb .quickMenu .quickBtn .quickTop { margin-top: 30px; background: url(../../images/learninghub/quick_icon06.png) center #ff7000 no-repeat; } 
+
+@media all and (max-width:1400px){
+    .header_gnb .quickMenu { display: none !important; } 
+}
 @media all and (max-width:1200px){
  .chat { display: none } 
  /* header */
- #header .gnb_wrap #gnb ul li { margin-right: 78px } 
+ 
+ #header .gnb_wrap #gnb ul li { margin-right: 78px; } 
  }
 
 @media all and (max-width:1024px) { /* header */
@@ -415,7 +440,6 @@ button, select { cursor: pointer; }
  .m_all_menu .top .close_btn { background: url(/images/front/close_btn03.png) no-repeat; width: 14px; height: 14px; text-indent: -9999px } 
  .m_all_menu .memberbx { justify-content: center; margin-bottom: 2rem; } 
  .m_all_menu .m_gnb { padding: 0 20px; overflow-y: auto; height: calc(100vh - 130px); box-sizing: border-box } 
- .m_all_menu .m_gnb > li { } 
  .m_all_menu .m_gnb li a { display: block; } 
  .m_all_menu .m_gnb > li > a { position: relative; font-weight: 500; border-bottom: 1px solid #eeeeee; font-size: 1.6rem; padding: 1rem 0; } 
  .m_all_menu .m_gnb > li > a:after { content: ''; display: block; background: url(/images/front/arrow_bt02.png) no-repeat; width: 12px; height: 7px; position: absolute; right: 0; top: 50%; transform: translateY(-50%) } 
@@ -452,8 +476,7 @@ button, select { cursor: pointer; }
  .footer .footer_wrap .family_site { display: none; } 
  }
 
- @media all and (max-width:768px) {
-html { font-size: 9px } 
+ @media all and (max-width:768px) {html { font-size: 9px } 
  .mb40 { margin-bottom: 3rem } 
  .mt70 { margin-top: 4rem } 
  .mgw50 { margin: 5rem 0 } 
