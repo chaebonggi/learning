@@ -281,9 +281,10 @@
 .content_wrap .all_search_wrap .check_list dl { flex: 1; } 
 .content_wrap .all_search_wrap .check_list dl .tit { display: flex; height: 52px; background: #f2f2f2; color: #373737; font-size: 1.5rem; text-align: center; border: 1px solid #ddd; border-right: 0; align-items: center; justify-content: center; box-sizing: border-box; } 
 .content_wrap .all_search_wrap .check_list.open dd { display: block; } 
-.content_wrap .all_search_wrap .check_list.open::before { content: ''; width: 100%; height: calc(100% - 52px); top: 52px; position: absolute; border: 1px solid #444; box-sizing: border-box; z-index: -1; } 
+.content_wrap .all_search_wrap .check_list.open::before { content: ''; width: 100%; height: calc(100% - 52px); top: 52px; position: absolute; border: 1px solid #444; border-bottom: 0; box-sizing: border-box; z-index: -1; } 
 .content_wrap .all_search_wrap .check_list.open .btnWrap { border-color: #444; border-bottom: 0; } 
 .content_wrap .all_search_wrap .check_list.open .moreBtn { transform: rotate(0); } 
+.content_wrap .all_search_wrap .check_list.open + .check_result {border-color: #444;}
 .content_wrap .all_search_wrap .check_list dd { display: none; } 
 .content_wrap .all_search_wrap .check_list .btnWrap { display: flex; width: 80px; height: 52px; align-items: center; justify-content: center; border: 1px solid #ddd; box-sizing: border-box; } 
 .content_wrap .all_search_wrap .check_list .moreBtn { width: 14px; height: 14px; background: url(../../images/learninghub/ico_close.png) center no-repeat; background-size: contain; transform: rotate(-45deg); transition: all 0.35s; } 
@@ -294,7 +295,7 @@
 .content_wrap .all_search_wrap .check_list ul { padding: 1.5rem 1rem; } 
 .content_wrap .all_search_wrap .check_list ul li {text-align: center;}
 .content_wrap .all_search_wrap .check_list .item + .item { margin-top: 4px; } 
-.content_wrap .all_search_wrap .check_result { display: flex; margin-top: 4rem; padding: 2.5rem 2rem 2.5rem 4rem; background: #f2f2f2; justify-content: space-between; align-items: center; } 
+.content_wrap .all_search_wrap .check_result { display: flex; padding: 2.5rem 2rem 2.5rem 4rem; background: #f2f2f2; border: 1px solid #ddd; border-top: 0; justify-content: space-between; align-items: center; } 
 .content_wrap .all_search_wrap .check_result .search_btn { padding: 2.5rem 2.5rem; color: #fff; font-size: 1.6rem; font-weight: bold; background: #ff7000; border-radius: 15px; } 
 .content_wrap .all_search_wrap .keywords_wrap { width: calc(100% - 240px); } 
 .content_wrap .all_search_wrap .keywords_wrap .selected_keyword { display: inline-block; margin-right: 1rem; color: #666666; font-size: 1.3rem; } 
