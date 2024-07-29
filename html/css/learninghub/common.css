@@ -310,13 +310,16 @@ button, select { cursor: pointer; }
 .innerSection { max-width: 1200px; width: calc(100% - 40px); margin: auto; } 
 .bg_gray { background: #f2f2f2 !important; } 
 .header_gnb { border-bottom: 1px solid #f1f1f1; } 
+.header_gnb.fixed { position: sticky; top: -52px; background: #fff; z-index: 9999; } 
 .header_gnb .gnb_util { padding: 1.6rem 0; background: #f2f2f2; } 
 .header_gnb .gnb_util .util_menu { display: flex; } 
 .header_gnb .gnb_util .util_menu ul { display: flex; margin-left: auto; } 
 .header_gnb .gnb_util .util_menu li:not(:first-child) { margin-left: 1.6rem; } 
 .header_gnb .gnb_util .util_menu li a { display: block; color: #666666; font-size: 13px; } 
 .header_gnb .header_top { display: flex; position: relative; margin: 25px 0 20px; flex-wrap: wrap; align-items: center; } 
-.header_gnb .header_top .seach_area { max-width: 400px; width: 100%; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); } 
+.header_gnb .header_top .logo a { display: block; } 
+.header_gnb .header_top .logo img { max-width: 230px; height: 100%; } 
+.header_gnb .header_top .seach_area { max-width: 400px; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); } 
 .header_gnb .header_top .seach_area .input_wrap { display: flex; width: 100%; padding: 10px 10px; margin-left: 0; border: 1px solid #373737; border-radius: 30px; justify-content: space-between; box-sizing: border-box; overflow: hidden; } 
 .header_gnb .header_top .seach_area .input_wrap input:focus { border: none; outline: none; } 
 .header_gnb .header_top .seach_area .input_wrap input { width: calc(100% - 30px); border: 0; font-size: 1.4rem; } 
@@ -388,7 +391,7 @@ button, select { cursor: pointer; }
 .footer .footer_wrap .f_util .f_txt { color: #878787; font-size: 1.4rem; letter-spacing: -0.5px; } 
 
 /* 퀵메뉴 */
-.header_gnb .quickMenu {display: none; position: fixed; top: 100px; right: calc(50% - 800px); z-index: 100; transform: translateX(-50%); overflow: hidden; } 
+.header_gnb .quickMenu { display: none; position: fixed; top: 100px; right: calc(50% - 800px); z-index: 100; transform: translateX(-50%); overflow: hidden; } 
 .header_gnb .quickMenu.active .quickList { max-height: 0; padding: 0; margin-bottom: 0; position: relative; transform: translateY(-2px); overflow: hidden; } 
 .header_gnb .quickMenu .quickList { width: 110px; max-height: 400px; margin-bottom: 30px; padding: 26px 0; background: #fff; border: 1px solid #c1c1c1; border-radius: 30px; transition: all 0.5s; overflow: hidden; } 
 .header_gnb .quickMenu .quickList li + li { margin-top: 28px; } 
@@ -409,8 +412,8 @@ button, select { cursor: pointer; }
 .header_gnb .quickMenu .quickBtn .quickTop { margin-top: 30px; background: url(../../images/learninghub/quick_icon06.png) center #ff7000 no-repeat; } 
 
 @media all and (max-width:1400px){
-    .header_gnb .quickMenu { display: none !important; } 
-}
+ .header_gnb .quickMenu { display: none !important; } 
+ }
 @media all and (max-width:1200px){
  .chat { display: none } 
  /* header */
@@ -476,7 +479,7 @@ button, select { cursor: pointer; }
  .footer .footer_wrap .family_site { display: none; } 
  }
 
- @media all and (max-width:768px) {html { font-size: 9px } 
+ @media all and (max-width:768px) { html { font-size: 9px } 
  .mb40 { margin-bottom: 3rem } 
  .mt70 { margin-top: 4rem } 
  .mgw50 { margin: 5rem 0 } 
