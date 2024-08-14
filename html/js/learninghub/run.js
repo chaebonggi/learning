@@ -1,7 +1,6 @@
 $(document).ready(function() {
     if ($.fn.scrollbar) {
-        $('.popUp .scrollbar-outer').scrollbar();
-        console.log('popup');
+        $('.scrollbar-outer').scrollbar();
     }
     $(".header_gnb .all_gnb_menu").click(function(event) {
         event.stopPropagation();
