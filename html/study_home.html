@@ -42,48 +42,41 @@
 <script>
   function checkFrameSet() {
      var frameCont = document.querySelector('frameset[name="studyCont"]');
-     
-     if (frameCont) {
-      var windowWidth = window.innerWidth;
-      if (windowWidth > 768) {
+     var windowWidth = window.innerWidth;
+     if (windowWidth > 768) {
+      var currentCols = frameCont.getAttribute('cols');
+      if (currentCols === '270,*') {
         frameCont.setAttribute('cols', '270,*');
       } else {
         frameCont.setAttribute('cols', '0,*');
       }
+      // frameCont.setAttribute('cols', '270,*');
+      
+      // if (currentCols === '0,*') {
+      //   frameCont.setAttribute('rows','*');
+      // } else {
+
+      // }
+      // if (currentCols === '270,*') {
+        
+      // } else {
+      //   console.log('0')
+      // }
+      // if (windowWidth > 768) {
+      //   frameCont.setAttribute('cols', '270,*');
+      //   frameCont.setAttribute('rows','*');
+      // } else {
+      //   frameCont.setAttribute('cols', '0,*');
+      //   frameCont.setAttribute('rows','*');
+      // }
+     } else {
+      frameCont.setAttribute('cols', '0,*');
      }
   }
   $(window).on('resize', function() {
      checkFrameSet();
    });
    window.addEventListener('load', checkFrameSet);
-
-
-   // function checkFrameSet() {
-   //     var framesetF2 = document.querySelector('frameset[name="f2"]');
-   //     if (framesetF2) {
-   //         var windowWidth = window.innerWidth;
-   //         if (windowWidth > 768) {
-   //             framesetF2.setAttribute('cols', '55%,40%');
-   //             framesetF2.removeAttribute('rows');
-   //         } else {
-   //             framesetF2.setAttribute('rows', '60%,40%');
-   //             framesetF2.removeAttribute('cols');
-
-   //         }
-   //     }
-
-   // }
-   
-   // function getParentWindowWidth() {
-   //     return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-   // }
-
-
-
-   // $(window).on('resize', function() {
-   //     checkFrameSetCols();
-   // });
-   // window.addEventListener('load', checkFrameSetCols);
 
 
 </script>
