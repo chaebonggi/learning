@@ -864,6 +864,7 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 
  /* 프레임 학습창 */
 .studyLeft {display: none;}
+.studyRight .popTit p {font-size: 1.8rem;}
 
 }
 
