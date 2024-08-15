@@ -38,22 +38,29 @@
     <script src="./js/front/solution/custome.js"></script>
     <script src="./js/front/jquery.scrollbar.js"></script> 
     <!--  -->
-    <script>
+    <script>        
         $(document).ready(function() {
             $('.studyLeft .scrollbar-outer').scrollbar();
         });
         function closeStudyMenu() {
-          $('.studyLeft').addClass('active');
-          var frameset = parent.document.querySelector('frameset[name="studyCont"]');
-          frameset.setAttribute('cols', '*');
-          frameset.setAttribute('rows', '56,*');
+            $('.studyLeft').addClass('active');
+            var $frameCont = parent.document.querySelector('frameset[name="studyCont"]');
+            $frameCont.setAttribute('cols', '*');
+            $frameCont.setAttribute('rows', '56,*');
         }
         function openStudyMenu() {
-          $('.studyLeft').removeClass('active');
-          var frameset = parent.document.querySelector('frameset[name="studyCont"]');
-          frameset.setAttribute('cols', '270,*');
-          frameset.setAttribute('rows','*');
+            $('.studyLeft').removeClass('active');
+            var $frameCont = parent.document.querySelector('frameset[name="studyCont"]');
+            $frameCont.setAttribute('cols', '270,*');
+            $frameCont.setAttribute('rows', '*');
         }
+        function checkWindowSize() {
+            if ($(window).width() <= 768) {
+                $('.studyLeft').removeClass('active');
+            }
+        }
+        $(window).on('resize', checkWindowSize);
+        checkWindowSize();  
       </script>
 </head>
 

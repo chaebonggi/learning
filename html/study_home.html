@@ -41,48 +41,31 @@
 </head>
 <script>
   function checkFrameSet() {
-     var frameCont = document.querySelector('frameset[name="studyCont"]');
-     var windowWidth = window.innerWidth;
-     if (windowWidth > 768) {
-      var currentCols = frameCont.getAttribute('cols');
-      if (currentCols === '270,*') {
-        frameCont.setAttribute('cols', '270,*');
-      } else {
-        frameCont.setAttribute('cols', '0,*');
-      }
-      // frameCont.setAttribute('cols', '270,*');
-      
-      // if (currentCols === '0,*') {
-      //   frameCont.setAttribute('rows','*');
-      // } else {
+    var $frameCont = $('frameset[name="studyCont"]');
+    var windowWidth = $(window).width();
+    var currentRows = $frameCont.attr('rows');
 
-      // }
-      // if (currentCols === '270,*') {
-        
-      // } else {
-      //   console.log('0')
-      // }
-      // if (windowWidth > 768) {
-      //   frameCont.setAttribute('cols', '270,*');
-      //   frameCont.setAttribute('rows','*');
-      // } else {
-      //   frameCont.setAttribute('cols', '0,*');
-      //   frameCont.setAttribute('rows','*');
-      // }
-     } else {
-      frameCont.setAttribute('cols', '0,*');
-     }
+    if (windowWidth > 786) {
+      if (currentRows === '56,*') {
+        $frameCont.attr('cols', '*');
+        $frameCont.attr('rows', '56,*');
+      } else {
+        $frameCont.attr('cols', '270,*');
+      }
+    } else {
+      $frameCont.attr('cols', '0,*');
+      $frameCont.attr('rows', '*');
+    }
   }
-  $(window).on('resize', function() {
-     checkFrameSet();
-   });
-   window.addEventListener('load', checkFrameSet);
+
+  $(window).on('resize', checkFrameSet);
+  $(window).on('load', checkFrameSet);
 
 
 </script>
   <frameset rows="0,*" border="0">
     <frame src="./study_top.html">
-    <frameset name="studyCont" cols="270,*" border="0">
+    <frameset name="studyCont" cols="270,*" rows="*" border="0">
         <frame src="./study_left.html">
         <frame src="./study_right.html">
     </frameset>
