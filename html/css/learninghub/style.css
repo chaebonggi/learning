@@ -507,7 +507,14 @@
 .popUp.learnPop .popContents .popTit { display: flex; margin-bottom: 80px; justify-content: space-between; align-items: center; } 
 .popUp.learnPop .popContents .popTit p { color: #373737; font-size: 2.2rem; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; } 
 .popUp.learnPop .popContents .popTit button { margin-left: 20px; padding: 0.4rem 3rem; background: #373737; color: #fff; font-size: 1.6rem; font-weight: 500; border-radius: 30px; flex-shrink: 0; } 
+.winPopup .winPopTop { display: flex; padding: 1.5rem 2.5rem; background: #f36f20; border-bottom: 0; justify-content: space-between; align-items: center; } 
+.winPopup .winPopTop h3 { font-size: 1.8rem; color: #fff; font-weight: bold; } 
+.winPopup .winPopTop .close { display: inline-block; width: 20px; height: 20px; background: url(../../images/learninghub/ico_close02.png) no-repeat; background-size: contain; text-indent: -9999px; z-index: 100; } 
+.winPopup .winPopCont { background: #fff; padding: 2rem 3rem; } 
+.winPopup .winPopCont .txt_wrap { width: 100%; } 
 
+.winPopup .winPopCont .txt_wrap input { width: 100%; font-family: inherit; padding: 0.5rem 1.5rem; background: #fff; font-size: 1.4rem; border: 1px solid #f5f5f5; border-radius: 5px; box-sizing: border-box; } 
+.winPopup .winPopCont textarea { width: 100%; height: 110px; margin-top: 2rem; padding: 1.5rem; font-size: 1.4rem; border: 1px solid #f5f5f5; box-sizing: border-box; resize: none; } 
 
 /* 나의 강의실 */
 .content_area { display: flex; align-items: flex-start; justify-content: space-between; } 
@@ -695,7 +702,7 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .studyTop { display: flex; padding: 20px 30px; justify-content: space-between; align-items: center; border-bottom: 1px solid #1b1d1f; } 
 .studyTop h3 { font-weight: 500; font-size: 26px; } 
 .studyTop .close { background: url(./images/learninghub/ico_close.png) no-repeat; width: 20px; height: 20px; text-indent: -9999px; z-index: 100; } 
-.studyLeft {display: block !important;}
+.studyLeft { display: block !important; } 
 .studyLeft .studyMenu { width: 270px; height: 100vh; padding: 0 10px; background: #f36f20; box-sizing: border-box; } 
 .studyLeft.active .studyMenu { display: none; } 
 .studyLeft .studyBtn { display: none; padding: 30px 30px 0; } 
@@ -863,9 +870,8 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
  .popUp.setUp.setUpJob .com_area li { width: 100%; } 
 
  /* 프레임 학습창 */
-.studyLeft {display: none;}
-.studyRight .popTit p {font-size: 1.8rem;}
-
+.studyLeft { display: none; } 
+.studyRight .popTit p { font-size: 1.8rem; } 
 }
 
 
