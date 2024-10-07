@@ -972,3 +972,131 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .popUp.studyPop .studyInfo .infoBtn button span::before { width: 25px; height: 31px; margin: 0 8px 0 auto; background-size: contain; } 
 .popUp.studyPop .studyInfo .infoBtn button { width: 130px; height: 70px; font-size: 1.4rem; } 
  }
+
+ .view_list_wrap .ld_tit .sort_wrap {
+    display: flex;
+    margin-left: 10px;
+    background: #fff;
+}
+.view_list_wrap .ld_tit .sort_wrap .sort_btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../../images/learninghub/sort_icon.png);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+.view_list_wrap .ld_tit .sort_wrap .sort_btn.btn_gallary {
+    border-right: 0;
+}
+.view_list_wrap .ld_tit .sort_wrap .sort_btn.btn_list {
+    background-position-x: -40px;
+}
+.view_list_wrap .ld_tit .sort_wrap .sort_btn.active {
+    background-color: #ff7000;
+    background-position-y: -40px;
+    border-color: #ff7000;
+}
+.view_list_wrap .view_list.sort_list {
+    flex-direction: column;
+    gap: 10px;
+}
+.view_list_wrap .view_list.sort_list .item {
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.view_list_wrap .view_list.sort_list .item a {
+    display: flex;
+    align-items: center;
+}
+.view_list_wrap .view_list.sort_list .item .img_wrap {
+    max-width: 200px;
+    height: 172px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+.view_list_wrap .view_list.sort_list .item .txt {
+    width: 100%;
+}
+.view_list_wrap .view_list.sort_list .item .h_wrap {
+    display: block;
+    max-width: 200px;
+    padding: 0;
+    position: static;
+}
+.view_list_wrap .view_list .item .h_wrap .h_btn {
+    width: 100%;
+    margin-top: initial;
+}
+.view_list_wrap .view_list.sort_list .item .h_wrap .h_tit,
+.view_list_wrap .view_list.sort_list .item .h_wrap ul {
+    display: none;
+}
+.view_list_wrap .view_list.sort_list .item a:hover::before {
+    content: none;
+}
+.view_list_wrap .view_list.sort_list .item a:hover .h_wrap {
+    display: initial;
+}
+.view_list_wrap .view_list.sort_list .item a:hover .txt .t_tit {
+    text-decoration: underline;
+}
+@media all and (max-width:860px){
+    .view_list_wrap .view_list .item a:hover::before {
+        content: none;
+    }
+    .view_list_wrap .view_list .item a:hover .h_wrap {
+        display: none;
+    }
+}
+@media all and (max-width:768px){
+    .view_list_wrap .view_list.sort_list .item a {
+        flex-direction: column;
+        gap: 10px 0;
+    }
+    .view_list_wrap .view_list.sort_list .item .img_wrap {
+        display: none;
+    }
+    .view_list_wrap .view_list.sort_list .item {
+        border-radius: 10px;
+    }
+    
+}
+@media all and (max-width:640px){
+    .view_list_wrap .view_list .item .txt .t_date {
+        font-size: 12px;
+    }
+    .view_list_wrap .view_list .item .txt .t_tit {
+        font-size: 1.6rem;
+    }
+    .view_list_wrap .ld_tit .right_box {
+        margin-left: auto;
+    }
+    .view_list_wrap .ld_tit .sort_list {
+        margin-left: 0;
+    }
+    .view_list_wrap .ld_tit .sort_wrap .sort_btn {
+        width: 30px;
+        height: 30px;
+        background-size: 60px;
+    }
+    .view_list_wrap .ld_tit .sort_wrap .sort_btn.btn_list {
+        background-position-x: -30px;
+    }
+    .view_list_wrap .ld_tit .sort_wrap .sort_btn.active {
+        background-position-y: -30px;
+    }
+    .view_list_wrap .view_list.sort_list .item .h_wrap {
+        max-width: 100%;
+    }
+    .view_list_wrap .view_list.sort_list .item .h_wrap .h_btn {
+        padding: 8px 0;
+        font-size: 1.5rem;
+        border-radius: 5px;
+    }
+}
