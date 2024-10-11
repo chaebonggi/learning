@@ -998,6 +998,15 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
     background-position-y: -40px;
     border-color: #ff7000;
 }
+.view_list_wrap .view_list .item a .h_wrap .h_sum {
+    display: none;
+}
+.view_list_wrap .view_list .list_group {
+    display: none;
+}
+.view_list_wrap .view_list .rate_area {
+    display: none;
+}
 .view_list_wrap .view_list.sort_list {
     flex-direction: column;
     gap: 10px;
@@ -1020,16 +1029,82 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
     margin-right: 20px;
     flex-shrink: 0;
 }
-.view_list_wrap .view_list.sort_list .item .txt {
-    width: 100%;
+.view_list_wrap .view_list.sort_list .list_group {
+    display: block;
 }
+.view_list_wrap .view_list.sort_list .list_group { display: flex; order: 1;} 
+.view_list_wrap .view_list .item .txt .t_tit {order: 2;}
+.view_list_wrap .view_list.sort_list .item .txt .t_date {margin-top: 0; margin-bottom: 4px; order: 3;}
+.view_list_wrap .view_list.sort_list .item .txt .tag_wrap {display: flex; gap: 20px; order: 4;}
+.view_list_wrap .view_list.sort_list .list_group ul {
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.view_list_wrap .view_list.sort_list .list_group .t_state {white-space: nowrap;}
+.view_list_wrap .view_list.sort_list .list_group li { font-size: 1.4rem; color: #72787f; font-weight: 500;} 
+.view_list_wrap .view_list.sort_list .list_group li:after { content: '>'; display: inline-block; margin: 0 0.5rem } 
+.view_list_wrap .view_list.sort_list .list_group li:last-child { color: #1b1d1f } 
+.view_list_wrap .view_list.sort_list .list_group li:last-child:after { display: none } 
+.view_list_wrap .view_list.sort_list .item .txt {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.view_list_wrap .view_list.sort_list .rate_area { 
+    display: flex;
+    margin-bottom: 4px;
+    align-items: center;
+}
+.view_list_wrap .view_list.sort_list .rate_area .rv_rate span {
+    width: auto;
+    height: 14px;
+    position: absolute;
+    background: url(http://bpo.job-cloud.kr/images/front/00003/ico_star_on.png) no-repeat;
+    z-index: 2;
+}
+.view_list_wrap .view_list.sort_list .rate_area p {
+    margin-left: 1rem;
+    position: relative;
+    color: #666666;
+    font-size: 1.4rem;
+}
+.view_list_wrap .view_list.sort_list .rate_area .view_count {
+    padding-left: 1rem;
+}
+.view_list_wrap .view_list.sort_list .rate_area p {
+    margin-left: 1rem;
+    position: relative;
+    color: #666666;
+    font-size: 1.4rem;
+}
+.view_list_wrap .view_list.sort_list  .rate_area .view_count::before {
+    content: '';
+    width: 1px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #666666;
+}
+
 .view_list_wrap .view_list.sort_list .item .h_wrap {
     display: block;
     max-width: 200px;
     padding: 0;
     position: static;
 }
-.view_list_wrap .view_list .item .h_wrap .h_btn {
+.view_list_wrap .view_list.sort_list .item .h_wrap .h_sum {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.view_list_wrap .view_list.sort_list .item .h_wrap .h_btn {
     width: 100%;
     margin-top: initial;
 }
@@ -1053,11 +1128,15 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
     .view_list_wrap .view_list .item a:hover .h_wrap {
         display: none;
     }
-}
-@media all and (max-width:768px){
     .view_list_wrap .view_list.sort_list .item a {
         flex-direction: column;
         gap: 10px 0;
+    }
+    .view_list_wrap .view_list.sort_list .item .h_wrap {
+        max-width: 100%;
+    }
+    .view_list_wrap .view_list.sort_list .item .h_wrap .h_sum {
+        display: none;
     }
     .view_list_wrap .view_list.sort_list .item .img_wrap {
         display: none;
@@ -1065,6 +1144,15 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
     .view_list_wrap .view_list.sort_list .item {
         border-radius: 10px;
     }
+    .view_list_wrap .view_list.sort_list .item .txt .tag_wrap {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+@media all and (max-width:768px){
+    
+    
+   
     
 }
 @media all and (max-width:640px){
