@@ -361,22 +361,7 @@
                         <button type="button" class="search_btn"><span class="txt">선택된 조건으로 검색하기</span></button>
                     </div>
                 </div>
-            </div>
-            <script>
-                function sortType(obj) {
-                    const viewElement = $('.view_list');
-                    
-                    if (obj == 'btnList') {
-                        viewElement.addClass('sort_list');
-                        $('.sort_btn').removeClass('active');
-                        $('.btn_list').addClass('active');
-                    } else if (obj == 'btnGallary') {
-                        viewElement.removeClass('sort_list');
-                        $('.sort_btn').removeClass('active');
-                        $('.btn_gallary').addClass('active');
-                    }
-                }
-            </script>
+            </div>           
             <div class="view_list_wrap pd_style03">
                 <div class="innerSection">
                     <div class="ld_tit">
@@ -392,10 +377,12 @@
                                     <label for="apply">인기순</label>
                                 </div>
                             </div>
+                            <!-- s:과정분류 버튼 추가 2024.10.14 -->
                             <div class="sort_wrap">
-                                <a href="javascript:sortType('btnGallary')" class="sort_btn btn_gallary active"><span class="ir-text">갤러리형 보기</span></a>
-                                <a href="javascript:sortType('btnList')" class="sort_btn btn_list"><span class="ir-text">리스트형 보기</span></a>
+                                <a href="javascript:void(0);" class="sort_btn btn_gallary active" onclick="sortType('btnGallary')"><span class="ir-text">갤러리형 보기</span></a>
+                                <a href="javascript:void(0);" class="sort_btn btn_list" onclick="sortType('btnList')"><span class="ir-text">리스트형 보기</span></a>
                             </div>
+                            <!-- e:과정분류 버튼 추가 2024.10.14 -->
                         </div>
 	                </div>
                     <div class="view_list">
@@ -405,7 +392,7 @@
                                     <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
                                 </div>
                                 <div class="txt">
-                                    <!-- s:과정분류 추가 -->
+                                    <!-- s:과정분류 추가 2024.10.14 -->
                                     <div class="list_group">
                                         <ul>
                                             <li>과정분류</li>
@@ -415,10 +402,10 @@
                                             <span class="t_tag gray">미지정</span>
                                         </div>
                                     </div>
-                                     <!-- e:과정분류 추가 -->
+                                     <!-- e:과정분류 추가 2024.10.14 -->
                                     <p class="t_date">2024-03-29 ~ 2024-04-05</p>
                                     <p class="t_tit">기획력 & 보고서 작성 향상 과정 기획력 & 보고서 작성 향상 과정 기획력 & 보고서 작성 향상 과정 기획력 & 보고서 작성 향상 과정기획력 & 보고서 작성 향상 과정기획력 & 보고서 작성 향상 과정기획력 & 보고서 작성 향상 과정</p>
-                                     <!-- s:과별점 추가 -->
+                                     <!-- s:과별점 추가 2024.10.14 -->
                                     <div class="tag_wrap">
                                         <div class="t_state">                                                
                                             <span class="t_tag gray">공통</span>
@@ -434,7 +421,7 @@
                                             <p class="view_count">조회수 <span>0</span></p>
                                         </div>
                                     </div>
-                                     <!-- e:별점 추가 -->
+                                     <!-- e:별점 추가 2024.10.14 -->
                                 </div>
                                 <!-- hover txt -->
                                 <div class="h_wrap">
@@ -445,9 +432,9 @@
                                         <li><span>학습시간 :</span> 4시간</li>
                                         <li><span>수료평가기준 :</span>  진도100% / 총점100%</li>
                                     </ul>
-                                    <!-- s:금액 추가 -->
+                                    <!-- s:금액 추가 2024.10.14 -->
                                     <p class="h_sum">90,000원</p>
-                                    <!-- e:금액 추가 -->
+                                    <!-- e:금액 추가 2024.10.14 -->
                                     <p class="h_btn">수강신청</p>
                                 </div>
                             </a>
@@ -757,6 +744,21 @@
             </div>
         </div>
     </footer>
+    <script>
+        // 전체과정 리스트 스크립트 추가 2024.10.14
+        function sortType(obj) {
+            const viewElement = $('.view_list');                    
+            if (obj == 'btnList') {
+                viewElement.addClass('sort_list');
+                $('.sort_btn').removeClass('active');
+                $('.btn_list').addClass('active');
+            } else if (obj == 'btnGallary') {
+                viewElement.removeClass('sort_list');
+                $('.sort_btn').removeClass('active');
+                $('.btn_gallary').addClass('active');
+            }
+        }
+    </script>
     
 </body>
 
