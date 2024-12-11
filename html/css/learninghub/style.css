@@ -744,6 +744,44 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .studyRight .playerWrap .videoArea { width: 100%; height: 0; padding-bottom: 56.25%; position: relative; } 
 .studyRight .playerWrap .videoArea .player { width: 100%; height: 100%; position: absolute; top: 0; left: 0; } 
 
+/* 회원탈퇴 */
+.myclass_wrap .itemList { padding: 30px; background: #fff; border-radius: 10px; } 
+.myclass_wrap .itemList .list_style02 li { color: #454c53; font-size: 1.5rem; } 
+.myclass_wrap .itemList .list_style02 li:before { background: #454c53; top: 10px; } 
+.myclass_wrap .itemList .txt01 { color: #454c53; font-size: 1.5rem; } 
+.myclass_wrap .itemList .radio_list { display: block; } 
+.myclass_wrap .itemList .radio_list ul { display: flex; flex-wrap: wrap; gap: 10px 24px; } 
+.myclass_wrap .itemList .radio_list { padding: 20px; border: 1px solid #e8ebed; } 
+.myclass_wrap .itemList .radio_list textarea { display: none; width: 100%; height: 80px; padding: 10px; color: #454c53; font-size: 1.5rem; border: 1px solid #e8ebed; resize: none; box-sizing: border-box; } 
+.myclass_wrap .itemList .studyCnt { padding: 30px 0; text-align: center; border: 1px solid #e8ebed; } 
+.myclass_wrap .itemList .studyCnt p { color: #000; font-size: 1.8rem; } 
+.myclass_wrap .itemList .studyCnt p span { color: #36ace3; } 
+.myclass_wrap .itemList .item.agreeBox { padding: 20px 0; border: 1px solid #9ea4aa; border-left: 0; border-right: 0; } 
+.myclass_wrap .itemList .item.agreeBox .check {position: relative;}
+.myclass_wrap .itemList .item.agreeBox .check input[type="checkbox"] { width: 20px; height: 20px; position: absolute; left: 0; top: 2px;} 
+.myclass_wrap .itemList .item.agreeBox .check input[type="checkbox"]:checked { background-position: center; } 
+.myclass_wrap .itemList .item.agreeBox .check label {display: block; padding-left: 30px; color: #454c53; } 
+.myclass_wrap .itemList .item.certBox ul { display: flex; justify-content: center; gap: 0 20px; } 
+.myclass_wrap .itemList .item.certBox ul li { max-width: 160px; width: 100%; } 
+.myclass_wrap .itemList .item.certBox a { display: flex; width: 100%; color: #9ea4aa; font-size: 1.5rem; border: 1px solid #c9cdd2; border-radius: 5px; align-items: center; } 
+.myclass_wrap .itemList .item.certBox a::before { content: ''; display: block; width: 40px; height: 40px; background-position: center; background-repeat: no-repeat; flex-shrink: 0; border-right: 1px solid #c9cdd2; } 
+.myclass_wrap .itemList .item.certBox a p { width: 100%; text-align: center; } 
+.myclass_wrap .itemList .item.certBox a.certPhone::before { background-image: url(../../images/learninghub/myclass_phone.png); } 
+.myclass_wrap .itemList .item.certBox a.certIpin::before { background-image: url(../../images/learninghub/myclass_ipin.png); } 
+.myclass_wrap .itemList .item.certBox a:hover,
+.myclass_wrap .itemList .item.certBox li.active a { border-color: #000; } 
+.myclass_wrap .itemList .item.certBox a:hover::before,
+.myclass_wrap .itemList .item.certBox li.active a::before { border-right-color: #000; } 
+.myclass_wrap .itemList .item.certBox a:hover p,
+.myclass_wrap .itemList .item.certBox li.active a p { color: #000; } 
+.myclass_wrap .itemList .item.certBox a.certPhone:hover::before,
+.myclass_wrap .itemList .item.certBox li.active a.certPhone::before { background-image: url(../../images/learninghub/myclass_phone_on.png); } 
+.myclass_wrap .itemList .item.certBox a.certIpin:hover::before,
+.myclass_wrap .itemList .item.certBox li.active a.certIpin::before { background-image: url(../../images/learninghub/myclass_ipin_on.png); } 
+.check input[type="checkbox"]:checked {
+    background: url(../../images/learninghub/check02.png) no-repeat top 4px left 2px #454c53;
+}
+
 @media all and (max-width:1400px){
  .main_wrap .hot_trend.clist_slide .swiper-button-prev, .main_wrap .hot_trend.clist_slide .swiper-button-next { display: none; } 
  }
@@ -1037,4 +1075,10 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
  .view_list_wrap .ld_tit .sort_wrap .sort_btn.active { background-position-y: -30px; } 
  .view_list_wrap .view_list.sort_list .item .h_wrap { max-width: 100%; } 
  .view_list_wrap .view_list.sort_list .item .h_wrap .h_btn { padding: 8px 0; font-size: 1.5rem; border-radius: 5px; } 
+
+ /* 회원탈퇴 */
+ .myclass_wrap .itemList {padding: 20px 15px;}
+.myclass_wrap .itemList .item.certBox ul { gap: 0 10px; }
+.myclass_wrap .itemList .radio input[type="radio"] + label:before {top: 2px;}
+.myclass_wrap .itemList .radio input[type="radio"]:checked + label:after {top: 6px;}
  }
