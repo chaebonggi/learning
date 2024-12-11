@@ -1081,4 +1081,5 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .myclass_wrap .itemList .item.certBox ul { gap: 0 10px; }
 .myclass_wrap .itemList .radio input[type="radio"] + label:before {top: 2px;}
 .myclass_wrap .itemList .radio input[type="radio"]:checked + label:after {top: 6px;}
+.myclass_wrap .itemList .radio_list ul {flex-direction: column;}
  }
