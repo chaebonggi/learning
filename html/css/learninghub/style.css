@@ -758,7 +758,7 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .myclass_wrap .itemList .studyCnt p span { color: #36ace3; } 
 .myclass_wrap .itemList .item.agreeBox { padding: 20px 0; border: 1px solid #9ea4aa; border-left: 0; border-right: 0; } 
 .myclass_wrap .itemList .item.agreeBox .check {position: relative;}
-.myclass_wrap .itemList .item.agreeBox .check input[type="checkbox"] { width: 20px; height: 20px; position: absolute; left: 0; top: 2px;} 
+.myclass_wrap .itemList .item.agreeBox .check input[type="checkbox"] { width: 20px; height: 20px; position: absolute; left: 0; top: 3px;} 
 .myclass_wrap .itemList .item.agreeBox .check input[type="checkbox"]:checked { background-position: center; } 
 .myclass_wrap .itemList .item.agreeBox .check label {display: block; padding-left: 30px; color: #454c53; } 
 .myclass_wrap .itemList .item.certBox ul { display: flex; justify-content: center; gap: 0 20px; } 
