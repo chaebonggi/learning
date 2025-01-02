@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브_학습방_메인(강의목차)</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/00001/00001.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/chosen.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/front/front/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/excel-bootstrap-table-filter-style.css">
+
+	
+	<script src="./js/front/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="./js/front/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="./js/front/front/jquery.mCustomScrollbar.js"></script>
+	<script src="./js/front/front/imgLiquid/0.9.944/imgLiquid-min.js" integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./js/front/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
+	<script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
+	<script src="./js/front/chosen.jquery.min.js"></script>
+	<!-- <script src="./js/front/front/run.js"></script> -->
+    <script src="./js/learninghub/run.js"></script>
+	<script src="./js/front/file/forms.js"></script>
+	<script src="./js/front/solution/solution_ui.js"></script>
+	<script src="./js/front/solution/custome.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <div class="popUp studyPop" style="display: block;">
+        <div class="popTop">
+            <h3>학습방</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="popArea">                
+                <div class="popLeft">
+                    <ul class="studyList">
+                        <li class="active">
+                            <a href="#"><span class="icon icon01">메인</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon02">공지사항</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon03">자료실</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon04">과정질문</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon05">학습후기</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon06">의견나누기</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popContents">
+                    <ul class="popTabList">
+                        <li class="active">
+                            <a href="./러닝허브_학습방_메인(강의목차).html">강의목차</a>
+                        </li>
+                        <li>
+                            <a href="./러닝허브_학습방_메인(시험).html">시험</a>
+                        </li>
+                        <li>
+                            <a href="./러닝허브_학습방_메인(과제).html">과제</a>
+                        </li>
+                        <li>
+                            <a href="./러닝허브_학습방_메인(토론).html">토론</a>
+                        </li>
+                        <li>
+                            <a href="./러닝허브_학습방_메인(설문).html">설문</a>
+                        </li>
+                    </ul>
+                    <div class="contBox scr">
+                        <div class="table_type01">
+                            <table class="fdTable">
+                                <caption>강의목차</caption>
+                                <colgroup>
+                                    <col style="width: 15%">
+                                    <col>
+                                    <col style="width: 10%">                                    
+                                    <col style="width: 20%">
+                                    <col style="width: 150px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">차시</th>
+                                        <th scope="col">차시명</th>
+                                        <th scope="col">진도율</th>
+                                        <th scope="col">강의시간</th>
+                                        <th scope="col">학습</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>1차시</td>
+                                        <td class="tlt txtCut fdTit"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_type04 btn_orange">학습하기</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="5">
+                                            <div class="foldBox scr">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 15%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1절</td>
+                                                            <td class="tlt">Intro</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2절</td>
+                                                            <td class="tlt">오늘의 미션 오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>2차시</td>
+                                        <td class="tlt txtCut fdTit"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_type04 btn_gray05" disabled>학습완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="5">
+                                            <div class="foldBox scr">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 15%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1절</td>
+                                                            <td class="tlt">Intro</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2절</td>
+                                                            <td class="tlt">오늘의 미션</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>3차시</td>
+                                        <td class="tlt txtCut fdTit"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_type04 btn_orange">학습하기</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="5">
+                                            <div class="foldBox scr">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 15%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1절</td>
+                                                            <td class="tlt">Intro</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2절</td>
+                                                            <td class="tlt">오늘의 미션</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>4차시</td>
+                                        <td class="tlt txtCut fdTit"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_type04 btn_gray05" disabled>학습완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="5">
+                                            <div class="foldBox scr">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 15%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1절</td>
+                                                            <td class="tlt">Intro</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2절</td>
+                                                            <td class="tlt">오늘의 미션</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>5차시</td>
+                                        <td class="tlt txtCut fdTit"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_type04 btn_orange">학습하기</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="5">
+                                            <div class="foldBox scr">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 15%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1절</td>
+                                                            <td class="tlt">Intro</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2절</td>
+                                                            <td class="tlt">오늘의 미션</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="t_tit">차시 : </span>6차시</td>
+                                        <td class="tlt txtCut fdTit"><span class="t_tit">차시명 : </span>고객감정에 숨겨진 진실</td>
+                                        <td><span class="t_tit">진도율 : </span>100%</td>                                        
+                                        <td><span class="t_tit">강의시간 : </span>01:45:20</td>
+                                        <td>
+                                            <button type="button" class="btn_type04 btn_gray05" disabled>학습완료</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="5">
+                                            <div class="foldBox scr">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 15%">
+                                                        <col>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1절</td>
+                                                            <td class="tlt">Intro</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2절</td>
+                                                            <td class="tlt">오늘의 미션</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3절</td>
+                                                            <td class="tlt">오늘의 업무</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>                            
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <style>
+            .popUp.studyPop .mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical,
+            .popUp.studyPop .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical { margin: 20px 0; right: 10px !important; } 
+            .popUp.studyPop .contBox .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail,
+            .popUp.studyPop .contBox .mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail,
+            .popUp.studyPop .contBox .mCS-minimal.mCSB_scrollTools .mCSB_draggerRail { background: none !important; width: 8px } 
+            .popUp.studyPop .contBox .mCSB_scrollTools .mCSB_draggerContainer { height: calc(100% - 10px); top: 50%; transform: translateY(-50%) } 
+            .popUp.studyPop .contBox .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { background: #c9cdd2 !important; width: 8px; } 
+            .popUp.studyPop .contBox.scr { max-height: 720px; } 
+            .popUp.studyPop .fdTable .fold tbody tr:last-child { border-bottom: 0; } 
+            .popUp.studyPop .fdTable .fold { display: none; } 
+            .popUp.studyPop .fdTable .fold.open { display: contents; } 
+            .popUp.studyPop .fdTable .foldBox { max-height: 140px; } 
+            .popUp.studyPop .fdTable .fold td { background: #fafafa; } 
+            .popUp.studyPop .fdTable .fdTit { cursor: pointer; } 
+            .popUp.studyPop .fdTable .mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical,
+            .popUp.studyPop .fdTable .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical { margin: 0; right: 0 !important; } 
+            .popUp.studyPop .fdTable .fold tr td:nth-child(2) {padding-right: 2rem;}
+            @media (max-width: 768px) {
+                .popUp.studyPop .fdTable .fold tr { display: flex; }
+                .popUp.studyPop .fdTable .fold tr td:first-child {flex-shrink: 0;}
+            }
+        </style>
+    </div>
+    <script>
+        
+        $(document).ready(function() {
+            $('.fdTable .fdTit').click(function () {
+                // $(this).parent().next('.fold').toggle();
+                $(this).parent().next('.fold').toggleClass('open');
+            });
+            $(".scr").mCustomScrollbar({
+                theme: "minimal-dark"
+            });
+        });
+        
+    </script>
+</body>
+</html>
