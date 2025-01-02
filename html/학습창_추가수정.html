@@ -59,163 +59,36 @@
                 class="player"></video>
             </div>
             <style>
-              .popUp.learnPop .pageNavi {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: #e8ebed;
-                padding: 1rem;
-                border-bottom: 1px solid #9ea4aa;
-              }
-
-              .popUp.learnPop .pageNavi a {
-                color: #72787f;
-                font-size: 1.4rem;
-                position: relative;
-              }
-
-              .popUp.learnPop .pageNavi .prev {
-                padding-left: 15px
-              }
-
-              .popUp.learnPop .pageNavi .prev:before {
-                content: '';
-                display: block;
-                background: url(./images/learninghub/prev_btn.png) no-repeat;
-                width: 6px;
-                height: 10px;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%)
-              }
-
-              .popUp.learnPop .pageNavi .next {
-                padding-right: 15px
-              }
-
-              .popUp.learnPop .pageNavi .next:after {
-                content: '';
-                display: block;
-                background: url(./images/learninghub/next_btn.png) no-repeat;
-                width: 6px;
-                height: 10px;
-                position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translateY(-50%)
-              }
-
-              .popUp.learnPop .pageNavi .listBtn {
-                width: 64px;
-                margin: 0 20px;
-                padding: 6px 0 6px 30px;
-                background: url(./images/learninghub/play_menu.png) #3f94d0 left 10px center no-repeat;
-                text-align: left;
-                color: #fff;
-                font-size: 12px;
-                border-radius: 5px;
-              }
-
-              .popUp.learnPop .tableWrap {
-                margin: 30px auto 0;
-                max-width: 650px;
-              }
-
-              .sub_title {
-                padding: 2rem;
-              }
-
-              .sub_title p {
-                font-size: 1.4rem;
-              }
-
-              .div_table07 .thead {
-                border-top: 1px solid #c9cdd2;
-                border-bottom: 1px solid #c9cdd2;
-              }
-
-              .div_table07 .tbody {
-                max-height: 226px;
-              }
-
-              .div_table07 .tr {
-                display: flex;
-              }
-
-              .div_table07 .th {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              }
-
+              .popUp.learnPop .pageNavi { display: flex; justify-content: center; align-items: center; background: #e8ebed; padding: 1rem; border-bottom: 1px solid #9ea4aa; } 
+              .popUp.learnPop .pageNavi a { color: #72787f; font-size: 1.4rem; position: relative; } 
+              .popUp.learnPop .pageNavi .prev { padding-left: 15px } 
+              .popUp.learnPop .pageNavi .prev:before { content: ''; display: block; background: url(./images/learninghub/prev_btn.png) no-repeat; width: 6px; height: 10px; position: absolute; left: 0; top: 50%; transform: translateY(-50%) } 
+              .popUp.learnPop .pageNavi .next { padding-right: 15px } 
+              .popUp.learnPop .pageNavi .next:after { content: ''; display: block; background: url(./images/learninghub/next_btn.png) no-repeat; width: 6px; height: 10px; position: absolute; right: 0; top: 50%; transform: translateY(-50%) } 
+              .popUp.learnPop .pageNavi .listBtn { width: 64px; margin: 0 20px; padding: 6px 0 6px 30px; background: url(./images/learninghub/play_menu.png) #3f94d0 left 10px center no-repeat; text-align: left; color: #fff; font-size: 12px; border-radius: 5px; } 
+              .popUp.learnPop .tableWrap { margin: 30px auto 0; max-width: 650px; } 
+              .div_table07 .thead { border-top: 1px solid #c9cdd2; border-bottom: 1px solid #c9cdd2; } 
+              .div_table07 .tbody { max-height: 226px; } 
+              .div_table07 .tr { display: flex; } 
+              .div_table07 .th { display: flex; justify-content: center; align-items: center; } 
               .div_table07 .th,
-              .div_table07 .td {
-                padding: 1rem;
-                text-align: center
-              }
-
-              .div_table07 .th {
-                background: #e8ebed;
-                font-weight: 500;
-              }
-
-              .div_table07 .tbody .tr {
-                border-bottom: 1px solid #c9cdd2
-              }
-
+              .div_table07 .td { padding: 1rem; text-align: center } 
+              .div_table07 .th { background: #e8ebed; font-weight: 500; } 
+              .div_table07 .tbody .tr { border-bottom: 1px solid #c9cdd2 } 
               .div_table07 .th:nth-child(1),
-              .div_table07 .td:nth-child(1) {
-                width: 10%;
-                min-width: 50px;
-              }
-
+              .div_table07 .td:nth-child(1) { width: 10%; min-width: 50px; } 
               .div_table07 .th:nth-child(2),
-              .div_table07 .td:nth-child(2) {
-                width: 90%
-              }
-
-              .div_table07 .viewTxt {
-                display: none;
-                max-height: 135px;
-                background: #f7f8f9;
-              }
-
-              .div_table07 .viewTxt .tr {
-                border-bottom: 1px solid #e8ebed
-              }
-
-              .div_table07 .viewTxt .tr .td:nth-child(2) {
-                width: 90%;
-                text-align: left;
-              }
-
+              .div_table07 .td:nth-child(2) { width: 90% } 
+              .div_table07 .viewTxt { display: none; max-height: 135px; background: #f7f8f9; } 
+              .div_table07 .viewTxt .tr { border-bottom: 1px solid #e8ebed } 
+              .div_table07 .viewTxt .tr .td:nth-child(2) { width: 90%; text-align: left; } 
               .div_table07 .mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical,
-              .div_table07 .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical {
-                margin: 0;
-                right: 0 !important;
-                border: 1px solid #c9cdd2;
-                border-top: 0;
-                background: #fff
-              }
-
+              .div_table07 .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical { margin: 0; right: 0 !important; border: 1px solid #c9cdd2; border-top: 0; background: #fff } 
               .div_table07 .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail,
               .div_table07 .mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail,
-              .div_table07 .mCS-minimal.mCSB_scrollTools .mCSB_draggerRail {
-                background: none !important;
-                width: 8px
-              }
-
-              .div_table07 .mCSB_scrollTools .mCSB_draggerContainer {
-                height: calc(100% - 10px);
-                top: 50%;
-                transform: translateY(-50%)
-              }
-
-              .div_table07 .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-                background: #c9cdd2 !important;
-                width: 8px;
-              }
+              .div_table07 .mCS-minimal.mCSB_scrollTools .mCSB_draggerRail { background: none !important; width: 8px } 
+              .div_table07 .mCSB_scrollTools .mCSB_draggerContainer { height: calc(100% - 10px); top: 50%; transform: translateY(-50%) } 
+              .div_table07 .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { background: #c9cdd2 !important; width: 8px; } 
             </style>
             <div class="playBtn">
               <div class="pageNavi">
