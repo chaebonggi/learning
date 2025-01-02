@@ -471,7 +471,55 @@
 .popUp.studyPop .table_type01 table .t_tit { display: none; } 
 
 /* 학습창 팝업 */
+/* 학습창 팝업 */
 .popUp.learnPop { max-width: 100%; margin: 0 auto; position: static; transform: none; } 
+.popUp.learnPop .popArea { display: flex; } 
+.popUp.learnPop .popLeft {display: none; width: 270px; padding: 0 10px; background: #f36f20; box-sizing: border-box; } 
+.popUp.learnPop .popLeft.on { display: none; } 
+.popUp.learnPop .popLeft.on ~ .popContents { width: 100%; height: 100vh; } 
+.popUp.learnPop .popContents { width: 100%; padding: 3rem; background: #fff; box-sizing: border-box; } 
+.popUp.learnPop .popCont { max-height: initial; padding: 0; background: #f5f5f5; } 
+.popUp.learnPop .playerWrap .videoArea { width: 100%; height: 0; padding-bottom: 56.25%; position: relative; } 
+.popUp.learnPop .playerWrap .videoArea .player { width: 100%; height: 100%; position: absolute; top: 0; left: 0; } 
+.popUp.learnPop .popLeft .prgs_bar { width: 100%; height: 12px; margin-bottom: 10px; position: relative; background: #cd6425; border-radius: 10px; overflow: hidden; } 
+.popUp.learnPop .popLeft .prgs_bar span { display: block; background: #373737; height: 100%; border-radius: 10px; } 
+.popUp.learnPop .popLeft .prgs_bar p { position: absolute; top: -2px; left: 20px; color: #fff; font-size: 10px; font-weight: 500; } 
+.popUp.learnPop .infoTit { padding: 0 1.5rem; margin-bottom: 15px; } 
+.popUp.learnPop .infoTit .infoTop { display: flex; margin: 30px 0 20px; justify-content: space-between; align-items: center; } 
+.popUp.learnPop .infoTit .infoTop p { min-width: 65px; padding: 2px 10px; color: #fff; font-size: 13px; font-weight: 400; border: 1px solid #fff; border-radius: 20px; text-align: center; box-sizing: border-box; } 
+.popUp.learnPop .infoTit .infoTop .infoClose { margin-left: auto; padding: 2px 10px; color: #fff; font-size: 13px; font-weight: 400; border: 1px solid #fff; border-radius: 20px; box-sizing: border-box; } 
+.popUp.learnPop .prgsArea .prgsTit { margin-bottom: 20px; color: #fff; font-size: 1.8rem; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; } 
+.popUp.learnPop .prgsArea .prgsTxt { color: #fff; font-size: 1.5rem; font-weight: 500; text-align: center; } 
+.popUp.learnPop .infoList { width: 100%; background: #fff; border-radius: 20px; box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.31); box-sizing: border-box; } 
+.popUp.learnPop .infoList .listTit { padding: 0 2.5rem; margin-bottom: 6px; color: #373737; font-size: 1.5rem; font-weight: 500; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; } 
+.popUp.learnPop .infoList .item + .item { margin-top: 30px; } 
+.popUp.learnPop .infoList li { display: flex; padding: 0.3rem 2.5rem; justify-content: space-between; align-items: center; } 
+.popUp.learnPop .infoList li.active { background: #fdeade; } 
+.popUp.learnPop .infoList li .tagWrap { display: flex; margin-left: 10px; flex-shrink: 0; } 
+.popUp.learnPop .infoList li .tagTit { color: #666666; font-size: 13px; font-weight: 300; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; } 
+.popUp.learnPop .infoList li .tagWrap .time { color: #666666; font-size: 13px; font-weight: 300; } 
+.popUp.learnPop .infoList li .tagWrap .tag { padding: 0 8px; margin-left: 12px; font-size: 12px; font-weight: 400; border-radius: 5px; } 
+.popUp.learnPop .infoList li .tagWrap .tag.bcGray { background: #f2f2f2; color: #898989; } 
+.popUp.learnPop .infoList li .tagWrap .tag.bcOrange { background: #f36f20; color: #fff; } 
+.popUp.learnPop .popLeft.on ~ .popContents .btnTop { visibility: visible; } 
+.popUp.learnPop .popContents .btnTop { display: none; visibility: hidden; } 
+.popContents .btnTop .infoOpen::before {content: ''; display: inline-block; width: 14px; height: 11px; margin-right: 4px; background: url(/images/front/00003/menu_icon.png) no-repeat; background-size: contain;}
+.popUp.learnPop .popContents .btnTop .infoOpen { padding: 2px 16px; margin-bottom: 16px; background:#f36f20 ; background-size: 14px auto; color: #fff; font-size: 13px; font-weight: 400; border: 1px solid #f36f20; border-radius: 20px; box-sizing: border-box; } 
+.popUp.learnPop .popContents .popTit { display: flex; margin-bottom: 40px; justify-content: space-between; align-items: center; } 
+.popUp.learnPop .popContents .popTit p { color: #373737; font-size: 2.2rem; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; } 
+.popUp.learnPop .popContents .popTit > div {display: flex;}
+.popUp.learnPop .popContents .popTit button { padding: 0.4rem 2rem; background: #373737; color: #fff; font-size: 1.3rem; font-weight: 500; border-radius: 30px; flex-shrink: 0; } 
+.popUp.learnPop .popContents .popTit button + button {margin-left: 4px;}
+.popUp.learnPop .infoList .item:first-child {padding-top: 3rem;}
+.popUp.learnPop .infoList .item:last-child {padding-bottom: 3rem;}
+.popUp.learnPop .infoList.scrollbar-outer {height: 500px; overflow-y: scroll;}
+.popUp.learnPop .scrollbar-outer > .scroll-content.scroll-scrolly_visible { margin: 0; left: 0; } 
+.popUp.learnPop .scrollbar-outer > .scroll-element .scroll-element_track { background: transparent; } 
+.popUp.learnPop .scrollbar-outer > .scroll-element .scroll-bar { background: #d8d8d8; border-radius: 0;} 
+.popUp.learnPop .scrollbar-outer > .scroll-element.scroll-y { width: 10px; } 
+.popUp.learnPop .scrollbar-outer > .scroll-element .scroll-element_outer, .popUp.learnPop .scrollbar-outer > .scroll-element .scroll-element_track, .popUp.learnPop .scrollbar-outer > .scroll-element .scroll-bar { border-radius: 0; } 
+
+/* .popUp.learnPop { max-width: 100%; margin: 0 auto; position: static; transform: none; } 
 .popUp.learnPop .popArea { display: flex; } 
 .popUp.learnPop .popLeft { width: 270px; padding: 0 10px; background: #f36f20; box-sizing: border-box; } 
 .popUp.learnPop .popLeft.on { display: none; } 
@@ -506,7 +554,7 @@
 .popUp.learnPop .popContents .btnTop .infoOpen { padding: 2px 16px; margin-bottom: 16px; background:#f36f20; background-size: 14px auto; color: #fff; font-size: 13px; font-weight: 400; border: 1px solid #f36f20; border-radius: 20px; box-sizing: border-box; } 
 .popUp.learnPop .popContents .popTit { display: flex; margin-bottom: 80px; justify-content: space-between; align-items: center; } 
 .popUp.learnPop .popContents .popTit p { color: #373737; font-size: 2.2rem; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; } 
-.popUp.learnPop .popContents .popTit button { margin-left: 20px; padding: 0.4rem 3rem; background: #373737; color: #fff; font-size: 1.6rem; font-weight: 500; border-radius: 30px; flex-shrink: 0; } 
+.popUp.learnPop .popContents .popTit button { margin-left: 20px; padding: 0.4rem 3rem; background: #373737; color: #fff; font-size: 1.6rem; font-weight: 500; border-radius: 30px; flex-shrink: 0; }  */
 .winPopup .winPopTop { display: flex; padding: 1.5rem 2.5rem; background: #f36f20; border-bottom: 0; justify-content: space-between; align-items: center; } 
 .winPopup .winPopTop h3 { font-size: 1.8rem; color: #fff; font-weight: bold; } 
 .winPopup .winPopTop .close { display: inline-block; width: 20px; height: 20px; background: url(../../images/learninghub/ico_close02.png) no-repeat; background-size: contain; text-indent: -9999px; z-index: 100; } 
