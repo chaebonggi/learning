@@ -133,7 +133,7 @@
                                                         </tr>
                                                         <tr>
                                                             <td>2절</td>
-                                                            <td class="tlt">오늘의 미션 오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션오늘의 미션</td>
+                                                            <td class="tlt">오늘의 미션</td>
                                                         </tr>
                                                         <tr>
                                                             <td>3절</td>
@@ -374,15 +374,16 @@
             .popUp.studyPop .contBox.scr { max-height: 720px; } 
             .popUp.studyPop .fdTable .fold tbody tr:last-child { border-bottom: 0; } 
             .popUp.studyPop .fdTable .fold { display: none; } 
+            .popUp.studyPop .fdTable .fold > td {padding: 0;}
             .popUp.studyPop .fdTable .fold.open { display: contents; } 
-            .popUp.studyPop .fdTable .foldBox { max-height: 140px; } 
+            .popUp.studyPop .fdTable .foldBox { max-height: 130px; } 
             .popUp.studyPop .fdTable .fold td { background: #fafafa; } 
             .popUp.studyPop .fdTable .fdTit { cursor: pointer; } 
             .popUp.studyPop .fdTable .mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical,
             .popUp.studyPop .fdTable .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical { margin: 0; right: 0 !important; } 
             .popUp.studyPop .fdTable .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { background: #c9cdd2 !important; width: 4px; } 
-            .popUp.studyPop .fdTable .fold tr td:nth-child(2) {padding-right: 2rem;}
             @media (max-width: 768px) {
+                .popUp.studyPop .fdTable .foldBox { max-height: 96px; } 
                 .popUp.studyPop .fdTable .fold tr { display: flex; }
                 .popUp.studyPop .fdTable .fold tr td:first-child {flex-shrink: 0;}
             }
@@ -392,7 +393,6 @@
         
         $(document).ready(function() {
             $('.fdTable .fdTit').click(function () {
-                // $(this).parent().next('.fold').toggle();
                 $(this).parent().next('.fold').toggleClass('open');
             });
             $(".scr").mCustomScrollbar({
