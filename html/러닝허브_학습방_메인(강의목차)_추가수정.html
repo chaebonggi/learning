@@ -44,7 +44,7 @@
     <div class="popUp studyPop" style="display: block;">
         <div class="popTop">
             <h3>학습방</h3>
-            <a href="#" class="close" onclick="close_pop()">닫기</a>
+            <a href="javascript:window.close();" class="close" onclick="close_pop()">닫기</a>
         </div>
         <div class="popCont">
             <div class="popArea">                
@@ -88,6 +88,38 @@
                             <a href="./러닝허브_학습방_메인(설문).html">설문</a>
                         </li>
                     </ul>
+                    <div class="btnWrap mb20">
+                        <a href="javascript:openModalPop('modal_01')" class="moreBtn">진도/성적 자세히 보기</a>
+                    </div>
+                    
+                    <div class="home_progress mb40">
+                        <div>
+                            <strong>진도율</strong>
+                            <div class="progress_wrap">
+                                <div class="progress02 bgBlue">
+                                    <span style="width: 70%"></span>
+                                </div>
+                                <p class="txt">70%</p>
+                            </div>
+                        </div>
+                        <div>
+                            <strong>총점</strong>
+                            <div class="progress_wrap">
+                                <div class="progress02 bgGreen">
+                                    <span style="width: 50%"></span>
+                                </div>
+                                <p class="txt fcRed">50.2점
+                                    <span class="gray">(진행중)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_wrap mb40">
+                        <ul class="tab_style01 tabs">
+                            <li class="active"><a href="#">전체 목차</a></li>
+                            <li><a href="#">관심단원</a></li>
+                        </ul>
+                    </div>
                     <div class="contBox scr">
                         <div class="table_type01">
                             <table class="fdTable">
@@ -364,6 +396,15 @@
             </div>            
         </div>
         <style>
+            .popUp.studyPop .btnWrap {text-align: right;}
+            .popUp.studyPop .btnWrap .moreBtn {padding: 4px 12px;background: #fff;border: 1px solid #000;color: #000;font-size: 1.6rem;text-align: center;} 
+            .popUp.studyPop .home_progress {margin-top: 0;padding: 30px;background: #fff;border-radius: 20px;box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.05);}
+            
+            .popUp.studyPop .home_progress .progress_wrap .txt.fcRed { color: #c00000;}
+            .popUp.studyPop .home_progress .progress02 {background: #d9d9d9;}
+            .popUp.studyPop .home_progress .progress02.bgBlue span {background: #2e75b6;}
+            .popUp.studyPop .home_progress .progress02.bgGreen span {background: #385724;}
+             
             .popUp.studyPop .mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical,
             .popUp.studyPop .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical { margin: 20px 0; right: 4px !important; } 
             .popUp.studyPop .contBox .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail,
@@ -382,13 +423,46 @@
             .popUp.studyPop .fdTable .mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical,
             .popUp.studyPop .fdTable .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical { margin: 0; right: 0 !important; } 
             .popUp.studyPop .fdTable .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { background: #c9cdd2 !important; width: 4px; } 
+
+            .popUp.studyPop .tab_style01 li a {min-width: 120px;}
+
+            .modalPop{z-index: 9999;background: #fff;position: fixed;max-width: 500px;width: 100%;left: 50%;top: 50%;transform: translate(-50%,-50%);display: none}
+            .modalTop{padding: 2rem 3rem;border-bottom: 1px solid #1b1d1f;display: flex;justify-content: space-between;align-items: center;}
+            .modalTop h3{font-weight: 500;font-size: 2.2rem}
+            .modalTop .close{background: url(http://real.job-cloud.kr/images/front/00003/ico_close.png) no-repeat;width: 20px;height: 20px;text-indent: -9999px;}
+            .modalCont{padding: 3rem 0;max-height: calc(100vh - 150px)}
+            .modalCont > .scr.mh_scr {max-height: calc(100vh - 220px)}
+            .modalCont .pc_pd{padding: 0 3rem}
+            .modalCont > .scr{max-height: calc(100vh - 320px);overflow-y: auto;padding-right: 20px !important}
+
             @media (max-width: 768px) {
+                .modalPop {height: 100vh;}
                 .popUp.studyPop .fdTable .foldBox { max-height: 96px; } 
                 .popUp.studyPop .fdTable .fold tr { display: flex; }
                 .popUp.studyPop .fdTable .fold tr td:first-child {flex-shrink: 0;}
+
+                .popUp.studyPop .home_progress {padding: 20px;}
+                .popUp.studyPop .home_progress > div strong {margin-right: 0;}
+                .popUp.studyPop .progress_wrap {width: calc(100% - 60px);}
+                .popUp.studyPop .home_progress > div:nth-child(2) .txt {margin: 0;}
+                .popUp.studyPop .home_progress > div .progress02 {width: calc(100% - 56px);}
             }
         </style>
     </div>
+    <!--팝업-->
+    <div class="shadow"></div>
+    <div class="modalPop modal_01">
+        <div class="modalTop">
+            <h3>모달 팝업</h3>
+            <a href="#" class="close" onclick="close_modal()">닫기</a>
+        </div>
+        <div class="modalCont">
+            <div class="pc_pd">
+                <p class="bold02 mb20">모달내용</p>            
+            </div>
+        </div>
+    </div>
+    <!--//팝업-->
     <script>
         
         $(document).ready(function() {
@@ -398,7 +472,21 @@
             $(".scr").mCustomScrollbar({
                 theme: "minimal-dark"
             });
+            $(".tabs li a").click(function () {
+                $(this).parent().siblings("li").removeClass("active");
+                $(this).parent().addClass("active");
+            });
         });
+        function openModalPop(modalname) {
+            $("." + modalname).show();
+            $('body').addClass('not_scroll');
+            $('.shadow').show();
+        }
+        function close_modal() {
+            $('.modalPop').hide();
+            $('body').removeClass('not_scroll');
+            $('.shadow').hide();
+        }
         
     </script>
 </body>
