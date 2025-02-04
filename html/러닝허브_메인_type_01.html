@@ -44,18 +44,120 @@
 
 <body>
     <style>
-        .header_gnb.type01 .header_top .seach_area .input_wrap {
-            border: 3px solid #ff8b00;
-        }
-        .header_gnb.type01 .header_top .seach_area .input_wrap button {
-            background: url(./images/learninghub_type01/ico_seach02.png) center / contain no-repeat;
-        }
-        .header_gnb.type01 .header_top .seach_area .input_wrap input::placeholder {
-            color: #adadad;
-        }
-        .header_gnb.type01 .new_gnb .gnb_menu > li > a:hover {
-            color: #ff8b00;
-        }
+        .header_gnb.type01 .header_top .seach_area .input_wrap {padding: 10px 20px; border: 3px solid #ff8b00; align-items: center; } 
+        .header_gnb.type01 .header_top .seach_area .input_wrap button { background: url(./images/learninghub_type01/ico_seach02.png) center / contain no-repeat; flex-shrink: 0; } 
+        .header_gnb.type01 .header_top .seach_area .input_wrap input::placeholder { color: #adadad; } 
+        .header_gnb.type01 .header_top .seach_area .input_wrap input { width: 100%; padding: 0; font-size: 16px; } 
+        .header_gnb.type01 .new_gnb .gnb_menu > li > a:hover { color: #ff8b00; } 
+        .bg_gray02 { background-color: #6c6e73; }
+        .header_gnb.type01 .searchSel { width: 100px; background: url(./images/learninghub_type01/ico_sel.png) no-repeat right 10px center #fff; color: #666666; font-family: inherit; font-size: 16px; font-weight: 500; border-radius: 0; border: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; flex-shrink: 0; } 
+
+        .main_type01 .quick_menu { position: fixed; top: 250px; right: calc(50% - 900px); z-index: 1; transform: translateX(-50%); overflow: hidden; } 
+        .main_type01 .quick_menu .quick_list { width: 168px; } 
+        .main_type01 .quick_menu .quick_list li + li { margin-top: 6px; } 
+        .main_type01 .quick_menu .quick_list li:nth-child(1) a { background-image: url(./images/learninghub_type01/ico_quick01.png); } 
+        .main_type01 .quick_menu .quick_list li:nth-child(2) a { background-image: url(./images/learninghub_type01/ico_quick02.png); } 
+        .main_type01 .quick_menu .quick_list li:nth-child(3) a { background-image: url(./images/learninghub_type01/ico_quick03.png); } 
+        .main_type01 .quick_menu .quick_list li:nth-child(4) a { background-image: url(./images/learninghub_type01/ico_quick04.png); } 
+        .main_type01 .quick_menu .quick_list a { display: flex; width: 100%; height: 48px; padding-left: 64px; background-color: #f8bd78; color: #fff; font-size: 12px; font-weight: 400; letter-spacing: -0.5px; border-radius: 30px; background-repeat: no-repeat; background-position: left 25px center; align-items: center; box-sizing: border-box; } 
+        .main_type01 .quick_menu .quick_list a:hover { background-color: #ff8b00; } 
+        .main_type01 .quick_menu .quick_list a span { display: block; color: #fff; font-size: 14px; font-weight: 600; } 
+        .main_type01 .quick_menu .quick_top { display: block; width: 48px; height: 48px; margin: 50px auto 0; background: url(./images/learninghub_type01/ico_top.png) center no-repeat; } 
+
+        .main_type01 .info_wrap { display: flex; gap: 20px 30px; } 
+        .main_type01 .info_wrap .info_box.info_area,
+        .main_type01 .info_wrap .info_box.progress_area { flex-shrink: 0; } 
+        .main_type01 .info_wrap .info_box { width: 380px; padding: 30px; background: #fff; border-radius: 20px; box-sizing: border-box; } 
+        .main_type01 .info_wrap .info_list .l_txt { display: block; display: -webkit-box; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; -webkit-line-clamp: 1; -webkit-box-orient: vertical; word-break: break-all; } 
+        .main_type01 .info_wrap .user_profil { display: flex; padding-bottom: 30px; margin-bottom: 20px; align-items: center; border-bottom: 1px solid #d9d9d9; } 
+        .main_type01 .info_wrap .user_img { width: 90px; height: 90px; margin-right: 20px; border-radius: 50%; flex-shrink: 0; overflow: hidden; } 
+        .main_type01 .info_wrap .user_img img { width: 100%; height: 100%; object-fit: cover; } 
+        .main_type01 .info_wrap .user_info .u_tit { margin-bottom: 4px; color: #39393a; font-size: 20px; font-weight: 600; } 
+        .main_type01 .info_wrap .user_info .u_txt { color: #39393a; font-size: 14px; font-weight: 500; } 
+        .main_type01 .info_wrap .user_date li { display: flex; color: #39393a; font-size: 16px; font-weight: 500; } 
+        .main_type01 .info_wrap .user_date li + li { margin-top: 10px; } 
+        .main_type01 .info_wrap .user_date .tit { width: 110px; padding-left: 12px; position: relative; flex-shrink: 0; } 
+        .main_type01 .info_wrap .user_date .tit::before { content: ''; width: 6px; height: 6px; position: absolute; top: 10px; left: 0; background: #b9b9b9; border-radius: 50%; } 
+        .main_type01 .info_wrap .user_date .txt { margin-left: 15px; color: #919191; } 
+
+        .main_type01 .progress-container { margin: -60px 0 -10px; } 
+        .main_type01 .progress-circle { position: relative; width: 200px; height: 200px; margin-left: auto; } 
+        .main_type01 .progress-circle svg { width: 100%; height: 100%; } 
+        .main_type01 .progress-circle .circle_bg { fill: none; stroke: #F2F2F2; stroke-width: 2; } 
+        .main_type01 .progress-circle .circle { fill: none; stroke: #ff8b00; stroke-width: 2; stroke-linecap: round; } 
+        .main_type01 .progress-circle .progress-bar { display: flex; width: calc(100% - 60px); height: calc(100% - 60px); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #6c6e73; border-radius: 50%; flex-wrap: wrap; flex-direction: column; align-items: center; justify-content: center; } 
+        .main_type01 .progress-circle .p_score { color: #fff; font-size: 16px; font-weight: 600; } 
+        .main_type01 .progress-circle .p_score span { font-size: 40px; } 
+        .main_type01 .progress-circle .p_time { color: #fff; font-size: 16px; font-weight: 500; } 
+        .main_type01 .progress_area .prog_txt01 { color: #39393a; font-size: 20px; font-weight: 600; } 
+        .main_type01 .progress_area .prog_txt01 span { display: block; color: #ff8b00; font-size: 24px; font-weight: 600; } 
+        .main_type01 .progress_area .prog_txt02 { color: #39393a; font-size: 16px; font-weight: 500; } 
+
+        .main_type01 .box_item .innerSection { padding: 40px 0; width: calc(100% - 20px); } 
+        .main_type01 .tit_wrap { display: flex; padding-bottom: 20px; margin-bottom: 20px; align-items: center; border-bottom: 1px solid #d9d9d9; } 
+        .main_type01 .tit_wrap .tit { color: #39393a; font-size: 20px; font-weight: 600; } 
+        .main_type01 .tit_wrap .txt { color: #39393a; font-size: 16px; font-weight: 500; } 
+        .main_type01 .tit_wrap .tit span { color: #ff8b00; } 
+        .main_type01 .tit_wrap .tit_btn { margin-left: auto; } 
+        .main_type01 .tit_wrap .more_btn { display: block; transition: all .35s; } 
+        .main_type01 .tit_wrap .more_btn::before { content: ''; display: block; width: 24px; height: 24px; background: url(./images/learninghub_type01/ico_more.png) no-repeat; background-size: contain; } 
+        .main_type01 .tit_wrap .more_btn:hover { transform: rotate(180deg); } 
+        .main_type01 .cont_tabs { display: flex; gap: 10px; } 
+        .main_type01 .cont_tabs li a { display: inline-block; padding: 2px 18px; color: #919191; font-size: 14px; font-weight: 400; background: #fafafa; border: 1px solid #d9d9d9; border-radius: 20px; } 
+        .main_type01 .cont_tabs li.active a,
+        .main_type01 .cont_tabs li a:hover { color: #fff; background-color: #ff8b00; border-color: #ff8b00; } 
+        .main_type01 .tit_wrap .cont_tabs { margin-left: 50px; } 
+        .slide_list .img_wrap { height: 160px; margin-bottom: 12px; position: relative; font-size: 0; border-radius: 15px; border: 1px solid #d9d9d9; box-sizing: border-box; overflow: hidden; } 
+        .slide_list .img_wrap .tag_wrap { position: absolute; top: 10px; left: 10px; z-index: 1; } 
+        .slide_list .img_wrap .tag_wrap span { display: inline-block; padding: 0px 8px; color: #fff; font-size: 11px; background: rgba(0, 0, 0, .6); border-radius: 5px; } 
+        .slide_list .img_wrap .tag_wrap span + span { margin-left: 4px; } 
+        .slide_list .img_wrap img { width: 100%; height: 100%; object-fit: cover; transition: all .35s; } 
+        .slide_list a:hover .img_wrap img { transform: scale(1.1); } 
+        .slide_list .txt_wrap { margin-bottom: 10px; } 
+        .slide_list .txt_wrap .tit { display: -webkit-box; height: 39px; color: #39393a; font-size: 16px; font-weight: 500; line-height: 1.2; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden; } 
+        .slide_list .view_wrap span:first-child { min-width: 40px; } 
+        .slide_list .view_wrap span { display: inline-block; color: #919191; font-size: 12px; font-weight: 400; } 
+        .slide_list .view_wrap .ico_save { display: inline-block; width: 11px; height: 15px; margin-top: -2px; margin-right: 4px; background: url(./images/learninghub_type01/ico_save.png) no-repeat; vertical-align: middle; } 
+        .slide_list .view_wrap .ico_time { display: inline-block; width: 16px; height: 16px; margin-top: -2px; margin-right: 4px; background: url(./images/learninghub_type01/ico_time.png) no-repeat; vertical-align: middle; } 
+        .slide_list .cate_wrap { margin-bottom: 4px; } 
+        .slide_list .cate_wrap span { color: #ff8b00; font-size: 12px; font-weight: 400; } 
+        .pop_btn { padding: 2px 20px; background: #fafafa; color: #919191; font-size: 14px; font-weight: 400; border: 1px solid #d9d9d9; border-radius: 20px; letter-spacing: -0.5px; transition: all .35s; } 
+        .pop_btn:hover { color: #fff; background-color: #ff8b00; border-color: #ff8b00; transition: all .35s; } 
+        .main_type01 .tab_content.active {display: block;}
+        .main_type01 .tab_content {display: none;}
+
+        .main_type01 .banner_wrap .tit_wrap { padding-bottom: 0; border-bottom: 0; } 
+        .main_type01 .banner_wrap .tit_wrap .tit { color: #fff; } 
+        .banner_wrap .slide_list .txt_wrap .tit { color: #fff; } 
+        .banner_wrap .slide_list .view_wrap span { color: #fff; } 
+
+        .main_type01 .box_item.tab_type .tit_wrap { flex-direction: column; border-bottom: 0; } 
+        .main_type01 .box_item.tab_type .tit_wrap .tit { margin-bottom: 10px; } 
+        .main_type01 .box_item.tab_type .tit_wrap .txt { margin-bottom: 30px; } 
+        .main_type01 .box_item.tab_type .cont_tabs { max-width: 700px; margin-left: 0; flex-wrap: wrap; justify-content: center; } 
+
+        .bt_line_gray { border-top: 1px solid #d9d9d9; } 
+        .main_type01 .notice_wrap { display: flex; gap: 20px 30px; } 
+        .main_type01 .notice_wrap .notice_area { width: calc(100% / 2 - 15px); padding: 30px; border: 1px solid #d9d9d9; border-radius: 20px; box-sizing: border-box; } 
+        .main_type01 .notice_list li { display: flex; } 
+        .main_type01 .notice_list li .l_txt { max-width: calc(100% - 90px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } 
+        .main_type01 .notice_list li .l_date { margin-left: auto; color: #919191; white-space: nowrap; } 
+        .main_type01 .list_type01 li + li { margin-top: 10px; } 
+        .main_type01 .list_type01 li { padding-left: 14px; position: relative; color: #39393a; font-size: 16px; font-weight: 500; } 
+        .main_type01 .list_type01 li::before { content: ''; width: 6px; height: 6px; position: absolute; top: 10px; left: 0; background: #b9b9b9; border-radius: 50%; } 
+
+        .footer.type01 { padding: 50px 70px !important; background: #f0f0f0 !important; } 
+        .footer.type01 .footer_wrap { gap: 20px; } 
+        .footer.type01 .footer_area { display: flex; align-items: flex-start; } 
+        .footer.type01 .f_tit { padding-right: 20px; margin-right: 20px; border-right: 1px solid #d9d9d9; } 
+        .footer.type01 .f_tit p { color: #39393a; font-size: 20px; font-weight: 600; line-height: 1.2; } 
+        .footer.type01 .f_tel { display: flex; margin-bottom: 20px; align-items: center; } 
+        .footer.type01 .f_tel p { color: #39393a; font-size: 28px; font-weight: 500; } 
+        .footer.type01 .f_tel .f_link { margin-left: 30px; padding: 2px 20px; color: #fff; font-size: 14px; font-weight: 400; background: #6c6e73; border-radius: 20px; } 
+        .footer.type01 .f_list li { display: flex; } 
+        .footer.type01 .list_tit { margin-right: 16px; color: #39393a; font-size: 16px; font-weight: 500; } 
+        .footer.type01 .list_txt { color: #919191; font-size: 16px; font-weight: 500; } 
+        .footer.type01 .f_tel .f_link.bg_yellow { background-color: #fae100; color: #000000; } 
     </style>
     <header class="header header_gnb type01">
         <div class="gnb_util">
@@ -80,6 +182,7 @@
                 </div>
                 <div class="seach_area">
                     <div class="input_wrap h_search">
+                        <select name="" id="" class="searchSel"><option value="01">통합검색</option></select>
                         <input type="text" placeholder="검색어 입력." id="searchTextPc" name="searchTextPc">
                         <button type="button">검색</button>
                     </div>
@@ -279,163 +382,139 @@
         </div>
     </header>
     <main class="main_type01">
-        <style>
-            .main_type01 .box_item {
-                padding: 50px 0;
-            }
-            .main_type01 .tit_wrap {
-                display: flex;
-                padding-bottom: 20px;
-                margin-bottom: 20px;
-                align-items: center;
-                border-bottom: 1px solid #d9d9d9;
-            }
-            .main_type01 .tit_wrap .tit {
-                color: #39393a;
-                font-size: 20px;
-                font-weight: 600;
-            }
-            .main_type01 .tit_wrap .tit span {
-                color: #ff8b00;
-            }
-            .main_type01 .tit_wrap .more_btn {
-                margin-left: auto;
-                transition: all .35s;
-            }
-            .main_type01 .tit_wrap .more_btn::before {
-                content: '';
-                display: block;
-                width: 24px;
-                height: 24px;
-                background: url(./images/learninghub_type01/ico_more.png) no-repeat;
-                background-size: contain;                
-            }
-            .main_type01 .tit_wrap .more_btn:hover {
-                transform: rotate(180deg);
-            }
-            .main_type01 .cont_tabs {
-                display: flex;
-                gap: 10px;
-            }
-            .main_type01 .cont_tabs li a {
-                display: inline-block;
-                padding: 6px 20px;
-                color: #919191;
-                font-size: 14px;
-                font-weight: 400;
-                background: #fafafa;
-                border: 1px solid #d9d9d9;
-                border-radius: 20px;
-            }
-            .main_type01 .cont_tabs li.active a,
-            .main_type01 .cont_tabs li a:hover {
-                color: #fff;
-                background-color: #ff8b00;
-                border-color: #ff8b00;
-            }
-            .main_type01 .tit_wrap .cont_tabs {
-                margin-left: 50px;
-            }
-            .con_list {
-            }
-            .con_list .img_wrap {
-                height: 160px;                
-                font-size: 0;
-                border-radius: 15px;
-                border: 1px solid #d9d9d9;
-                box-sizing: border-box;
-                overflow: hidden;
-            }
-            .con_list .img_wrap img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: all .35s;
-            }
-            .con_list a:hover .img_wrap img {
-                transform: scale(1.1);
-            }
-            .con_list .txt_wrap {
-                margin-top: 12px;
-            }
-            .con_list .txt_wrap .tit {
-                display: -webkit-box;  
-                height: 39px;
-                color: #39393a;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 1.2;                             
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-            .con_list .view_wrap {
-                margin-top: 10px;
-            }
-            .con_list .view_wrap span:first-child {
-                min-width: 40px;
-            }
-            .con_list .view_wrap span {
-                display: inline-block;
-                color: #919191;
-                font-size: 12px;
-                font-weight: 400;
-            }
-            .con_list .view_wrap .ico_save {
-                display: inline-block;
-                width: 11px;
-                height: 15px;
-                margin-top: -2px;
-                margin-right: 4px;
-                background: url(./images/learninghub_type01/ico_save.png) no-repeat;
-                vertical-align: middle;
-            }
-            .con_list .view_wrap .ico_time {
-                display: inline-block;
-                width: 16px;
-                height: 16px;
-                margin-top: -2px;
-                margin-right: 4px;
-                background: url(./images/learninghub_type01/ico_time.png) no-repeat;
-                vertical-align: middle;
-            }
-        </style>
-        <article class="box_item">
+        <div class="quick_menu">
+            <ul class="quick_list">
+                <li>
+                    <a href="#"><p>전체 강좌<span>커리큘럼 보기</span></p></a>
+                </li>
+                <li>
+                    <a href="#"><p>전문가와<span>상담 신청하기</span></p></a>
+                </li>
+                <li>
+                    <a href="#"><p>학습자<span>공지사항 보기</span></p></a>
+                </li>
+                <li>
+                    <a href="#"><p>궁금증해결<span>FAQ 확인하기</span></p></a>
+                </li>
+            </ul>
+            <div class="quick_btn">
+                <button type="button" class="quick_top"><span class="ir-text">top 이동</span></button>
+            </div>
+        </div>
+       
+        <article class="box_item bg_gray">
             <div class="innerSection">
+                <div class="info_wrap">
+                    <div class="info_box info_area">
+                        <div class="user_profil">
+                            <div class="user_img">
+                                <img src="./images/learninghub_type01/user_img.png" alt="홍길동">
+                            </div>
+                            <div class="user_info">
+                                <p class="u_tit">학습자 : <span>홍길동</span></p>
+                                <p class="u_txt">오늘도 즐겁게 배워볼까요?</p>
+                            </div>
+                        </div>
+                        <div class="user_date">
+                            <ul>
+                                <li>
+                                    <p class="tit">학습기간</p>
+                                    <p class="txt">2025.00.00 ~2025.00.00</p>
+                                </li>
+                                <li>
+                                    <p class="tit">남은 학습기간</p>
+                                    <p class="txt">Day - 45</p>
+                                </li>
+                                <li>
+                                    <p class="tit">랭킹</p>
+                                    <p class="txt">1</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info_box progress_area">
+                        <p class="prog_txt01">대단해요! <span>수료완료!</span></p>
+                        <div class="progress-container">
+                            <div class="progress-circle">
+                                <div data-progress="100" class="progress-bar">
+                                    <p class="p_score"><span>100</span>%</p>
+                                    <p class="p_time">00:00:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="prog_txt02">수강완료까지 <span>0</span>% 남음</p>
+                    </div>
+                    <div class="info_box reg_area">
+                        <div class="tit_wrap">
+                            <p class="tit">수강중인 과정</p>
+                            <div class="tit_btn">
+                                <a href="#" class="more_btn"><span class="ir-text">더보기</span></a>
+                            </div>
+                        </div>
+                        <ul class="info_list list_type01">
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">모든 직장인이 IT 기획을 알아야 하는 이유</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">내부회계관리제도의 전사수준 통계</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">강화학습이란?</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">핵심 재무제표 상식</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">[짧은 한국사] Q&A_고구려, 광개토왕</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+        </article>
+        <article class="box_item">
+            <div class="innerSection tab_item01">
+                <style>
+                    
+                </style>
                 <div class="tit_wrap">
                     <p class="tit"><span>Ai</span>TEMS 추천</p>
                     <ul class="cont_tabs">
-                        <li class="active">
-                            <a href="" class="active">전체</a>
+                        <li class="active tabType_001">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('001','tab_item01');">전체</a>
                         </li>
-                        <li>
-                            <a href="">공통역량</a>
+                        <li class="tabType_002">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('002','tab_item01');">공통역량</a>
                         </li>
-                        <li>
-                            <a href="">직무역량</a>
+                        <li class="tabType_003">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('003','tab_item01');">직무역량</a>
                         </li>
-                        <li>
-                            <a href="">리더십</a>
+                        <li class="tabType_004">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('004','tab_item01');">리더십</a>
                         </li>
-                        <li>
-                            <a href="">자격증</a>
+                        <li class="tabType_005">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('005','tab_item01');">자격증</a>
                         </li>
-                        <li>
-                            <a href="">외국어</a>
+                        <li class="tabType_006">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('006','tab_item01');">외국어</a>
                         </li>
                     </ul>
-                    <a href="#" class="more_btn"><span class="ir-text">더보기</span></a>
+                    <div class="tit_btn">
+                        <a href="#" class="more_btn"><span class="ir-text">더보기</span></a>
+                    </div>                    
                 </div>
                 <div class="tab_container">
-                    <div class="tab_content active" id="tabCont_001">
+                    <div class="tab_content active tabCont_001">
                         <div class="slide_wrap">
-                            <div class="con_list">
+                            <div class="slide_list">
                                 <div class="swiper-wrapper">
                                     <div class="item swiper-slide">
                                         <a href="#">
                                             <div class="img_wrap">
-                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
                                             </div>
                                             <div class="txt_wrap">
                                                 <p class="tit">모든 직장인이 IT 기획을 알아야 하는 이유</p>
@@ -449,7 +528,10 @@
                                     <div class="item swiper-slide">
                                         <a href="#">
                                             <div class="img_wrap">
-                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
                                             </div>
                                             <div class="txt_wrap">
                                                 <p class="tit">내부회계관리제도의 전사수준 통계</p>
@@ -463,7 +545,10 @@
                                     <div class="item swiper-slide">
                                         <a href="#">
                                             <div class="img_wrap">
-                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                               
                                             </div>
                                             <div class="txt_wrap">
                                                 <p class="tit">강화학습이란?</p>
@@ -477,7 +562,10 @@
                                     <div class="item swiper-slide">
                                         <a href="#">
                                             <div class="img_wrap">
-                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
                                             </div>
                                             <div class="txt_wrap">
                                                 <p class="tit">핵심 재무제표 상식</p>
@@ -491,7 +579,196 @@
                                     <div class="item swiper-slide">
                                         <a href="#">
                                             <div class="img_wrap">
-                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">[짧은 한국사] Q&A_고구려, 광개토왕</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>97</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_content tabCont_002">
+                        <div class="slide_wrap">
+                            <div class="slide_list">
+                                <div class="swiper-wrapper">
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img02.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">모든 직장인이 IT 기획을 알아야 하는 이유</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>4</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img02.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">내부회계관리제도의 전사수준 통계</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>3</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img02.png" alt="컨텐츠 이미지">                                               
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">강화학습이란?</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>0</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img02.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">핵심 재무제표 상식</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>65</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img02.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">[짧은 한국사] Q&A_고구려, 광개토왕</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>97</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_content tabCont_003">
+                        <div class="slide_wrap">
+                            <div class="slide_list">
+                                <div class="swiper-wrapper">
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img03.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">모든 직장인이 IT 기획을 알아야 하는 이유</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>4</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img03.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">내부회계관리제도의 전사수준 통계</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>3</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img03.png" alt="컨텐츠 이미지">                                               
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">강화학습이란?</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>0</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img03.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">핵심 재무제표 상식</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>65</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <div class="tag_wrap">
+                                                    <span>정확도 100%</span>
+                                                </div>
+                                                <img src="./images/learninghub_type01/slide_img03.png" alt="컨텐츠 이미지">                                                
                                             </div>
                                             <div class="txt_wrap">
                                                 <p class="tit">[짧은 한국사] Q&A_고구려, 광개토왕</p>
@@ -513,37 +790,343 @@
             <div class="innerSection">
                 <div class="tit_wrap">
                     <p class="tit"><span>역량</span>기반 추천</p>
+                    <div class="tit_btn">
+                        <a href="#" class="pop_btn">학습자 선호 키워드 설정</a>
+                    </div>                    
+                </div>
+                <div class="slide_wrap">
+                    <div class="slide_list">
+                        <div class="swiper-wrapper">
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <div class="tag_wrap">
+                                            <span>IT</span>
+                                            <span>코딩</span>
+                                        </div>
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">모든 직장인이 IT 기획을 알아야 하는 이유</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>4</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <div class="tag_wrap">
+                                            <span>회계</span>
+                                            <span>통계</span>
+                                        </div>
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">내부회계관리제도의 전사수준 통계</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>3</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <div class="tag_wrap">
+                                            <span>역량</span>
+                                            <span>인사</span>
+                                        </div>
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">강화학습이란?</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>0</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <div class="tag_wrap">
+                                            <span>회계</span>
+                                            <span>재무</span>
+                                        </div>
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">핵심 재무제표 상식</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>65</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <div class="tag_wrap">
+                                            <span>한국사</span>
+                                            <span>역사</span>
+                                        </div>
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">[짧은 한국사] Q&A_고구려, 광개토왕</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>97</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <div class="innerSection">
+                <div class="tit_wrap">
+                    <p class="tit"><span>학습이력</span>기반 추천</p>                   
+                </div>
+                <div class="slide_wrap">
+                    <div class="slide_list">
+                        <div class="swiper-wrapper">
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">모든 직장인이 IT 기획을 알아야 하는 이유</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>4</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">내부회계관리제도의 전사수준 통계</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>3</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">강화학습이란?</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>0</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">핵심 재무제표 상식</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>65</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">[짧은 한국사] Q&A_고구려, 광개토왕</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>97</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item bg_gray02 banner_wrap">
+            <div class="innerSection">
+                <div class="tit_wrap">
+                    <p class="tit">Big Data Question Pick</p>                   
+                </div>
+                <div class="slide_wrap">
+                    <div class="slide_list">
+                        <div class="swiper-wrapper">
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="cate_wrap">
+                                        <span>공통역량 | 디지털역량</span>
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">[메타버스] 비즈니스 인사이트 및 활용전략</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span>10시간 41분</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="cate_wrap">
+                                        <span>공통역량 | 경영/경제</span>
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">일잘러를 위한 비즈니스 스피치</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span>7시간 40분 35초</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="cate_wrap">
+                                        <span>공통역량 | 4차산업혁명</span>
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">연결의 진화, 메타버스</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span>4시간 38분 59초</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="cate_wrap">
+                                        <span>리더십 | 팀워크</span>
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">팀워크 촉진 리더십_시름시름 몸살 앓는 우리 팀 치료하기</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span>4시간 37분 25초</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="cate_wrap">
+                                        <span>공통역량 | 경영/경제</span>
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">콘텐츠 시대! OTT 인사이트</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span>4시간 34분 58초</span>
+                                    </div>
+                                </a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item tab_type">
+            <div class="innerSection tab_item02">
+                <div class="tit_wrap">
+                    <p class="tit"><span>INKIUM</span> Pick</p>
+                    <p class="txt">지금 가장 관심이 높은 키워드를 통해 과정을 추천해 드립니다.</p>
                     <ul class="cont_tabs">
-                        <li class="active">
-                            <a href="" class="active">전체</a>
+                        <li class="active tabType_001">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('001','tab_item02');">전체</a>
+                        </li>
+                        <li class="tabType_002">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('002','tab_item02');">공통역량</a>
+                        </li>
+                        <li class="tabType_003">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('003','tab_item02');">직무전문</a>
+                        </li>
+                        <li class="tabType_004">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('004','tab_item02');">리더십</a>
+                        </li>
+                        <li class="tabType_005">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('005','tab_item02');">자격증</a>
+                        </li>
+                        <li class="tabType_006">
+                            <a href="javascript:void(0);" onclick="chgTypeTab('006','tab_item02');">일본어</a>
                         </li>
                         <li>
-                            <a href="">공통역량</a>
+                            <a href="">독서통신</a>
+                        </li>
+                        <li>
+                            <a href="">자격대비</a>
+                        </li>
+                        <li>
+                            <a href="">인문교양</a>
                         </li>
                         <li>
                             <a href="">직무역량</a>
                         </li>
                         <li>
-                            <a href="">리더십</a>
+                            <a href="">경영학</a>
                         </li>
                         <li>
-                            <a href="">자격증</a>
+                            <a href="">중국어</a>
                         </li>
                         <li>
-                            <a href="">외국어</a>
+                            <a href="">여행</a>
                         </li>
-                    </ul>
-                    <a href="#" class="more_btn"><span class="ir-text">더보기</span></a>
+                        <li>
+                            <a href="">영어</a>
+                        </li>
+                    </ul>                   
                 </div>
                 <div class="tab_container">
-                    <div class="tab_content active" id="tabCont_001">
+                    <div class="tab_content active tabCont_001">
                         <div class="slide_wrap">
-                            <div class="con_list">
+                            <div class="slide_list">
                                 <div class="swiper-wrapper">
                                     <div class="item swiper-slide">
                                         <a href="#">
                                             <div class="img_wrap">
-                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
                                             </div>
                                             <div class="txt_wrap">
                                                 <p class="tit">모든 직장인이 IT 기획을 알아야 하는 이유</p>
@@ -557,7 +1140,7 @@
                                     <div class="item swiper-slide">
                                         <a href="#">
                                             <div class="img_wrap">
-                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
                                             </div>
                                             <div class="txt_wrap">
                                                 <p class="tit">내부회계관리제도의 전사수준 통계</p>
@@ -571,7 +1154,7 @@
                                     <div class="item swiper-slide">
                                         <a href="#">
                                             <div class="img_wrap">
-                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                               
                                             </div>
                                             <div class="txt_wrap">
                                                 <p class="tit">강화학습이란?</p>
@@ -585,7 +1168,7 @@
                                     <div class="item swiper-slide">
                                         <a href="#">
                                             <div class="img_wrap">
-                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
                                             </div>
                                             <div class="txt_wrap">
                                                 <p class="tit">핵심 재무제표 상식</p>
@@ -599,7 +1182,163 @@
                                     <div class="item swiper-slide">
                                         <a href="#">
                                             <div class="img_wrap">
-                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                                <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">[짧은 한국사] Q&A_고구려, 광개토왕</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>97</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_content tabCont_002">
+                        <div class="slide_wrap">
+                            <div class="slide_list">
+                                <div class="swiper-wrapper">
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub_type01/slide_img02.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">모든 직장인이 IT 기획을 알아야 하는 이유</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>4</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub_type01/slide_img02.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">내부회계관리제도의 전사수준 통계</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>3</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub_type01/slide_img02.png" alt="컨텐츠 이미지">                                               
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">강화학습이란?</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>0</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub_type01/slide_img02.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">핵심 재무제표 상식</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>65</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub_type01/slide_img02.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">[짧은 한국사] Q&A_고구려, 광개토왕</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>97</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_content tabCont_003">
+                        <div class="slide_wrap">
+                            <div class="slide_list">
+                                <div class="swiper-wrapper">
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub_type01/slide_img03.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">모든 직장인이 IT 기획을 알아야 하는 이유</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>4</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub_type01/slide_img03.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">내부회계관리제도의 전사수준 통계</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>3</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub_type01/slide_img03.png" alt="컨텐츠 이미지">                                               
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">강화학습이란?</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>0</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub_type01/slide_img03.png" alt="컨텐츠 이미지">                                                
+                                            </div>
+                                            <div class="txt_wrap">
+                                                <p class="tit">핵심 재무제표 상식</p>
+                                            </div>
+                                            <div class="view_wrap">
+                                                <span><i class="ico_save"></i>65</span>
+                                                <span><i class="ico_time"></i>00:24:22</span>
+                                            </div>
+                                        </a>
+                                    </div>  
+                                    <div class="item swiper-slide">
+                                        <a href="#">
+                                            <div class="img_wrap">
+                                                <img src="./images/learninghub_type01/slide_img03.png" alt="컨텐츠 이미지">                                                
                                             </div>
                                             <div class="txt_wrap">
                                                 <p class="tit">[짧은 한국사] Q&A_고구려, 광개토왕</p>
@@ -617,45 +1356,127 @@
                 </div>
             </div>
         </article>
-    </main>
-
-    <footer class="footer">
-        <div class="innerSection">
-            <div class="footer_wrap">
-                <h1 class="logo"><img src="./images/learninghub/footer_logo.png" alt="러닝허브 로고"></h1>
-                <div class="f_util">
-                    <ul>
-                        <li><a href="#" title="회사소개 바로가기">회사소개</a></li>
-                        <li><a href="#" title="회사소개 바로가기">이용약관</a></li>
-                        <li><a href="#" title="회사소개 바로가기">개인정보취급방침</a></li>
-                        <li><a href="#" title="회사소개 바로가기">찾아오시는 길</a></li>
-                        <li><a href="#" title="회사소개 바로가기">환불규정</a></li>
-                    </ul>
-                    <div class="f_txt">
-                        <p>(08390)서울특별시 구로구 디지털로 30길 31, 코오롱빌란트2차 703호 ~ 704호</p>
-                        <p>㈜인키움 대표이사 : 박지현 TEL : 02-555-1945 / FAX : 02-2081-1090 사업자등록번호 : 220-81-71637</p>
+        <article class="box_item">
+            <div class="innerSection bt_line_gray">
+                <div class="notice_wrap">
+                    <div class="notice_area">
+                        <div class="tit_wrap">
+                            <p class="tit">공지사항</p>
+                            <div class="tit_btn">
+                                <a href="#" class="more_btn"><span class="ir-text">더보기</span></a>
+                            </div>
+                        </div>
+                        <ul class="notice_list list_type01">
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">[공지사항] 학습자 1,000,000명 돌파</a>
+                                <p class="l_date">2025.01.21</p>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">[공지사항] 학습자 100,000명 돌파</a>
+                                <p class="l_date">2025.01.21</p>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">[공지사항] 학습자 10,000명 돌파</a>
+                                <p class="l_date">2025.01.21</p>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">[공지사항] 학습자 1000명 돌파</a>
+                                <p class="l_date">2025.01.21</p>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">[공지사항] 학습자 100명 돌파</a>
+                                <p class="l_date">2025.01.21</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="notice_area">
+                        <div class="tit_wrap">
+                            <p class="tit">FAQ</p>
+                            <div class="tit_btn">
+                                <a href="#" class="more_btn"><span class="ir-text">더보기</span></a>
+                            </div>
+                        </div>
+                        <ul class="notice_list list_type01">
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">HRD FLEX 구독 기간은 어디서 확인하나요?</a>
+                                <p class="l_date">2025.01.21</p>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">수강하는 과정을 100% 완강해야 하나요?</a>
+                                <p class="l_date">2025.01.21</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="family_site">
-                    <select class="sel_style01">
-                        <option>관련사이트</option>
-                    </select>
+            </div>
+        </article>
+    </main>
+    <footer class="footer type01">
+        <div class="innerSection">
+            <div class="footer_wrap">
+                <div class="footer_area">
+                    <div class="f_tit">
+                        <p>학습<br>문의</p>
+                    </div>
+                    <div class="f_info">
+                        <div class="f_tel">
+                            <p>02-0000-0000</p>
+                            <a href="#" class="f_link bg_yellow">카카오톡 상담 바로가기</a>
+                        </div>
+                        <ul class="f_list">
+                            <li>
+                                <p class="list_tit">운영</p>
+                                <p class="list_txt">평일 09:00 ~ 18:00, 점심시간 12:00 ~ 13:00</p>
+                            </li>
+                            <li>
+                                <p class="list_tit">휴무</p>
+                                <p class="list_txt">주말, 공휴일 휴무</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_area">
+                    <div class="f_tit">
+                        <p>원격<br>상담</p>
+                    </div>
+                    <div class="f_info">
+                        <div class="f_tel">
+                            <p>02-0000-0000</p>
+                            <a href="#" class="f_link">원격지원 상담 바로가기</a>
+                        </div>
+                        <ul class="f_list">
+                            <li>
+                                <p class="list_tit">운영</p>
+                                <p class="list_txt">평일 09:00 ~ 18:00, 점심시간 12:00 ~ 13:00</p>
+                            </li>
+                            <li>
+                                <p class="list_tit">휴무</p>
+                                <p class="list_txt">주말, 공휴일 휴무</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
     <script>
-        $(document).ready(function() {
-            var swiper = new Swiper(".con_list", {
+        $(function() {
+            var $quickMenu = $('.header_gnb .quickMenu');
+            $quickMenu.hide();
+            $(window).off("scroll");
+            $(".header_gnb .quickMenu .quickTop").off("click");
+            $(".header_gnb .quickMenu .quickClose").off("click");
+        });
+
+        $(document).ready(function() {       
+            var swiper = new Swiper(".slide_list", {
+                initialSlide: 0,
                 spaceBetween: 20,
                 slidesPerView: 5,
                 autoplay: false,
                 loop: false,
-                // pagination: {
-                //     clickable : true,
-                //     el: '.recommend_cont .swiper-pagination',
-                //     type: 'bullets',
-                // },
+                observer: true,
+                observeParents: true,
                 // breakpoints: { 
                 //     1024: {
                 //         slidesPerView: 2,
@@ -666,7 +1487,50 @@
                 //     },
                 // }
             });
+            $(".main_type01 .quick_menu .quick_top").click(function() {
+                $('html, body').animate({ scrollTop: 0 }, 400);
+                return false;
+            });
         });
+        // tabs slide
+        function chgTypeTab(tabCode, itemClass) {
+            var $parent = $("." + itemClass); // 클릭된 탭이 속한 item 컨테이너 찾기
+            $parent.find(".cont_tabs > li").removeClass("active");
+            $parent.find(".tabType_" + tabCode).addClass("active");            
+            $parent.find(".tab_content").hide(); // 해당 컨테이너 안에서만 숨김
+            $parent.find(".tabCont_" + tabCode).show(); // 해당 컨테이너 안에서만 보이도록 변경
+        }
+
+        // circle progress
+        document.addEventListener('DOMContentLoaded', function () {
+            const circles = document.querySelectorAll('.progress-container .progress-circle .progress-bar');
+            const svgNamespace = "http://www.w3.org/2000/svg";
+            const pathD = "M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831";
+
+            circles.forEach(bar => {
+                const progress = bar.getAttribute('data-progress');
+                const svg = document.createElementNS(svgNamespace, "svg");
+                svg.setAttribute("viewBox", "0 0 36 36");
+
+                const createCircle = (className, dasharray, dashoffset) => {
+                    const circle = document.createElementNS(svgNamespace, "path");
+                    circle.setAttribute("class", className);
+                    circle.setAttribute("d", pathD);
+                    if (dasharray) circle.setAttribute("stroke-dasharray", dasharray);
+                    if (dashoffset !== undefined) circle.setAttribute("stroke-dashoffset", dashoffset);
+                    return circle;
+                };
+
+                const circumference = 2 * Math.PI * 15.9155;
+                const offset = circumference - (progress / 100) * circumference;
+
+                svg.appendChild(createCircle("circle_bg"));
+                svg.appendChild(createCircle("circle", `${circumference}`, offset));
+                bar.parentElement.insertBefore(svg, bar);
+            });
+        });
+
+        
     </script>
 
 </body>
