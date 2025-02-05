@@ -1360,14 +1360,6 @@
                 $('.header .m_menu_wrap').removeClass('show');
                 $('body').removeClass('not_scroll');
             });
-            // $(".content_wrap .all_search_wrap .check_list .moreBtn").click(function(event) {
-            //     event.stopPropagation();
-            //     $('.check_list').toggleClass("open");
-            // });
-            // $(".content_wrap .all_search_wrap .check_list .moreBtn").hover(function() {
-            //     $('.check_list').addClass("open");
-            //     $(this).off("mouseenter mouseleave");
-            // });
             var $quickMenu = $('.header_gnb .quickMenu');
             $quickMenu.hide();
             $(window).off("scroll");
@@ -1399,10 +1391,7 @@
                     }
                     
                 }
-            });
-            setTimeout(() => {
-                swiper.update();
-            }, 500);
+            });           
 
             $(".main_type01 .quick_menu .quick_top").click(function() {
                 $('html, body').animate({ scrollTop: 0 }, 400);
@@ -1411,11 +1400,11 @@
         });
         // tabs slide
         function chgTypeTab(tabCode, itemClass) {
-            var $parent = $("." + itemClass); // 클릭된 탭이 속한 item 컨테이너 찾기
+            var $parent = $("." + itemClass);
             $parent.find(".cont_tabs > li").removeClass("active");
             $parent.find(".tabType_" + tabCode).addClass("active");            
-            $parent.find(".tab_content").hide(); // 해당 컨테이너 안에서만 숨김
-            $parent.find(".tabCont_" + tabCode).show(); // 해당 컨테이너 안에서만 보이도록 변경
+            $parent.find(".tab_content").hide();
+            $parent.find(".tabCont_" + tabCode).show();
         }
 
         // circle progress
