@@ -36,7 +36,7 @@
     <script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
     <script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
     <script src="./js/front/chosen.jquery.min.js"></script>
-    <script src="./js/learninghub/run.js"></script>
+    <!-- <script src="./js/learninghub/run.js"></script> -->
     <script src="./js/front/file/forms.js"></script>
     <script src="./js/front/solution/solution_ui.js"></script>
     <script src="./js/front/solution/custome.js"></script>
@@ -1344,6 +1344,30 @@
     </footer>
     <script>
         $(function() {
+            $(".header_gnb.type01 .all_gnb_menu").click(function(event) {
+                event.stopPropagation();
+                $('.header_gnb').toggleClass("open");
+            });
+            $('.header.type01 .m_all_btn .m_menu_btn').click(function () {
+                $('.header .m_menu_wrap').addClass('show');
+                $('body').addClass('not_scroll');
+            });
+            $('.header.type01 .m_menu_wrap .m_menu_bottom .m_menu_list > li > a').click(function () {
+                $(this).parent().toggleClass('active');
+            });
+            
+            $('.header.type01 .m_menu_wrap .m_close_btn').click(function () {
+                $('.header .m_menu_wrap').removeClass('show');
+                $('body').removeClass('not_scroll');
+            });
+            // $(".content_wrap .all_search_wrap .check_list .moreBtn").click(function(event) {
+            //     event.stopPropagation();
+            //     $('.check_list').toggleClass("open");
+            // });
+            // $(".content_wrap .all_search_wrap .check_list .moreBtn").hover(function() {
+            //     $('.check_list').addClass("open");
+            //     $(this).off("mouseenter mouseleave");
+            // });
             var $quickMenu = $('.header_gnb .quickMenu');
             $quickMenu.hide();
             $(window).off("scroll");
