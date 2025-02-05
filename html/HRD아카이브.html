@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브 type01</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common_type01.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/learninghub/common_type01.css"> -->
+    <!-- css 추가 -->
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style_type01.css"> 
+    <!-- /css 추가 -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@noonnu/s-coredream-4regular" />
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/chosen.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/excel-bootstrap-table-filter-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css" />
+
+
+    <script src="./js/front/yepnope/1.5.4/yepnope.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/front/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+    <script src="./js/front/front/jquery.mCustomScrollbar.js"></script>
+    <script src="./js/front/front/imgLiquid/0.9.944/imgLiquid-min.js"
+        integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/front/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
+    <script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
+    <script src="./js/front/chosen.jquery.min.js"></script>
+    <!-- <script src="./js/learninghub/run.js"></script> -->
+    <script src="./js/front/file/forms.js"></script>
+    <script src="./js/front/solution/solution_ui.js"></script>
+    <script src="./js/front/solution/custome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <header class="header header_gnb type01">
+        <div class="gnb_util">
+            <div class="innerSection">
+                <div class="util_menu">
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그아웃</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#" class="orange02">HRDHREX</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="innerSection">
+            <div class="header_top">
+                <h1 class="logo"><a href=""><img src="./images/learninghub_type01/logo.png" alt="러닝허브 로고"></a></h1>
+                <div class="m_all_btn">
+                    <button type="button" class="m_menu_btn">
+                        <span></span>
+                    </button>
+                </div>
+                <div class="seach_area">
+                    <div class="input_wrap h_search">
+                        <select name="" id="" class="searchSel"><option value="01">통합검색</option></select>
+                        <input type="text" placeholder="검색어 입력." id="searchTextPc" name="searchTextPc">
+                        <button type="button">검색</button>
+                    </div>
+                </div>
+            </div>
+            <nav class="new_gnb">
+                <div class="gnb_btn">
+                    <button type="button" class="all_gnb_menu">
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="gnb_menu">                    
+                    <li><a href="./휴넷평생교육원.html" target="_blank">HRD아카이브</a></li>
+                    <li><a href="#">나의FLEX</a></li>
+                    <li><a href="#">전체과정</a></li>
+                    <li><a href="#">공통역량</a></li>
+                    <li><a href="#">직무역량</a></li>
+                    <li><a href="#">리더십</a></li>
+                    <li><a href="#">역량진단</a></li>
+                    <li><a href="#">학습지원센터</a></li>
+                </ul>
+                <div class="lnb">
+                    <div class="lnb_menu">
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#"></a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="m_menu_wrap">
+            <div class="m_menu_top">
+                <h1 class="logo">
+                    <img src="./images/learninghub_type01/logo.png" alt="러닝허브">
+                </h1>
+                <a href="#" class="m_close_btn"><span class="ir-text">닫기</span></a>
+            </div>
+            <div class="m_menu_member">
+                <ul>
+                    <li class="m_login">
+                        <a href="#" class="btn_black01 btn_style04">로그인</a>
+                    </li>
+                    <li class="m_join">
+                        <a href="#" class="btn_black02 btn_style04 ml10">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m_menu_bottom">
+                <ul class="m_menu_list">
+                    <li>
+                        <a href="./휴넷평생교육원.html" target="_blank">HRD아카이브</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">나의FLEX</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">전체과정</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">공통역량</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">직무역량</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">리더십</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">역량진단</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">학습지원센터</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="quickMenu">
+            <ul class="quickList">
+                <li>
+                    <a href="">전체과정</a>
+                </li>
+                <li>
+                    <a href="">학습방</a>
+                </li>
+                <li>
+                    <a href="">공지사항</a>
+                </li>
+                <li>
+                    <a href="">1:1 문의</a>
+                </li>
+            </ul>
+            <div class="quickBtn">
+                <button type="button" class="quickClose"><span class="ir-text">퀵메뉴 닫기</span></button>
+                <button type="button" class="quickTop"><span class="ir-text">top 이동</span></button>
+            </div>
+        </div>
+    </header>
+    <main class="main_type01">
+        <div class="quick_menu">
+            <ul class="quick_list">
+                <li>
+                    <a href="#"><p>전체 강좌<span>커리큘럼 보기</span></p></a>
+                </li>
+                <li>
+                    <a href="#"><p>전문가와<span>상담 신청하기</span></p></a>
+                </li>
+                <li>
+                    <a href="#"><p>학습자<span>공지사항 보기</span></p></a>
+                </li>
+                <li>
+                    <a href="#"><p>궁금증해결<span>FAQ 확인하기</span></p></a>
+                </li>
+            </ul>
+            <div class="quick_btn">
+                <button type="button" class="quick_top"><span class="ir-text">top 이동</span></button>
+            </div>
+        </div>
+       <style>
+        .pb-5, .py-5 {
+            padding-bottom: 3rem !important;
+        }
+        .mb-3, .my-3 {
+            margin-bottom: 1rem !important;
+        }
+        h4 {
+            font-size: 23px;
+            font-weight: 600;
+            letter-spacing: -1.01px;
+            color: #111;
+            margin-bottom: 20px;
+        }
+        .table-bordered {
+            border: 1px solid #e1e2e4;
+        }
+        .table-default {
+            width: 100%;
+        }
+        .table-default tr th {
+            padding: 10px;
+            vertical-align: middle;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: -1px;
+        }
+        .table-default thead tr th, .table-default.tbody-th-bg tbody tr th {
+            background: #f4f5f7;
+            font-weight: 600;
+        }
+        .table-default tr td {
+            padding: 10px 0;
+            vertical-align: middle;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: -1px;
+        }
+        .table-default tr td.text-left, .table-default tr td.text-right {
+            padding: 10px 30px;
+        }
+        .table-bordered th, .table-bordered td {
+            vertical-align: middle;
+            line-height: 20px;
+            padding: 1rem 0;
+            font-size: 14px;
+            line-height: 20px;
+            color: #111;
+            border-bottom: 1px solid #e1e2e4;
+        }
+        .line-height24 {
+            line-height: 24px !important;
+        }
+        .text-red {
+            color: #b40000 !important;
+        }
+       </style>
+        <article class="box_item">
+            <div class="innerSection">
+                <div class="mb-5 pb-5">
+                    <h4 class="mb-3">HRD아카이브</h4>
+                    <table class="table table-default tbody-th-bg table-bordered learning-table text-center mt-4 mb-3">
+                        <caption>HRD아카이브 학습진행절차</caption>
+                        <colgroup>
+                            <col width="*">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">HRD아카이브 학습진행절차</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">
+                                    1. 사이트 로그인
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    2. 수강신청<br>
+                                    * 수강신청에 도움이 필요하신 경우, 사전 [역량진단]을 통해서 과정을 추천 받으실 수 있습니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    3. 학습 시작<br>
+                                    수강신청 후 바로 [나의 강의실] -> [학습 목록] 에서 수강 신청한 과정 확인 후, [학습하기] 클릭 -> 본인인증 후 수강
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    4.수강 후 만족도 조사(사후 역량 진단) 참여<br>
+                                    *만족도 조사 기간은 별도 공지 및 안내 드립니다.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mb-5 pb-5">
+                    <h4 class="mb-3">HRD 아카이브 이수 기준</h4>
+                    <p class="line-height24">
+                        ∙ 수강 과정 수 및 차시 수에 관계 없이, 개인당 15시간(900분) 이상, 학습시간을 충족하면 됩니다.<br>
+                        <span class="text-red">(개인별 학습시간은 24시간 기준으로 업데이트 되어, [나의 강의실] -> [학습목록] 메뉴 내 에서 확인하실 수 있습니다.)</span>
+                    </p>
+                </div>
+                <div class="mb-5 pb-5">
+                    <h4 class="mb-3">HRD 아카이브 유의사항</h4>
+                        <p class="line-height24">
+                            * 본 과정은 정부지원훈련 과정으로 모든 학습 활동이 산업인력공단 시스템에 모니터링 됩니다.<br>
+                            * 본인 수강이 원칙이며 수강 시, 1일 1회 본인인증이 필수로 진행 됩니다.<br>
+                            * 정부지원훈련 규정으로 하루에 8시간 이상 수강이 불가능 합니다.<br>
+                            * 과정(차시)별 실제 재생시간(리얼타임) 만큼 학습 해야 진도 완료 및 학습시간으로 인정 됩니다.<br>
+                            * 재생시간(리얼타임) 이상 학습한 접속한 시간, 반복 수강한 시간은 인정되지 않습니다.<br>
+                            * 이미 학습이 완료(진도 완료)가 된 과정에 대해서는 학습시간이 중복 누적되지 않습니다.
+                        </p>
+                </div>               
+            </div>
+        </article>
+    </main>
+    <footer class="footer type01">
+        <div class="innerSection">
+            <div class="footer_wrap">
+                <div class="footer_area">
+                    <div class="f_tit">
+                        <p>학습<br>문의</p>
+                    </div>
+                    <div class="f_info">
+                        <div class="f_tel">
+                            <p>02-0000-0000</p>
+                            <a href="#" class="f_link bg_yellow">카카오톡 상담 바로가기</a>
+                        </div>
+                        <ul class="f_list">
+                            <li>
+                                <p class="list_tit">운영</p>
+                                <p class="list_txt">평일 09:00 ~ 18:00, 점심시간 12:00 ~ 13:00</p>
+                            </li>
+                            <li>
+                                <p class="list_tit">휴무</p>
+                                <p class="list_txt">주말, 공휴일 휴무</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_area">
+                    <div class="f_tit">
+                        <p>원격<br>상담</p>
+                    </div>
+                    <div class="f_info">
+                        <div class="f_tel">
+                            <p>02-0000-0000</p>
+                            <a href="#" class="f_link">원격지원 상담 바로가기</a>
+                        </div>
+                        <ul class="f_list">
+                            <li>
+                                <p class="list_tit">운영</p>
+                                <p class="list_txt">평일 09:00 ~ 18:00, 점심시간 12:00 ~ 13:00</p>
+                            </li>
+                            <li>
+                                <p class="list_tit">휴무</p>
+                                <p class="list_txt">주말, 공휴일 휴무</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(function() {
+            $(".header_gnb.type01 .all_gnb_menu").click(function(event) {
+                event.stopPropagation();
+                $('.header_gnb').toggleClass("open");
+            });
+            $('.header.type01 .m_all_btn .m_menu_btn').click(function () {
+                $('.header .m_menu_wrap').addClass('show');
+                $('body').addClass('not_scroll');
+            });
+            $('.header.type01 .m_menu_wrap .m_menu_bottom .m_menu_list > li > a').click(function () {
+                $(this).parent().toggleClass('active');
+            });
+            
+            $('.header.type01 .m_menu_wrap .m_close_btn').click(function () {
+                $('.header .m_menu_wrap').removeClass('show');
+                $('body').removeClass('not_scroll');
+            });
+            var $quickMenu = $('.header_gnb .quickMenu');
+            $quickMenu.hide();
+            $(window).off("scroll");
+            $(".header_gnb .quickMenu .quickTop").off("click");
+            $(".header_gnb .quickMenu .quickClose").off("click");
+        });
+
+        $(document).ready(function() {       
+            var swiper = new Swiper(".slide_area", {
+                initialSlide: 0,
+                spaceBetween: 20,
+                slidesPerView: 5,
+                autoplay: false,
+                loop: false,
+                observer: true,
+                observeParents: true,
+                breakpoints: {     
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },                
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 5,
+                    }
+                    
+                }
+            });           
+
+            $(".main_type01 .quick_menu .quick_top").click(function() {
+                $('html, body').animate({ scrollTop: 0 }, 400);
+                return false;
+            });
+        });
+        // tabs slide
+        function chgTypeTab(tabCode, itemClass) {
+            var $parent = $("." + itemClass);
+            $parent.find(".cont_tabs > li").removeClass("active");
+            $parent.find(".tabType_" + tabCode).addClass("active");            
+            $parent.find(".tab_content").hide();
+            $parent.find(".tabCont_" + tabCode).show();
+        }
+
+        // circle progress
+        document.addEventListener('DOMContentLoaded', function () {
+            const circles = document.querySelectorAll('.progress-container .progress-circle .progress-bar');
+            const svgNamespace = "http://www.w3.org/2000/svg";
+            const pathD = "M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831";
+
+            circles.forEach(bar => {
+                const progress = bar.getAttribute('data-progress');
+                const svg = document.createElementNS(svgNamespace, "svg");
+                svg.setAttribute("viewBox", "0 0 36 36");
+
+                const createCircle = (className, dasharray, dashoffset) => {
+                    const circle = document.createElementNS(svgNamespace, "path");
+                    circle.setAttribute("class", className);
+                    circle.setAttribute("d", pathD);
+                    if (dasharray) circle.setAttribute("stroke-dasharray", dasharray);
+                    if (dashoffset !== undefined) circle.setAttribute("stroke-dashoffset", dashoffset);
+                    return circle;
+                };
+
+                const circumference = 2 * Math.PI * 15.9155;
+                const offset = circumference - (progress / 100) * circumference;
+
+                svg.appendChild(createCircle("circle_bg"));
+                svg.appendChild(createCircle("circle", `${circumference}`, offset));
+                bar.parentElement.insertBefore(svg, bar);
+            });
+        });
+
+        
+    </script>
+
+</body>
+
+</html>
