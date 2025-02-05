@@ -389,7 +389,7 @@
                 <div class="tab_container">
                     <div class="tab_content active tabCont_001">
                         <div class="slide_wrap">
-                            <div class="slide_list">
+                            <div class="slide_area">
                                 <div class="swiper-wrapper">
                                     <div class="item swiper-slide">
                                         <a href="#">
@@ -482,7 +482,7 @@
                     </div>
                     <div class="tab_content tabCont_002">
                         <div class="slide_wrap">
-                            <div class="slide_list">
+                            <div class="slide_area">
                                 <div class="swiper-wrapper">
                                     <div class="item swiper-slide">
                                         <a href="#">
@@ -575,7 +575,7 @@
                     </div>
                     <div class="tab_content tabCont_003">
                         <div class="slide_wrap">
-                            <div class="slide_list">
+                            <div class="slide_area">
                                 <div class="swiper-wrapper">
                                     <div class="item swiper-slide">
                                         <a href="#">
@@ -678,7 +678,7 @@
                     </div>                    
                 </div>
                 <div class="slide_wrap">
-                    <div class="slide_list">
+                    <div class="slide_area">
                         <div class="swiper-wrapper">
                             <div class="item swiper-slide">
                                 <a href="#">
@@ -781,7 +781,7 @@
                     <p class="tit"><span>학습이력</span>기반 추천</p>                   
                 </div>
                 <div class="slide_wrap">
-                    <div class="slide_list">
+                    <div class="slide_area">
                         <div class="swiper-wrapper">
                             <div class="item swiper-slide">
                                 <a href="#">
@@ -864,7 +864,7 @@
                     <p class="tit">Big Data Question Pick</p>                   
                 </div>
                 <div class="slide_wrap">
-                    <div class="slide_list">
+                    <div class="slide_area">
                         <div class="swiper-wrapper">
                             <div class="item swiper-slide">
                                 <a href="#">
@@ -1004,7 +1004,7 @@
                 <div class="tab_container">
                     <div class="tab_content active tabCont_001">
                         <div class="slide_wrap">
-                            <div class="slide_list">
+                            <div class="slide_area">
                                 <div class="swiper-wrapper">
                                     <div class="item swiper-slide">
                                         <a href="#">
@@ -1082,7 +1082,7 @@
                     </div>
                     <div class="tab_content tabCont_002">
                         <div class="slide_wrap">
-                            <div class="slide_list">
+                            <div class="slide_area">
                                 <div class="swiper-wrapper">
                                     <div class="item swiper-slide">
                                         <a href="#">
@@ -1160,7 +1160,7 @@
                     </div>
                     <div class="tab_content tabCont_003">
                         <div class="slide_wrap">
-                            <div class="slide_list">
+                            <div class="slide_area">
                                 <div class="swiper-wrapper">
                                     <div class="item swiper-slide">
                                         <a href="#">
@@ -1376,7 +1376,7 @@
         });
 
         $(document).ready(function() {       
-            var swiper = new Swiper(".slide_list", {
+            var swiper = new Swiper(".slide_area", {
                 initialSlide: 0,
                 spaceBetween: 20,
                 slidesPerView: 5,
@@ -1384,20 +1384,26 @@
                 loop: false,
                 observer: true,
                 observeParents: true,
-                breakpoints: { 
+                breakpoints: {     
                     1024: {
                         slidesPerView: 4,
-                    },
+                        spaceBetween: 20,
+                    },                
                     768: {
                         slidesPerView: 3,
                         spaceBetween: 10,
                     },
                     640: {
                         slidesPerView: 2,
-                        spaceBetween: 10,
-                    },
+                        spaceBetween: 5,
+                    }
+                    
                 }
             });
+            setTimeout(() => {
+                swiper.update();
+            }, 500);
+
             $(".main_type01 .quick_menu .quick_top").click(function() {
                 $('html, body').animate({ scrollTop: 0 }, 400);
                 return false;
