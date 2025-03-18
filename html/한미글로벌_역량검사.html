@@ -425,23 +425,26 @@
         function createChart2() {
             $("#chart2").kendoChart({
                 legend: {
-                    position: "bottom",
+                    visible: false,
                 },
                 seriesDefaults: {
                     type: "bar",
+                    labels: {
+                        visible: true,
+                        position: "outsideEnd", 
+                        format: "{0}",
+                        template: "점수: #= value #"
+                    }
                 },
                 series: [
                     {
                         name: "팀 A",
                         data: [5, 10, 15, 20, 25]
                     },
-                    {
-                        name: "팀 B",
-                        data: [10, 15, 20, 25, 30]
-                    }
                 ],
                 categoryAxis: {
-                    categories: ["Q1", "Q2", "Q3", "Q4", "Q5"]
+                    categories: ["테스트1", "테스트2", "테스트3", "테스트4", "테스트5"],
+                    majorGridLines: { visible: false },
                 },
                 valueAxis: {
                     max: 50,
