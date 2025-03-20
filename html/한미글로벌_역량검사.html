@@ -122,17 +122,17 @@
                     <div class="chart-item score-group">                        
                         <div class="item-box">
                             <div class="item">
-                                <h3>나의 <span>역량</span> 점수</h3>
+                                <h3>나의 역량 점수</h3>
                                 <div class="score-info">
-                                    <p class="scroe">85.5</p>
-                                    <p class="txt">2025-03-17 진단결과 기준</p>
+                                    <p class="scroe">85.5</p>                                    
                                 </div>
                                 <div class="btn-wrap">
+                                    <p class="txt">2025-03-17 진단결과 기준</p>
                                     <button type="button" class="scroe-btn">재진단하기</button>
                                 </div>
                             </div>
                             <div class="item">
-                                <h3>나의 <span>역량</span> 성장도</h3>
+                                <h3>나의 역량 성장도</h3>
                                 <div id="chart3"></div>
                             </div>
                         </div>
@@ -451,63 +451,105 @@
         function createChart1() {
             var cate = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
             var seriesData = [
-                { name: "테스트", data: [10, 20, 30, 40, 50, 60, 70, 60, 20, 10] },
-                { name: "테스트1", data: [15, 25, 35, 45, 55, 65, 0, 0, 0, 0] }
+                {
+                    name: "테스트",
+                    data: [10, 20, 30, 40, 50, 60, 70, 60, 20, 10],
+                    color: "red",
+                    markers: {
+                        visible: true,
+                        background: "red",
+                        size: 5,
+                        border: {
+                            width: 0
+                        }
+                    }
+                },
+                {
+                    name: "테스트1",
+                    data: [15, 25, 35, 45, 55, 65, 0, 0, 0, 0],
+                    color: "#beb7ff"
+                }
             ];
 
             $("#chart1").kendoChart({
                 theme: "bootstrap",
                 legend: { position: "bottom" },
-                seriesDefaults: { type: "radarArea" },
+                seriesDefaults: { type: "radarLine" },
                 series: seriesData,
-                categoryAxis: { categories: cate },
-                valueAxis: {
-                    max: 100, min: 0,
-                    labels: { format: "{0}" },
-                    line: { visible: false }
-                },
-            });
-        }
-
-
-  
-
-        function createChart2() {
-            var cate = ["내점수", "Pre-CON \n 평균 점수", "직급별 \n 평균 점수", "사업부 \n 평균 점수", "전체 \n 평균 점수"];
-            $("#chart2").kendoChart({
-                legend: {
-                    visible: false,
-                },
-                seriesDefaults: {
-                    type: "column",
-                    labels: {
-                        visible: false,
-                        position: "outsideEnd", 
-                        format: "{0}",
-                    }
-                },
-                series: [
-                    {
-                        data: [30, 10, 15, 20, 30]
-                    },
-                ],
                 categoryAxis: {
                     categories: cate,
-                    majorGridLines: { visible: false },
+                    majorGridLines: { // categoryAxis 그리드 라인 설정
+                        visible: true,
+                        color: "#fff" // 그리드 라인 색상 변경
+                    }
                 },
                 valueAxis: {
                     max: 100,
                     min: 0,
-                    labels: {
-                        visible: false
-                    },
-                    line: {
-                        visible: false 
+                    labels: { format: "{0}" },
+                    majorGridLines: { // valueAxis 그리드 라인 설정
+                        visible: true,
+                        color: "#fff" // 그리드 라인 색상 변경
                     }
-                    
                 },
+                chartArea: {
+                    background: "transparent"
+                }
             });
         }
+
+        function createChart2() {
+            var cate = ["내점수", "Pre-CON \n 평균 점수", "직급별 \n 평균 점수", "사업부 \n 평균 점수", "전체 \n 평균 점수"];
+
+            $("#chart2").kendoChart({
+                legend: { visible: false },
+                seriesDefaults: {
+                    type: "bar",
+                    labels: {
+                        visible: false,
+                        position: "outsideEnd",
+                        format: "{0}"
+                    },
+                    tooltip: {
+                        visible: true,
+                        template: "#= value #"
+                    }
+                },
+                series: [{
+                    data: [
+                        { value: 30, color: "#8f95ff" }, 
+                        { value: 10, color: "#dee0ff", opacity: 0.5 }, 
+                        { value: 15, color: "#dee0ff", opacity: 0.5 }, 
+                        { value: 20, color: "#dee0ff", opacity: 0.5 }, 
+                        { value: 30, color: "#dee0ff", opacity: 0.5 }
+                    ]
+                }],
+                categoryAxis: {
+                    categories: cate,
+                    majorGridLines: { visible: false },
+                    line: {
+                        visible: true,
+                        color: "#000"
+                    }
+                },
+                valueAxis: {
+                    max: 50,
+                    min: 0,
+                    labels: { visible: false },
+                    line: { visible: false },
+                    majorGridLines: { visible: false },
+                    minorGridLines: { visible: false }
+                },
+                chartArea: {
+                    background: "transparent"
+                }
+            });
+        }
+
+
+
+
+
         function createChart3() {
             $("#chart3").kendoChart({
                 dataSource: {
@@ -531,12 +573,14 @@
                 series: [{
                     type: "line",
                     field: "value",
+                    color: "#d490e8", // Sets the line color to red
                     noteTextField: "noteText"
                 }],
                 categoryAxis: {
                     field: "year",
                     line: {
-                        visible: true // Keeps the line for the x-axis visible
+                        visible: true, // Keeps the x-axis line visible
+                        color: "#d490e8"  // Sets the x-axis line color to black
                     },
                     majorGridLines: {
                         visible: false // Hides the grid lines on the x-axis
@@ -545,7 +589,8 @@
                         visible: false // Hides the minor grid lines on the x-axis
                     },
                     labels: {
-                        visible: true // Shows the labels (years) on the x-axis
+                        visible: true,
+                        color: "#d490e8" // Sets the year labels (text) color to black
                     }
                 },
                 valueAxis: {

@@ -10,27 +10,30 @@
 .inspect-wrap .ins-visual .txt { color: #c3c3c3; font-size: 1.4rem; } 
 .inspect-wrap .ins-tip { padding: 2rem; background-color: #eee; border: 2px solid #ddd; border-radius: 10px; text-align: center; } 
 .inspect-wrap .ins-tip .ico-tip { background-color: #064a84; } 
-.inspect-wrap .ins-menu { padding: 2rem; background-color: #fff; border: 2px solid #2892f8; border-radius: 10px; } 
+.inspect-wrap .ins-menu { padding: 2rem; background-color: #d0e8ff; border: 2px solid #2892f8; border-radius: 10px; } 
 .inspect-wrap .ins-menu ul { display: flex; flex-direction: column; gap: 10px; } 
 .inspect-wrap .ins-menu li { display: flex; } 
 .inspect-wrap .ins-menu li + li { margin-top: 1rem; padding-top: 2rem; border-top: 1px solid #ddd; } 
 .inspect-wrap .ins-menu .ins-date { display: flex; align-items: center; gap: 10px; } 
 .inspect-wrap .ins-menu .ins-date strong { display: inline-flex; padding: 0.5rem 2rem; background-color: #2892f8; border-radius: 30px; color: #fff; font-weight: 500; } 
 .inspect-wrap .btn-ins:disabled { opacity: 0.5; } 
-.inspect-wrap .btn-ins { padding: 0.5rem 1.5rem; border: 0; font-size: 1.6rem; border-radius: 5px; } 
-.inspect-wrap .btn-ins.type02 { background-color: #28be91; color: #fff; } 
-.inspect-wrap .btn-ins.type03 { background-color: #f78378; color: #fff; } 
+.inspect-wrap .btn-ins { padding: 0.5rem 1rem; border: 0; font-size: 1.4rem; border-radius: 5px; letter-spacing: -1px;} 
+.inspect-wrap .btn-ins.type02 { background-color: #f4a7a0; color: #fff; } 
+.inspect-wrap .btn-ins.type03 { background-color: #b39b9b; color: #fff; } 
 .inspect-wrap .btn-ins .svg-icon { background-color: #fff; } 
 .inspect-wrap .ins-menu .btn-wrap { margin-left: auto; } 
 .inspect-wrap .ins-menu .btn-ins { background-color: #2892f8; border: 0; color: #fff; } 
-.inspect-wrap .ins-list ul { display: flex; flex-wrap: wrap; gap: 20px; } 
-.inspect-wrap .ins-list li { width: calc(100% / 3 - 14px); border: 1px solid #ddd; border-radius: 10px; overflow: hidden; } 
-.inspect-wrap .ins-list .ins-score { display: flex; align-items: center; justify-content: center; min-height: 15rem; position: relative; background-color: #2993fb; } 
+.inspect-wrap .ins-list ul { display: flex; flex-wrap: wrap; gap: 10px; } 
+.inspect-wrap .ins-list li { width: calc(100% / 4 - 8px); border-radius: 10px; border: 1px solid #eee; overflow: hidden; } 
+.inspect-wrap .ins-list li:nth-child(3n+1) .ins-score {background-image: linear-gradient(135deg, #ffeccf 10%, #ffa8ab 100%);}
+.inspect-wrap .ins-list li:nth-child(3n+2) .ins-score {background-image: linear-gradient(135deg, #ffeccf 20%, #ffa8ab 100%);}
+.inspect-wrap .ins-list li:nth-child(3n+3) .ins-score {background-image: linear-gradient(135deg, #ffeccf 30%, #ffa8ab 100%);}
+.inspect-wrap .ins-list .ins-score { display: flex; align-items: center; justify-content: center; min-height: 15rem; position: relative;  } 
 .inspect-wrap .ins-list .ins-score .date-tag { position: absolute; top: 1rem; left: 1rem; } 
-.inspect-wrap .ins-list .ins-score .date-tag span { padding: 0.2rem 1rem; background-color: #fff; border-radius: 20px; font-size: 1.4rem; font-weight: 500; } 
-.inspect-wrap .ins-list .ins-score .score { color: #fff; font-size: 5rem; font-weight: 700; text-align: center; } 
-.inspect-wrap .ins-list .ins-text { padding: 2rem; } 
-.inspect-wrap .ins-list .ins-text .btn-wrap { display: flex; gap: 10px; margin-top: 2rem; } 
+.inspect-wrap .ins-list .ins-score .date-tag span { padding: 0.2rem 1rem; background-color: #ff9d9d; border-radius: 20px; color: #fff; font-size: 1.4rem; font-weight: 500; } 
+.inspect-wrap .ins-list .ins-score .score { color: #fff; font-size: 6rem; font-weight: 700; text-align: center; } 
+.inspect-wrap .ins-list .ins-text { padding: 1rem; font-size: 1.4rem;} 
+.inspect-wrap .ins-list .ins-text .btn-wrap { display: flex; gap: 4px; margin-top: 2rem; } 
 .inspect-wrap .ins-list .ins-text .btn-wrap button { flex: 1 1 0; } 
 
 /* 자가진단 */
@@ -63,7 +66,7 @@
 .pop-modal .form-group dl dd { width: 100%; } 
 .pop-modal .flex-group { display: flex; gap: 1rem; } 
 .pop-modal .flex-group > * { flex: 1 1 0; } 
-.pop-modal .tip-box { margin-top: 1rem; padding: 2rem; border: 1px solid #ddd; background-color: #eee; border-radius: 10px; color: #464c53; font-weight: 400; } 
+.pop-modal .tip-box { margin-top: 1rem; padding: 2rem; border: 1px solid #ddd; background-color: #eee; border-radius: 10px; color: #464c53; font-weight: 400; text-align: center;} 
 .pop-modal .tip-box .svg-icon { background-color: #064a84; } 
 .pop-modal .line { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #000; } 
 .mla { margin-left: auto; } 
@@ -128,17 +131,20 @@
 .chart-wrap .edu-group .gpmu_list .item a:hover::before { content: none; } 
 .chart-wrap .chart-group { display: flex; flex-direction: column; gap: 2rem; } 
 .chart-wrap .chart-group .chart-list { display: flex; flex-wrap: wrap; gap: 2rem; } 
-.chart-wrap .chart-group .chart-list .item-box:nth-child(1) { flex: 2 1 0; } 
-.chart-wrap .chart-group .chart-list .item-box { flex: 1 1 0; } 
+/* .chart-wrap .chart-group .chart-list .item-box:nth-child(1) { flex: 2 1 0;}  */
+/* .chart-wrap .chart-group .chart-list .item-box { flex: 1 1 0; padding: 1rem; background-image: linear-gradient(135deg, rgba(238, 154, 229, 0.7) 10%, rgba(89, 97, 249, 0.7) 100%); overflow: hidden;}  */
+.chart-wrap .chart-group .chart-list .item-box { flex: 1 1 0; padding: 1rem; background-image: linear-gradient(135deg, rgba(238, 154, 229, 0.7) 10%, rgba(89, 97, 249, 0.7) 100%); overflow: hidden;} 
 .chart-wrap .score-group .item-box { display: flex; gap: 20px; } 
+.chart-wrap .score-group .item-box:nth-child(1) {background-image: linear-gradient(135deg, #EE9AE5 10%, #5961F9 100%);}
+/* .chart-wrap .score-group .item-box:nth-child(1) {background-image: linear-gradient( 135deg, #C2FFD8 10%, #465EFB 100%);} */
 .chart-wrap .score-group .item-box .item { flex: 1 1 0; } 
 .chart-wrap .score-group .item-box .item:nth-child(2) { flex: 2 1 0; } 
-.chart-wrap .score-group .score-info { display: flex; flex-direction: column; justify-content: center; height: 200px; padding: 4rem 2rem 2rem; background-color: #f1f1f1; border-radius: 10px; } 
-.chart-wrap .score-group .score-info .scroe { color: #6262e6; font-size: 6rem; font-weight: 700; text-align: center; } 
+.chart-wrap .score-group h3 {color: #fff;}
+.chart-wrap .score-group .score-info { display: flex; flex-direction: column; justify-content: center; height: 200px; background-color: rgba(255, 255, 255, 0.2);  border-radius: 10px; } 
+.chart-wrap .score-group .score-info .scroe {margin-top: -1rem; color: #fff; font-size: 8rem; font-weight: 700; text-align: center; } 
 .chart-wrap .score-group .score-info .txt { margin-top: auto; font-size: 1.6rem; text-align: right; } 
-.chart-wrap .score-group .btn-wrap { margin-top: 10px; } 
-.chart-wrap .score-group .scroe-btn { width: 100%; padding: 1.5rem 0; background-color: #4c505c; border: 0; border-radius: 10px; color: #fff; font-size: 2rem; } 
-.chart-wrap #chart3 { height: 280px; } 
+.chart-wrap .score-group .btn-wrap {display: flex; gap: 1rem; justify-content: space-between; margin-top: 10px; } 
+.chart-wrap .score-group .scroe-btn {padding: 0.5rem 1rem; background-color: #4c505c; border: 0; border-radius: 10px; color: #fff; font-size: 1.4rem; }  
 .chart-wrap .edu-group .check-wrap .ck-item input[type=checkbox] + label:before { content: none; } 
 .chart-wrap .edu-group .check-wrap .ck-item label { display: inline-flex; padding: 0.5rem 2rem; font-size: 1.6rem; border: 1px solid #e9e9e9; text-align: center; border-radius: 20px; } 
 .chart-wrap .edu-group .check-wrap .ck-item input[type="checkbox"]:checked + label { color: #6262e6; border-color: #6262e6; font-weight: 500; } 
@@ -153,6 +159,9 @@
 .chart-wrap .edu-group .edu-menu ul li { flex: 1 1 0; background-color: #fff; color: #6262e6; font-size: 1.8rem; font-weight: 500; text-align: center; } 
 .chart-wrap .edu-group .edu-menu ul li + li { border-left: 1px solid #6262e6; } 
 .chart-wrap .edu-group .edu-menu ul li a { display: block; padding: 1rem; } 
+.chart-wrap #chart3 { height: 250px; }
+.chart-wrap #chart2 {padding-left: 2rem;}
+
 
 /* 공통 */
 .form-check input[type=radio] ~ label:before, .form-check input[type=radio] ~ label:after, .form-check input[type=checkbox] ~ label:before, 
