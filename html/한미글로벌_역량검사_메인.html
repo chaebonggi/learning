@@ -30,7 +30,7 @@
     <script type="text/javascript" src="https://www.gpmu.co.kr/js/podo.ui/podo.ui.core.js"></script>
     
     <link href="https://kendo.cdn.telerik.com/themes/10.2.0/default/default-main.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="css/hanmi/style02.css">
 
      <script src="js/hanmi/run.js"></script>
 </head>
@@ -114,132 +114,6 @@
             </ul>
         </div>
     </header>
-    <style>
-        .svg-icon {
-            display: inline-flex;
-            width: 2.4rem;
-            height: 2.4rem;
-            margin-top: -0.2rem;
-            background-color: #000;
-            vertical-align: middle;
-            mask-repeat: no-repeat;
-            mask-position: center center;
-            mask-size: contain;
-        }
-        .svg-icon.right {
-            margin-right: 0.5rem;
-        }
-        .svg-icon.left {
-            margin-left: 0.5rem;
-        }
-        .svg-icon.ico-tip {           
-            mask-image: url(./images/hanmi/ico_tip.svg);
-        }
-        .svg-icon.ico-arrow {           
-            mask-image: url(./images/hanmi/ico_arrow.svg);
-        }
-        .inspect-wrap .inspect-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        .inspect-wrap .ins-visual {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 220px;
-            text-align: center;
-            background: url(./images/hanmi/visual_img.png) center no-repeat;
-        }
-        .inspect-wrap .ins-visual h2 {
-            margin-bottom: 1.4rem;
-            color: #fff;
-            font-size: 3.6rem;
-            font-weight: 700;
-        }
-        .inspect-wrap .ins-visual .txt {
-            color: #c3c3c3;
-            font-size: 1.4rem;
-        }
-        .inspect-wrap .ins-tip  {
-            padding: 2rem;
-            background-color: #eee;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .inspect-wrap .ins-tip .ico-tip {
-            background-color: #064a84;
-        }
-        .inspect-wrap .ins-menu {
-            padding: 2rem;
-            background-color: #fff;
-            border: 2px solid #2892f8;
-            border-radius: 10px;
-        }
-        .inspect-wrap .ins-menu ul {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .inspect-wrap .ins-menu li {
-            display: flex;
-        }
-        .inspect-wrap .ins-menu li + li {
-            margin-top: 1rem;
-            padding-top: 2rem;
-            border-top: 1px solid #ddd;
-        }
-        .inspect-wrap .ins-menu .ins-date {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .inspect-wrap .ins-menu .ins-date strong {
-            display: inline-flex;
-            padding: 0.5rem 2rem;
-            background-color: #2892f8;
-            border-radius: 30px;
-            color: #fff;
-            font-weight: 500;
-        }
-        .inspect-wrap .btn-ins:disabled {
-            opacity: 0.5;
-        }
-        .inspect-wrap .btn-ins {
-            padding: 0.5rem 1.5rem;         
-            border: 0;
-            font-size: 1.6rem;
-            border-radius: 5px;
-        }
-        .inspect-wrap .btn-ins.type02 {
-            background-color: #28be91;
-            color: #fff;
-        }
-        .inspect-wrap .btn-ins.type03 {
-            background-color: #f78378;
-            color: #fff;
-        }
-        .inspect-wrap .btn-ins .svg-icon {
-            background-color: #fff;
-        }
-        .inspect-wrap .ins-menu .btn-wrap {
-            margin-left: auto;
-        }
-        .inspect-wrap .ins-menu .btn-ins {
-            background-color: #2892f8;            
-            border: 0;
-            color: #fff;
-        }
-        
-       
-        @media all and (max-width:1024px){ 
-            
-        }
-        
-   
-    </style>
     <article class="inspect-wrap pd_style03">
         <div class="innerSection">
             <div class="inspect-container">
@@ -258,62 +132,12 @@
                                 <p>진단 기간: 2025-03-01 ~ 2025-06-30</p>
                             </div>
                             <div class="btn-wrap">
-                                <button type="button" class="btn-ins">진단하기<i class="svg-icon ico-arrow left"></i></button>
+                                <button type="button" class="btn-ins open-modal" data-target="modal_01">진단하기<i class="svg-icon ico-arrow left"></i></button>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="item ins-list">
-                    <style>
-                        .inspect-wrap .ins-list ul {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 20px;
-                        }
-                        .inspect-wrap .ins-list li {
-                            width: calc(100% / 3 - 14px);
-                            border: 1px solid #ddd;
-                            border-radius: 10px;
-                            overflow: hidden;
-                        }
-                        .inspect-wrap .ins-list .ins-score {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            min-height: 15rem;
-                            position: relative;
-                            background-color: #2993fb;
-                        }
-                        .inspect-wrap .ins-list .ins-score .date-tag {
-                            position: absolute;
-                            top: 1rem;
-                            left: 1rem;
-                        }
-                        .inspect-wrap .ins-list .ins-score .date-tag span {
-                            padding: 0.2rem 1rem;
-                            background-color: #fff;
-                            border-radius: 20px;
-                            font-size: 1.4rem;
-                            font-weight: 500;
-                        }
-                        .inspect-wrap .ins-list .ins-score .score {                            
-                            color: #fff;
-                            font-size: 5rem;
-                            font-weight: 700;
-                            text-align: center;
-                        }
-                        .inspect-wrap .ins-list .ins-text {
-                            padding: 2rem;
-                        }
-                        .inspect-wrap .ins-list .ins-text .btn-wrap {
-                            display: flex;
-                            gap: 10px;
-                            margin-top: 2rem;                            
-                        }
-                        .inspect-wrap .ins-list .ins-text .btn-wrap button {
-                            flex: 1 1 0;
-                        }
-                    </style>
                     <ul>
                         <li>
                             <div class="ins-score">
@@ -380,12 +204,6 @@
             
         </div>
     </article>
-    <script>
-        $(document).ready(function(){
-            
-	    });        
-
-    </script>
 
     <!-- footer -->
     <footer class="footer">
@@ -418,7 +236,426 @@
             </div>
         </div>
     </footer>
+    <section id="modal_01" class="pop-modal" role="dialog" aria-labelledby="tit_modal_01">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- modal title -->
+            <div class="modal-header">
+              <h2 id="tit_modal_01" class="modal-title">기본정보 확인</h2>
+            </div>
+            <!-- //modal title -->
+            <!-- modal contents -->
+            <div class="modal-conts">
+              <div class="conts-area">
+                <div>
+                    <div class="tip-box">
+                        <p><i class="svg-icon ico-tip right"></i>피진단자의 정보를 확인 후 실시해 주세요.</p>
+                    </div>                    
+                    <div class="form-group line">
+                        <dl>
+                            <dt>성명</dt>
+                            <dd>
+                                <input type="text" id="consult_name1" class="basic-input" placeholder="성명" value="홍길동" readonly>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>부서</dt>
+                            <dd>
+                                <div class="flex-group">
+                                    <select class="form-select" title="부서 선택">
+                                        <option value="">부서 선택</option>
+                                    </select>
+                                    <select class="form-select" title="팀 선택">
+                                        <option value="">팀 선택</option>
+                                    </select>
+                                </div>
+                                
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>직급</dt>
+                            <dd>
+                                <select class="form-select" title="직급 선택">
+                                    <option value="">직급 선택</option>
+                                </select>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- //modal contents -->
+            <!-- modal btn -->
+            <div class="modal-btn btn-wrap">
+              <button type="button" class="basic-btn type01 close-modal">취소</button>
+              <button type="button" class="basic-btn open-modal" data-target="modal_02">진단 시작</button>
+            </div>
+            <!-- //modal btn -->
+            <!-- close button -->
+            <button type="button" class="basic-btn btn-close close-modal">
+              <span class="sr-only">닫기</span>
+              <i class="svg-icon ico-popup-close"></i>
+            </button>
+            <!-- //close button -->
+          </div>
+        </div>
+        <div class="modal-back"></div>
+    </section>
+    <section id="modal_02" class="pop-modal full st" role="dialog" aria-labelledby="tit_modal_02">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- modal title -->
+            <div class="modal-header">
+                <div class="bagic-group">
+                    <h2 id="tit_modal_02" class="modal-title">2025년 자가역량진단</h2>
+                    <div class="modal-tag mla">
+                        <ul>
+                            <li>
+                                <span class="m-tag">진단 기간</span>
+                                <p>2025-03-01~2025-06-30</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="state-wrap">
+                    <div class="st-state">
+                        <p><span class="eNum">12</span> / <span class="tNum">79</span></p>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="basic-btn type01 close-modal">닫기</button>
+                        <button type="button" class="basic-btn">임시저장</button>
+                        <button type="button" class="basic-btn type02">진단 완료하기<i class="svg-icon ico-arrow left"></i></button>
+                    </div>
+                </div>            
+            </div>
+            <!-- //modal title -->
+            <!-- modal contents -->
+            <div class="modal-conts">
+              <div class="conts-area">
+                <div class="quest-list">
+                    <ul>
+                        <li class="quest-item">
+                            <span class="circle-area">1</span>
+                            <div class="quest-cont">
+                                <div class="modal-tag mla">
+                                    <ul>
+                                        <li>
+                                            <span class="m-tag">역량</span>
+                                            <p>PM일반</p>
+                                        </li>
+                                        <li>
+                                            <span class="m-tag">측정 항목</span>
+                                            <p>프로젝트 조직구성</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="quest-tit">
+                                    <p>Q. 프로젝트 수행에 필요한 참여자를 파악하고 선정 기준을 마련할 수 있다</p>
+                                </div>
+                                <div class="ans-list">
+                                    <ul>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_1" id="rdo_1-1">
+                                                <label for="rdo_1-1">1. 4번이상 수행경험이 있으며 내용을 잘이해한다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_1" id="rdo_1-2">
+                                                <label for="rdo_1-2">2. 2~3회 수행경험이 있다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_1" id="rdo_1-3">
+                                                <label for="rdo_1-3">3. 일부 혹은 1회 수행경험이 있다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_1" id="rdo_1-4">
+                                                <label for="rdo_1-4">4. 경험은 없으나 자문/지원을 통해 부분적 수행이 가능하다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_1" id="rdo_1-5">
+                                                <label for="rdo_1-5">5. 관련내용을 잘 알지못한다.</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="quest-item">
+                            <span class="circle-area">2</span>
+                            <div class="quest-cont">
+                                <div class="modal-tag mla">
+                                    <ul>
+                                        <li>
+                                            <span class="m-tag">역량</span>
+                                            <p>PM일반</p>
+                                        </li>
+                                        <li>
+                                            <span class="m-tag">측정 항목</span>
+                                            <p>프로젝트 조직구성</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="quest-tit">
+                                    <p>Q. 프로젝트 수행에 필요한 참여자를 파악하고 선정 기준을 마련할 수 있다</p>
+                                </div>
+                                <div class="ans-list">
+                                    <ul>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_2" id="rdo_2-1">
+                                                <label for="rdo_2-1">1. 4번이상 수행경험이 있으며 내용을 잘이해한다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_2" id="rdo_2-2">
+                                                <label for="rdo_2-2">2. 2~3회 수행경험이 있다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_2" id="rdo_2-3">
+                                                <label for="rdo_2-3">3. 일부 혹은 1회 수행경험이 있다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_2" id="rdo_2-4">
+                                                <label for="rdo_2-4">4. 경험은 없으나 자문/지원을 통해 부분적 수행이 가능하다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_2" id="rdo_2-5">
+                                                <label for="rdo_2-5">5. 관련내용을 잘 알지못한다.</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="quest-item">
+                            <span class="circle-area">3</span>
+                            <div class="quest-cont">
+                                <div class="modal-tag mla">
+                                    <ul>
+                                        <li>
+                                            <span class="m-tag">역량</span>
+                                            <p>PM일반</p>
+                                        </li>
+                                        <li>
+                                            <span class="m-tag">측정 항목</span>
+                                            <p>프로젝트 조직구성</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="quest-tit">
+                                    <p>Q. 프로젝트 수행에 필요한 참여자를 파악하고 선정 기준을 마련할 수 있다</p>
+                                </div>
+                                <div class="ans-list">
+                                    <ul>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_3" id="rdo_3-1">
+                                                <label for="rdo_3-1">1. 4번이상 수행경험이 있으며 내용을 잘이해한다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_3" id="rdo_3-2">
+                                                <label for="rdo_3-2">2. 2~3회 수행경험이 있다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_3" id="rdo_3-3">
+                                                <label for="rdo_3-3">3. 일부 혹은 1회 수행경험이 있다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_3" id="rdo_3-4">
+                                                <label for="rdo_3-4">4. 경험은 없으나 자문/지원을 통해 부분적 수행이 가능하다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_3" id="rdo_3-5">
+                                                <label for="rdo_3-5">5. 관련내용을 잘 알지못한다.</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>                        
+                        <li class="quest-item">
+                            <span class="circle-area">4</span>
+                            <div class="quest-cont">
+                                <div class="modal-tag mla">
+                                    <ul>
+                                        <li>
+                                            <span class="m-tag">역량</span>
+                                            <p>PM일반</p>
+                                        </li>
+                                        <li>
+                                            <span class="m-tag">측정 항목</span>
+                                            <p>프로젝트 조직구성</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="quest-tit">
+                                    <p>Q. 프로젝트 수행에 필요한 참여자를 파악하고 선정 기준을 마련할 수 있다</p>
+                                </div>
+                                <div class="ans-list">
+                                    <ul>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_4" id="rdo_4-1">
+                                                <label for="rdo_4-1">1. 4번이상 수행경험이 있으며 내용을 잘이해한다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_4" id="rdo_4-2">
+                                                <label for="rdo_4-2">2. 2~3회 수행경험이 있다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_4" id="rdo_4-3">
+                                                <label for="rdo_4-3">3. 일부 혹은 1회 수행경험이 있다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_4" id="rdo_4-4">
+                                                <label for="rdo_4-4">4. 경험은 없으나 자문/지원을 통해 부분적 수행이 가능하다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_4" id="rdo_4-5">
+                                                <label for="rdo_4-5">5. 관련내용을 잘 알지못한다.</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="quest-item">
+                            <span class="circle-area">5</span>
+                            <div class="quest-cont">
+                                <div class="modal-tag mla">
+                                    <ul>
+                                        <li>
+                                            <span class="m-tag">역량</span>
+                                            <p>PM일반</p>
+                                        </li>
+                                        <li>
+                                            <span class="m-tag">측정 항목</span>
+                                            <p>프로젝트 조직구성</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="quest-tit">
+                                    <p>Q. 프로젝트 수행에 필요한 참여자를 파악하고 선정 기준을 마련할 수 있다</p>
+                                </div>
+                                <div class="ans-list">
+                                    <ul>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_5" id="rdo_5-1">
+                                                <label for="rdo_5-1">1. 4번이상 수행경험이 있으며 내용을 잘이해한다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_5" id="rdo_5-2">
+                                                <label for="rdo_5-2">2. 2~3회 수행경험이 있다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_5" id="rdo_5-3">
+                                                <label for="rdo_5-3">3. 일부 혹은 1회 수행경험이 있다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_5" id="rdo_5-4">
+                                                <label for="rdo_5-4">4. 경험은 없으나 자문/지원을 통해 부분적 수행이 가능하다.</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input type="radio" name="rdo_5" id="rdo_5-5">
+                                                <label for="rdo_5-5">5. 관련내용을 잘 알지못한다.</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+              </div>
+            </div>
+            <!-- //modal contents -->      
+          </div>
+        </div>
+        <div class="modal-back"></div>
+    </section>
+    <script>
+        $(document).ready(function () {
+            // 모달 열기
+            $(".open-modal").on("click", function () {
+                let target = $(this).data("target"); // data-target 값 가져오기
+                let modal = $("#" + target); // 해당 ID를 가진 모달 선택
+                
+                modal.addClass("in"); // 모달 열기
+                modal.find(".modal-back").addClass("in"); // 배경 활성화
+                $("body").addClass("scroll-no"); // 스크롤 방지
+            });
 
+            // 모달 닫기
+            $(".close-modal").on("click", function () {
+                let modal = $(this).closest(".pop-modal"); // 현재 모달 찾기
+
+                modal.removeClass("in"); // 모달 닫기
+                modal.find(".modal-back").removeClass("in"); // 배경 비활성화
+
+                // 모든 모달이 닫혔을 경우 body에서 scroll-no 제거
+                if ($(".pop-modal.in").length === 0) {
+                    $("body").removeClass("scroll-no");
+                }
+            });
+
+            $('.pop-modal.st .form-check input[type="radio"]').on('change', function() {
+                var $currentQuestItem = $(this).closest('.quest-item'); // 현재 문제
+                var $nextQuestItem = $currentQuestItem.next('.quest-item'); // 다음 문제
+
+                if ($nextQuestItem.length > 0) {
+                    $('.modal-conts').animate({
+                        scrollTop: $nextQuestItem.position().top
+                    }, 500);
+                }
+            });
+
+            
+
+        });
+
+    </script>
 </body>
 
 </html>
