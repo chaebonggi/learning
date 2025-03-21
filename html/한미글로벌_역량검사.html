@@ -452,20 +452,20 @@
             var cate = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
             var seriesData = [
                 {
-                    name: "테스트",
-                    data: [10, 20, 30, 40, 50, 60, 70, 60, 20, 10],
+                    name: "개인 성취도",
+                    data: [70, 80, 60, 40, 50, 60, 70, 60, 60, 50],
                     color: "red",
                     markers: {
                         visible: true,
-                        background: "red",
-                        size: 5,
+                        background: "#fff",
+                        size: 8,
                         border: {
-                            width: 0
+                            width: 2
                         }
                     }
                 },
                 {
-                    name: "테스트1",
+                    name: "응시자 평균 성취도",
                     data: [15, 25, 35, 45, 55, 65, 0, 0, 0, 0],
                     color: "#beb7ff"
                 }
@@ -484,12 +484,13 @@
                     }
                 },
                 valueAxis: {
+                    visible: false,
                     max: 100,
                     min: 0,
                     labels: { format: "{0}" },
-                    majorGridLines: { // valueAxis 그리드 라인 설정
+                    majorGridLines: { 
                         visible: true,
-                        color: "#fff" // 그리드 라인 색상 변경
+                        color: "#fff" 
                     }
                 },
                 chartArea: {
