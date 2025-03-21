@@ -3,7 +3,7 @@
 .svg-icon.left { margin-left: 0.5rem; } 
 .svg-icon.ico-tip { mask-image: url(../../images/hanmi/ico_tip.svg); } 
 .svg-icon.ico-arrow { mask-image: url(../../images/hanmi/ico_arrow.svg); } 
-.svg-icon.ico-popup-close { mask-image: url(../../images/hanmi/ico_close.svg); } 
+.svg-icon.ico-popup-close { mask-image: url(../../images/hanmi/ico_close.svg); background-color: #000 !important; } 
 .inspect-wrap .inspect-container { display: flex; flex-direction: column; gap: 2rem; } 
 .inspect-wrap .ins-visual { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 220px; text-align: center; background: url(../../images/hanmi/visual_img.png) center no-repeat; } 
 .inspect-wrap .ins-visual h2 { margin-bottom: 1.4rem; color: #fff; font-size: 3.6rem; font-weight: 700; } 
