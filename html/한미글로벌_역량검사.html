@@ -142,9 +142,16 @@
                             <div class="item-box">
                                 <div id="chart1"></div>
                             </div>
-                            <div class="item-box">
-                                <div id="chart2"></div>
+                            <div class="item-group">
+                                <div class="item-box">
+                                    <div id="chart2"></div>
+                                </div>
+                                <div class="item-box">
+                                    <div id="chart4"></div>
+                                    <p class="c-txt">* 프리콘 평균 점수 : 질문 항목 중 프리콘에 해당하는 항목만 선별</p>
+                                </div>
                             </div>
+                            
                         </div>                       
                     </div>                    
                     <div class="chart-item edu-group">
@@ -457,10 +464,10 @@
                     color: "red",
                     markers: {
                         visible: true,
-                        background: "#fff",
+                        background: "red",
                         size: 8,
                         border: {
-                            width: 2
+                            width: 0
                         }
                     }
                 },
@@ -470,10 +477,10 @@
                     color: "#b1e3fb",
                     markers: {
                         visible: true,
-                        background: "#fff",
+                        background: "#b1e3fb",
                         size: 8,
                         border: {
-                            width: 2
+                            width: 0
                         }
                     }
                 }
@@ -486,9 +493,10 @@
                 series: seriesData,
                 categoryAxis: {
                     categories: cate,
+                    startAngle: 0,
                     majorGridLines: { // categoryAxis 그리드 라인 설정
                         visible: true,
-                        color: "#fff" // 그리드 라인 색상 변경
+                        color: "#ddd" // 그리드 라인 색상 변경
                     }
                 },
                 valueAxis: {
@@ -498,7 +506,7 @@
                     labels: { format: "{0}" },
                     majorGridLines: { 
                         visible: true,
-                        color: "#fff" 
+                        color: "#ddd" 
                     }
                 },
                 chartArea: {
@@ -508,31 +516,33 @@
         }
 
         function createChart2() {
-            var cate = ["내점수", "Pre-CON \n 평균 점수", "직급별 \n 평균 점수", "사업부 \n 평균 점수", "전체 \n 평균 점수"];
+            var cate = ["전체", "직급별", "사업부"];
 
             $("#chart2").kendoChart({
-                legend: { visible: false },
+                legend: {
+                    position: "top",
+                    align: "end"
+                },
                 seriesDefaults: {
                     type: "bar",
                     labels: {
-                        visible: false,
-                        position: "outsideEnd",
-                        format: "{0}"
-                    },
-                    tooltip: {
                         visible: true,
-                        template: "#= value #"
+                        position: "outsideEnd", 
+                        format: "{0}점"
                     }
                 },
-                series: [{
-                    data: [
-                        { value: 30, color: "#8f95ff" }, 
-                        { value: 10, color: "#dee0ff", opacity: 0.5 }, 
-                        { value: 15, color: "#dee0ff", opacity: 0.5 }, 
-                        { value: 20, color: "#dee0ff", opacity: 0.5 }, 
-                        { value: 30, color: "#dee0ff", opacity: 0.5 }
-                    ]
-                }],
+                series: [
+                    {
+                        name: "내 점수",
+                        data: [30, 30, 35],
+                        color: "#8f95ff"
+                    },
+                    {
+                        name: "항목별 평균 점수",
+                        data: [30, 15, 20],
+                        color: "#dee0ff"
+                    }
+                ],
                 categoryAxis: {
                     categories: cate,
                     majorGridLines: { visible: false },
@@ -555,7 +565,55 @@
             });
         }
 
+        function createChart4() {
+    var cate = ["프리콘"];
 
+    $("#chart4").kendoChart({
+        legend: {
+            visible: false
+        },
+        seriesDefaults: {
+            type: "bar",
+            spacing: 0.8, // 막대 간격 조절 (0.8은 얇게 만듦)
+            labels: {
+                visible: true,
+                position: "outsideEnd",
+                format: "{0}점"
+            }
+        },
+        series: [
+            {
+                name: "내 점수",
+                data: [30],
+                color: "#8f95ff"
+            },
+            {
+                name: "프리콘",
+                data: [20],
+                color: "#dee0ff"
+            }
+        ],
+        categoryAxis: {
+            categories: cate,
+            majorGridLines: { visible: false },
+            line: {
+                visible: true,
+                color: "#000"
+            }
+        },
+        valueAxis: {
+            max: 50,
+            min: 0,
+            labels: { visible: false },
+            line: { visible: false },
+            majorGridLines: { visible: false },
+            minorGridLines: { visible: false }
+        },
+        chartArea: {
+            background: "transparent"
+        }
+    });
+}
 
 
 
@@ -582,14 +640,14 @@
                 series: [{
                     type: "line",
                     field: "value",
-                    color: "#d490e8", // Sets the line color to red
+                    color: "#0071b9", // Sets the line color to red
                     noteTextField: "noteText"
                 }],
                 categoryAxis: {
                     field: "year",
                     line: {
                         visible: true, // Keeps the x-axis line visible
-                        color: "#d490e8"  // Sets the x-axis line color to black
+                        color: "#0071b9 "  // Sets the x-axis line color to black
                     },
                     majorGridLines: {
                         visible: false // Hides the grid lines on the x-axis
@@ -599,7 +657,7 @@
                     },
                     labels: {
                         visible: true,
-                        color: "#d490e8" // Sets the year labels (text) color to black
+                        color: "#aadeff " // Sets the year labels (text) color to black
                     }
                 },
                 valueAxis: {
@@ -629,12 +687,14 @@
             createChart1();
             createChart2();
             createChart3();
+            createChart4();
         });
 
         $(document).bind("kendo:skinChange", function () {
             createChart1();
             createChart2();
             createChart3();
+            createChart4();
         });
 
     </script>
