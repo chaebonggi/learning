@@ -192,10 +192,6 @@
                             </div>
                             <div class="ins-text">
                                 <p>진단 이력이 존재하지 않습니다.</p>
-                                <!-- <div class="btn-wrap">
-                                    <button type="button" class="btn-ins">상세 결과보기<i class="svg-icon ico-arrow left"></i></button>
-                                    <button type="button" class="btn-ins">재진단하기<i class="svg-icon ico-arrow left"></i></button>
-                                </div> -->
                             </div>
                         </li>
                     </ul>
@@ -345,56 +341,6 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <style>
-                                    .tct {text-align: center;}
-                                    .table-wrap table {
-                                        border-collapse: collapse;
-                                        border-radius: 1rem;
-                                        border-style: hidden;
-                                        box-shadow: 0 0 0 1px #eee;
-                                    }
-                                    .table-wrap table thead th:first-child {
-                                        border-radius: 1rem 0 0 0;
-                                    }
-                                    .table-wrap table thead th:last-child {
-                                        border-radius: 0 1rem 0 0;
-                                    }
-                                    .table-wrap table th, .table-wrap table td {
-                                        padding: 1rem;
-                                        font-size: 1.4rem;
-                                        vertical-align: middle;
-                                        letter-spacing: -1px;
-                                    }
-                                    .table-wrap table thead th {
-                                        background-color: #eff4ff;
-                                        border: 1px solid #eee;
-                                        font-weight: 500;
-                                    }
-                                    .table-wrap table tbody td {
-                                        border: 1px solid #eee;
-                                        font-weight: 400;
-                                        
-                                    }
-                                    .table-wrap table .form-check {text-align: center;}
-                                    .table-wrap table .tit {
-                                        position: relative;
-                                        padding-left: 2.2rem;
-                                        color: #555555;
-                                    }
-                                    .table-wrap table .tit .number {
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        width: 1.8rem;
-                                        height: 1.8rem;
-                                        position: absolute;
-                                        left: 0;
-                                        background-color: #b9b9b9;
-                                        color: #fff;
-                                        font-size: 1rem;
-                                        border-radius: 50%;
-                                    }
-                                </style>
                                 <div class="ans-list">
                                     <div class="table-wrap">
                                         <table>
@@ -770,17 +716,269 @@
                 }
             });
 
-            $('.pop-modal.st .form-check input[type="radio"]').on('change', function() {
-                var $currentQuestItem = $(this).closest('.quest-item'); // 현재 문제
-                var $nextQuestItem = $currentQuestItem.next('.quest-item'); // 다음 문제
-
-                if ($nextQuestItem.length > 0) {
-                    $('.modal-conts').animate({
-                        scrollTop: $nextQuestItem.position().top
-                    }, 500);
+            // 맞춤 추천 교육 더보기
+            var totalItems = $(".chart-wrap .edu-group .gpmu_list .item").length;
+                if (totalItems > 4) {
+                    $(".chart-wrap .edu-group .btn-wrap").show();
                 }
+
+                $(".chart-wrap .edu-group .gpmu_list .item").slice(0, 4).show(); 
+                $(".chart-wrap .edu-group .btn-more").click(function() {
+                    $(".chart-wrap .edu-group .gpmu_list .item:hidden").slice(0, 4).show(); 
+                    if ($(".chart-wrap .edu-group .gpmu_list .item:hidden").length == 0) {
+                        $('.chart-wrap .edu-group .btn-wrap').hide(); 
+                    }
+            });	
+            // 맞춤 추천 교육 탭메뉴
+            $(".edu-menu li a").click(function () {
+                $(this).parent().siblings("li").removeClass("active");
+                $(this).parent().addClass("active");
             });
 
+            // 차트 관련
+            function radarchart01() {
+                var cate = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+                var seriesData = [
+                    {
+                        name: "개인 성취도",
+                        data: [70, 80, 60, 40, 50, 60, 70, 60, 60, 50],
+                        color: "red",
+                        markers: {
+                            visible: true,
+                            background: "red",
+                            size: 5,
+                            border: {
+                                width: 0
+                            }
+                        }
+                    },
+                    {
+                        name: "응시자 평균 성취도",
+                        data: [50, 44, 35, 45, 55, 65, 55, 22, 33, 66],
+                        color: "#b1e3fb",
+                        markers: {
+                            visible: true,
+                            background: "#b1e3fb",
+                            size: 5,
+                            border: {
+                                width: 0
+                            }
+                        }
+                    }
+                ];
+
+                $("#radarchart01").kendoChart({
+                    theme: "bootstrap",
+                    legend: { position: "bottom" },
+                    seriesDefaults: { type: "radarArea" },
+                    series: seriesData,
+                    categoryAxis: {
+                        categories: cate,
+                        startAngle: 0,
+                        majorGridLines: { // categoryAxis 그리드 라인 설정
+                            visible: true,
+                            color: "#ddd" // 그리드 라인 색상 변경
+                        }
+                    },
+                    valueAxis: {
+                        visible: false,
+                        max: 100,
+                        min: 0,
+                        labels: { format: "{0}" },
+                        majorGridLines: { 
+                            visible: true,
+                            color: "#ddd" 
+                        }
+                    },
+                    chartArea: {
+                        background: "transparent"
+                    }
+                });
+            }
+
+            function barchart01() {
+                var cate = ["전체", "직급별", "사업부"];
+
+                $("#barchart01").kendoChart({
+                    legend: {
+                        position: "top",
+                        align: "end"
+                    },
+                    seriesDefaults: {
+                        type: "bar",
+                        overlay: null,
+                        labels: {
+                            visible: true,
+                            position: "outsideEnd",
+                            format: "{0}점"
+                        },
+                        border: {
+                            width: 0
+                        },
+                        dropShadow: false
+                    },
+                    series: [
+                        {
+                            name: "내 점수",
+                            data: [30, 30, 35],
+                            color: "#8f95ff"
+                        },
+                        {
+                            name: "항목별 평균 점수",
+                            data: [30, 15, 20],
+                            color: "#dee0ff" // 단일 색상 지정
+                        }
+                    ],
+                    categoryAxis: {
+                        categories: cate,
+                        majorGridLines: { visible: false },
+                        line: {
+                            visible: true,
+                            color: "#000"
+                        }
+                    },
+                    valueAxis: {
+                        max: 50,
+                        min: 0,
+                        labels: { visible: false },
+                        line: { visible: false },
+                        majorGridLines: { visible: false },
+                        minorGridLines: { visible: false }
+                    },
+                    chartArea: {
+                        background: "transparent"
+                    }
+                });
+            }
+
+            function barchart02() {
+                var cate = ["프리콘"];
+
+                $("#barchart02").kendoChart({
+                    legend: {
+                        visible: false
+                    },
+                    seriesDefaults: {
+                        type: "bar",
+                        overlay: null,
+                        labels: {
+                            visible: true,
+                            position: "outsideEnd",
+                            format: "{0}점"
+                        },
+                        border: {
+                            width: 0
+                        },
+                        dropShadow: false
+                    },
+                    series: [
+                        {
+                            name: "내 점수",
+                            data: [30],
+                            color: "#8f95ff"
+                        },
+                        {
+                            name: "프리콘",
+                            data: [20],
+                            color: "#dee0ff"
+                        }
+                    ],
+                    categoryAxis: {
+                        categories: cate,
+                        majorGridLines: { visible: false },
+                        line: {
+                            visible: true,
+                            color: "#000"
+                        }
+                    },
+                    valueAxis: {
+                        max: 50,
+                        min: 0,
+                        labels: { visible: false },
+                        line: { visible: false },
+                        majorGridLines: { visible: false },
+                        minorGridLines: { visible: false }
+                    },
+                    chartArea: {
+                        background: "transparent"
+                    }
+                });
+            }
+
+            function linechart01() {
+                $("#linechart01").kendoChart({
+                    dataSource: {
+                        data: [{
+                            value: 1,
+                            year: 2020
+                        }, {
+                            value: 2,
+                            year: 2021
+                        }, {
+                            value: 3,
+                            year: 2022
+                        }, {
+                            value: 2,
+                            year: 2023
+                        }, {
+                            value: 3,
+                            year: 2024
+                        }]
+                    },
+                    series: [{
+                        type: "line",
+                        field: "value",
+                        color: "#0071b9",
+                        noteTextField: "noteText"
+                    }],
+                    categoryAxis: {
+                        field: "year",
+                        line: {
+                            visible: true,
+                            color: "#0071b9"
+                        },
+                        majorGridLines: {
+                            visible: false
+                        },
+                        minorGridLines: {
+                            visible: false
+                        },
+                        labels: {
+                            visible: true,
+                            color: "#aadeff"
+                        }
+                    },
+                    valueAxis: {
+                        labels: {
+                            visible: false
+                        },
+                        line: {
+                            visible: false
+                        },
+                        majorGridLines: {
+                            visible: false
+                        },
+                        minorGridLines: {
+                            visible: false
+                        }
+                    },
+                    chartArea: {
+                        background: 'transparent'
+                    }
+                });
+            }
+
+            radarchart01();
+            barchart01();
+            barchart02();
+            linechart01();
+
+            $(document).bind("kendo:skinChange", function () {
+                radarchart01();
+                barchart01();
+                barchart02();
+                linechart01();
+            });
             
 
         });
