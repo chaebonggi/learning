@@ -20,8 +20,8 @@
 .inspect-wrap .ins-menu .ins-date strong { display: inline-flex; padding: 0.5rem 2rem; background-color: #2892f8; border-radius: 30px; color: #fff; font-weight: 500; } 
 .inspect-wrap .btn-ins:disabled { opacity: 0.5; } 
 .inspect-wrap .btn-ins { padding: 0.5rem 1rem; border: 0; font-size: 1.4rem; border-radius: 5px; letter-spacing: -1px; } 
-.inspect-wrap .btn-ins.type02 { background-color: #b3bbfc; color: #fff; } 
-.inspect-wrap .btn-ins.type03 { background-color: #fbb8b8; color: #fff; } 
+.inspect-wrap .btn-ins.type02 { background-color: #62678f; color: #fff; } 
+.inspect-wrap .btn-ins.type03 { background-color: #996565; color: #fff; } 
 .inspect-wrap .btn-ins .svg-icon { background-color: #fff; } 
 .inspect-wrap .ins-menu .btn-wrap { margin-left: auto; } 
 .inspect-wrap .ins-menu .btn-ins { background-color: #2892f8; border: 0; color: #fff; } 
@@ -32,7 +32,7 @@
 .inspect-wrap .ins-list li:nth-child(3n+3) .ins-score { background-color: #f5e6fd; } 
 .inspect-wrap .ins-list .ins-score { display: flex; align-items: center; justify-content: center; min-height: 15rem; position: relative; } 
 .inspect-wrap .ins-list .ins-score .date-tag { position: absolute; top: 1rem; left: 1rem; } 
-.inspect-wrap .ins-list .ins-score .date-tag span { padding: 0.2rem 1rem; background-color: #b3bbfc; border-radius: 20px; color: #fff; font-size: 1.4rem; font-weight: 500; } 
+.inspect-wrap .ins-list .ins-score .date-tag span { padding: 0.2rem 1rem; background-color: #47768d; border-radius: 20px; color: #fff; font-size: 1.4rem; font-weight: 500; } 
 .inspect-wrap .ins-list .ins-score .score { color: #656565; font-size: 6rem; font-weight: 700; text-align: center; } 
 .inspect-wrap .ins-list .ins-text { padding: 1rem; font-size: 1.4rem; } 
 .inspect-wrap .ins-list .ins-text .btn-wrap { display: flex; gap: 4px; margin-top: 2rem; } 
