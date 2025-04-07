@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브 사용자</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/front/front/common.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/front/00001/00001.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/chosen.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/excel-bootstrap-table-filter-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css" />
+
+
+    <script src="./js/front/yepnope/1.5.4/yepnope.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/front/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+    <script src="./js/front/front/jquery.mCustomScrollbar.js"></script>
+    <script src="./js/front/front/imgLiquid/0.9.944/imgLiquid-min.js"
+        integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/front/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
+    <script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
+    <script src="./js/front/chosen.jquery.min.js"></script>
+    <!-- <script src="./js/front/front/run.js"></script> -->
+    <script src="./js/learninghub/run.js"></script>
+    <script src="./js/front/file/forms.js"></script>
+    <script src="./js/front/solution/solution_ui.js"></script>
+    <script src="./js/front/solution/custome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <header class="header header_gnb">
+        <div class="gnb_util">
+            <div class="innerSection">
+                <div class="util_menu">
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">강사지원</a></li>
+                        <li><a href="#">HRDHREX</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="innerSection">
+            <div class="header_top">
+                <h1 class="logo"><a href=""><img src="./images/learninghub/logo.png" alt="러닝허브 로고"></a></h1>
+                <div class="m_all_btn">
+                    <button type="button" class="m_menu_btn">
+                        <span></span>
+                    </button>
+                </div>
+                <div class="seach_area">
+                    <div class="input_wrap h_search">
+                        <input type="text" placeholder="검색어를 입력하세요." id="searchTextPc" name="searchTextPc">
+                        <button type="button">검색</button>
+                    </div>
+                </div>
+            </div>
+            <nav class="gnb">
+                <div class="gnb_btn">
+                    <button type="button" class="all_gnb_menu">
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="gnb_menu">
+                    <li><a href="#">AI맞춤학습</a></li>
+                    <li><a href="#">전체과정</a></li>
+                    <li><a href="#">마이크로러닝</a></li>
+                    <li><a href="#">지식센터</a></li>
+                    <li><a href="#">역량진단</a></li>
+                    <li><a href="#">나의강의실</a></li>
+                    <li><a href="#">학습지원센터</a></li>
+                </ul>
+                <div class="lnb">
+                    <div class="lnb_menu">
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">큐레이션 추천과정</a></li>
+                                <li><a href="#">역량기반 맞춤과정</a></li>
+                                <li><a href="#">역량진단 기반과정</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">공통역량</a></li>
+                                <li><a href="#">직무역량</a></li>
+                                <li><a href="#">리더십역량</a></li>
+                                <li><a href="#">외국어</a></li>
+                                <li><a href="#">자격</a></li>
+                                <li><a href="#">인문교양</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">공통과정</a></li>
+                                <li><a href="#">공통역량</a></li>
+                                <li><a href="#">직무역량</a></li>
+                                <li><a href="#">리더십역량</a></li>
+                                <li><a href="#">외국어</a></li>
+                                <li><a href="#">자격</a></li>
+                                <li><a href="#">인문교양</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">지식센터</a></li>
+                                <li><a href="#">러닝캐스트</a></li>
+                                <li><a href="#">지식캐스트</a></li>
+                                <li><a href="#">직립보행/나취취</a></li>
+                                <li><a href="#">지식창고</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">자가진단</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">나의 강의실</a></li>
+                                <li><a href="#">수강신청현황</a></li>
+                                <li><a href="#">학습이력현황</a></li>
+                                <li><a href="#">마일리지 조회</a></li>
+                                <li><a href="#">개인정보수정</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">학습지원센터</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주하는질문</a></li>
+                                <li><a href="#">묻고답하기</a></li>
+                                <li><a href="#">원격지원</a></li>
+                                <li><a href="#">학습방법안내</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="m_menu_wrap">
+            <div class="m_menu_top">
+                <h1 class="logo">
+                    <img src="./images/learninghub/logo.png" alt="러닝허브">
+                </h1>
+                <a href="#" class="m_close_btn"><span class="ir-text">닫기</span></a>
+            </div>
+            <div class="m_menu_member">
+                <ul>
+                    <li class="m_login">
+                        <a href="#" class="btn_black01 btn_style04">로그인</a>
+                    </li>
+                    <li class="m_join">
+                        <a href="#" class="btn_black02 btn_style04 ml10">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m_menu_bottom">
+                <ul class="m_menu_list">
+                    <li>
+                        <a href="javascript:void(0);">AI맞춤학습</a>
+                        <ul>
+                            <li><a href="#">큐레이션 추천과정</a></li>
+                            <li><a href="#">역량기반 맞춤과정</a></li>
+                            <li><a href="#">역량진단 기반과정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">전체과정</a>
+                        <ul>
+                            <li><a href="#">공통역량</a></li>
+                            <li><a href="#">직무역량</a></li>
+                            <li><a href="#">리더십역량</a></li>
+                            <li><a href="#">외국어</a></li>
+                            <li><a href="#">자격</a></li>
+                            <li><a href="#">인문교약</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">마이크로러닝</a>
+                        <ul>
+                            <li><a href="#">공통과정</a></li>
+                            <li><a href="#">공통역량</a></li>
+                            <li><a href="#">직무역량</a></li>
+                            <li><a href="#">리더십역량</a></li>
+                            <li><a href="#">외국어</a></li>
+                            <li><a href="#">자격</a></li>
+                            <li><a href="#">인문교양</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">지식센터</a>
+                        <ul>
+                            <li><a href="#">지식센터</a></li>
+                            <li><a href="#">러닝캐스트</a></li>
+                            <li><a href="#">지식캐스트</a></li>
+                            <li><a href="#">직립보행/나취취</a></li>
+                            <li><a href="#">지식창고</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">역량진단</a>
+                        <ul>
+                            <li><a href="#">자가진단</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">나의강의실</a>
+                        <ul>
+                            <li><a href="#">나의 강의실</a></li>
+                            <li><a href="#">수강신청현황</a></li>
+                            <li><a href="#">학습이력현황</a></li>
+                            <li><a href="#">마일리지 조회</a></li>
+                            <li><a href="#">개인정보수정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">학습지원센터</a>
+                        <ul>
+                            <li><a href="#">학습지원센터</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주하는질문</a></li>
+                            <li><a href="#">묻고답하기</a></li>
+                            <li><a href="#">원격지원</a></li>
+                            <li><a href="#">학습방법안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="quickMenu">
+            <ul class="quickList">
+                <li>
+                    <a href="">전체과정</a>
+                </li>
+                <li>
+                    <a href="">학습방</a>
+                </li>
+                <li>
+                    <a href="">공지사항</a>
+                </li>
+                <li>
+                    <a href="">1:1 문의</a>
+                </li>
+            </ul>
+            <div class="quickBtn">
+                <button type="button" class="quickClose"><span class="ir-text">퀵메뉴 닫기</span></button>
+                <button type="button" class="quickTop"><span class="ir-text">top 이동</span></button>
+            </div>
+        </div>
+    </header>
+    <main class="main_wrap">
+        <article class="main_visual">
+            <div class="main_visual_swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-color:#fa5345;">
+                        <a href="#" title="랜선  클래스 수강신청 바로가기"><img src="./images/learninghub/main_img01.png" /></a>
+                    </div>
+                    <div class="swiper-slide" style="background-color:#5245fa;">
+                        <a href="#" title="랜선  클래스 수강신청 바로가기"><img src="./images/learninghub/main_img02.png" /></a>
+                    </div>
+                    <div class="swiper-slide" style="background-color:#fab845;">
+                        <a href="#" title="랜선  클래스 수강신청 바로가기"><img src="./images/learninghub/main_img03.png" /></a>
+                    </div>
+                </div>
+                <div class="swiper-control">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-navigation">
+                        <button class="swiper-button-prev"><span class="ir-text">left slide 이동</span></button>
+                        <button class="swiper-button-next"><span class="ir-text">right slide 이동</span></button>
+                        <button class="swiper-button-pause"><span class="ir-text">정지</span></button>
+                        <button class="swiper-button-resume"><span class="ir-text">플레이</span></button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <div class="recommend_cont clist_slide">
+                <div class="innerSection pd_style02">
+                    <div class="slide_wrap">
+                        <div class="cont_wrap">
+                            <p class="c_tit">AI 맞춤학습<br> <span>추천 과정</span></p>
+                            <button type="button" onclick="openModal('setUp')">관심설정</button>
+                            <p class="c_txt">이용자의 학습이력을 기반으로<br>
+                                맞춤형학습과정을<br>
+                                추천해 드립니다.</p>
+                            <div class="slide_btn">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <div class="con_list">
+                            <div class="swiper-wrapper">
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item bg_gray">
+            <div class="curation_cont clist_slide">
+                <div class="innerSection pd_style02">
+                    <div class="slide_wrap">
+                        <div class="cont_wrap">
+                            <p class="c_tit">직무별<br> <span>큐레이션 과정</span></p>
+                            <p class="c_txt">직무별 업무 SKILL을<br>
+                                고려하여 큐레이션된<br>
+                                과정을 추천</p>
+                            <div class="slide_btn">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <div class="con_list">
+                            <div class="swiper-wrapper">
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <div class="hot_trend clist_slide">
+                <div class="innerSection pd_style01">
+                    <div class="tit_wrap">
+                        <h3 class="p_tit">오늘의 HOT 트렌드 과정</h3>
+                        <p>지금 학습자들에게 가장 많은 관심을 받고 있는 과정을 추천해 드립니다.</p>
+                    </div>
+
+                    <div class="tab_container">
+                        <ul class="cont_tabs">
+                            <li class="active" id="alwStdType_001">
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('001');">#경영</a>
+                            </li>
+                            <li id="alwStdType_002">
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('002');">#마케팅/홍보</a>
+                            </li>
+                            <li id="alwStdType_003">
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('003');">#생산/품질관리</a>
+                            </li>
+                            <li id="alwStdType_004">
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('004');">#영업판매</a>
+                            </li>
+                            <li id="alwStdType_005">
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('005');">#인공지능</a>
+                            </li>
+                            <li id="alwStdType_006">
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('006');">#일반사무</a>
+                            </li>
+                            <li id="alwStdType_007">
+                                <a href="javascript:void(0);" onclick="chgAlwStdTypeTab('007');">#회계</a>
+                            </li>
+                        </ul>
+                        <div class="tab_content active" id="tabCont_001">
+                            <div class="slide_wrap">
+                                <div class="con_list">
+                                    <div class="swiper-wrapper">
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <div class="tab_content" id="tabCont_002">
+                            <div class="slide_wrap">
+                                <div class="con_list">
+                                    <div class="swiper-wrapper">
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img02.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img02.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img02.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img02.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <a href="#">
+                                                <div class="img_wrap">
+                                                    <img src="./images/learninghub/list02_img02.png" alt="포토샵 정복하기">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <div class="tab_content" id="tabCont_003">
+                            <div class="slide_wrap">
+                                tab_con03
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <div class="popular_cont clist_slide pd_style02">
+                <div class="innerSection">
+                    <div class="tit_wrap">
+                        <h3 class="p_tit"><span>인기과정</span> 미리보기</h3>
+                        <p>어제 가장 인기 있었던 과정을 추천해 드립니다.</p>
+                    </div>
+                    <div class="slide_wrap">
+                        <div class="con_list">
+                            <div class="swiper-wrapper">
+                                <div class="item swiper-slide">
+                                    <a href="">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/popular_img01.png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/popular_img01.png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/popular_img01.png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/popular_img01.png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+        </article>
+        <article class="box_item">
+            <div class="micro_cont clist_slide">
+                <div class="innerSection pd_style02">
+                    <div class="slide_wrap">
+                        <div class="cont_wrap">
+                            <p class="c_tit"><span>마이크로러닝</span></p>
+                            <p class="c_txt">짧지만 핵심을 담아 배우는<br>
+                                마이크로러닝을 추천해 드립니다.</p>
+                            <div class="slide_btn">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <div class="con_list">
+                            <div class="swiper-wrapper">
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img02.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img03.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img04.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img05.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                </div>
+
+                                <div class="item swiper-slide">
+                                    <a href=""><img src="./images/learninghub/micro_img02.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="box_item">
+            <div class="banner_wrap">
+                <div class="innerSection">
+                    <div class="con_list">
+                        <div class="swiper-wrapper">
+                            <div class="item swiper-slide">
+                                <a href="#"><img src="./images/learninghub/main_banner01.png" alt=""></a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#"><img src="./images/learninghub/main_banner02.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="box_item">
+            <div class="qmenu_wrap">
+                <div class="innerSection pd_style02">
+                    <div class="qmenu_area">
+                        <h3>Quick menu</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <p>개설리스트</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>학습방법안내</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>자주하는질문<br> FAQ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>러닝허브<br> 소개자료</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>공지사항</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <div class="service_wrap">
+                <div class="innerSection">
+                    <div class="service_area">
+                        <div class="service_left">
+                            <h3>Total Learning Service</h3>
+                            <p>러닝허브는 고객사 임직원의 역량 개발에 필요한 e-러닝, 독서 통신,<br>
+                                전화 영어, 집합 교육 등의 형식 학습과 온라인 강의 및 지식 정보 등<br>
+                                무형식 학습 콘텐츠를 통합하여 제공합니다.</p>
+                        </div>
+                        <div class="service_right">
+                            <span class="tit">러닝허브 보유 콘텐츠</span>
+                            <ul class="graph_area">
+                                <li>
+                                    <div class="graph">
+                                        <span class="bar data1" style="height:60%;"><span
+                                                class="g_txt">24%</span></span>
+                                    </div>
+                                    <div class="txt">
+                                        <p>외국어/기타</p>
+                                        <span>총 3,400개</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="graph">
+                                        <span class="bar data2" style="height:100%;"><span
+                                                class="g_txt">34%</span></span>
+                                    </div>
+                                    <div class="txt">
+                                        <p>직무역량</p>
+                                        <span>총 4,400개</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="graph">
+                                        <span class="bar data3" style="height:40%;"><span
+                                                class="g_txt">12%</span></span>
+                                    </div>
+                                    <div class="txt">
+                                        <p>IT 역량</p>
+                                        <span>총 1,200개</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="graph">
+                                        <span class="bar data4" style="height:80%;"><span
+                                                class="g_txt">30%</span></span>
+                                    </div>
+                                    <div class="txt">
+                                        <p>공통역량</p>
+                                        <span>총 4,000개</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <div class="notice_wrap">
+                <div class="innerSection pd_style02">
+                    <div class="notice_area">
+                        <div class="notice">
+                            <div class="notice_tit">
+                                <h3>공지사항</h3>
+                                <a href="#" class="more_btn">더보기</a>
+                            </div>
+                            <ul class="notice_list">
+                                <li class="alarm">
+                                    <a href="javascript:void(0);">
+                                        [공지] 학습에 원활한 브라우저(Edge, 크롬) 설정 안내
+                                        <div class="state_area">
+                                            <span class="alarm_tag">중요</span>
+                                            <span class="file_tag"></span>
+                                        </div>
+                                    </a>
+                                    <p class="date">2023. 07. 26</p>
+                                </li>
+
+                                <li class="file alarm">
+                                    <a href="javascript:void(0);">
+                                        [공지] 러닝허브 학습장애 시 자가조치 매뉴얼을 제공
+                                        <div class="state_area">
+                                            <span class="alarm_tag">중요</span>
+                                            <span class="file_tag"></span>
+                                        </div>
+                                    </a>
+                                    <p class="date">2023. 07. 07</p>
+                                </li>
+
+                                <li class="file">
+                                    <a href="javascript:void(0);">
+                                        [공지] 학습에 원활한 브라우저(Edge, 크롬) 설정 안내
+                                        <div class="state_area">
+                                            <span class="alarm_tag">중요</span>
+                                            <span class="file_tag"></span>
+                                        </div>
+                                    </a>
+                                    <p class="date">2023. 01. 26</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="notice_banner">
+                            <p class="b_tit">학습지원센터</p>
+                            <p class="b_tel">02-2081-1000</p>
+                            <div class="txt_area">
+                                <p>평일 09:00 ~ 18:00</p>
+                                <p>점심 12:00 ~ 13:00</p>
+                                <p>토/일 공휴일 : 휴무</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="innerSection">
+            <div class="footer_wrap">
+                <h1 class="logo"><img src="./images/learninghub/footer_logo.png" alt="러닝허브 로고"></h1>
+                <div class="f_util">
+                    <ul>
+                        <li><a href="#" title="회사소개 바로가기">회사소개</a></li>
+                        <li><a href="#" title="회사소개 바로가기">이용약관</a></li>
+                        <li><a href="#" title="회사소개 바로가기">개인정보취급방침</a></li>
+                        <li><a href="#" title="회사소개 바로가기">찾아오시는 길</a></li>
+                        <li><a href="#" title="회사소개 바로가기">환불규정</a></li>
+                    </ul>
+                    <div class="f_txt">
+                        <p>(08390)서울특별시 구로구 디지털로 30길 31, 코오롱빌란트2차 703호 ~ 704호</p>
+                        <p>㈜인키움 대표이사 : 박지현 TEL : 02-555-1945 / FAX : 02-2081-1090 사업자등록번호 : 220-81-71637</p>
+                    </div>
+                </div>
+                <div class="family_site">
+                    <select class="sel_style01">
+                        <option>관련사이트</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 관심설정 팝업 -->
+    <div class="shadow"></div>
+    <div class="popUp setUp setUpCrsCl">
+        <div class="popTop">
+            <h3 class="ir-text">관심설정</h3>
+            <a href="#" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="pc_pd scr mh_scr">
+                <div class="ckItem">
+                    <h4 class="tit">공통역량</h4>
+                    <div class="ckArea scrollbar-outer">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb1"> <label for="cb1">개인역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb2"> <label for="cb2">관계역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb3"> <label for="cb3">OA역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb4"> <label for="cb4">인문</label></li>
+                            <li class="check03"><input type="checkbox" id="cb5"> <label for="cb5">외국어</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ckItem">
+                    <h4 class="tit">직무역량</h4>
+                    <div class="ckArea scrollbar-outer">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb6"> <label for="cb6">경영</label></li>
+                            <li class="check03"><input type="checkbox" id="cb7"> <label for="cb7">경제</label></li>
+                            <li class="check03"><input type="checkbox" id="cb8"> <label for="cb8">디지털역량</label></li>
+                            <li class="check03"><input type="checkbox" id="cb9"> <label for="cb9">경영지원</label></li>
+                            <li class="check03"><input type="checkbox" id="cb10"> <label for="cb10">마케팅</label></li>
+                            <li class="check03"><input type="checkbox" id="cb11"> <label for="cb11">영업/고객서비스</label>
+                            </li>
+                            <li class="check03"><input type="checkbox" id="cb12"> <label for="cb12">IT</label></li>
+                            <li class="check03"><input type="checkbox" id="cb13"> <label for="cb13">업종</label></li>
+                            <li class="check03"><input type="checkbox" id="cb14"> <label for="cb14">자격증</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ckItem">
+                    <h4 class="tit">공통역량</h4>
+                    <div class="ckArea scrollbar-outer">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb15"> <label for="cb15">계층별</label></li>
+                            <li class="check03"><input type="checkbox" id="cb16"> <label for="cb16">역량별</label></li>
+                            <li class="check03"><input type="checkbox" id="cb17"> <label for="cb17">리더십 사례</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ckItem">
+                    <h4 class="tit">공통역량</h4>
+                    <div class="ckArea scrollbar-outer">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb18"> <label for="cb18">계층별</label></li>
+                            <li class="check03"><input type="checkbox" id="cb19"> <label for="cb19">역량별</label></li>
+                            <li class="check03"><input type="checkbox" id="cb20"> <label for="cb20">리더십 사례</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ckItem">
+                    <h4 class="tit">공통역량</h4>
+                    <div class="ckArea scrollbar-outer">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="cb18"> <label for="cb18">계층별</label></li>
+                            <li class="check03"><input type="checkbox" id="cb19"> <label for="cb19">역량별</label></li>
+                            <li class="check03"><input type="checkbox" id="cb20"> <label for="cb20">리더십 사례</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_wrap tct">
+                <a href="javascript:void(0);" class="btn_style01 btn_orange">
+                    관심분야 저장
+                </a>
+            </div>
+        </div>
+        <div class="popBottom">
+            <p class="txt">자가 역량진단을 통해 <span>맞춤 추천 과정</span>을 확인해 보세요</p>
+            <a href="#">
+                역량진단 바로가기
+            </a>
+        </div>
+    </div>
+    <!-- //관심설정 팝업 -->
+    <div class="popUp setUp setUpJob">
+        <div class="popTop">
+            <h3 class="ir-text">직무설정</h3>
+            <a href="javascript:;" class="close" onclick="close_pop()">닫기</a>
+        </div>
+        <div class="popCont">
+            <div class="pc_pd scr mh_scr" id="jobPopArea">
+                <div class="ckItem">
+                    <h4 class="tit">직무설정</h4>
+                    <div class="ckArea scrollbar-outer">
+                        <ul class="com_area">
+                            <li class="check03"><input type="checkbox" id="crsJob_1" name="ckAreaCrsJob" value="1">
+                                <label for="crsJob_1">경영기획/재무/회계</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_10" name="ckAreaCrsJob" value="10">
+                                <label for="crsJob_10">IT/시스템/보안</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_11" name="ckAreaCrsJob" value="11">
+                                <label for="crsJob_11">법정교육</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_12" name="ckAreaCrsJob" value="12">
+                                <label for="crsJob_12">의료일반</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_13" name="ckAreaCrsJob" value="13">
+                                <label for="crsJob_13">반도체</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_2" name="ckAreaCrsJob" value="2">
+                                <label for="crsJob_2">상품기획/R&amp;D</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_3" name="ckAreaCrsJob" value="3">
+                                <label for="crsJob_3">생산/제조/품질</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_4" name="ckAreaCrsJob" value="4">
+                                <label for="crsJob_4">영업/마케팅/유통</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_5" name="ckAreaCrsJob" value="5">
+                                <label for="crsJob_5">인사/총무/법무</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_6" name="ckAreaCrsJob" value="6">
+                                <label for="crsJob_6">조직가치</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_7" name="ckAreaCrsJob" value="7">
+                                <label for="crsJob_7">직무공통</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_8" name="ckAreaCrsJob" value="8">
+                                <label for="crsJob_8">해외/주재원</label></li>
+                            <li class="check03"><input type="checkbox" id="crsJob_9" name="ckAreaCrsJob" value="9">
+                                <label for="crsJob_9">CS/상담</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_wrap tct">
+                <a href="javascript:;" onclick="fn_interestJobAiSave();" class="btn_style01 btn_orange">직무 저장</a>
+            </div>
+        </div>
+        <div class="popBottom">
+            <p class="txt">자가 역량진단을 통해 <span>맞춤 추천 과정</span>을 확인해 보세요</p>
+            <a href="#">
+                역량진단 바로가기
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
