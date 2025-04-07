@@ -254,6 +254,10 @@ $(document).ready(function() {
             slidesPerView: "auto",
             initialSlide: slideInx,
             loop: loopChk,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
             centeredSlides: true,
             navigation: {
                 prevEl: $slider.find('.swiper-button-prev')[0],
@@ -268,6 +272,18 @@ $(document).ready(function() {
                 },
             },
         });
+        $slider.find('.con_list').hover(
+            function() {
+                if (popSwiper && popSwiper.autoplay && popSwiper.autoplay.running) {
+                    popSwiper.autoplay.stop();
+                }
+                },
+                function() {
+                if (popSwiper && popSwiper.autoplay && !popSwiper.autoplay.running) {
+                    popSwiper.autoplay.start();
+                }
+            }
+        );
         function updateClass() {
             $slider.find('.swiper-slide-prev').prev().addClass('first').siblings().removeClass('first');
             $slider.find('.swiper-slide-next').next().addClass('last').siblings().removeClass('last');

@@ -8,9 +8,9 @@
     <!--  -->
     <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
     <!-- <link rel="stylesheet" type="text/css" href="./css/front/front/common.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="./css/front/00001/00001.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/learninghub/common.css">
-    <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css">
+    <link rel="stylesheet" type="text/css" href="https://inkium1.learnhub.co.kr/theme/00003/00003.css?ver=20250407155020">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/learninghub/style.css"> -->
 
     <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
     <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
@@ -267,6 +267,33 @@
             </div>
         </div>
     </header>
+    <!-- 추가 css  -->
+    <style>
+        .none_img {
+            position: relative;
+            background: url(../html/images/learninghub/none_img.png) top center no-repeat;
+            background-size: cover;
+        }
+        .none_img .none_tit {
+            display: -webkit-box;
+            width: 100%;    
+            padding: 0 0.5rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.6rem;
+            box-sizing: border-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            word-break: break-all;
+        }
+        .none_img:hover .none_tit {
+            -webkit-line-clamp: 3;
+        }
+    </style>
+    <!-- //추가 css -->
     <main class="main_wrap">
         <article class="main_visual">
             <div class="main_visual_swiper swiper">
@@ -338,8 +365,8 @@
                                 </div>
                                 <div class="item swiper-slide">
                                     <a href="#">
-                                        <div class="img_wrap">
-                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        <div class="img_wrap none_img">
+                                            <!-- <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정"> -->
                                         </div>
                                         <div class="txt">
                                             <p class="t_date">2024-03-29 ~ 2024-04-05</p>
@@ -442,8 +469,8 @@
                             <div class="swiper-wrapper">
                                 <div class="item swiper-slide">
                                     <a href="#">
-                                        <div class="img_wrap">
-                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        <div class="img_wrap none_img">
+                                            <!-- <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정"> -->
                                         </div>
                                         <div class="txt">
                                             <p class="t_date">2024-03-29 ~ 2024-04-05</p>
@@ -593,8 +620,9 @@
                                     <div class="swiper-wrapper">
                                         <div class="item swiper-slide">
                                             <a href="#">
-                                                <div class="img_wrap">
-                                                    <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기">
+                                                <div class="img_wrap none_img">
+                                                    <p class="none_tit">기본부터 실무까지! 포토샵 정복하기 기본부터 실무까지! 포토샵 정복하기</p>
+                                                    <!-- <img src="./images/learninghub/list02_img01.png" alt="포토샵 정복하기"> -->
                                                 </div>
                                             </a>
                                         </div>
@@ -698,8 +726,9 @@
                             <div class="swiper-wrapper">
                                 <div class="item swiper-slide">
                                     <a href="">
-                                        <div class="img_wrap">
-                                            <img src="./images/learninghub/popular_img01.png" alt="">
+                                        <div class="img_wrap none_img">
+                                            <p class="none_tit">데이터로 말하는 마케터 데이터 드리븐 마케팅</p>
+                                            <!-- <img src="./images/learninghub/popular_img01.png" alt=""> -->
                                         </div>
                                     </a>
                                 </div>
@@ -748,7 +777,10 @@
                         <div class="con_list">
                             <div class="swiper-wrapper">
                                 <div class="item swiper-slide">
-                                    <a href=""><img src="./images/learninghub/micro_img01.png" alt=""></a>
+                                    <a href="" class="none_img">
+                                        <p class="none_tit">데이터로 말하는 마케터 데이터 드리븐 마케팅</p>
+                                        <!-- <img src="./images/learninghub/micro_img01.png" alt=""> -->
+                                    </a>
                                 </div>
                                 <div class="item swiper-slide">
                                     <a href=""><img src="./images/learninghub/micro_img02.png" alt=""></a>
