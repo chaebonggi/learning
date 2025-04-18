@@ -152,9 +152,57 @@
                             <p class="txt">총 학습시간</p>
                         </div>                    
                     </div>
+                    <style>
+                        .popUp.studyPop .testInfo .testList li {
+                            position: relative;
+                        }
+                        .popUp.studyPop .testInfo .testList li .none-txt {
+                            display: none;                            
+                        }
+                        .popUp.studyPop .testInfo .testList li.none .none-txt {
+                            display: block;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            color: #fff;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            z-index: 2;
+                        }
+                        .popUp.studyPop .testInfo .testList li.none::before {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0.8);
+                            color: #fff;
+                            font-size: 2rem;
+                            font-weight: bold;
+                            z-index: 1;
+                        }
+                        .popUp.studyPop .testInfo .testList li.none .btnLink {
+                            min-height: 4.4rem;
+                        }
+                        .popUp.studyPop .testInfo .testList li.none .btnLink p {
+                            display: none;
+                        }
+                    </style>
                     <div class="testInfo">
                         <ul class="testList">
-                            <li>
+                            <li class="none">
+                                <p class="none-txt">과제없음</p>
+                                <a href="">
+                                    <div class="imgWrap">
+                                        <p class="tit">중간시험</p>
+                                    </div>
+                                    <div class="btnLink">
+                                        <p>응시하기</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="none">
+                                <p class="none-txt">토론없음</p>
                                 <a href="">
                                     <div class="imgWrap">
                                         <p class="tit">중간시험</p>
@@ -165,35 +213,17 @@
                                 </a>
                             </li>
                             <li>
+                                <p class="none-txt">미응시</p>
                                 <a href="">
                                     <div class="imgWrap">
-                                        <p class="tit">최종시험</p>
+                                        <p class="tit">중간시험</p>
                                     </div>
                                     <div class="btnLink">
                                         <p>응시하기</p>
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="">
-                                    <div class="imgWrap">
-                                        <p class="tit">과제</p>
-                                    </div>
-                                    <div class="btnLink">
-                                        <p>응시하기</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="imgWrap">
-                                        <p class="tit">설문</p>
-                                    </div>
-                                    <div class="btnLink">
-                                        <p>응시하기</p>
-                                    </div>
-                                </a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
