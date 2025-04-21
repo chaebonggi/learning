@@ -248,6 +248,47 @@
     <main class="content_wrap">
         <article class="all_search_wrap">
             <div class="search_area pd_style03">
+                <style>
+                    .search_list { border: 1px solid #ddd; border-radius: 10px 10px 0 0; overflow: hidden; } 
+                    .search_list .search_item { display: flex; align-items: center; background-color: #434343; border-bottom: 1px solid #eee; } 
+                    .search_list .search_item:last-child { border-bottom: 0; } 
+                    .search_list .search_item .tit { flex-shrink: 0; padding: 0 20px; color: #fff; font-size: 1.6rem; font-weight: bold; } 
+                    .search_list .search_item .cont { display: flex; width: 100%; background-color: #fff; } 
+                    .search_list .check_area { display: flex; flex-wrap: wrap; gap: 10px; padding: 20px; } 
+                    .search_list .check_area.col_check { flex-direction: column; } 
+                    .search_list .form_check { position: relative; } 
+                    .search_list input[type=radio], .search_list input[type=checkbox] { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; } 
+                    .search_list .form_check input[type=radio] ~ label, .search_list .form_check input[type=checkbox] ~ label { display: inline-block; position: relative; padding: 0 12px; background-color: #fff; border: 1px solid transparent; border-radius: 20px; color: #1e2124; font-size: 1.6rem; transition: all 0.35s; white-space: nowrap; } 
+                    .search_list .form_check input[type=radio]:checked ~ label, .search_list .form_check input[type=checkbox]:checked ~ label { border-color: #ff7000; color: #ff7000; } 
+                    .search_list .cont_txt { padding: 20px; color: #1e2124; font-size: 1.6rem; } 
+                    .search_list .search_item .cont .cont_item { flex: 1; } 
+                    
+                    .search_list .search_item .cont_item:not(:first-child) { border-left: 1px solid #eee; } 
+                    .search_list .search_item .scrollbar-outer { height: 150px; overflow-y: scroll; } 
+                    .search_list .search_item .scrollbar-outer .check_area { padding: 10px 20px; gap: 4px 10px; } 
+                    .search_list .search_item .scrollbar-outer .form_check input[type=radio] ~ label, .search_list .search_item .scrollbar-outer .form_check input[type=checkbox] ~ label { display: -webkit-inline-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1; word-break: break-all; } 
+                    .search_list .search_item .scrollbar-outer > .scroll-content.scroll-scrolly_visible { margin: 0; left: 0; } 
+                    .search_list .search_item .scrollbar-outer > .scroll-element .scroll-element_track { background: #f2f2f2; } 
+                    .search_list .search_item .scrollbar-outer > .scroll-element .scroll-bar { background: #aeaeae; border-radius: 0; } 
+                    .search_list .search_item .scrollbar-outer > .scroll-element.scroll-y { width: 10px; } 
+                    .search_list .search_item .scrollbar-outer > .scroll-element .scroll-element_outer, .studyLeft .scrollbar-outer > .scroll-element .scroll-element_track, .search_list .search_item .cont_item .scrollbar-outer > .scroll-element .scroll-bar { border-radius: 0; } 
+                    .content_wrap .all_search_wrap .btn_area { flex-wrap: wrap; gap: 10px; } 
+                    
+                    @media all and (max-width: 860px){
+                    .content_wrap .all_search_wrap .search_area { display: block; } 
+                    .search_list .search_item .cont { flex-direction: column; } 
+                    .search_list .search_item .cont_item:not(:first-child) { border-left: 0; border-top: 1px solid #eee; } 
+                    .content_wrap .all_search_wrap .check_result { flex-direction: column; gap: 2rem; padding: 20px; } 
+                    .content_wrap .all_search_wrap .keywords_wrap { display: flex; flex-direction: column; width: 100%; }                             
+                    .content_wrap .all_search_wrap .btn_area .txt { width: 100%; } 
+                    }
+                    @media all and (max-width: 640px){
+                    .search_list .search_item { flex-direction: column; } 
+                    .search_list .search_item .tit { padding: 6px 0; } 
+                    .search_list .search_item .scrollbar-outer { height: 110px; } 
+                    .content_wrap .all_search_wrap .check_result .search_btn { width: 100%; padding: 2rem 2rem; } 
+                    }
+                </style>
                 <div class="innerSection">
                     <div class="ld_tit">
                         <h3 class="tit">전체과정 상세 검색</h3>
@@ -315,48 +356,7 @@
                                     </div>
                                 </div>                                
                             </div>
-                        </div>
-                        <style>
-                            .search_list { border: 1px solid #ddd; border-radius: 10px 10px 0 0; overflow: hidden; } 
-                            .search_list .search_item { display: flex; align-items: center; background-color: #434343; border-bottom: 1px solid #eee; } 
-                            .search_list .search_item:last-child { border-bottom: 0; } 
-                            .search_list .search_item .tit { flex-shrink: 0; padding: 0 20px; color: #fff; font-size: 1.6rem; font-weight: bold; } 
-                            .search_list .search_item .cont { display: flex; width: 100%; background-color: #fff; } 
-                            .search_list .check_area { display: flex; flex-wrap: wrap; gap: 10px; padding: 20px; } 
-                            .search_list .check_area.col_check { flex-direction: column; } 
-                            .search_list .form_check { position: relative; } 
-                            .search_list input[type=radio], .search_list input[type=checkbox] { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; } 
-                            .search_list .form_check input[type=radio] ~ label, .search_list .form_check input[type=checkbox] ~ label { display: inline-block; position: relative; padding: 0 12px; background-color: #fff; border: 1px solid transparent; border-radius: 20px; color: #1e2124; font-size: 1.6rem; transition: all 0.35s; white-space: nowrap; } 
-                            .search_list .form_check input[type=radio]:checked ~ label, .search_list .form_check input[type=checkbox]:checked ~ label { border-color: #ff7000; color: #ff7000; } 
-                            .search_list .cont_txt { padding: 20px; color: #1e2124; font-size: 1.6rem; } 
-                            .search_list .search_item .cont .cont_item { flex: 1; } 
-                            
-                            .search_list .search_item .cont_item:not(:first-child) { border-left: 1px solid #eee; } 
-                            .search_list .search_item .scrollbar-outer { height: 150px; overflow-y: scroll; } 
-                            .search_list .search_item .scrollbar-outer .check_area { padding: 10px 20px; gap: 4px 10px; } 
-                            .search_list .search_item .scrollbar-outer .form_check input[type=radio] ~ label, .search_list .search_item .scrollbar-outer .form_check input[type=checkbox] ~ label { display: -webkit-inline-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1; word-break: break-all; } 
-                            .search_list .search_item .scrollbar-outer > .scroll-content.scroll-scrolly_visible { margin: 0; left: 0; } 
-                            .search_list .search_item .scrollbar-outer > .scroll-element .scroll-element_track { background: #f2f2f2; } 
-                            .search_list .search_item .scrollbar-outer > .scroll-element .scroll-bar { background: #aeaeae; border-radius: 0; } 
-                            .search_list .search_item .scrollbar-outer > .scroll-element.scroll-y { width: 10px; } 
-                            .search_list .search_item .scrollbar-outer > .scroll-element .scroll-element_outer, .studyLeft .scrollbar-outer > .scroll-element .scroll-element_track, .search_list .search_item .cont_item .scrollbar-outer > .scroll-element .scroll-bar { border-radius: 0; } 
-                            .content_wrap .all_search_wrap .btn_area { flex-wrap: wrap; gap: 10px; } 
-                            
-                            @media all and (max-width: 860px){
-                            .content_wrap .all_search_wrap .search_area { display: block; } 
-                            .search_list .search_item .cont { flex-direction: column; } 
-                            .search_list .search_item .cont_item:not(:first-child) { border-left: 0; border-top: 1px solid #eee; } 
-                            .content_wrap .all_search_wrap .check_result { flex-direction: column; gap: 2rem; padding: 20px; } 
-                            .content_wrap .all_search_wrap .keywords_wrap { display: flex; flex-direction: column; width: 100%; }                             
-                            .content_wrap .all_search_wrap .btn_area .txt { width: 100%; } 
-                            }
-                            @media all and (max-width: 640px){
-                            .search_list .search_item { flex-direction: column; } 
-                            .search_list .search_item .tit { padding: 6px 0; } 
-                            .search_list .search_item .scrollbar-outer { height: 110px; } 
-                            .content_wrap .all_search_wrap .check_result .search_btn { width: 100%; padding: 2rem 2rem; } 
-                            }
-                        </style>
+                        </div>                        
                         <div class="search_item">
                             <div class="tit">역량분류</div>
                             <div class="cont">
