@@ -301,8 +301,7 @@
                             border: 0 !important;
                         }
                         .search_list .form_check input[type=radio] ~ label, .search_list .form_check input[type=checkbox] ~ label {
-                            display: inline-flex;
-                            align-items: center;
+                            display: -webkit-inline-box;
                             position: relative;
                             gap: 4px;
                             padding: 0 12px;
@@ -312,6 +311,11 @@
                             color: #1e2124;
                             font-size: 16px;
                             transition: all 0.35s;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 1;
+                            word-break: break-all;
                         }
                         .search_list .form_check input[type=radio]:checked ~ label, .search_list .form_check input[type=checkbox]:checked ~ label {
                             border-color: #ff7000;
@@ -401,8 +405,8 @@
                                 overflow-y: scroll;
                              }
                              .search_list .search_item .scrollbar-outer .check_area {
-                                padding-bottom: 0;
-                                margin-bottom: 20px;
+                                padding: 10px 20px;
+                                gap: 4px 10px;                       
                             }
 
                             .search_list .search_item .scrollbar-outer > .scroll-content.scroll-scrolly_visible {
