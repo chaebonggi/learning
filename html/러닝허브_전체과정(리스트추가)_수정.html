@@ -252,82 +252,6 @@
                     <div class="ld_tit">
                         <h3 class="tit">전체과정 상세 검색</h3>
                     </div>
-                    <style>
-                        .search_list {
-                            border: 1px solid #ddd;
-                            border-radius: 10px 10px 0 0;
-                        }
-                        .search_list .search_item {
-                            display: flex;
-                            align-items: center;
-                            gap: 10px;
-                            padding-left: 20px;
-                            border-bottom: 1px solid #eee;
-                        }
-                        .search_list .search_item:last-child {
-                            border-bottom: 0;
-                        }
-                        .search_list .search_item .tit {
-                            flex-shrink: 0;
-                            width: 70px;
-                            color: #373737;
-                            font-size: 16px;
-                            font-weight: bold;
-                        }
-                        .search_list .search_item .cont {
-                            display: flex;
-                            width: 100%;
-                        }                       
-                        .search_list .check_area {
-                            display: flex;
-                            gap: 10px;
-                            padding: 20px;
-                        }
-                        .search_list .check_area.col_check {
-                            flex-direction: column;
-                        }
-                        .search_list .form_check {
-                            position: relative;
-                        }
-                        .search_list input[type=radio],  .search_list input[type=checkbox] {
-                            position: absolute !important;
-                            width: 1px !important;
-                            height: 1px !important;
-                            padding: 0 !important;
-                            margin: -1px !important;
-                            overflow: hidden !important;
-                            clip: rect(0, 0, 0, 0) !important;
-                            white-space: nowrap !important;
-                            border: 0 !important;
-                        }
-                        .search_list .form_check input[type=radio] ~ label, .search_list .form_check input[type=checkbox] ~ label {
-                            display: -webkit-inline-box;
-                            position: relative;
-                            gap: 4px;
-                            padding: 0 12px;
-                            background-color: #fff;
-                            border: 1px solid transparent;
-                            border-radius: 20px;
-                            color: #1e2124;
-                            font-size: 16px;
-                            transition: all 0.35s;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            -webkit-box-orient: vertical;
-                            -webkit-line-clamp: 1;
-                            word-break: break-all;
-                        }
-                        .search_list .form_check input[type=radio]:checked ~ label, .search_list .form_check input[type=checkbox]:checked ~ label {
-                            border-color: #ff7000;
-                            color: #ff7000;
-                        }
-                        .search_list .cont_txt {
-                            padding: 20px;
-                            color: #1e2124;
-                            font-size: 16px;
-                        }
-                        
-                    </style>
                     <div class="search_list">
                         <div class="search_item">
                             <div class="tit">학습유형</div>
@@ -393,42 +317,44 @@
                             </div>
                         </div>
                         <style>
-                             .search_list .search_item .cont .cont_item {
-                                flex: 1;
-                            }
+                            .search_list { border: 1px solid #ddd; border-radius: 10px 10px 0 0; overflow: hidden; } 
+                            .search_list .search_item { display: flex; align-items: center; background-color: #434343; border-bottom: 1px solid #eee; } 
+                            .search_list .search_item:last-child { border-bottom: 0; } 
+                            .search_list .search_item .tit { flex-shrink: 0; padding: 0 20px; color: #fff; font-size: 1.6rem; font-weight: bold; } 
+                            .search_list .search_item .cont { display: flex; width: 100%; background-color: #fff; } 
+                            .search_list .check_area { display: flex; flex-wrap: wrap; gap: 10px; padding: 20px; } 
+                            .search_list .check_area.col_check { flex-direction: column; } 
+                            .search_list .form_check { position: relative; } 
+                            .search_list input[type=radio], .search_list input[type=checkbox] { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; } 
+                            .search_list .form_check input[type=radio] ~ label, .search_list .form_check input[type=checkbox] ~ label { display: inline-block; position: relative; padding: 0 12px; background-color: #fff; border: 1px solid transparent; border-radius: 20px; color: #1e2124; font-size: 1.6rem; transition: all 0.35s; white-space: nowrap; } 
+                            .search_list .form_check input[type=radio]:checked ~ label, .search_list .form_check input[type=checkbox]:checked ~ label { border-color: #ff7000; color: #ff7000; } 
+                            .search_list .cont_txt { padding: 20px; color: #1e2124; font-size: 1.6rem; } 
+                            .search_list .search_item .cont .cont_item { flex: 1; } 
                             
-                             .search_list .search_item .cont_item:not(:first-child) {
-                                border-left: 1px solid #eee;
-                             }
-                             .search_list .search_item .scrollbar-outer {                                
-                                height: 150px;
-                                overflow-y: scroll;
-                             }
-                             .search_list .search_item .scrollbar-outer .check_area {
-                                padding: 10px 20px;
-                                gap: 4px 10px;                       
+                            .search_list .search_item .cont_item:not(:first-child) { border-left: 1px solid #eee; } 
+                            .search_list .search_item .scrollbar-outer { height: 150px; overflow-y: scroll; } 
+                            .search_list .search_item .scrollbar-outer .check_area { padding: 10px 20px; gap: 4px 10px; } 
+                            .search_list .search_item .scrollbar-outer .form_check input[type=radio] ~ label, .search_list .search_item .scrollbar-outer .form_check input[type=checkbox] ~ label { display: -webkit-inline-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1; word-break: break-all; } 
+                            .search_list .search_item .scrollbar-outer > .scroll-content.scroll-scrolly_visible { margin: 0; left: 0; } 
+                            .search_list .search_item .scrollbar-outer > .scroll-element .scroll-element_track { background: #f2f2f2; } 
+                            .search_list .search_item .scrollbar-outer > .scroll-element .scroll-bar { background: #aeaeae; border-radius: 0; } 
+                            .search_list .search_item .scrollbar-outer > .scroll-element.scroll-y { width: 10px; } 
+                            .search_list .search_item .scrollbar-outer > .scroll-element .scroll-element_outer, .studyLeft .scrollbar-outer > .scroll-element .scroll-element_track, .search_list .search_item .cont_item .scrollbar-outer > .scroll-element .scroll-bar { border-radius: 0; } 
+                            .content_wrap .all_search_wrap .btn_area { flex-wrap: wrap; gap: 10px; } 
+                            
+                            @media all and (max-width: 860px){
+                            .content_wrap .all_search_wrap .search_area { display: block; } 
+                            .search_list .search_item .cont { flex-direction: column; } 
+                            .search_list .search_item .cont_item:not(:first-child) { border-left: 0; border-top: 1px solid #eee; } 
+                            .content_wrap .all_search_wrap .check_result { flex-direction: column; gap: 2rem; padding: 20px; } 
+                            .content_wrap .all_search_wrap .keywords_wrap { display: flex; flex-direction: column; width: 100%; }                             
+                            .content_wrap .all_search_wrap .btn_area .txt { width: 100%; } 
                             }
-
-                            .search_list .search_item .scrollbar-outer > .scroll-content.scroll-scrolly_visible {
-                                margin: 0;
-                                left: 0;
-                            }
-
-                            .search_list .search_item .scrollbar-outer > .scroll-element .scroll-element_track {
-                                background: #f2f2f2;
-                            }
-
-                            .search_list .search_item .scrollbar-outer > .scroll-element .scroll-bar {
-                                background: #aeaeae;
-                                border-radius: 0;
-                            }
-
-                            .search_list .search_item .scrollbar-outer > .scroll-element.scroll-y {
-                                width: 10px;
-                            }
-
-                            .search_list .search_item .scrollbar-outer > .scroll-element .scroll-element_outer, .studyLeft .scrollbar-outer > .scroll-element .scroll-element_track, .search_list .search_item .cont_item .scrollbar-outer > .scroll-element .scroll-bar {
-                                border-radius: 0;
+                            @media all and (max-width: 640px){
+                            .search_list .search_item { flex-direction: column; } 
+                            .search_list .search_item .tit { padding: 6px 0; } 
+                            .search_list .search_item .scrollbar-outer { height: 110px; } 
+                            .content_wrap .all_search_wrap .check_result .search_btn { width: 100%; padding: 2rem 2rem; } 
                             }
                         </style>
                         <div class="search_item">
@@ -610,11 +536,12 @@
                     <div class="check_result">
                         <div class="keywords_wrap">
                             <div class="keywords">
-                            </div>
+	                    
+                                <span class="selected_keyword" id="txt_searchInsuAppYn_Y">고용보험환급과정<button type="button" class="btn_del" onclick="fn_DelCdArray('searchInsuAppYn_Y');"><span class="txt">X</span></button></span><span class="selected_keyword" id="txt_searchEduDayT_10">10일 이내<button type="button" class="btn_del" onclick="fn_DelCdArray('searchEduDayT_10');"><span class="txt">X</span></button></span><span class="selected_keyword" id="txt_searchCrsDivCd_3">오프라인(집합)<button type="button" class="btn_del" onclick="fn_DelCdArray('searchCrsDivCd_3');"><span class="txt">X</span></button></span><span class="selected_keyword" id="txt_searchCrsDivCd_1">온라인(이러닝)<button type="button" class="btn_del" onclick="fn_DelCdArray('searchCrsDivCd_1');"><span class="txt">X</span></button></span><span class="selected_keyword" id="txt_searchTcmtXn_Y">교재 필요과정<button type="button" class="btn_del" onclick="fn_DelCdArray('searchTcmtXn_Y');"><span class="txt">X</span></button></span></div>
                             <div class="btn_area">
                                 <button type="button" class="btn_black01 btn_style06" onclick="fn_srchInit();"><span>초기화</span></button>
-                                <button type="button" class="btn_black03 btn_style06 ml10"><span>조건저장</span></button>
-                                <p class="txt ml10">※조건을 저장하시면 다음에 편하게 활용하실 수 있습니다.</p>
+                                <button type="button" class="btn_black03 btn_style06"><span>조건저장</span></button>
+                                <p class="txt">※조건을 저장하시면 다음에 편하게 활용하실 수 있습니다.</p>
                             </div>
                         </div>
                         <button type="button" class="search_btn"><span class="txt">선택된 조건으로 검색하기</span></button>
@@ -1005,9 +932,10 @@
     </footer>
     <script>
         $(document).ready(function() {
+            // 역량검사 스크립트 추가
             $('.scrollbar-outer').scrollbar();
         });
-        // 전체과정 리스트 스크립트 추가 2024.10.14
+        
         function sortType(obj) {
             const viewElement = $('.view_list');                    
             if (obj == 'btnList') {
