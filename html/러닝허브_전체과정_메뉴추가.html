@@ -322,6 +322,11 @@
                         padding: 10px 10px;
                         color: #fff;
                         font-size: 14px;
+                        transition: 300ms all;
+                    }
+                    .accordion_menu .accordion_item .item_sub a:hover {
+                        color: #049372;
+                        transition: 300ms all;
                     }
                     .accordion_menu .accordion_item .item_sub a:hover::before {
                         content: '';
@@ -365,6 +370,9 @@
                         padding: 0px 5px;
                         color: #fff;
                         transition: 300ms all;
+                    }
+                    .accordion_menu .accordion_sub_item > a:hover::after {
+                        color: #049372;
                     }
                     .accordion_menu .accordion_sub_item.active > a::after {
                         transform: translateY(-50%) rotate(0);                        
