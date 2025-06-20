@@ -3167,9 +3167,9 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .pd_style02 { padding: 80px 0 80px; } 
 .pd_style03 { padding: 40px 0 40px; } 
 .ml10 { margin-left: 10px; } 
-.sel_style01 { width: 238px; padding: 0.5rem 30px 0.5rem 1rem; background: url(/images/front/00003/ico_arrow_up.png) no-repeat right 1rem center #373737; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 0; border: 1px solid #c9cdd2; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
-.sel_style02 { width: 200px; padding: 0.5rem 30px 0.5rem 1rem; background: url(/images/front/00003/ico_arrow02_bottom.png) no-repeat right 1rem center #fff; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 0; border: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
-.sel_style03 { width: 120px; padding: 0.5rem 30px 0.5rem 2rem; background: url(/images/front/00003/ico_arrow02_bottom.png) no-repeat right 1rem center #f9f9f9; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 5px; border: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
+.sel_style01 { width: 238px; padding: 0.5rem 30px 0.5rem 1rem; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_arrow_up.png) no-repeat right 1rem center #373737; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 0; border: 1px solid #c9cdd2; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
+.sel_style02 { width: 200px; padding: 0.5rem 30px 0.5rem 1rem; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_arrow02_bottom.png) no-repeat right 1rem center #fff; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 0; border: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
+.sel_style03 { width: 120px; padding: 0.5rem 30px 0.5rem 2rem; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_arrow02_bottom.png) no-repeat right 1rem center #f9f9f9; color: #666666; font-family: inherit; font-size: 1.4rem; border-radius: 5px; border: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; } 
 
 /* btn_style */
 .btn_wrap a { display: inline-block; } 
@@ -3205,7 +3205,7 @@ input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;appearan
 .btn_black01 { background: #fff; border: 1px solid #1b1d1f; color: #1b1d1f } 
 .btn_black02 { background: #1b1d1f; color: #fff } 
 .t_bg_gray { background: #f1f1f1; } 
-.btn_style10 { display: inline-block; padding: 0.5rem 5em; background: url(/images/front/00003/ico_arrow_bottom.png) center right 2rem #373737 no-repeat; color: #fff; font-size: 1.6rem; border-radius: 20px; } 
+.btn_style10 { display: inline-block; padding: 0.5rem 5em; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_arrow_bottom.png) center right 2rem #373737 no-repeat; color: #fff; font-size: 1.6rem; border-radius: 20px; } 
 .btn_style11 { display: inline-block; padding: 1rem 3em; background: #ff7000; color: #fff; font-size: 1.6rem; font-weight: bold; border-radius: 30px; } 
 .btn_black03 { background: #1b1d1f; color: #fff; border: 1px solid #1b1d1f; } 
 button { background: inherit; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer; } 
@@ -3238,7 +3238,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp { z-index: 50; background: #fff; position: fixed; max-width: 500px; width: 100%; left: 50%; top: 50%; transform: translate(-50%,-50%); display: none } 
 .popTop { padding: 2rem 3rem; border-bottom: 1px solid #1b1d1f; display: flex; justify-content: space-between; align-items: center; } 
 .popTop h3 { font-weight: 500; font-size: 2.6rem } 
-.popTop .close { background: url(/images/front/00003/ico_close.png) no-repeat; width: 20px; height: 20px; text-indent: -9999px; z-index: 100; } 
+.popTop .close { background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_close.png) no-repeat; width: 20px; height: 20px; text-indent: -9999px; z-index: 100; } 
 .popCont { padding: 3rem 0; max-height: calc(100vh - 150px); } 
 .popCont > .scr.mh_scr { max-height: calc(100vh - 220px); overflow-y:auto } 
 .popCont .pc_pd { padding: 0 3rem } 
@@ -3253,12 +3253,12 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .main_wrap .main_visual .swiper-control { display: flex; width: 130px; height: 36px; position: absolute; left: calc(50% - 600px); bottom: 30px; background: rgba(49, 49, 49, 0.7); border-radius: 50px; z-index: 2; } 
 .main_wrap .main_visual .swiper-pagination { width: auto; top: 50%; left: 42px; right: initial; bottom: initial; transform: translateY(-50%); font-weight: 500; font-size: 13px; color: #fff; } 
 .main_wrap .main_visual .swiper-button-next, .main_wrap .main_visual .swiper-button-prev { width: 6px; height: 12px; margin-top: 0; transform: translateY(-50%); background-color: transparent; background-size: contain; z-index: 10; border: 0; cursor: pointer; } 
-.main_wrap .main_visual .swiper-button-next { background-image: url(/images/front/00003/ico_next_btn.png); left: 80px; } 
-.main_wrap .main_visual .swiper-button-prev { background-image: url(/images/front/00003/ico_prev_btn.png); left: 15px; } 
+.main_wrap .main_visual .swiper-button-next { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_next_btn.png); left: 80px; } 
+.main_wrap .main_visual .swiper-button-prev { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_prev_btn.png); left: 15px; } 
 .main_wrap .main_visual .swiper-button-pause, 
 .main_wrap .main_visual .swiper-button-resume { display: block; width: 10px; height: 12px; position: absolute; top: 50%; right: 18px; transform: translateY(-50%); background-color: transparent; background-size: contain; background-repeat: no-repeat; border: 0; } 
-.main_wrap .main_visual .swiper-button-pause { background-image: url(/images/front/00003/ico_stop.png); } 
-.main_wrap .main_visual .swiper-button-resume { background-image: url(/images/front/00003/ico_start.png); } 
+.main_wrap .main_visual .swiper-button-pause { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_stop.png); } 
+.main_wrap .main_visual .swiper-button-resume { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_start.png); } 
 .main_wrap .main_visual .swiper:not(.swiper-paused) .swiper-button-resume, .main_wrap .main_visual .swiper-paused .swiper-button-pause { display: none; } 
 .main_wrap .clist_slide .slide_wrap { display: flex; justify-content: space-between; } 
 .main_wrap .clist_slide .cont_wrap { width: 180px; flex-shrink: 0; } 
@@ -3270,10 +3270,10 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .main_wrap .curation_cont.clist_slide .cont_wrap .slide_btn { margin-top: 100px; } 
 .main_wrap .clist_slide .cont_wrap .swiper-button-prev,
 .main_wrap .clist_slide .cont_wrap .swiper-button-next { width: 50px; height: 50px; margin-top: 0; background-size: contain; } 
-.main_wrap .clist_slide .cont_wrap .swiper-button-prev { background-image: url(/images/front/00003/ico_prev_btn_01.png); left: 0; } 
-.main_wrap .clist_slide .cont_wrap .swiper-button-next { background-image: url(/images/front/00003/ico_next_btn_01.png); left: 70px; } 
-.main_wrap .curation_cont.clist_slide .cont_wrap .swiper-button-prev { background-image: url(/images/front/00003/ico_prev_btn_02.png); } 
-.main_wrap .curation_cont.clist_slide .cont_wrap .swiper-button-next { background-image: url(/images/front/00003/ico_next_btn_02.png); } 
+.main_wrap .clist_slide .cont_wrap .swiper-button-prev { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_prev_btn_01.png); left: 0; } 
+.main_wrap .clist_slide .cont_wrap .swiper-button-next { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_next_btn_01.png); left: 70px; } 
+.main_wrap .curation_cont.clist_slide .cont_wrap .swiper-button-prev { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_prev_btn_02.png); } 
+.main_wrap .curation_cont.clist_slide .cont_wrap .swiper-button-next { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_next_btn_02.png); } 
 .main_wrap .clist_slide .con_list { width: calc(100% - 300px); overflow: hidden; } 
 .clist_slide .item a:hover::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(22, 22, 22, 0.92); border-radius: 10px; z-index: 5; } 
 .clist_slide .item a { display: block; position: relative; } 
@@ -3287,7 +3287,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .clist_slide .item a:hover .h_wrap { display: flex; flex-direction: column; } 
 .clist_slide .item .h_wrap .h_tit { display: -webkit-box; height: 46px; margin-bottom: 30px; font-size: 1.8rem; font-weight: bold; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; line-height: 23px; word-break: keep-all; overflow: hidden; } 
 .clist_slide .item .h_wrap li { padding-left: 16px; position: relative; font-size: 1.3rem; } 
-.clist_slide .item .h_wrap li::before { content: ''; width: 12px; height: 12px; position: absolute; left: 0; top: 2px; background: url(/images/front/00003/h_list_icon.png) no-repeat; } 
+.clist_slide .item .h_wrap li::before { content: ''; width: 12px; height: 12px; position: absolute; left: 0; top: 2px; background: url(https://inkium1.learnhub.co.kr/images/front/00003/h_list_icon.png) no-repeat; } 
 .clist_slide .item .h_wrap .h_btn { margin-top: auto; padding: 10px 0; background: #ff7000; color: #fff; font-size: 1.7rem; font-weight: bold; text-align: center; border-radius: 10px; } 
 .hot_trend .cont_tabs { display: flex; margin-bottom: 60px; justify-content: center; flex-wrap: wrap; gap: 10px; } 
 .hot_trend .cont_tabs li.active a { background: #373737; color: #fff; } 
@@ -3302,11 +3302,11 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 
 .main_wrap .hot_trend.clist_slide .swiper-button-prev,
 .main_wrap .hot_trend.clist_slide .swiper-button-next { width: 82px; height: 82px; margin-top: 0; transform: translateY(-50%); background-size: contain; } 
-.main_wrap .hot_trend.clist_slide .swiper-button-next { right: -90px; background-image: url(/images/front/00003/ico_next_btn_03.png); } 
-.main_wrap .hot_trend.clist_slide .swiper-button-prev { left: -90px; background-image: url(/images/front/00003/ico_prev_btn_03.png); } 
+.main_wrap .hot_trend.clist_slide .swiper-button-next { right: -90px; background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_next_btn_03.png); } 
+.main_wrap .hot_trend.clist_slide .swiper-button-prev { left: -90px; background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_prev_btn_03.png); } 
 .main_wrap .hot_trend.clist_slide .item a:hover::before { content: none; } 
 
-.main_wrap .popular_cont { background: url(/images/front/00003/popular_cont_bg.png) top center no-repeat; } 
+.main_wrap .popular_cont { background: url(https://inkium1.learnhub.co.kr/images/front/00003/popular_cont_bg.png) top center no-repeat; } 
 .main_wrap .popular_cont .tit_wrap { margin-bottom: 5rem; text-align: center; } 
 .main_wrap .popular_cont .tit_wrap .p_tit { margin-bottom: 2rem; color: #373737; font-size: 2.8rem; font-weight: bold; } 
 .main_wrap .popular_cont .tit_wrap .p_tit span { color: #ff7000; } 
@@ -3326,8 +3326,8 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .main_wrap .popular_cont.clist_slide .item.last { margin-right: 4%; margin-left:-4%; } 
 .main_wrap .popular_cont.clist_slide .swiper-button-prev,
 .main_wrap .popular_cont.clist_slide .swiper-button-next { width: 82px; height: 82px; margin-top: 0; transform: translateY(-50%); background-size: contain; z-index: 10; } 
-.main_wrap .popular_cont.clist_slide .swiper-button-prev { left: 50%; margin-left: -180px; background-image: url(/images/front/00003/ico_prev_btn_03.png); } 
-.main_wrap .popular_cont.clist_slide .swiper-button-next { right: 50%; margin-right: -180px; background-image: url(/images/front/00003/ico_next_btn_03.png); } 
+.main_wrap .popular_cont.clist_slide .swiper-button-prev { left: 50%; margin-left: -180px; background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_prev_btn_03.png); } 
+.main_wrap .popular_cont.clist_slide .swiper-button-next { right: 50%; margin-right: -180px; background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_next_btn_03.png); } 
 .main_wrap .micro_cont { margin: 0; } 
 .main_wrap .micro_cont.clist_slide .item a:hover::before { content: none; } 
 .main_wrap .micro_cont.clist_slide .item a { display: block; height: 143px; border-radius: 10px; font-size: 0; overflow: hidden; } 
@@ -3337,22 +3337,22 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .main_wrap .banner_wrap .item a { display: block; font-size: 0; border-radius: 30px; overflow: hidden; } 
 .main_wrap .banner_wrap .swiper-button-prev,
 .main_wrap .banner_wrap .swiper-button-next { width: 9px; height: 16px; margin-top: 0; transform: translateY(-50%); } 
-.main_wrap .banner_wrap .swiper-button-prev { left: 30px; background: url(/images/front/00003/ico_prev_btn.png) no-repeat; } 
-.main_wrap .banner_wrap .swiper-button-next { right: 30px; background: url(/images/front/00003/ico_next_btn.png) no-repeat; } 
+.main_wrap .banner_wrap .swiper-button-prev { left: 30px; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_prev_btn.png) no-repeat; } 
+.main_wrap .banner_wrap .swiper-button-next { right: 30px; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_next_btn.png) no-repeat; } 
 .main_wrap .qmenu_area { padding: 4.6rem 0; background: #f9f9f9; border-radius: 20px; } 
 .main_wrap .qmenu_area h3 { margin-bottom: 3rem; color: #373737; font-size: 3rem; font-weight: bold; text-align: center; } 
 .main_wrap .qmenu_area ul { display: flex; max-width: 1100px; margin: 0 auto; justify-content: space-between; } 
 .main_wrap .qmenu_area ul li:hover { background: #fff; box-shadow: 0px 0px 35px 0px rgba(88, 88, 88, 0.14); } 
 .main_wrap .qmenu_area ul li { display: flex; width: 180px; height: 180px; border-radius: 50%; align-items: center; justify-content: center; } 
 .main_wrap .qmenu_area ul li a::before { content: ''; display: block; width: 80px; height: 72px; margin: 0 auto 0.5rem; background-repeat: no-repeat; background-position: center; } 
-.main_wrap .qmenu_area ul li:nth-child(1) a::before { background-image: url(/images/front/00003/icon_qmenu01.png); } 
-.main_wrap .qmenu_area ul li:nth-child(2) a::before { background-image: url(/images/front/00003/icon_qmenu02.png); } 
-.main_wrap .qmenu_area ul li:nth-child(3) a::before { background-image: url(/images/front/00003/icon_qmenu03.png); } 
-.main_wrap .qmenu_area ul li:nth-child(4) a::before { background-image: url(/images/front/00003/icon_qmenu04.png); } 
-.main_wrap .qmenu_area ul li:nth-child(5) a::before { background-image: url(/images/front/00003/icon_qmenu05.png); } 
+.main_wrap .qmenu_area ul li:nth-child(1) a::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/icon_qmenu01.png); } 
+.main_wrap .qmenu_area ul li:nth-child(2) a::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/icon_qmenu02.png); } 
+.main_wrap .qmenu_area ul li:nth-child(3) a::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/icon_qmenu03.png); } 
+.main_wrap .qmenu_area ul li:nth-child(4) a::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/icon_qmenu04.png); } 
+.main_wrap .qmenu_area ul li:nth-child(5) a::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/icon_qmenu05.png); } 
 .main_wrap .qmenu_area ul li a { display: block; width: 100%; height: 100%; padding-top: 3rem; border-radius: 50%; align-items: center; justify-content: center; box-sizing: border-box; } 
 .main_wrap .qmenu_area ul li a p { display: flex; min-height: 56px; color: #373737; font-size: 1.8rem; font-weight: 500; text-align: center; align-items: center; justify-content: center; line-height: 1.2; } 
-.main_wrap .service_wrap { padding: 3.6rem 0; background: url(/images/front/00003/service_cont_bg.png) center no-repeat; background-size: cover; } 
+.main_wrap .service_wrap { padding: 3.6rem 0; background: url(https://inkium1.learnhub.co.kr/images/front/00003/service_cont_bg.png) center no-repeat; background-size: cover; } 
 .main_wrap .service_wrap .service_area { display: flex; justify-content: space-between; } 
 .main_wrap .service_wrap .service_right { width: 600px; padding: 50px 0 70px; position: relative; background: #fff; } 
 .main_wrap .service_wrap .service_right .tit { display: inline-block; padding: 0.5rem 2.5rem; position: absolute; top: 20px; left: -20px; background: #373737; color: #fff; font-size: 1.8rem; font-weight: 500; } 
@@ -3384,13 +3384,13 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .main_wrap .notice_wrap .notice .notice_list li.alarm .alarm_tag { display: inline-block; } 
 .main_wrap .notice_wrap .notice .notice_list li.file .file_tag { display: inline-block; } 
 .main_wrap .notice_wrap .notice .notice_list li .alarm_tag { display: none; padding: 0.2rem 2rem; background: #ff8200; color: #fff; border-radius: 20px; vertical-align: middle; } 
-.main_wrap .notice_wrap .notice .notice_list li .file_tag { display: none; width: 18px; height: 20px; background: url(/images/front/00003/ico_file.png) no-repeat; vertical-align: middle; } 
+.main_wrap .notice_wrap .notice .notice_list li .file_tag { display: none; width: 18px; height: 20px; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_file.png) no-repeat; vertical-align: middle; } 
 .main_wrap .notice_wrap .notice .notice_list li .date { margin-left: auto; color: #666666; font-size: 1.4rem; font-weight: 300; white-space: nowrap; } 
 .main_wrap .notice_wrap .notice_banner { max-width: 280px; width: 100%; padding: 3rem 2.8rem; background: #f2f2f2; border-radius: 30px; box-sizing: border-box; } 
 .main_wrap .notice_wrap .notice_banner .b_tit { color: #373737; font-size: 2rem; font-weight: bold; } 
 .main_wrap .notice_wrap .notice_banner .b_tel { color: #373737; font-size: 3.2rem; font-weight: 900; } 
 .main_wrap .notice_wrap .notice_banner .txt_area { margin-top: 2rem; position: relative; text-align: right; } 
-.main_wrap .notice_wrap .notice_banner .txt_area::before { content: ''; width: 72px; height: 71px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: url(/images/front/00003/ico_notice_tel.png) no-repeat; } 
+.main_wrap .notice_wrap .notice_banner .txt_area::before { content: ''; width: 72px; height: 71px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_notice_tel.png) no-repeat; } 
 .main_wrap .notice_wrap .notice_banner .txt_area p { color: #666666; font-size: 1.5rem; font-weight: 400; } 
 .main_wrap .notice_wrap .notice_banner .txt_area p + p { margin-top: 4px; } 
 
@@ -3427,9 +3427,9 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .content_wrap .detail_wrap .txt_box ul li p { color: #666666; font-size: 1.4rem; } 
 .content_wrap .ld_tit .rate_area { display: flex; align-items: center; } 
 .content_wrap .ld_tit .rate_area .txt { margin-right: 1.6rem; color: #666666; font-size: 1.4rem; } 
-.content_wrap .rate_area .rv_rate { width: 86px; height: 14px; position: relative; background: url(/images/front/00003/ico_star_bg.png) no-repeat; z-index: 1; } 
+.content_wrap .rate_area .rv_rate { width: 86px; height: 14px; position: relative; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_star_bg.png) no-repeat; z-index: 1; } 
 .content_wrap .ld_tit .rate_area .rv_score { margin-left: 1rem; color: #666666; font-size: 1.4rem; } 
-.content_wrap .detail_wrap .rate_area .rv_rate span { width: auto; height: 14px; position: absolute; background: url(/images/front/00003/ico_star_on.png) no-repeat; z-index: 2; } 
+.content_wrap .detail_wrap .rate_area .rv_rate span { width: auto; height: 14px; position: absolute; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_star_on.png) no-repeat; z-index: 2; } 
 .content_wrap .detail_wrap .review .item { display: none; padding: 3.6rem 3rem; border-bottom: 1px solid #dadada; } 
 .content_wrap .detail_wrap .review .score_wrap { max-width: 86px; margin-right: 5rem; } 
 .content_wrap .detail_wrap .review .rv_score { margin-bottom: 10px; color: #000; font-size: 4rem; font-weight: 900; text-align: center; } 
@@ -3481,7 +3481,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .content_wrap .course_wrap .course_list .item a .h_box .txt02 { color: #fff; font-size: 2.5rem; font-weight: 500; } 
 .content_wrap .course_wrap .course_list .item a .h_box .txt02 span { color: #ff7000; text-decoration: underline; text-underline-offset: 10px; } 
 .content_wrap .course_wrap .course_list .item a .h_box .txt03 { margin-top: auto; color: #fff; font-size: 1.6rem; } 
-.content_wrap .course_wrap .course_list .item a .h_box .txt03::after { content: ''; display: inline-block; width: 20px; height: 14px; margin-left: 1rem; background: url(/images/front/00003/ico_arrow_right.png) no-repeat; } 
+.content_wrap .course_wrap .course_list .item a .h_box .txt03::after { content: ''; display: inline-block; width: 20px; height: 14px; margin-left: 1rem; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_arrow_right.png) no-repeat; } 
 .content_wrap .course_wrap .course_list .item .img_wrap {max-width: 280px; width: 100%; height: 240px; position: relative; border: 1px solid #dadada; border-radius: 10px; font-size: 0; overflow: hidden; } 
 .content_wrap .course_wrap .course_list .item .img_wrap .img_tag::before { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.6); z-index: -1; } 
 .content_wrap .course_wrap .course_list .item .img_wrap .img_tag { padding: 0.5rem 0; position: absolute; top: 0; left: 0; right: 0; color: #fff; font-size: 1.3rem; text-align: center; z-index: 1; } 
@@ -3503,11 +3503,11 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .view_list_wrap .view_list .item .h_wrap { display: none; width: 100%; height: 100%; padding: 50px 18px 16px; position: absolute; top: 0; bottom: 0; color: #fff; box-sizing: border-box; z-index: 8; } 
 .view_list_wrap .view_list .item .h_wrap .h_tit { display: -webkit-box; height: 46px; margin-bottom: 30px; font-size: 1.8rem; font-weight: bold; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; line-height: 23px; word-break: keep-all; overflow: hidden; } 
 .view_list_wrap .view_list .item .h_wrap li { padding-left: 16px; position: relative; font-size: 1.3rem; } 
-.view_list_wrap .view_list .item .h_wrap li::before { content: ''; width: 12px; height: 12px; position: absolute; left: 0; top: 2px; background: url(/images/front/00003/h_list_icon.png) no-repeat; } 
+.view_list_wrap .view_list .item .h_wrap li::before { content: ''; width: 12px; height: 12px; position: absolute; left: 0; top: 2px; background: url(https://inkium1.learnhub.co.kr/images/front/00003/h_list_icon.png) no-repeat; } 
 .view_list_wrap .view_list .item .h_wrap .h_btn { margin-top: auto; padding: 10px 0; background: #ff7000; color: #fff; font-size: 1.7rem; font-weight: bold; text-align: center; border-radius: 10px; }
 /* 전체페이지 리스트 추가 */
 .view_list_wrap .ld_tit .sort_wrap { display: flex; margin-left: 10px; background: #fff; } 
-.view_list_wrap .ld_tit .sort_wrap .sort_btn { display: block; width: 40px; height: 40px; background-image: url(/images/front/00003/sort_icon.png); background-repeat: no-repeat; box-sizing: border-box; border: 1px solid #ccc; } 
+.view_list_wrap .ld_tit .sort_wrap .sort_btn { display: block; width: 40px; height: 40px; background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/sort_icon.png); background-repeat: no-repeat; box-sizing: border-box; border: 1px solid #ccc; } 
 .view_list_wrap .ld_tit .sort_wrap .sort_btn.btn_gallary { border-right: 0; } 
 .view_list_wrap .ld_tit .sort_wrap .sort_btn.btn_list { background-position-x: -40px; } 
 .view_list_wrap .ld_tit .sort_wrap .sort_btn.active { background-color: #ff7000; background-position-y: -40px; border-color: #ff7000; } 
@@ -3532,7 +3532,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .view_list_wrap .view_list.sort_list .list_group li:last-child:after { display: none } 
 .view_list_wrap .view_list.sort_list .item .txt { display: flex; width: 100%; flex-direction: column; } 
 .view_list_wrap .view_list.sort_list .rate_area { display: flex; margin-bottom: 4px; align-items: center; } 
-.view_list_wrap .view_list.sort_list .rate_area .rv_rate span { width: auto; height: 14px; position: absolute; background: url(/images/front/00003/ico_star_on.png) no-repeat; z-index: 2; } 
+.view_list_wrap .view_list.sort_list .rate_area .rv_rate span { width: auto; height: 14px; position: absolute; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_star_on.png) no-repeat; z-index: 2; } 
 .view_list_wrap .view_list.sort_list .rate_area p { margin-left: 1rem; position: relative; color: #666666; font-size: 1.4rem; } 
 .view_list_wrap .view_list.sort_list .rate_area .view_count { padding-left: 1rem; } 
 .view_list_wrap .view_list.sort_list .rate_area p { margin-left: 1rem; position: relative; color: #666666; font-size: 1.4rem; } 
@@ -3561,7 +3561,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .content_wrap .course_wrap .seach_area { width: 100%; margin-top: 3rem; } 
 .content_wrap .course_wrap .seach_area .input_wrap { display: flex; width: 100%; padding: 10px 10px; margin-left: 0; border: 1px solid #373737; border-radius: 30px; justify-content: space-between; box-sizing: border-box; overflow: hidden; } 
 .content_wrap .course_wrap .seach_area .input_wrap input { width: calc(100% - 30px); border: 0; font-size: 1.4rem; text-align: center; } 
-.content_wrap .course_wrap .seach_area .input_wrap button { width: 20px; height: 19px; background: url(/images/front/00003/ico_seach.png) center / contain no-repeat; border: 0; text-indent: -99999px; } 
+.content_wrap .course_wrap .seach_area .input_wrap button { width: 20px; height: 19px; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_seach.png) center / contain no-repeat; border: 0; text-indent: -99999px; } 
 .content_wrap .course_wrap .seach_area .input_wrap input:focus { border: none; outline: none; } 
 
 /* 전체과정 페이지 */
@@ -3576,7 +3576,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .content_wrap .all_search_wrap .check_list.open + .check_result {border-color: #444;}
 .content_wrap .all_search_wrap .check_list dd { display: none; } 
 .content_wrap .all_search_wrap .check_list .btnWrap { display: flex; width: 80px; height: 52px; align-items: center; justify-content: center; border: 1px solid #ddd; box-sizing: border-box; } 
-.content_wrap .all_search_wrap .check_list .moreBtn { width: 14px; height: 14px; background: url(/images/front/00003/ico_close.png) center no-repeat; background-size: contain; transform: rotate(-45deg); transition: all 0.35s; } 
+.content_wrap .all_search_wrap .check_list .moreBtn { width: 14px; height: 14px; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_close.png) center no-repeat; background-size: contain; transform: rotate(-45deg); transition: all 0.35s; } 
 .content_wrap .all_search_wrap .check_list .inp_chk { display: none; } 
 .content_wrap .all_search_wrap .check_list .lb_tag { display: inline-block; padding: 2px 16px; background: #fff; color: #666666; font-size: 1.3rem; border: 1px solid transparent; border-radius: 20px; box-sizing: border-box; } 
 .content_wrap .all_search_wrap .check_list .inp_chk:checked + label { width: 100%; border-color: #373737; } 
@@ -3631,7 +3631,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp.setUp .popTop { border-bottom: 0; justify-content: initial; } 
 .check03 label { font-size: 1.3rem } 
 .check03 input[type="checkbox"] { -webkit-appearance: none; -webkit-box-sizing: border-box; box-sizing: border-box; position: relative; width: 15px; height: 15px; cursor: pointer; outline: none !important; border-radius: 3px; vertical-align: middle; background: #f9f9f9 } 
-.check03 input[type="checkbox"]:checked { background:url(/images/front/00003/ico_check.png) no-repeat top 4px left 2px #f9f9f9; } 
+.check03 input[type="checkbox"]:checked { background:url(https://inkium1.learnhub.co.kr/images/front/00003/ico_check.png) no-repeat top 4px left 2px #f9f9f9; } 
 .check03 input[type="checkbox"]:checked::before { border-radius: 4px; transform: scale(1) translate(-50%, -50%) } 
 
 /* 메인 관심설정 직무설정 팝업 */
@@ -3645,7 +3645,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp.setUp .popBottom { padding: 2rem 0; position: relative; background: #373737; } 
 .popUp.setUp .popBottom .txt { color: #fff; font-size: 2rem; font-weight: bold; text-align: center; } 
 .popUp.setUp .popBottom .txt span { color: #a0c44c; } 
-.popUp.setUp .popBottom a { display: flex; max-width: 235px; width: 100%; height: 40px; position: absolute; top: 50%; right: 60px; transform: translateY(-50%); background: url(/images/front/00003/ico_btn_arrow.png) center right 20px #000000 no-repeat; color: #fff; font-size: 1.6rem; align-items: center; justify-content: center; border-radius: 10px; } 
+.popUp.setUp .popBottom a { display: flex; max-width: 235px; width: 100%; height: 40px; position: absolute; top: 50%; right: 60px; transform: translateY(-50%); background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_btn_arrow.png) center right 20px #000000 no-repeat; color: #fff; font-size: 1.6rem; align-items: center; justify-content: center; border-radius: 10px; } 
 .popUp.setUp .pc_pd .ckItem .check03 input[type="checkbox"] { display: none; } 
 .popUp.setUp .pc_pd .ckItem .check03 input[type="checkbox"]:checked + label { color: #ff7000; border-color: #ff7000; font-weight: 500; } 
 .popUp.setUp .com_area .check03 label { display: block; border: 1px solid #e9e9e9; line-height: 28px; text-align: center; } 
@@ -3668,7 +3668,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp.setUp .popBottom { padding: 2rem 0; position: relative; background: #373737; } 
 .popUp.setUp .popBottom .txt { color: #fff; font-size: 2rem; font-weight: bold; text-align: center; } 
 .popUp.setUp .popBottom .txt span { color: #a0c44c; } 
-.popUp.setUp .popBottom a { display: flex; max-width: 235px; width: 100%; height: 40px; position: absolute; top: 50%; right: 60px; transform: translateY(-50%); background: url(/images/front/00003/ico_btn_arrow.png) center right 20px #000000 no-repeat; color: #fff; font-size: 1.6rem; align-items: center; justify-content: center; border-radius: 10px; } 
+.popUp.setUp .popBottom a { display: flex; max-width: 235px; width: 100%; height: 40px; position: absolute; top: 50%; right: 60px; transform: translateY(-50%); background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_btn_arrow.png) center right 20px #000000 no-repeat; color: #fff; font-size: 1.6rem; align-items: center; justify-content: center; border-radius: 10px; } 
 .popUp.setUp .com_area .check03 {margin-top: 0.5rem; position: relative; line-height: 1;}
 .popUp.setUp .com_area .check03 input[type="checkbox"] {position: absolute; top: 2px; left: 0; margin: 0;}
 .popUp.setUp .com_area .check03 label {display: inline-block; padding-left: 20px;} */
@@ -3701,7 +3701,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp.messagePop { border-radius: 20px; overflow: hidden; z-index: 99999;} 
 .popUp.messagePop .popTop { padding: 1.5rem 2.5rem; background: #f36f20; border-bottom: 0; } 
 .popUp.messagePop .popTop h3 { font-size: 1.8rem; color: #fff; font-weight: bold; } 
-.popUp.messagePop .popTop .close { background: url(/images/front/00003/ico_close02.png) no-repeat; background-size: contain; } 
+.popUp.messagePop .popTop .close { background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_close02.png) no-repeat; background-size: contain; } 
 .popUp.messagePop .popCont { padding: 2rem 3rem; } 
 .popUp.messagePop .popCont .contTop { display: flex; align-items: center; } 
 .popUp.messagePop .popCont .contTop .txt { color: #666666; font-size: 1.4rem; flex-shrink: 0; } 
@@ -3718,7 +3718,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp .popCont textarea:focus-visible {outline-color: #000;}
 .winPopup .winPopTop { display: flex; padding: 1.5rem 2.5rem; background: #f36f20; border-bottom: 0; justify-content: space-between; align-items: center; } 
 .winPopup .winPopTop h3 { font-size: 1.8rem; color: #fff; font-weight: bold; } 
-.winPopup .winPopTop .close { display: inline-block; width: 20px; height: 20px; background: url(/images/front/00003/ico_close02.png) no-repeat; background-size: contain; text-indent: -9999px; z-index: 100; } 
+.winPopup .winPopTop .close { display: inline-block; width: 20px; height: 20px; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_close02.png) no-repeat; background-size: contain; text-indent: -9999px; z-index: 100; } 
 .winPopup .winPopCont { background: #fff; padding: 2rem 3rem; } 
 .winPopup .winPopCont .txt_wrap { width: 100%; } 
 .winPopup .winPopCont .txt_wrap input { width: 100%; font-family: inherit; padding: 0.5rem 1.5rem; background: #fff; font-size: 1.4rem; border: 1px solid #f5f5f5; border-radius: 5px; box-sizing: border-box; } 
@@ -3735,20 +3735,20 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp.studyPop .popLeft .studyList li.active a, .popUp.studyPop .popLeft .studyList li:hover a { color: #f36f20; font-weight: bold; } 
 .popUp.studyPop .popLeft .studyList li a { display: flex; width: 100%; height: 100%; padding-left: 30px; color: #fff; font-size: 1.6rem; font-weight: 400; align-items: center; box-sizing: border-box; } 
 .popUp.studyPop .popLeft .studyList .icon { padding-left: 30px; background-position: left center; background-repeat: no-repeat; } 
-.popUp.studyPop .popLeft .studyList .icon01 { background-image: url(/images/front/00003/study_icon_01.png); } 
-.popUp.studyPop .popLeft .studyList .icon02 { background-image: url(/images/front/00003/study_icon_02.png); } 
-.popUp.studyPop .popLeft .studyList .icon03 { background-image: url(/images/front/00003/study_icon_03.png); } 
-.popUp.studyPop .popLeft .studyList .icon04 { background-image: url(/images/front/00003/study_icon_04.png); } 
-.popUp.studyPop .popLeft .studyList .icon05 { background-image: url(/images/front/00003/study_icon_05.png); } 
-.popUp.studyPop .popLeft .studyList .icon06 { background-image: url(/images/front/00003/study_icon_06.png); } 
-.popUp.studyPop .popLeft .studyList .icon07 { background-image: url(/images/front/00003/study_icon_07.png); }
-.popUp.studyPop .popLeft .studyList li.active .icon01, .popUp.studyPop .popLeft .studyList li:hover .icon01 { background-image: url(/images/front/00003/study_icon_on_01.png); } 
-.popUp.studyPop .popLeft .studyList li.active .icon02, .popUp.studyPop .popLeft .studyList li:hover .icon02 { background-image: url(/images/front/00003/study_icon_on_02.png); } 
-.popUp.studyPop .popLeft .studyList li.active .icon03, .popUp.studyPop .popLeft .studyList li:hover .icon03 { background-image: url(/images/front/00003/study_icon_on_03.png); } 
-.popUp.studyPop .popLeft .studyList li.active .icon04, .popUp.studyPop .popLeft .studyList li:hover .icon04 { background-image: url(/images/front/00003/study_icon_on_04.png); } 
-.popUp.studyPop .popLeft .studyList li.active .icon05, .popUp.studyPop .popLeft .studyList li:hover .icon05 { background-image: url(/images/front/00003/study_icon_on_05.png); } 
-.popUp.studyPop .popLeft .studyList li.active .icon06, .popUp.studyPop .popLeft .studyList li:hover .icon06 { background-image: url(/images/front/00003/study_icon_on_06.png); } 
-.popUp.studyPop .popLeft .studyList li.active .icon07, .popUp.studyPop .popLeft .studyList li:hover .icon07 { background-image: url(/images/front/00003/study_icon_on_07.png); } 
+.popUp.studyPop .popLeft .studyList .icon01 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_01.png); } 
+.popUp.studyPop .popLeft .studyList .icon02 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_02.png); } 
+.popUp.studyPop .popLeft .studyList .icon03 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_03.png); } 
+.popUp.studyPop .popLeft .studyList .icon04 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_04.png); } 
+.popUp.studyPop .popLeft .studyList .icon05 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_05.png); } 
+.popUp.studyPop .popLeft .studyList .icon06 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_06.png); } 
+.popUp.studyPop .popLeft .studyList .icon07 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_07.png); }
+.popUp.studyPop .popLeft .studyList li.active .icon01, .popUp.studyPop .popLeft .studyList li:hover .icon01 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_on_01.png); } 
+.popUp.studyPop .popLeft .studyList li.active .icon02, .popUp.studyPop .popLeft .studyList li:hover .icon02 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_on_02.png); } 
+.popUp.studyPop .popLeft .studyList li.active .icon03, .popUp.studyPop .popLeft .studyList li:hover .icon03 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_on_03.png); } 
+.popUp.studyPop .popLeft .studyList li.active .icon04, .popUp.studyPop .popLeft .studyList li:hover .icon04 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_on_04.png); } 
+.popUp.studyPop .popLeft .studyList li.active .icon05, .popUp.studyPop .popLeft .studyList li:hover .icon05 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_on_05.png); } 
+.popUp.studyPop .popLeft .studyList li.active .icon06, .popUp.studyPop .popLeft .studyList li:hover .icon06 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_on_06.png); } 
+.popUp.studyPop .popLeft .studyList li.active .icon07, .popUp.studyPop .popLeft .studyList li:hover .icon07 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/study_icon_on_07.png); } 
 .popUp.studyPop .popContents { width: calc(100% - 200px); min-height: 100vh; padding: 4rem; background: #f5f5f5; box-sizing: border-box; } 
 .popUp.studyPop .popContents .popTit { margin-bottom: 3rem; } 
 .popUp.studyPop .popContents .popTit p { color: #373737; font-size: 3rem; font-weight: bold; } 
@@ -3772,7 +3772,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp.studyPop .studyInfo .prgsArea + .prgsArea { margin-top: 1rem; } 
 .popUp.studyPop .studyInfo .prgsArea .prgsBar { max-width: 830px; width: 100%; height: 15px; background: #d7d7d7; border-radius: 10px; overflow: hidden; } 
 .popUp.studyPop .studyInfo .prgsArea .prgsBar span { display: block; background: #f36f20; height: 100%; border-radius: 10px; } 
-.popUp.studyPop .studyInfo .infoBtn button span::before { content: ''; display: block; width: 39px; height: 49px; margin: 0 10px 0 auto; background: url(/images/front/00003/icon_play.png) center no-repeat; } 
+.popUp.studyPop .studyInfo .infoBtn button span::before { content: ''; display: block; width: 39px; height: 49px; margin: 0 10px 0 auto; background: url(https://inkium1.learnhub.co.kr/images/front/00003/icon_play.png) center no-repeat; } 
 .popUp.studyPop .studyInfo .infoBtn button { display: inline-flex; width: 130px; height: 130px; background: #f36f20; color: #ffffff; font-size: 1.8rem; font-weight: bold; align-items: center; justify-content: center; border-radius: 15px; } 
 .popUp.studyPop .circleWrap { display: flex; margin: 0 auto 7rem; justify-content: center; gap: 2rem; flex-wrap: wrap;} 
 .popUp.studyPop .circleArea .txt { margin-top: 1rem; color: #373737; font-size: 1.6rem; font-weight: 500; text-align: center; } 
@@ -3791,10 +3791,10 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp.studyPop .testInfo .testList li a { display: flex; height: 100%; padding-top: 22px; flex-direction: column; box-sizing: border-box; } 
 .popUp.studyPop .testInfo .testList li .imgWrap { position: relative; height: 114px; } 
 .popUp.studyPop .testInfo .testList li .imgWrap::after { content: ''; top: 40px; transform: translateX(-50%); background-size: contain; } 
-.popUp.studyPop .testInfo .testList li:nth-child(1) .imgWrap::after { width: 71px; height: 77px; position: absolute; left: calc(50% - -12px); background: url(/images/front/00003/study_item01.png) no-repeat; } 
-.popUp.studyPop .testInfo .testList li:nth-child(2) .imgWrap::after { width: 71px; height: 77px; position: absolute; left: calc(50% - -12px); background: url(/images/front/00003/study_item02.png) no-repeat; } 
-.popUp.studyPop .testInfo .testList li:nth-child(3) .imgWrap::after { width: 58px; height: 68px; position: absolute; left: calc(50% - -12px); background: url(/images/front/00003/study_item03.png) no-repeat; } 
-.popUp.studyPop .testInfo .testList li:nth-child(4) .imgWrap::after { width: 62px; height: 77px; position: absolute; left: calc(50% - -4px); background: url(/images/front/00003/study_item04.png) no-repeat; } 
+.popUp.studyPop .testInfo .testList li:nth-child(1) .imgWrap::after { width: 71px; height: 77px; position: absolute; left: calc(50% - -12px); background: url(https://inkium1.learnhub.co.kr/images/front/00003/study_item01.png) no-repeat; } 
+.popUp.studyPop .testInfo .testList li:nth-child(2) .imgWrap::after { width: 71px; height: 77px; position: absolute; left: calc(50% - -12px); background: url(https://inkium1.learnhub.co.kr/images/front/00003/study_item02.png) no-repeat; } 
+.popUp.studyPop .testInfo .testList li:nth-child(3) .imgWrap::after { width: 58px; height: 68px; position: absolute; left: calc(50% - -12px); background: url(https://inkium1.learnhub.co.kr/images/front/00003/study_item03.png) no-repeat; } 
+.popUp.studyPop .testInfo .testList li:nth-child(4) .imgWrap::after { width: 62px; height: 77px; position: absolute; left: calc(50% - -4px); background: url(https://inkium1.learnhub.co.kr/images/front/00003/study_item04.png) no-repeat; } 
 .popUp.studyPop .testInfo .testList li .tit { color: #373737; font-size: 1.6rem; font-weight: 500; text-align: center; } 
 .popUp.studyPop .testInfo .testList li .btnLink { margin-top: auto; background: #373737; text-align: center; } 
 .popUp.studyPop .testInfo .testList li .btnLink p { padding: 1rem 0; color: #fff; font-size: 1.6rem; font-weight: bold; } 
@@ -3840,7 +3840,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .modalPop{z-index: 9999;background: #fff;position: fixed;max-width: 500px;width: 100%;left: 50%;top: 50%;transform: translate(-50%,-50%);display: none}
 .modalTop{padding: 2rem 3rem;border-bottom: 1px solid #1b1d1f;display: flex;justify-content: space-between;align-items: center;}
 .modalTop h3{font-weight: 500;font-size: 2.2rem}
-.modalTop .close{background: url(/images/front/00003/ico_close.png) no-repeat;width: 20px;height: 20px;text-indent: -9999px;}
+.modalTop .close{background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_close.png) no-repeat;width: 20px;height: 20px;text-indent: -9999px;}
 .modalCont{padding: 3rem 0;max-height: calc(100vh - 150px)}
 .modalCont > .scr.mh_scr {max-height: calc(100vh - 220px)}
 .modalCont .pc_pd{padding: 0 3rem}
@@ -3882,7 +3882,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .popUp.learnPop .infoList li .tagWrap .tag.bcOrange { background: #f36f20; color: #fff; } 
 .popUp.learnPop .popLeft.on ~ .popContents .btnTop { visibility: visible; } 
 .popUp.learnPop .popContents .btnTop { display: none; visibility: hidden; } 
-.popContents .btnTop .infoOpen::before {content: ''; display: inline-block; width: 14px; height: 11px; margin-right: 4px; background: url(/images/front/00003/menu_icon.png) no-repeat; background-size: contain;}
+.popContents .btnTop .infoOpen::before {content: ''; display: inline-block; width: 14px; height: 11px; margin-right: 4px; background: url(https://inkium1.learnhub.co.kr/images/front/00003/menu_icon.png) no-repeat; background-size: contain;}
 .popUp.learnPop .popContents .btnTop .infoOpen { padding: 2px 16px; margin-bottom: 16px; background:#f36f20 ; background-size: 14px auto; color: #fff; font-size: 13px; font-weight: 400; border: 1px solid #f36f20; border-radius: 20px; box-sizing: border-box; } 
 .popUp.learnPop .popContents .popTit { display: flex; margin-bottom: 40px; justify-content: space-between; align-items: center; } 
 .popUp.learnPop .popContents .popTit p { color: #373737; font-size: 2.2rem; font-weight: bold; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; } 
@@ -3925,39 +3925,39 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .content_area .sub_menu .myclass_list li:first-child a { font-size: 1.8rem; font-weight: bold; } 
 .content_area .sub_menu .myclass_list li a { display: flex; width: 100%; height: 100%; padding-left: 36px; color: #373737; font-size: 1.6rem; font-weight: 400; align-items: center; box-sizing: border-box; } 
 .content_area .sub_menu .myclass_list .icon { padding-left: 34px; background-position: left center; background-repeat: no-repeat; } 
-.content_area .sub_menu .myclass_list .icon01 { background-image: url(/images/front/00003/myclass_icon_01.png); } 
-.content_area .sub_menu .myclass_list .icon02 { background-image: url(/images/front/00003/myclass_icon_02.png); } 
-.content_area .sub_menu .myclass_list .icon03 { background-image: url(/images/front/00003/myclass_icon_03.png); } 
-.content_area .sub_menu .myclass_list .icon04 { background-image: url(/images/front/00003/myclass_icon_04.png); } 
-.content_area .sub_menu .myclass_list .icon05 { background-image: url(/images/front/00003/myclass_icon_05.png); } 
-.content_area .sub_menu .myclass_list .icon06 { background-image: url(/images/front/00003/myclass_icon_06.png); } 
-.content_area .sub_menu .myclass_list .icon07 { background-image: url(/images/front/00003/myclass_icon_07.png); } 
-.content_area .sub_menu .myclass_list .icon08 { background-image: url(/images/front/00003/myclass_icon_08.png); } 
-.content_area .sub_menu .myclass_list .icon013 { background-image: url(/images/front/00003/myclass_icon_013.png); }
-.content_area .sub_menu .myclass_list .icon014 { background-image: url(/images/front/00003/myclass_icon_014.png); }
-.content_area .sub_menu .myclass_list .icon015 { background-image: url(/images/front/00003/myclass_icon_015.png); }
+.content_area .sub_menu .myclass_list .icon01 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_01.png); } 
+.content_area .sub_menu .myclass_list .icon02 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_02.png); } 
+.content_area .sub_menu .myclass_list .icon03 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_03.png); } 
+.content_area .sub_menu .myclass_list .icon04 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_04.png); } 
+.content_area .sub_menu .myclass_list .icon05 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_05.png); } 
+.content_area .sub_menu .myclass_list .icon06 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_06.png); } 
+.content_area .sub_menu .myclass_list .icon07 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_07.png); } 
+.content_area .sub_menu .myclass_list .icon08 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_08.png); } 
+.content_area .sub_menu .myclass_list .icon013 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_013.png); }
+.content_area .sub_menu .myclass_list .icon014 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_014.png); }
+.content_area .sub_menu .myclass_list .icon015 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_015.png); }
 .content_area .sub_menu .myclass_list li.active .icon01,
-.content_area .sub_menu .myclass_list li:hover .icon01 { background-image: url(/images/front/00003/myclass_icon_on01.png); } 
+.content_area .sub_menu .myclass_list li:hover .icon01 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on01.png); } 
 .content_area .sub_menu .myclass_list li.active .icon02,
-.content_area .sub_menu .myclass_list li:hover .icon02 { background-image: url(/images/front/00003/myclass_icon_on02.png); } 
+.content_area .sub_menu .myclass_list li:hover .icon02 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on02.png); } 
 .content_area .sub_menu .myclass_list li.active .icon03,
-.content_area .sub_menu .myclass_list li:hover .icon03 { background-image: url(/images/front/00003/myclass_icon_on03.png); } 
+.content_area .sub_menu .myclass_list li:hover .icon03 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on03.png); } 
 .content_area .sub_menu .myclass_list li.active .icon04,
-.content_area .sub_menu .myclass_list li:hover .icon04 { background-image: url(/images/front/00003/myclass_icon_on04.png); } 
+.content_area .sub_menu .myclass_list li:hover .icon04 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on04.png); } 
 .content_area .sub_menu .myclass_list li.active .icon05,
-.content_area .sub_menu .myclass_list li:hover .icon05 { background-image: url(/images/front/00003/myclass_icon_on05.png); } 
+.content_area .sub_menu .myclass_list li:hover .icon05 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on05.png); } 
 .content_area .sub_menu .myclass_list li.active .icon06,
-.content_area .sub_menu .myclass_list li:hover .icon06 { background-image: url(/images/front/00003/myclass_icon_on06.png); } 
+.content_area .sub_menu .myclass_list li:hover .icon06 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on06.png); } 
 .content_area .sub_menu .myclass_list li.active .icon07,
-.content_area .sub_menu .myclass_list li:hover .icon07 { background-image: url(/images/front/00003/myclass_icon_on07.png); } 
+.content_area .sub_menu .myclass_list li:hover .icon07 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on07.png); } 
 .content_area .sub_menu .myclass_list li.active .icon08,
-.content_area .sub_menu .myclass_list li:hover .icon08 { background-image: url(/images/front/00003/myclass_icon_on08.png); }
+.content_area .sub_menu .myclass_list li:hover .icon08 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on08.png); }
 .content_area .sub_menu .myclass_list li.active .icon013,
-.content_area .sub_menu .myclass_list li:hover .icon013 { background-image: url(/images/front/00003/myclass_icon_on013.png); }
+.content_area .sub_menu .myclass_list li:hover .icon013 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on013.png); }
 .content_area .sub_menu .myclass_list li.active .icon014,
-.content_area .sub_menu .myclass_list li:hover .icon014 { background-image: url(/images/front/00003/myclass_icon_on014.png); }
+.content_area .sub_menu .myclass_list li:hover .icon014 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on014.png); }
 .content_area .sub_menu .myclass_list li.active .icon015,
-.content_area .sub_menu .myclass_list li:hover .icon015 { background-image: url(/images/front/00003/myclass_icon_on015.png); }
+.content_area .sub_menu .myclass_list li:hover .icon015 { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_icon_on015.png); }
 .content_area .contain { width: calc(100% - 300px); padding: 26px 0; } 
 .content_area .con_tit { margin-bottom: 2rem; color: #373737; font-size: 2.2rem; font-weight: bold; } 
 .content_area .cont_top { display: flex; margin-bottom: 2rem; align-items: center; justify-content: space-between; } 
@@ -4019,8 +4019,8 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .myclass_wrap .itemList .item.certBox a { display: flex; width: 100%; color: #9ea4aa; font-size: 1.5rem; border: 1px solid #c9cdd2; border-radius: 5px; align-items: center; } 
 .myclass_wrap .itemList .item.certBox a::before { content: ''; display: block; width: 40px; height: 40px; background-position: center; background-repeat: no-repeat; flex-shrink: 0; border-right: 1px solid #c9cdd2; } 
 .myclass_wrap .itemList .item.certBox a p { width: 100%; text-align: center; } 
-.myclass_wrap .itemList .item.certBox a.certPhone::before { background-image: url(/images/front/00003/myclass_phone.png); } 
-.myclass_wrap .itemList .item.certBox a.certIpin::before { background-image: url(/images/front/00003/myclass_ipin.png); } 
+.myclass_wrap .itemList .item.certBox a.certPhone::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_phone.png); } 
+.myclass_wrap .itemList .item.certBox a.certIpin::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_ipin.png); } 
 .myclass_wrap .itemList .item.certBox a:hover,
 .myclass_wrap .itemList .item.certBox li.active a { border-color: #000; } 
 .myclass_wrap .itemList .item.certBox a:hover::before,
@@ -4028,9 +4028,9 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .myclass_wrap .itemList .item.certBox a:hover p,
 .myclass_wrap .itemList .item.certBox li.active a p { color: #000; } 
 .myclass_wrap .itemList .item.certBox a.certPhone:hover::before,
-.myclass_wrap .itemList .item.certBox li.active a.certPhone::before { background-image: url(/images/front/00003/myclass_phone_on.png); } 
+.myclass_wrap .itemList .item.certBox li.active a.certPhone::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_phone_on.png); } 
 .myclass_wrap .itemList .item.certBox a.certIpin:hover::before,
-.myclass_wrap .itemList .item.certBox li.active a.certIpin::before { background-image: url(/images/front/00003/myclass_ipin_on.png); } 
+.myclass_wrap .itemList .item.certBox li.active a.certIpin::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/myclass_ipin_on.png); } 
 
 
 /* 대쉬보드 */
@@ -4038,10 +4038,10 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .content_area .info_wrap .item { flex: 1; width: 100%; background: #fff; box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.07); border-radius: 10px; } 
 .content_area .info_wrap .item a { display: block; padding: 16px 18px; } 
 .content_area .info_wrap .item .tit::before { content: ''; width: 35px; height: 35px; position: absolute; top: -4px; left: 0; background-color: #a0c44c; background-position: center; background-repeat: no-repeat; border-radius: 50%; flex-shrink: 0;} 
-.content_area .info_wrap .item .tit.icon01::before { background-image: url(/images/front/00003/complete_icon01.png); } 
-.content_area .info_wrap .item .tit.icon02::before { background-image: url(/images/front/00003/complete_icon02.png); } 
-.content_area .info_wrap .item .tit.icon03::before { background-image: url(/images/front/00003/complete_icon03.png); } 
-.content_area .info_wrap .item .tit.icon04::before { background-image: url(/images/front/00003/complete_icon04.png); } 
+.content_area .info_wrap .item .tit.icon01::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/complete_icon01.png); } 
+.content_area .info_wrap .item .tit.icon02::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/complete_icon02.png); } 
+.content_area .info_wrap .item .tit.icon03::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/complete_icon03.png); } 
+.content_area .info_wrap .item .tit.icon04::before { background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/complete_icon04.png); } 
 .content_area .info_wrap .item .tit { display: block; margin-bottom: 20px; padding-left: 40px; position: relative; color: #000; font-size: 16px; font-weight: 500;} 
 .content_area .info_wrap .item .cont p { color: #373737; font-size: 24px; font-weight: 900; text-align: center; } 
 .content_area .item_wrap { display: flex; justify-content: space-between; gap: 20px; } 
@@ -4070,7 +4070,7 @@ button { background: inherit; border:none; box-shadow:none; border-radius:0; pad
 .content_area .item_wrap .cnt_bottom .btn_wrap .btn {flex: 1;justify-content: center;} 
 .content_area .cnt_bottom a { display: flex; justify-content: space-between; } 
 .content_area .cnt_bottom .txt_wrap { max-width: 200px; margin-right: 10px; } 
-.content_area .cnt_bottom .txt_wrap::after { content: ''; display: block; width: 70px; height: 70px; margin: 10px auto 0; background-color: #f5f5f5; background-image: url(/images/front/00003/icon_play02.png); background-position: 20px 12px; background-repeat: no-repeat; border-radius: 50%; } 
+.content_area .cnt_bottom .txt_wrap::after { content: ''; display: block; width: 70px; height: 70px; margin: 10px auto 0; background-color: #f5f5f5; background-image: url(https://inkium1.learnhub.co.kr/images/front/00003/icon_play02.png); background-position: 20px 12px; background-repeat: no-repeat; border-radius: 50%; } 
 .content_area .cnt_bottom .txt_wrap p { color: #666666; font-size: 14px; font-weight: 300; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden; } 
 .content_area .cnt_bottom .img_wrap { width: 145px; height: 100px; border-radius: 10px; overflow: hidden; font-size: 0;} 
 .content_area .cnt_bottom .img_wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top left; } 
@@ -4113,8 +4113,8 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .table_type01 table td { background: #fff; color: #666666; font-size: 1.4rem; font-weight: 400; text-align: center; vertical-align: middle; } 
 
 .content_area .cont_box .rate_area { display: flex; align-items: center; } 
-.content_area .cont_box .rate_area .rv_rate { width: 86px; height: 14px; position: relative; background: url(/images/front/00003/ico_star_bg.png) no-repeat; z-index: 1; } 
-.content_area .cont_box .rate_area .rv_rate span { display: block; width: auto; height: 14px; position: absolute; background: url(/images/front/00003/ico_star_on.png) no-repeat; z-index: 2; } 
+.content_area .cont_box .rate_area .rv_rate { width: 86px; height: 14px; position: relative; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_star_bg.png) no-repeat; z-index: 1; } 
+.content_area .cont_box .rate_area .rv_rate span { display: block; width: auto; height: 14px; position: absolute; background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_star_on.png) no-repeat; z-index: 2; } 
 .content_area .cont_box .rate_area p { margin-left: 1rem; position: relative; color: #666666; font-size: 1.4rem; } 
 
 /* 학습후기 */
@@ -4125,7 +4125,7 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .content_area .write_list .item .cont.in_flex { display: flex; } 
 .content_area .write_list .item .select-menu { position: relative; } 
 .content_area .write_list .item .select-btn { width: 100%; padding: 1rem 30px 1rem 2rem; position: relative; background: #f9f9f9; color: #666666; border-radius: 5px; border: 0; box-sizing: border-box; cursor: pointer; } 
-.content_area .write_list .item .select-btn::before { content: ''; width: 16px; height: 9px; position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); background: url(/images/front/00003/ico_arrow02_bottom.png) no-repeat; } 
+.content_area .write_list .item .select-btn::before { content: ''; width: 16px; height: 9px; position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); background: url(https://inkium1.learnhub.co.kr/images/front/00003/ico_arrow02_bottom.png) no-repeat; } 
 .content_area .write_list .item .select-menu.active .select-btn::before { transform: translateY(-50%) rotate(180deg); } 
 .content_area .write_list .item .select-menu.active .options { display: block; } 
 .content_area .write_list .item .select-menu .options { display: none; padding: 1rem 30px 1rem 2rem; position: absolute; top: 40px; left: 0; right: 0; background: #fff; border: 1px solid #000; } 
@@ -4142,16 +4142,16 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 /* 페이징 */
 .paging_wrap { display: flex; justify-content: center; margin-top: 30px; align-items: center; } 
 .paging_wrap li.arrow a { width: 15px; height: 15px; border-radius: 3px; text-indent: -9999px; } 
-.paging_wrap li.first a { background: url(/images/front/00003/paging_first.png) no-repeat center; } 
-.paging_wrap li.prev a { background: url(/images/front/00003/paging_prev.png) no-repeat center; } 
-.paging_wrap li.last a { background: url(/images/front/00003/paging_last.png) no-repeat center; } 
-.paging_wrap li.next a { background: url(/images/front/00003/paging_next.png) no-repeat center; } 
+.paging_wrap li.first a { background: url(https://inkium1.learnhub.co.kr/images/front/00003/paging_first.png) no-repeat center; } 
+.paging_wrap li.prev a { background: url(https://inkium1.learnhub.co.kr/images/front/00003/paging_prev.png) no-repeat center; } 
+.paging_wrap li.last a { background: url(https://inkium1.learnhub.co.kr/images/front/00003/paging_last.png) no-repeat center; } 
+.paging_wrap li.next a { background: url(https://inkium1.learnhub.co.kr/images/front/00003/paging_next.png) no-repeat center; } 
 .paging_wrap li a { width: 30px; height: 30px; display: block; border-radius: 5px; margin-right: 10px; display: flex; justify-content: center; align-items: center; } 
 .paging_wrap li.active a { background: #373737; color: #fff; border-radius: 50%; } 
 .mo_paging { display: none; margin-top: 30px; justify-content: center; align-items: center; } 
 .mo_paging a { width: 25px; height: 25px; border-radius: 5px; text-indent: -9999px; border: 1px solid #ddd; display: flex; justify-content: center; align-items: center; } 
-.mo_paging .prev { background: url(/images/front/00003/paging_prev.png) no-repeat #fff center; background-size: 5px; } 
-.mo_paging .next { background: url(/images/front/00003/paging_next.png) no-repeat #fff center; background-size: 5px; } 
+.mo_paging .prev { background: url(https://inkium1.learnhub.co.kr/images/front/00003/paging_prev.png) no-repeat #fff center; background-size: 5px; } 
+.mo_paging .next { background: url(https://inkium1.learnhub.co.kr/images/front/00003/paging_next.png) no-repeat #fff center; background-size: 5px; } 
 .mo_paging p { margin: 0 10px; font-size: 14px; } 
 .mo_paging p .cut { font-weight: bold; color: #f36f20; } 
 
@@ -4168,7 +4168,7 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .studyLeft .studyBtn { display: none; padding: 30px 30px 0; } 
 .studyLeft.active .studyBtn { display: block; } 
 .studyLeft .infoOpen { padding: 2px 16px; background: #f36f20; background-size: 14px auto; color: #fff; font-size: 13px; font-weight: 400; border: 1px solid #f36f20; border-radius: 20px; box-sizing: border-box; } 
-.studyLeft .infoOpen::before { content: ''; display: inline-block; width: 14px; height: 11px; margin-right: 4px; background: url(/images/front/00003/menu_icon.png) no-repeat; background-size: contain; } 
+.studyLeft .infoOpen::before { content: ''; display: inline-block; width: 14px; height: 11px; margin-right: 4px; background: url(https://inkium1.learnhub.co.kr/images/front/00003/menu_icon.png) no-repeat; background-size: contain; } 
 .studyLeft .prgs_bar { width: 100%; height: 12px; margin-bottom: 10px; position: relative; background: #cd6425; border-radius: 10px; overflow: hidden; } 
 .studyLeft .prgs_bar span { display: block; background: #373737; height: 100%; border-radius: 10px; } 
 .studyLeft .prgs_bar p { position: absolute; top: -2px; left: 20px; color: #fff; font-size: 10px; font-weight: 500; } 

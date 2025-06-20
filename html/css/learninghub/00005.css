@@ -4540,8 +4540,8 @@ td.txtCut { display: table-cell; width: 100%; white-space: nowrap; text-overflow
 .main_type01 .slide_area .txt_wrap .tit { display: -webkit-box; height: 39px; color: #39393a; font-size: 1.6rem; font-weight: 500; line-height: 1.2; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; overflow: hidden; } 
 .main_type01 .slide_area .view_wrap span:first-child { min-width: 40px; } 
 .main_type01 .slide_area .view_wrap span { display: inline-block; color: #919191; font-size: 1.2rem; font-weight: 400; } 
-.main_type01 .slide_area .view_wrap .ico_save { display: inline-block; width: 11px; height: 15px; margin-top: -2px; margin-right: 4px; background:  url(/images/front/00005/ico_save.png) no-repeat; vertical-align: middle; } 
-.main_type01 .slide_area .view_wrap .ico_time { display: inline-block; width: 16px; height: 16px; margin-top: -2px; margin-right: 4px; background:  url(/images/front/00005/ico_time.png) no-repeat; vertical-align: middle; } 
+.main_type01 .slide_area .view_wrap .ico_save { display: inline-block; width: 11px; height: 15px; margin-top: -2px; margin-right: 4px; background:  url(https://inkiumhrdflex.learnhub.co.kr/images/front/00005/ico_save.png) no-repeat; vertical-align: middle; } 
+.main_type01 .slide_area .view_wrap .ico_time { display: inline-block; width: 16px; height: 16px; margin-top: -2px; margin-right: 4px; background:  url(	https://inkiumhrdflex.learnhub.co.kr/images/front/00005/ico_time.png) no-repeat; vertical-align: middle; } 
 .main_type01 .slide_area .cate_wrap { margin-bottom: 4px; } 
 .main_type01 .slide_area .cate_wrap span { color: #ff8b00; font-size: 1.2rem; font-weight: 400; } 
 .pop_btn { padding: 2px 20px; background: #fafafa; color: #919191; font-size: 1.4rem; font-weight: 400; border: 1px solid #d9d9d9; border-radius: 20px; letter-spacing: -0.5px; transition: all .35s; } 
