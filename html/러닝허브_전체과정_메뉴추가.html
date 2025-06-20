@@ -44,23 +44,34 @@
 </head>
 
 <body>
-    <header class="header header_gnb">
-		<div class="gnb_util">
+    <style>
+        .header_gnb .new_gnb .gnb_menu {
+            width: 100%;
+        }
+        .header_gnb .new_gnb .gnb_menu > li {
+            width: 100%;
+            flex: 1;
+        }
+        .header_gnb .new_gnb .lnb .lnb_menu {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    </style>
+    <header class="header header_gnb type01">
+        <div class="gnb_util">
             <div class="innerSection">
                 <div class="util_menu">
                     <ul>
                         <li><a href="#">회원가입</a></li>
-                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">로그아웃</a></li>
                         <li><a href="#">고객센터</a></li>
-                        <li><a href="#">강사지원</a></li>
-                        <li><a href="#">HRDHREX</a></li>
+                        <li><a href="#" class="orange02">HRDHREX</a></li>
                     </ul>
                 </div>
             </div>
-        </div>     
+        </div>
         <div class="innerSection">
             <div class="header_top">
-                <h1 class="logo"><a href=""><img src="./images/learninghub/logo02.gif" alt="러닝허브 로고"></a></h1>
+                <h1 class="logo"><a href=""><img src="./images/learninghub_type01/logo.png" alt="러닝허브 로고"></a></h1>
                 <div class="m_all_btn">
                     <button type="button" class="m_menu_btn">
                         <span></span>
@@ -68,7 +79,8 @@
                 </div>
                 <div class="seach_area">
                     <div class="input_wrap h_search">
-                        <input type="text" placeholder="검색어를 입력하세요." id="searchTextPc" name="searchTextPc">
+                        
+                        <input type="text" placeholder="검색어 입력." id="searchTextPc" name="searchTextPc">
                         <button type="button">검색</button>
                     </div>
                 </div>
@@ -79,77 +91,37 @@
                         <span></span>
                     </button>
                 </div>
-                <ul class="gnb_menu">
-                    <li><a href="#">AI맞춤학습</a></li>
-                    <li><a href="#">전체과정</a></li>
-                    <li><a href="#">마이크로러닝</a></li>
-                    <li><a href="#">지식센터</a></li>
-                    <li><a href="#">역량진단</a></li>
-                    <li><a href="#">나의강의실</a></li>
+                <ul class="gnb_menu">                    
+                    <li><a href="#">수강 신청</a></li>
+                    <li><a href="#">나의 강의실</a></li>
                     <li><a href="#">학습지원센터</a></li>
+                    <li><button class="btn_black01 btn_style04">로그아웃</button></li>
                 </ul>
                 <div class="lnb">
-                    <div class="lnb_menu">
+                    <div class="lnb_menu">                        
                         <div class="lnb_item">
                             <ul>
-                                <li><a href="#">큐레이션 추천과정</a></li>
-                                <li><a href="#">역량기반 맞춤과정</a></li>
-                                <li><a href="#">역량진단 기반과정</a></li>                                
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
                             </ul>
                         </div>
                         <div class="lnb_item">
                             <ul>
-                                <li><a href="#">공통역량</a></li>
-                                <li><a href="#">직무역량</a></li>
-                                <li><a href="#">리더십역량</a></li>
-                                <li><a href="#">외국어</a></li>
-                                <li><a href="#">자격</a></li>
-                                <li><a href="#">인문교양</a></li>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
                             </ul>
                         </div>
                         <div class="lnb_item">
                             <ul>
-                                <li><a href="#">공통과정</a></li>
-                                <li><a href="#">공통역량</a></li>
-                                <li><a href="#">직무역량</a></li>
-                                <li><a href="#">리더십역량</a></li>
-                                <li><a href="#">외국어</a></li>
-                                <li><a href="#">자격</a></li>
-                                <li><a href="#">인문교양</a></li>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
                             </ul>
                         </div>
                         <div class="lnb_item">
-                            <ul>
-                                <li><a href="#">지식센터</a></li>
-                                <li><a href="#">러닝캐스트</a></li>
-                                <li><a href="#">지식캐스트</a></li>
-                                <li><a href="#">직립보행/나취취</a></li>
-                                <li><a href="#">지식창고</a></li>
-                            </ul>
-                        </div>
-                        <div class="lnb_item">
-                            <ul>
-                                <li><a href="#">자가진단</a></li>
-                            </ul>
-                        </div>
-                        <div class="lnb_item">
-                            <ul>
-                                <li><a href="#">나의 강의실</a></li>
-                                <li><a href="#">수강신청현황</a></li>
-                                <li><a href="#">학습이력현황</a></li>
-                                <li><a href="#">마일리지 조회</a></li>
-                                <li><a href="#">개인정보수정</a></li>
-                            </ul>
-                        </div>
-                        <div class="lnb_item">
-                            <ul>
-                                <li><a href="#">학습지원센터</a></li>
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">자주하는질문</a></li>
-                                <li><a href="#">묻고답하기</a></li>
-                                <li><a href="#">원격지원</a></li>
-                                <li><a href="#">학습방법안내</a></li>
-                            </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -158,94 +130,105 @@
         <div class="m_menu_wrap">
             <div class="m_menu_top">
                 <h1 class="logo">
-					<img src="./images/learninghub/logo02.gif" alt="러닝허브">
-				</h1>
+                    <img src="./images/learninghub_type01/logo.png" alt="러닝허브">
+                </h1>
                 <a href="#" class="m_close_btn"><span class="ir-text">닫기</span></a>
             </div>
             <div class="m_menu_member">
-                <ul>					
+                <ul>
                     <li class="m_login">
                         <a href="#" class="btn_black01 btn_style04">로그인</a>
                     </li>
                     <li class="m_join">
                         <a href="#" class="btn_black02 btn_style04 ml10">회원가입</a>
-                    </li>                
+                    </li>
                 </ul>
             </div>
             <div class="m_menu_bottom">
                 <ul class="m_menu_list">
                     <li>
-                        <a href="javascript:void(0);">AI맞춤학습</a>
+                        <a href="./HRD아카이브.html">HRD아카이브</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">나의FLEX</a>
                         <ul>
-                            <li><a href="#">큐레이션 추천과정</a></li>
-                            <li><a href="#">역량기반 맞춤과정</a></li>
-                            <li><a href="#">역량진단 기반과정</a></li>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:void(0);">전체과정</a>
                         <ul>
-                            <li><a href="#">공통역량</a></li>
-                            <li><a href="#">직무역량</a></li>
-                            <li><a href="#">리더십역량</a></li>
-                            <li><a href="#">외국어</a></li>
-                            <li><a href="#">자격</a></li>
-                            <li><a href="#">인문교약</a></li>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0);">마이크로러닝</a>
+                        <a href="javascript:void(0);">공통역량</a>
                         <ul>
-                            <li><a href="#">공통과정</a></li>
-                            <li><a href="#">공통역량</a></li>
-                            <li><a href="#">직무역량</a></li>
-                            <li><a href="#">리더십역량</a></li>
-                            <li><a href="#">외국어</a></li>
-                            <li><a href="#">자격</a></li>
-                            <li><a href="#">인문교양</a></li>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0);">지식센터</a>
+                        <a href="javascript:void(0);">직무역량</a>
                         <ul>
-                            <li><a href="#">지식센터</a></li>
-                            <li><a href="#">러닝캐스트</a></li>
-                            <li><a href="#">지식캐스트</a></li>
-                            <li><a href="#">직립보행/나취취</a></li>
-                            <li><a href="#">지식창고</a></li>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">리더십</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:void(0);">역량진단</a>
                         <ul>
-                            <li><a href="#">자가진단</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">나의강의실</a>
-                        <ul>
-                            <li><a href="#">나의 강의실</a></li>
-                            <li><a href="#">수강신청현황</a></li>
-                            <li><a href="#">학습이력현황</a></li>
-                            <li><a href="#">마일리지 조회</a></li>
-                            <li><a href="#">개인정보수정</a></li>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:void(0);">학습지원센터</a>
                         <ul>
-                            <li><a href="#">학습지원센터</a></li>
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">자주하는질문</a></li>
-                            <li><a href="#">묻고답하기</a></li>
-                            <li><a href="#">원격지원</a></li>
-                            <li><a href="#">학습방법안내</a></li>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
-	</header>
+        <div class="quickMenu">
+            <ul class="quickList">
+                <li>
+                    <a href="">전체과정</a>
+                </li>
+                <li>
+                    <a href="">학습방</a>
+                </li>
+                <li>
+                    <a href="">공지사항</a>
+                </li>
+                <li>
+                    <a href="">1:1 문의</a>
+                </li>
+            </ul>
+            <div class="quickBtn">
+                <button type="button" class="quickClose"><span class="ir-text">퀵메뉴 닫기</span></button>
+                <button type="button" class="quickTop"><span class="ir-text">top 이동</span></button>
+            </div>
+        </div>
+    </header>
     <main class="content_wrap">
         <article class="all_search_wrap">
             <div class="accordion_wrap">
