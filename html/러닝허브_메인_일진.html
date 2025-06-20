@@ -647,7 +647,10 @@
             var swiper = new Swiper(".banner_slide", {                
                 spaceBetween: 20,
                 slidesPerView: 1,
-                autoplay: false,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
                 loop: true,
                 observer: true,
                 observeParents: true,
