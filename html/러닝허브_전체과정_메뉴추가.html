@@ -397,7 +397,7 @@
                         .accordion_menu {
                             display: flex;
                             width: auto;
-                            align-items: flex-start;
+                            flex-direction: column;
                             box-shadow: none;
                         }
                         .accordion_menu .accordion_item {
@@ -407,11 +407,6 @@
                         .accordion_menu .accordion_item .item_sub a:hover::before {
                             content: none;
                         }
-                        @media screen and (max-width: 768px){ 
-                            .accordion_menu {
-                                flex-direction: column;
-                            }
-                        }
                     }
                     
                 </style>
@@ -419,34 +414,34 @@
                      <h2>전체과정 상세 검색</h2>
                         <ul class="accordion_menu">
                             <li class="accordion_item">
-                                <a href="#">과정속성</a>
+                                <a href="#">과정분류1</a>
                                 <ul class="item_sub">
-                                    <li><a href="#">교재 필요과정</a></li>
-                                    <li><a href="#">모바일 학습과정</a></li>
-                                    <li><a href="#">고용보험환급과정</a></li>
+                                    <li><a href="#">과정분류1-1</a></li>
+                                    <li><a href="#">과정분류1-2</a></li>
+                                    <li><a href="#">과정분류1-3</a></li>
                                 </ul>
                             </li>
 
                             <li class="accordion_item">
-                                <a href="#">학습기간</a>
+                                <a href="#">과정분류2</a>
                                 <ul class="item_sub">
-                                    <li><a href="#">5일 이내</a></li>
-                                    <li><a href="#">10일 이내</a></li>
-                                    <li><a href="#">1개월 이내</a></li>
+                                    <li><a href="#">과정분류2-1</a></li>
+                                    <li><a href="#">과정분류2-2</a></li>
+                                    <li><a href="#">과정분류2-3</a></li>
                                 </ul>
                             </li>
 
                             <li class="accordion_item">
-                                <a href="#">과정분류</a>
+                                <a href="#">과정분류3</a>
                                 <ul class="item_sub">
-                                    <li><a href="#">공통역량</a></li>
-                                    <li><a href="#">리더십역량</a></li>
+                                    <li><a href="#">과정분류3-1</a></li>
+                                    <li><a href="#">과정분류3-2</a></li>
                                     <li class="accordion_sub_item">
-                                        <a href="#">직무역량</a>
+                                        <a href="#">과정분류3-3</a>
                                         <ul class="item_sub">
-                                            <li><a href="#">- 자기관리</a></li>
-                                            <li><a href="#">- 커뮤니케이션</a></li>
-                                            <li><a href="#">- 트렌드 리딩</a></li>
+                                            <li><a href="#">- 과정분류3-3-1</a></li>
+                                            <li><a href="#">- 과정분류3-3-2</a></li>
+                                            <li><a href="#">- 과정분류3-3-3</a></li>
                                         </ul>
                                     </li>
                                 </ul>
