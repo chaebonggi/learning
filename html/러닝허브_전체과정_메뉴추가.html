@@ -232,167 +232,6 @@
     <main class="content_wrap">
         <article class="all_search_wrap">
             <div class="accordion_wrap">
-                <style>
-                    .all_search_wrap {
-                        position: relative;
-                    }
-                    .accordion_wrap {
-                        position: absolute;
-                        top: 100px;
-                        left: calc(50% - 760px);
-                        transform: translateX(-50%);
-                    }                    
-                    .accordion_wrap .innerSection {
-                        width: auto;
-                    }
-                    .accordion_wrap h2 {
-                        margin-bottom: 10px;
-                        color: #222;
-                        font-size: 18px;
-                        font-weight: 500;
-                        text-align: center;
-                    }
-                    .accordion_menu {
-                        width: 250px;
-                        border-radius: 10px;
-                        overflow: hidden;
-                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-                    }
-                    .accordion_menu .accordion_item {                  
-                        background-color: #86cdbe;
-                        box-sizing: border-box;
-                        border-bottom: 1px solid #eee;
-                    }
-                     .accordion_menu .accordion_item > a {
-                        display: block;
-                        position: relative;
-                        padding: 10px;
-                        color: #fff;
-                        font-size: 16px;
-                        font-weight: 500;
-                     }
-                    .accordion_menu .accordion_item > a::after {
-                        content: "\f0fe";
-                        font-family: FontAwesome;
-                        position: absolute;
-                        right: 10px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        padding: 0px 5px;
-                        color: #fff;                        
-                    }
-                    .accordion_menu .accordion_item.active > a {
-                        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-                        z-index: 1;
-                    }
-                    .accordion_menu .accordion_item.active > a::after {
-                        content: '\f146';                        
-                    }
-                    .accordion_menu .accordion_item > a:hover {
-                        background-color: #70b5a7;
-                        transition: 300ms all;
-                    }
-                    .accordion_menu .accordion_item .item_sub {
-                        height: 0px;                        
-                        padding-left: 10px;
-                        position: relative;
-                        background-color: #383838;
-                        overflow: hidden;
-                    }
-                    .accordion_menu .accordion_item .item_sub a {
-                        display: block;
-                        position: relative;
-                        padding: 10px 10px;
-                        color: #fff;
-                        font-size: 14px;
-                        transition: 300ms all;
-                    }
-                    .accordion_menu .accordion_item .item_sub a:hover {
-                        color: #70b5a7;
-                        transition: 300ms all;
-                    }
-                    .accordion_menu .accordion_item .item_sub a:hover::before {
-                        content: '';
-                        width: 5px;
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: -10px;
-                        background-color: #70b5a7;
-                    }
-                    .accordion_menu .accordion_item .item_sub.active a::before {
-                        content: '';
-                        width: 5px;
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: -10px;
-                        background-color: #03a678;
-                    }
-                    .accordion_menu .accordion_item.active > .item_sub {
-                        display: block;
-                        height: auto;
-                        transition: all 200ms;
-                    }
-                    .accordion_menu .accordion_sub_item.active > a::before {
-                        content: '';
-                        width: 5px;
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: -10px;
-                        background-color: #03a678;
-                    }
-                    .accordion_menu .accordion_sub_item > a::after {
-                        content: "\f107";
-                        font-family: FontAwesome;
-                        position: absolute;
-                        right: 10px;
-                        top: 50%;
-                        transform: translateY(-50%) rotate(-90deg);
-                        padding: 0px 5px;
-                        color: #fff;
-                        transition: 300ms all;
-                    }
-                    .accordion_menu .accordion_sub_item > a:hover::after {
-                        color: #049372;
-                    }
-                    .accordion_menu .accordion_sub_item.active > a::after {
-                        transform: translateY(-50%) rotate(0);                        
-                    }
-                    .accordion_menu .accordion_sub_item.active > .item_sub {
-                        display: block;
-                        height: auto;
-                        transition: all 200ms;
-                    }
-                    @media screen and (max-width: 1600px){
-                        
-                        .accordion_wrap {
-                            position: static;
-                            transform: none;
-                        }
-                        .accordion_wrap .innerSection {
-                            width: calc(100% - 40px);
-                        }
-                        .accordion_wrap h2 {
-                            margin-top: 20px;
-                        }
-                        .accordion_menu {
-                            display: flex;
-                            width: auto;
-                            flex-direction: column;
-                            box-shadow: none;
-                        }
-                        .accordion_menu .accordion_item {
-                            width: 100%;
-                            flex: 1;
-                        }
-                        .accordion_menu .accordion_item .item_sub a:hover::before {
-                            content: none;
-                        }
-                    }
-                    
-                </style>
                 <div class="innerSection">
                      <h2>전체과정 상세 검색</h2>
                         <ul class="accordion_menu">
@@ -815,8 +654,8 @@
         </div>
     </footer>
     <script>
-        
-         document.querySelectorAll('.accordion_item > a, .accordion_sub_item > a').forEach(function(anchor) {
+        // 아코디언 js 추가
+        document.querySelectorAll('.accordion_item > a, .accordion_sub_item > a').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
             e.preventDefault(); 
             e.stopPropagation();
@@ -831,6 +670,7 @@
             parentLi.classList.toggle('active');
             });
         });
+        // 아코디언 js 추가
     </script>
     
 </body>
