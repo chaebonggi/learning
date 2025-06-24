@@ -47,6 +47,16 @@
 
 <body>
     <style>
+        .header_gnb .header_top .logo {
+            display: flex;
+            align-items: center;
+        }
+        .header_gnb .header_top .logo a {
+            height: auto;
+        }
+        .header_gnb .header_top .logo img {
+            height: auto;
+        }
         .header_gnb .new_gnb .gnb_menu {
             width: 100%;
         }
@@ -56,6 +66,14 @@
         }
         .header_gnb .new_gnb .lnb .lnb_menu {
             grid-template-columns: repeat(4, 1fr);
+        }
+        @media all and (max-width:640px) { 
+            .header_gnb.type01 .header_top .logo a {
+                height: auto;
+            }
+            .header_gnb .header_top .logo img {
+                height: 30px;
+            }
         }
     </style>
     <header class="header header_gnb type01">
@@ -73,7 +91,7 @@
         </div>
         <div class="innerSection">
             <div class="header_top">
-                <h1 class="logo"><a href=""><img src="./images/learninghub_type01/logo.png" alt="러닝허브 로고"></a></h1>
+                <h1 class="logo"><a href=""><img src="./images/learninghub_type01/logo_02.png" alt="일진 로고"></a></h1>
                 <div class="m_all_btn">
                     <button type="button" class="m_menu_btn">
                         <span></span>
@@ -258,16 +276,16 @@
                         <div class="banner_item swiper-slide">
                              <a href="">
                                 <picture>
-                                    <img src="./images/learninghub/banner_pc_02.png" alt="러닝허브 배너" class="img-pc">
-                                    <img src="./images/learninghub/banner_mo.png" alt="러닝허브 배너" class="img-mo">
+                                    <img src="./images/learninghub/banner_pc_03.png" alt="러닝허브 배너" class="img-pc">
+                                    <img src="./images/learninghub/banner_pc_03.png" alt="러닝허브 배너" class="img-mo">
                                 </picture>
                             </a>
                         </div>
                         <div class="banner_item swiper-slide">
                              <a href="">
                                 <picture>
-                                    <img src="./images/learninghub/banner_pc_02.png" alt="러닝허브 배너" class="img-pc">
-                                    <img src="./images/learninghub/banner_mo.png" alt="러닝허브 배너" class="img-mo">
+                                    <img src="./images/learninghub/banner_pc_04.png" alt="러닝허브 배너" class="img-pc">
+                                    <img src="./images/learninghub/banner_pc_04.png" alt="러닝허브 배너" class="img-mo">
                                 </picture>
                             </a>
                         </div>
