@@ -64,6 +64,21 @@
         .header_gnb .new_gnb .lnb .lnb_menu {
             grid-template-columns: repeat(4, 1fr);
         }
+        .header_gnb.type01 .header_top .seach_area .input_wrap {
+            padding: 10px 20px;
+            border: 1px solid #373737;
+        }
+        .header_gnb.type01 .header_top .seach_area .input_wrap button {
+            width: 20px;
+            height: 19px;
+            background: url(https://inkiumhrdflex.learnhub.co.kr/images/front/00003/ico_seach.png) center / contain no-repeat;
+            border: 0;
+            text-indent: -99999px;
+        }
+        .main_type01 .quick_menu .quick_list li:nth-child(1) a { background-image:  url(https://inkiumhrdflex.learnhub.co.kr/images/front/00005/ico_quick01.png); } 
+        .main_type01 .quick_menu .quick_list li:nth-child(2) a { background-image:  url(https://inkiumhrdflex.learnhub.co.kr/images/front/00005/ico_quick02.png); } 
+        .main_type01 .quick_menu .quick_list li:nth-child(3) a { background-image:  url(https://inkiumhrdflex.learnhub.co.kr/images/front/00005/ico_quick03.png); } 
+        .main_type01 .quick_menu .quick_list li:nth-child(4) a { background-image:  url(https://inkiumhrdflex.learnhub.co.kr/images/front/00005/ico_quick04.png); }
         @media all and (max-width:640px) { 
             .header_gnb.type01 .header_top .logo a {
                 height: auto;
@@ -96,7 +111,6 @@
                 </div>
                 <div class="seach_area">
                     <div class="input_wrap h_search">
-                        <select name="" id="" class="searchSel"><option value="01">통합검색</option></select>
                         <input type="text" placeholder="검색어 입력." id="searchTextPc" name="searchTextPc">
                         <button type="button">검색</button>
                     </div>
@@ -385,11 +399,13 @@
                 </div>
             </div>            
         </article>
- 
         <article class="box_item">
             <div class="innerSection">
-                <div class="tit_wrap">
-                    <p class="tit"><span>이 달의</span> 추천 과정</p>                   
+                <div class="tit_wrap type02">
+                    <p class="tit"><span>이 달의</span> 추천 과정</p>
+                    <div class="tooltip">
+                        <span>어떤 알고리즘으로 과정 추천이 이루어지는지 설명</span>
+                    </div>
                 </div>
                 <div class="slide_wrap">
                     <div class="slide_area">

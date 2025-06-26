@@ -39,6 +39,13 @@
 
 <body>
     <style>
+        .header_gnb .header_top .logo {
+            display: flex;
+            align-items: center;
+        }
+        .header_gnb .header_top .logo a {
+            height: auto;
+        }
         .header_gnb .new_gnb .gnb_menu {
             width: 100%;
         }
@@ -48,6 +55,25 @@
         }
         .header_gnb .new_gnb .lnb .lnb_menu {
             grid-template-columns: repeat(4, 1fr);
+        }
+        .header_gnb.type01 .header_top .seach_area .input_wrap {
+            padding: 10px 20px;
+            border: 1px solid #373737;
+        }
+        .header_gnb.type01 .header_top .seach_area .input_wrap button {
+            width: 20px;
+            height: 19px;
+            background: url(https://inkiumhrdflex.learnhub.co.kr/images/front/00003/ico_seach.png) center / contain no-repeat;
+            border: 0;
+            text-indent: -99999px;
+        }
+        @media all and (max-width:640px) { 
+            .header_gnb.type01 .header_top .logo a {
+                height: auto;
+            }
+            .header_gnb .header_top .logo img {
+                height: 30px;
+            }
         }
     </style>
     <header class="header header_gnb type01">
@@ -65,7 +91,7 @@
         </div>
         <div class="innerSection">
             <div class="header_top">
-                <h1 class="logo"><a href=""><img src="./images/learninghub_type01/logo.png" alt="러닝허브 로고"></a></h1>
+                <h1 class="logo"><a href=""><img src="./images/learninghub_type01/logo_02.png" alt="일진 로고"></a></h1>
                 <div class="m_all_btn">
                     <button type="button" class="m_menu_btn">
                         <span></span>
@@ -73,7 +99,6 @@
                 </div>
                 <div class="seach_area">
                     <div class="input_wrap h_search">
-                        
                         <input type="text" placeholder="검색어 입력." id="searchTextPc" name="searchTextPc">
                         <button type="button">검색</button>
                     </div>
