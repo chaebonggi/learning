@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>학사관리 시스템</title>
+    <link rel="icon" type="image/x-icon" href="https://www.gpmu.co.kr/images/hanmi/gpmu_icon.png">
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/common.css" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/slick.css">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/index.css" />
+    <link href="https://www.gpmu.co.kr/css/hanmi/common.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.gpmu.co.kr/css/hanmi/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://www.gpmu.co.kr/js/yepnope/1.5.4/yepnope.min.js" type="text/javascript"></script>
+    <script src="https://www.gpmu.co.kr/js/jquery/1.12.4/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="https://www.gpmu.co.kr/js/swiper-bundle.min.js"></script>
+    <script src="https://www.gpmu.co.kr/js/slick.js"></script>
+    <script src="https://www.gpmu.co.kr/js/run.js"></script>
+    <script src="https://www.gpmu.co.kr/js/hracademy/scripts/index.js"></script>
+    <script src="https://www.gpmu.co.kr/js/hanmi/run.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/hracademy/scripts/index.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/hracademy/scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/kendo/2015.3.930/kendo.all.min.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/kendo.extension/kendo.ko_KR.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/podo.ui/podo.ui.core.js"></script>
+    
+    <link href="https://kendo.cdn.telerik.com/themes/10.2.0/default/default-main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/hanmi/style02.css">
+
+     <script src="js/hanmi/run.js"></script>
+</head>
+
+<body>
+    <!--header-->
+    <header id="header">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <a href="#"><img src="images/hanmi/logo.png" alt="한미글로벌"></a>
+                </h1>
+                <nav class="header_gnb">
+                    <div class="gnb_banner">
+                        <img src="./images/hanmi/test_img.png" alt="">
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">홈</a>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">카테고리</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">F-PM</a></li>
+                            <li><a href="" class="drop_item">Global</a></li>
+                            <li><a href="" class="drop_item">PRE-CON</a></li>
+                            <li><a href="" class="drop_item">ESG</a></li>
+                            <li><a href="" class="drop_item">Leadership</a></li>
+                            <li><a href="" class="drop_item">Smart</a></li>
+                            <li><a href="" class="drop_item">HanmiTube</a></li>
+                            <li><a href="" class="drop_item">CPD</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">GPMU소개</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">소개</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">열린마당</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">공지사항</a></li>
+                            <li><a href="" class="drop_item">1:1 게시판</a></li>
+                            <li><a href="" class="drop_item">지식샘</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">고객전용관</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">고객전용관</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="right_box">
+                    <div class="seach_area">
+                        <div class="input_wrap">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button type="submit">검색</button>
+                        </div>
+                    </div>
+                    <ul class="member_box">
+                        <li class="login"><a href="#">로그인</a></li>
+                        <li class="join"><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+                <!-- 모바일 메뉴 -->
+                <div class="m_menu">                    
+                    <div class="m_login">
+                        <a href="#" class="login_btn ir_pm">로그인</a>
+                    </div>
+                </div>
+            </div>      
+        </div>
+        <div class="m_gnb">
+            <ul>
+                <li><a href="#">카테고리</a></li>
+                <li><a href="#">GPMU소개</a></li>
+                <li><a href="#">열린마당</a></li>
+                <li><a href="#">고객전용관</a></li>
+            </ul>
+        </div>
+    </header>
+    <style>
+        .lms-mobile-main {
+            padding: 10px 0;
+        }
+        .lms-mobile-main .section-item {
+            max-width: 660px;
+            width: calc(100% - 10px);
+            margin: 0 auto;
+        }
+        .lms-mobile-main .main-intro {
+            padding: 30px 20px 30px;
+            background: url(./images/hanmi/lms_img01.png) right bottom 10px #0b226c no-repeat;
+            background-size: 70px auto;
+            border-radius: 10px;
+        }
+        .lms-mobile-main .main-intro__text {
+            color: #fff;
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.5;
+        }
+        .lms-mobile-main .main-intro__text span {
+            font-weight: bold;
+        }
+        .lms-mobile-main .attendance-guide {
+            margin-top: 10px;
+            padding: 50px 0;
+            background-color: #071132;
+            border-radius: 10px;
+        }
+        .lms-mobile-main .attendance-guide__text {            
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .lms-mobile-main .attendance-guide__text span {
+            color: #ffea00;
+            font-weight: bold;
+        }
+        .lms-mobile-main .attendance-guid__btn {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .lms-mobile-main .attendance-guid__btn .attendance-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 120px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: #1375e1;
+            border-radius: 24px;
+            box-shadow: 0px 5px 4.75px 0.25px rgba(0, 0, 0, 0.1);
+        }
+        .lms-mobile-main .attendance-guid__btn .attendance-btn::before {
+            content: '';
+            width: 36px;
+            height: 36px;          
+            margin-bottom: 15px;  
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        .lms-mobile-main .attendance-guid__btn .attendance-btn--enter::before {
+            background-image: url(../html/images/hanmi/attendance_btn_01.png);
+        }
+        .lms-mobile-main .attendance-guid__btn .attendance-btn--leave {
+            background-color: #afafaf;
+        }
+        .lms-mobile-main .attendance-guid__btn .attendance-btn--leave::before {
+            background-image: url(../html/images/hanmi/attendance_btn_02.png);
+        }
+    </style>
+    <main class="lms-mobile-main">
+        <section class="main-intro section-item">
+            <div class="main-intro__text">
+                <p>안녕하세요<br> 경기도일자리재단 남부교육팀<br> <span>학사관리 시스템</span> 입니다.</p>
+            </div>
+        </section>
+
+        <section class="attendance-guide section-item">
+            <div class="attendance-guide__text">
+                <p>교육 수강 시작・종료 시<br> <span>출석 / 퇴실</span> 버튼을 꼭 눌러주세요! 👍</p>
+            </div>
+            <div class="attendance-guid__btn">
+                <a href="#" target="_blank" class="attendance-btn attendance-btn--enter"><span>출석</span></a>
+                <a href="#" target="_blank" class="attendance-btn attendance-btn--leave"><span>퇴실</span></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="f_top">
+            <div class="inner">
+                <ul>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">마케팅 정보 수신동의</a></li>
+                    <li><a href="">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="f_bottom">
+            <div class="inner">
+                <div class="f_logo">
+                    <img src="./images/hanmi/f_logo.png" alt="gpmu 로고">
+                </div>
+                <div class="txt">
+                    <p>edu@keldi.co.kr</p>
+                    <p>
+                        <span>헬프데스크 문의 </span><span>☎ 02-971-2900</span>
+                        <span>/</span> 
+                        <span>운영시간 10~16시(평일)</span>
+                    </p>
+                    <p>본 사이트에서 제공하는 모든 콘텐츠는 저작권법의 보호를 받는 바, 무단 전재, 복제, 배포 등을 금지합니다.</p>
+                    <p class="copy">Copyright © Hanmiglobal Corp. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {          
+            
+
+        });
+
+    </script>
+</body>
+
+</html>
