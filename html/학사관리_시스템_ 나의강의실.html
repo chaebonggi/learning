@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>학사관리 시스템 나의강의실</title>
+    <link rel="icon" type="image/x-icon" href="https://www.gpmu.co.kr/images/hanmi/gpmu_icon.png">
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/common.css" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/slick.css">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/index.css" />
+    <link href="https://www.gpmu.co.kr/css/hanmi/common.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.gpmu.co.kr/css/hanmi/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://www.gpmu.co.kr/js/yepnope/1.5.4/yepnope.min.js" type="text/javascript"></script>
+    <script src="https://www.gpmu.co.kr/js/jquery/1.12.4/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="https://www.gpmu.co.kr/js/swiper-bundle.min.js"></script>
+    <script src="https://www.gpmu.co.kr/js/slick.js"></script>
+    <script src="https://www.gpmu.co.kr/js/run.js"></script>
+    <script src="https://www.gpmu.co.kr/js/hracademy/scripts/index.js"></script>
+    <script src="https://www.gpmu.co.kr/js/hanmi/run.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/hracademy/scripts/index.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/hracademy/scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/kendo/2015.3.930/kendo.all.min.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/kendo.extension/kendo.ko_KR.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/podo.ui/podo.ui.core.js"></script>
+    
+    <link href="https://kendo.cdn.telerik.com/themes/10.2.0/default/default-main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/hanmi/style02.css">
+
+     <script src="js/hanmi/run.js"></script>
+</head>
+
+<body>
+    <!--header-->
+    <header id="header">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <a href="#"><img src="images/hanmi/logo.png" alt="한미글로벌"></a>
+                </h1>
+                <nav class="header_gnb">
+                    <div class="gnb_banner">
+                        <img src="./images/hanmi/test_img.png" alt="">
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">홈</a>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">카테고리</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">F-PM</a></li>
+                            <li><a href="" class="drop_item">Global</a></li>
+                            <li><a href="" class="drop_item">PRE-CON</a></li>
+                            <li><a href="" class="drop_item">ESG</a></li>
+                            <li><a href="" class="drop_item">Leadership</a></li>
+                            <li><a href="" class="drop_item">Smart</a></li>
+                            <li><a href="" class="drop_item">HanmiTube</a></li>
+                            <li><a href="" class="drop_item">CPD</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">GPMU소개</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">소개</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">열린마당</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">공지사항</a></li>
+                            <li><a href="" class="drop_item">1:1 게시판</a></li>
+                            <li><a href="" class="drop_item">지식샘</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">고객전용관</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">고객전용관</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="right_box">
+                    <div class="seach_area">
+                        <div class="input_wrap">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button type="submit">검색</button>
+                        </div>
+                    </div>
+                    <ul class="member_box">
+                        <li class="login"><a href="#">로그인</a></li>
+                        <li class="join"><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+                <!-- 모바일 메뉴 -->
+                <div class="m_menu">                    
+                    <div class="m_login">
+                        <a href="#" class="login_btn ir_pm">로그인</a>
+                    </div>
+                </div>
+            </div>      
+        </div>
+        <div class="m_gnb">
+            <ul>
+                <li><a href="#">카테고리</a></li>
+                <li><a href="#">GPMU소개</a></li>
+                <li><a href="#">열린마당</a></li>
+                <li><a href="#">고객전용관</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="list_wrap">
+            <div class="snb">
+                <h3 class="tit">마이페이지</h3>
+                <ul>
+                    <li class="active">
+                        <a href="/gpmu/service/hr/my_class.do">나의강의실</a>
+                    </li>
+                    <li>
+                        <a href="/gpmu/service/hr/my_act_list.do">활동이력</a>
+                    </li>
+                    <li>
+                        <a href="/gpmu/service/hr/my_info.do?mid=688">회원정보</a>
+                    </li>
+                    <li>
+                        <a href="/gpmu/service/hr/my_info_del.do">회원탈퇴</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <style>
+                    .learn-wrap .learn-tit {
+                        margin-bottom: 20px;
+                        padding-bottom: 30px;
+                        border-bottom: 1px solid #ddd;
+                    }
+                    .learn-wrap .learn-tit h3 {
+                        color: #222;
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                    .learn-wrap .learn-info {
+                        margin-bottom: 30px;
+                        border-radius: 10px;
+                        border: 1px solid #ededed;
+                        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px;
+                        overflow: hidden;
+                    }
+                    .learn-wrap .learn-info-tit {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 20px;
+                        background-color: #e6f3fe;
+                        border-bottom: 1px solid #ededed;
+                    }
+                    .learn-wrap .learn-info-tit__txt {
+                        color: #333333;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                    .learn-wrap .learn-info-tit__txt span {
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    .learn-wrap .learn-info-tit__date {
+                        color: #333333;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                    .learn-wrap .learn-info-list {
+                        padding: 30px 20px;
+                        text-align: center;
+                    }
+                    .learn-wrap .learn-info-list ul {
+                        display: flex;
+                        justify-content: space-between;
+                        max-width: 730px;
+                        margin: 0 auto;
+                    }
+                    .learn-wrap .learn-info-list__item {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 10px;
+                        width: 160px;
+                        height: 160px;
+                        padding: 16px 10px;
+                        border-radius: 10px;
+                        border: 1px solid #ebebeb;
+                        box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px;
+                    }
+                    .learn-wrap .learn-info-list__item span {
+                        min-width: 88px;
+                        padding: 5px 12px;
+                        background-color: #0082cc;
+                        color: #fff;
+                        font-size: 16px;
+                        font-weight: 500;
+                        border-radius: 20px;
+                        text-align: center
+                    }
+                    .learn-wrap .learn-info-list__item:nth-child(2) span {
+                        background-color: #49acc1;
+                    }
+                    .learn-wrap .learn-info-list__item:nth-child(3) span {
+                        background-color: #c64e68;
+                    }
+                    .learn-wrap .learn-info-list__item p {
+                        width: 100%;
+                        color: #333333;
+                        font-size: 18px;
+                        font-weight: 500;
+                        text-align: center;
+                    }
+                    .learn-wrap .learn-info-list__item p::before {
+                        content: '';
+                        display: block;
+                        margin-bottom: 15px;
+                        width: 100%;
+                        height: 42px;
+                        background-image: url(./images/hanmi/ico_learn01.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: auto;
+                    }
+                    .learn-wrap .learn-info-list__item:nth-child(2) p::before {
+                        background-image: url(./images/hanmi/ico_learn02.png);
+                    }
+                    .learn-wrap .learn-info-list__item:nth-child(3) p::before {
+                        background-image: url(./images/hanmi/ico_learn03.png);
+                    }
+                    .learn-wrap .learn-info-list__txt {
+                        display: inline-flex;
+                        padding: 12px 20px;
+                        margin-top: 30px;
+                        background-color: #eeeeee;
+                        text-align: center;
+                        border-radius: 20px;
+                    }
+                    .learn-wrap .learn-info-list__txt p {
+                        color: #333333;
+                        font-size: 16px;
+                    }
+                    .learn-wrap .learn-info-list__txt p .txt01 {
+                        color: #1dab27;
+                        font-weight: bold;
+                    }
+                    .learn-wrap .learn-info-list__txt p .txt02 {
+                        color: #0082cc;
+                        font-weight: bold;
+                    }
+                </style>
+                <div class="learn-wrap">
+                    <div class="learn-tit">   
+                        <h3>나의 강의실</h3>
+                    </div>
+                    <div class="learn-info">
+                        <div class="learn-info-tit">
+                            <p class="learn-info-tit__txt"><span>이정은</span> 님의 학습정보</p>
+                            <p class="learn-info-tit__date">최근 학습일 2025.06.26</p>
+                        </div>
+                        <div class="learn-info-list">
+                            <ul>
+                                <li class="learn-info-list__item">
+                                    <span>신청과정</span>
+                                    <p>00개</p>
+                                </li>
+                                <li class="learn-info-list__item">
+                                    <span>수강중</span>
+                                    <p>00개</p>
+                                </li>
+                                <li class="learn-info-list__item">
+                                    <span>수강완료</span>
+                                    <p>00개</p>
+                                </li>
+                            </ul>
+                            <div class="learn-info-list__txt">
+                                <p><span class="txt01">총 9개</span> 신청 과정 중 3개 과정 수료, 획득한 학습 시간은 <span class="txt02">00시간 00분</span> 입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .tabs.type02 {
+                            position: relative;                            
+                        }
+                        .tabs.type02::before {
+                            content: '';
+                            width: 100%;
+                            height: 1px;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            background-color: #ddd;
+                        }
+                        .tabs.type02 li {
+                            flex: initial;
+                            padding: 0;
+                            border: 0;
+                        }
+                        .tabs.type02 li a {
+                            position: relative;
+                            padding: 15px;
+                            color: #6e6e6e;
+                        }
+                        .tabs.type02 li.active a {
+                            color: #333333;
+                            font-weight: bold;
+                        }
+                        .tabs.type02 li.active a::before {
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            background-color: #333333;
+                        }
+                        @media (max-width: 640px){
+                            #header .top {padding: 3rem 0;}
+                            #header .m_gnb {display: none;}
+                            .inner {
+                                width: calc(100% - 20px);
+                            }
+                            .container {
+                                width: calc(100% - 20px);
+                            }
+                            
+                        }
+                    </style>
+                    <div class="tab_container">
+                        <!--탭 메뉴 영역 -->
+                        <div class="tabs type02">
+                            <ul>
+                                <li class="active"><a href="javascript:;" id="top_tab1" rel="tab1">수강중인 과정</a></li>
+                                <li><a href="javascript:;" id="top_tab2" rel="tab2">수강완료 과정</a></li>
+                                <li><a href="javascript:;" id="top_tab3" rel="tab3">수강만료 과정</a></li>
+                            </ul>
+                        </div>
+                        <style>
+                            .learn-wrap .learn-list ul {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                            }
+                            .learn-wrap .learn-list__item {
+                                padding: 20px;
+                                border: 1px solid #dddddd;
+                                border-radius: 10px;
+                            }
+                        </style>
+                        <div id="tab1" class="tab_content">
+                            <div class="learn-list">
+                                <ul>
+                                    <li class="learn-list__item">
+                                        <div class="thumb">
+                                            <img src="./images/hanmi/thumb_img.png" alt="">
+                                        </div>
+                                        <div class="learn-list__item-info">
+                                            <div class="learn-list__item-info-top">
+                                                <span class="course-type">오프라인</span>
+                                                <p class="course-title">남부교육팀 교육훈련</p>
+                                            </div>
+                                            <div class="learn-list__item-info-mid">
+                                                <ul class="learn-list__item-details">
+                                                    <li>차수</li>
+                                                    <li>진도율</li>
+                                                    <li>교육기간</li>
+                                                </ul>
+                                                <a href="" target="_blank" class="learn-list__item-link">강의실 바로가기</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="tab2" class="tab_content">
+                            2
+                        </div>
+                        
+                        <div id="tab3" class="tab_content">
+                            <div id="tab3List" class="mp_lecture_list">
+                                
+                            </div>
+                            <div id="tab3Paging">
+                            
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+  
+    
+  
+    
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="f_top">
+            <div class="inner">
+                <ul>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">마케팅 정보 수신동의</a></li>
+                    <li><a href="">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="f_bottom">
+            <div class="inner">
+                <div class="f_logo">
+                    <img src="./images/hanmi/f_logo.png" alt="gpmu 로고">
+                </div>
+                <div class="txt">
+                    <p>edu@keldi.co.kr</p>
+                    <p>
+                        <span>헬프데스크 문의 </span><span>☎ 02-971-2900</span>
+                        <span>/</span> 
+                        <span>운영시간 10~16시(평일)</span>
+                    </p>
+                    <p>본 사이트에서 제공하는 모든 콘텐츠는 저작권법의 보호를 받는 바, 무단 전재, 복제, 배포 등을 금지합니다.</p>
+                    <p class="copy">Copyright © Hanmiglobal Corp. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {          
+            
+
+        });
+
+    </script>
+</body>
+
+</html>
