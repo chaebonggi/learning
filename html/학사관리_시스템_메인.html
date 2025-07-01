@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>학사관리 시스템</title>
+    <link rel="stylesheet" type="text/css" href="http://lms.job-cloud.kr/css/hracademy/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="http://lms.job-cloud.kr/css/hracademy/css/common.css" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="http://lms.job-cloud.kr/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="http://lms.job-cloud.kr/css/slick.css">
+    <link rel="stylesheet" href="http://lms.job-cloud.kr/css/style.css">
+    <script src="http://lms.job-cloud.kr/js/yepnope/1.5.4/yepnope.min.js" type="text/javascript"></script>
+    <script src="http://lms.job-cloud.kr/js/jquery/1.12.4/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="http://lms.job-cloud.kr/js/swiper-bundle.min.js"></script>
+    <script src="http://lms.job-cloud.kr/js/slick.js"></script>
+    <script src="http://lms.job-cloud.kr/js/run.js"></script>
+    <script src="http://lms.job-cloud.kr/js/hracademy/scripts/index.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://lms.job-cloud.kr/css/hracademy/css/index.css" />
+    <script type="text/javascript" src="http://lms.job-cloud.kr/js/hracademy/scripts/index.js"></script>
+    <script type="text/javascript" src="http://lms.job-cloud.kr/js/hracademy/scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="http://lms.job-cloud.kr/js/hracademy/scripts/swiper.min.js"></script>
+    <script type="text/javascript" src="http://lms.job-cloud.kr/js/kendo/2015.3.930/kendo.all.min.js"></script>
+    <script type="text/javascript" src="http://lms.job-cloud.kr/js/kendo.extension/kendo.ko_KR.js"></script>
+    <script type="text/javascript" src="http://lms.job-cloud.kr/js/podo.ui/podo.ui.core.js"></script>
+    
+    <!-- 신규 -->
+    <link href="http://lms.job-cloud.kr/css/hanmi/common.css" rel="stylesheet" type="text/css" />
+    <link href="http://lms.job-cloud.kr/css/hanmi/style.css" rel="stylesheet" type="text/css" />
+    <script src="http://lms.job-cloud.kr/js/hanmi/run.js" type="text/javascript"></script>
+
+
+
+
+    <link rel="stylesheet" href="css/hanmi/lms-style.css">
+</head>
+
+<body>
+    <!--header-->
+    <style>
+        #header .top .logo img {
+            max-width: 150px;
+        }
+    </style>
+    <header id="header">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <a href="#"><img src="images/hanmi/logo02.png" alt="한미글로벌"></a>
+                </h1>
+                <nav class="header_gnb">
+                    <div class="gnb_banner">
+                        <img src="./images/hanmi/test_img.png" alt="">
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">홈</a>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">카테고리</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">F-PM</a></li>
+                            <li><a href="" class="drop_item">Global</a></li>
+                            <li><a href="" class="drop_item">PRE-CON</a></li>
+                            <li><a href="" class="drop_item">ESG</a></li>
+                            <li><a href="" class="drop_item">Leadership</a></li>
+                            <li><a href="" class="drop_item">Smart</a></li>
+                            <li><a href="" class="drop_item">HanmiTube</a></li>
+                            <li><a href="" class="drop_item">CPD</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">GPMU소개</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">소개</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">열린마당</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">공지사항</a></li>
+                            <li><a href="" class="drop_item">1:1 게시판</a></li>
+                            <li><a href="" class="drop_item">지식샘</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">고객전용관</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">고객전용관</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="right_box">
+                    <div class="seach_area">
+                        <div class="input_wrap">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button type="submit">검색</button>
+                        </div>
+                    </div>
+                    <ul class="member_box">
+                        <li class="login"><a href="#">로그인</a></li>
+                        <li class="join"><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+                <!-- 모바일 메뉴 -->
+                <div class="m_menu">
+                    <div class="m_login">
+                        <a href="#" class="login_btn ir_pm">로그인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m_gnb">
+            <ul>
+                <li><a href="#">카테고리</a></li>
+                <li><a href="#">GPMU소개</a></li>
+                <li><a href="#">열린마당</a></li>
+                <li><a href="#">고객전용관</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <article class="main_slide">
+        <div class="innerSection">
+            <div class="swiper main_wrap">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="javascript:;"><img src="http://lms.job-cloud.kr/comm/files/1663" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;"><img src="http://lms.job-cloud.kr/comm/files/1665" /></a>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="control">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-btns">
+                        <a href="javascript:void(0);" class="swiper-button-play">play</a>
+                        <a href="javascript:void(0);" class="swiper-button-pause">stop</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="box_item">
+        <div class="gpmu_menu">
+            <div class="innerSection">
+                <ul class="menu_list">
+                    <li>
+                        <a href="/gpmu/service/hr/my_class.do" class="icon01">
+                            <p>나의 강의실</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/gpmu/service/hr/my_class.do?tabType=tab2" class="icon02">
+                            <p>수료증발급</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://hits.hanmiglobal.com/po/Search/Search_mid.aspx" class="icon03" target="_blank">
+                            <p>지식샘</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/gpmu/service/ca/board_main.do?boardCode=FREEBOARD&mid=571" class="icon04">
+                            <p>1:1 문의</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/gpmu/service/ca/board_main.do?boardCode=NOTICE&mid=568" class="icon05">
+                            <p>공지사항</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/gpmu/service/ca/brd_faq_main.do" class="icon06">
+                            <p>FAQ</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <article class="box_item bg_gray">
+        <div class="gpmu_notice">
+            <div class="innerSection">
+                <h3 class="page_tit">NOTICE</h3>
+                <div class="slide_wrap">
+                    <div class="con_list">
+                        <div class="swiper-wrapper">
+
+                            <div class="item swiper-slide">
+                                <a href="javascript:void(0);" onclick="fn_detailView('NOTICE','15622')">
+                                    <p class="tit">[공지] 비밀번호 변경 안내</p>
+                                    <span class="date">2024-02-28</span>
+                                </a>
+                            </div>
+
+                            <div class="item swiper-slide">
+                                <a href="javascript:void(0);" onclick="fn_detailView('NOTICE','29')">
+                                    <p class="tit">[공지] GPMU 사이트 오픈</p>
+                                    <span class="date">2023-11-14</span>
+                                </a>
+                            </div>
+
+                            <div class="item swiper-slide">
+                                <a href="javascript:void(0);" onclick="fn_detailView('NOTICE','15715')">
+                                    <p class="tit">dsafdsaf</p>
+                                    <span class="date">2024-03-07</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="control_btn">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="box_item bg_blue">
+        <div class="gpmu_introduction">
+            <div class="innerSection">
+                <h3 class="ir_pm">introduction</h3>
+                <div class="con_list">
+                    <div class="txt_wrap">
+                        <p class="tit">함께하는 GPMU</p>
+                        <p class="txt">
+                            PM 역량강화, GPMU가 함께합니다.<br>
+                            GPMU는 6카테고리로 구성되어 다양한 이론, 실무 강좌를 학습할 수 있는
+                            온라인 플랫폼으로 퀴즈, 실시간 웨비나 등을 통한 쌍방향 커뮤니케이션
+                            학습이 가능합니다.
+                        </p>
+                        <a href="/gpmu/service/intro/intro1_pg.do"><span>더 보러가기</span></a>
+                    </div>
+                    <div class="img_wrap">
+                        <img src="http://lms.job-cloud.kr/images/hanmi/introduction_img02.png" alt="gpmu 기업 이미지">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="f_top">
+            <div class="inner">
+                <ul>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">마케팅 정보 수신동의</a></li>
+                    <li><a href="">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="f_bottom">
+            <div class="inner">
+                <div class="f_logo">
+                    <img src="./images/hanmi/f_logo.png" alt="gpmu 로고">
+                </div>
+                <div class="txt">
+                    <p>edu@keldi.co.kr</p>
+                    <p>
+                        <span>헬프데스크 문의 </span><span>☎ 02-971-2900</span>
+                        <span>/</span>
+                        <span>운영시간 10~16시(평일)</span>
+                    </p>
+                    <p>본 사이트에서 제공하는 모든 콘텐츠는 저작권법의 보호를 받는 바, 무단 전재, 복제, 배포 등을 금지합니다.</p>
+                    <p class="copy">Copyright © Hanmiglobal Corp. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+        
+        });
+
+    </script>
+</body>
+
+</html>
