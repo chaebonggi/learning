@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>학사관리 시스템 나의강의실(상세)</title>
+    <link rel="icon" type="image/x-icon" href="https://www.gpmu.co.kr/images/hanmi/gpmu_icon.png">
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/common.css" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/slick.css">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://www.gpmu.co.kr/css/hracademy/css/index.css" />
+    <link href="https://www.gpmu.co.kr/css/hanmi/common.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.gpmu.co.kr/css/hanmi/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://www.gpmu.co.kr/js/yepnope/1.5.4/yepnope.min.js" type="text/javascript"></script>
+    <script src="https://www.gpmu.co.kr/js/jquery/1.12.4/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="https://www.gpmu.co.kr/js/swiper-bundle.min.js"></script>
+    <script src="https://www.gpmu.co.kr/js/slick.js"></script>
+    <script src="https://www.gpmu.co.kr/js/run.js"></script>
+    <script src="https://www.gpmu.co.kr/js/hracademy/scripts/index.js"></script>
+    <script src="https://www.gpmu.co.kr/js/hanmi/run.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/hracademy/scripts/index.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/hracademy/scripts/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/kendo/2015.3.930/kendo.all.min.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/kendo.extension/kendo.ko_KR.js"></script>
+    <script type="text/javascript" src="https://www.gpmu.co.kr/js/podo.ui/podo.ui.core.js"></script>
+    
+    <link href="https://kendo.cdn.telerik.com/themes/10.2.0/default/default-main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/hanmi/style02.css">
+
+    <link rel="stylesheet" href="css/hanmi/lms-style.css">
+
+    <script src="js/hanmi/run.js"></script>
+</head>
+
+<body>
+    <!--header-->
+    <style>
+        #header .top .logo img {
+            max-width: 150px;
+        }
+    </style>
+    <header id="header">
+        <div class="inner">
+            <div class="top">
+                <h1 class="logo">
+                    <a href="#"><img src="images/hanmi/logo02.png" alt="학사관리"></a>
+                </h1>
+                <nav class="header_gnb">
+                    <div class="gnb_banner">
+                        <img src="./images/hanmi/test_img.png" alt="">
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">홈</a>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">카테고리</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">F-PM</a></li>
+                            <li><a href="" class="drop_item">Global</a></li>
+                            <li><a href="" class="drop_item">PRE-CON</a></li>
+                            <li><a href="" class="drop_item">ESG</a></li>
+                            <li><a href="" class="drop_item">Leadership</a></li>
+                            <li><a href="" class="drop_item">Smart</a></li>
+                            <li><a href="" class="drop_item">HanmiTube</a></li>
+                            <li><a href="" class="drop_item">CPD</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">GPMU소개</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">소개</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">열린마당</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">공지사항</a></li>
+                            <li><a href="" class="drop_item">1:1 게시판</a></li>
+                            <li><a href="" class="drop_item">지식샘</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">고객전용관</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">고객전용관</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="right_box">
+                    <div class="seach_area">
+                        <div class="input_wrap">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button type="submit">검색</button>
+                        </div>
+                    </div>
+                    <ul class="member_box">
+                        <li class="login"><a href="#">로그인</a></li>
+                        <li class="join"><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+                <!-- 모바일 메뉴 -->
+                <div class="m_menu">                    
+                    <div class="m_login">
+                        <a href="#" class="login_btn ir_pm">로그인</a>
+                    </div>
+                </div>
+            </div>      
+        </div>
+        <div class="m_gnb">
+            <ul>
+                <li><a href="#">카테고리</a></li>
+                <li><a href="#">GPMU소개</a></li>
+                <li><a href="#">열린마당</a></li>
+                <li><a href="#">고객전용관</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="list_wrap">
+            <div class="snb">
+                <h3 class="tit">마이페이지</h3>
+                <ul>
+                    <li class="active">
+                        <a href="/gpmu/service/hr/my_class.do">나의강의실</a>
+                    </li>
+                    <li>
+                        <a href="/gpmu/service/hr/my_act_list.do">활동이력</a>
+                    </li>
+                    <li>
+                        <a href="/gpmu/service/hr/my_info.do?mid=688">회원정보</a>
+                    </li>
+                    <li>
+                        <a href="/gpmu/service/hr/my_info_del.do">회원탈퇴</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="learn-wrap">
+                    <div class="learn-tit">   
+                        <h3>나의 강의실</h3>
+                    </div>
+                    <div class="learn-info">
+                        <div class="learn-info-tit type02">
+                            <div class="learn-info-tit__tit">
+                                <span class="course-type offline">오프라인</span>
+                                <p>남부교육팀 교육훈련</p>
+                            </div>
+                            <p class="learn-info-tit__date hide-mo">최근 학습일 2025.06.26</p>
+                        </div>
+                        <div class="learn-summary-list">
+                            <div class="item learn-summary-list__detail">
+                                <dl>
+                                    <dt><i class="ico ico-type01"></i>수료조건</dt>
+                                    <dd>출석<br class="hide-pc"> 80%이상</dd>
+                                </dl>
+                                <dl>
+                                    <dt><i class="ico ico-type02"></i>완료차시</dt>
+                                    <dd><span class="fc-green">3</span>/20</dd>
+                                </dl>
+                                <dl>
+                                    <dt><i class="ico ico-type03"></i>총 학습시간</dt>
+                                    <dd><span class="fc-blue">04:21</span></dd>
+                                </dl>
+                            </div>
+                            <div class="item learn-summary-list__progress">
+                                <div class="learn-summary-list__progress-tit">
+                                    <p class="hide-mo">출석률</p>
+                                    <p class="hide-pc"><span>이정은</span>님의 학습현황</p>
+                                </div>
+                                <div class="prog-cont" data-initial-percent="80">
+                                    <svg viewBox="0 0 200 100" class="semi-circle-svg">
+                                        <path class="prog-bg" d="M10,100 A90,90 0 0 1 190,100" />
+                                        <path class="prog-bar" d="M10,100 A90,90 0 0 1 190,100" />
+                                    </svg>
+                                    <svg viewBox="0 0 100 100" class="full-circle-svg">
+                                        <circle class="prog-bg" cx="50" cy="50" r="45" />
+                                        <circle class="prog-bar" cx="50" cy="50" r="45" />
+                                    </svg>
+                                    <div class="prog-num"><span></span>%</div> 
+                                </div>
+                                <div class="learn-summary-list__progress-txt hide-pc">
+                                    <p>최근 학습일 2025.06.26</p>
+                                </div>
+                            </div>
+                            <div class="item learn-summary-list__status">
+                                <p class="learn-summary-list__status-tit">이수현황</p>
+                                <p class="learn-summary-list__status-message">수료조건이 충족 되지 않았습니다.</p>
+                                <!-- <p class="learn-summary-list__status-message type02">조금만 더 힘내세요.</p>
+                                <p class="learn-summary-list__status-message type03">교육 이수가 완료 되었습니다.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <div class="section-title">
+                            <p>학습목차</p>
+                        </div>
+                        <table class="data-table">
+                            <caption>학습목차 리스트</caption>
+                            <colgroup class="hide-mo">
+                                <col width="8%">
+                                <col width="*">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="12%">
+                                <col width="10%">
+                                <col width="8%">
+                                <col width="100px">
+                            </colgroup>
+                            <thead class="hide-mo">
+                                <tr>
+                                    <th scope="col">차시</th>
+                                    <th scope="col">차시명</th>
+                                    <th scope="col">출석률</th>
+                                    <th scope="col">학습시간</th>
+                                    <th scope="col">학습일자</th>
+                                    <th scope="col">상태</th>
+                                    <th scope="col">자료</th>
+                                    <th scope="col">학습하기</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="index01"><span>1</span></td>
+                                    <td class="index-tit"><p>1차시 교육</p></td>
+                                    <td class="index-tag index02">0%</td>
+                                    <td class="hide-mo">00:00</td>
+                                    <td class="index-tag index03">학습기록없음</td>
+                                    <td class="hide-mo">학습중</td>
+                                    <td class="hide-mo"><button type="button" class="data-table__btn-file"><i class="ico-file"></i><span class="sr-only">내려받기</span></button></td>
+                                    <td>
+                                        <a href="#" class="data-table__btn-link hide-mo">바로가기</a>
+                                        <div class="data-table__btn-wrap hide-pc">
+                                            <a href="#" class="data-table__btn-link">출석</a>
+                                            <a href="#" class="data-table__btn-link type02">퇴실</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="index01"><span>2</span></td>
+                                    <td class="index-tit"><p>2차시 교육</p></td>
+                                    <td class="index-tag index02">0%</td>
+                                    <td class="hide-mo">00:00</td>
+                                    <td class="index-tag index03">학습기록없음</td>
+                                    <td class="hide-mo">학습중</td>
+                                    <td class="hide-mo"><button type="button" class="data-table__btn-file"><i class="ico-file"></i><span class="sr-only">내려받기</span></button></td>
+                                    <td>
+                                        <a href="#" class="data-table__btn-link hide-mo">바로가기</a>
+                                        <div class="data-table__btn-wrap hide-pc">
+                                            <a href="#" class="data-table__btn-link">출석</a>
+                                            <a href="#" class="data-table__btn-link type02">퇴실</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="data-table__footer">
+                            <a href="#" class="data-table__footer-btn-link">목록으로</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+  
+    
+  
+    
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="f_top">
+            <div class="inner">
+                <ul>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">마케팅 정보 수신동의</a></li>
+                    <li><a href="">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="f_bottom">
+            <div class="inner">
+                <div class="f_logo">
+                    <img src="./images/hanmi/f_logo.png" alt="gpmu 로고">
+                </div>
+                <div class="txt">
+                    <p>edu@keldi.co.kr</p>
+                    <p>
+                        <span>헬프데스크 문의 </span><span>☎ 02-971-2900</span>
+                        <span>/</span> 
+                        <span>운영시간 10~16시(평일)</span>
+                    </p>
+                    <p>본 사이트에서 제공하는 모든 콘텐츠는 저작권법의 보호를 받는 바, 무단 전재, 복제, 배포 등을 금지합니다.</p>
+                    <p class="copy">Copyright © Hanmiglobal Corp. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const animationStates = new Map();
+
+        function getActiveSvgElements(container) {
+            const semiCircleSvg = container.querySelector('.semi-circle-svg');
+            const fullCircleSvg = container.querySelector('.full-circle-svg');
+
+            const isSemiCircleVisible = window.getComputedStyle(semiCircleSvg).display !== 'none';
+
+            let currentPath, currentBackgroundPath, totalLength;
+
+            if (isSemiCircleVisible) {
+                currentPath = semiCircleSvg.querySelector('.prog-bar');
+                currentBackgroundPath = semiCircleSvg.querySelector('.prog-bg');
+                totalLength = currentPath.getTotalLength();
+            } else {
+                currentPath = fullCircleSvg.querySelector('.prog-bar');
+                currentBackgroundPath = fullCircleSvg.querySelector('.prog-bg');
+                const radius = parseFloat(currentPath.getAttribute('r'));
+                totalLength = 2 * Math.PI * radius;
+            }
+
+            currentPath.style.strokeDasharray = totalLength;
+            currentBackgroundPath.style.strokeDasharray = totalLength;
+
+            return { currentPath, currentBackgroundPath, totalLength };
+        }
+
+        function setupProgressBar(container) {
+            const textSpan = container.querySelector('.prog-num span');
+            const targetPercent = parseFloat(container.dataset.initialPercent);
+
+            const { currentPath, totalLength } = getActiveSvgElements(container);
+
+            const offset = totalLength * (1 - targetPercent / 100);
+            currentPath.style.strokeDashoffset = offset;
+            textSpan.textContent = Math.round(targetPercent);
+        }
+
+        function animateProgressBar(container) {
+            if (animationStates.get(container)) {
+                setupProgressBar(container); 
+                return;
+            }
+
+            const textSpan = container.querySelector('.prog-num span');
+            const targetPercent = parseFloat(container.dataset.initialPercent);
+            const { currentPath, totalLength } = getActiveSvgElements(container);
+
+            currentPath.style.strokeDashoffset = totalLength;
+            textSpan.textContent = 0;
+
+            const duration = 1500;
+            let startTime = null;
+
+            function animate(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const elapsed = timestamp - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                const currentAnimatedPercent = targetPercent * progress;
+                const offset = totalLength * (1 - currentAnimatedPercent / 100);
+
+                currentPath.style.strokeDashoffset = offset;
+                textSpan.textContent = Math.round(currentAnimatedPercent);
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    textSpan.textContent = Math.round(targetPercent);
+                    currentPath.style.strokeDashoffset = totalLength * (1 - targetPercent / 100);
+                    animationStates.set(container, true);
+                }
+            }
+
+            if (targetPercent === 0) {
+                currentPath.style.strokeDashoffset = totalLength;
+                textSpan.textContent = 0;
+                animationStates.set(container, true);
+            } else {
+                requestAnimationFrame(animate);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.prog-cont').forEach(container => {
+                animationStates.set(container, false);
+                animateProgressBar(container);
+            });
+        });
+
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                document.querySelectorAll('.prog-cont').forEach(setupProgressBar);
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>
