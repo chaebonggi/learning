@@ -175,3 +175,11 @@
  .learn-wrap .data-table__btn-wrap .data-table__btn-link { padding: 10px; flex: 1; } 
  .learn-wrap .data-table__footer { text-align: center; } 
  }
+
+ .gpmu_introduction { padding: 70px 0; } 
+ .gpmu_introduction .con_list { justify-content: space-between; } 
+ .gpmu_introduction .img_wrap { max-width: 500px; width: 100%; max-height: 250px; border-radius: 20px; } 
+  @media (max-width: 860px){ 
+    .gpmu_introduction { padding: 30px 0; }
+    .gpmu_introduction .img_wrap {max-width: 100%; border-radius: 10px;}
+  }
