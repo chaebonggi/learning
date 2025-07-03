@@ -141,7 +141,17 @@
  .learn-wrap .data-table__footer-btn-link { display: inline-block; min-width: 100px; padding: 10px; background-color: #2d3f82; color: #fff; font-size: 16px; text-align: center; border-radius: 5px; text-align: center; } 
 .learn-wrap .data-table .index-tit p { display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1; text-align: left; } 
 
+ .header-util { background-color: #f5f5f5; } 
+ .header-util .util-menu-list { display: flex; } 
+ .header-util .util-menu-list li { position: relative; padding: 15px 0; } 
+ .header-util .util-menu-list li a { display: block; position: relative; color: #222; font-size: 13px; } 
+ .header-util .util-menu-list li:not(:first-child) a { padding-left: 10px; margin-left: 10px; } 
+ .header-util .util-menu-list li:not(:first-child) a:before { content: ''; width: 1px; height: 100%; position: absolute; top: 0; left: 0; background-color: #ddd; } 
+ #header .header_gnb::before { top: 17.5rem; } 
+ #header .header_gnb .gnb_banner { top: 21rem; } 
+
 @media (max-width: 1024px){
+  .header-util { display: none; } 
  .learn-wrap .item.learn-summary-list__status { flex: auto; width: 100%; margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; } 
  .learn-wrap .item.learn-summary-list__status::before { content: none !important; } 
  }
@@ -179,7 +189,9 @@
  .gpmu_introduction { padding: 40px 0; } 
  .gpmu_introduction .con_list { justify-content: space-between; } 
  .gpmu_introduction .img_wrap { max-width: 500px; width: 100%; max-height: 300px; border-radius: 20px; } 
-  @media (max-width: 860px){ 
-    .gpmu_introduction .img_wrap {max-width: 100%; border-radius: 10px;}
-    .gpmu_introduction .txt_wrap a {position: static; background-color: #fff;}
-  }
+ @media (max-width: 860px){
+ .gpmu_introduction .img_wrap { max-width: 100%; border-radius: 10px; } 
+ .gpmu_introduction .txt_wrap a { position: static; background-color: #fff; } 
+ .footer .f_bottom {border-top: 1px solid #ddd;}
+ }
+
