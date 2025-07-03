@@ -45,7 +45,61 @@
         }
     </style>
     <header id="header">
-        <div class="inner">
+        <style>
+            .header-util {
+                background-color: #f5f5f5;
+            }
+            .header-util .util-menu-list {
+                display: flex;
+            }
+            .header-util .util-menu-list li {
+                position: relative;
+                padding: 15px 0;
+            }
+            .header-util .util-menu-list li a {
+                display: block;
+                position: relative;
+                color: #222;
+                font-size: 13px;
+            }
+            .header-util .util-menu-list li:not(:first-child) a {
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+            .header-util .util-menu-list li:not(:first-child) a:before {
+                content: '';
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #ddd;
+            }
+            #header .header_gnb::before {
+                top: 17.5rem;
+            }
+            #header .header_gnb .gnb_banner {
+                top: 21rem;
+            }
+            @media (max-width: 1024px) { 
+                .header-util {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="header-util">
+            <div class="inner">
+                <div class="util-menu">
+                    <ul class="util-menu-list">
+                        <li><a href="#">동부교육팀</a></li>
+                        <li><a href="#">서부교육팀</a></li>
+                        <li><a href="#">남부교육팀</a></li>
+                        <li><a href="#">북부교육팀</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="inner">            
             <div class="top">
                 <h1 class="logo">
                     <a href="#"><img src="images/hanmi/logo02.png" alt="한미글로벌"></a>
