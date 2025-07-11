@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러닝허브 기초과학연구원</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="./css/front/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/common.css">
+    <!-- css 추가 -->
+
+    <link rel="stylesheet" type="text/css" href="./css/learninghub/00006.css"> 
+    <!-- /css 추가 -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@noonnu/s-coredream-4regular" />
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.common.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/kendo/2015.3.930/kendo.dataviz.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/chosen.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/jquery/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/front/front/excel-bootstrap-table-filter-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css" />
+
+
+    <script src="./js/front/yepnope/1.5.4/yepnope.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/front/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+    <script src="./js/front/front/jquery.mCustomScrollbar.js"></script>
+    <script src="./js/front/front/imgLiquid/0.9.944/imgLiquid-min.js"
+        integrity="sha512-r4VzkuVP3meRHq9OT0J0TwErGgUs9tMV8P/RR9U8X/EDAaDxx+nwCrOq885oW3OPwp3YVRm6hDgngWRHynh1FA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/front/front/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="./js/front/front/excel-bootstrap-table-filter-bundle.js"></script>
+    <script src="./js/front/front/Swiper/4.5.1/swiper.min.js"></script>
+    <script src="./js/front/chosen.jquery.min.js"></script>
+    <!-- <script src="./js/learninghub/run.js"></script> -->
+    <script src="./js/front/file/forms.js"></script>
+    <script src="./js/front/solution/solution_ui.js"></script>
+    <script src="./js/front/solution/custome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.js"></script>
+    <!--  -->
+</head>
+
+<body>
+    <style>
+        /* 기초과학연구원 */
+        .bg_yellow {background: #ffbd47 !important;}
+        .header_gnb .header_top .logo { display: flex; align-items: center; } 
+        .header_gnb .header_top .logo a { height: auto; } 
+        .header_gnb .new_gnb .gnb_menu { width: 100%; } 
+        .header_gnb .new_gnb .gnb_menu > li { width: 100%; flex: 1; } 
+        .header_gnb .new_gnb .lnb .lnb_menu {grid-template-columns: repeat(4, 1fr);}
+        .flex-1 { flex: 1 !important; } 
+
+        .info_area .btn_wrap { display: flex; margin-top: 0; } 
+        .info_area .btn_wrap .btn { min-width: 100px; padding: 5px 10px; font-size: 16px; background-color: #eee; text-align: center; border: 1px solid #ddd; border-radius: 10px; } 
+        .info_area .btn_wrap .btn.type01 { background-color: #222; color: #fff; } 
+        .info_box .graph_wrap .graph_area { display: flex; justify-content: center; width: 100%; height: 100px; margin: 0 auto; box-sizing: border-box; border-bottom: 1px solid #222; } 
+        .info_box .graph_wrap .graph_area li { flex: 1; position: relative; max-width: 60px; } 
+        .info_box .graph_wrap .graph_area .graph { display: flex; width: 24px; height: 100%; margin: 0 auto; flex-direction: column-reverse; background: transparent; border-radius: 20px; } 
+        .info_box .graph_wrap .graph_area .graph .bar { position: relative; background: #BB3E00; } 
+        .info_box .graph_wrap .graph_area li:nth-child(2) .graph .bar { background-color: #F7AD45; } 
+        .info_box .graph_wrap .graph_area li:nth-child(3) .graph .bar { background-color: #657C6A; } 
+        .info_box .graph_wrap .graph_area li:nth-child(4) .graph .bar { background-color: #A2B9A7; } 
+        .info_box .graph_wrap .graph_area .graph .bar .g_txt { display: none; padding: 2px 10px; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #666666; color: #fff; font-size: 12px; border-radius: 10px; white-space: nowrap; } 
+        .info_box .graph_wrap .graph_area .graph .bar:hover .g_txt { display: block; z-index: 10; } 
+        .info_box .graph_wrap .graph_area .txt { position: absolute; bottom: -24px; left: 50%; transform: translateX(-50%); color: #666666; font-size: 13px; font-weight: 500; text-align: center; white-space: nowrap; } 
+
+        .main_type01 .tit_wrap.type02 { display: block; position: relative; } 
+        .main_type01 .tit_wrap.type02:hover .tooltip { display: block; } 
+        .main_type01 .tit_wrap.type02 .tooltip { display: none; padding: 5px; position: absolute; left: 0; background: #ff8b00; border-radius: 5px; white-space: nowrap; z-index: 10; } 
+        .main_type01 .tit_wrap.type02 .tooltip::after { content: ''; position: absolute; top: -10px; left: 30px; transform: translateX(-50%); border-top: 6px solid transparent; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 6px solid #ff8b00; } 
+        .main_type01 .tit_wrap.type02 .tooltip span { display: block; position: relative; padding-left: 15px; color: #fff; font-size: 12px; font-weight: 300; text-align: left; } 
+        .main_type01 .tit_wrap.type02 .tooltip span::before { content: '※'; position: absolute; top: 0; left: 0; } 
+
+        .main_wrap.main_type01 .info_wrap .user_profil {flex-wrap: wrap;}
+        .main_wrap.main_type01 .info_wrap .user_profil .edu_cost {display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 20px; width: 100%;}
+        .main_wrap.main_type01 .info_wrap .user_profil .edu_cost__label {flex-shrink: 0; color: #222; font-weight: 500;}
+        .main_wrap.main_type01 .info_wrap .user_profil .edu_cost__value {font-weight: 300;}
+
+        .main_wrap.main_type01 .notice_wrap .notice_area {display: block;}
+        .main_wrap.main_type01 .clist_slide .cont_wrap .c_tit { font-size: 2.4rem; font-weight: bold;}
+        .main_wrap.main_type01 .clist_slide .cont_wrap .c_tit span {color: #c61717; font-size: 2.4rem;}
+        
+        @media all and (max-width:768px){ 
+            .main_wrap.main_type01 .info_wrap .user_profil .edu_cost {
+                justify-content: center;
+            }
+        }
+        @media all and (max-width:640px){
+            .header_gnb .header_top .logo img {max-width: 130px; height: auto;}
+            .content_area .item_wrap .item_list li { flex: 1 1 40%; } 
+            .content_area .item_wrap .item_list li:nth-child(odd) .i_txt::before { content: none; } 
+            .main_type01 .tit_wrap.type02 .tooltip { display: block; position: static; background: #fff; } 
+            .main_type01 .tit_wrap.type02 .tooltip::after { content: none; } 
+            .main_type01 .tit_wrap.type02 .tooltip span { color: #222; }
+            .main_wrap.main_type01 .slide_area .img_wrap {height: 130px;}
+            .main_wrap.main_type01 .main_visual .swiper-control {display: block; width: 100%; height: 24px; left: 0; bottom: 0; transform: none; background: transparent;}
+            .main_wrap.main_type01 .main_visual .swiper-control .swiper-pagination {top: 0; left: 50%; transform: translateX(-50%);}
+            .main_wrap.main_type01 .main_visual .swiper-control .swiper-pagination span:not(:first-child) {margin-left: 4px;}
+            .main_wrap.main_type01 .main_visual .swiper-control .swiper-pagination span {background-color: #fff;}
+            .main_wrap.main_type01 .main_visual .swiper-control .swiper-navigation {display: none;}
+        }
+        /* //기초과학연구원 css 추가 */
+       
+    </style>
+    <header class="header header_gnb type01">
+        <div class="gnb_util">
+            <div class="innerSection">
+                <div class="util_menu">
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="innerSection">
+            <div class="header_top">
+                <h1 class="logo"><a href=""><img src="./images/learninghub_type02/logo.jpg" alt="기초과학연구원"></a></h1>
+                <div class="m_all_btn">
+                    <button type="button" class="m_menu_btn">
+                        <span></span>
+                    </button>
+                </div>
+                <div class="seach_area">
+                    <div class="input_wrap h_search">
+                        <input type="text" placeholder="검색어 입력." id="searchTextPc" name="searchTextPc">
+                        <button type="button">검색</button>
+                    </div>
+                </div>
+            </div>
+            <nav class="new_gnb">
+                <div class="gnb_btn">
+                    <button type="button" class="all_gnb_menu">
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="gnb_menu">                    
+                    <li><a href="#">나의 강의실</a></li>
+                    <li><a href="#">수강 신청</a></li>
+                    <li><a href="#">역량진단</a></li>
+                    <li></li>
+                </ul>
+                <div class="lnb">
+                    <div class="lnb_menu">                        
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            <ul>
+                                <li><a href="#">test1</a></li>
+                                <li><a href="#">test2</a></li>
+                                <li><a href="#">test3</a></li>
+                            </ul>
+                        </div>
+                        <div class="lnb_item">
+                            
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="m_menu_wrap">
+            <div class="m_menu_top">
+                <h1 class="logo">
+                    <img src="./images/learninghub_type02/logo.jpg" alt="기초과학연구원">
+                </h1>
+                <a href="#" class="m_close_btn"><span class="ir-text">닫기</span></a>
+            </div>
+            <div class="m_menu_member">
+                <ul>
+                    <li class="m_login">
+                        <a href="#" class="btn_black01 btn_style04">로그인</a>
+                    </li>
+                    <li class="m_join">
+                        <a href="#" class="btn_black02 btn_style04 ml10">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m_menu_bottom">
+                <ul class="m_menu_list">
+                    <li>
+                        <a href="javascript:void(0);">나의 강의실</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">수강신청</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">역량진단</a>
+                        <ul>
+                            <li><a href="#">test1</a></li>
+                            <li><a href="#">test2</a></li>
+                            <li><a href="#">test3</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="main_wrap main_type01">
+       <article class="main_visual">
+            <div class="main_visual_swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-background="#fa5345">
+                        <a href="#" title="랜선  클래스 수강신청 바로가기"><img src="./images/learninghub/main_img01.png" /></a>
+                    </div>
+                    <div class="swiper-slide" data-background="#5245fa">
+                        <a href="#" title="랜선  클래스 수강신청 바로가기"><img src="./images/learninghub/main_img02.png" /></a>
+                    </div>
+                </div>
+                <div class="swiper-control">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-navigation">
+                        <button class="swiper-button-prev"><span class="ir-text">left slide 이동</span></button>
+                        <button class="swiper-button-next"><span class="ir-text">right slide 이동</span></button>
+                        <button class="swiper-button-pause"><span class="ir-text">정지</span></button>
+                        <button class="swiper-button-resume"><span class="ir-text">플레이</span></button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item bg_yellow">
+            <div class="innerSection">
+                <div class="info_wrap">
+                    <div class="info_box info_area flex-1">
+                        <div class="user_profil">
+                            <div class="user_img">
+                                <img src="./images/learninghub_type01/user_img.png" alt="홍길동">
+                            </div>
+                            <div class="user_info">
+                                <p class="u_tit"><span>홍길동</span></p>
+                                <p class="u_txt">연구지원팀</p>
+                            </div>
+                            <div class="edu_cost">
+                                <p class="edu_cost__label">교육비 사용 현황</p>
+                                <p class="edu_cost__value">500,000원 / 1,800,000원</p>
+                            </div>
+                        </div>
+                        
+                        <div class="btn_wrap">
+                            <a href="" class="btn flex-1 type01">나의 강의실</a>
+                            <a href="" class="btn type01">로그아웃</a>
+                        </div>
+                    </div>
+                    <div class="info_box reg_area">
+                        <div class="tit_wrap">
+                            <p class="tit">수강 중인 콘텐츠</p>
+                            <div class="tit_btn">
+                                <a href="#" class="more_btn"><span class="ir-text">더보기</span></a>
+                            </div>
+                        </div>
+                        <ul class="info_list list_type01">
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">모든 직장인이 IT 기획을 알아야 하는 이유</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">내부회계관리제도의 전사수준 통계</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">강화학습이란?</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">핵심 재무제표 상식</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="l_txt">[짧은 한국사] Q&A_고구려, 광개토왕</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+        </article>
+        <article class="box_item">
+            <div class="curation_cont clist_slide">
+                <div class="innerSection pd_style02">
+                    <div class="slide_wrap">
+                        <div class="cont_wrap">
+                            <p class="c_tit">오늘의<br> <span>HOT 트렌드</span> 과정</p>
+                            <p class="c_txt">지금 학습자들에게 가장<br>
+                                관심을 받고 있는 과정을<br>
+                                추천해드립니다.</p>
+                            <div class="slide_btn">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                        <div class="con_list">
+                            <div class="swiper-wrapper">
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <div class="img_wrap">
+                                            <img src="./images/learninghub/list_img01.png" alt="기획력 & 보고서 작성 향상 과정">
+                                        </div>
+                                        <div class="txt">
+                                            <p class="t_date">2024-03-29 ~ 2024-04-05</p>
+                                            <p class="t_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <div class="t_state">
+                                                <span class="t_tag gray">공통</span>
+                                                <span class="t_tag gray">직무</span>
+                                                <span class="t_tag gray">리더십</span>
+                                            </div>
+                                        </div>
+                                        <!-- hover txt -->
+                                        <div class="h_wrap">
+                                            <p class="h_tit">기획력 & 보고서 작성 향상 과정</p>
+                                            <ul>
+                                                <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                                <li><span>학습시간 :</span> 4시간</li>
+                                                <li><span>수료평가기준 :</span> 진도100% / 총점100%</li>
+                                            </ul>
+                                            <p class="h_btn">수강신청</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <div class="qmenu_wrap">
+                <div class="innerSection pd_style02">
+                    <div class="qmenu_area">
+                        <h3>Quick menu</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <p>개설리스트</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>학습방법안내</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>자주하는질문<br> FAQ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>러닝허브<br> 소개자료</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <p>공지사항</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <div class="innerSection">
+                <div class="tit_wrap type02">
+                    <p class="tit">인기과정 <span>미리보기</span></p>
+                    <div class="tooltip">
+                        <span>이번 주 가장 인기 있엇던 과정 리스트 미리보기</span>
+                    </div>
+                </div>
+                <div class="slide_wrap">
+                    <div class="slide_area">
+                        <div class="swiper-wrapper">
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">모든 직장인이 IT 기획을 알아야 하는 이유</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>4</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">내부회계관리제도의 전사수준 통계</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>3</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">강화학습이란?</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>0</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">핵심 재무제표 상식</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>65</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/learninghub_type01/slide_img.png" alt="컨텐츠 이미지">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">[짧은 한국사] Q&A_고구려, 광개토왕</p>
+                                    </div>
+                                    <div class="view_wrap">
+                                        <span><i class="ico_save"></i>97</span>
+                                        <span><i class="ico_time"></i>00:24:22</span>
+                                    </div>
+                                </a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item">
+            <div class="innerSection bt_line_gray">
+                <div class="notice_wrap">
+                    <div class="notice_area">
+                        <div class="tit_wrap">
+                            <p class="tit">공지사항</p>
+                            <div class="tit_btn">
+                                <a href="/front/common/board/announce/list.do" class="more_btn"><span class="ir-text">더보기</span></a>
+                            </div>
+                        </div>
+                        <ul class="notice_list list_type01">
+                        	
+                                <li>
+	                                <a href="javascript:;" onclick="onAnncViewPage('11')" class="l_txt">[공지사항]팝업 차단 해제 방법</a>
+	                                <p class="l_date">2025.07.10</p>
+	                            </li>
+		                	
+                                <li>
+	                                <a href="javascript:;" onclick="onAnncViewPage('8')" class="l_txt">[공지사항]스타플레이어 오류 조치 방법</a>
+	                                <p class="l_date">2025.06.10</p>
+	                            </li>
+		                	
+                                <li>
+	                                <a href="javascript:;" onclick="onAnncViewPage('7')" class="l_txt">[공지사항]본인 인증 반복 조치 방법</a>
+	                                <p class="l_date">2025.06.10</p>
+	                            </li>
+		                	
+                                <li>
+	                                <a href="javascript:;" onclick="onAnncViewPage('5')" class="l_txt">[공지사항]쿠키/캐시 삭제 방법</a>
+	                                <p class="l_date">2025.06.10</p>
+	                            </li>
+		                	
+                                <li>
+	                                <a href="javascript:;" onclick="onAnncViewPage('2')" class="l_txt">[공지사항]학습에 원활한 PC환경 브라우저(Edge, 크롬) 설정 및 팝업차단 해제 안내</a>
+	                                <p class="l_date">2025.04.07</p>
+	                            </li>
+		                	     
+                        </ul>
+                    </div>
+                    <div class="notice_area">
+                        <div class="tit_wrap">
+                            <p class="tit">FAQ</p>
+                            <div class="tit_btn">
+                                <a href="/front/common/board/commboard/list.do?bbId=149" class="more_btn"><span class="ir-text">더보기</span></a>
+                            </div>
+                        </div>
+                        <ul class="notice_list list_type01">
+                        	
+                                <li>
+	                                <a href="/front/common/board/commboard/list.do?bbId=149" class="l_txt">개인정보 변경은 어떻게 하나요?</a>
+	                                <p class="l_date">2025.04.07</p>
+	                            </li>
+		                	
+                                <li>
+	                                <a href="/front/common/board/commboard/list.do?bbId=149" class="l_txt">학습기간 연장 또는 변경 가능한가요?</a>
+	                                <p class="l_date">2025.04.07</p>
+	                            </li>
+		                	
+                                <li>
+	                                <a href="/front/common/board/commboard/list.do?bbId=149" class="l_txt">학습화면에서 다음으로 진행 되지 않습니다.</a>
+	                                <p class="l_date">2025.04.07</p>
+	                            </li>
+		                	
+                                <li>
+	                                <a href="/front/common/board/commboard/list.do?bbId=149" class="l_txt">본인인증을 완료했음에도 본인인증 화면이 계속 뜹니다.</a>
+	                                <p class="l_date">2025.04.07</p>
+	                            </li>
+		                	
+                                <li>
+	                                <a href="/front/common/board/commboard/list.do?bbId=149" class="l_txt">수강중(학습중)은 어떤 상태인가요?</a>
+	                                <p class="l_date">2025.04.07</p>
+	                            </li>
+		                	     
+                        </ul>
+                    </div>
+                    <div class="notice_banner">
+                         <p class="b_tit">학습지원센터</p>
+                         <p class="b_tel">02-2081-1000</p>
+                         <div class="txt_area">
+                             <p>평일 09:00 ~ 18:00</p>
+                             <p>점심 12:00 ~ 13:00</p>
+                             <p>토/일 공휴일 : 휴무</p>
+                         </div>                        
+                     </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="footer type01">
+        <div class="innerSection">
+            <div class="footer_wrap">
+                <div class="footer_area">
+                    <div class="f_tit">
+                        <p>학습<br>문의</p>
+                    </div>
+                    <div class="f_info">
+                        <div class="f_tel">
+                            <p>02-0000-0000</p>
+                            <a href="#" class="f_link bg_yellow">카카오톡 상담 바로가기</a>
+                        </div>
+                        <ul class="f_list">
+                            <li>
+                                <p class="list_tit">운영</p>
+                                <p class="list_txt">평일 09:00 ~ 18:00, 점심시간 12:00 ~ 13:00</p>
+                            </li>
+                            <li>
+                                <p class="list_tit">휴무</p>
+                                <p class="list_txt">주말, 공휴일 휴무</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_area">
+                    <div class="f_tit">
+                        <p>원격<br>상담</p>
+                    </div>
+                    <div class="f_info">
+                        <div class="f_tel">
+                            <p>02-0000-0000</p>
+                            <a href="#" class="f_link">원격지원 상담 바로가기</a>
+                        </div>
+                        <ul class="f_list">
+                            <li>
+                                <p class="list_tit">운영</p>
+                                <p class="list_txt">평일 09:00 ~ 18:00, 점심시간 12:00 ~ 13:00</p>
+                            </li>
+                            <li>
+                                <p class="list_tit">휴무</p>
+                                <p class="list_txt">주말, 공휴일 휴무</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() { 
+            
+            let mainSwiper = null; 
+
+            function initializeMainSwiper() {
+                const swiperEl = document.querySelector('.main_visual_swiper');
+                
+                const slides = document.querySelectorAll('.main_visual_swiper .swiper-slide');
+                slides.forEach(slide => {
+                    const bgColor = slide.getAttribute('data-background');
+                    if (bgColor) {
+                        slide.style.backgroundColor = bgColor;
+                    }
+                });
+
+                mainSwiper = new Swiper(swiperEl, {
+                    speed: 700,
+                    loop: true,
+                    effect: 'creative',
+                    centeredSlides: true,                    
+                    observer: true,
+                    observeParents: true,                    
+                    autoplay: {
+                        delay: 5000,
+                    },                    
+                    pagination: {
+                        el: '.main_visual_swiper .swiper-pagination',
+                        type: 'fraction',
+                    },
+                    navigation: {
+                        nextEl: '.main_visual_swiper .swiper-button-next',
+                        prevEl: '.main_visual_swiper .swiper-button-prev',
+                    },                    
+                    breakpoints: {
+                        640: {
+                            pagination: {
+                                type: 'bullets',
+                            }
+                        }
+                    }
+                });
+
+                const pauseEl = document.querySelector('.swiper-button-pause');
+                const resumeEl = document.querySelector('.swiper-button-resume');
+                if (pauseEl && resumeEl) {
+                    const pauseFunc = () => {
+                        mainSwiper.autoplay.stop();
+                        swiperEl.classList.add('swiper-paused');
+                    };
+
+                    const resumeFunc = () => {
+                        mainSwiper.autoplay.start();
+                        swiperEl.classList.remove('swiper-paused');
+                    };
+
+                    pauseEl.addEventListener('click', pauseFunc);
+                    resumeEl.addEventListener('click', resumeFunc);
+                }
+            }
+            
+            window.addEventListener('resize', () => {
+                if (mainSwiper) {
+                    mainSwiper.destroy(true, true); 
+                }
+                initializeMainSwiper();
+            });
+
+            initializeMainSwiper();
+            
+            var swiper = new Swiper(".slide_area", {
+                initialSlide: 0,
+                spaceBetween: 20,
+                slidesPerView: 5,
+                autoplay: false,
+                loop: false,
+                observer: true,
+                observeParents: true,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 5,
+                    }
+                }
+            });
+
+            var swiper = new Swiper(".curation_cont .con_list", {
+                spaceBetween: 20,
+                slidesPerView: 3,
+                autoplay: false,
+                loop: false,
+                navigation: {
+                    nextEl: ".curation_cont .swiper-button-next",
+                    prevEl: ".curation_cont .swiper-button-prev",
+                },
+                breakpoints: { 
+                    1024: {
+                        slidesPerView: 2,
+                    },
+                    480: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 10,
+                    },
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
