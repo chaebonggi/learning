@@ -149,6 +149,9 @@
  .header-util .util-menu-list li:not(:first-child) a:before { content: ''; width: 1px; height: 100%; position: absolute; top: 0; left: 0; background-color: #ddd; } 
  #header .header_gnb::before { top: 17.5rem; } 
  #header .header_gnb .gnb_banner { top: 21rem; } 
+ .btn-disabled {
+  pointer-events: none;  background-color: #e0e0e0;  color: #a0a0a0;  border: 1px solid #ccc; cursor: not-allowed; opacity: 0.6;
+}
 
 @media (max-width: 1024px){
   .header-util { display: none; } 
