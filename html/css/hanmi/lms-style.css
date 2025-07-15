@@ -89,7 +89,7 @@
  .learn-wrap .learn-info-tit__tit { display: block; } 
  .learn-wrap .learn-info-tit__tit p { margin-top: 10px; } 
  }
-
+ .btn-disabled {pointer-events: none;  background-color: #e0e0e0 !important;  color: #a0a0a0 !important;  border: 1px solid #ccc !important; cursor: not-allowed; opacity: 0.6; }
  .learn-wrap .learn-summary-list { display: flex; flex-wrap: wrap; padding: 30px 30px; } 
  .learn-wrap .learn-summary-list .item { flex: 1; position: relative; } 
  .learn-wrap .learn-summary-list .item:not(:first-child)::before { content: ''; width: 1px; height: 100%; position: absolute; left: 0; top: 0; background-color: #eee; } 
@@ -137,6 +137,7 @@
  .learn-wrap .data-table__btn-file { background-color: transparent; border: 0; } 
  .learn-wrap .data-table__btn-link { display: inline-block; padding: 5px; min-width: 72px; background-color: #0082cf; color: #fff; font-size: 14px; border-radius: 5px; text-align: center; } 
  .learn-wrap .data-table__btn-link.type02 { background-color: #afafaf; } 
+ .learn-wrap .data-table__btn-disabled {pointer-events: none;  background-color: #f9fafc !important;  color: #222 !important;  border: 1px solid #eaeaea !important; cursor: not-allowed; }
  .learn-wrap .data-table__footer { margin-top: 30px; text-align: right; } 
  .learn-wrap .data-table__footer-btn-link { display: inline-block; min-width: 100px; padding: 10px; background-color: #2d3f82; color: #fff; font-size: 16px; text-align: center; border-radius: 5px; text-align: center; } 
 .learn-wrap .data-table .index-tit p { display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1; text-align: left; } 
@@ -149,9 +150,7 @@
  .header-util .util-menu-list li:not(:first-child) a:before { content: ''; width: 1px; height: 100%; position: absolute; top: 0; left: 0; background-color: #ddd; } 
  #header .header_gnb::before { top: 17.5rem; } 
  #header .header_gnb .gnb_banner { top: 21rem; } 
- .btn-disabled {
-  pointer-events: none;  background-color: #e0e0e0;  color: #a0a0a0;  border: 1px solid #ccc; cursor: not-allowed; opacity: 0.6;
-}
+ 
 
 @media (max-width: 1024px){
   .header-util { display: none; } 
