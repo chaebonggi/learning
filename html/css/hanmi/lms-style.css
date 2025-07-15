@@ -181,6 +181,10 @@
  .learn-wrap .data-table .index-tag::before { display: inline-block; min-width: 80px; margin-right: 10px; padding: 5px 10px; background-color: #f9fafc; border: 1px solid #eaeaea; border-radius: 5px; box-sizing: border-box; text-align: center } 
  .learn-wrap .data-table .index-tag.index02::before { content: '출석률'; } 
  .learn-wrap .data-table .index-tag.index03::before { content: '학습일자'; } 
+ .learn-wrap .data-table .index-tag.index04::before { content: '출석시간'; } 
+ .learn-wrap .data-table .index-tag.index05::before { content: '퇴실시간'; }
+ .learn-wrap .data-table .index-tag-wrap {display: flex; gap: 10px;}
+ .learn-wrap .data-table .index-tag-wrap > .index-tag { flex: 1;}
  .learn-wrap .data-table__btn-wrap { display: flex; gap: 5px; } 
  .learn-wrap .data-table__btn-wrap .data-table__btn-link { padding: 10px; flex: 1; } 
  .learn-wrap .data-table__footer { text-align: center; } 
@@ -194,4 +198,9 @@
  .gpmu_introduction .txt_wrap a { position: static; background-color: #fff; } 
  .footer .f_bottom {border-top: 1px solid #ddd;}
  }
+  @media (max-width: 420px){ 
+    .learn-wrap .data-table .index-tag-wrap {
+      flex-direction: column;
+    }
+  }
 
