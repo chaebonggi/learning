@@ -196,83 +196,153 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-container">
-                        <div class="section-title">
-                            <p>학습목차</p>
+                    <div class="tab_container">
+                        <!--탭 메뉴 영역 -->
+                        <div class="tabs type02 full hide-pc">
+                            <ul>
+                                <li class="active"><a href="javascript:;" id="top_tab1" rel="tab1">수강중인 과정</a></li>
+                                <li><a href="javascript:;" id="top_tab2" rel="tab2">수강완료 과정</a></li>
+                            </ul>
                         </div>
-                        <table class="data-table">
-                            <caption>학습목차 리스트</caption>
-                            <colgroup class="hide-mo">
-                                <col width="8%">
-                                <col width="*">
-                                <col width="10%">
-                                <col width="10%">
-                                <col width="12%">
-                                <col width="10%">
-                                <col width="8%">
-                                <col width="100px">
-                            </colgroup>
-                            <thead class="hide-mo">
-                                <tr>
-                                    <th scope="col">차시</th>
-                                    <th scope="col">차시명</th>
-                                    <th scope="col">출석률</th>
-                                    <th scope="col">학습시간</th>
-                                    <th scope="col">학습일자</th>
-                                    <th scope="col">상태</th>
-                                    <th scope="col">자료</th>
-                                    <th scope="col">학습하기</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="index01"><span>1</span></td>
-                                    <td class="index-tit"><p>1차시 교육</p></td>
-                                    <td class="index-tag index02">0%</td>
-                                    <td class="hide-mo">00:00</td>
-                                    <td class="index-tag index03">학습기록없음</td>
-                                    <td class="hide-mo">학습중</td>
-                                    <td class="hide-mo"><button type="button" class="data-table__btn-file"><i class="ico-file"></i><span class="sr-only">내려받기</span></button></td>
-                                    <td class="hide-pc">
-                                        <div class="index-tag-wrap">
-                                            <div class="index-tag index04">
-                                                15:00
+                        <div id="tab1" class="tab_content">
+                           <div class="table-container">
+                                <div class="section-title hide-mo">
+                                    <p>학습목차</p>
+                                </div>
+                                <table class="data-table">
+                                    <caption>학습목차 리스트</caption>
+                                    <colgroup class="hide-mo">
+                                        <col width="8%">
+                                        <col width="*">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="12%">
+                                        <col width="10%">
+                                        <col width="8%">
+                                        <col width="100px">
+                                    </colgroup>
+                                    <thead class="hide-mo">
+                                        <tr>
+                                            <th scope="col">차시</th>
+                                            <th scope="col">차시명</th>
+                                            <th scope="col">출석률</th>
+                                            <th scope="col">학습시간</th>
+                                            <th scope="col">학습일자</th>
+                                            <th scope="col">상태</th>
+                                            <th scope="col">자료</th>
+                                            <th scope="col">학습하기</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="index01"><span>1</span></td>
+                                            <td class="index-tit"><p>1차시 교육</p></td>
+                                            <td class="index-tag index02">0%</td>
+                                            <td class="hide-mo">00:00</td>
+                                            <td class="index-tag index03">학습기록없음</td>
+                                            <td class="hide-mo">학습중</td>
+                                            <td class="hide-mo"><button type="button" class="data-table__btn-file"><i class="ico-file"></i><span class="sr-only">내려받기</span></button></td>
+                                            <td class="hide-pc">
+                                                <div class="index-tag-wrap">
+                                                    <div class="index-tag index04">
+                                                        15:00
+                                                    </div>
+                                                    <div class="index-tag index05">
+                                                        17:00
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="hide-mo">-</p>
+                                                <div class="data-table__btn-wrap hide-pc">
+                                                    <a href="#" class="data-table__btn-link">출석</a>
+                                                    <a href="#" class="data-table__btn-link type02">퇴실</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="data-table__footer">
+                                    <a href="#" class="data-table__footer-btn-link">목록으로</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab_content">
+                            <table class="data-table">
+                                <caption>학습목차 리스트</caption>
+                                <colgroup class="hide-mo">
+                                    <col width="8%">
+                                    <col width="*">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="12%">
+                                    <col width="10%">
+                                    <col width="8%">
+                                    <col width="100px">
+                                </colgroup>
+                                <thead class="hide-mo">
+                                    <tr>
+                                        <th scope="col">차시</th>
+                                        <th scope="col">차시명</th>
+                                        <th scope="col">출석률</th>
+                                        <th scope="col">학습시간</th>
+                                        <th scope="col">학습일자</th>
+                                        <th scope="col">상태</th>
+                                        <th scope="col">자료</th>
+                                        <th scope="col">학습하기</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="index01"><span>1</span></td>
+                                        <td class="index-tit"><p>1차시 교육</p></td>
+                                        <td class="index-tag index02">0%</td>
+                                        <td class="hide-mo">00:00</td>
+                                        <td class="index-tag index03">학습기록없음</td>
+                                        <td class="hide-mo">학습중</td>
+                                        <td class="hide-mo"><button type="button" class="data-table__btn-file"><i class="ico-file"></i><span class="sr-only">내려받기</span></button></td>
+                                        <td class="hide-pc">
+                                            <div class="index-tag-wrap">
+                                                <div class="index-tag index04">
+                                                    15:00
+                                                </div>
+                                                <div class="index-tag index05">
+                                                    17:00
+                                                </div>
                                             </div>
-                                            <div class="index-tag index05">
-                                                17:00
+                                        </td>
+                                        <td>
+                                            <p class="hide-mo">-</p>
+                                            <div class="data-table__btn-wrap hide-pc">
+                                                <a href="#" class="data-table__btn-link">출석</a>
+                                                <a href="#" class="data-table__btn-link type02">퇴실</a>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="hide-mo">-</p>
-                                        <div class="data-table__btn-wrap hide-pc">
-                                            <a href="#" class="data-table__btn-link">출석</a>
-                                            <a href="#" class="data-table__btn-link type02">퇴실</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="index01"><span>2</span></td>
-                                    <td class="index-tit"><p>2차시 교육</p></td>
-                                    <td class="index-tag index02">0%</td>
-                                    <td class="hide-mo">00:00</td>
-                                    <td class="index-tag index03">학습기록없음</td>
-                                    <td class="hide-mo">학습중</td>
-                                    <td class="hide-mo"><button type="button" class="data-table__btn-file"><i class="ico-file"></i><span class="sr-only">내려받기</span></button></td>
-                                    <td>
-                                        <p class="hide-mo">-</p>
-                                        <div class="data-table__btn-wrap hide-pc">
-                                            <a href="#" class="data-table__btn-link data-table__btn-disabled">입실완료</a>
-                                            <a href="#" class="data-table__btn-link type02 data-table__btn-disabled">퇴실완료</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="data-table__footer">
-                            <a href="#" class="data-table__footer-btn-link">목록으로</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="index01"><span>2</span></td>
+                                        <td class="index-tit"><p>2차시 교육</p></td>
+                                        <td class="index-tag index02">0%</td>
+                                        <td class="hide-mo">00:00</td>
+                                        <td class="index-tag index03">학습기록없음</td>
+                                        <td class="hide-mo">학습중</td>
+                                        <td class="hide-mo"><button type="button" class="data-table__btn-file"><i class="ico-file"></i><span class="sr-only">내려받기</span></button></td>
+                                        <td>
+                                            <p class="hide-mo">-</p>
+                                            <div class="data-table__btn-wrap hide-pc">
+                                                <a href="#" class="data-table__btn-link data-table__btn-disabled">입실완료</a>
+                                                <a href="#" class="data-table__btn-link type02 data-table__btn-disabled">퇴실완료</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="data-table__footer">
+                                <a href="#" class="data-table__footer-btn-link">목록으로</a>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
