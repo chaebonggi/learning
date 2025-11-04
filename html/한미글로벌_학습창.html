@@ -29,13 +29,15 @@
     #wrap .summary-list { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; } 
     #wrap .summary-list li { padding-left: 28px; position: relative; color: #333333; font-size: 18px; font-weight: 300; word-break: keep-all; } 
     #wrap .summary-list li::before { content: ''; width: 23px; height: 23px; position: absolute; top: 2px; left: 0; background: url(./images/hanmi/list_icon.png) center no-repeat; } 
-    #wrap .side { width: 630px; height: 100%; padding: 20px 20px; position: absolute; top: 0; right: -650px; border: 1px solid #dddddd; border-radius: 10px; box-sizing: border-box; overflow: hidden; } 
+    #wrap .side { width: 630px; height: 100%;  position: absolute; top: 0; right: -650px; border: 1px solid #dddddd; border-radius: 10px; box-sizing: border-box; overflow: hidden; } 
+    #wrap .side .tabs-wrap {padding: 10px 10px 0;}
     #wrap .side .tabs { display: flex; position: relative; border-bottom: 2px solid #dddddd; } 
     #wrap .side .tabs li { width: 110px; padding: 10px 0; position: relative; color: #9a9a9a; font-size: 20px; font-weight: 400; text-align: center; cursor: pointer; } 
     #wrap .side .tabs li.on { color: #333333; font-weight: bold; } 
     #wrap .side .tabs li.on::before { content: ''; width: 100%; height: 4px; background-color: #0082cc; position: absolute; bottom: 0; left: 0; } 
     #wrap .side .tab-item { display: none; } 
-    #wrap .side .keypoint-list { max-height: 800px; overflow-y: auto; } 
+    #wrap .side .tab-cont {padding: 0 10px;  }
+    #wrap .side .keypoint-list { max-height: 700px; padding-right: 10px; overflow-y: auto; } 
     #wrap .side .keypoint-list::-webkit-scrollbar,
     #wrap .side .keypoint-list::-webkit-scrollbar { width: 6px; } 
     #wrap .side .keypoint-list::-webkit-scrollbar-track,
@@ -50,9 +52,6 @@
     #wrap .side .keypoint-item .time { display: inline-flex; justify-content: center; flex-shrink: 0; width: 80px; padding: 8px 0; background-color: #ebeaea; color: #333333; font-size: 18px; font-weight: 300; line-height: 1; border-radius: 10px; border: 1px solid transparent; } 
     #wrap .side .keypoint-item .tit { color: #333333; font-size: 18px; font-weight: 300; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } 
     #wrap .side .keypoint-desc { margin-top: 20px; color: #333333; font-size: 18px; font-weight: 300; word-break: keep-all; } 
-    #wrap .side .tabs-wrap { position: relative; } 
-    #wrap .side .tabs-button { display: none; width: 14px; height: 8px; position: absolute; top: 10px; right: 20px; background: url(./images/hanmi/list_arrow.png) center no-repeat; } 
-    #wrap .side .tabs-button.active { transform: rotate(180deg); } 
     #wrap .btn-wrap { display: flex; justify-content: center; gap: 15px; margin: 40px 0; } 
     #wrap .btn-wrap .learn-btn { padding: 10px 15px; background-color: #eaeaea; color: #333333; font-size: 18px; font-weight: 400; border-radius: 10px; } 
     #wrap .btn-wrap .btn-blue { background-color: #0082cc !important; color: #fff !important; }     
@@ -61,7 +60,6 @@
       #wrap .learn-main .learn-cont { width: 100%; } 
       #wrap .side { width: 100%; margin-top: 20px; position: static; } 
       #wrap .side .keypoint-list { max-height: 600px; }     
-      #wrap .side .tabs-button { display: block; }     
     }
 
     @media (max-width: 768px){
@@ -71,12 +69,17 @@
       #wrap .learn-main { padding: 0 10px; } 
       #wrap .learn-main .title { padding: 10px 0; font-size: 14px; } 
       #wrap .learn-main .learn-cont { margin-top: 20px; } 
-      #wrap .side { padding: 10px; } 
-      #wrap .side .tabs li { width: 80px; font-size: 14px; } 
+      #wrap .side { border: 0;} 
+      #wrap .side .tabs-wrap {padding: 0;}
+      #wrap .side .tabs {border-bottom: 0;}
+      #wrap .side .tabs li { width: 50%; background-color: #ddd; font-size: 16px; border: 1px solid #ddd; border-bottom: 0; border-radius: 10px 10px 0 0;} 
+      #wrap .side .tabs li:nth-child(2){ border-left: 0;}
+      #wrap .side .tabs li.on {background-color: #fff; color: #0078c9;}
+      #wrap .side .tabs li.on::before {content: none;}
+      #wrap .side .tab-cont {border: 1px solid #ddd; border-top: 0; border-radius: 0 0 10px 10px;}
       #wrap .side .keypoint-list li { padding: 10px 4px; } 
       #wrap .side .keypoint-item .time { width: 60px; padding: 6px 0; font-size: 14px; } 
       #wrap .side .keypoint-item .tit { font-size: 14px; } 
-      #wrap .side .tabs-button { top: 14px; } 
       #wrap .side .keypoint-list { max-height: 250px; } 
       #wrap .side .keypoint-desc { margin-top: 10px; font-size: 12px; } 
       #wrap .summary { padding: 15px; } 
@@ -289,36 +292,6 @@
         $(this).addClass('on');
 
         $('.tab-cont .tab-item').hide().eq(index).show();
-      });
-
-      function checkScreenWidth() {
-        if ($(window).width() >= 1300) {
-          const $side = $('.side');
-          const $button = $side.find('.tabs-button');
-          const $content = $side.find('.tab-cont');
-
-          $button.removeClass('active');
-          
-          if ($content.is(':hidden')) {
-              $content.show();
-          }
-        }
-      }
-
-      checkScreenWidth();
-
-      $(window).on('resize', function() {
-          checkScreenWidth();
-      });
-
-      $('.tabs-button').on('click', function() {
-          if ($(window).width() < 1300) {
-              $(this).toggleClass('active');
-              
-              const $parentSide = $(this).closest('.side');
-              
-              $parentSide.find('.tab-cont').slideToggle(300);
-          }
       });
 
       
