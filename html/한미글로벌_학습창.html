@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>한미글로벌-학습창</title>
+  <link rel="stylesheet" href="https://www.gpmu.co.kr/css/popup/basic.css">
+  <script src="https://www.gpmu.co.kr/js/jquery/1.12.4/jquery-1.12.4.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <style>
+    a { color:#3c3a39 } 
+    a:link, a:visited { text-decoration:none; } 
+    a:hover { text-decoration:none; } 
+    .blind { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; } 
+    #wrap .learn-top { display: flex; } 
+    #wrap .learn-top .tag { display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 110px; height: 50px; position: relative; background: #0078c9; color: #fff; font-size: 18px; font-weight: bold; } 
+    #wrap .learn-top .tag::after { content: ""; width: 0; height: 0; position: absolute; right: -20px; top: 0; border-top: 50px solid #0078c9; border-right: 20px solid transparent; } 
+    #wrap .learn-top .title { display: flex; align-items: center; width: 100%; padding: 0 40px; background-color: #f9fafc; color: #333333; font-size: 20px; font-weight: bold; border: 1px solid #eaeaea; } 
+    #wrap .learn-main { padding: 0 100px; } 
+    #wrap .learn-main .title { padding: 20px 0; color: #333333; font-size: 18px; font-weight: bold; border-bottom: 1px solid #ededed; } 
+    #wrap .learn-main .video { width: 100%; height: 0; position: relative; padding-top: 56%; border-radius: 10px; overflow: hidden; } 
+    #wrap .learn-main .video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; } 
+    #wrap .learn-main .learn-cont { width: calc(100% - 650px); margin-top: 40px; position: relative; } 
+    #wrap .summary { margin-top: 20px; padding: 30px 28px; background: #f9fafc; border: 1px solid #dddddd; border-radius: 10px; } 
+    #wrap .summary-tit { color: #333333; font-size: 20px; font-weight: bold; } 
+    #wrap .summary-list { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; } 
+    #wrap .summary-list li { padding-left: 28px; position: relative; color: #333333; font-size: 18px; font-weight: 300; word-break: keep-all; } 
+    #wrap .summary-list li::before { content: ''; width: 23px; height: 23px; position: absolute; top: 2px; left: 0; background: url(./images/hanmi/list_icon.png) center no-repeat; } 
+    #wrap .side { width: 630px; height: 100%; padding: 20px 20px; position: absolute; top: 0; right: -650px; border: 1px solid #dddddd; border-radius: 10px; box-sizing: border-box; overflow: hidden; } 
+    #wrap .side .tabs { display: flex; position: relative; border-bottom: 2px solid #dddddd; } 
+    #wrap .side .tabs li { width: 110px; padding: 10px 0; position: relative; color: #9a9a9a; font-size: 20px; font-weight: 400; text-align: center; cursor: pointer; } 
+    #wrap .side .tabs li.on { color: #333333; font-weight: bold; } 
+    #wrap .side .tabs li.on::before { content: ''; width: 100%; height: 4px; background-color: #0082cc; position: absolute; bottom: 0; left: 0; } 
+    #wrap .side .tab-item { display: none; } 
+    #wrap .side .keypoint-list { max-height: 800px; overflow-y: auto; } 
+    #wrap .side .keypoint-list::-webkit-scrollbar,
+    #wrap .side .keypoint-list::-webkit-scrollbar { width: 6px; } 
+    #wrap .side .keypoint-list::-webkit-scrollbar-track,
+    #wrap .side .keypoint-list::-webkit-scrollbar-track { background:#ebeaea; border-radius: 50px } 
+    #wrap .side .keypoint-list::-webkit-scrollbar-thumb,
+    #wrap .side .keypoint-list::-webkit-scrollbar-thumb { background: #888888; border-radius: 50px; border: 1px solid #e8eaed } 
+    #wrap .side .keypoint-list li { padding: 14px 10px; } 
+    #wrap .side .keypoint-list li:not(:last-child) { border-bottom: 1px solid #ddd; } 
+    #wrap .side .keypoint-list li.active .time { color: #0082cc; border-color: #0082cc; } 
+    #wrap .side .keypoint-list li.active .tit { color: #0082cc; } 
+    #wrap .side .keypoint-item { display: flex; align-items: center; gap: 12px; }    
+    #wrap .side .keypoint-item .time { display: inline-flex; justify-content: center; flex-shrink: 0; width: 80px; padding: 8px 0; background-color: #ebeaea; color: #333333; font-size: 18px; font-weight: 300; line-height: 1; border-radius: 10px; border: 1px solid transparent; } 
+    #wrap .side .keypoint-item .tit { color: #333333; font-size: 18px; font-weight: 300; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } 
+    #wrap .side .keypoint-desc { margin-top: 20px; color: #333333; font-size: 18px; font-weight: 300; word-break: keep-all; } 
+    #wrap .side .tabs-wrap { position: relative; } 
+    #wrap .side .tabs-button { display: none; width: 14px; height: 8px; position: absolute; top: 10px; right: 20px; background: url(./images/hanmi/list_arrow.png) center no-repeat; } 
+    #wrap .side .tabs-button.active { transform: rotate(180deg); } 
+    #wrap .btn-wrap { display: flex; justify-content: center; gap: 15px; margin: 40px 0; } 
+    #wrap .btn-wrap .learn-btn { padding: 10px 15px; background-color: #eaeaea; color: #333333; font-size: 18px; font-weight: 400; border-radius: 10px; } 
+    #wrap .btn-wrap .btn-blue { background-color: #0082cc !important; color: #fff !important; }     
+
+    @media (max-width: 1300px){
+      #wrap .learn-main .learn-cont { width: 100%; } 
+      #wrap .side { width: 100%; margin-top: 20px; position: static; } 
+      #wrap .side .keypoint-list { max-height: 600px; }     
+      #wrap .side .tabs-button { display: block; }     
+    }
+
+    @media (max-width: 768px){
+      #wrap .learn-top .tag { width: 70px; height: 40px; font-size: 14px; } 
+      #wrap .learn-top .tag::after { right: -10px; border-top: 40px solid #0078c9; border-right: 10px solid transparent; } 
+      #wrap .learn-top .title { display: block; padding: 0 20px; font-size: 16px; line-height: 40px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } 
+      #wrap .learn-main { padding: 0 10px; } 
+      #wrap .learn-main .title { padding: 10px 0; font-size: 14px; } 
+      #wrap .learn-main .learn-cont { margin-top: 20px; } 
+      #wrap .side { padding: 10px; } 
+      #wrap .side .tabs li { width: 80px; font-size: 14px; } 
+      #wrap .side .keypoint-list li { padding: 10px 4px; } 
+      #wrap .side .keypoint-item .time { width: 60px; padding: 6px 0; font-size: 14px; } 
+      #wrap .side .keypoint-item .tit { font-size: 14px; } 
+      #wrap .side .tabs-button { top: 14px; } 
+      #wrap .side .keypoint-list { max-height: 250px; } 
+      #wrap .side .keypoint-desc { margin-top: 10px; font-size: 12px; } 
+      #wrap .summary { padding: 15px; } 
+      #wrap .summary-list { margin-top: 10px; } 
+      #wrap .summary-tit { font-size: 16px; } 
+      #wrap .summary-list li::before { width: 16px; height: 16px; background-size: contain; } 
+      #wrap .summary-list li { padding-left: 20px; font-size: 14px; } 
+      #wrap .btn-wrap { margin: 20px 0; } 
+      #wrap .btn-wrap .learn-btn { font-size: 14px; } 
+    }
+  </style>
+  <div id="wrap">
+    <div class="learn-top">
+      <span class="tag">학습</span>
+      <h2 class="title">건설분쟁 예방과 해결 Part.2</h2>
+    </div>
+    <div class="learn-main">
+      <h3 class="title">건설분쟁 예방과 해결 Part.2</h3>
+      <div class="learn-cont">
+        <div class="video">
+          <iframe width="100%" height="500" src="https://www.youtube.com/embed/xTfJ9J9oASw?si=6JAmqkr-InuZpOkm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <aside class="side">
+          <div class="tabs-wrap">
+            <ul class="tabs">
+              <li class="on">타임라인</li>
+              <li>키포인트</li>
+            </ul>
+            <button type="button" class="tabs-button"><span class="blind">탭버튼</span></button>
+          </div>
+          <div class="tab-cont">
+            <div class="tab-item">
+              <ul class="keypoint-list">
+                <li class="active">
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적 프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적 프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>     
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>  
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>  
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>  
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>  
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>  
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>  
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>  
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>   
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>  
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>  
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>  
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>                    
+                  </a>
+                </li>            
+              </ul>
+            </div>
+            <div class="tab-item">
+              <ul class="keypoint-list">
+                <li class="active">
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적 프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적 프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>
+                    <div class="keypoint-desc">
+                      <p>"문서 분석: 다양한 문서 형식의 보고서에서 핵심정보를 요약 제공",
+                          "회의록 작성: 음성 파일을 텍스트로 변환하고 회의록 초안 자동 생성",
+                          "이메일 초안 작성: 키워드 기반으로 격식 있는 메일 초안 자동 작성",
+                          "AI 문서 분석을 활용한 제안서 자동 작성 예시 제시",
+                          "AI가 문서의 맥락을 이해해 논리적 구조를 갖춘 맞춤형 문서 생성"</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="keypoint-item">
+                      <span class="time">00:00</span>
+                      <p class="tit">프리콘(Pre-construction)의 개념 간단 소개 및 영상 목적</p>
+                    </div>
+                    <div class="keypoint-desc">
+                      <p>"문서 분석: 다양한 문서 형식의 보고서에서 핵심정보를 요약 제공",
+                          "회의록 작성: 음성 파일을 텍스트로 변환하고 회의록 초안 자동 생성",
+                          "이메일 초안 작성: 키워드 기반으로 격식 있는 메일 초안 자동 작성",
+                          "AI 문서 분석을 활용한 제안서 자동 작성 예시 제시",
+                          "AI가 문서의 맥락을 이해해 논리적 구조를 갖춘 맞춤형 문서 생성"</p>
+                    </div>                    
+                  </a>
+                </li>           
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <section class="summary">
+          <p class="summary-tit">학습내용 요약</p>
+          <ul class="summary-list">
+            <li>프리콘은 설계 이전 단계에서 사업성 분석, 비용 예측, 설계 검토 등을 선제적으로 수행하여 프로젝트 리스크를 줄이고 성공 가능성을 높이는 데 핵심적인 역할을 한다.</li>
+            <li>효과적인 프리콘을 위해서는 BIM 활용 능력, VE 제안 역량, 예산 수립 능력, 이해관계자와의 소통 등 다방면의 전문성과 협업 능력이 요구된다.</li>
+            <li>개인과 조직이 프리콘 역량을 강화하면 수주 성공률이 상승하고, 공기 단축과 원가 절감이 가능해지며, 이는 곧 기업 경쟁력 강화로 이어진다.</li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+    <div class="btn-wrap">
+      <a href="javascript: goBack();" class="learn-btn btn-blue">돌아가기</a>
+      <a href="javascript: goOut();" class="learn-btn">닫기</a>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var firstIndex = $('.tabs li.on').index();
+      $('.tab-cont .tab-item').eq(firstIndex).show();
+      
+      $('.tabs li').click(function () {
+        var index = $(this).index();
+        $('.tabs li').removeClass('on');
+        $(this).addClass('on');
+
+        $('.tab-cont .tab-item').hide().eq(index).show();
+      });
+
+      function checkScreenWidth() {
+        if ($(window).width() >= 1300) {
+          const $side = $('.side');
+          const $button = $side.find('.tabs-button');
+          const $content = $side.find('.tab-cont');
+
+          $button.removeClass('active');
+          
+          if ($content.is(':hidden')) {
+              $content.show();
+          }
+        }
+      }
+
+      checkScreenWidth();
+
+      $(window).on('resize', function() {
+          checkScreenWidth();
+      });
+
+      $('.tabs-button').on('click', function() {
+          if ($(window).width() < 1300) {
+              $(this).toggleClass('active');
+              
+              const $parentSide = $(this).closest('.side');
+              
+              $parentSide.find('.tab-cont').slideToggle(300);
+          }
+      });
+
+      
+    });
+
+  </script>
+
+</body>
+
+</html>
