@@ -15,6 +15,43 @@
 	<script src="https://www.gpmu.co.kr/js/common/common.js"></script>
 </head>
 <body>
+    <style>
+        .mt40 { margin-top: 40px; } 
+        .tlt { text-align: left; } 
+        .trt { text-align: right; } 
+        .tct { text-align: center; } 
+        .fwb { font-weight: bold; } 
+        .bt1 { border-top: 1px solid #ccc; } 
+        .file-btn { max-width: 140px; display: inline-block; padding: 4px 10px; background-color: #6d7882; color: #fff; font-size: 14px; border-radius: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } 
+        .tit-style01 { font-size: 20px; text-align: center; font-weight: 500; margin-bottom: 30px; } 
+        table caption { position: absolute; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; } 
+        .table-style01 table { width: 100%; background-color: #fff; } 
+        .table-style01 thead tr:nth-child(1) { border-top: 1px solid #ccc; } 
+        .table-style01 table tr { border-bottom: 1px solid #ccc; } 
+        .table-style01 th { background-color: #f9fafc; color: #000; font-size: 14px; font-weight: 500; } 
+        .table-style01 th, .table-style01 td { padding: 10px; vertical-align: middle; line-height: 1.2; } 
+        .table-style01 td { color: #888; font-size: 14px; border-left: 1px solid #ccc; } 
+        input[type=radio], input[type=checkbox] { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; } 
+        .check-area { display: flex; gap: 4px; } 
+        .check-area.error-table { padding: 5px; background-color: #fff0f0; border: 1px solid #e74c3c; border-radius: 4px; } 
+        .form-check { flex: 1; text-align: center; } 
+        .form-check input[type=radio] ~ label, 
+        .form-check input[type=checkbox] ~ label { display: inline-flex; flex-direction: column-reverse; align-items: center; gap: 10px; position: relative; font-size: 12px; letter-spacing: -1px; cursor: pointer; }
+        .form-check input[type=radio] ~ label:before, 
+        .form-check input[type=radio] ~ label:after, 
+        .form-check input[type=checkbox] ~ label:before, 
+        .form-check input[type=checkbox] ~ label:after { display: flex; content: ""; } 
+        .form-check input[type=radio] ~ label:before, 
+        .form-check input[type=checkbox] ~ label:before { flex-shrink: 0; width: 20px; height: 20px; z-index: 3; background-color: #fff; border: 0.1rem solid #58616a; } 
+        .form-check input[type=radio] ~ label:before { border-radius: 100px; } 
+        .form-check input[type=radio] ~ label:after, 
+        .form-check input[type=checkbox] ~ label:after { position: absolute; z-index: 4; } 
+        .form-check input[type=radio] ~ label:after { bottom: 5px; left: 50%; transform: translateX(-50%); width: 10px; height: 10px; border-radius: 100px; } 
+        .form-check input[type=radio]:checked ~ label:after { background-color: #256ef4; } 
+        .desc { background: #f5f5f5; padding: 10px; border-radius: 10px; border: 1px solid #eaeaea; } 
+        .desc p { color: #888; font-size: 14px; } 
+        .total { padding: 20px; background-color: #eee; color: #000; font-size: 20px; font-weight: bold; text-align: center; }                 
+    </style>
     <div>
         <h3 class="tit-style01">평가관리 상세</h3>
         <div class="table-style01">
@@ -46,159 +83,6 @@
 
         <h3 class="tit-style01 mt40">평가항목</h3>
         <div>
-            <style>
-                .mt40 {margin-top: 40px;}
-                .tlt {text-align: left;}
-                .trt {text-align: right;}
-                .tct {text-align: center;}
-                .fwb {font-weight: bold;}
-                .bt1 {border-top: 1px solid #ccc;}
-                .file-btn {
-                    max-width: 140px;
-                    display: inline-block;
-                    padding: 4px 10px;
-                    background-color: #6d7882;
-                    color: #fff;
-                    font-size: 14px;
-                    border-radius: 10px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-                .tit-style01 {
-                    font-size: 20px;
-                    text-align: center;
-                    font-weight: 500;
-                    margin-bottom: 30px;
-                }
-                table caption {
-                    position: absolute; 
-                    width: 1px !important;
-                    height: 1px !important; 
-                    padding: 0 !important; 
-                    margin: -1px !important;
-                    overflow: hidden !important; 
-                    clip: rect(0, 0, 0, 0) !important; 
-                    white-space: nowrap !important; 
-                    border: 0 !important;
-                }
-                .table-style01 table {
-                    width: 100%;
-                    background-color: #fff;
-                }
-                .table-style01 thead tr:nth-child(1) {
-                    border-top: 1px solid #ccc;
-                }
-                .table-style01 table tr {
-                    border-bottom: 1px solid #ccc;
-                }
-                .table-style01 th {
-                    background-color: #f9fafc;
-                    color: #000;
-                    font-size: 14px;
-                    font-weight: 500;
-                }
-                .table-style01 th, .table-style01 td {
-                    padding: 10px;
-                    vertical-align: middle;
-                    line-height: 1.2;
-                }
-                .table-style01 td {
-                    color: #888;
-                    font-size: 14px;
-                    border-left: 1px solid #ccc;
-                }
-                input[type=radio], input[type=checkbox] {
-                    position: absolute !important;
-                    width: 1px !important;
-                    height: 1px !important;
-                    padding: 0 !important;
-                    margin: -1px !important;
-                    overflow: hidden !important;
-                    clip: rect(0, 0, 0, 0) !important;
-                    white-space: nowrap !important;
-                    border: 0 !important;
-                }
-                .check-area {
-                    display: flex;
-                    gap: 4px;
-                }
-                .check-area.error-table {
-                    padding: 5px;
-                    background-color: #fff0f0; 
-                    border: 1px solid #e74c3c; 
-                    border-radius: 4px;
-                }
-                .form-check {
-                    flex: 1;
-                    text-align: center;
-                }
-                .form-check input[type=radio] ~ label, 
-                .form-check input[type=checkbox] ~ label {
-                    display: inline-flex;
-                    flex-direction: column-reverse;
-                    align-items: center;
-                    gap: 10px;
-                    position: relative;
-                    font-size: 12px;
-                    letter-spacing: -1px;
-                    cursor: pointer;
-                    
-                }
-                .form-check input[type=radio] ~ label:before, 
-                .form-check input[type=radio] ~ label:after, 
-                .form-check input[type=checkbox] ~ label:before, 
-                .form-check input[type=checkbox] ~ label:after {
-                    display: flex;
-                    content: "";
-                }
-                .form-check input[type=radio] ~ label:before, 
-                .form-check input[type=checkbox] ~ label:before {
-                    flex-shrink: 0;
-                    width: 20px;
-                    height: 20px;
-                    z-index: 3;
-                    background-color: #fff;
-                    border: 0.1rem solid #58616a;
-                }
-                .form-check input[type=radio] ~ label:before {
-                    border-radius: 100px;
-                }
-                .form-check input[type=radio] ~ label:after, 
-                .form-check input[type=checkbox] ~ label:after {
-                    position: absolute;
-                    z-index: 4;
-                }
-                .form-check input[type=radio] ~ label:after {
-                    bottom: 5px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 100px;
-                }
-                .form-check input[type=radio]:checked ~ label:after {
-                    background-color: #256ef4;
-                }
-                .desc {
-                    background: #f5f5f5;
-                    padding: 10px;
-                    border-radius: 10px;
-                    border: 1px solid #eaeaea;
-                }
-                .desc p {
-                    color: #888;
-                    font-size: 14px;
-                }
-                .total {
-                    padding: 20px;
-                    background-color: #eee;
-                    color: #000;
-                    font-size: 20px;
-                    font-weight: bold;
-                    text-align: center;
-                }                
-            </style>
             <div class="table-style01">
                 <table>
                     <caption>평가항목</caption>
