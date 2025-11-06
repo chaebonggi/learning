@@ -10,7 +10,7 @@
 	<link  rel="stylesheet" type="text/css"  href="https://www.gpmu.co.kr/css/admin/sub.css" />
 	<link  rel="stylesheet" type="text/css"  href="https://www.gpmu.co.kr/css/new.css" />
 	<script src="https://www.gpmu.co.kr/js/yepnope/1.5.4/yepnope.min.js"></script> 
-	<script src="https://www.gpmu.co.kr/js/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://www.gpmu.co.kr/js/admin/run.js"></script>
 	<script src="https://www.gpmu.co.kr/js/common/common.js"></script>
 </head>
@@ -123,6 +123,12 @@
                     display: flex;
                     gap: 4px;
                 }
+                .check-area.error-table {
+                    padding: 5px;
+                    background-color: #fff0f0; 
+                    border: 1px solid #e74c3c; 
+                    border-radius: 4px;
+                }
                 .form-check {
                     flex: 1;
                     text-align: center;
@@ -184,6 +190,14 @@
                     color: #888;
                     font-size: 14px;
                 }
+                .total {
+                    padding: 20px;
+                    background-color: #eee;
+                    color: #000;
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                }                
             </style>
             <div class="table-style01">
                 <table>
@@ -475,54 +489,10 @@
                                     <p>평가방법 : 교육방법, 교육 내용, 교육 시간 등이 영농계획을 이행하는 데 도움이 되는 내용으로 구성되어 있는지를 판단하여 점수 부여</p>
                                 </div>
                             </td>
-                        </tr>
-                         <tr>
-                            <td>3.사업 신청자의 신용능력은 양호한가?</td>
-                            <td>
-                                <div class="check-area">
-                                    <div class="form-check">
-                                        <input type="radio" name="rdo_b" id="rdo_b1">
-                                        <label for="rdo_b1">매우구체적</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="radio" name="rdo_b" id="rdo_b2">
-                                        <label for="rdo_b2">구체적</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="radio" name="rdo_b" id="rdo_b3">
-                                        <label for="rdo_b3">보통</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="radio" name="rdo_b" id="rdo_b4">
-                                        <label for="rdo_b4">구체적이지않음</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="radio" name="rdo_b" id="rdo_b5">
-                                        <label for="rdo_b5">구체성없음</label>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <div class="desc">
-                                    <p>평가방법 : 정책자금 등 대출을 통하여 자금을 마련할 계획이 있는 자는 신용도에 따라 대출이 불가능한 경우가 발생하므로 금융기관(농협) 신용조사서 등을 기반으로 신용능력을 확인하여 점수부여</p>
-                                </div>
-                            </td>
-                        </tr>
-                       
+                        </tr>                       
                     </tbody>
                 </table>
-                <style>
-                    .total {
-                        padding: 20px;
-                        background-color: #eee;
-                        color: #000;
-                        font-size: 20px;
-                        font-weight: bold;
-                        text-align: center;
-                    }
-                </style>
+
                 <div class="total">
                     <p>총계 : 100점</p>
                 </div>
@@ -532,5 +502,62 @@
             </div>
         </div>
     </div>
+    <script>
+        // 임시 보여주기 스크립트 입니다 지워주세요
+        $(document).ready(function() {
+            $('input[type="radio"]').on('change', function() {
+                const $checkArea = $(this).closest('.check-area');
+                $checkArea.removeClass('error-table');
+            });
+            $('.btn_save').on('click', function(event) {
+                const isFormValid = validateForm();
+
+                if (!isFormValid) {
+                    event.preventDefault();
+                } else {
+                    console.log("폼 유효성 검사 통과. 데이터를 저장합니다.");
+                }
+            });
+        });
+
+        function validateForm() {
+            const $area = $('.table-style01'); 
+            
+            if ($area.length === 0) {
+                return true; 
+            }
+            
+            const radioGroups = ['rdo_a', 'rdo_b']; 
+            
+            let isFormValid = true;
+            let $firstErrorElement = null;
+
+            for (const groupName of radioGroups) {
+                const $checkedInput = $area.find(`input[name="${groupName}"]:checked`);
+                const $allInputsInGroup = $area.find(`input[name="${groupName}"]`);
+
+                const $checkArea = $allInputsInGroup.eq(0).closest('.check-area');
+
+                if ($checkedInput.length > 0) {
+                    if ($checkArea.length > 0) $checkArea.removeClass('error-table');
+                } else {
+                    isFormValid = false;
+                    if ($checkArea.length > 0) $checkArea.addClass('error-table');
+                    
+                    if (!$firstErrorElement && $allInputsInGroup.length > 0) {
+                        $firstErrorElement = $allInputsInGroup.eq(0);
+                    }
+                }
+            }
+
+            if (!isFormValid) {
+                if ($firstErrorElement) {
+                    $firstErrorElement.focus();
+                }
+            }
+            
+            return isFormValid; 
+        }
+    </script>
 </body>
 </html>
