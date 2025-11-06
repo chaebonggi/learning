@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청년농업인-평가관리상세</title>
+    <link  rel="stylesheet" type="text/css"  href="https://www.gpmu.co.kr/css/kendo/2018.3.1017/kendo.common.min.css" />
+	<link  rel="stylesheet" type="text/css"  href="https://www.gpmu.co.kr/css/kendo/2018.3.1017/kendo.bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link  rel="stylesheet" type="text/css"  href="https://www.gpmu.co.kr/css/admin/sub.css" />
+	<link  rel="stylesheet" type="text/css"  href="https://www.gpmu.co.kr/css/new.css" />
+	<script src="https://www.gpmu.co.kr/js/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://www.gpmu.co.kr/js/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="https://www.gpmu.co.kr/js/admin/run.js"></script>
+	<script src="https://www.gpmu.co.kr/js/common/common.js"></script>
+</head>
+<body>
+    <div>
+        <h3 class="tit-style01">평가관리 상세</h3>
+        <div class="table-style01">
+            <table>
+                <caption>평가관리 상세</caption>
+                <colgroup>
+                    <col style="width: 120px;">
+                    <col>
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr class="bt1">
+                        <th class="tct">식별번호</th>
+                        <td>경기-수원시-01</td>
+                        <td>상태 <span class="fwb">미완료</span></td>
+                    </tr>
+                    <tr>
+                        <th class="tct">첨부파일</th>
+                        <td colspan="2">
+                            <div class="file-upload">
+                                <a href="#" class="file-btn">영농계획서보기</a>
+                                <a href="#" class="file-btn">기타</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="tit-style01 mt40">평가항목</h3>
+        <div>
+            <style>
+                .mt40 {margin-top: 40px;}
+                .tlt {text-align: left;}
+                .trt {text-align: right;}
+                .tct {text-align: center;}
+                .fwb {font-weight: bold;}
+                .bt1 {border-top: 1px solid #ccc;}
+                .file-btn {
+                    max-width: 140px;
+                    display: inline-block;
+                    padding: 4px 10px;
+                    background-color: #6d7882;
+                    color: #fff;
+                    font-size: 14px;
+                    border-radius: 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .tit-style01 {
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+                table caption {
+                    position: absolute; 
+                    width: 1px !important;
+                    height: 1px !important; 
+                    padding: 0 !important; 
+                    margin: -1px !important;
+                    overflow: hidden !important; 
+                    clip: rect(0, 0, 0, 0) !important; 
+                    white-space: nowrap !important; 
+                    border: 0 !important;
+                }
+                .table-style01 table {
+                    width: 100%;
+                    background-color: #fff;
+                }
+                .table-style01 thead tr:nth-child(1) {
+                    border-top: 1px solid #ccc;
+                }
+                .table-style01 table tr {
+                    border-bottom: 1px solid #ccc;
+                }
+                .table-style01 th {
+                    background-color: #f9fafc;
+                    color: #000;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                .table-style01 th, .table-style01 td {
+                    padding: 10px;
+                    vertical-align: middle;
+                    line-height: 1.2;
+                }
+                .table-style01 td {
+                    color: #888;
+                    font-size: 14px;
+                    border-left: 1px solid #ccc;
+                }
+                input[type=radio], input[type=checkbox] {
+                    position: absolute !important;
+                    width: 1px !important;
+                    height: 1px !important;
+                    padding: 0 !important;
+                    margin: -1px !important;
+                    overflow: hidden !important;
+                    clip: rect(0, 0, 0, 0) !important;
+                    white-space: nowrap !important;
+                    border: 0 !important;
+                }
+                .check-area {
+                    display: flex;
+                    gap: 4px;
+                }
+                .form-check {
+                    flex: 1;
+                    text-align: center;
+                }
+                .form-check input[type=radio] ~ label, 
+                .form-check input[type=checkbox] ~ label {
+                    display: inline-flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    gap: 10px;
+                    position: relative;
+                    font-size: 12px;
+                    letter-spacing: -1px;
+                    cursor: pointer;
+                    
+                }
+                .form-check input[type=radio] ~ label:before, 
+                .form-check input[type=radio] ~ label:after, 
+                .form-check input[type=checkbox] ~ label:before, 
+                .form-check input[type=checkbox] ~ label:after {
+                    display: flex;
+                    content: "";
+                }
+                .form-check input[type=radio] ~ label:before, 
+                .form-check input[type=checkbox] ~ label:before {
+                    flex-shrink: 0;
+                    width: 20px;
+                    height: 20px;
+                    z-index: 3;
+                    background-color: #fff;
+                    border: 0.1rem solid #58616a;
+                }
+                .form-check input[type=radio] ~ label:before {
+                    border-radius: 100px;
+                }
+                .form-check input[type=radio] ~ label:after, 
+                .form-check input[type=checkbox] ~ label:after {
+                    position: absolute;
+                    z-index: 4;
+                }
+                .form-check input[type=radio] ~ label:after {
+                    bottom: 5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100px;
+                }
+                .form-check input[type=radio]:checked ~ label:after {
+                    background-color: #256ef4;
+                }
+                .desc {
+                    background: #f5f5f5;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 1px solid #eaeaea;
+                }
+                .desc p {
+                    color: #888;
+                    font-size: 14px;
+                }
+            </style>
+            <div class="table-style01">
+                <table>
+                    <caption>평가항목</caption>
+                    <colgroup>
+                        <col style="width: 120px;">
+                        <col>
+                        <col style="width: 400px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                           <th class="tct">구분</th> 
+                           <th class="tct">평가내용</th>
+                           <th class="tct">평가점수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="6" class="tct">영농비전</th>
+                            <td>1.중장기 영농계획이 연도별로 구체적인 정량적 지표와 함께 제시되어 있는가?</td>
+                            <td>
+                                <div class="check-area">
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a1">
+                                        <label for="rdo_a1">매우구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a2">
+                                        <label for="rdo_a2">구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a3">
+                                        <label for="rdo_a3">보통</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a4">
+                                        <label for="rdo_a4">구체적이지않음</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a5">
+                                        <label for="rdo_a5">구체성없음</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="desc">
+                                    <p>평가방법 : 영농계획서에 ①연도별 목표 수치(재배면적, 생산량, 매출액)의 명시 여부, ②목표 설정의 근거자료(시장조사, 표준수량 등) 제시 여부, ③단계적 발전계획의 논리적 연결성을 확인하여 점수 부여</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.영농방법이 구체적으로 제시되어 있으며, 기술 발전 및 사업 확장 가능성을 포함하고 있는가?</td>
+                            <td>
+                                <div class="check-area">
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b1">
+                                        <label for="rdo_b1">매우구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b2">
+                                        <label for="rdo_b2">구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b3">
+                                        <label for="rdo_b3">보통</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b4">
+                                        <label for="rdo_b4">구체적이지않음</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b5">
+                                        <label for="rdo_b5">구체성없음</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="desc">
+                                    <p>평가방법 : 영농계획서에 ①재배기술 및 방법의 상세한 기술, ②스마트농업, 친환경, 가공·체험 등 부가가치 창출 계획의 구체성, ③영농지역의 현실성을 종합적으로 평가하여 점수 부여</p>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>3.예상 위험요인에 대한 대응방안이 마련되어 있으며, 5년 후에도 독립적 경영이 가능한 계획인가?</td>
+                            <td>
+                                <div class="check-area">
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b1">
+                                        <label for="rdo_b1">매우구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b2">
+                                        <label for="rdo_b2">구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b3">
+                                        <label for="rdo_b3">보통</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b4">
+                                        <label for="rdo_b4">구체적이지않음</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b5">
+                                        <label for="rdo_b5">구체성없음</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="desc">
+                                    <p>평가방법 : 영농계획서에서 주요 ‘장애 및 위험요인’ 및 ‘수지전망’을 구체적으로 예측·분석하고 적정한 대응방안을 기술하였는지 파악하여 점수 부여</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th rowspan="6" class="tct">영농계획<br>구체성</th>
+                            <td>1.영농 품목선정이 명확하고 그 근거가 합리적으로 제시되어 있는가?</td>
+                            <td>
+                                <div class="check-area">
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a1">
+                                        <label for="rdo_a1">매우구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a2">
+                                        <label for="rdo_a2">구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a3">
+                                        <label for="rdo_a3">보통</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a4">
+                                        <label for="rdo_a4">구체적이지않음</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a5">
+                                        <label for="rdo_a5">구체성없음</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="desc">
+                                    <p>평가방법 : 영농계획서에서 ①주작목 및 보조작목의 명확한 명시, ②품목 선정 근거(지역 적합성, 시장성, 개인 역량 등)의 구체성을 확인하고 점수를 부여</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.생산계획이 구체적인 수치와 함께 제시되어 있으며, 실현 가능한 계획인가?</td>
+                            <td>
+                                <div class="check-area">
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b1">
+                                        <label for="rdo_b1">매우구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b2">
+                                        <label for="rdo_b2">구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b3">
+                                        <label for="rdo_b3">보통</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b4">
+                                        <label for="rdo_b4">구체적이지않음</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b5">
+                                        <label for="rdo_b5">구체성없음</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="desc">
+                                    <p>평가방법 : 영농계획서에서 ①규모, 예상 생산량의 구체적 제시, ②시설 및 농기자재 확보 계획의 현실성을 종합적으로 검토하여 점수를 부여</p>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>3.생산물 판매를 위한 구체적인 판로 확보 및 마케팅 전략이 수립되어 있는가?</td>
+                            <td>
+                                <div class="check-area">
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b1">
+                                        <label for="rdo_b1">매우구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b2">
+                                        <label for="rdo_b2">구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b3">
+                                        <label for="rdo_b3">보통</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b4">
+                                        <label for="rdo_b4">구체적이지않음</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b5">
+                                        <label for="rdo_b5">구체성없음</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="desc">
+                                    <p>평가방법 : 영농계획서에서 ①주요 판매처(직거래, 공판장, 온라인 등)의 구체적 명시 ②홍보 마케팅 전략의 현실성을 확인하여 점수를 부여</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th rowspan="6" class="tct">영농계획실천<br>가능성</th>
+                            <td>1.향후 영농 창업 및 규모화를 위한 자금 마련 계획은 실현 가능한가?</td>
+                            <td>
+                                <div class="check-area">
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a1">
+                                        <label for="rdo_a1">매우구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a2">
+                                        <label for="rdo_a2">구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a3">
+                                        <label for="rdo_a3">보통</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a4">
+                                        <label for="rdo_a4">구체적이지않음</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_a" id="rdo_a5">
+                                        <label for="rdo_a5">구체성없음</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="desc">
+                                    <p>평가방법 : 영농계획서에 기재된 사업자금 융자, 자체조달 등 자금마련·상환계획이 실현 가능토록 수립되어 있는지를 판단하여 점수 부여</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.향후 사업계획을 차질없이 이행하기 위해 적당한 교육훈련 계획을 수립하고 있는가?</td>
+                            <td>
+                                <div class="check-area">
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b1">
+                                        <label for="rdo_b1">매우구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b2">
+                                        <label for="rdo_b2">구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b3">
+                                        <label for="rdo_b3">보통</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b4">
+                                        <label for="rdo_b4">구체적이지않음</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b5">
+                                        <label for="rdo_b5">구체성없음</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="desc">
+                                    <p>평가방법 : 교육방법, 교육 내용, 교육 시간 등이 영농계획을 이행하는 데 도움이 되는 내용으로 구성되어 있는지를 판단하여 점수 부여</p>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>3.사업 신청자의 신용능력은 양호한가?</td>
+                            <td>
+                                <div class="check-area">
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b1">
+                                        <label for="rdo_b1">매우구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b2">
+                                        <label for="rdo_b2">구체적</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b3">
+                                        <label for="rdo_b3">보통</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b4">
+                                        <label for="rdo_b4">구체적이지않음</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="rdo_b" id="rdo_b5">
+                                        <label for="rdo_b5">구체성없음</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="desc">
+                                    <p>평가방법 : 정책자금 등 대출을 통하여 자금을 마련할 계획이 있는 자는 신용도에 따라 대출이 불가능한 경우가 발생하므로 금융기관(농협) 신용조사서 등을 기반으로 신용능력을 확인하여 점수부여</p>
+                                </div>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt40 trt">
+                <button class="btn_save"><span>저장</span></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
