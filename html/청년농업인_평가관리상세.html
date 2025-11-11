@@ -50,7 +50,15 @@
         .form-check input[type=radio]:checked ~ label:after { background-color: #256ef4; } 
         .desc { background: #f5f5f5; padding: 10px; border-radius: 10px; border: 1px solid #eaeaea; } 
         .desc p { color: #888; font-size: 14px; } 
-        .total { padding: 20px; background-color: #eee; color: #000; font-size: 20px; font-weight: bold; text-align: center; }                 
+        .total { padding: 20px; background-color: #eee; color: #000; font-size: 20px; font-weight: bold; text-align: center; }
+        .table_bg { background-color: #f9fafc; } 
+        .check-area.type02 { flex-direction: column; gap: 20px; } 
+        .check-area.type02 .form-check { text-align: left; } 
+        .check-area.type02 .form-check input[type=checkbox] ~ label { flex-direction: row-reverse; font-size: 14px; } 
+        .form-check input[type=checkbox]:checked ~ label:before { background-color: #256ef4; border-color: #256ef4; } 
+        .form-check input[type=checkbox] ~ label:before { border-radius: 4px; } 
+        .form-check input[type=checkbox]:checked ~ label:after { top: 5px; right: 5px; display: inline-flex; width: 12px; height: 12px; background: url(./images/farm/ico_ck.png) center no-repeat; background-size: contain; } 
+        .form-check input[type=radio]:disabled ~ label:before, .form-check input[type=checkbox]:disabled ~ label:before {background-color: #cdd1d5 !important; border-color: #8a949e !important;}
     </style>
     <div>
         <h3 class="tit-style01">평가관리 상세</h3>
@@ -530,38 +538,6 @@
                             <td colspan="2" class="table_bg">독립경영 영농 예정자 가점 항목: 최대 3점</td>                            
                         </tr>  
                         <tr>
-                            <style>
-                                .table_bg {
-                                    background-color: #f9fafc;
-                                }
-                                .check-area.type02 {
-                                    flex-direction: column;
-                                    gap: 20px;
-                                }
-                                .check-area.type02 .form-check {
-                                    text-align: left;
-                                }
-                                .check-area.type02 .form-check input[type=checkbox] ~ label {
-                                    flex-direction: row-reverse;
-                                    font-size: 14px;
-                                }
-                                .form-check input[type=checkbox]:checked ~ label:before {
-                                    background-color: #256ef4;
-                                    border-color: #256ef4;
-                                }
-                                .form-check input[type=checkbox] ~ label:before {
-                                    border-radius: 4px;
-                                }
-                                .form-check input[type=checkbox]:checked ~ label:after {
-                                    top: 5px;
-                                    right: 5px;
-                                    display: inline-flex;
-                                    width: 12px;
-                                    height: 12px;
-                                    background: url(./images/farm/ico_ck.png) center no-repeat;
-                                    background-size: contain;
-                                }
-                            </style>
                              <td colspan="2">
                                 <div class="check-area type02">
                                     <div class="form-check">
