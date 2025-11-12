@@ -50,18 +50,20 @@
         .form-check input[type=checkbox] ~ label:after { position: absolute; z-index: 4; } 
         .form-check input[type=radio] ~ label:after { bottom: 5px; left: 50%; transform: translateX(-50%); width: 10px; height: 10px; border-radius: 100px; } 
         .form-check input[type=radio]:checked ~ label:after { background-color: #256ef4; } 
-        .desc { background: #f5f5f5; padding: 10px; border-radius: 10px; border: 1px solid #eaeaea; } 
-        .desc p { color: #888; font-size: 14px; } 
-        .total { padding: 20px; background-color: #eee; color: #000; font-size: 20px; font-weight: bold; text-align: center; }
-        .table_bg { background-color: #f9fafc; } 
-        .check-area.type02 { flex-direction: column; gap: 20px; } 
-        .check-area.type02 .form-check { text-align: left; } 
-        .check-area.type02 .form-check input[type=checkbox] ~ label { flex-direction: row-reverse; font-size: 14px; } 
+        .check-area .form-check input[type=checkbox] ~ label { flex-direction: row-reverse; font-size: 14px; } 
         .form-check input[type=checkbox]:checked ~ label:before { background-color: #256ef4; border-color: #256ef4; } 
         .form-check input[type=checkbox] ~ label:before { border-radius: 4px; } 
         .form-check input[type=checkbox]:checked ~ label:after { top: 5px; right: 5px; display: inline-flex; width: 12px; height: 12px; background: url(./images/farm/ico_ck.png) center no-repeat; background-size: contain; } 
         .form-check input[type=radio]:disabled ~ label:before, .form-check input[type=checkbox]:disabled ~ label:before {background-color: #cdd1d5 !important; border-color: #8a949e !important;}
-    </style>
+        .check-area.type02 { flex-direction: column; gap: 20px; } 
+        .check-area.type02 .form-check { text-align: left; } 
+        .check-area.type03 {align-items: center; gap: 20px;}
+        .check-area.type03 .form-check { flex: initial;}
+        .desc { background: #f5f5f5; padding: 10px; border-radius: 10px; border: 1px solid #eaeaea; } 
+        .desc p { color: #888; font-size: 14px; } 
+        .total { padding: 20px; background-color: #eee; color: #000; font-size: 20px; font-weight: bold; text-align: center; }
+        .table_bg { background-color: #f9fafc; } 
+        </style>
     <div>
         <h3 class="tit-style01">평가관리 상세</h3>
         <div class="table-style01">
@@ -572,19 +574,30 @@
                             <td colspan="2" class="table_bg">독립경영 1∼3년차 가점 항목: 최대 3점</td>                            
                         </tr> 
                         <tr>
-                            <td colspan="2">
-                                <div class="check-area type02">
+                            <td colspan="2">                                
+                                <div class="check-area type03">
+                                    <p>- 수상실적 :</p>
                                     <div class="form-check">
                                         <input type="checkbox" name="ck_b" id="ck_b1">
-                                        <label for="ck_b1">- 수상실적(1점)</label>
+                                        <label for="ck_b1">중앙정부(0.5점)</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" name="ck_b" id="ck_b2">
-                                        <label for="ck_b2">- 경영장부 기록(1점)</label>
+                                        <label for="ck_b2">지방자치단체(0.3점)</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" name="ck_b" id="ck_b3">
-                                        <label for="ck_b3">- 정책참여도(1점)</label>
+                                        <label for="ck_b3">농업인단체(0.2점)</label>
+                                    </div>
+                                </div>
+                                <div class="check-area type02 mt20">                                    
+                                    <div class="form-check">
+                                        <input type="checkbox" name="ck_b" id="ck_b4">
+                                        <label for="ck_b4">- 경영장부 기록(1점)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" name="ck_b" id="ck_b5">
+                                        <label for="ck_b5">- 정책참여도(1점)</label>
                                     </div>
                                 </div>
                             </td>
