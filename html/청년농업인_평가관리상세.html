@@ -23,6 +23,8 @@
         .fwb { font-weight: bold; } 
         .bt1 { border-top: 1px solid #ccc; } 
         .file-btn { max-width: 140px; display: inline-block; padding: 4px 10px; background-color: #6d7882; color: #fff; font-size: 14px; border-radius: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } 
+        .file-btn:hover,
+        .file-btn:focus {color: #fff;}
         .tit-style01 { font-size: 20px; text-align: center; font-weight: 500; margin-bottom: 30px; } 
         table caption { position: absolute; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; } 
         .table-style01 table { width: 100%; background-color: #fff; } 
@@ -80,8 +82,8 @@
                         <th class="tct">첨부파일</th>
                         <td colspan="2">
                             <div class="file-upload">
-                                <a href="#" class="file-btn">영농계획서보기</a>
-                                <a href="#" class="file-btn">기타</a>
+                                <a href="./images/farm/test.pdf" class="file-btn preview-btn">영농계획서보기</a>
+                                <a href="./images/farm/test02.pdf" class="file-btn preview-btn">기타</a>
                             </div>
                         </td>
                     </tr>
@@ -631,60 +633,74 @@
     <script>
         // 전체 임시 보여주기 스크립트 입니다 지워주세요.........
         $(document).ready(function() {
-            $('input[type="radio"]').on('change', function() {
-                const $checkArea = $(this).closest('.check-area');
-                $checkArea.removeClass('error-table');
-            });
-            $('.btn_save').on('click', function(event) {
-                const isFormValid = validateForm();
+            // // 필수항목 체크 안했을때
+            // $('input[type="radio"]').on('change', function() {
+            //     const $checkArea = $(this).closest('.check-area');
+            //     $checkArea.removeClass('error-table');
+            // });
+            // $('.btn_save').on('click', function(event) {
+            //     const isFormValid = validateForm();
 
-                if (!isFormValid) {
-                    event.preventDefault();
-                } else {
-                    console.log("폼 유효성 검사 통과. 데이터를 저장합니다.");
-                }
+            //     if (!isFormValid) {
+            //         event.preventDefault();
+            //     } else {
+            //         console.log("폼 유효성 검사 통과. 데이터를 저장합니다.");
+            //     }
+            // });
+
+            $('.preview-btn').on('click', function(e) {
+                e.preventDefault();
+                var pdfUrl = $(this).attr('href');
+                window.open(
+                    pdfUrl, 
+                    'pdfPreviewWindow', 
+                    'width=400,height=500,scrollbars=yes,resizable=yes'
+                );
             });
+
         });
 
-        function validateForm() {
-            const $area = $('.table-style01'); 
+        // 필수항목 체크 안했을때
+        // function validateForm() {
+        //     const $area = $('.table-style01'); 
             
-            if ($area.length === 0) {
-                return true; 
-            }
+        //     if ($area.length === 0) {
+        //         return true; 
+        //     }
             
-            const radioGroups = ['rdo_a', 'rdo_b']; 
+        //     const radioGroups = ['rdo_a', 'rdo_b']; 
             
-            let isFormValid = true;
-            let $firstErrorElement = null;
+        //     let isFormValid = true;
+        //     let $firstErrorElement = null;
 
-            for (const groupName of radioGroups) {
-                const $checkedInput = $area.find(`input[name="${groupName}"]:checked`);
-                const $allInputsInGroup = $area.find(`input[name="${groupName}"]`);
+        //     for (const groupName of radioGroups) {
+        //         const $checkedInput = $area.find(`input[name="${groupName}"]:checked`);
+        //         const $allInputsInGroup = $area.find(`input[name="${groupName}"]`);
 
-                const $checkArea = $allInputsInGroup.eq(0).closest('.check-area');
+        //         const $checkArea = $allInputsInGroup.eq(0).closest('.check-area');
 
-                if ($checkedInput.length > 0) {
-                    if ($checkArea.length > 0) $checkArea.removeClass('error-table');
-                } else {
-                    isFormValid = false;
-                    if ($checkArea.length > 0) $checkArea.addClass('error-table');
+        //         if ($checkedInput.length > 0) {
+        //             if ($checkArea.length > 0) $checkArea.removeClass('error-table');
+        //         } else {
+        //             isFormValid = false;
+        //             if ($checkArea.length > 0) $checkArea.addClass('error-table');
                     
-                    if (!$firstErrorElement && $allInputsInGroup.length > 0) {
-                        $firstErrorElement = $allInputsInGroup.eq(0);
-                    }
-                }
-            }
+        //             if (!$firstErrorElement && $allInputsInGroup.length > 0) {
+        //                 $firstErrorElement = $allInputsInGroup.eq(0);
+        //             }
+        //         }
+        //     }
 
-            if (!isFormValid) {
-                if ($firstErrorElement) {
-                    $firstErrorElement.focus();
-                }
-            }
+        //     if (!isFormValid) {
+        //         if ($firstErrorElement) {
+        //             $firstErrorElement.focus();
+        //         }
+        //     }
             
-            return isFormValid; 
-        }
+        //     return isFormValid; 
+        // }
 
+        // 체크박스 제어
         // var $ckA_group = $('input[name="ck_a"]');
         // var $ckB_group = $('input[name="ck_b"]');
 
@@ -705,6 +721,7 @@
         //         $ckA_group.prop('disabled', false);
         //     }
         // });
+        
     </script>
 </body>
 </html>
