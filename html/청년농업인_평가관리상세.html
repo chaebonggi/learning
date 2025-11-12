@@ -629,7 +629,7 @@
         </div>
     </div>
     <script>
-        // 임시 보여주기 스크립트 입니다 지워주세요.........
+        // 전체 임시 보여주기 스크립트 입니다 지워주세요.........
         $(document).ready(function() {
             $('input[type="radio"]').on('change', function() {
                 const $checkArea = $(this).closest('.check-area');
@@ -684,6 +684,27 @@
             
             return isFormValid; 
         }
+
+        // var $ckA_group = $('input[name="ck_a"]');
+        // var $ckB_group = $('input[name="ck_b"]');
+
+        // $ckA_group.on('change', function() {
+        //     if ($ckA_group.is(':checked')) {
+        //         $ckB_group.prop('disabled', true);
+        //         $ckB_group.prop('checked', false); 
+        //     } else {
+        //         $ckB_group.prop('disabled', false);
+        //     }
+        // });
+
+        // $ckB_group.on('change', function() {
+        //     if ($ckB_group.is(':checked')) {
+        //         $ckA_group.prop('disabled', true);
+        //         $ckA_group.prop('checked', false);
+        //     } else {
+        //         $ckA_group.prop('disabled', false);
+        //     }
+        // });
     </script>
 </body>
 </html>
