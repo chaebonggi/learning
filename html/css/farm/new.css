@@ -479,8 +479,17 @@ body, input, select, div, textarea, table, button {font-family: "Noto Sans KR", 
 
 
 #header .top_area {
-    background-color: #fff;
+    padding: 0;
+    background-color: #f4f8fb;
     border-bottom: 1px solid #f3f5f5;
+}
+#header .top_area .logo {
+    width: 220px;
+    padding: 40px 0 10px;
+    background-color: #181f48;
+}
+#header .top_area .logo a {
+    display: block;
 }
 #new_wrap {
     background-color: #f4f8fb;
@@ -502,7 +511,7 @@ body, input, select, div, textarea, table, button {font-family: "Noto Sans KR", 
     display: flex;
     align-items: center;
     gap: 15px;
-    color: #8799a5;
+    color: #fff;
     border-radius: 5px;
 }
 #header .gnb_area > li.active > a {
@@ -537,3 +546,6 @@ body, input, select, div, textarea, table, button {font-family: "Noto Sans KR", 
 #header .gnb_area > li.item03 a:before{background-image: url(../../images/farm/gnb_ico05.png);}
 #header .gnb_area > li.item04 a:before{background-image: url(../../images/farm/gnb_ico03.png);}
 #header .gnb_area > li.item05 a:before{background-image: url(../../images/farm/gnb_ico09.png);}
+#header .tab_content {
+    background-color: #181f48;
+}
