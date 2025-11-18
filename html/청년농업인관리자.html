@@ -97,113 +97,31 @@
             <!--//header-->
             <div class="conts_main">
                 <style>
-                    #new_wrap.bg {
-                        background: url(./images/farm/bg.png) bottom #fff no-repeat;
-                        background-size: contain;
-                    }
-                    .list_title {
-                        margin-bottom: 40px;
-                    }
-                    .list_title p {
-                        display: flex;
-                        align-items: center;
-                        color: #000;
-                        font-size: 28px;
-                        font-weight: 700;
-                        gap: 10px;
-                    }
-                    .list_title p::before {
-                        content: '';
-                        display: flex;
-                        width: 40px;
-                        height: 40px;
-                        background: url(./images/farm/list_icon.png) center no-repeat;
-                        background-size: contain;
-                    }
-                    .list_wrap {
-                        display: flex;
-                        gap: 20px;
-                    }
-                    .list_wrap .list_item {
-                        flex: 1;
-                        background-color: #fff;
-                        border: 1px solid #eee;
-                        border-radius: 15px;
-                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-                        overflow: hidden;
-                    }
-                    .list_wrap .list_item:nth-child(2) {
-                        background-color: #3c77ff;
-                        
-                    }
-                    .list_wrap .list_item:nth-child(2) .list_tit {
-                        background-color: #4f85ff;
-                    }
-                    .list_wrap .list_item:nth-child(2) .list_tit p {
-                        color: #fff;
-                    }
-                    .list_wrap .list_item:nth-child(2) .list_info li {
-                        color: #fff;
-                    }
-                    .list_wrap .list_tit {
-                        padding: 20px 40px;
-                        background-color: #f8f8fa;
-                        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-                    }
-                    .list_wrap .list_tit p {
-                        display: flex;
-                        align-items: center;
-                        color: #000;
-                        font-size: 24px;
-                        font-weight: 700;
-                        gap: 10px;
-                    }
-                   
-                    .list_wrap .list_info {
-                        display: flex;
-                        flex-direction: column;
-                        padding: 30px 40px 50px;
-                        gap: 20px;
-                    }
-                    .list_wrap .list_info li {
-                        padding-left: 20px;
-                        position: relative;
-                        color: #000;
-                        font-size: 16px;
-                        line-height: 1.5;
-                    }
-                    .list_wrap .list_info li::before {                        
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                    }
-                    .list_wrap .list_info li:nth-child(1)::before {
-                        content: '1.';
-                    }
-                    .list_wrap .list_info li:nth-child(2)::before {
-                        content: '2.';
-                    }
-                    .list_wrap .list_info li:nth-child(3)::before {
-                        content: '3.';
-                    }
-                    .list_wrap .list_info li:nth-child(4)::before {
-                        content: '4.';
-                    }
-                    .list_wrap .list_info li:nth-child(5)::before {
-                        content: '5.';
-                    }
-                    .list_wrap .list_info li:nth-child(6)::before {
-                        content: '6.';
-                    }
-                    .list_wrap .list_info li:nth-child(7)::before {
-                        content: '7.';
-                    }
-                    .list_wrap .list_info li:nth-child(8)::before {
-                        content: '8.';
-                    }
-                    .list_wrap .list_info li:nth-child(9)::before {
-                        content: '9.';
-                    }
+                    #new_wrap.bg { background: url(./images/farm/bg.png) bottom #fff no-repeat; background-size: contain; } 
+                    .list_title { margin-bottom: 40px; } 
+                    .list_title p { display: flex; align-items: center; color: #000; font-size: 28px; font-weight: 700; gap: 10px; } 
+                    .list_title p::before { content: ''; display: flex; width: 40px; height: 40px; background: url(./images/farm/list_icon.png) center no-repeat; background-size: contain; } 
+                    .list_wrap { display: flex; gap: 20px; } 
+                    .list_wrap .list_item { flex: 1; background-color: #fff; border: 1px solid #eee; border-radius: 15px; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; overflow: hidden; } 
+                    .list_wrap .list_item:nth-child(2) { background-color: #3c77ff; }
+                    .list_wrap .list_item:nth-child(2) .list_tit { background-color: #4f85ff; } 
+                    .list_wrap .list_item:nth-child(2) .list_tit p { color: #fff; } 
+                    .list_wrap .list_item:nth-child(2) .list_info li { color: #fff; } 
+                    .list_wrap .list_tit { padding: 20px 40px; background-color: #f8f8fa; box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; } 
+                    .list_wrap .list_tit p { display: flex; align-items: center; color: #000; font-size: 24px; font-weight: 700; gap: 10px; } 
+                    
+                    .list_wrap .list_info { display: flex; flex-direction: column; padding: 30px 40px 50px; gap: 20px; } 
+                    .list_wrap .list_info li { padding-left: 20px; position: relative; color: #000; font-size: 16px; line-height: 1.5; } 
+                    .list_wrap .list_info li::before { position: absolute; left: 0; top: 0; } 
+                    .list_wrap .list_info li:nth-child(1)::before { content: '1.'; } 
+                    .list_wrap .list_info li:nth-child(2)::before { content: '2.'; } 
+                    .list_wrap .list_info li:nth-child(3)::before { content: '3.'; } 
+                    .list_wrap .list_info li:nth-child(4)::before { content: '4.'; } 
+                    .list_wrap .list_info li:nth-child(5)::before { content: '5.'; } 
+                    .list_wrap .list_info li:nth-child(6)::before { content: '6.'; } 
+                    .list_wrap .list_info li:nth-child(7)::before { content: '7.'; } 
+                    .list_wrap .list_info li:nth-child(8)::before { content: '8.'; } 
+                    .list_wrap .list_info li:nth-child(9)::before { content: '9.'; } 
                 </style>
                 <div class="list_title">
                     <p>평가 업무 진행 가이드</p>
