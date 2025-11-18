@@ -97,31 +97,30 @@
             <!--//header-->
             <div class="conts_main">
                 <style>
-                    #new_wrap.bg { background: url(./images/farm/bg.png) bottom #fff no-repeat; background-size: contain; } 
+                    .fc_blue {color: #0c52b6; font-weight: bold;}
+                    .fc14 {font-size: 14px !important;}
+                    #new_wrap.bg { background: url(./images/farm/bg02.png) center bottom #fff no-repeat; background-size: contain; } 
                     .list_title { margin-bottom: 40px; } 
                     .list_title p { display: flex; align-items: center; color: #000; font-size: 28px; font-weight: 700; gap: 10px; } 
                     .list_title p::before { content: ''; display: flex; width: 40px; height: 40px; background: url(./images/farm/list_icon.png) center no-repeat; background-size: contain; } 
                     .list_wrap { display: flex; gap: 20px; } 
                     .list_wrap .list_item { flex: 1; background-color: #fff; border: 1px solid #eee; border-radius: 15px; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; overflow: hidden; } 
-                    .list_wrap .list_item:nth-child(2) { background-color: #3c77ff; }
                     .list_wrap .list_item:nth-child(2) .list_tit { background-color: #4f85ff; } 
                     .list_wrap .list_item:nth-child(2) .list_tit p { color: #fff; } 
-                    .list_wrap .list_item:nth-child(2) .list_info li { color: #fff; } 
                     .list_wrap .list_tit { padding: 20px 40px; background-color: #f8f8fa; box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; } 
-                    .list_wrap .list_tit p { display: flex; align-items: center; color: #000; font-size: 24px; font-weight: 700; gap: 10px; } 
-                    
+                    .list_wrap .list_tit p { display: flex; align-items: center; color: #000; font-size: 24px; font-weight: 700; gap: 10px; }                     
                     .list_wrap .list_info { display: flex; flex-direction: column; padding: 30px 40px 50px; gap: 20px; } 
-                    .list_wrap .list_info li { padding-left: 20px; position: relative; color: #000; font-size: 16px; line-height: 1.5; } 
-                    .list_wrap .list_info li::before { position: absolute; left: 0; top: 0; } 
-                    .list_wrap .list_info li:nth-child(1)::before { content: '1.'; } 
-                    .list_wrap .list_info li:nth-child(2)::before { content: '2.'; } 
-                    .list_wrap .list_info li:nth-child(3)::before { content: '3.'; } 
-                    .list_wrap .list_info li:nth-child(4)::before { content: '4.'; } 
-                    .list_wrap .list_info li:nth-child(5)::before { content: '5.'; } 
-                    .list_wrap .list_info li:nth-child(6)::before { content: '6.'; } 
-                    .list_wrap .list_info li:nth-child(7)::before { content: '7.'; } 
-                    .list_wrap .list_info li:nth-child(8)::before { content: '8.'; } 
-                    .list_wrap .list_info li:nth-child(9)::before { content: '9.'; } 
+                    .list_wrap .list_info li { padding-left: 40px; position: relative; color: #000; font-size: 16px; line-height: 1.5; } 
+                    .list_wrap .list_info li::before { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; position: absolute; left: 0; top: -2px; background-color: #7f7f7f; color: #fff; border-radius: 5px;} 
+                    .list_wrap .list_info li:nth-child(1)::before { content: '1'; } 
+                    .list_wrap .list_info li:nth-child(2)::before { content: '2'; } 
+                    .list_wrap .list_info li:nth-child(3)::before { content: '3'; } 
+                    .list_wrap .list_info li:nth-child(4)::before { content: '4'; } 
+                    .list_wrap .list_info li:nth-child(5)::before { content: '5'; } 
+                    .list_wrap .list_info li:nth-child(6)::before { content: '6'; } 
+                    .list_wrap .list_info li:nth-child(7)::before { content: '7'; } 
+                    .list_wrap .list_info li:nth-child(8)::before { content: '8'; } 
+                    .list_wrap .list_info li:nth-child(9)::before { content: '9'; } 
                 </style>
                 <div class="list_title">
                     <p>평가 업무 진행 가이드</p>
@@ -132,14 +131,14 @@
                             <p>평가위원</p>
                         </div>
                         <ul class="list_info">
-                            <li>사전에 제공받은 ID/PW를 입력 후 로그인해주세요.</li>
-                            <li>평가관리 > 정성평가(평가자) 메뉴를 클릭하세요.</li>
+                            <li>사전에 제공받은 <span class="fc_blue">ID/PW를 입력</span> 후 로그인해주세요.</li>
+                            <li>평가관리 &gt; <span class="fc_blue">정성평가(평가자) 메뉴를 클릭</span>하세요.</li>
                             <li>배정된 평가대상자를 확인해주세요.</li>
-                            <li>평가대상자를 한명씩 클릭 후 정성평가를 진행해주세요.</li>
+                            <li>평가대상자를 <span class="fc_blue">한명씩 클릭</span> 후 정성평가를 진행해주세요.</li>
                             <li>정성평가 문항은 총 7문항입니다.</li>
-                            <li>평가대상자별 평가 진행 후 하단에 "저장" 버튼을 클릭해주세요.<br> (평가되지 않은 문항이 있을 경우 "저장"되지 않습니다.)</li>
-                            <li>전체 평가대상자 평가가 끝났을 경우 상단에 "제출"버튼을 클릭해주세요.<br> ("제출"버튼 클릭 이후에는 수정이 불가합니다.)</li>
-                            <li>"제출" 이후 평가가 완료됩니다.</li>
+                            <li>평가대상자별 평가 진행 후 하단에 <span class="fc_blue">"저장" 버튼</span>을 클릭해주세요.<br> <span class="fc14">(평가되지 않은 문항이 있을 경우 "저장"되지 않습니다.)</span></li>
+                            <li>전체 평가대상자 평가가 끝났을 경우 상단에 "제출"버튼을 클릭해주세요.<br> <span class="fc14">("제출"버튼 클릭 이후에는 수정이 불가합니다.)</span></li>
+                            <li>"제출" 이후 <span class="fc_blue">평가가 완료</span>됩니다.</li>
                         </ul>
                     </div>
                     <div class="list_item">
@@ -147,15 +146,15 @@
                             <p>시군구 담당자</p>
                         </div>
                         <ul class="list_info">
-                            <li>사전에 제공받은 ID/PW를 입력 후 로그인해주세요.</li>
-                            <li>대상자관리 > 대상자정보 메뉴를 클릭하세요.</li>
-                            <li>대상자정보를 클릭 후 첨부파일을 업로드해주세요.<br> (영농계획서 -> 영농계획서 첨부파일 영역)<br> (영농계획서 이외 파일 -> 기타  첨부파일 영역)</li>
-                            <li>대상자 첨부파일을 전부 업로드 하였으면 평가관리로 이동해주세요.</li>
-                            <li>평가관리 > 정량평가(시군구)를 클릭하세요.</li>
-                            <li>대상자별 식별번호를 확인 후 "정량평가" 점수를 입력해주세요.</li>
-                            <li>대상자별 정량평가 입력 후에는 "저장" 버튼을 클릭해주세요.</li>
-                            <li>대상자 정량평가가 전부 입력된 이후 "제출" 버튼을 클릭해주세요.</li>
-                            <li>"제출" 이후 평가가 완료됩니다.</li>
+                            <li>사전에 제공받은 <span class="fc_blue">ID/PW를 입력 후</span> 로그인해주세요.</li>
+                            <li>대상자관리 &gt; <span class="fc_blue">대상자정보 메뉴를 클릭</span>하세요.</li>
+                            <li>대상자정보를 클릭 후 <span class="fc_blue">첨부파일을 업로드</span>해주세요.<br> <span class="fc14">(영농계획서 -> 영농계획서 첨부파일 영역)<br> (영농계획서 이외 파일 -> 기타  첨부파일 영역)</span></li>
+                            <li>대상자 첨부파일을 전부 업로드 하였으면 <span class="fc_blue">평가관리로 이동</span>해주세요.</li>
+                            <li>평가관리 &gt; <span class="fc_blue">정량평가(시군구)를 클릭</span>하세요.</li>
+                            <li>대상자별 <span class="fc_blue">식별번호를 확인</span> 후 <span class="fc_blue">"정량평가" 점수를 입력</span>해주세요.</li>
+                            <li>대상자별 <span class="fc_blue">정량평가 입력 후</span>에는 <span class="fc_blue">"저장" 버튼을 클릭</span>해주세요.</li>
+                            <li>대상자 <span class="fc_blue">정량평가가 전부 입력</span>된 이후 <span class="fc_blue">"제출" 버튼을 클릭</span>해주세요.</li>
+                            <li>"제출" 이후 <span class="fc_blue">평가가 완료</span>됩니다.</li>
                         </ul>
                     </div>
 
