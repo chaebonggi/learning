@@ -11,7 +11,7 @@
     <script src="js/farm/run.js"></script>
 </head>
 <body>
-       <div id="new_wrap">
+       <div id="new_wrap" class="bg">
             <!--header--> 
             <header id="header" class="on">
                 <div class="top_area">
@@ -97,6 +97,29 @@
             <!--//header-->
             <div class="conts_main">
                 <style>
+                    #new_wrap.bg {
+                        background: url(./images/farm/bg.png) bottom #fff no-repeat;
+                        background-size: contain;
+                    }
+                    .list_title {
+                        margin-bottom: 40px;
+                    }
+                    .list_title p {
+                        display: flex;
+                        align-items: center;
+                        color: #000;
+                        font-size: 28px;
+                        font-weight: 700;
+                        gap: 10px;
+                    }
+                    .list_title p::before {
+                        content: '';
+                        display: flex;
+                        width: 40px;
+                        height: 40px;
+                        background: url(./images/farm/list_icon.png) center no-repeat;
+                        background-size: contain;
+                    }
                     .list_wrap {
                         display: flex;
                         gap: 20px;
@@ -123,7 +146,7 @@
                         color: #fff;
                     }
                     .list_wrap .list_tit {
-                        padding: 20px 30px;
+                        padding: 20px 40px;
                         background-color: #f8f8fa;
                         box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
                     }
@@ -131,18 +154,11 @@
                         display: flex;
                         align-items: center;
                         color: #000;
-                        font-size: 28px;
+                        font-size: 24px;
                         font-weight: 700;
                         gap: 10px;
                     }
-                    .list_wrap .list_tit p::before {
-                        content: '';
-                        display: flex;
-                        width: 40px;
-                        height: 40px;
-                        background: url(./images/farm/list_icon.png) center no-repeat;
-                        background-size: contain;
-                    }
+                   
                     .list_wrap .list_info {
                         display: flex;
                         flex-direction: column;
@@ -189,6 +205,9 @@
                         content: '9.';
                     }
                 </style>
+                <div class="list_title">
+                    <p>평가 업무 진행 가이드</p>
+                </div>
                 <div class="list_wrap">
                     <div class="list_item">
                         <div class="list_tit">
