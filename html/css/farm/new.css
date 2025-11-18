@@ -480,7 +480,7 @@ body, input, select, div, textarea, table, button {font-family: "Noto Sans KR", 
 
 #header .top_area {
     padding: 0;
-    background-color: #f4f8fb;
+    background-color: #fff;
     border-bottom: 1px solid #f3f5f5;
 }
 #header .top_area .logo {
@@ -492,7 +492,7 @@ body, input, select, div, textarea, table, button {font-family: "Noto Sans KR", 
     display: block;
 }
 #new_wrap {
-    background-color: #f4f8fb;
+    background-color: #fff;
 }
 #header .tab_content {
     padding: 10px 10px 30px;

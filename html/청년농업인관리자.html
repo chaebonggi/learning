@@ -12,91 +12,183 @@
 </head>
 <body>
        <div id="new_wrap">
-        <!--header--> 
-        <header id="header" class="on">
-            <div class="top_area">
-                <h1 class="logo">
-                    <a href="#">
-                        <img src="./images/farm/logo02.png" alt="">
-                    </a>
-                </h1>
-                <!-- <div class="right_area">
-                    <a href="#" class="site_go">사이트 바로가기</a>
-                    <ul class="login_area">
-                        <li>
-                            <a href="#" class="logout">로그아웃</a>
+            <!--header--> 
+            <header id="header" class="on">
+                <div class="top_area">
+                    <h1 class="logo">
+                        <a href="#">
+                            <img src="./images/farm/logo02.png" alt="">
+                        </a>
+                    </h1>
+                    <!-- <div class="right_area">
+                        <a href="#" class="site_go">사이트 바로가기</a>
+                        <ul class="login_area">
+                            <li>
+                                <a href="#" class="logout">로그아웃</a>
+                            </li>
+                        </ul>
+                    </div> -->
+                    <div class="menu_btn">
+                        <a href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <div id="gnb">
+                <!-- <div class="gnb_tab">
+                    <ul>
+                        <li class="item item-selected active">
+                            <a href="#" rel="menu" class="item-left">메뉴</a>
+                        </li>
+                            <li class="item item-unselected">
+                            <a href="#" rel="module" class="item-right">모듈</a>
                         </li>
                     </ul>
                 </div> -->
-                <div class="menu_btn">
-                    <a href="#">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                </div>
-            </div>
-            <div id="gnb">
-               <!-- <div class="gnb_tab">
-                   <ul>
-                       <li class="item item-selected active">
-                           <a href="#" rel="menu" class="item-left">메뉴</a>
-                       </li>
-                         <li class="item item-unselected">
-                           <a href="#" rel="module" class="item-right">모듈</a>
-                       </li>
-                   </ul>
-               </div> -->
-                <ul class="gnb_area tab_content" id="menu">
-                    <li class="item01">
-                        <a href="#">대상자관리</a>
+                    <ul class="gnb_area tab_content" id="menu">
+                        <li class="item01">
+                            <a href="#">대상자관리</a>
+                            <ul>
+                                <li><a href="#">대상자정보</a></li>
+                                <li><a href="#">평가자관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="item02">
+                            <a href="#">평가관리</a>
+                            <ul>
+                                <li><a href="#">평가관리상세</a></li>
+                                <li><a href="#">평가관리 상세(관리자)</a></li>
+                                <li><a href="#">대상자별 평가관리</a></li>
+                                <li><a href="#">시군구별 추천명부</a></li>
+                                <li><a href="#">대상자별 총합관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="item03">
+                            <a href="#">평가자 서류관리</a>
                         <ul>
-                            <li><a href="#">대상자정보</a></li>
-                            <li><a href="#">평가자관리</a></li>
-                        </ul>
-                    </li>
-                     <li class="item02">
-                        <a href="#">평가관리</a>
-                        <ul>
-                            <li><a href="#">평가관리상세</a></li>
-                            <li><a href="#">평가관리 상세(관리자)</a></li>
-                            <li><a href="#">대상자별 평가관리</a></li>
-                            <li><a href="#">시군구별 추천명부</a></li>
-                            <li><a href="#">대상자별 총합관리</a></li>
-                        </ul>
-                    </li>
-                    <li class="item03">
-                        <a href="#">평가자 서류관리</a>
-                       <ul>
-                            <li><a href="#">서류게시판</a></li>
-                        </ul>
-                    </li>
-                     <li class="item04">
-                        <a href="#">통계관리</a>
-                        <ul>
-                            <li><a href="#">교육통계</a></li>
-                            <li><a href="#">학습이력관리</a></li>
-                        </ul>
-                    </li>
-                     <li class="item05">
-                        <a href="#">공통</a>
-                        <ul>
-                            <li><a href="#">고객사관리</a></li>
-                            <li><a href="#">메뉴관리</a></li>
-                            <li><a href="#">공통코드관리</a></li>
-                            <li><a href="#">고객사정보관리</a></li>
-                        </ul>
-                    </li>                   
-                </ul>
-                
-                <div class="tab_content" id="module">
+                                <li><a href="#">서류게시판</a></li>
+                            </ul>
+                        </li>
+                        <li class="item04">
+                            <a href="#">통계관리</a>
+                            <ul>
+                                <li><a href="#">교육통계</a></li>
+                                <li><a href="#">학습이력관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="item05">
+                            <a href="#">공통</a>
+                            <ul>
+                                <li><a href="#">고객사관리</a></li>
+                                <li><a href="#">메뉴관리</a></li>
+                                <li><a href="#">공통코드관리</a></li>
+                                <li><a href="#">고객사정보관리</a></li>
+                            </ul>
+                        </li>                   
+                    </ul>
                     
+                    <div class="tab_content" id="module">
+                        
+                    </div>
                 </div>
-            </div>
-        </header>
-        <!--//header-->
-        <div class="conts_main">
-        </div> 
+            </header>
+            <!--//header-->
+            <div class="conts_main">
+                <style>
+                    .list_wrap {
+                        display: flex;
+                        gap: 20px;
+                    }
+                    .list_wrap .list_item {
+                        flex: 1;
+                        background-color: #fff;
+                        border: 1px solid #eee;
+                        border-radius: 15px;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                        overflow: hidden;
+                    }
+                    .list_wrap .list_tit {
+                        padding: 20px 30px;
+                        background-color: #e9e9ff;
+                        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+                    }
+                    .list_wrap .list_tit p {
+                        display: flex;
+                        align-items: center;
+                        color: #000;
+                        font-size: 30px;
+                        font-weight: 700;
+                        gap: 10px;
+                    }
+                    .list_wrap .list_tit p::before {
+                        content: '';
+                        display: flex;
+                        width: 40px;
+                        height: 40px;
+                        background: url(./images/farm/list_icon.png) center no-repeat;
+                        background-size: contain;
+                    }
+                    .list_wrap .list_info {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 30px 40px 50px;
+                        gap: 20px;
+                    }
+                    .list_wrap .list_info li {
+                        padding-left: 30px;
+                        position: relative;
+                        color: #000;
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                    .list_wrap .list_info li::before {
+                        content: '';
+                        width: 20px;
+                        height: 24px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        background: url(./images/farm/ck_icon.png) center no-repeat;
+                        background-size: contain;
+                    }
+                </style>
+                <div class="list_wrap">
+                    <div class="list_item">
+                        <div class="list_tit">
+                            <p>평가위원</p>
+                        </div>
+                        <ul class="list_info">
+                            <li>사전에 제공받은 ID/PW를 입력 후 로그인해주세요.</li>
+                            <li>평가관리 > 정성평가(평가자) 메뉴를 클릭하세요.</li>
+                            <li>배정된 평가대상자를 확인해주세요.</li>
+                            <li>평가대상자를 한명씩 클릭 후 정성평가를 진행해주세요.</li>
+                            <li>정성평가 문항은 총 7문항입니다.</li>
+                            <li>평가대상자별 평가 진행 후 하단에 "저장" 버튼을 클릭해주세요.<br> (평가되지 않은 문항이 있을 경우 "저장"되지 않습니다.)</li>
+                            <li>전체 평가대상자 평가가 끝났을 경우 상단에 "제출"버튼을 클릭해주세요.<br> ("제출"버튼 클릭 이후에는 수정이 불가합니다.)</li>
+                            <li>"제출" 이후 평가가 완료됩니다.</li>
+                        </ul>
+                    </div>
+                    <div class="list_item">
+                        <div class="list_tit">
+                            <p>시군구 담당자</p>
+                        </div>
+                        <ul class="list_info">
+                            <li>사전에 제공받은 ID/PW를 입력 후 로그인해주세요.</li>
+                            <li>대상자관리 > 대상자정보 메뉴를 클릭하세요.</li>
+                            <li>대상자정보를 클릭 후 첨부파일을 업로드해주세요.<br> (영농계획서 -> 영농계획서 첨부파일 영역)<br> (영농계획서 이외 파일 -> 기타  첨부파일 영역)</li>
+                            <li>대상자 첨부파일을 전부 업로드 하였으면 평가관리로 이동해주세요.</li>
+                            <li>평가관리 > 정량평가(시군구)를 클릭하세요.</li>
+                            <li>대상자별 식별번호를 확인 후 "정량평가" 점수를 입력해주세요.</li>
+                            <li>대상자별 정량평가 입력 후에는 "저장" 버튼을 클릭해주세요.</li>
+                            <li>대상자 정량평가가 전부 입력된 이후 "제출" 버튼을 클릭해주세요.</li>
+                            <li>"제출" 이후 평가가 완료됩니다.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div> 
         </div>
         
 </body>
