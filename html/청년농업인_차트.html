@@ -53,18 +53,30 @@
         function barChart01() {
             $("#barchart01").kendoChart({
                 legend: {
-                    visible: false
+                    visible: false 
                 },
                 seriesDefaults: {
-                    type: "column",
+                    type: "column", 
                     spacing: 0.1,
                     gap: 5, 
                     color: "#cdcdcd" 
                 },
-                series: [{
-                    name: "연령대별 값", 
-                    data: [10, 20, 30, 40] 
-                }],
+                series: [
+                    {
+                        name: "막대 데이터", 
+                        data: [10, 20, 30, 40] 
+                    },
+                    {
+                        type: "line",           
+                        name: "꺾은선 데이터", 
+                        data: [10, 20, 30, 40], 
+                        color: "#f1c8c8",       
+                        markers: {              
+                            visible: true,
+                            background: "#f1c8c8"
+                        }
+                    }
+                ],
                 valueAxis: {
                     labels: {
                         visible: false
