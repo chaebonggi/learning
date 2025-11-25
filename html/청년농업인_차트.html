@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>청년농업인-차트</title>
+    <link  rel="stylesheet" type="text/css"  href="https://est.job-cloud.kr/css/kendo/2018.3.1017/kendo.common.min.css" />
+	<link  rel="stylesheet" type="text/css"  href="https://est.job-cloud.kr/css/kendo/2018.3.1017/kendo.bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href="https://kendo.cdn.telerik.com/themes/10.2.0/default/default-main.css" rel="stylesheet" />
+
+    <link  rel="stylesheet" type="text/css"  href="https://est.job-cloud.kr/css/admin/sub.css" />
+	<link  rel="stylesheet" type="text/css"  href="https://est.job-cloud.kr/css/new.css" />
+
+    <script src="https://est.job-cloud.kr/js/jquery/1.12.4/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://est.job-cloud.kr/js/kendo/2015.3.930/kendo.all.min.js"></script>
+    
+
+</head>
+
+<body>
+    <div class="conts_main">
+        <div class="chart-list">
+            <div class="chart-item">
+                <div class="chart-tit">
+                    <p>연령대별 통계</p>
+                </div>
+                <div id="barchart01"></div>
+            </div>
+            <div class="chart-item">
+                <div class="chart-tit">
+                    <p>성별 통계</p>
+                </div>
+                <div class="ct-group">
+                    <div id="genderchart01"></div>
+                    <div id="genderchart02"></div>
+                </div>
+            </div>
+            <div class="chart-item full">
+                <div class="chart-tit">
+                    <p>지역별 통계</p>
+                </div>
+                <div id="barchart02"></div>
+            </div>
+        </div>
+       
+    </div>
+    
+
+
+    <script>     
+        function barChart01() {
+            $("#barchart01").kendoChart({
+                legend: {
+                    visible: false
+                },
+                seriesDefaults: {
+                    type: "column",
+                    spacing: 0.1,
+                    gap: 5, 
+                    color: "#cdcdcd" 
+                },
+                series: [{
+                    name: "연령대별 값", 
+                    data: [10, 20, 30, 40] 
+                }],
+                valueAxis: {
+                    labels: {
+                        visible: false
+                    },
+                    line: {
+                        visible: false
+                    },
+                    axisCrossingValue: 0,
+                    majorGridLines: {
+                        visible: true
+                    }
+                },
+                categoryAxis: {
+                    categories: ["10대", "20대", "30대", "40대"],
+                    line: {
+                        visible: false
+                    },
+                    majorGridLines: {
+                        visible: false
+                    },
+                    labels: {
+                        position: 'start'
+                    }
+                },
+                tooltip: {
+                    visible: true,
+                    format: "{0}",
+                },
+                chartArea: {
+                    background: "transparent"
+                }
+            });
+        }
+
+        function genderChart01() {
+            $("#genderchart01").kendoChart({
+                title: { text: "성별 비율", position: "bottom", color: "#000" },
+                legend: { visible: false },
+                chartArea: { background: "transparent" },
+                seriesDefaults: {
+                    type: "pie",
+                    labels: {
+                        visible: true,
+                        position: "center",
+                        template: "#= category #",
+                        color: "#fff",
+                        font: "16px",
+                        background: "transparent",
+                    },
+                    overlay: { gradient: "none" }
+                },
+                series: [{
+                    data: [
+                        { category: "남", value: 10, color: "#5B8D3E" },
+                        { category: "여", value: 50, color: "#EA844D" }
+                    ]
+                }],
+                tooltip: { visible: true, template: "#= category #: #= value #" }
+            });
+        }
+
+        function genderChart02() {
+            $("#genderchart02").kendoChart({
+                title: {
+                    text: "평균 점수",
+                    position: "bottom",
+                    color: "#000" 
+                },
+                legend: {
+                    visible: false
+                },
+                chartArea: {
+                    background: "transparent"
+                },
+                seriesDefaults: {
+                    type: "column",
+                    spacing: 0.5, 
+                    gap: 10,
+                    border: {
+                        width: 0
+                    }
+                },
+                series: [{
+                    name: "남성",
+                    data: [10],
+                    color: "#5B8D3E"
+                }, {
+                    name: "여성",
+                    data: [90],
+                    color: "#EA844D"
+                }],
+                valueAxis: {
+                    visible: false,
+                    max: 100,
+                    min: 0,
+                    majorGridLines: { 
+                        visible: false
+                    }
+                },
+                categoryAxis: {
+                    visible: false,
+                    majorGridLines: { 
+                        visible: false
+                    }
+                },
+                seriesLabels: {
+                    visible: true,
+                    template: "#= value #",
+                    position: "top",
+                },
+                tooltip: {
+                    visible: true,
+                    template: "#= series.name #: #= value #"
+                }
+            });
+        }
+
+        function barChart02() {
+            $("#barchart02").kendoChart({
+                legend: {
+                    visible: false
+                },
+                seriesDefaults: {
+                    type: "column",
+                    spacing: 0.1, 
+                    gap: 5, 
+                    color: "#cdcdcd",
+                    labels: {
+                        visible: true,
+                        position: "outsideEnd",
+                        format: "{0}"
+                    },
+                },
+                series: [{
+                    name: "지역별 통계", 
+                    data: [10, 20, 30, 10, 20, 10, 30] 
+                }],
+                valueAxis: {
+                    labels: {
+                        visible: false
+                    },
+                    line: {
+                        visible: false
+                    },
+                    axisCrossingValue: 0,
+                    majorGridLines: {
+                        visible: true
+                    }
+                },
+                categoryAxis: {
+                    categories: ['서울', '부산', '대구', '인천', '광주', '대전', '울산'] ,
+                    line: {
+                        visible: false
+                    },
+                    majorGridLines: {
+                        visible: false
+                    },
+                    labels: {
+                        position: 'start'
+                    }
+                },
+                tooltip: {
+                    visible: true,
+                    format: "{0}",
+                },
+                chartArea: {
+                    background: "transparent"
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            barChart01();
+            barChart02();
+            genderChart01();
+            genderChart02();
+        });
+        $(document).bind("kendo:skinChange", function() {
+            barChart01();
+            barChart02();
+            genderChart01();
+            genderChart02();
+        });
+
+
+    </script>
+
+</body>
+
+</html>
