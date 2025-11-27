@@ -43,6 +43,12 @@
                 </div>
                 <div id="barchart02"></div>
             </div>
+            <div class="chart-item full">
+                <div class="chart-tit">
+                    <p>지역별 통계</p>
+                </div>
+                <div id="barchart03"></div>
+            </div>
         </div>
        
     </div>
@@ -247,16 +253,71 @@
                 }
             });
         }
+        function barChart03() {
+            $("#barchart03").kendoChart({
+                legend: {
+                    visible: false
+                },
+                seriesDefaults: {
+                    type: "bar",
+                    spacing: 0.1, 
+                    gap: 1, 
+                    color: "#cdcdcd",
+                    labels: {
+                        visible: true,
+                        position: "outsideEnd",
+                        format: "{0}"
+                    },
+                },
+                series: [{
+                    name: "지역별 통계", 
+                    data: [10, 20, 30, 10, 20, 10, 30] 
+                }],
+                valueAxis: {
+                    labels: {
+                        visible: false
+                    },
+                    line: {
+                        visible: false
+                    },
+                    axisCrossingValue: 0,
+                    majorGridLines: {
+                        visible: true
+                    }
+                },
+                categoryAxis: {
+                    categories: ['서울', '부산', '대구', '인천', '광주', '대전', '울산'] ,
+                    line: {
+                        visible: false
+                    },
+                    majorGridLines: {
+                        visible: false
+                    },
+                    labels: {
+                        position: 'start'
+                    }
+                },
+                tooltip: {
+                    visible: true,
+                    format: "{0}",
+                },
+                chartArea: {
+                    background: "transparent"
+                }
+            });
+        }
 
         $(document).ready(function() {
             barChart01();
             barChart02();
+            barChart03();
             genderChart01();
             genderChart02();
         });
         $(document).bind("kendo:skinChange", function() {
             barChart01();
             barChart02();
+            barChart03();
             genderChart01();
             genderChart02();
         });
