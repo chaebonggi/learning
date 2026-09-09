@@ -376,9 +376,16 @@
                 var videoId = getYoutubeId($videoWrap.attr('data-url'));
                 if (!videoId) return;
 
-                var embedUrl = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) +
-                    '?autoplay=1&mute=1&loop=1&playlist=' + encodeURIComponent(videoId) +
-                    '&controls=0&playsinline=1&rel=0';
+                var embedUrl = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) +
+                    '?autoplay=1' +
+                    '&mute=1' +
+                    '&loop=1' +
+                    '&playlist=' + encodeURIComponent(videoId) +
+                    '&controls=0' +
+                    '&playsinline=1' +
+                    '&rel=0' +
+                    '&enablejsapi=1' +
+                    '&widget_referrer=' + encodeURIComponent(location.href);
 
                 $videoWrap.html(
                     '<iframe src="' + embedUrl + '" ' +
