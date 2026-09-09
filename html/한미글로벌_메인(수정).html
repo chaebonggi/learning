@@ -304,125 +304,105 @@
     		</div>
     	</div>
     </article>
+
     <style>
         .gpmu_shorts .slide_wrap { position: relative; }
         .gpmu_shorts .con_list { margin-top: 3.6rem; overflow: hidden; }
-        .gpmu_shorts .item { border-radius: 12px; overflow: hidden; background-color: transparent; -webkit-mask-image: -webkit-radial-gradient(white, black); -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-        .gpmu_shorts .item .video_wrap { width: 100%; aspect-ratio: 9 / 16; position: relative; overflow: hidden; background-color: transparent; pointer-events: none; border-radius: 12px; }
-        .gpmu_shorts .item .video_wrap .shorts_video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; border-radius: 12px; }
-        .gpmu_shorts .item.item_more { background-color: #f7f8fa; border: 1px solid #e8e8e8; box-sizing: border-box; }
-        .gpmu_shorts .item.item_more .more_btn_wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; aspect-ratio: 9 / 16; text-decoration: none; pointer-events: auto; }
-        .gpmu_shorts .item.item_more .more_circle { width: 44px; height: 44px; border-radius: 50%; background-color: #fff; border: 1px solid #dadada; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06); transition: all 0.3s; }
-        .gpmu_shorts .item.item_more .arrow_ico { display: inline-block; width: 8px; height: 8px; border-top: 2px solid #064a84; border-right: 2px solid #064a84; transform: rotate(45deg); margin-left: -2px; }
-        .gpmu_shorts .item.item_more .more_txt { color: #373737; font-size: 1.4rem; font-weight: 500; }
-        .gpmu_shorts .item.item_more:hover .more_circle { background-color: #064a84; border-color: #064a84; }
-        .gpmu_shorts .item.item_more:hover .arrow_ico { border-color: #fff; }
-        .gpmu_shorts .item.item_more:hover .more_txt { color: #064a84; font-weight: bold; }
+        .gpmu_shorts .item { overflow: hidden; border-radius: 12px; background: transparent; -webkit-mask-image: -webkit-radial-gradient(white, black); -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+        .gpmu_shorts .video_wrap { position: relative; width: 100%; aspect-ratio: 9 / 16; overflow: hidden; border-radius: 12px; background: transparent; pointer-events: none; }
+        .gpmu_shorts .video_wrap iframe { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; width: 100%; height: 100%; border: 0; border-radius: 12px; }
+        .gpmu_shorts .video_wrap.type_crop iframe { width: 140%; height: 150%; top: 46%; left: 50%; transform: translate(-50%, -50%); }
+        .gpmu_shorts .item_more { box-sizing: border-box; border: 1px solid #e8e8e8; background-color: #f7f8fa; }
+        .gpmu_shorts .more_btn_wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; aspect-ratio: 9 / 16; text-decoration: none; pointer-events: auto; }
+        .gpmu_shorts .more_circle { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-bottom: 10px; border: 1px solid #dadada; border-radius: 50%; background-color: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, .06); transition: .3s; }
+        .gpmu_shorts .arrow_ico { display: inline-block; width: 8px; height: 8px; margin-left: -2px; border-top: 2px solid #064a84; border-right: 2px solid #064a84; transform: rotate(45deg); }
+        .gpmu_shorts .more_txt { margin: 0; color: #373737; font-size: 1.4rem; font-weight: 500; }
+        .gpmu_shorts .item_more:hover .more_circle { border-color: #064a84; background-color: #064a84; }
+        .gpmu_shorts .item_more:hover .arrow_ico { border-color: #fff; }
+        .gpmu_shorts .item_more:hover .more_txt { color: #064a84; font-weight: 700; }
+        @media all and (max-width: 640px) { .gpmu_shorts .con_list { margin-top: 2rem; } .gpmu_shorts .item, .gpmu_shorts .video_wrap, .gpmu_shorts .video_wrap iframe { border-radius: 8px; } }
+        </style>
 
-        @media all and (max-width: 640px) {
-            .gpmu_shorts .con_list { margin-top: 2rem; }
-            .gpmu_shorts .item, .gpmu_shorts .item .video_wrap, .gpmu_shorts .item .video_wrap .shorts_video { border-radius: 8px; }
-        }
-    </style>
-
-    <!-- GPMU SHORTS 섹션 시작 -->
-    <article class="box_item pd_style01">
-        <div class="gpmu_shorts cont_item">
-            <div class="innerSection">
-                <h3 class="page_tit"><span>GPMU</span> SHORTS</h3>
-                <div class="slide_wrap">
-                    <div class="con_list">
-                        <div class="swiper-wrapper">
-
-                            <!-- 쇼츠 1 (관리자 반복 루프 영역) -->
-                            <div class="item swiper-slide">
-                                <div class="video_wrap">
-                                    <video class="shorts_video" autoplay muted loop playsinline preload="metadata">
-                                        <source src="./images/hanmi/demo.mp4" type="video/mp4">
-                                    </video>
+        <article class="box_item pd_style01">
+            <div class="gpmu_shorts cont_item">
+                <div class="innerSection">
+                    <h3 class="page_tit"><span>GPMU</span> SHORTS</h3>
+                    <div class="slide_wrap">
+                        <div class="con_list">
+                            <div class="swiper-wrapper">
+                                <!-- [안 1] 원본 100% 비율 -->
+                                <div class="item swiper-slide">
+                                    <div class="video_wrap" data-url="https://youtube.com/shorts/Qcp0RcFu-FI?feature=share"></div>
+                                </div>
+                                <!-- [안 2] type_crop 확대 크롭 -->
+                                <div class="item swiper-slide">
+                                    <div class="video_wrap type_crop" data-url="https://youtube.com/shorts/Qcp0RcFu-FI?feature=share"></div>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <div class="video_wrap" data-url="https://www.youtube.com/shorts/22Guf-YZako?feature=share"></div>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <div class="video_wrap" data-url="https://www.youtube.com/shorts/zmpg2zpXDfg?feature=share"></div>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <div class="video_wrap" data-url="https://www.youtube.com/shorts/-dPkqz-yAuw?feature=share"></div>
+                                </div>
+                                <div class="item swiper-slide item_more">
+                                    <a href="/shorts/list" class="more_btn_wrap">
+                                        <div class="more_circle"><span class="arrow_ico"></span></div>
+                                        <p class="more_txt">전체보기</p>
+                                    </a>
                                 </div>
                             </div>
-
-                            <!-- 쇼츠 2 -->
-                            <div class="item swiper-slide">
-                                <div class="video_wrap">
-                                    <video class="shorts_video" autoplay muted loop playsinline preload="metadata">
-                                        <source src="./images/hanmi/demo.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
-
-                            <!-- 쇼츠 3 -->
-                            <div class="item swiper-slide">
-                                <div class="video_wrap">
-                                    <video class="shorts_video" autoplay muted loop playsinline preload="metadata">
-                                        <source src="./images/hanmi/demo.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
-
-                            <!-- 쇼츠 4 -->
-                            <div class="item swiper-slide">
-                                <div class="video_wrap">
-                                    <video class="shorts_video" autoplay muted loop playsinline preload="metadata">
-                                        <source src="./images/hanmi/demo.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
-
-                            <!-- 쇼츠 5 -->
-                            <div class="item swiper-slide">
-                                <div class="video_wrap">
-                                    <video class="shorts_video" autoplay muted loop playsinline preload="metadata">
-                                        <source src="./images/hanmi/demo.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
-
-                            <!-- 맨 끝 더보기 카드 -->
-                            <div class="item swiper-slide item_more">
-                                <a href="/shorts/list" class="more_btn_wrap">
-                                    <div class="more_circle">
-                                        <span class="arrow_ico"></span>
-                                    </div>
-                                    <p class="more_txt">전체보기</p>
-                                </a>
-                            </div>
-
                         </div>
                     </div>
-                    <!-- 하단 페이징 (선택 사항) -->
-                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </div>
-    </article>
-    <!-- // GPMU SHORTS 섹션 끝 -->
-    <script>
-        $(document).ready(function(){
-            var shortsSwiper = new Swiper(".gpmu_shorts .con_list", {
-                slidesPerView: 5, 
+        </article>
+
+        <script>
+        $(function () {
+            function getYoutubeId(url) {
+                if (!url) return null;
+                url = url.trim();
+                var match = url.match(/youtube\.com\/shorts\/([^?&#/]+)/i);
+                if (!match) match = url.match(/[?&]v=([^?&#]+)/i);
+                if (!match) match = url.match(/youtu\.be\/([^?&#/]+)/i);
+                return match ? match[1] : null;
+            }
+
+            $('.gpmu_shorts .video_wrap[data-url]').each(function () {
+                var $videoWrap = $(this);
+                var videoId = getYoutubeId($videoWrap.attr('data-url'));
+                if (!videoId) return;
+
+                var embedUrl = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) +
+                    '?autoplay=1&mute=1&loop=1&playlist=' + encodeURIComponent(videoId) +
+                    '&controls=0&playsinline=1&rel=0';
+
+                $videoWrap.html(
+                    '<iframe src="' + embedUrl + '" ' +
+                    'title="YouTube Shorts" ' +
+                    'allow="autoplay; encrypted-media; picture-in-picture" ' +
+                    'allowfullscreen></iframe>'
+                );
+            });
+
+            new Swiper('.gpmu_shorts .con_list', {
+                slidesPerView: 5,
                 spaceBetween: 16,
                 autoplay: false,
                 loop: false,
                 watchOverflow: true,
                 breakpoints: {
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 14,
-                    },
-                    860: {
-                        slidesPerView: 3,
-                        spaceBetween: 12,
-                    },
-                    640: {
-                        slidesPerView: 2.2,
-                        spaceBetween: 10,
-                    }
+                    1024: { slidesPerView: 4, spaceBetween: 14 },
+                    860: { slidesPerView: 3, spaceBetween: 12 },
+                    640: { slidesPerView: 2.2, spaceBetween: 10 }
                 }
             });
         });
-    </script>
+        </script>
+    
 
     <article class="box_item pd_style01 bg_gray">
         <div class="gpmu_best cont_slide">
