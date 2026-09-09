@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한미글로벌</title>
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/hanmi/reset.css">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/hanmi/common.css">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/hanmi/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <!-- <script src="js/learnig/jquery-sortable-lists.js"></script>
+    <script src="js/learnig/chosen-readonly.js"></script>
+    <script src="js/learnig/chosen.jquery.min.js"></script>
+    <script src="js/learnig/printThis.js"></script>
+     -->
+    <script src="https://www.gpmu.co.kr/js/hanmi/run.js"></script>
+</head>
+
+<body>
+    <!--header-->
+    <header id="header">
+        <div class="innerSection">
+            <div class="top">
+                <h1 class="logo">
+                    <a href="#"><img src="images/hanmi/logo.png" alt="한미글로벌"></a>
+                </h1>
+                <nav class="header_gnb">
+                    <div class="gnb_banner">
+                        <img src="./images/hanmi/test_img.png" alt="">
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">홈</a>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">카테고리</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">F-PM</a></li>
+                            <li><a href="" class="drop_item">Global</a></li>
+                            <li><a href="" class="drop_item">PRE-CON</a></li>
+                            <li><a href="" class="drop_item">ESG</a></li>
+                            <li><a href="" class="drop_item">Leadership</a></li>
+                            <li><a href="" class="drop_item">Smart</a></li>
+                            <li><a href="" class="drop_item">HanmiTube</a></li>
+                            <li><a href="" class="drop_item">CPD</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">GPMU소개</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">소개</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">열린마당</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">공지사항</a></li>
+                            <li><a href="" class="drop_item">1:1 게시판</a></li>
+                            <li><a href="" class="drop_item">지식샘</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">고객전용관</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">고객전용관</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="right_box">
+                    <div class="seach_area">
+                        <div class="input_wrap">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button type="submit">검색</button>
+                        </div>
+                    </div>
+                    <ul class="member_box">
+                        <li class="login"><a href="#">로그인</a></li>
+                        <li class="join"><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+                <!-- 모바일 메뉴 -->
+                <div class="m_menu">
+                    <div class="m_search">
+                        <a href="#" class="search_btn ir_pm">검색</a>
+                        <div class="seach_area">
+                            <div class="input_wrap">
+                                <input type="text" placeholder="검색어를 입력하세요.">
+                                <button type="submit">검색</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m_login">
+                        <a href="#" class="login_btn ir_pm">로그인</a>
+                    </div>
+                </div>
+            </div>      
+        </div>
+        <div class="m_gnb">
+            <ul>
+                <li><a href="#">카테고리</a></li>
+                <li><a href="#">GPMU소개</a></li>
+                <li><a href="#">열린마당</a></li>
+                <li><a href="#">고객전용관</a></li>
+            </ul>
+        </div>
+        <!-- 우측 플로팅 퀵메뉴 (공통 영역) -->
+        <style>
+        .quick_floating_menu { position: fixed; left: 50%; margin-left: 650px; right: auto; top: 50%; transform: translateY(-50%); z-index: 100; background: #ffffff; border: 1px solid #eef0f3; border-radius: 40px; padding: 18px 8px 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); width: 90px; box-sizing: border-box; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .quick_floating_menu.is_show { opacity: 1; visibility: visible; }
+        .quick_floating_menu .q_menu_list { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; margin: 0; padding: 0; list-style: none; }
+        .quick_floating_menu .q_menu_list li { width: 100%; }
+        .quick_floating_menu .q_menu_list li a { display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; padding: 6px 0; border-radius: 12px; transition: background 0.2s ease; width: 100%; box-sizing: border-box; }
+        .quick_floating_menu .q_menu_list li a:hover { background-color: #f4f8fc; }
+        .quick_floating_menu .q_menu_list li .qucik_ico { width: 26px; height: 26px; background-size: contain; background-repeat: no-repeat; background-position: center; margin-bottom: 5px; transition: transform 0.2s ease; }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico { transform: translateY(-2px); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_01 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon01.png); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_02 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon02.png); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_03 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon03.png); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_04 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon04.png); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_05 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon05.png); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_06 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon06.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_01 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon01_on.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_02 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon02_on.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_03 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon03_on.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_04 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon04_on.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_05 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon05_on.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_06 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon06_on.png); }
+        .quick_floating_menu .q_menu_list li a .txt { font-size: 1.1rem; font-weight: 500; color: #555555; line-height: 1.2; word-break: keep-all; letter-spacing: -0.5px; transition: color 0.2s ease; }
+        .quick_floating_menu .q_menu_list li a:hover .txt { color: #064a84; font-weight: 700; }
+        .quick_floating_menu .btn_top_scroll { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; border: 0; background: transparent; font-size: 1.1rem; font-weight: 700; color: #888888; cursor: pointer; margin-top: 10px; padding-top: 10px; border-top: 1px solid #f0f0f0; transition: color 0.2s ease; }
+        .quick_floating_menu .btn_top_scroll::before { content: ''; display: block; width: 6px; height: 6px; border-top: 2px solid #888888; border-left: 2px solid #888888; transform: rotate(45deg); margin-bottom: 4px; transition: border-color 0.2s ease; }
+        .quick_floating_menu .btn_top_scroll:hover { color: #064a84; }
+        .quick_floating_menu .btn_top_scroll:hover::before { border-color: #064a84; }
+        .cont_slide .swiper-button-prev, .cont_slide .swiper-button-next { display: none; }
+
+        @media all and (max-width: 1400px) {
+            .quick_floating_menu { display: none; }
+        }
+        </style>
+
+        <aside class="quick_floating_menu">
+            <ul class="q_menu_list">
+                <li>
+                    <a href="/my_class" title="나의 강의실">
+                        <i class="qucik_ico q_ico_01"></i>
+                        <span class="txt">나의 강의실</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/certificate" title="수료증발급">
+                        <i class="qucik_ico q_ico_02"></i>
+                        <span class="txt">수료증</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/faq" title="지식샘">
+                        <i class="qucik_ico q_ico_03"></i>
+                        <span class="txt">지식샘</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/qna" title="1:1 문의">
+                        <i class="qucik_ico q_ico_04"></i>
+                        <span class="txt">1:1 문의</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/qna" title="공지사항">
+                        <i class="qucik_ico q_ico_05"></i>
+                        <span class="txt">공지사항</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/faq" title="FAQ">
+                        <i class="qucik_ico q_ico_06"></i>
+                        <span class="txt">FAQ</span>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="btn_top_scroll" onclick="$('html, body').animate({scrollTop: 0}, 300);">TOP</button>
+        </aside>
+        <script>
+            var $quickMenu = $('.quick_floating_menu');
+
+            function checkQuickMenu() {
+                if ($(window).scrollTop() >= 500) {
+                    $quickMenu.addClass('is_show');
+                } else {
+                    $quickMenu.removeClass('is_show');
+                }
+            }
+
+            // 초기 로딩 시점 및 스크롤 시 체크
+            checkQuickMenu();
+            $(window).on('scroll', function() {
+                checkQuickMenu();
+            });
+        </script>
+
+    </header>
+    
+    <article class="main_slide">
+        <div class="innerSection">
+            <div class="swiper main_wrap">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/hanmi/main_img_01.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/hanmi/main_img_02.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/hanmi/main_img_03.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="control">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-btns">
+                        <a href="#" class="swiper-button-play">play</a>
+                        <a href="#" class="swiper-button-pause">stop</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- <article class="box_item">
+        <div class="gpmu_menu">
+            <div class="innerSection">
+                <ul class="menu_list">
+                    <li>
+                        <a href="#" class="icon01"><p>나의 강의실</p></a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon02"><p>수료증발급</p></a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon03"><p>지식샘</p></a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon04"><p>1:1 문의</p></a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon05"><p>공지사항</p></a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon06"><p>FAQ</p></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article> -->
+
+    <article class="box_item pd_style01">
+    	<div class="gpmu_pick cont_slide">
+    		<div class="innerSection">
+	    		<div class="tab_container">
+	    			<div class="flex_box">
+		                <h3 class="page_tit"><span>GPMU</span> NEW</h3>
+		                <ul class="cont_tabs">
+		                	<li class="active" id="alwStdType_ALL">
+						        <a href="javascript:;" onclick="chgAlwStdTypeTab('ALL');">전체</a>
+						    </li>
+		                    
+		                    	<li class="" id="alwStdType_001">
+		                    		<a href="javascript:;" onclick="chgAlwStdTypeTab('001');">전문기술</a>
+		                    	</li>
+		                    
+		                    	<li id="alwStdType_002">
+		                    		<a href="javascript:;" onclick="chgAlwStdTypeTab('002');">직무기타</a>
+		                    	</li>
+		                    
+		                    	<li id="alwStdType_003">
+		                    		<a href="javascript:;" onclick="chgAlwStdTypeTab('003');">고객전용관</a>
+		                    	</li>
+		                    
+		                    	<li id="alwStdType_004">
+		                    		<a href="javascript:;" onclick="chgAlwStdTypeTab('004');">Plus+</a>
+		                    	</li>
+		                    
+		                    	<li id="alwStdType_000">
+		                    		<a href="javascript:;" onclick="chgAlwStdTypeTab('000');">PM일반</a>
+		                    	</li>
+		                    
+		                </ul>
+		            </div>
+		            <div class="tab_content" style="display: block;">
+                        <div class="slide_wrap" id="gpmu_pick_slide"><div class="con_list swiper-container-horizontal">	<div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);"><div class="item swiper-slide swiper-slide-active" style="margin-right: 24px;">	<a href="/gpmu/service/hr/class_detail_info.do?sbjctNum=633&amp;openNum=534">		<div class="img_wrap">			<img src="/comm/image_view.do?objectType=52&amp;objectId=633" alt="[원전사업관리] 원전건설사업 거버넌스 구조와 PMO 핵심역량">		</div>		<div class="txt">			<div class="t_state">				<span class="t_tag green">오픈과정</span>				<span class="t_tag">직무기술</span>			</div>			<p class="t_tit">[원전사업관리] 원전건설사업 거버넌스 구조와 PMO 핵심역량</p>			<div class="t_rate">				<div class="star_bg">					<span style="width:0%"></span>				</div>				<p class="star_txt">0</p>			</div>		</div>		<div class="btn_wrap">			<p>수강신청</p>		</div>		<div class="h_wrap">			<p class="h_tit">[원전사업관리] 원전건설사업 거버넌스 구조와 PMO 핵심역량</p>			<ul>				<li><span>신청기간 :</span> 상시</li>				<li><span>교육기간 :</span> 상시</li>				<li><span>학습시간 :</span> 21분</li>				<li><span>수료평가기준 :</span>  -</li>			</ul>			<p class="h_btn">수강신청</p>		</div>	</a></div><div class="item swiper-slide swiper-slide-next" style="margin-right: 24px;">	<a href="/gpmu/service/hr/class_detail_info.do?sbjctNum=632&amp;openNum=533">		<div class="img_wrap">			<img src="/comm/image_view.do?objectType=52&amp;objectId=632" alt="[원전사업관리] 대형원전과 SMR">		</div>		<div class="txt">			<div class="t_state">				<span class="t_tag green">오픈과정</span>				<span class="t_tag">직무기술</span>			</div>			<p class="t_tit">[원전사업관리] 대형원전과 SMR</p>			<div class="t_rate">				<div class="star_bg">					<span style="width:0%"></span>				</div>				<p class="star_txt">0</p>			</div>		</div>		<div class="btn_wrap">			<p>수강신청</p>		</div>		<div class="h_wrap">			<p class="h_tit">[원전사업관리] 대형원전과 SMR</p>			<ul>				<li><span>신청기간 :</span> 상시</li>				<li><span>교육기간 :</span> 상시</li>				<li><span>학습시간 :</span> 21분</li>				<li><span>수료평가기준 :</span>  -</li>			</ul>			<p class="h_btn">수강신청</p>		</div>	</a></div><div class="item swiper-slide" style="margin-right: 24px;">	<a href="/gpmu/service/hr/class_detail_info.do?sbjctNum=631&amp;openNum=532">		<div class="img_wrap">			<img src="/comm/image_view.do?objectType=52&amp;objectId=631" alt="[원전사업관리] 원전산업일반">		</div>		<div class="txt">			<div class="t_state">				<span class="t_tag green">오픈과정</span>				<span class="t_tag">직무기술</span>			</div>			<p class="t_tit">[원전사업관리] 원전산업일반</p>			<div class="t_rate">				<div class="star_bg">					<span style="width:0%"></span>				</div>				<p class="star_txt">0</p>			</div>		</div>		<div class="btn_wrap">			<p>수강신청</p>		</div>		<div class="h_wrap">			<p class="h_tit">[원전사업관리] 원전산업일반</p>			<ul>				<li><span>신청기간 :</span> 상시</li>				<li><span>교육기간 :</span> 상시</li>				<li><span>학습시간 :</span> 35분</li>				<li><span>수료평가기준 :</span>  -</li>			</ul>			<p class="h_btn">수강신청</p>		</div>	</a></div><div class="item swiper-slide" style="margin-right: 24px;">	<a href="/gpmu/service/hr/class_detail_info.do?sbjctNum=630&amp;openNum=531">		<div class="img_wrap">			<img src="/comm/image_view.do?objectType=52&amp;objectId=630" alt="Global Safety management">		</div>		<div class="txt">			<div class="t_state">				<span class="t_tag">자동승인</span>				<span class="t_tag pink">신청마감</span>				<span class="t_tag">Safety</span>			</div>			<p class="t_tit">Global Safety management</p>			<div class="t_rate">				<div class="star_bg">					<span style="width:96%"></span>				</div>				<p class="star_txt">4.8</p>			</div>		</div>		<div class="btn_wrap">			<p>수강신청</p>		</div>		<div class="h_wrap">			<p class="h_tit">Global Safety management</p>			<ul>				<li><span>신청기간 :</span> 2026-08-17 ~ 2026-08-17</li>				<li><span>교육기간 :</span> 2026-08-24 ~ 2026-09-30</li>				<li><span>학습시간 :</span> 2시간17분</li>				<li><span>수료평가기준 :</span>  진도100%,수료기준90%,시험 제출 필수</li>			</ul>			<p class="h_btn">수강신청</p>		</div>	</a></div><div class="item swiper-slide" style="margin-right: 24px;">	<a href="/gpmu/service/hr/class_detail_info.do?sbjctNum=629&amp;openNum=530">		<div class="img_wrap">			<img src="/comm/image_view.do?objectType=52&amp;objectId=629" alt="BIM 전환설계 자동화">		</div>		<div class="txt">			<div class="t_state">				<span class="t_tag">자동승인</span>				<span class="t_tag">스마트건설</span>			</div>			<p class="t_tit">BIM 전환설계 자동화</p>			<div class="t_rate">				<div class="star_bg">					<span style="width:0%"></span>				</div>				<p class="star_txt">0</p>			</div>		</div>		<div class="btn_wrap">			<p>수강신청</p>		</div>		<div class="h_wrap">			<p class="h_tit">BIM 전환설계 자동화</p>			<ul>				<li><span>신청기간 :</span> 상시</li>				<li><span>교육기간 :</span> 상시</li>				<li><span>학습시간 :</span> 27분</li>				<li><span>수료평가기준 :</span>  진도100%,수료기준70%,시험 제출 필수</li>			</ul>			<p class="h_btn">수강신청</p>		</div>	</a></div><div class="item swiper-slide" style="margin-right: 24px;">	<a href="/gpmu/service/hr/class_detail_info.do?sbjctNum=628&amp;openNum=529">		<div class="img_wrap">			<img src="/comm/image_view.do?objectType=52&amp;objectId=628" alt="컴퓨터비전 기반 비지도학습의 이해">		</div>		<div class="txt">			<div class="t_state">				<span class="t_tag">자동승인</span>				<span class="t_tag">스마트건설</span>			</div>			<p class="t_tit">컴퓨터비전 기반 비지도학습의 이해</p>			<div class="t_rate">				<div class="star_bg">					<span style="width:0%"></span>				</div>				<p class="star_txt">0</p>			</div>		</div>		<div class="btn_wrap">			<p>수강신청</p>		</div>		<div class="h_wrap">			<p class="h_tit">컴퓨터비전 기반 비지도학습의 이해</p>			<ul>				<li><span>신청기간 :</span> 상시</li>				<li><span>교육기간 :</span> 상시</li>				<li><span>학습시간 :</span> 34분</li>				<li><span>수료평가기준 :</span>  진도100%,수료기준70%,시험 제출 필수</li>			</ul>			<p class="h_btn">수강신청</p>		</div>	</a></div><div class="item swiper-slide" style="margin-right: 24px;">	<a href="/gpmu/service/hr/class_detail_info.do?sbjctNum=627&amp;openNum=528">		<div class="img_wrap">			<img src="/comm/image_view.do?objectType=52&amp;objectId=627" alt="LGES Prmo Core">		</div>		<div class="txt">			<div class="t_state">				<span class="t_tag">자동승인</span>				<span class="t_tag">직무기술 , Global</span>			</div>			<p class="t_tit">LGES Prmo Core</p>			<div class="t_rate">				<div class="star_bg">					<span style="width:0%"></span>				</div>				<p class="star_txt">0</p>			</div>		</div>		<div class="btn_wrap">			<p>수강신청</p>		</div>		<div class="h_wrap">			<p class="h_tit">LGES Prmo Core</p>			<ul>				<li><span>신청기간 :</span> 상시</li>				<li><span>교육기간 :</span> 상시</li>				<li><span>학습시간 :</span> 54분</li>				<li><span>수료평가기준 :</span>  진도100%,수료기준70%</li>			</ul>			<p class="h_btn">수강신청</p>		</div>	</a></div><div class="item swiper-slide" style="margin-right: 24px;">	<a href="/gpmu/service/hr/class_detail_info.do?sbjctNum=626&amp;openNum=527">		<div class="img_wrap">			<img src="/comm/image_view.do?objectType=52&amp;objectId=626" alt="The Four Phases-of the Real Estate-Cycle">		</div>		<div class="txt">			<div class="t_state">				<span class="t_tag">자동승인</span>				<span class="t_tag">Global</span>			</div>			<p class="t_tit">The Four Phases-of the Real Estate-Cycle</p>			<div class="t_rate">				<div class="star_bg">					<span style="width:0%"></span>				</div>				<p class="star_txt">0</p>			</div>		</div>		<div class="btn_wrap">			<p>수강신청</p>		</div>		<div class="h_wrap">			<p class="h_tit">The Four Phases-of the Real Estate-Cycle</p>			<ul>				<li><span>신청기간 :</span> 상시</li>				<li><span>교육기간 :</span> 상시</li>				<li><span>학습시간 :</span> 40분</li>				<li><span>수료평가기준 :</span>  진도100%,수료기준70%</li>			</ul>			<p class="h_btn">수강신청</p>		</div>	</a></div><div class="item swiper-slide" style="margin-right: 24px;">	<a href="/gpmu/service/hr/class_detail_info.do?sbjctNum=625&amp;openNum=526">		<div class="img_wrap">			<img src="/comm/image_view.do?objectType=52&amp;objectId=625" alt="Real Estate Investment Strategy">		</div>		<div class="txt">			<div class="t_state">				<span class="t_tag">자동승인</span>				<span class="t_tag">Global</span>			</div>			<p class="t_tit">Real Estate Investment Strategy</p>			<div class="t_rate">				<div class="star_bg">					<span style="width:0%"></span>				</div>				<p class="star_txt">0</p>			</div>		</div>		<div class="btn_wrap">			<p>수강신청</p>		</div>		<div class="h_wrap">			<p class="h_tit">Real Estate Investment Strategy</p>			<ul>				<li><span>신청기간 :</span> 상시</li>				<li><span>교육기간 :</span> 상시</li>				<li><span>학습시간 :</span> 31분</li>				<li><span>수료평가기준 :</span>  진도100%,수료기준70%</li>			</ul>			<p class="h_btn">수강신청</p>		</div>	</a></div><div class="item swiper-slide" style="margin-right: 24px;">	<a href="/gpmu/service/hr/class_detail_info.do?sbjctNum=624&amp;openNum=525">		<div class="img_wrap">			<img src="/comm/image_view.do?objectType=52&amp;objectId=624" alt="AI 특허전략">		</div>		<div class="txt">			<div class="t_state">				<span class="t_tag">자동승인</span>				<span class="t_tag">역량개발</span>			</div>			<p class="t_tit">AI 특허전략</p>			<div class="t_rate">				<div class="star_bg">					<span style="width:0%"></span>				</div>				<p class="star_txt">0</p>			</div>		</div>		<div class="btn_wrap">			<p>수강신청</p>		</div>		<div class="h_wrap">			<p class="h_tit">AI 특허전략</p>			<ul>				<li><span>신청기간 :</span> 상시</li>				<li><span>교육기간 :</span> 상시</li>				<li><span>학습시간 :</span> 1시간4분</li>				<li><span>수료평가기준 :</span>  진도100%,수료기준80%</li>			</ul>			<p class="h_btn">수강신청</p>		</div>	</a></div>	</div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span></div><div class="swiper-button-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></div><div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></div></div>
+                    </div>
+	    		</div>
+    		</div>
+    	</div>
+    </article>
+    <style>
+        .gpmu_shorts .slide_wrap { position: relative; }
+        .gpmu_shorts .con_list { margin-top: 3.6rem; overflow: hidden; }
+        .gpmu_shorts .item { border-radius: 12px; overflow: hidden; background-color: transparent; -webkit-mask-image: -webkit-radial-gradient(white, black); -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+        .gpmu_shorts .item .video_wrap { width: 100%; aspect-ratio: 9 / 16; position: relative; overflow: hidden; background-color: transparent; pointer-events: none; border-radius: 12px; }
+        .gpmu_shorts .item .video_wrap .shorts_video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; border-radius: 12px; }
+        .gpmu_shorts .item.item_more { background-color: #f7f8fa; border: 1px solid #e8e8e8; box-sizing: border-box; }
+        .gpmu_shorts .item.item_more .more_btn_wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; aspect-ratio: 9 / 16; text-decoration: none; pointer-events: auto; }
+        .gpmu_shorts .item.item_more .more_circle { width: 44px; height: 44px; border-radius: 50%; background-color: #fff; border: 1px solid #dadada; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06); transition: all 0.3s; }
+        .gpmu_shorts .item.item_more .arrow_ico { display: inline-block; width: 8px; height: 8px; border-top: 2px solid #064a84; border-right: 2px solid #064a84; transform: rotate(45deg); margin-left: -2px; }
+        .gpmu_shorts .item.item_more .more_txt { color: #373737; font-size: 1.4rem; font-weight: 500; }
+        .gpmu_shorts .item.item_more:hover .more_circle { background-color: #064a84; border-color: #064a84; }
+        .gpmu_shorts .item.item_more:hover .arrow_ico { border-color: #fff; }
+        .gpmu_shorts .item.item_more:hover .more_txt { color: #064a84; font-weight: bold; }
+
+        @media all and (max-width: 640px) {
+            .gpmu_shorts .con_list { margin-top: 2rem; }
+            .gpmu_shorts .item, .gpmu_shorts .item .video_wrap, .gpmu_shorts .item .video_wrap .shorts_video { border-radius: 8px; }
+        }
+    </style>
+
+    <!-- GPMU SHORTS 섹션 시작 -->
+    <article class="box_item pd_style01">
+        <div class="gpmu_shorts cont_item">
+            <div class="innerSection">
+                <h3 class="page_tit"><span>GPMU</span> SHORTS</h3>
+                <div class="slide_wrap">
+                    <div class="con_list">
+                        <div class="swiper-wrapper">
+
+                            <!-- 쇼츠 1 (관리자 반복 루프 영역) -->
+                            <div class="item swiper-slide">
+                                <div class="video_wrap">
+                                    <video class="shorts_video" autoplay muted loop playsinline preload="metadata">
+                                        <source src="./images/hanmi/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <!-- 쇼츠 2 -->
+                            <div class="item swiper-slide">
+                                <div class="video_wrap">
+                                    <video class="shorts_video" autoplay muted loop playsinline preload="metadata">
+                                        <source src="./images/hanmi/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <!-- 쇼츠 3 -->
+                            <div class="item swiper-slide">
+                                <div class="video_wrap">
+                                    <video class="shorts_video" autoplay muted loop playsinline preload="metadata">
+                                        <source src="./images/hanmi/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <!-- 쇼츠 4 -->
+                            <div class="item swiper-slide">
+                                <div class="video_wrap">
+                                    <video class="shorts_video" autoplay muted loop playsinline preload="metadata">
+                                        <source src="./images/hanmi/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <!-- 쇼츠 5 -->
+                            <div class="item swiper-slide">
+                                <div class="video_wrap">
+                                    <video class="shorts_video" autoplay muted loop playsinline preload="metadata">
+                                        <source src="./images/hanmi/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <!-- 맨 끝 더보기 카드 -->
+                            <div class="item swiper-slide item_more">
+                                <a href="/shorts/list" class="more_btn_wrap">
+                                    <div class="more_circle">
+                                        <span class="arrow_ico"></span>
+                                    </div>
+                                    <p class="more_txt">전체보기</p>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 하단 페이징 (선택 사항) -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- // GPMU SHORTS 섹션 끝 -->
+    <script>
+        $(document).ready(function(){
+            var shortsSwiper = new Swiper(".gpmu_shorts .con_list", {
+                slidesPerView: 5, 
+                spaceBetween: 16,
+                autoplay: false,
+                loop: false,
+                watchOverflow: true,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 14,
+                    },
+                    860: {
+                        slidesPerView: 3,
+                        spaceBetween: 12,
+                    },
+                    640: {
+                        slidesPerView: 2.2,
+                        spaceBetween: 10,
+                    }
+                }
+            });
+        });
+    </script>
+
+    <article class="box_item pd_style01 bg_gray">
+        <div class="gpmu_best cont_slide">
+            <div class="innerSection">
+                <h3 class="page_tit"><span>GPMU</span> BEST</h3>
+                <div class="slide_wrap">
+                    <div class="con_list">
+                        <div class="swiper-wrapper">
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img01.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="t_state">
+                                            <span class="state">제한없음</span>
+                                            <span class="state blue">승인필요</span>
+                                            <span class="state pink">신청마감</span>
+                                        </div>
+                                        <p class="t_tit">기억 소환! 영어단어 리턴즈</p>
+                                        <div class="t_rate">
+                                            <div class="star_bg">
+                                                <span style="width:100%"></span>
+                                            </div>
+                                            <p class="star_txt">5.0</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn_wrap">
+                                        <p>수강신청</p>
+                                    </div>
+                                    <!-- hover txt -->
+                                    <div class="h_wrap">
+                                        <p class="h_tit">기억 소환! 영어단어 리턴즈</p>
+                                        <ul>
+                                            <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                            <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                            <li><span>학습시간 :</span> 4시간</li>
+                                            <li><span>수료평가기준 :</span>  진도100% / 총점 100%</li>
+                                        </ul>
+                                        <p class="h_btn">수강신청</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img02.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="t_state">
+                                            <span class="state">제한없음</span>
+                                            <span class="state blue">승인필요</span>
+                                            <span class="state pink">신청마감</span>
+                                        </div>
+                                        <p class="t_tit">실무에 바로 쓰는 스마트툴 활용법</p>
+                                        <div class="t_rate">
+                                            <div class="star_bg">
+                                                <span style="width:90%"></span>
+                                            </div>
+                                            <p class="star_txt">4.5</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn_wrap">
+                                        <p>수강신청</p>
+                                    </div>
+                                    <!-- hover txt -->
+                                    <div class="h_wrap">
+                                        <p class="h_tit">실무에 바로 쓰는 스마트툴 활용법</p>
+                                        <ul>
+                                            <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                            <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                            <li><span>학습시간 :</span> 4시간</li>
+                                            <li><span>수료평가기준 :</span>  진도100% / 총점 100%</li>
+                                        </ul>
+                                        <p class="h_btn">수강신청</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img03.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="t_state">
+                                            <span class="state">제한없음</span>
+                                            <span class="state blue">승인필요</span>
+                                            <span class="state pink">신청마감</span>
+                                        </div>
+                                        <p class="t_tit">내 인생 첫 데이터 분석_R까기종합편</p>
+                                        <div class="t_rate">
+                                            <div class="star_bg">
+                                                <span style="width:80%"></span>
+                                            </div>
+                                            <p class="star_txt">4.0</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn_wrap">
+                                        <p>수강신청</p>
+                                    </div>
+                                    <!-- hover txt -->
+                                    <div class="h_wrap">
+                                        <p class="h_tit">내 인생 첫 데이터 분석_R까기종합편</p>
+                                        <ul>
+                                            <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                            <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                            <li><span>학습시간 :</span> 4시간</li>
+                                            <li><span>수료평가기준 :</span>  진도100% / 총점 100%</li>
+                                        </ul>
+                                        <p class="h_btn">수강신청</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img04.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="t_state">
+                                            <span class="state">제한없음</span>
+                                            <span class="state blue">승인필요</span>
+                                            <span class="state pink">신청마감</span>
+                                        </div>
+                                        <p class="t_tit">쉽게 배우는 JavaScript 알고리즘 입문</p>
+                                        <div class="t_rate">
+                                            <div class="star_bg">
+                                                <span style="width:50%"></span>
+                                            </div>
+                                            <p class="star_txt">2.5</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn_wrap">
+                                        <p>수강신청</p>
+                                    </div>
+                                    <!-- hover txt -->
+                                    <div class="h_wrap">
+                                        <p class="h_tit">쉽게 배우는 JavaScript 알고리즘 입문</p>
+                                        <ul>
+                                            <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                            <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                            <li><span>학습시간 :</span> 4시간</li>
+                                            <li><span>수료평가기준 :</span>  진도100% / 총점 100%</li>
+                                        </ul>
+                                        <p class="h_btn">수강신청</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img01.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="t_state">
+                                            <span class="state">제한없음</span>
+                                            <span class="state blue">승인필요</span>
+                                            <span class="state pink">신청마감</span>
+                                        </div>
+                                        <p class="t_tit">기억 소환! 영어단어 리턴즈</p>
+                                        <div class="t_rate">
+                                            <div class="star_bg">
+                                                <span style="width:100%"></span>
+                                            </div>
+                                            <p class="star_txt">5.0</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn_wrap">
+                                        <p>수강신청</p>
+                                    </div>
+                                    <!-- hover txt -->
+                                    <div class="h_wrap">
+                                        <p class="h_tit">기억 소환! 영어단어 리턴즈</p>
+                                        <ul>
+                                            <li><span>신청기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                            <li><span>교육기간 :</span> 2024-01-18 ~ 2024-02-31</li>
+                                            <li><span>학습시간 :</span> 4시간</li>
+                                            <li><span>수료평가기준 :</span>  진도100% / 총점 100%</li>
+                                        </ul>
+                                        <p class="h_btn">수강신청</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="box_item">
+        <div class="gpmu_banner">
+            <div class="innerSection">
+                <h3 class="ir_pm">gpmu banner</h3>
+                <div class="banner">
+                    <a href="#">
+                        <p>프리콘 역량진단을 통해 과정을<br class="for_mobile"> 추천해 드립니다.</p>
+                    </a>                   
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="box_item pd_style01">
+        <div class="gpmu_new cont_item">
+            <div class="innerSection">
+                <h3 class="page_tit"><span>GPMU</span> NEW!</h3>
+                <div class="slide_wrap">
+                    <div class="con_list">
+                        <div class="swiper-wrapper">
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img05.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <span>IT지식 완전정복</span>
+                                        <p>행복한 가정을 위한 소통 비법</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img06.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <span>IT지식 완전정복</span>
+                                        <p>사람을 끌어들이는 힘!<br> 목소리 트레이닝!</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img07.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <span>IT지식 완전정복</span>
+                                        <p>기본부터 실무까지!<br> 포토샵 정복하기</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img08.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <span>IT지식 완전정복</span>
+                                        <p>바리스타 2급 실기과정</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </article>    
+    <article class="box_item bg_gray">
+        <div class="gpmu_notice">
+            <div class="innerSection">
+                <h3 class="page_tit">NOTICE</h3>
+                <div class="slide_wrap">
+                    <div class="con_list">
+                        <div class="swiper-wrapper">
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <p class="tit">수강독려 이벤트 (~4/30)</p>
+                                    <span class="date">2023-04-17</span>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <p class="tit">CIOB-GPMU Joint Program Open!</p>
+                                    <span class="date">2023-04-17</span>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <p class="tit">Grand Open 사행시 이벤트 당선작 발표!</p>
+                                    <span class="date">2023-04-17</span>
+                                </a>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="control_btn">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="box_item pd_style01">
+        <div class="gpmu_letter cont_item">
+            <div class="innerSection">
+                <h3 class="page_tit"><span>NEWS</span> LETTER</h3>
+                <div class="slide_wrap">
+                    <div class="con_list">
+                        <div class="swiper-wrapper">
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img09.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <p>한미글로벌, '부천 열병합발전소 현대화 사업' PM 용역 수주</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img10.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <p>한미글로벌, 2023 '가족친화 최고기업' 선정</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item swiper-slide">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="./images/hanmi/sample_img11.png" alt="샘플이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <p>'2023 데이터센터 이노베이션 포럼' 성황리에 마무리</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="box_item bg_blue">
+        <div class="gpmu_introduction">
+            <div class="innerSection">
+                <h3 class="ir_pm">introduction</h3>
+                <div class="con_list">
+                    <div class="txt_wrap">
+                        <p class="tit">함께하는 GPMU</p>
+                        <p class="txt">
+                            PM  역량강화, GPMU가 함께합니다.<br>
+                            GPMU는 6카테고리로 구성되어 다양한 이론, 실무 강좌를 학습할 수 있는
+                            온라인 플랫폼으로 퀴즈, 실시간 웨비나 등을 통한 쌍방향 커뮤니케이션 
+                            학습이 가능합니다.
+                        </p>
+                        <a href="#"><span>더 보러가기</span></a>
+                    </div>
+                    <div class="img_wrap">
+                        <img src="./images/hanmi/introduction_img.png" alt="gpmu 기업 이미지">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>  
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="f_top">
+            <div class="innerSection">
+                <ul>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">마케팅 정보 수신동의</a></li>
+                    <li><a href="">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="f_bottom">
+            <div class="innerSection">
+                <div class="f_logo">
+                    <img src="./images/hanmi/f_logo.png" alt="gpmu 로고">
+                </div>
+                <div class="txt">
+                    <p>edu@keldi.co.kr</p>
+                    <p>
+                        <span>헬프데스크 문의 </span><span>☎ 02-971-2900</span>
+                        <span>/</span> 
+                        <span>운영시간 10~16시(평일)</span>
+                    </p>
+                    <p>본 사이트에서 제공하는 모든 콘텐츠는 저작권법의 보호를 받는 바, 무단 전재, 복제, 배포 등을 금지합니다.</p>
+                    <p class="copy">Copyright © Hanmiglobal Corp. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
