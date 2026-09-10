@@ -323,7 +323,7 @@
 
                             <!-- 쇼츠 1 (관리자 주소 입력 영역) -->
                             <div class="item swiper-slide">
-                                <div class="video_wrap" data-url="https://www.youtube.com/shorts/Qcp0RcFu-FI?feature=share"></div>
+                                <div class="video_wrap" data-url="https://www.youtube.com/shorts/dF8zNcq9w2U?feature=share"></div>
                             </div>
 
                             <!-- 쇼츠 2 -->
@@ -363,46 +363,43 @@
         </div>
     </article>
 
-    <!-- 스크립트 -->
     <script>
+    // $(function () {
+    //     function getYoutubeId(url) {
+    //         if (!url) return null;
+    //         url = url.trim();
+    //         var match = url.match(/youtube\.com\/shorts\/([^?&#/]+)/i);
+    //         if (!match) match = url.match(/[?&]v=([^?&#]+)/i);
+    //         if (!match) match = url.match(/youtu\.be\/([^?&#/]+)/i);
+    //         return match ? match[1] : null;
+    //     }
+    //     $('.gpmu_shorts .video_wrap[data-url]').each(function () {
+    //         var $videoWrap = $(this);
+    //         var videoId = getYoutubeId($videoWrap.attr('data-url'));
+    //         if (!videoId) return;
+
+    //         var embedUrl = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) +
+    //             '?autoplay=1' +
+    //             '&mute=1' +
+    //             '&loop=1' +
+    //             '&controls=0' +
+    //             '&playsinline=1' +
+    //             '&rel=0' +
+    //             '&iv_load_policy=3' +
+    //             '&modestbranding=1' +
+    //             '&fs=0' +
+    //             '&disablekb=1';
+
+    //         $videoWrap.html(
+    //             '<iframe src="' + embedUrl + '" ' +
+    //             'title="YouTube Shorts" ' +
+    //             'allow="autoplay; encrypted-media; picture-in-picture" ' +
+    //             'allowfullscreen></iframe>'
+    //         );
+    //     });
+
     $(function () {
-        // 1. 유튜브 영상 ID 추출
-        function getYoutubeId(url) {
-            if (!url) return null;
-            url = url.trim();
-            var match = url.match(/youtube\.com\/shorts\/([^?&#/]+)/i);
-            if (!match) match = url.match(/[?&]v=([^?&#]+)/i);
-            if (!match) match = url.match(/youtu\.be\/([^?&#/]+)/i);
-            return match ? match[1] : null;
-        }
-
-        // 2. data-url 주소로 iframe 자동 조립 주입
-        $('.gpmu_shorts .video_wrap[data-url]').each(function () {
-            var $videoWrap = $(this);
-            var videoId = getYoutubeId($videoWrap.attr('data-url'));
-            if (!videoId) return;
-
-            var embedUrl = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) +
-                '?autoplay=1' +
-                '&mute=1' +
-                '&loop=1' +
-                '&controls=0' +
-                '&playsinline=1' +
-                '&rel=0' +
-                '&iv_load_policy=3' +
-                '&modestbranding=1' +
-                '&fs=0' +
-                '&disablekb=1';
-
-            $videoWrap.html(
-                '<iframe src="' + embedUrl + '" ' +
-                'title="YouTube Shorts" ' +
-                'allow="autoplay; encrypted-media; picture-in-picture" ' +
-                'allowfullscreen></iframe>'
-            );
-        });
-
-        // 3. Swiper 초기화 (페이지네이션 제거)
+    // 3. Swiper 초기화 (페이지네이션 제거)
         new Swiper('.gpmu_shorts .con_list', {
             slidesPerView: 5,
             spaceBetween: 16,
@@ -416,8 +413,146 @@
                 480: { slidesPerView: 1.8, spaceBetween: 10 }
             }
         });
-    });
+
+});
+
+        
     </script>
+   <script>
+$(function () {
+
+    // YouTube IFrame API 로드
+    var tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(tag);
+
+
+    // YouTube 영상 ID 추출
+    function getYoutubeId(url) {
+        if (!url) return null;
+
+        url = url.trim();
+
+        var match = url.match(/youtube\.com\/shorts\/([^?&#/]+)/i);
+
+        if (!match) {
+            match = url.match(/[?&]v=([^?&#]+)/i);
+        }
+
+        if (!match) {
+            match = url.match(/youtu\.be\/([^?&#/]+)/i);
+        }
+
+        return match ? match[1] : null;
+    }
+
+
+    // iframe 먼저 생성
+    $('.gpmu_shorts .video_wrap[data-url]').each(function (index) {
+
+        var $videoWrap = $(this);
+        var videoId = getYoutubeId($videoWrap.attr('data-url'));
+
+        if (!videoId) return;
+
+        var iframeId = 'youtube-short-' + index;
+
+        var embedUrl =
+            'https://www.youtube-nocookie.com/embed/' +
+            encodeURIComponent(videoId) +
+
+            '?autoplay=1' +
+            '&mute=1' +
+            '&loop=1' +
+            '&playlist=' + encodeURIComponent(videoId) +
+            '&controls=0' +
+            '&playsinline=1' +
+            '&rel=0' +
+            '&iv_load_policy=3' +
+            '&modestbranding=1' +
+            '&fs=0' +
+            '&disablekb=1' +
+
+            // 자막 기본 표시 방지
+            '&cc_load_policy=0' +
+
+            // JS API 사용
+            '&enablejsapi=1';
+
+
+        $videoWrap.html(
+            '<iframe ' +
+                'id="' + iframeId + '" ' +
+                'src="' + embedUrl + '" ' +
+                'title="YouTube Shorts" ' +
+                'frameborder="0" ' +
+                'allow="autoplay; encrypted-media; picture-in-picture" ' +
+                'allowfullscreen>' +
+            '</iframe>'
+        );
+
+    });
+
+
+    // YouTube API 준비 후
+    window.onYouTubeIframeAPIReady = function () {
+
+        $('.gpmu_shorts .video_wrap iframe').each(function () {
+
+            var iframe = this;
+
+            var player = new YT.Player(iframe, {
+
+                events: {
+
+                    onReady: function (event) {
+
+                        var player = event.target;
+
+                        player.mute();
+
+                        /*
+                         * 자막 모듈 제거
+                         */
+                        try {
+                            player.unloadModule('captions');
+                        } catch (e) {}
+
+                        try {
+                            player.unloadModule('cc');
+                        } catch (e) {}
+
+                        player.playVideo();
+                    },
+
+                    onStateChange: function (event) {
+
+                        /*
+                         * 재생 상태가 바뀔 때도
+                         * 자막 모듈 제거
+                         */
+                        try {
+                            event.target.unloadModule('captions');
+                        } catch (e) {}
+
+                        try {
+                            event.target.unloadModule('cc');
+                        } catch (e) {}
+
+                    }
+
+                }
+
+            });
+
+        });
+
+    };
+
+});
+</script>
+
+
     
 
     <article class="box_item pd_style01 bg_gray">
