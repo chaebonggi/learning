@@ -296,13 +296,12 @@
     	</div>
     </article>
 
-    <!-- 쇼츠 CSS 스타일 -->
     <style>
     .gpmu_shorts .slide_wrap { position: relative; }
     .gpmu_shorts .con_list { margin-top: 3.6rem; overflow: hidden; }
-    .gpmu_shorts .item { overflow: hidden; border-radius: 12px; background: transparent; -webkit-mask-image: -webkit-radial-gradient(white, black); -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-    .gpmu_shorts .video_wrap { position: relative; width: 100%; aspect-ratio: 9 / 16; overflow: hidden; border-radius: 12px; background: transparent; pointer-events: none; }
-    .gpmu_shorts .video_wrap iframe { position: absolute; top: 0; left: 50%; width: 200%; height: 104%; transform: translateX(-50%); border: 0; border-radius: 12px; }
+    .gpmu_shorts .item { overflow: hidden; border-radius: 12px; background: #000; -webkit-mask-image: -webkit-radial-gradient(white, black); -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+    .gpmu_shorts .video_wrap { position: relative; width: 100%; aspect-ratio: 9 / 16; overflow: hidden; border-radius: 12px; background: #000; pointer-events: none; }
+    .gpmu_shorts .video_wrap iframe { position: absolute; top: -3%; left: 0; width: 100%; height: 106%; border: 0; border-radius: 12px; }
     .gpmu_shorts .item_more { box-sizing: border-box; border: 1px solid #e8e8e8; background-color: #f7f8fa; }
     .gpmu_shorts .more_btn_wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; aspect-ratio: 9 / 16; text-decoration: none; pointer-events: auto; }
     .gpmu_shorts .more_circle { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-bottom: 10px; border: 1px solid #dadada; border-radius: 50%; background-color: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, .06); transition: .3s; }
@@ -311,7 +310,10 @@
     .gpmu_shorts .item_more:hover .more_circle { border-color: #064a84; background-color: #064a84; }
     .gpmu_shorts .item_more:hover .arrow_ico { border-color: #fff; }
     .gpmu_shorts .item_more:hover .more_txt { color: #064a84; font-weight: 700; }
-    @media all and (max-width: 640px) { .gpmu_shorts .con_list { margin-top: 2rem; } .gpmu_shorts .item, .gpmu_shorts .video_wrap, .gpmu_shorts .video_wrap iframe { border-radius: 8px; } }
+    @media all and (max-width: 640px) {
+        .gpmu_shorts .con_list { margin-top: 2rem; }
+        .gpmu_shorts .item, .gpmu_shorts .video_wrap, .gpmu_shorts .video_wrap iframe { border-radius: 8px; }
+    }
     </style>
 
     <!-- 쇼츠 HTML 마크업 -->
@@ -367,94 +369,71 @@
 
     <script>
     $(function () {
-    // 1. YouTube IFrame API 로드
-    var tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    document.head.appendChild(tag);
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(tag);
 
-    // 2. 다양한 형식의 유튜브 주소에서 ID만 추출
-    function getYoutubeId(url) {
-        if (!url) return null;
-        url = url.trim();
-        var match = url.match(/youtube\.com\/shorts\/([^?&#/]+)/i);
-        if (!match) match = url.match(/[?&]v=([^?&#]+)/i);
-        if (!match) match = url.match(/youtu\.be\/([^?&#/]+)/i);
-        return match ? match[1] : null;
-    }
+        function getYoutubeId(url) {
+            if (!url) return null;
+            url = url.trim();
+            var match = url.match(/youtube\.com\/shorts\/([^?&#/]+)/i);
+            if (!match) match = url.match(/[?&]v=([^?&#]+)/i);
+            if (!match) match = url.match(/youtu\.be\/([^?&#/]+)/i);
+            return match ? match[1] : null;
+        }
 
-    var currentOrigin = window.location.origin;
+        var currentOrigin = window.location.origin;
 
-    // 3. iframe 생성 및 파라미터 조합 (playlist 제거로 재생바 방지)
-    $('.gpmu_shorts .video_wrap[data-url]').each(function (index) {
-        var $videoWrap = $(this);
-        var videoId = getYoutubeId($videoWrap.attr('data-url'));
-        if (!videoId) return;
+        $('.gpmu_shorts .video_wrap[data-url]').each(function (index) {
+            var $videoWrap = $(this);
+            var videoId = getYoutubeId($videoWrap.attr('data-url'));
+            if (!videoId) return;
 
-        var iframeId = 'youtube-short-' + index;
-        var embedUrl = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) +
-            '?autoplay=1' +
-            '&mute=1' +
-            '&controls=0' +
-            '&playsinline=1' +
-            '&rel=0' +
-            '&iv_load_policy=3' +
-            '&modestbranding=1' +
-            '&disablekb=1' +
-            '&fs=0' +
-            '&cc_load_policy=0' +
-            '&enablejsapi=1' +
-            '&version=3' +
-            (currentOrigin ? '&origin=' + encodeURIComponent(currentOrigin) : '');
+            var iframeId = 'youtube-short-' + index;
+            var embedUrl = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) +
+                '?autoplay=1&mute=1&controls=0&playsinline=1&rel=0&iv_load_policy=3&disablekb=1&fs=0&cc_load_policy=0&enablejsapi=1' +
+                (currentOrigin ? '&origin=' + encodeURIComponent(currentOrigin) : '');
 
-        $videoWrap.html(
-            '<iframe id="' + iframeId + '" src="' + embedUrl + '" ' +
-            'title="YouTube Video" ' +
-            'allow="autoplay; encrypted-media; picture-in-picture" ' +
-            'allowfullscreen></iframe>'
-        );
-    });
+            $videoWrap.html(
+                '<iframe id="' + iframeId + '" src="' + embedUrl + '" title="YouTube Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>'
+            );
+        });
 
-    // 4. API 초기화 및 자동재생 / 무음 / 즉시 루프 제어
-    window.onYouTubeIframeAPIReady = function () {
-        $('.gpmu_shorts .video_wrap iframe').each(function () {
-            new YT.Player(this, {
-                events: {
-                    onReady: function (event) {
-                        var player = event.target;
-                        player.mute();
-                        if (typeof player.setOption === 'function') {
-                            player.setOption('captions', 'track', {});
-                        }
-                        player.playVideo();
-                    },
-                    onStateChange: function (event) {
-                        // 영상 종료 시 첫 프레임으로 즉시 되감아 재생바 없이 무한 반복
-                        if (event.data === YT.PlayerState.ENDED) {
-                            event.target.seekTo(0, true);
+        window.onYouTubeIframeAPIReady = function () {
+            $('.gpmu_shorts .video_wrap iframe').each(function () {
+                new YT.Player(this, {
+                    events: {
+                        onReady: function (event) {
+                            event.target.mute();
                             event.target.playVideo();
+                        },
+                        onStateChange: function (event) {
+                            if (event.data === YT.PlayerState.ENDED) {
+                                event.target.seekTo(0, true);
+                                event.target.playVideo();
+                            }
                         }
                     }
-                }
+                });
             });
-        });
-    };
+        };
 
-    // 5. Swiper 슬라이더 반응형 설정
-    new Swiper('.gpmu_shorts .con_list', {
-        slidesPerView: 5,
-        spaceBetween: 16,
-        autoplay: false,
-        loop: false,
-        watchOverflow: true,
-        breakpoints: {
-            1024: { slidesPerView: 4, spaceBetween: 14 },
-            860: { slidesPerView: 3, spaceBetween: 12 },
-            640: { slidesPerView: 2, spaceBetween: 12 },
-            480: { slidesPerView: 1.5, spaceBetween: 10 }
-        }
+        new Swiper('.gpmu_shorts .con_list', {
+            slidesPerView: 5,
+            spaceBetween: 16,
+            autoplay: false,
+            loop: false,
+            watchOverflow: true,
+            breakpoints: {
+                1024: { slidesPerView: 4, spaceBetween: 14 },
+                860: { slidesPerView: 3, spaceBetween: 12 },
+                640: { slidesPerView: 2, spaceBetween: 12 },
+                480: { slidesPerView: 1.5, spaceBetween: 10 }
+            }
+        });
     });
-});
     </script>
+
 
     
 
