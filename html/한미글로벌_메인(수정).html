@@ -301,8 +301,8 @@
     .gpmu_shorts .slide_wrap { position: relative; }
     .gpmu_shorts .con_list { margin-top: 3.6rem; overflow: hidden; }
     .gpmu_shorts .item { overflow: hidden; border-radius: 12px; background: transparent; -webkit-mask-image: -webkit-radial-gradient(white, black); -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-    .gpmu_shorts .video_wrap { position: relative; width: 100%; aspect-ratio: 9 / 16; overflow: hidden; border-radius: 12px; background: #000; pointer-events: none; }
-    .gpmu_shorts .video_wrap iframe { position: absolute; top: 0; left: 50%; width: 177.78%; height: 100%; transform: translateX(-50%); border: 0; border-radius: 12px; }
+    .gpmu_shorts .video_wrap { position: relative; width: 100%; aspect-ratio: 9 / 16; overflow: hidden; border-radius: 12px; background: transparent; pointer-events: none; }
+    .gpmu_shorts .video_wrap iframe { position: absolute; top: 0; left: 50%; width: 200%; height: 104%; transform: translateX(-50%); border: 0; border-radius: 12px; }
     .gpmu_shorts .item_more { box-sizing: border-box; border: 1px solid #e8e8e8; background-color: #f7f8fa; }
     .gpmu_shorts .more_btn_wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; aspect-ratio: 9 / 16; text-decoration: none; pointer-events: auto; }
     .gpmu_shorts .more_circle { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-bottom: 10px; border: 1px solid #dadada; border-radius: 50%; background-color: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, .06); transition: .3s; }
@@ -366,11 +366,13 @@
     </article>
 
     <script>
-     $(function () {
+    $(function () {
+    // 1. YouTube IFrame API 로드
     var tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     document.head.appendChild(tag);
 
+    // 2. 다양한 형식의 유튜브 주소에서 ID만 추출
     function getYoutubeId(url) {
         if (!url) return null;
         url = url.trim();
@@ -382,6 +384,7 @@
 
     var currentOrigin = window.location.origin;
 
+    // 3. iframe 생성 및 파라미터 조합 (playlist 제거로 재생바 방지)
     $('.gpmu_shorts .video_wrap[data-url]').each(function (index) {
         var $videoWrap = $(this);
         var videoId = getYoutubeId($videoWrap.attr('data-url'));
@@ -391,8 +394,6 @@
         var embedUrl = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) +
             '?autoplay=1' +
             '&mute=1' +
-            '&loop=1' +
-            '&playlist=' + encodeURIComponent(videoId) +
             '&controls=0' +
             '&playsinline=1' +
             '&rel=0' +
@@ -400,8 +401,7 @@
             '&modestbranding=1' +
             '&disablekb=1' +
             '&fs=0' +
-            '&cc_load_policy=0' + // 1. 자막 자동 로드 방지
-            '&cc_lang_pref=none' + // 2. 언어 자막 기본값 제거
+            '&cc_load_policy=0' +
             '&enablejsapi=1' +
             '&version=3' +
             (currentOrigin ? '&origin=' + encodeURIComponent(currentOrigin) : '');
@@ -414,7 +414,7 @@
         );
     });
 
-    // API 로드 후 강제로 자막 트랙 비활성화
+    // 4. API 초기화 및 자동재생 / 무음 / 즉시 루프 제어
     window.onYouTubeIframeAPIReady = function () {
         $('.gpmu_shorts .video_wrap iframe').each(function () {
             new YT.Player(this, {
@@ -422,19 +422,16 @@
                     onReady: function (event) {
                         var player = event.target;
                         player.mute();
-                        // 3. 자막 트랙 강제 비활성화
                         if (typeof player.setOption === 'function') {
                             player.setOption('captions', 'track', {});
                         }
                         player.playVideo();
                     },
                     onStateChange: function (event) {
-                        if (event.data === YT.PlayerState.PLAYING) {
-                            // 4. 재생 시작 시 한 번 더 자막 차단
-                            var player = event.target;
-                            if (typeof player.setOption === 'function') {
-                                player.setOption('captions', 'track', {});
-                            }
+                        // 영상 종료 시 첫 프레임으로 즉시 되감아 재생바 없이 무한 반복
+                        if (event.data === YT.PlayerState.ENDED) {
+                            event.target.seekTo(0, true);
+                            event.target.playVideo();
                         }
                     }
                 }
@@ -442,6 +439,7 @@
         });
     };
 
+    // 5. Swiper 슬라이더 반응형 설정
     new Swiper('.gpmu_shorts .con_list', {
         slidesPerView: 5,
         spaceBetween: 16,
