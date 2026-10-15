@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>대시보드</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Expires" content="-1">
+	<link  rel="stylesheet" type="text/css"  href="https://www.gpmu.co.kr/css/kendo/2018.3.1017/kendo.common.min.css" />
+	<link  rel="stylesheet" type="text/css"  href="https://www.gpmu.co.kr/css/kendo/2018.3.1017/kendo.bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link  rel="stylesheet" type="text/css"  href="https://www.gpmu.co.kr/css/admin/sub.css" />
+	<link  rel="stylesheet" type="text/css"  href="https://www.gpmu.co.kr/css/new.css" />
+	<script src="https://www.gpmu.co.kr/js/yepnope/1.5.4/yepnope.min.js"></script> 
+	<script src="https://www.gpmu.co.kr/js/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+	<script src="https://www.gpmu.co.kr/js/admin/run.js"></script>
+	<script src="https://www.gpmu.co.kr/js/common/common.js"></script>
+	
+	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" type="text/css"/>
+</head>
+<body onload="">
+    <style>
+        .noti_wrap{position:relative;display:inline-block;margin-right:20px;}
+        .noti_btn{position:relative;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:8px;background:transparent;cursor:pointer;transition:background-color 0.2s;}
+        .noti_btn:hover,.noti_wrap.on .noti_btn{background:rgba(255,255,255,0.12);}
+        .noti_btn .bell_icon{stroke:#ffffff;}
+        .noti_badge{position:absolute;top:6px;right:6px;min-width:17px;height:17px;line-height:17px;padding:0 4px;border-radius:10px;background:#ff3b30;color:#ffffff;font-size:11px;font-weight:700;text-align:center;box-sizing:border-box;}
+        .noti_badge.hide{display:none;}
+        .noti_layer{display:none;position:absolute;top:calc(100% + 12px);right:-120px;width:360px;background:#ffffff;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,0.18);box-sizing:border-box;z-index:9999;}
+        .noti_wrap.on .noti_layer{display:block !important;}
+        .noti_layer::before{content:'';position:absolute;top:-8px;right:132px;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #ffffff;}
+        .noti_layer_header{padding:22px 24px 14px;}
+        .noti_layer_title{font-size:17px;font-weight:700;color:#111111;}
+        .noti_list_scroll{max-height:420px;overflow-y:auto;padding:4px 16px 20px;}
+        .noti_list_scroll::-webkit-scrollbar{width:5px;}
+        .noti_list_scroll::-webkit-scrollbar-thumb{background:#d4d4d4;border-radius:4px;}
+        .noti_list_scroll::-webkit-scrollbar-track{background:transparent;}
+        .noti_item{position:relative;background:#f7f9fa;border-radius:14px;margin-bottom:10px;transition:background-color 0.2s,box-shadow 0.2s;}
+        .noti_item:hover{background:#f0f4f7;}
+        .noti_link{display:block;padding:16px 44px 16px 18px;text-decoration:none !important;}
+        .noti_item_top{display:flex;align-items:center;margin-bottom:6px;}
+        .noti_dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#1877f2;margin-right:8px;flex-shrink:0;}
+        .noti_item.read .noti_dot{background:#c4c8cc;}
+        .noti_title{font-size:15px;font-weight:700;color:#222222;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+        .noti_desc{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;font-size:13px;color:#666666;line-height:1.4;margin:0;word-break:break-all;padding-left:16px;}
+        .noti_opt{position:absolute;top:12px;right:12px;width:32px;height:32px;z-index:999;}
+        .btn_more{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;width:100%;height:100%;background:transparent;border:0;cursor:pointer;padding:0;margin:0;}
+        .btn_more:hover{background:rgba(0,0,0,0.05);border-radius:4px;}
+        .btn_more span{display:block;width:3px;height:3px;border-radius:50%;background:#888888;pointer-events:none;}
+        .noti_opt_layer{display:none;position:absolute;top:32px;right:0;background:#ffffff;border:1px solid #d9dcde;border-radius:6px;box-shadow:0 4px 15px rgba(0,0,0,0.25);padding:4px;z-index:1000;min-width:60px;box-sizing:border-box;}
+        .noti_opt.on .noti_opt_layer{display:block !important;}
+        .btn_noti_del{display:block !important;width:100% !important;border:0 !important;background:#ffffff !important;color:#ff3b30 !important;font-size:12px !important;font-weight:700 !important;padding:6px 12px !important;border-radius:4px !important;cursor:pointer !important;text-align:center !important;line-height:1 !important;}
+        .btn_noti_del:hover{background:#fff1f0 !important;}
+        .noti_empty{padding:40px 10px;text-align:center;font-size:14px;color:#999999;}
+    </style>
+	<div id="new_wrap">
+		<!--header--> 
+		<header id="header" class="on">
+			<div class="top_area">
+				<h1 class="logo">
+					<a href="/operator/ba/dashboard.do">
+						<img src="https://www.gpmu.co.kr/comm/image_view.do?objectType=11&objectId=1&thumbnail=true&width=150&height=40" style="max-height:40px;" alt="대표로고"/>
+					</a>
+				</h1>
+				<!-- 2026.10.15 알림 추가 -->
+                <div class="right_area">
+                <!-- 알림 영역 시작 -->
+                <div class="noti_wrap">
+                    <button type="button" class="noti_btn" id="notiBtn" aria-label="알림">
+                        <!-- 알림 종 아이콘 -->
+                        <svg class="bell_icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        <!-- 알림 없을시 hide 클레스 추가-->
+                        <span class="noti_badge" id="notiBadge">2</span>
+                    </button>
+
+                    <!-- 알림센터 레이어 팝업 -->
+                    <div class="noti_layer" id="notiLayer">
+                        <div class="noti_layer_header">
+                            <strong class="noti_layer_title">알림센터</strong>
+                        </div>
+
+                        <div class="noti_list_scroll">
+                            <ul class="noti_list" id="notiList">
+                                <!-- 알림 아이템 읽음 read 클레스 추가-->
+                                <li class="noti_item read">
+                                    <a href="/operator/baUser/user_main.do" class="noti_link">
+                                        <div class="noti_item_top">
+                                            <span class="noti_dot" aria-hidden="true"></span>
+                                            <strong class="noti_title">회원탈퇴요청 : 26.10.14 신청하였습니다</strong>
+                                        </div>
+                                        <p class="noti_desc">0000회원님이 탈퇴요청을 신청하였습니다.</p>
+                                    </a>
+                                    <div class="noti_opt">
+                                        <button type="button" class="btn_more" onclick="event.preventDefault(); event.stopPropagation(); this.parentElement.classList.toggle('on');" aria-label="알림 관리 메뉴 열기">
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                        </button>
+                                        <div class="noti_opt_layer">
+                                            <button type="button" class="btn_noti_del">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- 알림 아이템 -->
+                                <li class="noti_item">
+                                    <a href="/operator/sbjct/ba_cource_open_run_attend_curr.do" class="noti_link">
+                                        <div class="noti_item_top">
+                                            <span class="noti_dot" aria-hidden="true"></span>
+                                            <strong class="noti_title">신규수강신청 : 26.10.14</strong>
+                                        </div>
+                                        <p class="noti_desc">0000회원님이 신규 과정을 신청하였습니다.</p>
+                                    </a>
+                                    <div class="noti_opt">
+                                        <button type="button" class="btn_more" onclick="event.preventDefault(); event.stopPropagation(); this.parentElement.classList.toggle('on');" aria-label="알림 관리 메뉴 열기">
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                        </button>
+                                        <div class="noti_opt_layer">
+                                            <button type="button" class="btn_noti_del">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- 알림 아이템 -->
+                                <li class="noti_item">
+                                    <a href="/operator/sbjct/ba_cource_open_run_attend_curr.do" class="noti_link">
+                                        <div class="noti_item_top">
+                                            <span class="noti_dot" aria-hidden="true"></span>
+                                            <strong class="noti_title">신규수강신청 : 26.10.14</strong>
+                                        </div>
+                                        <p class="noti_desc">0000회원님이 신규 과정을 신청하였습니다.</p>
+                                    </a>
+                                    <div class="noti_opt">
+                                        <button type="button" class="btn_more" onclick="event.preventDefault(); event.stopPropagation(); this.parentElement.classList.toggle('on');" aria-label="알림 관리 메뉴 열기">
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                        </button>
+                                        <div class="noti_opt_layer">
+                                            <button type="button" class="btn_noti_del">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- 알림 아이템 -->
+                                <li class="noti_item">
+                                    <a href="/operator/sbjct/ba_cource_open_run_attend_curr.do" class="noti_link">
+                                        <div class="noti_item_top">
+                                            <span class="noti_dot" aria-hidden="true"></span>
+                                            <strong class="noti_title">신규수강신청 : 26.10.14</strong>
+                                        </div>
+                                        <p class="noti_desc">0000회원님이 신규 과정을 신청하였습니다.</p>
+                                    </a>
+                                    <div class="noti_opt">
+                                        <button type="button" class="btn_more" onclick="event.preventDefault(); event.stopPropagation(); this.parentElement.classList.toggle('on');" aria-label="알림 관리 메뉴 열기">
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                        </button>
+                                        <div class="noti_opt_layer">
+                                            <button type="button" class="btn_noti_del">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- 알림 아이템 -->
+                                <li class="noti_item">
+                                    <a href="/operator/sbjct/ba_cource_open_run_attend_curr.do" class="noti_link">
+                                        <div class="noti_item_top">
+                                            <span class="noti_dot" aria-hidden="true"></span>
+                                            <strong class="noti_title">신규수강신청 : 26.10.14</strong>
+                                        </div>
+                                        <p class="noti_desc">0000회원님이 신규 과정을 신청하였습니다.</p>
+                                    </a>
+                                    <div class="noti_opt">
+                                        <button type="button" class="btn_more" onclick="event.preventDefault(); event.stopPropagation(); this.parentElement.classList.toggle('on');" aria-label="알림 관리 메뉴 열기">
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                        </button>
+                                        <div class="noti_opt_layer">
+                                            <button type="button" class="btn_noti_del">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- 알림 아이템 -->
+                                <li class="noti_item">
+                                    <a href="/operator/sbjct/ba_cource_open_run_attend_curr.do" class="noti_link">
+                                        <div class="noti_item_top">
+                                            <span class="noti_dot" aria-hidden="true"></span>
+                                            <strong class="noti_title">신규수강신청 : 26.10.14</strong>
+                                        </div>
+                                        <p class="noti_desc">0000회원님이 신규 과정을 신청하였습니다.</p>
+                                    </a>
+                                    <div class="noti_opt">
+                                        <button type="button" class="btn_more" onclick="event.preventDefault(); event.stopPropagation(); this.parentElement.classList.toggle('on');" aria-label="알림 관리 메뉴 열기">
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                            <span aria-hidden="true"></span>
+                                        </button>
+                                        <div class="noti_opt_layer">
+                                            <button type="button" class="btn_noti_del">삭제</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="noti_empty" id="notiEmpty" style="display: none;">
+                                새로운 알림이 없습니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// 알림 영역 끝 -->
+
+                <a href="/home" class="site_go">사이트 바로가기</a>
+                <ul class="login_area">
+                    <li>
+                        <a href="javascript:logout();" class="logout">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+                <!-- //2026.10.15 알림 추가 -->
+				<div class="menu_btn">
+					<a href="#">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+			</div>
+			<div id="gnb">
+				<div class="gnb_tab">
+					<ul>
+						<li class="item item-selected active">
+							<a href="#" rel="menu" class="item-left">메뉴</a>
+						</li>
+						<!-- <li class="item item-unselected">
+							<a href="#" rel="module" class="item-right">모듈</a>
+						</li> -->
+					</ul>
+				</div>
+				<ul class="gnb_area tab_content" id="menu">
+ 					<li class=""><a href="javascript:void(0);" class="depthOne" moveUrl="/operator/ba/dashboard.do" oNum="0" tNum="0" depth="1" >대시보드</a></li><li class=""><a href="javascript:void(0);" class="depthOne" moveUrl="/operator/baUser/user_main.do" oNum="1" tNum="0" depth="1" >회원관리</a><ul class="depthTwoUl"><li><a href="javascript:void(0);"moveUrl="/operator/baUser/user_main.do" oNum="1" tNum="0" depth="2" >회원정보</a></li><li><a href="javascript:void(0);"moveUrl="/operator/baUser/teacher_main.do" oNum="1" tNum="1" depth="2" >강사관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/baUser/teacher_info_main.do" oNum="1" tNum="2" depth="2" >강사확인리스트</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ba/company_mgmt_main.do" oNum="1" tNum="3" depth="2" >고객사정보관리</a></li></ul></li><li class=""><a href="javascript:void(0);" class="depthOne" moveUrl="/operator/sbjct/ba_cource_main.do" oNum="2" tNum="0" depth="1" >교육관리</a><ul class="depthTwoUl"><li><a href="javascript:void(0);"moveUrl="/operator/sbjct/ba_cource_main.do" oNum="2" tNum="0" depth="2" >과정관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/sbjct/ba_cource_open_main.do" oNum="2" tNum="1" depth="2" >차수관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/sbjct/ba_cource_open_run_main.do" oNum="2" tNum="2" depth="2" >운영관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/sbjct/ba_cource_open_run_attend_curr.do" oNum="2" tNum="3" depth="2" >입과관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/sbjct/ba_edu_certificate_main.do" oNum="2" tNum="4" depth="2" >수료증템플릿관리</a></li></ul></li><li class=""><a href="javascript:void(0);" class="depthOne" moveUrl="/operator/ct/video_mgmt_main.do" oNum="3" tNum="0" depth="1" >콘텐츠관리</a><ul class="depthTwoUl"><li><a href="javascript:void(0);"moveUrl="/operator/ct/video_mgmt_main.do" oNum="3" tNum="0" depth="2" >동영상관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ct/pdf_mgmt_main.do" oNum="3" tNum="1" depth="2" >PDF관리</a></li><li><a href="javascript:void(0);"moveUrl="/gardener/ba/ba_sbjct_img_mgmt_main.do" oNum="3" tNum="2" depth="2" >과정이미지관리</a></li></ul></li><li class=""><a href="javascript:void(0);" class="depthOne" moveUrl="/operator/ba/company_mgmt_main.do" oNum="4" tNum="0" depth="1" >사이트관리</a><ul class="depthTwoUl"><li><a href="javascript:void(0);"moveUrl="/operator/ca/banner_mgmt_main.do" oNum="4" tNum="0" depth="2" >메인배너관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/popup_mgmt_main.do" oNum="4" tNum="1" depth="2" >팝업관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/board_mgmt_main.do" oNum="4" tNum="2" depth="2" >게시판관리</a></li></ul></li><li class=""><a href="javascript:void(0);" class="depthOne" moveUrl="" oNum="5" tNum="0" depth="1" >게시판관리</a><ul class="depthTwoUl"><li><a href="javascript:void(0);"moveUrl="/operator/ca/edu_qna_main.do" oNum="5" tNum="0" depth="2" >학습Q&A</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/board_main.do?boardCode=NOTICE" oNum="5" tNum="1" depth="2" >공지사항</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/board_main.do?boardCode=FREEBOARD" oNum="5" tNum="2" depth="2" >1:1문의</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/newsletter_mgmt_main.do" oNum="5" tNum="3" depth="2" >뉴스레터 구독관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/edu_review_main.do" oNum="5" tNum="4" depth="2" >수강후기</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/board_main.do?boardCode=NEWSLETTER" oNum="5" tNum="5" depth="2" >뉴스레터</a></li></ul></li><li class=""><a href="javascript:void(0);" class="depthOne" moveUrl="/operator/sbjct/ba_cource_statistic_main.do" oNum="6" tNum="0" depth="1" >통계관리</a><ul class="depthTwoUl"><li><a href="javascript:void(0);"moveUrl="/operator/sbjct/ba_cource_statistic_main.do" oNum="6" tNum="0" depth="2" >교육통계</a></li><li><a href="javascript:void(0);"moveUrl="/operator/sbjct/ba_edu_result_main.do" oNum="6" tNum="1" depth="2" >학습이력관리</a></li><li><a href="javascript:void(0);"moveUrl="/gardener/ba/ba_edu_status_main.do" oNum="6" tNum="2" depth="2" >교육현황</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/inflow_mgmt_main.do" oNum="6" tNum="3" depth="2" >유입내역</a></li></ul></li><li class=""><a href="javascript:void(0);" class="depthOne" moveUrl="/operator/ba/ba_dept_main.do" oNum="7" tNum="0" depth="1" >공통</a><ul class="depthTwoUl"><li><a href="javascript:void(0);"moveUrl="/gardener/ba/ba_company_mgmt_main.do" oNum="7" tNum="0" depth="2" >고객사관리</a></li><li><a href="javascript:void(0);"moveUrl="/gardener/ba/ba_menu_mgmt_main.do" oNum="7" tNum="1" depth="2" >메뉴관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ba/ba_main.do" oNum="7" tNum="2" depth="2" >공통코드관리</a></li></ul></li><li class=""><a href="javascript:void(0);" class="depthOne" moveUrl="" oNum="8" tNum="0" depth="1" >역량진단</a><ul class="depthTwoUl"><li><a href="javascript:void(0);"moveUrl="/operator/ca/ca_cmpt_operator_main.do" oNum="8" tNum="0" depth="2" >역량관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/ca_operator_indc_main.do" oNum="8" tNum="1" depth="2" >행동지표관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/sbjctMap/ba_cmpt_cource_main.do" oNum="8" tNum="2" depth="2" >역량과정매핑</a></li></ul></li><li class=""><a href="javascript:void(0);" class="depthOne" moveUrl="" oNum="9" tNum="0" depth="1" >실시관리</a><ul class="depthTwoUl"><li><a href="javascript:void(0);"moveUrl="/operator/ca/ca_cmpt_admin_main.do" oNum="9" tNum="0" depth="2" >진단관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/ca_cmpt_object_main.do" oNum="9" tNum="1" depth="2" >대상자관리</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/ca_cmpt_direction_main.do" oNum="9" tNum="2" depth="2" >방향설정</a></li><li><a href="javascript:void(0);"moveUrl="/operator/ca/ca_cmpt_result_main.do" oNum="9" tNum="3" depth="2" >역량진단 결과</a></li></ul></li>
+				</ul>
+
+				<div class="tab_content" id="module">
+					모듈 탭 내용
+				</div>
+			</div>
+		</header>
+		<!--//header-->
+		<div class="conts_main">
+			
+            <div class="container-fluid wrapper">
+                <div class="H30"></div>
+                
+                <input type="hidden" id="currYear" name="currYear" value="" />
+                <input type="hidden" id="defaultYear" name="defaultYear" value="" />
+
+                <div class="today-info flex-wrap">
+                    <span class="today-label">Today</span>
+                    <span class="today-date" id="todayDate"></span>
+                    
+                    <span style="width: 11%;font-size: 20px;font-weight: bold;margin-left: 70%;">
+                    </span>
+                        <select name="searchYear" class="year-select" id="searchYear"></select>
+                        <select name="searchMonth" class="year-select" id="searchMonth">
+                            <option value="01">1월</option>
+                            <option value="02">2월</option>
+                            <option value="03">3월</option>
+                            <option value="04">4월</option>
+                            <option value="05">5월</option>
+                            <option value="06">6월</option>
+                            <option value="07">7월</option>
+                            <option value="08">8월</option>
+                            <option value="09">9월</option>
+                            <option value="10">10월</option>
+                            <option value="11">11월</option>
+                            <option value="12">12월</option>
+                        </select>
+                </div>
+
+              
+
+            </div>
+
+		</div> 
+		<!-- 로딩바 -->
+		
+	</div>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+            var notiBtn = document.getElementById("notiBtn");
+            var notiWrap = document.querySelector(".noti_wrap");
+            var notiLayer = document.getElementById("notiLayer");
+            if (notiBtn) {
+                notiBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    document.querySelectorAll(".noti_opt").forEach(function(el) {
+                        el.classList.remove("on");
+                    });
+                    notiWrap.classList.toggle("on");
+                };
+            }
+            if (notiLayer) {
+                notiLayer.onclick = function(e) {
+                    e.stopPropagation();
+                };
+            }
+            document.addEventListener("click", function() {
+                if (notiWrap) notiWrap.classList.remove("on");
+                document.querySelectorAll(".noti_opt").forEach(function(el) {
+                    el.classList.remove("on");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
