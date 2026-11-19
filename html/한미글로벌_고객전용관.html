@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한미글로벌-고객전용관</title>
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/hanmi/reset.css">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/hanmi/common.css">
+    <link rel="stylesheet" href="https://www.gpmu.co.kr/css/hanmi/style.css">
+    <link rel="stylesheet" href="./css/hanmi/style_ver02.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://www.gpmu.co.kr/js/hanmi/run.js"></script>
+</head>
+
+<body>
+    <!--header-->
+    <header id="header">
+        <div class="innerSection">
+            <div class="top">
+                <h1 class="logo">
+                    <a href="#"><img src="images/hanmi/logo.png" alt="한미글로벌"></a>
+                </h1>
+                <nav class="header_gnb">
+                    <div class="gnb_banner">
+                        <img src="./images/hanmi/test_img.png" alt="">
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">홈</a>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">카테고리</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">F-PM</a></li>
+                            <li><a href="" class="drop_item">Global</a></li>
+                            <li><a href="" class="drop_item">PRE-CON</a></li>
+                            <li><a href="" class="drop_item">ESG</a></li>
+                            <li><a href="" class="drop_item">Leadership</a></li>
+                            <li><a href="" class="drop_item">Smart</a></li>
+                            <li><a href="" class="drop_item">HanmiTube</a></li>
+                            <li><a href="" class="drop_item">CPD</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">GPMU소개</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">소개</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">열린마당</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">공지사항</a></li>
+                            <li><a href="" class="drop_item">1:1 게시판</a></li>
+                            <li><a href="" class="drop_item">지식샘</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="gnb_wrap">
+                        <a href="" class="gnb_item">고객전용관</a>
+                        <ul class="drop_wrap">
+                            <li><a href="" class="drop_item">고객전용관</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="right_box">
+                    <div class="seach_area">
+                        <div class="input_wrap">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button type="submit">검색</button>
+                        </div>
+                    </div>
+                    <ul class="member_box">
+                        <li class="login"><a href="#">로그인</a></li>
+                        <li class="join"><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+                <!-- 모바일 메뉴 -->
+                <div class="m_menu">
+                    <div class="m_login" style="margin-left: auto;">
+                        <a href="#" class="login_btn ir_pm">로그인</a>
+                    </div>
+                </div>
+            </div>      
+        </div>
+        <div class="m_gnb">
+            <ul>
+                <li><a href="#">카테고리</a></li>
+                <li><a href="#">GPMU소개</a></li>
+                <li><a href="#">열린마당</a></li>
+                <li><a href="#">고객전용관</a></li>
+            </ul>
+        </div>
+        <!-- 우측 플로팅 퀵메뉴 (공통 영역) -->
+        <style>
+        .quick_floating_menu { position: fixed; left: 50%; margin-left: 650px; right: auto; top: 50%; transform: translateY(-50%); z-index: 100; background: #ffffff; border: 1px solid #eef0f3; border-radius: 40px; padding: 18px 8px 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); width: 90px; box-sizing: border-box; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .quick_floating_menu.is_show { opacity: 1; visibility: visible; }
+        .quick_floating_menu .q_menu_list { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; margin: 0; padding: 0; list-style: none; }
+        .quick_floating_menu .q_menu_list li { width: 100%; }
+        .quick_floating_menu .q_menu_list li a { display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; padding: 6px 0; border-radius: 12px; transition: background 0.2s ease; width: 100%; box-sizing: border-box; }
+        .quick_floating_menu .q_menu_list li a:hover { background-color: #f4f8fc; }
+        .quick_floating_menu .q_menu_list li .qucik_ico { width: 26px; height: 26px; background-size: contain; background-repeat: no-repeat; background-position: center; margin-bottom: 5px; transition: transform 0.2s ease; }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico { transform: translateY(-2px); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_01 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon01.png); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_02 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon02.png); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_03 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon03.png); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_04 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon04.png); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_05 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon05.png); }
+        .quick_floating_menu .q_menu_list li .qucik_ico.q_ico_06 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon06.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_01 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon01_on.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_02 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon02_on.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_03 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon03_on.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_04 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon04_on.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_05 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon05_on.png); }
+        .quick_floating_menu .q_menu_list li a:hover .qucik_ico.q_ico_06 { background-image: url(https://www.gpmu.co.kr/images/hanmi/menu_icon06_on.png); }
+        .quick_floating_menu .q_menu_list li a .txt { font-size: 1.1rem; font-weight: 500; color: #555555; line-height: 1.2; word-break: keep-all; letter-spacing: -0.5px; transition: color 0.2s ease; }
+        .quick_floating_menu .q_menu_list li a:hover .txt { color: #064a84; font-weight: 700; }
+        .quick_floating_menu .btn_top_scroll { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; border: 0; background: transparent; font-size: 1.1rem; font-weight: 700; color: #888888; cursor: pointer; margin-top: 10px; padding-top: 10px; border-top: 1px solid #f0f0f0; transition: color 0.2s ease; }
+        .quick_floating_menu .btn_top_scroll::before { content: ''; display: block; width: 6px; height: 6px; border-top: 2px solid #888888; border-left: 2px solid #888888; transform: rotate(45deg); margin-bottom: 4px; transition: border-color 0.2s ease; }
+        .quick_floating_menu .btn_top_scroll:hover { color: #064a84; }
+        .quick_floating_menu .btn_top_scroll:hover::before { border-color: #064a84; }
+        .cont_slide .swiper-button-prev, .cont_slide .swiper-button-next { display: none; }
+
+        @media all and (max-width: 1400px) {
+            .quick_floating_menu { display: none; }
+        }
+        </style>
+
+        <aside class="quick_floating_menu">
+            <ul class="q_menu_list">
+                <li>
+                    <a href="/my_class" title="나의 강의실">
+                        <i class="qucik_ico q_ico_01"></i>
+                        <span class="txt">나의 강의실</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/certificate" title="수료증발급">
+                        <i class="qucik_ico q_ico_02"></i>
+                        <span class="txt">수료증</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/faq" title="지식샘">
+                        <i class="qucik_ico q_ico_03"></i>
+                        <span class="txt">지식샘</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/qna" title="1:1 문의">
+                        <i class="qucik_ico q_ico_04"></i>
+                        <span class="txt">1:1 문의</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/qna" title="공지사항">
+                        <i class="qucik_ico q_ico_05"></i>
+                        <span class="txt">공지사항</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/faq" title="FAQ">
+                        <i class="qucik_ico q_ico_06"></i>
+                        <span class="txt">FAQ</span>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="btn_top_scroll" onclick="$('html, body').animate({scrollTop: 0}, 300);">TOP</button>
+        </aside>
+        <script>
+            var $quickMenu = $('.quick_floating_menu');
+
+            function checkQuickMenu() {
+                if ($(window).scrollTop() >= 500) {
+                    $quickMenu.addClass('is_show');
+                } else {
+                    $quickMenu.removeClass('is_show');
+                }
+            }
+
+            // 초기 로딩 시점 및 스크롤 시 체크
+            checkQuickMenu();
+            $(window).on('scroll', function() {
+                checkQuickMenu();
+            });
+        </script>
+
+    </header>
+    
+    <div class="open_gpmu_page">
+        <article class="box_item og_hero_sec">
+            <div class="innerSection">
+                <div class="og_hero_box" style="background-image: url('./images/hanmi/banner_bg01.jpg');">
+                    <div class="og_hero_cont">
+                        <div class="og_hero_left">
+                            <div class="og_hero_badges">
+                                <span class="og_h_badge_primary">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
+                                    OPEN GPMU
+                                </span>
+                                <span class="og_h_badge_glass">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2.2"><path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3z"/></svg>
+                                    대한민국 엔지니어링 &amp; 건설사업관리(PM) 혁신 플랫폼
+                                </span>
+                            </div>
+                            <h2 class="og_hero_tit">OPEN GPMU <span>고객전용관</span></h2>
+                            <p class="og_hero_desc">
+                                글로벌 건설사업관리(PM) 선도 기업 한미글로벌의 엔지니어링 전문 지식과 15대 대표 고객사를 위한 맞춤형 직무 역량<br class="og_pc_br">
+                                강화 콘텐츠를 한곳에서 만나보세요.
+                            </p>
+                            <ul class="og_hero_chips">
+                                <li><span class="og_dot_green"></span>15대 대표 고객사 전용관</li>
+                                <li><span class="og_dot_yellow"></span>직무 맞춤 역량진단</li>
+                                <li><span class="og_dot_red"></span>1분 유튜브 Shorts</li>
+                            </ul>
+                        </div>
+
+                        <div class="og_hero_right">
+                            <a href="#" class="og_hero_btn_orange">
+                                <span class="og_btn_ico">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                                </span>
+                                <span class="og_btn_txt">역량진단 바로가기</span>
+                                <span class="og_btn_arr">→</span>
+                            </a>
+                            <a href="./한미글로벌_건설스타트업.html" class="og_hero_btn_glass">
+                                <span class="og_btn_ico">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
+                                </span>
+                                <span class="og_btn_txt">건설스타트업 쇼케이스</span>
+                                <span class="og_btn_arr">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item og_shorts_sec">
+            <div class="innerSection">
+                <div class="og_shorts_layout">
+                    <div class="og_shorts_left">
+                        <div class="og_sec_head">
+                            <div class="og_tit_row">
+                                <span class="og_tit_ico_red">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                </span>
+                                <h3 class="og_tit">Best Shorts</h3>
+                            </div>
+                        </div>
+
+                        <div class="swiper-container og_shorts_swiper og_shorts_auto_wrap">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide og_short_item">
+                                    <a href="https://www.youtube.com/shorts/dF8zNcq9w2U" target="_blank" class="og_short_card" data-url="https://www.youtube.com/shorts/dF8zNcq9w2U?feature=share">
+                                        <div class="og_short_top">
+                                            <span class="og_badge_glass">BIM·시공</span>
+                                        </div>
+                                        <div class="og_short_media"></div>
+                                        <div class="og_short_cover"></div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide og_short_item">
+                                    <a href="https://www.youtube.com/shorts/dF8zNcq9w2U" target="_blank" class="og_short_card" data-url="https://www.youtube.com/shorts/dF8zNcq9w2U?feature=share">
+                                        <div class="og_short_top">
+                                            <span class="og_badge_glass">스마트안전</span>
+                                        </div>
+                                        <div class="og_short_media"></div>
+                                        <div class="og_short_cover"></div>
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide og_short_item">
+                                    <a href="https://www.youtube.com/shorts/dF8zNcq9w2U" target="_blank" class="og_short_card" data-url="https://www.youtube.com/shorts/dF8zNcq9w2U?feature=share">
+                                        <div class="og_short_top">
+                                            <span class="og_badge_glass">시공로봇</span>
+                                        </div>
+                                        <div class="og_short_media"></div>
+                                        <div class="og_short_cover"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="og_shorts_right">
+                        <a href="https://www.hanmiglobal.com" target="_blank" class="og_quick_card og_quick_blue">
+                            <div class="og_q_ico">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
+                            </div>
+                            <div class="og_q_txt">
+                                <strong>한미글로벌 홈페이지</strong>
+                                <span>글로벌 건설사업관리(PM) 선도 기업</span>
+                            </div>
+                            <span class="og_q_arr">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </span>
+                        </a>
+
+                        <a href="#" target="_blank" class="og_quick_card og_quick_green">
+                            <div class="og_q_ico">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                            </div>
+                            <div class="og_q_txt">
+                                <strong>지속가능경영 홈페이지</strong>
+                                <span>ESG 경영 성과 및 지속가능보고서</span>
+                            </div>
+                            <span class="og_q_arr">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </span>
+                        </a>
+
+                        <a href="#" target="_blank" class="og_quick_card og_quick_orange">
+                            <div class="og_q_ico">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
+                            </div>
+                            <div class="og_q_txt">
+                                <strong>건설 스타트업 쇼케이스 페이지</strong>
+                                <span>스마트건설얼라이언스 콘테크 쇼케이스 이동</span>
+                            </div>
+                            <span class="og_q_arr">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box_item og_sec og_course_sec">
+            <div class="innerSection">
+                <div class="og_sec_head og_head_between">
+                    <div class="og_tit_row">
+                        <span class="og_tit_ico_blue">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </span>
+                        <h3 class="og_tit">Open Contents</h3>
+                    </div>
+                    <a href="#" class="og_more_link">
+                        <span>더보기</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                </div>
+
+                <div class="swiper-container og_course_swiper">
+                    <div class="swiper-wrapper og_course_grid">
+                        <div class="swiper-slide og_course_slide">
+                            <div class="og_course_card">
+                                <div class="og_c_thumb">
+                                    <img src="./images/hanmi/thumb.png" alt="공정관리 심화과정: 이론과 실무">
+                                    <span class="og_c_brand">GPMU</span>
+                                    <div class="og_c_hover">
+                                        <span class="og_c_play">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="og_c_body">
+                                    <div class="og_tag_list">
+                                        <span class="og_tag_blue">자동승인</span>
+                                        <span class="og_tag_gray">CPM</span>
+                                        <span class="og_tag_gray">EVMS</span>
+                                    </div>
+                                    <h4 class="og_c_tit">공정관리 심화과정: 이론과 실무</h4>
+                                    <div class="og_c_meta">
+                                        <span class="og_stars">★★★★★</span>
+                                        <strong class="og_score">4.7</strong>
+                                        <span class="og_cnt">(310명)</span>
+                                    </div>
+                                    <button type="button" class="og_c_btn">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                        <span>강의보기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide og_course_slide">
+                            <div class="og_course_card">
+                                <div class="og_c_thumb">
+                                    <img src="./images/hanmi/thumb.png" alt="디자인 매니지먼트">
+                                    <span class="og_c_brand">GPMU</span>
+                                    <div class="og_c_hover">
+                                        <span class="og_c_play">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="og_c_body">
+                                    <div class="og_tag_list">
+                                        <span class="og_tag_blue">자동승인</span>
+                                        <span class="og_tag_gray">프리콘</span>
+                                        <span class="og_tag_gray">BIM설계</span>
+                                    </div>
+                                    <h4 class="og_c_tit">디자인 매니지먼트</h4>
+                                    <div class="og_c_meta">
+                                        <span class="og_stars">★★★★★</span>
+                                        <strong class="og_score">4.3</strong>
+                                        <span class="og_cnt">(540명)</span>
+                                    </div>
+                                    <button type="button" class="og_c_btn">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                        <span>강의보기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide og_course_slide">
+                            <div class="og_course_card">
+                                <div class="og_c_thumb">
+                                    <img src="./images/hanmi/thumb.png" alt="가스소화설비에 대한 이해">
+                                    <span class="og_c_brand">GPMU</span>
+                                    <div class="og_c_hover">
+                                        <span class="og_c_play">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="og_c_body">
+                                    <div class="og_tag_list">
+                                        <span class="og_tag_blue">자동승인</span>
+                                        <span class="og_tag_gray">소방방재</span>
+                                        <span class="og_tag_gray">기계설비</span>
+                                    </div>
+                                    <h4 class="og_c_tit">가스소화설비에 대한 이해</h4>
+                                    <div class="og_c_meta">
+                                        <span class="og_stars">★★★★☆</span>
+                                        <strong class="og_score">4.0</strong>
+                                        <span class="og_cnt">(220명)</span>
+                                    </div>
+                                    <button type="button" class="og_c_btn">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                        <span>강의보기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide og_course_slide">
+                            <div class="og_course_card">
+                                <div class="og_c_thumb">
+                                    <img src="./images/hanmi/thumb.png" alt="건설분쟁 예방과 해결 Part.1">
+                                    <span class="og_c_brand">GPMU</span>
+                                    <div class="og_c_hover">
+                                        <span class="og_c_play">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="og_c_body">
+                                    <div class="og_tag_list">
+                                        <span class="og_tag_blue">자동승인</span>
+                                        <span class="og_tag_gray">계약관리</span>
+                                        <span class="og_tag_gray">클레임</span>
+                                    </div>
+                                    <h4 class="og_c_tit">건설분쟁 예방과 해결 Part.1</h4>
+                                    <div class="og_c_meta">
+                                        <span class="og_stars">★★★★☆</span>
+                                        <strong class="og_score">4.0</strong>
+                                        <span class="og_cnt">(760명)</span>
+                                    </div>
+                                    <button type="button" class="og_c_btn">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                        <span>강의보기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide og_course_slide">
+                            <div class="og_course_card">
+                                <div class="og_c_thumb">
+                                    <img src="./images/hanmi/thumb.png" alt="스마트 건설 드론 3D 가상현장 실무">
+                                    <span class="og_c_brand">GPMU</span>
+                                    <div class="og_c_hover">
+                                        <span class="og_c_play">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="og_c_body">
+                                    <div class="og_tag_list">
+                                        <span class="og_tag_blue">자동승인</span>
+                                        <span class="og_tag_gray">드론측량</span>
+                                        <span class="og_tag_gray">BIM연동</span>
+                                    </div>
+                                    <h4 class="og_c_tit">스마트 건설 드론 3D 가상현장 실무</h4>
+                                    <div class="og_c_meta">
+                                        <span class="og_stars">★★★★★</span>
+                                        <strong class="og_score">4.8</strong>
+                                        <span class="og_cnt">(410명)</span>
+                                    </div>
+                                    <button type="button" class="og_c_btn">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                        <span>강의보기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide og_course_slide">
+                            <div class="og_course_card">
+                                <div class="og_c_thumb">
+                                    <img src="./images/hanmi/thumb.png" alt="건설 중장비 자율시공과 머신가이던스 (MG/MC)">
+                                    <span class="og_c_brand">GPMU</span>
+                                    <div class="og_c_hover">
+                                        <span class="og_c_play">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="og_c_body">
+                                    <div class="og_tag_list">
+                                        <span class="og_tag_blue">자동승인</span>
+                                        <span class="og_tag_gray">머신가이던스</span>
+                                        <span class="og_tag_gray">토공혁신</span>
+                                    </div>
+                                    <h4 class="og_c_tit">건설 중장비 자율시공과 머신가이던스 (MG/MC)</h4>
+                                    <div class="og_c_meta">
+                                        <span class="og_stars">★★★★★</span>
+                                        <strong class="og_score">4.6</strong>
+                                        <span class="og_cnt">(315명)</span>
+                                    </div>
+                                    <button type="button" class="og_c_btn">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                        <span>강의보기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide og_course_slide">
+                            <div class="og_course_card">
+                                <div class="og_c_thumb">
+                                    <img src="./images/hanmi/thumb.png" alt="AI·IoT 기반 건설현장 스마트 안전관제 실무">
+                                    <span class="og_c_brand">GPMU</span>
+                                    <div class="og_c_hover">
+                                        <span class="og_c_play">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="og_c_body">
+                                    <div class="og_tag_list">
+                                        <span class="og_tag_blue">자동승인</span>
+                                        <span class="og_tag_gray">산업IoT</span>
+                                        <span class="og_tag_gray">안전관제</span>
+                                    </div>
+                                    <h4 class="og_c_tit">AI·IoT 기반 건설현장 스마트 안전관제 실무</h4>
+                                    <div class="og_c_meta">
+                                        <span class="og_stars">★★★★★</span>
+                                        <strong class="og_score">4.7</strong>
+                                        <span class="og_cnt">(510명)</span>
+                                    </div>
+                                    <button type="button" class="og_c_btn">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                        <span>강의보기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide og_course_slide">
+                            <div class="og_course_card">
+                                <div class="og_c_thumb">
+                                    <img src="./images/hanmi/thumb.png" alt="프리콘(Pre-con) BIM과 건설 VE 원가 절감">
+                                    <span class="og_c_brand">GPMU</span>
+                                    <div class="og_c_hover">
+                                        <span class="og_c_play">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="og_c_body">
+                                    <div class="og_tag_list">
+                                        <span class="og_tag_blue">자동승인</span>
+                                        <span class="og_tag_gray">건설VE</span>
+                                        <span class="og_tag_gray">원가절감</span>
+                                    </div>
+                                    <h4 class="og_c_tit">프리콘(Pre-con) BIM과 건설 VE 원가 절감</h4>
+                                    <div class="og_c_meta">
+                                        <span class="og_stars">★★★★★</span>
+                                        <strong class="og_score">4.8</strong>
+                                        <span class="og_cnt">(270명)</span>
+                                    </div>
+                                    <button type="button" class="og_c_btn">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                        <span>강의보기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 강의 시청 모달 팝업 (퍼블리싱 정적 마크업) -->
+            <div class="og_lecture_modal" id="ogLectureModal">
+                <div class="og_lmodal_dim"></div>
+                <div class="og_lmodal_dialog">
+                    <div class="og_lmodal_video_wrap">
+                        <div class="og_lmodal_top_bar">
+                            <div class="og_lmodal_title_group">
+                                <span class="og_lmodal_cat">건설스타트업</span>
+                                <strong class="og_lmodal_course_tit">디자인 매니지먼트</strong>
+                            </div>
+                            <button type="button" class="og_lmodal_close" title="닫기">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            </button>
+                        </div>
+                        <div class="og_lmodal_ep_bar">
+                            <span class="og_lmodal_ep_badge">제 1강</span>
+                            <span class="og_lmodal_ep_tit">프리콘(Pre-construction) 서비스와 디자인 매니지먼트의 본질</span>
+                        </div>
+                        <div class="og_lmodal_player">
+                            <img src="./images/hanmi/thumb.png" alt="강의 영상 영역">
+                        </div>
+                    </div>
+
+                    <div class="og_lmodal_scroll">
+                        <div class="og_lmodal_sec">
+                            <div class="og_lmodal_sec_head">
+                                <div class="og_lm_tit_row">
+                                    <span class="og_lm_ico">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                                    </span>
+                                    <h5>강의 목차 (총 4개 차시)</h5>
+                                </div>
+                                <span class="og_lm_hint">원하는 차시를 클릭하여 해당 영상으로 즉시 이동할 수 있습니다.</span>
+                            </div>
+
+                            <ul class="og_ep_list" id="ogLmEpList">
+                                <li class="og_ep_item is_active">
+                                    <div class="og_ep_left">
+                                        <span class="og_ep_num">01</span>
+                                        <div class="og_ep_info">
+                                            <div class="og_ep_name_row">
+                                                <strong class="og_ep_name">프리콘(Pre-construction) 서비스와 디자인 매니지먼트의 본질</strong>
+                                                <span class="og_ep_now">재생중</span>
+                                            </div>
+                                            <span class="og_ep_time">⏱ 강의 시간: 40분</span>
+                                        </div>
+                                    </div>
+                                    <span class="og_ep_btn">▶ 재생중</span>
+                                </li>
+
+                                <li class="og_ep_item">
+                                    <div class="og_ep_left">
+                                        <span class="og_ep_num">02</span>
+                                        <div class="og_ep_info">
+                                            <div class="og_ep_name_row">
+                                                <strong class="og_ep_name">BIM 기반 도면 정합성 검토 및 설계 오류 사전 차단 기법</strong>
+                                                <span class="og_ep_now">재생중</span>
+                                            </div>
+                                            <span class="og_ep_time">⏱ 강의 시간: 45분</span>
+                                        </div>
+                                    </div>
+                                    <span class="og_ep_btn">▶ 시청하기</span>
+                                </li>
+
+                                <li class="og_ep_item is_folded">
+                                    <div class="og_ep_left">
+                                        <span class="og_ep_num">03</span>
+                                        <div class="og_ep_info">
+                                            <div class="og_ep_name_row">
+                                                <strong class="og_ep_name">발주처·설계사·시공사 협업 인터페이스 및 VE 최적화</strong>
+                                                <span class="og_ep_now">재생중</span>
+                                            </div>
+                                            <span class="og_ep_time">⏱ 강의 시간: 50분</span>
+                                        </div>
+                                    </div>
+                                    <span class="og_ep_btn">▶ 시청하기</span>
+                                </li>
+
+                                <li class="og_ep_item is_folded">
+                                    <div class="og_ep_left">
+                                        <span class="og_ep_num">04</span>
+                                        <div class="og_ep_info">
+                                            <div class="og_ep_name_row">
+                                                <strong class="og_ep_name">친환경 스마트 설계 트렌드 및 대안 선정 매트릭스</strong>
+                                                <span class="og_ep_now">재생중</span>
+                                            </div>
+                                            <span class="og_ep_time">⏱ 강의 시간: 45분</span>
+                                        </div>
+                                    </div>
+                                    <span class="og_ep_btn">▶ 시청하기</span>
+                                </li>
+                            </ul>
+
+                            <button type="button" class="og_ep_more_btn" id="ogLmMoreBtn">
+                                <span>강의 목차 더보기 (+2개 차시)</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                        </div>
+
+                        <div class="og_lmodal_info_grid">
+                            <div class="og_lmodal_info_box">
+                                <div class="og_lm_info_tit">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                    <span>과정 개요</span>
+                                </div>
+                                <p class="og_lm_info_desc">기획 및 설계 초기 단계부터 시공성과 원가를 사전에 검토하는 프리콘(Pre-con) 디자인 매니지먼트 핵심 전략과 VE(가치공학) 적용 실무입니다.</p>
+                            </div>
+
+                            <div class="og_lmodal_info_box og_lm_prof_box">
+                                <div class="og_lm_prof_avatar">이</div>
+                                <div class="og_lm_prof_txt">
+                                    <div class="og_lm_prof_top">
+                                        <strong>이기화 전무</strong>
+                                        <span class="og_lm_prof_tag">전문 교수진</span>
+                                    </div>
+                                    <span class="og_lm_prof_org">한미글로벌 건축사업본부 / 프리콘 디렉터</span>
+                                    <div class="og_lm_prof_stat">
+                                        <span class="og_stars">★</span>
+                                        <strong>4.3</strong>
+                                        <span>· 540명 수강</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="og_lmodal_footer">
+                        <span class="og_lm_foot_note">기업 임직원 오픈 직무 실무 콘텐츠 (만들기 바로학습)</span>
+                        <button type="button" class="og_lm_foot_close">창 닫기</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="box_item og_sec og_client_sec">
+            <div class="innerSection">
+                <div class="og_sec_head">
+                    <div class="og_tit_row">
+                        <span class="og_tit_ico_navy">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
+                        </span>
+                        <h3 class="og_tit">고객 전용관</h3>
+                    </div>
+                </div>
+
+                <div class="swiper-container og_client_swiper">
+                    <div class="swiper-wrapper og_client_grid">
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card is_dedicated" title="삼성전자 전용관 이동">
+                                <span class="og_dedicated_badge">전용관</span>
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_samsung.png" alt="SAMSUNG 삼성전자">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="KRAFTON 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_krafton.png" alt="KRAFTON">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="KENDALLSQUARE ASSET 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_kendallsquare.png" alt="KENDALLSQUARE ASSET">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="NAVER 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_naver.png" alt="NAVER">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="SHINSEGAE 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_shinsegae.png" alt="SHINSEGAE">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="이지스자산운용 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_igis.png" alt="이지스자산운용">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="SAMSUNG SDI 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_samsungsdi.png" alt="SAMSUNG SDI">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="SK hynix 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_skhynix.png" alt="SK hynix">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card is_dedicated" title="SAMSUNG DISPLAY 전용관 이동">
+                                <span class="og_dedicated_badge">전용관</span>
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_samsungdisplay.png" alt="SAMSUNG DISPLAY">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card is_dedicated" title="HYUNDAI 전용관 이동">
+                                <span class="og_dedicated_badge">전용관</span>
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_hyundai.png" alt="HYUNDAI">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="LH 한국토지주택공사 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_lh.png" alt="LH 한국토지주택공사">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="LS 전선 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_ls.png" alt="LS 전선">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="한화에어로스페이스 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_hanwha.png" alt="한화에어로스페이스">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card" title="GS 이동">
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_gs.png" alt="GS">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide og_client_slide">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="og_client_card is_dedicated" title="한국수력원자력|주| 전용관 이동">
+                                <span class="og_dedicated_badge">전용관</span>
+                                <div class="og_client_logo">
+                                    <img src="./images/hanmi/logo_khnp.png" alt="한국수력원자력|주|">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="f_top">
+            <div class="innerSection">
+                <ul>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">마케팅 정보 수신동의</a></li>
+                    <li><a href="">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="f_bottom">
+            <div class="innerSection">
+                <div class="f_logo">
+                    <img src="./images/hanmi/f_logo.png" alt="gpmu 로고">
+                </div>
+                <div class="txt">
+                    <p>edu@keldi.co.kr</p>
+                    <p>
+                        <span>헬프데스크 문의 </span><span>☎ 02-971-2900</span>
+                        <span>/</span> 
+                        <span>운영시간 10~16시(평일)</span>
+                    </p>
+                    <p>본 사이트에서 제공하는 모든 콘텐츠는 저작권법의 보호를 받는 바, 무단 전재, 복제, 배포 등을 금지합니다.</p>
+                    <p class="copy">Copyright © Hanmiglobal Corp. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   <script>
+    $(function () {
+        function getYoutubeId(url) {
+            if (!url) return null;
+            url = url.trim();
+            var match = url.match(/youtube\.com\/shorts\/([^?&#/]+)/i);
+            if (!match) match = url.match(/[?&]v=([^?&#]+)/i);
+            if (!match) match = url.match(/youtu\.be\/([^?&#/]+)/i);
+            return match ? match[1] : null;
+        }
+
+        var shortTargets = [];
+
+        $('.og_shorts_auto_wrap .og_short_card').each(function (idx) {
+            var $card = $(this);
+            var videoId = getYoutubeId($card.attr('data-url'));
+            if (!videoId) return;
+
+            var thumbMax = 'https://img.youtube.com/vi/' + encodeURIComponent(videoId) + '/maxresdefault.jpg';
+            var thumbHq = 'https://img.youtube.com/vi/' + encodeURIComponent(videoId) + '/hqdefault.jpg';
+            $card.find('.og_short_cover').html(
+                '<img src="' + thumbMax + '" onerror="this.onerror=null;this.src=\'' + thumbHq + '\';" alt="">'
+            );
+
+            var playerElId = 'ogYtPlayer_' + idx;
+            $card.find('.og_short_media').html('<div id="' + playerElId + '"></div>');
+            shortTargets.push({ elId: playerElId, videoId: videoId, $card: $card });
+        });
+
+        function initYoutubePlayers() {
+            $.each(shortTargets, function (_, item) {
+                new YT.Player(item.elId, {
+                    videoId: item.videoId,
+                    playerVars: {
+                        autoplay: 1,
+                        mute: 1,
+                        controls: 0,
+                        playsinline: 1,
+                        rel: 0,
+                        iv_load_policy: 3,
+                        disablekb: 1,
+                        fs: 0,
+                        cc_load_policy: 0,
+                        origin: window.location.origin
+                    },
+                    events: {
+                        onReady: function (e) {
+                            e.target.mute();
+                            e.target.playVideo();
+                        },
+                        onStateChange: function (e) {
+                            if (e.data === YT.PlayerState.PLAYING) {
+                                setTimeout(function () {
+                                    item.$card.find('.og_short_cover').addClass('is_hidden');
+                                }, 3200);
+                            } else if (e.data === YT.PlayerState.ENDED) {
+                                e.target.seekTo(0);
+                                e.target.playVideo();
+                            }
+                        }
+                    }
+                });
+            });
+        }
+
+        if (shortTargets.length > 0) {
+            window.onYouTubeIframeAPIReady = function () {
+                initYoutubePlayers();
+            };
+            if (window.YT && window.YT.Player) {
+                initYoutubePlayers();
+            } else {
+                var tag = document.createElement('script');
+                tag.src = 'https://www.youtube.com/iframe_api';
+                document.head.appendChild(tag);
+            }
+        }
+
+        new Swiper('.og_shorts_swiper', {
+            slidesPerView: 3,
+            spaceBetween: 16,
+            watchOverflow: true,
+            freeMode: false,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 14,
+                    freeMode: true
+                },
+                640: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 12,
+                    freeMode: true
+                }
+            }
+        });
+
+        /* Open Contents: 640px 이하 가로 슬라이드 (1.25개 노출) */
+        var courseSwiper = null;
+        var mobileQuery = window.matchMedia('(max-width: 640px)');
+
+        function toggleCourseSwiper() {
+            if (mobileQuery.matches) {
+                if (!courseSwiper) {
+                    courseSwiper = new Swiper('.og_course_swiper', {
+                        slidesPerView: 1.25,
+                        spaceBetween: 14,
+                        freeMode: true,
+                        simulateTouch: true,
+                        grabCursor: true,
+                        observer: true,
+                        observeParents: true
+                    });
+                }
+            } else {
+                if (courseSwiper) {
+                    courseSwiper.destroy(true, true);
+                    courseSwiper = null;
+                }
+            }
+        }
+
+        toggleCourseSwiper();
+        $(window).on('resize', toggleCourseSwiper);
+
+        /* 강의 시청 모달 열기/닫기 */
+        $(document).on('click', '.og_course_card', function () {
+            $('#ogLectureModal .og_lmodal_scroll').scrollTop(0);
+            $('#ogLectureModal').addClass('is_open');
+            $('body').css('overflow', 'hidden');
+        });
+
+        $(document).on('click', '#ogLectureModal .og_lmodal_dim, #ogLectureModal .og_lmodal_close, #ogLectureModal .og_lm_foot_close', function () {
+            $('#ogLectureModal').removeClass('is_open');
+            $('body').css('overflow', '');
+        });
+
+        $(document).on('keydown', function (e) {
+            if (e.key === 'Escape' && $('#ogLectureModal').hasClass('is_open')) {
+                $('#ogLectureModal').removeClass('is_open');
+                $('body').css('overflow', '');
+            }
+        });
+
+        /* 강의 목차 활성(재생중) 토글 */
+        $(document).on('click', '#ogLmEpList .og_ep_item', function () {
+            $('#ogLmEpList .og_ep_item').removeClass('is_active').find('.og_ep_btn').text('▶ 시청하기');
+            $(this).addClass('is_active').find('.og_ep_btn').text('▶ 재생중');
+        });
+
+        /* 강의 목차 아코디언 더보기/접기 토글 */
+        $(document).on('click', '#ogLmMoreBtn', function () {
+            var $btn = $(this);
+            var isExpanded = $btn.hasClass('is_expanded');
+            if (isExpanded) {
+                $('#ogLmEpList .og_ep_item').each(function (i) {
+                    if (i >= 2) $(this).addClass('is_folded');
+                });
+                $btn.removeClass('is_expanded').find('span').text('강의 목차 더보기');
+            } else {
+                $('#ogLmEpList .og_ep_item').removeClass('is_folded');
+                $btn.addClass('is_expanded').find('span').text('강의 목차 접기');
+            }
+        });
+        /* 고객 전용관: 640px 이하 스와이퍼 자동 흐름 + 터치 정지 후 5초 뒤 재개 */
+        var clientSwiper = null;
+        var clientResumeTimer = null;
+
+        function scheduleClientAutoplay() {
+            clearTimeout(clientResumeTimer);
+            clientResumeTimer = setTimeout(function () {
+                if (clientSwiper && clientSwiper.autoplay) {
+                    clientSwiper.autoplay.start();
+                }
+            }, 5000);
+        }
+
+        function toggleClientSwiper() {
+            if (mobileQuery.matches) {
+                if (!clientSwiper) {
+                    clientSwiper = new Swiper('.og_client_swiper', {
+                        slidesPerView: 'auto',
+                        spaceBetween: 10,
+                        loop: true,
+                        loopedSlides: 15,
+                        speed: 5000,
+                        freeMode: true,
+                        simulateTouch: true,
+                        autoplay: {
+                            delay: 0,
+                            disableOnInteraction: false
+                        },
+                        on: {
+                            touchStart: function () {
+                                clearTimeout(clientResumeTimer);
+                                if (this.autoplay) this.autoplay.stop();
+                            },
+                            touchEnd: function () {
+                                scheduleClientAutoplay();
+                            }
+                        }
+                    });
+                }
+            } else {
+                clearTimeout(clientResumeTimer);
+                if (clientSwiper) {
+                    clientSwiper.destroy(true, true);
+                    clientSwiper = null;
+                }
+            }
+        }
+
+        toggleClientSwiper();
+        $(window).on('resize', toggleClientSwiper);
+    });
+    </script>
+</body>
+
+</html>
