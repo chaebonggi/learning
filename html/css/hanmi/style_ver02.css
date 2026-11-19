@@ -221,7 +221,7 @@
 .open_gpmu_page .og_im_input_wrap input:focus,
 .open_gpmu_page .og_im_input_wrap select:focus,
 .open_gpmu_page .og_im_field textarea:focus { border-color: #0a3d62; }
-.open_gpmu_page .og_im_field textarea { width: 100%; padding: 1rem 1.2rem; border-radius: 0.8rem; border: 1px solid #cbd5e1; background-color: #ffffff; color: #1e293b; font-size: 1.3rem; line-height: 1.5; resize: vertical; outline: none; transition: border-color 0.2s ease; }
+.open_gpmu_page .og_im_field textarea { width: 100%; padding: 1rem 1.2rem; border-radius: 0.8rem; border: 1px solid #cbd5e1; background-color: #ffffff; color: #1e293b; font-size: 1.2rem; line-height: 1.5; resize: vertical; outline: none; transition: border-color 0.2s ease; }
 .open_gpmu_page .og_im_agree { display: flex; align-items: center; gap: 0.8rem; font-size: 1.2rem; color: #64748b; }
 .open_gpmu_page .og_im_agree input { width: 1.5rem; height: 1.5rem; accent-color: #0a3d62; cursor: pointer; flex-shrink: 0; }
 .open_gpmu_page .og_im_agree label { cursor: pointer; }
