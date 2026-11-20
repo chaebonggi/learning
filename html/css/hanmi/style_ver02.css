@@ -5,8 +5,8 @@
 .open_gpmu_page .og_sec_head { margin-bottom: 2.4rem; }
 .open_gpmu_page .og_head_between { display: flex; align-items: center; justify-content: space-between; gap: 1.6rem; }
 .open_gpmu_page .og_tit_row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 1rem; }
-.open_gpmu_page .og_tit_ico_red { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: 0.6rem; font-size: 1.3rem; flex-shrink: 0; background-color: #fee2e2; color: #dc2626; }
-.open_gpmu_page .og_tit_ico_blue { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: 0.6rem; font-size: 1.3rem; flex-shrink: 0; background-color: #dbeafe; color: #1d4ed8; }
+.open_gpmu_page .og_tit_ico_red { display: inline-flex; align-items: center; justify-content: center; align-self: center; width: 2.6rem; height: 2.6rem; border-radius: 0.6rem; font-size: 1.3rem; flex-shrink: 0; background-color: #fee2e2; color: #dc2626; }
+.open_gpmu_page .og_tit_ico_blue { display: inline-flex; align-items: center; justify-content: center; align-self: center; width: 2.6rem; height: 2.6rem; border-radius: 0.6rem; font-size: 1.3rem; flex-shrink: 0; background-color: #dbeafe; color: #1d4ed8; }
 .open_gpmu_page .og_tit { margin: 0; font-size: 2.2rem; font-weight: 800; color: #0f172a; line-height: 1.2; }
 .open_gpmu_page .og_more_link { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.7rem 1.4rem; border-radius: 0.8rem; border: 1px solid #cbd5e1; background-color: #ffffff; color: #334155; font-size: 1.3rem; font-weight: 600; text-decoration: none; transition: all 0.2s ease; flex-shrink: 0; }
 .open_gpmu_page .og_more_link:hover { border-color: #064a84; color: #064a84; background-color: #f8fafc; }
@@ -166,7 +166,7 @@
 
 /* article 4: 고객 전용관 (.og_client_sec) */
 .open_gpmu_page .og_client_sec { padding: 2.4rem 0 6.4rem; overflow: hidden; }
-.open_gpmu_page .og_tit_ico_navy { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: 0.6rem; flex-shrink: 0; background-color: #064a84; color: #ffffff; }
+.open_gpmu_page .og_tit_ico_navy { display: inline-flex; align-items: center; justify-content: center; align-self: center; width: 2.6rem; height: 2.6rem; border-radius: 0.6rem; flex-shrink: 0; background-color: #064a84; color: #ffffff; }
 @media all and (min-width: 641px) {
     .open_gpmu_page .og_client_swiper { overflow: visible; }
     .open_gpmu_page .og_client_grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.6rem; width: 100%; transform: none !important; }
@@ -288,7 +288,7 @@
 }
 
 /* 건설스타트업 - article 2: 건설스타트업 소식 갤러리 (.og_shorts_sec) */
-.open_gpmu_page .og_tit_ico_teal { display: inline-flex; align-items: center; justify-content: center; width: 2.6rem; height: 2.6rem; border-radius: 0.6rem; flex-shrink: 0; background-color: #0f766e; color: #ffffff; }
+.open_gpmu_page .og_tit_ico_teal { display: inline-flex; align-items: center; justify-content: center; align-self: center; width: 2.6rem; height: 2.6rem; border-radius: 0.6rem; flex-shrink: 0; background-color: #0f766e; color: #ffffff; }
 .open_gpmu_page .og_news_right { width: 40%; max-width: 46rem; flex-shrink: 0; display: flex; flex-direction: column; }
 .open_gpmu_page .og_news_nav { display: inline-flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
 .open_gpmu_page .og_news_prev,
@@ -323,7 +323,6 @@
 }
 
 /* 건설스타트업 - article 4: 참여 문의 배너 (.og_cta_sec) */
-.open_gpmu_page .og_cta_sec { padding: 1.6rem 0 3.2rem; }
 .open_gpmu_page .og_cta_banner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 2.8rem; padding: 3.4rem 4.2rem; border-radius: 1.8rem; background: linear-gradient(115deg, #091e36 0%, #0d3a68 55%, #115394 100%); border: 1px solid rgba(56, 189, 248, 0.22); overflow: hidden; box-shadow: 0 1rem 2.6rem rgba(9, 30, 54, 0.16); }
 .open_gpmu_page .og_cta_banner::before { content: ''; position: absolute; right: -6rem; top: -8rem; width: 28rem; height: 28rem; border-radius: 50%; background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(56, 189, 248, 0) 70%); pointer-events: none; }
 .open_gpmu_page .og_cta_banner::after { content: ''; position: absolute; right: 24rem; bottom: -10rem; width: 22rem; height: 22rem; border-radius: 50%; background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(37, 99, 235, 0) 70%); pointer-events: none; }
@@ -340,7 +339,6 @@
     .open_gpmu_page .og_cta_banner { flex-direction: column; align-items: flex-start; padding: 2.8rem 3rem; gap: 2rem; }
 }
 @media all and (max-width: 640px) {
-    .open_gpmu_page .og_cta_sec { padding: 1rem 0 2.4rem; }
     .open_gpmu_page .og_cta_banner { padding: 2.4rem 2rem; border-radius: 1.4rem; }
     .open_gpmu_page .og_cta_tit { font-size: 2rem; }
     .open_gpmu_page .og_cta_desc { font-size: 1.3rem; }
@@ -349,7 +347,8 @@
 }
 
 /* 건설스타트업 - article 5: 스타트업 파트너 배너 (.og_partner_sec) */
-.open_gpmu_page .og_partner_sec { padding: 2.4rem 0 6.4rem; overflow: hidden; }
+.open_gpmu_page .og_partner_sec { overflow: hidden; }
+.open_gpmu_page .og_tit_sub { margin: 0 0 0 0.2rem; font-size: 1.4rem; font-weight: 500; color: #475569; line-height: 1.4; word-break: keep-all; }
 .open_gpmu_page .og_partner_marquee { overflow: hidden; padding: 0.4rem 0; -webkit-mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent); mask-image: linear-gradient(to right, transparent, #000 3%, #000 97%, transparent); }
 .open_gpmu_page .og_partner_track { display: flex; width: max-content; animation: ogPartnerMarquee 45s linear infinite; }
 .open_gpmu_page .og_partner_marquee:hover .og_partner_track,
@@ -357,18 +356,54 @@
 .open_gpmu_page .og_partner_card { flex: 0 0 21rem; height: 9.6rem; margin-right: 1.6rem; padding: 1.6rem 2rem; display: flex; align-items: center; justify-content: center; border-radius: 1.4rem; background-color: #ffffff; border: 1px solid #e2e8f0; text-decoration: none; box-shadow: 0 0.2rem 0.8rem rgba(15, 23, 42, 0.03); transition: border-color 0.22s ease, box-shadow 0.22s ease; }
 .open_gpmu_page .og_partner_card:hover { border-color: #064a84; box-shadow: 0 0.8rem 1.8rem rgba(6, 74, 132, 0.12); }
 .open_gpmu_page .og_partner_card:hover .og_client_logo { transform: scale(1.04); }
-
-@media all and (max-width: 640px) {
-    .open_gpmu_page .og_partner_sec { padding: 2rem 0 4.8rem; }
-    .open_gpmu_page .og_partner_card { flex: 0 0 14.4rem; height: 7.6rem; margin-right: 1rem; padding: 1.2rem 1.6rem; box-shadow: none; }
-    .open_gpmu_page .og_partner_card:hover { box-shadow: none; }
-}
 @keyframes ogPartnerMarquee {
     0% { transform: translate3d(0, 0, 0); }
     100% { transform: translate3d(-50%, 0, 0); }
 }
-/* 건설스타트업 - article 5: 스타트업 타이틀 서브 텍스트 (.og_partner_sec) */
-.open_gpmu_page .og_tit_sub { margin: 0 0 0 0.2rem; font-size: 1.4rem; font-weight: 500; color: #475569; line-height: 1.4; word-break: keep-all; }
 @media all and (max-width: 640px) {
     .open_gpmu_page .og_tit_sub { width: 100%; margin: 0.2rem 0 0; font-size: 1.3rem; }
+    .open_gpmu_page .og_partner_card { flex: 0 0 14.4rem; height: 7.6rem; margin-right: 1rem; padding: 1.2rem 1.6rem; box-shadow: none; }
+    .open_gpmu_page .og_partner_card:hover { box-shadow: none; }
+}
+
+/* 공통: 섹션 상하 여백 통일 및 팝업 커스텀 스크롤바 */
+.open_gpmu_page .og_hero_sec { padding: 3.2rem 0 4rem; }
+.open_gpmu_page .og_shorts_sec,
+.open_gpmu_page .og_course_sec,
+.open_gpmu_page .og_client_sec,
+.open_gpmu_page .og_cta_sec,
+.open_gpmu_page .og_partner_sec { padding: 4rem 0; }
+.open_gpmu_page .og_client_sec:last-child,
+.open_gpmu_page .og_partner_sec:last-child { padding-bottom: 6.4rem; }
+
+.open_gpmu_page .og_lmodal_scroll,
+.open_gpmu_page .og_imodal_body { scrollbar-width: thin; scrollbar-color: #94a3b8 #f1f5f9; }
+.open_gpmu_page .og_lmodal_scroll::-webkit-scrollbar,
+.open_gpmu_page .og_imodal_body::-webkit-scrollbar { width: 0.6rem; }
+.open_gpmu_page .og_lmodal_scroll::-webkit-scrollbar-track,
+.open_gpmu_page .og_imodal_body::-webkit-scrollbar-track { background-color: #f1f5f9; border-radius: 99.9rem; margin: 0.6rem 0; }
+.open_gpmu_page .og_lmodal_scroll::-webkit-scrollbar-thumb,
+.open_gpmu_page .og_imodal_body::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 99.9rem; transition: background-color 0.2s ease; }
+.open_gpmu_page .og_lmodal_scroll::-webkit-scrollbar-thumb:hover,
+.open_gpmu_page .og_imodal_body::-webkit-scrollbar-thumb:hover { background-color: #064a84; }
+
+@media all and (max-width: 1024px) {
+    .open_gpmu_page .og_hero_sec { padding: 2.4rem 0 3.2rem; }
+    .open_gpmu_page .og_shorts_sec,
+    .open_gpmu_page .og_course_sec,
+    .open_gpmu_page .og_client_sec,
+    .open_gpmu_page .og_cta_sec,
+    .open_gpmu_page .og_partner_sec { padding: 3.2rem 0; }
+    .open_gpmu_page .og_client_sec:last-child,
+    .open_gpmu_page .og_partner_sec:last-child { padding-bottom: 5.6rem; }
+}
+@media all and (max-width: 640px) {
+    .open_gpmu_page .og_hero_sec { padding: 2rem 0 2.4rem; }
+    .open_gpmu_page .og_shorts_sec,
+    .open_gpmu_page .og_course_sec,
+    .open_gpmu_page .og_client_sec,
+    .open_gpmu_page .og_cta_sec,
+    .open_gpmu_page .og_partner_sec { padding: 2.4rem 0; }
+    .open_gpmu_page .og_client_sec:last-child,
+    .open_gpmu_page .og_partner_sec:last-child { padding-bottom: 4.8rem; }
 }
