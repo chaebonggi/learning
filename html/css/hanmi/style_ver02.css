@@ -132,6 +132,7 @@
 .open_gpmu_page .og_q_txt span { display: block; font-size: 1.3rem; color: #cbd5e1; line-height: 1.4; }
 .open_gpmu_page .og_q_arr { color: #94a3b8; flex-shrink: 0; transition: transform 0.2s ease, color 0.2s ease; }
 .open_gpmu_page .og_quick_card:hover .og_q_arr { color: #ffffff; transform: translateX(0.3rem); }
+.open_gpmu_page .og_short_item:nth-child(n+4) { display: none; }
 
 @media all and (max-width: 1024px) {
     .open_gpmu_page .og_shorts_layout { flex-direction: column; }
@@ -139,13 +140,15 @@
     .open_gpmu_page .og_short_item { width: 25rem; }
     .open_gpmu_page .og_shorts_right { width: 100%; max-width: 100%; flex-direction: row; padding-top: 0; }
     .open_gpmu_page .og_quick_card { padding: 1.8rem 2rem; }
+    .open_gpmu_page .og_short_item { width: 25rem !important; }
+    .open_gpmu_page .og_short_item:nth-child(n+4) { display: block; }
 }
 @media all and (max-width: 768px) {
-    .open_gpmu_page .og_short_item { width: 23rem; }
     .open_gpmu_page .og_shorts_right { flex-direction: column; }
+    .open_gpmu_page .og_short_item { width: 23rem !important; }
 }
 @media all and (max-width: 640px) {
-    .open_gpmu_page .og_short_item { width: 21rem; }
+    .open_gpmu_page .og_short_item { width: 21rem !important; }
 }
 
 /* [공통] article 3: Open Contents / NEW 스타트업 ZONE 및 강의 시청 모달 (.og_course_sec) */
